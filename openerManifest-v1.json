@@ -1669,6 +1669,24 @@
         },
         {
             "title": "Open Product",
+            "regex": "http(?:s)?://(?:\\w+\\.)?alibaba\\.com/product(?:-detail)?/(?:[a-zA-Z0-9_\\-]*_)?(\\d+).*$",
+            "testInputs": [
+                "http://m.alibaba.com/product/60244850644/Genuine-Leather-Watch-Band-Strap-for.html?s=p",
+                "http://www.alibaba.com/product-detail/2-4-GSM-900-1800Mhz-cdma_60082972898.html?spm=a2700.7724857.35.1.npprUl"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "alibaba",
+                    "format": "enalibaba://detail/?id=$1",
+                    "testResults": [
+                        "enalibaba://detail/?id=60244850644",
+                        "enalibaba://detail/?id=60082972898"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Product",
             "regex": "(?:(?:http(?:s?)://)(?:www.|rover.|m.)?ebay(?:\\.\\w+)+/itm/(?:[0-9A-Za-z_-]+/)?)(\\d+)(?:/|\\?)?(?:.*)$",
             "testInputs": [
                 "http://www.ebay.com/itm/Mondaine-Classic-Swiss-Railways-White-Dial-Black-Leather-Mens-Watch-/181453530366?pt=LH_DefaultDomain_0&hash=item2a3f7924fe",
@@ -2548,6 +2566,13 @@
             "displayName": "Amazon",
             "storeIdentifier": "297606951",
             "scheme": "com.amazon.mobile.shopping://"
+        },
+        {
+            "identifier": "alibaba",
+            "displayName": "Alibaba",
+            "storeIdentifier": "503451073",
+            "scheme": "enalibaba://",
+            "new": true
         },
         {
             "identifier": "ebay",
