@@ -2525,15 +2525,13 @@
             "identifier": "alienblue",
             "displayName": "Alien Blue",
             "storeIdentifier": "923187241",
-            "scheme": "alienblue://",
-            "new": true
+            "scheme": "alienblue://"
         },
         {
             "identifier": "buzzfeed",
             "displayName": "BuzzFeed",
             "storeIdentifier": "352969997",
-            "scheme": "buzzfeed://",
-            "new": true
+            "scheme": "buzzfeed://"
         },
         {
             "identifier": "ted",
