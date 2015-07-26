@@ -183,6 +183,24 @@
             ]
         },
         {
+            "title": "Open Event",
+            "regex": "http(?:s)?://(?:\\w+\\.)?facebook\\.com/events/(\\d+).*$",
+            "testInputs": [
+                "https://www.facebook.com/events/878295485593070/",
+                "https://m.facebook.com/events/394680094069835?acontext=%7B%22ref%22%3A2%2C%22"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "facebook",
+                    "format": "fb://event?id=$1",
+                    "testResults": [
+                        "fb://event?id=878295485593070",
+                        "fb://event?id=394680094069835"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open App",
             "regex": "http(?:s)?://apps\\.getpebble\\.com/(?:\\w+/)*application(?:s)?/([:hex:]+)",
             "testInputs": [
@@ -2263,6 +2281,12 @@
             "displayName": "Instagram",
             "storeIdentifier": "389801252",
             "scheme": "instagram://"
+        },
+        {
+            "identifier": "facebook",
+            "displayName": "Facebook",
+            "storeIdentifier": "284882215",
+            "scheme": "fb://"
         },
         {
             "identifier": "flickr",
