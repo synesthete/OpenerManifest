@@ -1653,16 +1653,16 @@
             "formats": [
                 {
                     "appIdentifier": "amazon",
-                    "format": "com.amazon.mobile.shopping://amazon$1/products/$2",
+                    "format": "com.amazon.mobile.shopping://amazon$1/products/$2?tag=opener-20",
                     "testResults": [
-                        "com.amazon.mobile.shopping://amazon.com/products/B0016QNNP6",
-                        "com.amazon.mobile.shopping://amazon.com/products/B0016QNNP6",
-                        "com.amazon.mobile.shopping://amazon.com/products/B0016QNNP6",
-                        "com.amazon.mobile.shopping://amazon.com/products/B0016QNNP6",
-                        "com.amazon.mobile.shopping://amazon.com/products/B0016QNNP6",
-                        "com.amazon.mobile.shopping://amazon.co.uk/products/1472230078",
-                        "com.amazon.mobile.shopping://amazon.de/products/B00N5BQ62",
-                        "com.amazon.mobile.shopping://amazon.com/products/0812522397"
+                        "com.amazon.mobile.shopping://amazon.com/products/B0016QNNP6?tag=opener-20",
+                        "com.amazon.mobile.shopping://amazon.com/products/B0016QNNP6?tag=opener-20",
+                        "com.amazon.mobile.shopping://amazon.com/products/B0016QNNP6?tag=opener-20",
+                        "com.amazon.mobile.shopping://amazon.com/products/B0016QNNP6?tag=opener-20",
+                        "com.amazon.mobile.shopping://amazon.com/products/B0016QNNP6?tag=opener-20",
+                        "com.amazon.mobile.shopping://amazon.co.uk/products/1472230078?tag=opener-20",
+                        "com.amazon.mobile.shopping://amazon.de/products/B00N5BQ62?tag=opener-20",
+                        "com.amazon.mobile.shopping://amazon.com/products/0812522397?tag=opener-20"
                     ]
                 }
             ]
