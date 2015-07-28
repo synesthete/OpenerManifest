@@ -370,7 +370,7 @@
         {
             "title": "Open Tumblog",
             "includeHeaders": true,
-            "regex": "http://(?!.*\\.tumblr\\.com)[a-zA-Z0-9-\\.]+/(?!post|image|tagged).*\\n.*\"(?:(?i)X-Tumblr-User)\":\"([a-zA-Z0-9_\\-]+)\",.*$",
+            "regex": "http://(?!.*\\.tumblr\\.com)[a-zA-Z0-9-\\.]+/(?!post|image|tagged).*\\n.*\"(?:(?i)X-Tumblr-User)\":\"([a-zA-Z0-9_\\-]+)\".*$",
             "formats": [
                 {
                     "appIdentifier": "tumblr",
@@ -435,7 +435,7 @@
         },
         {
             "title": "Open Post",
-            "regex": "http://(?!.*\\.tumblr\\.com)[a-zA-Z0-9-.]+/(?!tagged)\\w+/(\\d+).*\\n.*\"(?:(?i)X-Tumblr-User)\":\"([a-zA-Z0-9_\\-]+)\",.*$",
+            "regex": "http://(?!.*\\.tumblr\\.com)[a-zA-Z0-9-.]+/(?!tagged)\\w+/(\\d+).*\\n.*\"(?:(?i)X-Tumblr-User)\":\"([a-zA-Z0-9_\\-]+)\".*$",
             "includeHeaders": true,
             "formats": [
                 {
