@@ -1628,7 +1628,7 @@
         },
         {
             "title": "Open Story",
-            "regex": "http(?:s)?://[a-zA-Z0-9-.]+/(?:p/|(?:\\w*/)?(?:[a-zA-Z0-9_%]+-)+)([0-9a-fA-F]+)\\n.*\"(?:(?i)x-powered-by)\":\"Kale\",.*$",
+            "regex": "http(?:s)?://(?!.*medium\\.com)[a-zA-Z0-9-.]+/(?:p/|(?:\\w*/)?(?:[a-zA-Z0-9_%]+-)+)([0-9a-fA-F]+)\\n.*\"(?:(?i)x-powered-by)\":\"Kale\",.*$",
             "includeHeaders": true,
             "formats": [
                 {
