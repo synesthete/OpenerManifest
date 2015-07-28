@@ -566,7 +566,7 @@
                     "appIdentifier": "flipboard",
                     "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(flipboard:\/\/.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
                     "testResults": [
-                        "flipboard://showSection/flipboard/user%252F230604372?title=Catherine%20Scowcroft%20on%20Flipboard",
+                        "flipboard://showSection/auth/flipboard/user%252F230604372?title=Catherine%20Scowcroft%20on%20Flipboard",
                         "flipboard://showSection/sid/5ha7nr15y/catherinesc63kn?title=Liverpool%20Post%20on%20Flipboard"
                     ]
                 }
