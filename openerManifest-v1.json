@@ -1957,7 +1957,7 @@
             "title": "Open Run",
             "regex": "http(?:s)?://(?:www\\.)?runkeeper\\.com/(?:user/\\w+/activity/\\d+|activity/?.*)",
             "testInputs": [
-                "http://runkeeper.com/user/rtmfd/activity/593149485",
+                "http://runkeeper.com/user/AhmedAltayeb/activity/622221438",
                 "http://runkeeper.com/activity?userId=17521263&trip=593152993"
             ],
             "formats": [
@@ -1965,7 +1965,7 @@
                     "appIdentifier": "runkeeper",
                     "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(runkeeper:\/\/.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
                     "testResults": [
-                        "runkeeper://?view=activity&tripuuid=e5154321-6a6c-4b1f-8547-734c74ce538a&deepLinkSource=twitterCard",
+                        "runkeeper://?view=activity&tripuuid=2fa7223f-508e-450f-abe5-9e6c436db151&deepLinkSource=twitterCard",
                         "runkeeper://?view=activity&tripuuid=18ff2a03-f397-4376-8c00-ded503b5732f&deepLinkSource=twitterCard"
                     ]
                 }
