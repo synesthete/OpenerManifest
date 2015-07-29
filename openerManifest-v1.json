@@ -2269,6 +2269,24 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open App",
+            "regex": "http(?:s)?://appsto\\.re/(?:.*/?)*$",
+            "testInputs": [
+                "https://appsto.re/au/Vo5-6.i",
+                "https://appsto.re/us/Vo5-6.i"
+            ],
+            "formats": [
+                {
+                    "appidentifier": "tappd",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseURL; var regex = RegExp('http(?:s)?://itunes\\.apple\\.com/(?:.*/)*app/(?:.*/)?id(\\d+).*$'); var match = regex.exec(res)[1]; completionHandler('tappdapp://app_in_detail?' + match); } }; xmlhttp.open('GET', url , true); xmlhttp.send(); }",
+                    "testResults": [
+                        "tappdapp://app_in_detail?989565871",
+                        "tappdapp://app_in_detail?989565871"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -2770,6 +2788,13 @@
             "displayName": "Trulia Rentals",
             "storeIdentifier": "508163604",
             "scheme": "truliapdpforrent://",
+            "new": true
+        },
+        {
+            "identifier": "tappd",
+            "displayName": "Tappd",
+            "storeIdentifier": "823376869",
+            "scheme": "tappdapp://",
             "new": true
         }
     ]
