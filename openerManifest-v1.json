@@ -138,10 +138,11 @@
         },
         {
             "title": "Open Post",
-            "regex": "(?:(?:http(?:s?)://(?:www.)?(?:(?:instagram.com)|(?:instagr.am))/p/))([a-zA-Z0-9_\\-\\.]+)(?:/?)$",
+            "regex": "http(?:s)?://(?:www\\.)?(?:instagram\\.com|instagr\\.am)/p/([a-zA-Z0-9_\\-\\.]+).*$",
             "testInputs": [
                 "https://instagram.com/p/1t0zhgmQf7/",
-                "https://instagram.com/p/1t0oDmGQfp/"
+                "https://instagram.com/p/1t0oDmGQfp/",
+                "https://instagram.com/p/zAoa96gwQg/?taken-by=lukesbeard"
             ],
             "formats": [
                 {
@@ -149,7 +150,8 @@
                     "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); url = 'http://api.instagram.com/oembed?url=' + url; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4) { if (xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); completionHandler('instagram://media?id=' + res['media_id']); } else { completionHandler(null); } } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
                     "testResults": [
                         "instagram://media?id=967661734046795771_263571600",
-                        null
+                        null,
+                        "instagram://media?id=918912099030336544_192"
                     ]
                 }
             ]
