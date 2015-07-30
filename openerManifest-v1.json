@@ -347,7 +347,7 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(s)?://[a-zA-Z0-9_\\-\\.]+\\.vsco\\.com/grid.*$",
+            "regex": "http(s)?://[a-zA-Z0-9_\\-\\.]+\\.vsco\\.co(m)?/grid.*$",
             "testInputs": [
                 "http://jmcashdollar.vsco.co/grid/1"
             ],
@@ -363,7 +363,7 @@
         },
         {
             "title": "Open Photo",
-            "regex": "http(s)?://[a-zA-Z0-9_\\-\\.]+\\.vsco\\.com/media/\\w+.*$",
+            "regex": "http(s)?://[a-zA-Z0-9_\\-\\.]+\\.vsco\\.co(m)?/media/\\w+.*$",
             "testInputs": [
                 "http://jmcashdollar.vsco.co/media/53baaa357567083d5a8b460a"
             ],
