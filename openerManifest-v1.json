@@ -2788,8 +2788,7 @@
             "identifier": "zillow",
             "displayName": "Zillow",
             "storeIdentifier": "310738695",
-            "scheme": "zillowapp://",
-            "new": true
+            "scheme": "zillowapp://"
         },
         {
             "identifier": "redfin",
@@ -2801,15 +2800,13 @@
             "identifier": "trulia",
             "displayName": "Trulia",
             "storeIdentifier": "288487321",
-            "scheme": "truliapdpforrent://",
-            "new": true
+            "scheme": "truliapdpforrent://"
         },
         {
             "identifier": "truliarent",
             "displayName": "Trulia Rentals",
             "storeIdentifier": "508163604",
-            "scheme": "truliapdpforrent://",
-            "new": true
+            "scheme": "truliapdpforrent://"
         }
     ]
 }
