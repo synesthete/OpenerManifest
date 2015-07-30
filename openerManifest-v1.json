@@ -2282,12 +2282,12 @@
             "formats": [
                 {
                     "appidentifier": "tappd",
-                    "script": "function process(url, completionHandler) { var res = url; var regex = new RegExp('http(?:s)?://itunes\\.apple\\.com/(?:.*/)*app/(?:.*/)?id(\\d+).*$'); var match = regex.exec(res); var urlScheme = 'tappdapp://app_in_detail?'; if (match) { completionHandler(urlScheme + match[1]); } else { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function () { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { res = xmlhttp.responseURL; match = regex.exec(res); completionHandler(urlScheme + match[1]); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); } }",
+                    "script": "function process(url, completionHandler) { var res = url; var regex = new RegExp('http(?:s)?://itunes\\.apple\\.com/(?:.*/)*app/(?:.*/)?id(\\d+).*$'); var match = regex.exec(res); var urlScheme = 'tappdapp://app_in_detail='; if (match) { completionHandler(urlScheme + match[1]); } else { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function () { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { res = xmlhttp.responseURL; match = regex.exec(res); completionHandler(urlScheme + match[1]); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); } }",
                     "testResults": [
-                        "tappdapp://app_in_detail?989565871",
-                        "tappdapp://app_in_detail?989565871",
-                        "tappdapp://app_in_detail?989565871",
-                        "tappdapp://app_in_detail?989565871"
+                        "tappdapp://app_in_detail=989565871",
+                        "tappdapp://app_in_detail=989565871",
+                        "tappdapp://app_in_detail=989565871",
+                        "tappdapp://app_in_detail=989565871"
                     ]
                 }
             ]
