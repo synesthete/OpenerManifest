@@ -2448,6 +2448,12 @@
             "docs": "http://j-gessner.de/1/post/2014/12/protube-2-url-scheme.html"
         },
         {
+            "identifier": "youplayer",
+            "displayName": "YouPlayer",
+            "storeIdentifier": "561921453",
+            "scheme": "youplayer://"
+        },
+        {
             "identifier": "vimeo",
             "displayName": "Vimeo",
             "storeIdentifier": "425194759",
