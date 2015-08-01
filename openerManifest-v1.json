@@ -2272,20 +2272,16 @@
         },
         {
             "title": "Open App",
-            "regex": "http(?:s)?://(?:appsto\\.re/(?:.*/?)*|itunes\\.apple\\.com/(?:.*/)*app/(?:.*/)?id(?:\\d+).*)$",
+            "regex": "http(?:s)?://itunes\\.apple\\.com/(?:.*/)*app/(?:.*/)?id(\\d+).*$",
             "testInputs": [
-                "https://appsto.re/au/Vo5-6.i",
-                "https://appsto.re/us/Vo5-6.i",
                 "https://itunes.apple.com/au/app/opener-open-links-in-apps/id989565871?mt=8",
                 "https://itunes.apple.com/us/app/opener-open-links-in-apps/id989565871"
             ],
             "formats": [
                 {
-                    "appidentifier": "tappd",
-                    "script": "function process(url, completionHandler) { var res = url; var regex = new RegExp('http(?:s)?://itunes\\.apple\\.com/(?:.*/)*app/(?:.*/)?id(\\d+).*$'); var match = regex.exec(res); var urlScheme = 'tappdapp://app_in_detail='; if (match) { completionHandler(urlScheme + match[1]); } else { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function () { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { res = xmlhttp.responseURL; match = regex.exec(res); completionHandler(urlScheme + match[1]); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); } }",
+                    "appIdentifier": "tappd",
+                    "format": "tappdapp://app_in_detail=$1",
                     "testResults": [
-                        "tappdapp://app_in_detail=989565871",
-                        "tappdapp://app_in_detail=989565871",
                         "tappdapp://app_in_detail=989565871",
                         "tappdapp://app_in_detail=989565871"
                     ]
