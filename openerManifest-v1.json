@@ -2451,7 +2451,8 @@
             "identifier": "youplayer",
             "displayName": "YouPlayer",
             "storeIdentifier": "561921453",
-            "scheme": "youplayer://"
+            "scheme": "youplayer://",
+            "new": true
         },
         {
             "identifier": "vimeo",
