@@ -853,6 +853,17 @@
                         "protube://video/mzun7_Ynmks",
                         "protube://video/JEiSTzK-A2A"
                     ]
+                },
+                {
+                    "appIdentifier": "youplayer",
+                    "format": "youplayer://youtube.com/watch?v=$1",
+                    "testResults": [
+                        "youplayer://youtube.com/watch?v=MTY1Kje0yLg",
+                        "youplayer://youtube.com/watch?v=0uY7gLZDmn4",
+                        "youplayer://youtube.com/watch?v=MFzDaBzBlL0",
+                        "youplayer://youtube.com/watch?v=mzun7_Ynmks",
+                        "youplayer://youtube.com/watch?v=JEiSTzK-A2A"
+                    ]
                 }
             ]
         },
@@ -875,6 +886,13 @@
                     "format": "protube://user/$2",
                     "testResults": [
                         "protube://user/timonominus"
+                    ]
+                },
+                {
+                    "appIdentifier": "youplayer",
+                    "format": "youplayer://youtube.com/user/$2",
+                    "testResults": [
+                        "youplayer://youtube.com/user/timonominus"
                     ]
                 }
             ]
@@ -2428,6 +2446,12 @@
             "storeIdentifier": "931201696",
             "scheme": "protube://",
             "docs": "http://j-gessner.de/1/post/2014/12/protube-2-url-scheme.html"
+        },
+        {
+            "identifier": "youplayer",
+            "displayName": "YouPlayer",
+            "storeIdentifier": "561921453",
+            "scheme": "youplayer://"
         },
         {
             "identifier": "vimeo",
