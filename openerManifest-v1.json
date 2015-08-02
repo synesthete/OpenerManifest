@@ -2319,6 +2319,24 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open App",
+            "regex": "http(?:s)?://itunes\\.apple\\.com/(?:.*/)*app/(?:.*/)?id(\\d+).*$",
+            "testInputs": [
+                "https://itunes.apple.com/au/app/opener-open-links-in-apps/id989565871?mt=8",
+                "https://itunes.apple.com/us/app/opener-open-links-in-apps/id989565871"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "tappd",
+                    "format": "tappdapp://app_in_detail=$1",
+                    "testResults": [
+                        "tappdapp://app_in_detail=989565871",
+                        "tappdapp://app_in_detail=989565871"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -2832,6 +2850,13 @@
             "displayName": "Trulia Rentals",
             "storeIdentifier": "508163604",
             "scheme": "truliapdpforrent://"
+        },
+        {
+            "identifier": "tappd",
+            "displayName": "Tappd",
+            "storeIdentifier": "823376869",
+            "scheme": "tappdapp://",
+            "new": true
         }
     ]
 }
