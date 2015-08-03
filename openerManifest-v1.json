@@ -2343,6 +2343,14 @@
                         "appshoppersocial://app/989565871",
                         "appshoppersocial://app/989565871"
                     ]
+                },
+                {
+                    "appIdentifier": "appzapp",
+                    "format": "appzapp://app?appid=$1",
+                    "testResults": [
+                        "appzapp://app?appid=989565871",
+                        "appzapp://app?appid=989565871"
+                    ]
                 }
             ]
         }
@@ -2871,6 +2879,13 @@
             "displayName": "AppShopper",
             "storeIdentifier": "602522782",
             "scheme": "appshoppersocial://",
+            "new": true
+        },
+        {
+            "identifier": "appzapp",
+            "displayName": "AppZapp",
+            "storeIdentifier": "845046425",
+            "scheme": "appzapp://",
             "new": true
         }
     ]
