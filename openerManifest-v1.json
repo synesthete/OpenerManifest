@@ -2335,6 +2335,14 @@
                         "tappdapp://app_in_detail=989565871",
                         "tappdapp://app_in_detail=989565871"
                     ]
+                },
+                {
+                    "appIdentifier": "appshopper",
+                    "format": "appshoppersocial://app/$1",
+                    "testResults": [
+                        "appshoppersocial://app/989565871",
+                        "appshoppersocial://app/989565871"
+                    ]
                 }
             ]
         }
@@ -2856,6 +2864,13 @@
             "displayName": "Tappd",
             "storeIdentifier": "823376869",
             "scheme": "tappdapp://",
+            "new": true
+        },
+        {
+            "identifier": "appshopper",
+            "displayName": "AppShopper",
+            "storeIdentifier": "602522782",
+            "scheme": "appshoppersocial://",
             "new": true
         }
     ]
