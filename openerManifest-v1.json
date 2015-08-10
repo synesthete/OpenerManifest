@@ -1892,6 +1892,24 @@
             ]
         },
         {
+            "title": "Open Doodle",
+            "regex": "http(?:s)?://(?:www\\.)?doodle\\.com/([a-z0-9]{16}).*$",
+            "testInputs": [
+                "http://doodle.com/bg7qh3q9k44n6vvr",
+                "http://doodle.com/nq77e46backa2szr"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "doodle",
+                    "format": "doodle://?pollId=$1",
+                    "testResults": [
+                        "doodle://?pollId=bg7qh3q9k44n6vvr",
+                        "doodle://?pollId=nq77e46backa2szr"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Event",
             "regex": "http(?:s)?://(?:www\\.|m\\.|mobile\\.)stubhub\\.com/(?:\\S+/)*(?:\\w+-)*(\\d+).*$",
             "testInputs": [
@@ -2737,6 +2755,12 @@
             "displayName": "Meetup",
             "storeIdentifier": "375990038",
             "scheme": "meetup://"
+        },
+        {
+            "identifier": "doodle",
+            "displayName": "Doodle",
+            "storeIdentifier": "938182547",
+            "scheme": "doodle://"
         },
         {
             "identifier": "imdb",
