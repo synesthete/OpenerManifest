@@ -2754,7 +2754,8 @@
             "identifier": "doodle",
             "displayName": "Doodle",
             "storeIdentifier": "938182547",
-            "scheme": "doodle://"
+            "scheme": "doodle://",
+            "new": true
         },
         {
             "identifier": "imdb",
