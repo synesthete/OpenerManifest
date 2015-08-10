@@ -2403,8 +2403,7 @@
             "identifier": "vscocam",
             "displayName": "VSCOcam",
             "storeIdentifier": "588013838",
-            "scheme": "vsco://",
-            "new": true
+            "scheme": "vsco://"
         },
         {
             "identifier": "500px",
@@ -2503,8 +2502,7 @@
             "identifier": "youplayer",
             "displayName": "YouPlayer",
             "storeIdentifier": "561921453",
-            "scheme": "youplayer://",
-            "new": true
+            "scheme": "youplayer://"
         },
         {
             "identifier": "vimeo",
@@ -2517,16 +2515,14 @@
             "displayName": "Youku",
             "storeIdentifier": "336141475",
             "scheme": "youku://",
-            "platform": "phone",
-            "new": true
+            "platform": "phone"
         },
         {
             "identifier": "youkuhd",
             "displayName": "Youku HD",
             "storeIdentifier": "394075284",
             "scheme": "youkuhd://",
-            "platform": "pad",
-            "new": true
+            "platform": "pad"
         },
         {
             "identifier": "hulu",
@@ -2569,8 +2565,7 @@
             "identifier": "dubsmash",
             "displayName": "Dubsmash",
             "storeIdentifier": "918820076",
-            "scheme": "dubsmash://",
-            "new": true
+            "scheme": "dubsmash://"
         },
         {
             "identifier": "meerkat",
@@ -2711,8 +2706,7 @@
             "identifier": "alibaba",
             "displayName": "Alibaba",
             "storeIdentifier": "503451073",
-            "scheme": "enalibaba://",
-            "new": true
+            "scheme": "enalibaba://"
         },
         {
             "identifier": "ebay",
@@ -2895,22 +2889,19 @@
             "identifier": "tappd",
             "displayName": "Tappd",
             "storeIdentifier": "823376869",
-            "scheme": "tappdapp://",
-            "new": true
+            "scheme": "tappdapp://"
         },
         {
             "identifier": "appshopper",
             "displayName": "AppShopper",
             "storeIdentifier": "602522782",
-            "scheme": "appshoppersocial://",
-            "new": true
+            "scheme": "appshoppersocial://"
         },
         {
             "identifier": "appzapp",
             "displayName": "AppZapp",
             "storeIdentifier": "845046425",
-            "scheme": "appzapp://",
-            "new": true
+            "scheme": "appzapp://"
         }
     ]
 }
