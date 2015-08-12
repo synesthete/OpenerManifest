@@ -511,6 +511,22 @@
             ]
         },
         {
+            "title": "Open Journal",
+            "regex": "http(?:s)?://app\\.gowander\\.co/web/v1/journals/(\\d+).*$",
+            "testInputs": [
+                "http://app.gowander.co/web/v1/journals/219"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "wander",
+                    "format": "comgowanderwander://journals/$1",
+                    "testResults": [
+                        "comgowanderwander://journals/219"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Moment",
             "regex": "http(?:s?)://(?:www\\.)?path.com/(?:p|moment)/.*$",
             "formats": [
@@ -2422,6 +2438,13 @@
             "displayName": "Storehouse",
             "storeIdentifier": "791297521",
             "scheme": "storehouse://"
+        },
+        {
+            "identifier": "wander",
+            "displayName": "Wander",
+            "storeIdentifier": "944064086",
+            "scheme": "comgowanderwander://",
+            "new": true
         },
         {
             "identifier": "path",
