@@ -1838,6 +1838,22 @@
             ]
         },
         {
+            "title": "Open Product",
+            "regex": "http(?:s)?://(?:www\\.)?fancy\\.com/things/(\\d+).*$",
+            "testInputs": [
+                "http://fancy.com/things/924406547881135320/Classic-Nottingham-Rose-Gold-Watch-by-Daniel-Wellington?utm=timeline_featured"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "fancy",
+                    "format": "fancy://things/$1",
+                    "testResults": [
+                        "fancy://things/924406547881135320"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Comic",
             "regex": "(?:http(?:s?)://(?:www.)?xkcd.com/)(\\d+)(?:\\S*)$",
             "testInputs": [
@@ -2748,6 +2764,13 @@
             "displayName": "Etsy",
             "storeIdentifier": "477128284",
             "scheme": "etsy://"
+        },
+        {
+            "identifier": "fancy",
+            "displayName": "Fancy",
+            "storeIdentifier": "407324335",
+            "scheme": "fancy://",
+            "new": true
         },
         {
             "identifier": "xkcdhd",
