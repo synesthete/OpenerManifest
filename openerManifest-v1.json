@@ -1674,12 +1674,13 @@
         },
         {
             "title": "Open Story",
-            "regex": "(?:http(?:s?)://(?:www\\.)?medium\\.com/(?:(?:p/)|(?:\\S+/(?:[a-zA-Z0-9_%]+-)+)))([0-9a-fA-F]+)(?:/?)(?:\\?.*)?$",
+            "regex": "(?:http(?:s?)://(?:www\\.)?medium\\.com/(?:(?:p/)|(?:\\S+/(?:[a-zA-Z0-9_%]+-)+)))([0-9a-fA-F]+)(?:#[a-zA-Z0-9_%\\-]+)?(?:/?)(?:\\?.*)?$",
             "testInputs": [
                 "https://medium.com/@timonus",
                 "https://medium.com/@HelloAngels/hello-color-genomics-c679cddd7ed8",
                 "https://medium.com/technology-musings/my-rocky-first-24hrs-with-the-%E1%B4%A1%E1%B4%80%E1%B4%9B%E1%B4%84%CA%9C-67c841702a70",
-                "https://www.medium.com/p/822960e8653d"
+                "https://www.medium.com/p/822960e8653d",
+                "https://medium.com/@moskov/work-hard-live-well-ead679cb506d#af15--share-0-106"
             ],
             "formats": [
                 {
@@ -1689,7 +1690,8 @@
                         null,
                         "medium:/p/c679cddd7ed8",
                         "medium:/p/67c841702a70",
-                        "medium:/p/822960e8653d"
+                        "medium:/p/822960e8653d",
+                        "medium:/p/ead679cb506d"
                     ]
                 }
             ]
