@@ -2298,6 +2298,30 @@
             ]
         },
         {
+            "title": "Open Document",
+            "regex": "http(?:s)?://(?:\\w+\\.)*quip\\.com/([a-zA-Z0-9]{12}).*$",
+            "testInputs": [
+                "https://quip.com/jgBUALiGBjwp",
+                "https://quip.com/FUkoAicm3jct",
+                "https://quip.com/FUkoAicm3jct",
+                "http://quip.com/download",
+                "http://support.quip.com/entries/81662865-How-do-I-use-memes-in-chat-"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "quip",
+                    "format": "quip://$1",
+                    "testResults": [
+                        "quip://jgBUALiGBjwp",
+                        "quip://FUkoAicm3jct",
+                        "quip://FUkoAicm3jct",
+                        null,
+                        null
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Board",
             "regex": "http(?:s)?://(?:www\\.)?trello\\.com/b/(\\w+).*$",
             "testInputs": [
@@ -2996,6 +3020,13 @@
             "storeIdentifier": "281796108",
             "scheme": "evernote://",
             "docs": "https://dev.evernote.com/doc/articles/note_links.php"
+        },
+        {
+            "identifier": "quip",
+            "displayName": "Quip",
+            "storeIdentifier": "647922896",
+            "scheme": "quip://",
+            "new": true
         },
         {
             "identifier": "trello",
