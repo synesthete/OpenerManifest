@@ -1874,6 +1874,22 @@
             ]
         },
         {
+            "title": "Open Post",
+            "regex": "http(?:s)?://(?:www\\.)?weheartit\\.com/entry/(\\d+).*$",
+            "testInputs": [
+                "http://weheartit.com/entry/195395263/via/martina_morales_7965?utm_medium=social&utm_campaign=share&utm_source=twitter.com"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "weheartit",
+                    "format": "whi://entry/$1",
+                    "testResults": [
+                        "whi://entry/195395263"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Comic",
             "regex": "(?:http(?:s?)://(?:www.)?xkcd.com/)(\\d+)(?:\\S*)$",
             "testInputs": [
@@ -2815,6 +2831,13 @@
             "displayName": "Fancy",
             "storeIdentifier": "407324335",
             "scheme": "fancy://",
+            "new": true
+        },
+        {
+            "identifier": "weheartit",
+            "displayName": "We Heart It",
+            "storeIdentifier": "539124565",
+            "scheme": "whi://",
             "new": true
         },
         {
