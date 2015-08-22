@@ -1890,6 +1890,22 @@
             ]
         },
         {
+            "title": "Open Profile",
+            "regex": "http(?:s)?://(?:www\\.)?weheartit\\.com/(?!entry)([a-zA-Z0-9_\\-]+)",
+            "testInputs": [
+                "http://weheartit.com/martina_morales_7965"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "weheartit",
+                    "format": "whi://user/$1",
+                    "testResults": [
+                        "whi://user/martina_morales_7965"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Comic",
             "regex": "(?:http(?:s?)://(?:www.)?xkcd.com/)(\\d+)(?:\\S*)$",
             "testInputs": [
