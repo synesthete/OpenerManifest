@@ -2558,8 +2558,7 @@
             "identifier": "wander",
             "displayName": "Wander",
             "storeIdentifier": "944064086",
-            "scheme": "comgowanderwander://",
-            "new": true
+            "scheme": "comgowanderwander://"
         },
         {
             "identifier": "path",
@@ -2913,8 +2912,7 @@
             "identifier": "doodle",
             "displayName": "Doodle",
             "storeIdentifier": "938182547",
-            "scheme": "doodle://",
-            "new": true
+            "scheme": "doodle://"
         },
         {
             "identifier": "imdb",
