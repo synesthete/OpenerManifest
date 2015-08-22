@@ -2145,8 +2145,9 @@
         },
         {
             "title": "Open Link",
-            "regex": "http(?:s)?://((?:\\w+\\.)+wikipedia\\.(?:com|org)/.*)$",
+            "regex": "http(?:s)?://((?!www\\.)(?:(\\w+)\\.)(?:\\w+\\.)*wikipedia\\.(?:com|org)/(?:wiki/)?(.*))$",
             "testInputs": [
+                "http://www.wikipedia.org/wiki/Bottle_opener",
                 "http://en.wikipedia.org/wiki/Bottle_opener",
                 "http://en.m.wikipedia.org/wiki/Soylent"
             ],
@@ -2155,8 +2156,18 @@
                     "appIdentifier": "wikipanion",
                     "format": "wikipedia://$1",
                     "testResults": [
+                        null,
                         "wikipedia://en.wikipedia.org/wiki/Bottle_opener",
                         "wikipedia://en.m.wikipedia.org/wiki/Soylent"
+                    ]
+                },
+                {
+                    "appIdentifier": "dasreferenz",
+                    "format": "dasreferenz://$2/$3",
+                    "testResults": [
+                        null,
+                        "dasreferenz://en/Bottle_opener",
+                        "dasreferenz://en/Soylent"
                     ]
                 }
             ]
@@ -2947,6 +2958,15 @@
             "displayName": "Wikipanion",
             "storeIdentifier": "288349436",
             "scheme": "wikipanion://"
+        },
+        {
+            "identifier": "dasreferenz",
+            "displayName": "das Referenz",
+            "storeIdentifier": "835944149",
+            "scheme": "dasreferenz://",
+            "platform": "pad",
+            "docs": "https://dasreferenz.uservoice.com/knowledgebase/articles/377297-url-scheme",
+            "new": true
         },
         {
             "identifier": "ioctocat",
