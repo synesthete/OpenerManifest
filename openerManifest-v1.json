@@ -2391,6 +2391,24 @@
             ]
         },
         {
+            "title": "Open Illustration",
+            "regex": "http(?:s)?://(?:\\w+\\.)?pixiv\\.net/member_illust\\.php?.*illust_id=(\\d+).*?$",
+            "testInputs": [
+                "http://touch.pixiv.net/member_illust.php?mode=medium&illust_id=29635750",
+                "http://www.pixiv.net/member_illust.php?illust_id=18514081&mode=medium"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "pixiv",
+                    "format": "pixiv://illusts/$1",
+                    "testResults": [
+                        "pixiv://illusts/29635750",
+                        "pixiv://illusts/18514081"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open App",
             "regex": "http(?:s)?://itunes\\.apple\\.com/(?:.*/)*app/(?:.*/)?id(\\d+).*$",
             "testInputs": [
@@ -2958,6 +2976,13 @@
             "displayName": "Trulia Rentals",
             "storeIdentifier": "508163604",
             "scheme": "truliapdpforrent://"
+        },
+        {
+            "identifier": "pixiv",
+            "displayName": "pixiv",
+            "storeIdentifier": "337248563",
+            "scheme": "pixiv://",
+            "new": true
         },
         {
             "identifier": "tappd",
