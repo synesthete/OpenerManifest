@@ -1891,16 +1891,34 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(?:s)?://(?:www\\.)?weheartit\\.com/(?!entry)([a-zA-Z0-9_\\-]+)",
+            "regex": "http(?:s)?://(?:www\\.)?weheartit\\.com/(?!entry)([a-zA-Z0-9_\\-]+)(?!.*/collections/.+).*$$",
             "testInputs": [
-                "http://weheartit.com/martina_morales_7965"
+                "http://weheartit.com/martina_morales_7965",
+                "http://weheartit.com/martina_morales_7965/collections/97402106-movies-series-d"
             ],
             "formats": [
                 {
                     "appIdentifier": "weheartit",
                     "format": "whi://user/$1",
                     "testResults": [
-                        "whi://user/martina_morales_7965"
+                        "whi://user/martina_morales_7965",
+                        null
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Collection",
+            "regex": "http(?:s)?://(?:www\\.)?weheartit\\.com/(?!entry)((?:[a-zA-Z0-9_\\-]+)/collections/(?:[a-zA-Z0-9_\\-]+)).*$",
+            "testInputs": [
+                "http://weheartit.com/martina_morales_7965/collections/97402106-movies-series-d"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "weheartit",
+                    "format": "whi://$1",
+                    "testResults": [
+                        "whi://martina_morales_7965/collections/97402106-movies-series-d"
                     ]
                 }
             ]
