@@ -1184,6 +1184,24 @@
         },
         {
             "title": "Open Video",
+            "regex": "http(?:s)?://(?:www\\.)?bilibili\\.com/(?:.*/)?video/av(\\d+).*$",
+            "testInputs": [
+                "http://www.bilibili.com/video/av2782208/",
+                "http://www.bilibili.com/mobile/video/av2782168.html?utm_source=twitterfeed&utm_medium=twitter"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "bilibili",
+                    "format": "bilibili://?av=$1",
+                    "testResults": [
+                        "bilibili://?av=2782208",
+                        "bilibili://?av=2782168"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Video",
             "regex": "http(?:s)?://(?:www\\.)?hulu(?:\\.\\w+)+/watch/(\\d+).*$",
             "testInputs": [
                 "http://www.hulu.com/watch/804690?linkId=14918334",
@@ -2564,6 +2582,13 @@
             "storeIdentifier": "394075284",
             "scheme": "youkuhd://",
             "platform": "pad"
+        },
+        {
+            "identifier": "bilibili",
+            "displayName": "bilibili",
+            "storeIdentifier": "527836853",
+            "scheme": "bilibili://",
+            "new": true
         },
         {
             "identifier": "hulu",
