@@ -2444,16 +2444,10 @@
         {
             "title": "Open Listing",
             "regex": "http(?:s)?://(?:\\w+\\.)?trulia\\.com/property/\\d+.*$",
-            "testInputs": [
-                "http://www.trulia.com/property/3209678735-67-Arago-St-San-Francisco-CA-94112"
-            ],
             "formats": [
                 {
                     "appIdentifier": "trulia",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(urlHash=.*?)\".*'); var match = regex.exec(res)[1]; completionHandler('truliapdpforsale://?' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "testResults": [
-                        "truliapdpforsale://?urlHash=aWQ9MzE2NTAzMjc5MSZpZHQ9UGVuZGluZyZzdD1DQSZjeT1TYW4rRnJhbmNpc2Nv"
-                    ]
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(urlHash=.*?)\".*'); var match = regex.exec(res)[1]; completionHandler('truliapdpforsale://?' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }"
                 }
             ]
         },
