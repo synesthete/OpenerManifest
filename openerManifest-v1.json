@@ -693,6 +693,24 @@
             ]
         },
         {
+            "title": "Open List",
+            "regex": "http(?:s)?://(m\\.|mobile\\.|www\\.)?foursquare\\.com/(?:[a-zA-Z0-9_%\\-]+/list|list)/[a-zA-Z0-9_%\\-]+.*$",
+            "testInputs": [
+                "https://foursquare.com/foursquare/list/13-architectural-marvels-in-nyc",
+                "https://foursquare.com/foursquare/list/5550f48b498e5d3067c36795"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "foursquare",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(foursquare:\/\/.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "testResults": [
+                        "foursquare://lists/5550f48b498e5d3067c36795",
+                        "foursquare://lists/5550f48b498e5d3067c36795"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Tip",
             "regex": "(?:http(?:s?)://(?:m.|www.|mobile.)?foursquare.com(?:/mobile)?/item/([0-9a-fA-F]{24}))(?:/?)$",
             "testInputs": [
