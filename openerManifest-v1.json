@@ -2701,8 +2701,7 @@
             "identifier": "bilibili",
             "displayName": "bilibili",
             "storeIdentifier": "527836853",
-            "scheme": "bilibili://",
-            "new": true
+            "scheme": "bilibili://"
         },
         {
             "identifier": "hulu",
@@ -2910,15 +2909,13 @@
             "identifier": "fancy",
             "displayName": "Fancy",
             "storeIdentifier": "407324335",
-            "scheme": "fancy://",
-            "new": true
+            "scheme": "fancy://"
         },
         {
             "identifier": "weheartit",
             "displayName": "We Heart It",
             "storeIdentifier": "539124565",
-            "scheme": "whi://",
-            "new": true
+            "scheme": "whi://"
         },
         {
             "identifier": "xkcdhd",
@@ -2999,8 +2996,7 @@
             "storeIdentifier": "835944149",
             "scheme": "dasreferenz://",
             "platform": "pad",
-            "docs": "https://dasreferenz.uservoice.com/knowledgebase/articles/377297-url-scheme",
-            "new": true
+            "docs": "https://dasreferenz.uservoice.com/knowledgebase/articles/377297-url-scheme"
         },
         {
             "identifier": "ioctocat",
@@ -3037,8 +3033,7 @@
             "identifier": "quip",
             "displayName": "Quip",
             "storeIdentifier": "647922896",
-            "scheme": "quip://",
-            "new": true
+            "scheme": "quip://"
         },
         {
             "identifier": "trello",
@@ -3099,8 +3094,7 @@
             "identifier": "pixiv",
             "displayName": "pixiv",
             "storeIdentifier": "337248563",
-            "scheme": "pixiv://",
-            "new": true
+            "scheme": "pixiv://"
         },
         {
             "identifier": "tappd",
