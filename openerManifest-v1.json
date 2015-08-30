@@ -694,10 +694,11 @@
         },
         {
             "title": "Open List",
-            "regex": "http(?:s)?://(m\\.|mobile\\.|www\\.)?foursquare\\.com/(?:[a-zA-Z0-9_%\\-]+/list|list)/[a-zA-Z0-9_%\\-]+.*$",
+            "regex": "http(?:s)?://(m\\.|mobile\\.|www\\.)?foursquare\\.com/(?:(?:user/\\d+|[a-zA-Z0-9_%\\-]+)/list)|list)/[a-zA-Z0-9_%\\-]+.*$",
             "testInputs": [
                 "https://foursquare.com/foursquare/list/13-architectural-marvels-in-nyc",
-                "https://foursquare.com/foursquare/list/5550f48b498e5d3067c36795"
+                "https://foursquare.com/foursquare/list/5550f48b498e5d3067c36795",
+                "https://foursquare.com/user/25939842/list/secret-place-caf%C3%A9?s=n"
             ],
             "formats": [
                 {
@@ -705,7 +706,8 @@
                     "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(foursquare:\/\/.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
                     "testResults": [
                         "foursquare://lists/5550f48b498e5d3067c36795",
-                        "foursquare://lists/5550f48b498e5d3067c36795"
+                        "foursquare://lists/5550f48b498e5d3067c36795",
+                        "foursquare://lists/55e1f6be498e9d91bb52dee6"
                     ]
                 }
             ]
