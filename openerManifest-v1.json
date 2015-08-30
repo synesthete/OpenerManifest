@@ -728,15 +728,17 @@
         },
         {
             "title": "Open Profile",
-            "regex": "(?:http(?:s?)://(?:m.|www.|mobile.)?foursquare.com(?:/mobile)?/u/(\\d+))(?:/?)$",
+            "regex": "(?:http(?:s?)://(?:m.|www.|mobile.)?foursquare.com(?:/mobile)?/(?:u|user)/(\\d+))(?:/?)$",
             "testInputs": [
-                "http://foursquare.com/u/558158"
+                "http://foursquare.com/u/558158",
+                "https://foursquare.com/user/558158"
             ],
             "formats": [
                 {
                     "appIdentifier": "foursquare",
                     "format": "foursquare://users/$1",
                     "testResults": [
+                        "foursquare://users/558158",
                         "foursquare://users/558158"
                     ]
                 }
