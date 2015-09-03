@@ -627,6 +627,24 @@
             ]
         },
         {
+            "title": "Open Link",
+            "regex": "http(?:s)?://byte\\.co/~([a-zA-Z0-9_\\-]+).*$",
+            "testInputs": [
+                "http://byte.co/~aawsron_w7w",
+                "http://byte.co/~ode-to-ana"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "byte",
+                    "format": "byte://$1",
+                    "testResults": [
+                        "byte://aawsron_w7w",
+                        "byte://ode-to-ana"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Profile",
             "regex": "http(?:s)?://weibo\\.(?:com|cn)/(?:u/)?(\\d+)(?:/\\?.*|/)?$",
             "testInputs": [
@@ -2621,6 +2639,13 @@
             "displayName": "Flipboard",
             "storeIdentifier": "358801284",
             "scheme": "flipboard://"
+        },
+        {
+            "identifier": "byte",
+            "displayName": "Byte://",
+            "storeIdentifier": "1021378991",
+            "scheme": "byte://",
+            "new": true
         },
         {
             "identifier": "weibo",
