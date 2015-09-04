@@ -1675,6 +1675,24 @@
         },
         {
             "title": "Open Post",
+            "regex": "http(?:s)?://(?:www\\.)?theguardian\\.(?:com|co\\.uk)/(.*)$",
+            "testInputs": [
+                "http://www.theguardian.com/commentisfree/picture/2015/sep/02/david-cameron-migration-crisis-steve-bell-cartoon",
+                "http://www.theguardian.com/global-development"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "theguardian",
+                    "format": "gnmguardian://$1",
+                    "testResults": [
+                        "gnmguardian://commentisfree/picture/2015/sep/02/david-cameron-migration-crisis-steve-bell-cartoon",
+                        "gnmguardian://global-development"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Post",
             "regex": "http(?:s)?://(?:www\\.)?buzzfeed\\.com/(\\w+/[a-zA-Z0-9_\\-%]+).*$",
             "testInputs": [
                 "http://www.buzzfeed.com/brendanklinkenberg/whose-netflix-password-are-you-using#.gtMaGm7ZL2",
@@ -2875,6 +2893,13 @@
             "displayName": "Alien Blue",
             "storeIdentifier": "923187241",
             "scheme": "alienblue://"
+        },
+        {
+            "identifier": "theguardian",
+            "displayName": "The Guardian",
+            "storeIdentifier": "409128287",
+            "scheme": "gnmguardian://",
+            "new": true
         },
         {
             "identifier": "buzzfeed",
