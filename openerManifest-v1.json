@@ -1936,6 +1936,26 @@
             ]
         },
         {
+            "title": "Open Project",
+            "regex": "http(?:s)?://(?:www\\.)?behance\\.net/gallery/(?:(?:[a-zA-Z0-9_\\-\\.]/)+)?(\\d+).*$",
+            "testInputs": [
+                "https://www.behance.net/gallery/29303701/Use-your-eyes",
+                "https://www.behance.net/gallery/28120617/WATCHme?scid=social51758486&adbid=640601625862651904&adbpl=tw&adbpr=9313022",
+                "https://www.behance.net/gallery/_/29303565/_"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "behance",
+                    "format": "behance://project/$1",
+                    "testResults": [
+                        "behance://project/29303701",
+                        "behance://project/28120617",
+                        "behance://project/29303565"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Post",
             "regex": "http(?:s)?://(?:www\\.)?weheartit\\.com/entry/(\\d+).*$",
             "testInputs": [
@@ -2968,6 +2988,13 @@
             "displayName": "Fancy",
             "storeIdentifier": "407324335",
             "scheme": "fancy://"
+        },
+        {
+            "identifier": "behance",
+            "displayName": "Behance",
+            "storeIdentifier": "489667151",
+            "scheme": "behance://",
+            "new": true
         },
         {
             "identifier": "weheartit",
