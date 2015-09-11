@@ -1733,6 +1733,28 @@
             ]
         },
         {
+            "title": "Open Document",
+            "regex": "http(?:s)?://(?:\\w+\\.)?scribd\\.com(?:/\\w+)*/(?:doc|embeds)/(\\d+).*$",
+            "testInputs": [
+                "http://www.scribd.com/doc/6099146/The-Stuyvesant-Spectator-9-11-Edition",
+                "http://www.scribd.com/mobile/doc/6099146/The-Stuyvesant-Spectator-9-11-Edition",
+                "https://www.scribd.com/embeds/229492417/content?start_page=1&view_mode=scroll&show_recommendations=true",
+                "https://es.scribd.com/doc/280266758/Encuentro-Provincial-Prevencion-y-Asistencia"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "scribd",
+                    "format": "iscribd://doc?id=$1",
+                    "testResults": [
+                        "iscribd://doc?id=6099146",
+                        "iscribd://doc?id=6099146",
+                        "iscribd://doc?id=229492417",
+                        "iscribd://doc?id=280266758"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Link",
             "regex": "http(?:s)?://(?:www\\.)?stumbleupon\\.com/(?:su|to/s)/(\\w+).*$",
             "testInputs": [
@@ -2946,6 +2968,13 @@
             "storeIdentifier": "697779797",
             "scheme": "biscuit://",
             "platform": "pad"
+        },
+        {
+            "identifier": "scribd",
+            "displayName": "Scribd",
+            "storeIdentifier": "542557212",
+            "scheme": "iscribd://",
+            "new": true
         },
         {
             "identifier": "stumbleupon",
