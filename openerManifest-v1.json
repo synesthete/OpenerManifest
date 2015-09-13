@@ -2729,8 +2729,7 @@
             "identifier": "byte",
             "displayName": "Byte://",
             "storeIdentifier": "1021378991",
-            "scheme": "byte://",
-            "new": true
+            "scheme": "byte://"
         },
         {
             "identifier": "weibo",
@@ -2965,8 +2964,7 @@
             "identifier": "theguardian",
             "displayName": "The Guardian",
             "storeIdentifier": "409128287",
-            "scheme": "gnmguardian://",
-            "new": true
+            "scheme": "gnmguardian://"
         },
         {
             "identifier": "buzzfeed",
@@ -3135,8 +3133,7 @@
             "displayName": "Wikipanion",
             "storeIdentifier": "364195592",
             "scheme": "wikipanion://",
-            "platform": "pad",
-            "new": true
+            "platform": "pad"
         },
         {
             "identifier": "dasreferenz",
