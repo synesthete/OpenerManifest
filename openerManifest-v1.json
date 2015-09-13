@@ -2517,6 +2517,22 @@
             ]
         },
         {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:www\\.)?houzz\\.com/photos/(\\d+).*$",
+            "testInputs": [
+                "http://www.houzz.com/photos/31036816/Bay-Collection-King-Bed-by-Talenti-Casa-modern-platform-beds"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "houzz",
+                    "format": "houzz://photos/$1",
+                    "testResults": [
+                        "houzz://photos/31036816"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Details",
             "regex": "http(?:s)?://(?:\\w+\\.)?zillow\\.com/homedetails/.*?(\\d+)_zpid.*$",
             "testInputs": [
@@ -3197,6 +3213,13 @@
             "displayName": "Pebble Time",
             "storeIdentifier": "957997620",
             "scheme": "pebble-3://"
+        },
+        {
+            "identifier": "houzz",
+            "displayName": "Houzz",
+            "storeIdentifier": "399563465",
+            "scheme": "houzz://",
+            "new": true
         },
         {
             "identifier": "zillow",
