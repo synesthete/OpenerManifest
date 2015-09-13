@@ -2266,6 +2266,15 @@
                     ]
                 },
                 {
+                    "appIdentifier": "wikipanionpad",
+                    "format": "wikipedia://$1",
+                    "testResults": [
+                        null,
+                        "wikipedia://en.wikipedia.org/wiki/Bottle_opener",
+                        "wikipedia://en.m.wikipedia.org/wiki/Soylent"
+                    ]
+                },
+                {
                     "appIdentifier": "dasreferenz",
                     "format": "dasreferenz://$2/$3",
                     "testResults": [
@@ -3102,7 +3111,16 @@
             "identifier": "wikipanion",
             "displayName": "Wikipanion",
             "storeIdentifier": "288349436",
-            "scheme": "wikipanion://"
+            "scheme": "wikipanion://",
+            "platform": "phone"
+        },
+        {
+            "identifier": "wikipanionpad",
+            "displayName": "Wikipanion",
+            "storeIdentifier": "364195592",
+            "scheme": "wikipanion://",
+            "platform": "pad",
+            "new": true
         },
         {
             "identifier": "dasreferenz",
