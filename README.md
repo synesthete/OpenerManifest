@@ -2,6 +2,14 @@
 
 [Opener](http://www.opener.link) is an app for iOS that allows people to open web links in native apps instead. It does so by transforming web links within an engine powered by a rule set. This repo is the public version of that rule set.
 
+## Overview
+
+There are three main entities (apps, actions, and formats) under two top level keys (`apps` and `formats`) that define a many-to-many relationship between web URLs and the apps they can be opened in.
+
+![](graphic.jpg)
+
+Actions contain formats as child dictionaries, and formats are matched with apps through identifers.
+
 ## Apps
 
 The `apps` top level key in the manifest contains an ordered list of dictionaries, each representing an app supported by Opener. Each app contains the following fields
