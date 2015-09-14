@@ -645,6 +645,22 @@
             ]
         },
         {
+            "title": "Open Seene",
+            "regex": "http(?:s)?://(?:www\\.)?seene\\.co/s/(\\w+).*$",
+            "testInputs": [
+                "http://seene.co/s/2bqbKa/"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "seene",
+                    "format": "seene://s/$1",
+                    "testResults": [
+                        "seene://s/2bqbKa"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Profile",
             "regex": "http(?:s)?://weibo\\.(?:com|cn)/(?:u/)?(\\d+)(?:/\\?.*|/)?$",
             "testInputs": [
@@ -2730,6 +2746,13 @@
             "displayName": "Byte://",
             "storeIdentifier": "1021378991",
             "scheme": "byte://"
+        },
+        {
+            "identifier": "seene",
+            "displayName": "Seene",
+            "storeIdentifier": "698878590",
+            "scheme": "seene://",
+            "new": true
         },
         {
             "identifier": "weibo",
