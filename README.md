@@ -28,7 +28,7 @@ For example, if Opener were to include itself as an app
 
 ## Actions
 
-The `actions` top level key in the manifest contains a list of dictionaries, each corresponding to a web URL-to-native URL rule. There's a many-to-one relationship between the values in `actions` and `apps`.
+The `actions` top level key in the manifest contains a list of dictionaries, each corresponding to a web URL-to-native URL rule. There's a many-to-many relationship between the values in `actions` and `apps`.
 
 ### Common values
 
