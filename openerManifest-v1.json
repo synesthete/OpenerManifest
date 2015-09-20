@@ -2751,8 +2751,7 @@
             "identifier": "seene",
             "displayName": "Seene",
             "storeIdentifier": "698878590",
-            "scheme": "seene://",
-            "new": true
+            "scheme": "seene://"
         },
         {
             "identifier": "weibo",
@@ -3019,8 +3018,7 @@
             "identifier": "scribd",
             "displayName": "Scribd",
             "storeIdentifier": "542557212",
-            "scheme": "iscribd://",
-            "new": true
+            "scheme": "iscribd://"
         },
         {
             "identifier": "stumbleupon",
@@ -3068,8 +3066,7 @@
             "identifier": "behance",
             "displayName": "Behance",
             "storeIdentifier": "489667151",
-            "scheme": "behance://",
-            "new": true
+            "scheme": "behance://"
         },
         {
             "identifier": "weheartit",
@@ -3238,8 +3235,7 @@
             "identifier": "houzz",
             "displayName": "Houzz",
             "storeIdentifier": "399563465",
-            "scheme": "houzz://",
-            "new": true
+            "scheme": "houzz://"
         },
         {
             "identifier": "zillow",
