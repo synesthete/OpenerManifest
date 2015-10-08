@@ -189,6 +189,22 @@
             ]
         },
         {
+            "title": "Open Location",
+            "regex": "(?:(?:http(?:s?)://(?:www.)?(?:(?:instagram.com)|(?:instagr.am))/))explore/locations/(\\d+).*$",
+            "testInputs": [
+                "https://instagram.com/explore/locations/215262672/"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "instagram",
+                    "format": "instagram://location?id=$1",
+                    "testResults": [
+                        "instagram://location?id=215262672"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Event",
             "regex": "http(?:s)?://(?:\\w+\\.)?facebook\\.com/events/(\\d+).*$",
             "testInputs": [
