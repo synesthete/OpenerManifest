@@ -141,6 +141,24 @@
             ]
         },
         {
+            "title": "Open Moment",
+            "regex": "http(?:s?)://(?:mobile.|www.)?twitter.com/i/moments/(\\d+).*$",
+            "testInputs": [
+                "https://twitter.com/i/moments/651796284307849217",
+                "https://mobile.twitter.com/i/moments/651796284307849217"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "twitter",
+                    "format": "twitter://moment?moment_id=$1",
+                    "testResults": [
+                        "twitter://moment?moment_id=651796284307849217",
+                        "twitter://moment?moment_id=651796284307849217"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Mute Filter",
             "regex": "http(?:s)?://(?:www\\.)?tapbots\\.com/tweetbot/mute\\?url=(.*)$",
             "testInputs": [
