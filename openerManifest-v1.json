@@ -1671,7 +1671,7 @@
             "formats": [
                 {
                     "appIdentifier": "ted",
-                    "script": "function process(url, completionHandler) { var regex = /http(?:s?):\\/\\/(?:www.)?ted.com\\/talks\\/(\\w+).*$/; var match = regex.exec(url); var query = match[1]; url = 'http://api.ted.com/v1/talks/' + query + '.json?api-key=78wnbehhwe8yfd5ch9q87pvc'; var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); completionHandler('ted://x-callback-url/talk?talkID=' + res['talk']['id']); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script": "function process(url, completionHandler) { var regex = /http(?:s?):\\/\\/(?:www.)?ted.com\\/talks\\/(\\w+).*?$/; var match = regex.exec(url); var query = match[1]; url = 'http://api.ted.com/v1/talks/' + query + '.json?api-key=78wnbehhwe8yfd5ch9q87pvc'; var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); completionHandler('ted://x-callback-url/talk?talkID=' + res['talk']['id']); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
                     "testResults": [
                         "ted://x-callback-url/talk?talkID=2253",
                         "ted://x-callback-url/talk?talkID=1815"
