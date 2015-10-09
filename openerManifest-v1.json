@@ -533,22 +533,6 @@
             ]
         },
         {
-            "title": "Open Profile",
-            "regex": "http(s?)://(www.?)storehouse.co/(?!stories).+$",
-            "testInputs": [
-                "https://www.storehouse.co/timonus"
-            ],
-            "formats": [
-                {
-                    "appIdentifier": "storehouse",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(storehouse://view/user/\\\\d+).*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "testResults": [
-                        "storehouse://view/user/9012"
-                    ]
-                }
-            ]
-        },
-        {
             "title": "Open Story",
             "regex": "http(s?)://(www.?)storehouse.co/stories/.+$",
             "testInputs": [
