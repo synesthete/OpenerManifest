@@ -1638,7 +1638,7 @@
             "formats": [
                 {
                     "appIdentifier": "producthunt",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*cdn.producthunt.com/(\\\\d+).*'); var match = regex.exec(res)[1]; completionHandler('producthunt://user/' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*ph-avatars\\.imgix\\.net/(\\\\d+).*'); var match = regex.exec(res)[1]; completionHandler('producthunt://user/' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
                     "testResults": [
                         "producthunt://user/141594"
                     ]
