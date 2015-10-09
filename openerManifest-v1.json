@@ -2633,18 +2633,10 @@
         {
             "title": "Open Listing",
             "regex": "http(?:s)?://(?:\\w+\\.)?trulia\\.com/rental(?:-community)?/\\d+.*$",
-            "testInputs": [
-                "http://m.trulia.com/rental/3068789021-5569-Norcross-Road-5569-Norcross-Rd-Columbus-OH-43229",
-                "http://www.trulia.com/rental-community/9000017768/Avalon-at-Mission-Bay-North-255-King-St-San-Francisco-CA-94107/"
-            ],
             "formats": [
                 {
                     "appIdentifier": "truliarent",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(urlHash=.*?)\".*'); var match = regex.exec(res)[1]; completionHandler('truliapdpforrent://?' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "testResults": [
-                        "truliapdpforrent://?urlHash=c3JjaD1Db2x1bWJ1cyUyQk9IJmNfbV9zZWFyY2hfdGV4dD1Db2x1bWJ1cyUyQk9IJmlkdD1mb3IrcmVudA%3D%3D",
-                        "truliapdpforrent://?urlHash=aWQ9OTAwMDAxNzc2OCZpZHQ9Rm9yK1JlbnQmc3Q9Q0EmY3k9U2FuK0ZyYW5jaXNjbw%3D%3D"
-                    ]
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(urlHash=.*?)\".*'); var match = regex.exec(res)[1]; completionHandler('truliapdpforrent://?' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }"
                 }
             ]
         },
