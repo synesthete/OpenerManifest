@@ -1760,42 +1760,6 @@
             ]
         },
         {
-            "title": "Open Story",
-            "regex": "http(?:s)?://(?:www\\.)?digg\\.com/(?:\\d{4}|video)/[0-9a-zA-Z\\-]+.*$",
-            "testInputs": [
-                "http://digg.com/video/james-bond-kill-count?utm_source=digg&utm_medium=twitter",
-                "http://digg.com/2015/myers-briggs-secret-history"
-            ],
-            "formats": [
-                {
-                    "appIdentifier": "digg",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(digg://article\\\\?content_id=\\\\w+).*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "testResults": [
-                        "digg://article?content_id=1jeJ6Mr",
-                        "digg://article?content_id=1ZdImaG"
-                    ]
-                }
-            ]
-        },
-        {
-            "title": "Open Story",
-            "regex": "http(?:s)?://on\\.digg\\.com/(\\w+).*$",
-            "testInputs": [
-                "http://on.digg.com/1G2Jyau",
-                "http://on.digg.com/1GAFuJt"
-            ],
-            "formats": [
-                {
-                    "appIdentifier": "digg",
-                    "format": "digg://article?content_id=$1",
-                    "testResults": [
-                        "digg://article?content_id=1G2Jyau",
-                        "digg://article?content_id=1GAFuJt"
-                    ]
-                }
-            ]
-        },
-        {
             "title": "Open Link",
             "regex": "(?:http(?:s)?)://((?:www\\.|m\\.)?reddit\\.com/.*)",
             "testInputs": [
@@ -3055,13 +3019,6 @@
             "displayName": "BuzzFeed",
             "storeIdentifier": "352969997",
             "scheme": "buzzfeed://"
-        },
-        {
-            "identifier": "digg",
-            "displayName": "Digg",
-            "storeIdentifier": "362872995",
-            "scheme": "digg://",
-            "new": true
         },
         {
             "identifier": "ted",
