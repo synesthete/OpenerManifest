@@ -1386,8 +1386,8 @@
             "title": "Open Playlist",
             "regex": "(?:http(?:s?)://(?:play.|open.|www.)?spotify.com/user/(\\w+)/playlist/)([:alnum:]+).*$",
             "testInputs": [
-               "https://open.spotify.com/user/naveenium/playlist/1zw42kQZUSZlHyVVn8AecH?utm_content=buffer30eb8&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer",
-               "http://open.spotify.com/user/timonominus/playlist/7rdUGYrNIMEdL6xdJDlMzZ"
+                "https://open.spotify.com/user/naveenium/playlist/1zw42kQZUSZlHyVVn8AecH?utm_content=buffer30eb8&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer",
+                "http://open.spotify.com/user/timonominus/playlist/7rdUGYrNIMEdL6xdJDlMzZ"
             ],
             "formats": [
                 {
@@ -1421,7 +1421,7 @@
             "regex": "http(?:s)?://(?:\\w+\\.)*beatsmusic.com/albums/al(?!.*/tracks/.*)(\\d+).*$",
             "testInputs": [
                 "http://on.beatsmusic.com/albums/al2002685?awesm=beats.mu_h0boO&utm_medium=album&utm_term=al2002685&utm_source=twitter&utm_campaign=&utm_content=",
-"http://on.beatsmusic.com/albums/al16237475/tracks/tr16237477?awesm=beats.mu_f0c5Z&utm_medium=track&utm_term=tr16237477&utm_source=twitter&utm_campaign=&utm_content="
+                "http://on.beatsmusic.com/albums/al16237475/tracks/tr16237477?awesm=beats.mu_f0c5Z&utm_medium=track&utm_term=tr16237477&utm_source=twitter&utm_campaign=&utm_content="
             ],
             "formats": [
                 {
@@ -1437,7 +1437,8 @@
         {
             "title": "Open Track",
             "regex": "http(?:s)?://(?:\\w+\\.)*beatsmusic.com/albums/al(\\d+)/tracks/tr(\\d+).*$",
-            "testInputs": [            "http://on.beatsmusic.com/albums/al16237475/tracks/tr16237477?awesm=beats.mu_f0c5Z&utm_medium=track&utm_term=tr16237477&utm_source=twitter&utm_campaign=&utm_content="
+            "testInputs": [
+                "http://on.beatsmusic.com/albums/al16237475/tracks/tr16237477?awesm=beats.mu_f0c5Z&utm_medium=track&utm_term=tr16237477&utm_source=twitter&utm_campaign=&utm_content="
             ],
             "formats": [
                 {
@@ -1452,7 +1453,8 @@
         {
             "title": "Open Artist",
             "regex": "http(?:s)?://(?:\\w+\\.)*beatsmusic.com/artists/ar(\\d+).*$",
-            "testInputs": [            "http://on.beatsmusic.com/artists/ar2918?awesm=beats.mu_h0boN&utm_medium=artist&utm_term=ar2918&utm_source=twitter&utm_campaign=&utm_content="
+            "testInputs": [
+                "http://on.beatsmusic.com/artists/ar2918?awesm=beats.mu_h0boN&utm_medium=artist&utm_term=ar2918&utm_source=twitter&utm_campaign=&utm_content="
             ],
             "formats": [
                 {
@@ -1467,7 +1469,8 @@
         {
             "title": "Open Playlist",
             "regex": "http(?:s)?://(?:\\w+\\.)*beatsmusic.com/playlists/pl(\\d+).*$",
-            "testInputs": [            "http://on.beatsmusic.com/playlists/pl165446570056089856?awesm=beats.mu_f0c5a&utm_medium=playlist&utm_term=pl165446570056089856&utm_source=twitter&utm_campaign=&utm_content="
+            "testInputs": [
+                "http://on.beatsmusic.com/playlists/pl165446570056089856?awesm=beats.mu_f0c5a&utm_medium=playlist&utm_term=pl165446570056089856&utm_source=twitter&utm_campaign=&utm_content="
             ],
             "formats": [
                 {
