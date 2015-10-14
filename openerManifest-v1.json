@@ -1882,7 +1882,7 @@
         },
         {
             "title": "Open Product",
-            "regex": "http(?:s)?://(?:\\w+\\.)*(?:amazon|amzn)((?:\\.\\w+)+)/(?:.*?/)?(?:(?:(?:dp|gp)(?:/aw/d)?)|product)/([a-zA-Z0-9]+).*$",
+            "regex": "http(?:s)?://(?:\\w+\\.)*(?:amazon|amzn)((?:\\.\\w+)+)/(?:.*?/)?(?:(?:(?:dp|gp)(?:/aw/d)?)|product|.*/ASIN)/([a-zA-Z0-9]+).*$",
             "testInputs": [
                 "http://www.amazon.com/Mondaine-A990-CLOCK-11SBC-Clock-White-Frame/dp/B0016QNNP6/ref=sr_1_1?ie=UTF8&qid=1429471063&sr=8-1&keywords=mondaine+clock",
                 "http://www.amazon.com/dp/B0016QNNP6",
@@ -1893,7 +1893,8 @@
                 "http://www.amazon.de/dp/B00N5BQ62",
                 "http://smile.amazon.com/dp/0812522397/ref=cm_sw_r_awd_m6xOvb9NW6G48",
                 "http://www.amazon.com/Adjustable-Flashlight-Bright-Batteries-Included/dp/B005FEGYCO",
-                "http://www.amazon.com/gp/aw/d/B005FEGYCO/ref=mp_s_a_1_1?qid=1444785369&sr=8-1&pi=SY200_QL40&keywords=flashlight&dpPl=1&dpID=41uqlYcT30L&ref=plSrch"
+                "http://www.amazon.com/gp/aw/d/B005FEGYCO/ref=mp_s_a_1_1?qid=1444785369&sr=8-1&pi=SY200_QL40&keywords=flashlight&dpPl=1&dpID=41uqlYcT30L&ref=plSrch",
+                "http://www.amazon.com/exec/obidos/ASIN/0812972155/codihorr-20"
             ],
             "formats": [
                 {
@@ -1909,7 +1910,8 @@
                         "com.amazon.mobile.shopping://amazon.de/products/B00N5BQ62?tag=opener-20",
                         "com.amazon.mobile.shopping://amazon.com/products/0812522397?tag=opener-20",
                         "com.amazon.mobile.shopping://amazon.com/products/B005FEGYCO?tag=opener-20",
-                        "com.amazon.mobile.shopping://amazon.com/products/B005FEGYCO?tag=opener-20"
+                        "com.amazon.mobile.shopping://amazon.com/products/B005FEGYCO?tag=opener-20",
+                        "com.amazon.mobile.shopping://amazon.com/products/0812972155?tag=opener-20"
                     ]
                 }
             ]
