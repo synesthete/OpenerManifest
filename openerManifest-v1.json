@@ -1784,10 +1784,10 @@
                 },
                 {
                     "appIdentifier": "narwhal",
-                    "format": "narwhal://open-url/$1",
+                    "script": "function process(url, completionHandler) { completionHandler('narwhal://open-url/' + encodeURIComponent(url)); }",
                     "testResults": [
-                        "narwhal://open-url/http://www.reddit.com/r/gaming/comments/3d2ewz/nintendo_president_satoru_iwata_passes_away/",
-                        "narwhal://open-url/https://www.reddit.com/r/VintageApple/comments/29xca9/what_is_apples_next_step/",
+                        "narwhal://open-url/http%3A%2F%2Fwww.reddit.com%2Fr%2Fgaming%2Fcomments%2F3d2ewz%2Fnintendo_president_satoru_iwata_passes_away%2F",
+                        "narwhal://open-url/https%3A%2F%2Fwww.reddit.com%2Fr%2FVintageApple%2Fcomments%2F29xca9%2Fwhat_is_apples_next_step%2F",
                         null
                     ]
                 }
