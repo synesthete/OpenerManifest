@@ -766,7 +766,7 @@
         },
         {
             "title": "Open List",
-            "regex": "http(?:s)?://(m\\.|mobile\\.|www\\.)?foursquare\\.com/(?:(?:user/\\d+|[a-zA-Z0-9_%\\-]+)/list)|list)/[a-zA-Z0-9_%\\-]+.*$",
+            "regex": "http(?:s)?://(m\\.|mobile\\.|www\\.)?foursquare\\.com/(?:(?:user/\\d+|[a-zA-Z0-9_%\\-]+)/list|list)/[a-zA-Z0-9_%\\-]+.*$",
             "testInputs": [
                 "https://foursquare.com/foursquare/list/13-architectural-marvels-in-nyc",
                 "https://foursquare.com/foursquare/list/5550f48b498e5d3067c36795",
