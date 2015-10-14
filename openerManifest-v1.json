@@ -1781,6 +1781,15 @@
                         "alienblue://thread/https://www.reddit.com/r/VintageApple/comments/29xca9/what_is_apples_next_step/",
                         null
                     ]
+                },
+                {
+                    "appIdentifier": "narwhal",
+                    "format": "narwhal://open-url/$1",
+                    "testResults": [
+                        "narwhal://open-url/http://www.reddit.com/r/gaming/comments/3d2ewz/nintendo_president_satoru_iwata_passes_away/",
+                        "narwhal://open-url/https://www.reddit.com/r/VintageApple/comments/29xca9/what_is_apples_next_step/",
+                        null
+                    ]
                 }
             ]
         },
@@ -2839,6 +2848,13 @@
             "identifier": "alienblue",
             "scheme": "alienblue://",
             "displayName": "Alien Blue"
+        },
+        {
+            "storeIdentifier": "845422455",
+            "identifier": "narwhal",
+            "scheme": "narwhal://",
+            "displayName": "narwhal",
+            "new": true
         },
         {
             "storeIdentifier": "845046425",
