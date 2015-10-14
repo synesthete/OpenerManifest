@@ -2521,7 +2521,7 @@
         },
         {
             "title": "Open Action",
-            "regex": "",
+            "regex": "http(?:s)?://(?:www\\.)?launchcenterpro\\.com/(\\w{6}).*$",
             "testInputs": [
                 "https://launchcenterpro.com/4w666m"
             ],
