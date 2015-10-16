@@ -1761,6 +1761,17 @@
                         "alienblue://r/gaming",
                         null
                     ]
+                },
+                {
+                    "appIdentifier": "narwhal",
+                    "format": "narwhal://open-url/http%3A%2F%2Fwww.reddit.com%2Fr%2F$1",
+                    "testResults": [
+                        "narwhal://open-url/http%3A%2F%2Fwww.reddit.com%2Fr%2Fgaming",
+                        "narwhal://open-url/http%3A%2F%2Fwww.reddit.com%2Fr%2Fgaming",
+                        "narwhal://open-url/http%3A%2F%2Fwww.reddit.com%2Fr%2Fgaming",
+                        "narwhal://open-url/http%3A%2F%2Fwww.reddit.com%2Fr%2Fgaming",
+                        null
+                    ]
                 }
             ]
         },
