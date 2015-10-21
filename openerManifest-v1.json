@@ -1761,17 +1761,6 @@
                         "alienblue://r/gaming",
                         null
                     ]
-                },
-                {
-                    "appIdentifier": "narwhal",
-                    "format": "narwhal://open-url/http%3A%2F%2Fwww.reddit.com%2Fr%2F$1",
-                    "testResults": [
-                        "narwhal://open-url/http%3A%2F%2Fwww.reddit.com%2Fr%2Fgaming",
-                        "narwhal://open-url/http%3A%2F%2Fwww.reddit.com%2Fr%2Fgaming",
-                        "narwhal://open-url/http%3A%2F%2Fwww.reddit.com%2Fr%2Fgaming",
-                        "narwhal://open-url/http%3A%2F%2Fwww.reddit.com%2Fr%2Fgaming",
-                        null
-                    ]
                 }
             ]
         },
@@ -1790,15 +1779,6 @@
                     "testResults": [
                         "alienblue://thread/http://www.reddit.com/r/gaming/comments/3d2ewz/nintendo_president_satoru_iwata_passes_away/",
                         "alienblue://thread/https://www.reddit.com/r/VintageApple/comments/29xca9/what_is_apples_next_step/",
-                        null
-                    ]
-                },
-                {
-                    "appIdentifier": "narwhal",
-                    "script": "function process(url, completionHandler) { completionHandler('narwhal://open-url/' + encodeURIComponent(url)); }",
-                    "testResults": [
-                        "narwhal://open-url/http%3A%2F%2Fwww.reddit.com%2Fr%2Fgaming%2Fcomments%2F3d2ewz%2Fnintendo_president_satoru_iwata_passes_away%2F",
-                        "narwhal://open-url/https%3A%2F%2Fwww.reddit.com%2Fr%2FVintageApple%2Fcomments%2F29xca9%2Fwhat_is_apples_next_step%2F",
                         null
                     ]
                 }
@@ -1847,6 +1827,13 @@
                 "https://m.reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/"
             ],
             "formats": [
+                {
+                    "appIdentifier": "narwhal",
+                    "script": "function process(url, completionHandler) { completionHandler('narwhal://open-url/' + encodeURIComponent(url)); }",
+                    "testResults": [
+                         "narwhal://open-url/https%3A%2F%2Fm.reddit.com%2Fr%2Fsports%2Fcomments%2F38uhq3%2Famerican_pharoah_wins_belmont_stakes_and_triple%2F"
+                    ]
+                },
                 {
                     "appIdentifier": "amrc",
                     "format": "amrc://$1",
