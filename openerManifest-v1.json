@@ -875,6 +875,24 @@
             ]
         },
         {
+            "title": "Open Check-in",
+            "regex": "http(?:s)?://(?:www\\.)?(?:untappd\\.com/user/[a-zA-Z0-9_\\-\\.]+/checkin/|untp\\.beer/s/c)(\\d+).*$",
+            "testInputs": [
+                "https://untappd.com/user/timonus/checkin/236836284",
+                "http://untp.beer/s/c237644605"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "untappd",
+                    "format": "untappd:///?checkin=$1",
+                    "testResults": [
+                        "untappd:///?checkin=236836284",
+                        "untappd:///?checkin=237644605"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Business",
             "regex": "http(?:s?)://(?:www\\.|mobile\\.|m\\.)?yelp(?:\\.[a-z]+)+/biz/([a-zA-Z0-9%\\-]+).*$",
             "testInputs": [
@@ -3032,6 +3050,13 @@
             "identifier": "eventbrite",
             "scheme": "com-eventbrite-attendee://",
             "displayName": "Eventbrite"
+        },
+        {
+            "storeIdentifier": "449141888",
+            "identifier": "untappd",
+            "scheme": "untappd://",
+            "displayName": "Untappd",
+            "new": true
         },
         {
             "storeIdentifier": "284910350",
