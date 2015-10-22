@@ -2678,14 +2678,6 @@
             ],
             "formats": [
                 {
-                    "appIdentifier": "tappd",
-                    "format": "tappdapp://app_in_detail=$1",
-                    "testResults": [
-                        "tappdapp://app_in_detail=989565871",
-                        "tappdapp://app_in_detail=989565871"
-                    ]
-                },
-                {
                     "appIdentifier": "appshopper",
                     "format": "appshoppersocial://app/$1",
                     "testResults": [
@@ -2947,12 +2939,6 @@
             "identifier": "evernote",
             "scheme": "evernote://",
             "displayName": "Evernote"
-        },
-        {
-            "storeIdentifier": "823376869",
-            "identifier": "tappd",
-            "scheme": "tappdapp://",
-            "displayName": "Tappd"
         },
         {
             "storeIdentifier": "401626263",
