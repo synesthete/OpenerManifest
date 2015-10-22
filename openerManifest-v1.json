@@ -895,6 +895,22 @@
             ]
         },
         {
+            "title": "Open Beer",
+            "regex": "http(?:s)?://(?:www\\.)?untappd\\.com/b/[a-zA-Z0-9_\\-\\.]+/(\\d+).*$",
+            "testInputs": [
+                "https://untappd.com/b/schlafly-beer-the-saint-louis-brewery-pumpkin-ale/8263"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "untappd",
+                    "format": "untappd:///?beer=$1",
+                    "testResults": [
+                        "untappd:///?beer=8263"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Business",
             "regex": "http(?:s?)://(?:www\\.|mobile\\.|m\\.)?yelp(?:\\.[a-z]+)+/biz/([a-zA-Z0-9%\\-]+).*$",
             "testInputs": [
