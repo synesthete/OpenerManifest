@@ -1046,10 +1046,16 @@
         {
             "title": "Open Video",
             "regex": "(http(s?)://(www.)?vine.co/v/[0-9a-zA-Z]+(/?))$",
+            "testInputs": [
+                "https://vine.co/v/eVWDFgHQ5pX"
+            ],
             "formats": [
                 {
                     "appIdentifier": "vine",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('<meta property=\"twitter:app:url:iphone\" content=\"(.*)\">'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }"
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(vine://post/\\\\d+).*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "testResults": [
+                        "vine://post/1268687962565677056"
+                    ]
                 }
             ]
         },
