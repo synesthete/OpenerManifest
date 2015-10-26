@@ -907,6 +907,13 @@
                     "testResults": [
                         "untappd:///?beer=8263"
                     ]
+                },
+                {
+                    "appIdentifier": "tappdthat",
+                    "format": "tappdthat://checkin/?beerID=$1",
+                    "testResults": [
+                        "tappdthat://checkin/?beerID=8263"
+                    ]
                 }
             ]
         },
@@ -3081,6 +3088,14 @@
             "scheme": "untappd://",
             "displayName": "Untappd",
             "docs": "http://help.untappd.com/discussions/feature-requests/854-support-for-url-schemes",
+            "new": true
+        },
+        {
+            "storeIdentifier": "591671468",
+            "identifier": "tappdthat",
+            "scheme": "tappdthat://",
+            "displayName": "Tappd That",
+            "docs": "http://tappdthat.com/releasenotes",
             "new": true
         },
         {
