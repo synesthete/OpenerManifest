@@ -907,7 +907,16 @@
                     "testResults": [
                         "untappd:///?beer=8263"
                     ]
-                },
+                }
+            ]
+        },
+        {
+            "title": "Check in with beer",
+            "regex": "http(?:s)?://(?:www\\.)?untappd\\.com/b/[a-zA-Z0-9_\\-\\.]+/(\\d+).*$",
+            "testInputs": [
+                "https://untappd.com/b/schlafly-beer-the-saint-louis-brewery-pumpkin-ale/8263"
+            ],
+            "formats": [
                 {
                     "appIdentifier": "tappdthat",
                     "format": "tappdthat://checkin/?beerID=$1",
