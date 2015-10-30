@@ -1828,6 +1828,13 @@
             ],
             "formats": [
                 {
+                    "appIdentifier": "narwhal",
+                    "script": "function process(url, completionHandler) { completionHandler('narwhal://open-url/' + encodeURIComponent(url)); }",
+                    "testResults": [
+                         "narwhal://open-url/https%3A%2F%2Fm.reddit.com%2Fr%2Fsports%2Fcomments%2F38uhq3%2Famerican_pharoah_wins_belmont_stakes_and_triple%2F"
+                    ]
+                },
+                {
                     "appIdentifier": "amrc",
                     "format": "amrc://$1",
                     "testResults": [
@@ -2839,6 +2846,13 @@
             "identifier": "alienblue",
             "scheme": "alienblue://",
             "displayName": "Alien Blue"
+        },
+        {
+            "storeIdentifier": "845422455",
+            "identifier": "narwhal",
+            "scheme": "narwhal://",
+            "displayName": "narwhal",
+            "new": true
         },
         {
             "storeIdentifier": "845046425",
