@@ -3148,16 +3148,14 @@
             "identifier": "untappd",
             "scheme": "untappd://",
             "displayName": "Untappd",
-            "docs": "http://help.untappd.com/discussions/feature-requests/854-support-for-url-schemes",
-            "new": true
+            "docs": "http://help.untappd.com/discussions/feature-requests/854-support-for-url-schemes"
         },
         {
             "storeIdentifier": "591671468",
             "identifier": "tappdthat",
             "scheme": "tappdthat://",
             "displayName": "Tappd That",
-            "docs": "http://tappdthat.com/releasenotes",
-            "new": true
+            "docs": "http://tappdthat.com/releasenotes"
         },
         {
             "storeIdentifier": "284910350",
