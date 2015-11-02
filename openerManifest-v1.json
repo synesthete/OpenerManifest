@@ -1860,13 +1860,6 @@
                     "testResults": [
                         "amrc://m.reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/"
                     ]
-                },
-                {
-                    "appIdentifier": "biscuit",
-                    "format": "biscuit://$1",
-                    "testResults": [
-                        "biscuit://m.reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/"
-                    ]
                 }
             ]
         },
@@ -3224,13 +3217,6 @@
             "identifier": "vscocam",
             "scheme": "vsco://",
             "displayName": "VSCO"
-        },
-        {
-            "platform": "pad",
-            "storeIdentifier": "697779797",
-            "identifier": "biscuit",
-            "scheme": "biscuit://",
-            "displayName": "Biscuit"
         },
         {
             "storeIdentifier": "288487321",
