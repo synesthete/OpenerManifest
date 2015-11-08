@@ -2880,8 +2880,7 @@
             "storeIdentifier": "845422455",
             "identifier": "narwhal",
             "scheme": "narwhal://",
-            "displayName": "narwhal",
-            "new": true
+            "displayName": "narwhal"
         },
         {
             "storeIdentifier": "845046425",
@@ -3335,8 +3334,7 @@
             "storeIdentifier": "352683833",
             "identifier": "groupon",
             "scheme": "groupon://",
-            "displayName": "Groupon",
-            "new": true
+            "displayName": "Groupon"
         },
         {
             "storeIdentifier": "503451073",
