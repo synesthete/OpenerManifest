@@ -2790,6 +2790,22 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Deal",
+            "regex": "http(?:s)?://(?:www\\.)?slickdeals\\.net/f/(\\d+).*$",
+            "testInputs": [
+                "http://slickdeals.net/f/8219345-12-month-microsoft-xbox-live-gold-membership-email-delivery-28-94-gamesdeal-com?utm_campaign=167836&utm_medium=fptweet&utm_source=twitter"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "slickdeals",
+                    "format": "slickdeals://thread/$1",
+                    "testResults": [
+                        "slickdeals://thread/8219345"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -3431,6 +3447,13 @@
             "identifier": "youkuhd",
             "scheme": "youkuhd://",
             "displayName": "Youku HD"
+        },
+        {
+            "storeIdentifier": "584632814",
+            "identifier": "slickdeals",
+            "scheme": "slickdeals://",
+            "displayName": "Slickdeals",
+            "new": true
         }
     ]
 }
