@@ -3358,8 +3358,7 @@
             "storeIdentifier": "871169596",
             "identifier": "phhhoto",
             "scheme": "phhhoto://",
-            "displayName": "PHHHOTO",
-            "new": true
+            "displayName": "PHHHOTO"
         },
         {
             "storeIdentifier": "1021378991",
@@ -3450,8 +3449,7 @@
             "storeIdentifier": "584632814",
             "identifier": "slickdeals",
             "scheme": "slickdeals://",
-            "displayName": "Slickdeals",
-            "new": true
+            "displayName": "Slickdeals"
         }
     ]
 }
