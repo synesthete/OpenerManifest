@@ -1005,13 +1005,16 @@
         {
             "title": "Open Video",
             "notes": "This isn't perfect, doesn't handle id's in path being at end, and doesn't capture other query params totally correctly",
-            "regex": "http(?:s)?://(?:www\\.|m\\.)?(?:youtu\\.be/|youtube\\.com/(?:embed/|.*(?:\\?|&)v=))([a-zA-Z0-9_\\-]+).*?((\\?|&)start=\\d+)?.*?$",
+            "regex": "http(?:s)?://(?:www\\.|m\\.)?(?:youtu\\.be/|youtube\\.com/(?:embed/|.*(?:\\?|&)v=))([a-zA-Z0-9_\\-]+).*?((\\?|&)(start|t)=\\w+)?.*?$",
             "testInputs": [
                 "https://m.youtube.com/watch?v=MTY1Kje0yLg",
                 "https://www.youtube.com/embed/0uY7gLZDmn4?start=96",
                 "https://www.youtube.com/watch?v=MFzDaBzBlL0&app=desktop",
                 "https://youtu.be/mzun7_Ynmks",
-                "http://youtu.be/JEiSTzK-A2A"
+                "http://youtu.be/JEiSTzK-A2A",
+                "https://youtu.be/yWDJoJm-Rk0?t=4m30s",
+                "https://www.youtube.com/watch?v=S4WNO4tchUk",
+                "https://www.youtube.com/watch?v=ngElkyQ6Rhs"
             ],
             "formats": [
                 {
@@ -1022,7 +1025,10 @@
                         "youtube://0uY7gLZDmn4?start=96",
                         "youtube://MFzDaBzBlL0",
                         "youtube://mzun7_Ynmks",
-                        "youtube://JEiSTzK-A2A"
+                        "youtube://JEiSTzK-A2A",
+                        "youtube://yWDJoJm-Rk0?t=4m30s",
+                        "youtube://S4WNO4tchUk",
+                        "youtube://ngElkyQ6Rhs"
                     ]
                 },
                 {
@@ -1033,7 +1039,10 @@
                         "protube://video/0uY7gLZDmn4",
                         "protube://video/MFzDaBzBlL0",
                         "protube://video/mzun7_Ynmks",
-                        "protube://video/JEiSTzK-A2A"
+                        "protube://video/JEiSTzK-A2A",
+                        "protube://video/yWDJoJm-Rk0",
+                        "protube://video/S4WNO4tchUk",
+                        "protube://video/ngElkyQ6Rhs"
                     ]
                 },
                 {
@@ -1044,7 +1053,10 @@
                         "youplayer://youtube.com/watch?v=0uY7gLZDmn4",
                         "youplayer://youtube.com/watch?v=MFzDaBzBlL0",
                         "youplayer://youtube.com/watch?v=mzun7_Ynmks",
-                        "youplayer://youtube.com/watch?v=JEiSTzK-A2A"
+                        "youplayer://youtube.com/watch?v=JEiSTzK-A2A",
+                        "youplayer://youtube.com/watch?v=yWDJoJm-Rk0",
+                        "youplayer://youtube.com/watch?v=S4WNO4tchUk",
+                        "youplayer://youtube.com/watch?v=ngElkyQ6Rhs"
                     ]
                 }
             ]
