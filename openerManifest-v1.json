@@ -400,22 +400,6 @@
             ]
         },
         {
-            "title": "Open Profile",
-            "regex": "http(s)?://[a-zA-Z0-9_\\-\\.]+\\.vsco\\.co(m)?/grid.*$",
-            "testInputs": [
-                "http://jmcashdollar.vsco.co/grid/1"
-            ],
-            "formats": [
-                {
-                    "appIdentifier": "vscocam",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(vsco:\/\/.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "testResults": [
-                        "vsco://user/158596/grid"
-                    ]
-                }
-            ]
-        },
-        {
             "title": "Open Photo",
             "regex": "http(s)?://[a-zA-Z0-9_\\-\\.]+\\.vsco\\.co(m)?/media/\\w+.*$",
             "testInputs": [
@@ -449,14 +433,15 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(s)?://[a-zA-Z0-9_\\-\\.]+\\.vsco\\.co(m)?((/collection|(/)?\\?).*|/)?$",
+            "regex": "http(s)?://[a-zA-Z0-9_\\-\\.]+\\.vsco\\.co(m)?((/(collection|grid)|(/)?\\?).*|/)?$",
             "testInputs": [
                 "http://modernandmundane.vsco.co/collection/1",
                 "http://modernandmundane.vsco.co/",
                 "http://modernandmundane.vsco.co",
                 "http://modernandmundane.vsco.co/?foo=bar",
                 "http://modernandmundane.vsco.co?foo=bar",
-                "http://modernandmundane.vsco.co/collection/1?foo=bar"
+                "http://modernandmundane.vsco.co/collection/1?foo=bar",
+                "http://jmcashdollar.vsco.co/grid/1"
             ],
             "formats": [
                 {
@@ -468,7 +453,8 @@
                         "vsco://user/5539600/grid",
                         "vsco://user/5539600/grid",
                         "vsco://user/5539600/grid",
-                        "vsco://user/5539600/grid"
+                        "vsco://user/5539600/grid",
+                        "vsco://user/158596/grid"
                     ]
                 }
             ]
