@@ -672,10 +672,11 @@
         },
         {
             "title": "Open Section",
-            "regex": "http(?:s)?://(?:www\\.)?flipboard\\.com/@\\w+(?:/\\w*(-\\w*)+)?.*$",
+            "regex": "http(?:s)?://(?:www\\.)?flipboard\\.com/(@\\w+(?:/\\w*(-\\w*)+)?|section/.*).*$",
             "testInputs": [
                 "https://flipboard.com/@catherinesc63kn",
-                "https://flipboard.com/@catherinesc63kn/liverpool-post-5ha7nr15y"
+                "https://flipboard.com/@catherinesc63kn/liverpool-post-5ha7nr15y",
+                "https://flipboard.com/section/foodies-217ha2rt47oa1f62?flipit=http%3A%2F%2Fflip.it%2FMS9XR&intent=gift_of_flipboard"
             ],
             "formats": [
                 {
@@ -683,7 +684,8 @@
                     "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(flipboard:\/\/.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
                     "testResults": [
                         "flipboard://showSection/auth/flipboard/user%252F230604372?title=Catherine%20Scowcroft%20on%20Flipboard",
-                        "flipboard://showSection/sid/5ha7nr15y/catherinesc63kn?title=Liverpool%20Post%20on%20Flipboard"
+                        "flipboard://showSection/sid/5ha7nr15y/catherinesc63kn?title=Liverpool%20Post%20on%20Flipboard",
+                        "flipboard://showSection/sid/217ha2rt47oa1f62?title=Foodies%20on%20Flipboard"
                     ]
                 }
             ]
