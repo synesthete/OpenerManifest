@@ -2782,6 +2782,35 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Story",
+            "regex": "http(?:s)?://abcnews\\.go\\.com/.*(?:(?:\\w+-)|/story.*(?:\\?|&)id=)+(\\d+).*?$",
+            "testInputs": [
+                "http://abcnews.go.com/Politics/wireStory/trump-closing-mosques-35232234",
+                "http://abcnews.go.com/International/170-people-hostage-mali-hotel/story?id=35319879",
+                "http://abcnews.go.com/US/wireStory/maryland-student-prompted-closure-campus-found-dead-35348689?utm_medium=twitter&utm_source=twitterfeed"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "abcnewsiphone",
+                    "format": "abcnewsiphone://link/story,$1",
+                    "testResults": [
+                        "abcnewsiphone://link/story,35232234",
+                        "abcnewsiphone://link/story,35319879",
+                        "abcnewsiphone://link/story,35348689"
+                    ]
+                },
+                {
+                    "appIdentifier": "abcnewsipad",
+                    "format": "abcnewsipad://link/story,$1",
+                    "testResults": [
+                        "abcnewsipad://link/story,35232234",
+                        "abcnewsipad://link/story,35319879",
+                        "abcnewsipad://link/story,35348689"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -3420,6 +3449,22 @@
             "identifier": "slickdeals",
             "scheme": "slickdeals://",
             "displayName": "Slickdeals"
+        },
+        {
+            "platform": "phone",
+            "storeIdentifier": "300255638",
+            "identifier": "abcnewsiphone",
+            "scheme": "abcnewsiphone",
+            "displayName": "ABC News",
+            "new": true
+        },
+        {
+            "platform": "pad",
+            "storeIdentifier": "380520716",
+            "identifier": "abcnewsipad",
+            "scheme": "abcnewsipad",
+            "displayName": "ABC News for iPad",
+            "new": true
         }
     ]
 }
