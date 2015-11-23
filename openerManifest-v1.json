@@ -2811,6 +2811,26 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:\\w+\\.)?(imgur\\.com/(gallery/)?\\w+).*?$",
+            "testInputs": [
+                "http://m.imgur.com/gallery/UW0KFYQ",
+                "http://i.imgur.com/Eo1WO0f.jpg",
+                "http://imgur.com/GxCSO40"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "imgur",
+                    "format": "imgur://$1",
+                    "testResults": [
+                        "imgur://imgur.com/gallery/UW0KFYQ",
+                        "imgur://imgur.com/Eo1WO0f",
+                        "imgur://imgur.com/GxCSO40"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -3340,6 +3360,13 @@
             "identifier": "groupon",
             "scheme": "groupon://",
             "displayName": "Groupon"
+        },
+        {
+            "storeIdentifier": "639881495",
+            "identifier": "imgur",
+            "scheme": "imgur://",
+            "displayName": "Imgur",
+            "new": true
         },
         {
             "storeIdentifier": "503451073",
