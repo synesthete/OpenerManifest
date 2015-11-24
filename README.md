@@ -15,7 +15,7 @@ Actions contain formats as child dictionaries, and formats are matched with apps
 The `apps` top level key in the manifest contains an ordered list of dictionaries, each representing an app supported by Opener. Each app contains the following fields
 
 - `identifier` *string*: A human-readable identifier for this app, used elsewhere in the manifest.
-- `name` *string*: The user-facing name for this app within Opener.
+- `displayName` *string*: The user-facing name for this app within Opener.
 - `storeIdentifier` *number as string*: The identifier of the app on the App Store.
 - `scheme` *URL as string*: A URL containing only the scheme that will open this app.
 - `new` *bool*: Indicates whether or not this app will be include in the "New Apps" group in Opener. Evaluates to `false` if unspecified.
@@ -27,7 +27,7 @@ For example, if Opener were to include itself as an app
 {
 	"identifier": "opener",
 	"storeIdentifier": "989565871",
-	"name": "Opener",
+	"displayName": "Opener",
 	"scheme": "opener://",
 	"new": true
 }
