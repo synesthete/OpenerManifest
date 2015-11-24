@@ -2889,6 +2889,26 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Issue",
+            "regex": "http(?:s)?://((\\w+\\.)*jira(\\.\\w+)+.*$)",
+            "testInputs": [
+                "https://liquibase.jira.com/browse/CORE-2549",
+                "https://tempoplugin.jira.com/browse/TT-1208",
+                "https://jira.blah.com/XXX-12"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "jira",
+                    "format": "jira://$1",
+                    "testResults": [
+                        "jira://liquibase.jira.com/browse/CORE-2549",
+                        "jira://tempoplugin.jira.com/browse/TT-1208",
+                        "jira://jira.blah.com/XXX-12"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -3438,6 +3458,13 @@
             "identifier": "zeeen",
             "scheme": "zeeen://",
             "displayName": "ZEEEN",
+            "new": true
+        },
+        {
+            "storeIdentifier": "590540499",
+            "identifier": "jira",
+            "scheme": "jira://",
+            "displayName": "JIRA Connect",
             "new": true
         },
         {
