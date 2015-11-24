@@ -2825,6 +2825,26 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Shot",
+            "regex": "http(?:s)?://(?:m\\.)?dribbble\\.com/shots/(\\d+).*?$",
+            "testInputs": [
+                "https://dribbble.com/shots/2368108-Luxe-App-Request-Valet-Shopping-Cards",
+                "https://dribbble.com/shots/2303483",
+                "http://m.dribbble.com/shots/2303483"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "zeeen",
+                    "format" :"zeeen://shot/$1",
+                    "testResults": [
+                        "zeeen://shot/2368108",
+                        "zeeen://shot/2303483",
+                        "zeeen://shot/2303483"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -3368,6 +3388,13 @@
             "identifier": "behance",
             "scheme": "behance://",
             "displayName": "Behance"
+        },
+        {
+            "storeIdentifier": "923813895",
+            "identifier": "zeeen",
+            "scheme": "zeeen://",
+            "displayName": "ZEEEN",
+            "new": true
         },
         {
             "storeIdentifier": "944064086",
