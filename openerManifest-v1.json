@@ -323,7 +323,6 @@
                 "https://m.flickr.com/#/photos/nikosaliagas/17076600439/",
                 "https://www.flickr.com/browser/upgrade/?continue=/photos/sandra18e2010/17088623459/"
             ],
-            "todo": "Improve performance of short URLs be decoding flic.kr/p/ base58 codes https://www.flickr.com/services/api/misc.urls.html#short",
             "formats": [
                 {
                     "appIdentifier": "flickr",
@@ -541,7 +540,6 @@
             "formats": [
                 {
                     "appIdentifier": "tumblr",
-                    "xformat": "tumblr://x-callback-url/blog?blogName=$1&postID=$2",
                     "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*?([a-zA-Z0-9_\\-]+)\\.tumblr\\.com/post/(\\\\d+).*'); var match = regex.exec(res); var blogName = match[1]; var postID = match[2]; completionHandler('tumblr://x-callback-url/blog?blogName=' + blogName + '&postID=' + postID); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
                     "testResults": [
                         "tumblr://x-callback-url/blog?blogName=2kindsofpeople&postID=115652499436"
@@ -1034,7 +1032,6 @@
         },
         {
             "title": "Open Video",
-            "notes": "This isn't perfect, doesn't handle id's in path being at end, and doesn't capture other query params totally correctly",
             "regex": "http(?:s)?://(?:www\\.|m\\.)?(?:youtu\\.be/|youtube\\.com/(?:embed/|.*(?:\\?|&)v=))([a-zA-Z0-9_\\-]+).*?((\\?|&)(start|t)=\\w+)?.*?$",
             "testInputs": [
                 "https://m.youtube.com/watch?v=MTY1Kje0yLg",
@@ -1346,7 +1343,6 @@
             "formats": [
                 {
                     "appIdentifier": "vimeo",
-                    "docs": "https://developer.vimeo.com/apis/simple",
                     "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); var regex = /(?:http(?:s)?:\\/\\/vimeo.com\\/([a-zA-Z])(\\w+))(?:\\/?)$/; var match = regex.exec(url); var name = match[1] + match[2]; url = 'https://vimeo.com/api/v2/' + name + '/info.json'; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); completionHandler('vimeo://app.vimeo.com/users/' + res['id']); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
                     "testResults": [
                         "vimeo://app.vimeo.com/users/4373647"
@@ -1364,7 +1360,6 @@
             "formats": [
                 {
                     "appIdentifier": "vimeo",
-                    "docs": "https://github.com/vimeo/VIMDeeplink",
                     "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); url = 'https://vimeo.com/api/oembed.json?url=' + encodeURIComponent(url); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); completionHandler('vimeo://app.vimeo.com' + res['uri']); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
                     "testResults": [
                         "vimeo://app.vimeo.com/videos/121634963",
@@ -2430,7 +2425,6 @@
         },
         {
             "title": "Open Link",
-            "useful": "http://stackexchange.com/feeds/sites",
             "regex": "http(?:s?)://((?:\\w+\\.)*(?:(?:stackoverflow|stackexchange|serverfault|superuser|stackapps)\\.com|mathoverflow\\.net)/.*)",
             "testInputs": [
                 "http://stackoverflow.com/questions/30262509/union-object-acts-like-a-structure"
@@ -3011,7 +3005,8 @@
             "storeIdentifier": "425194759",
             "identifier": "vimeo",
             "scheme": "vimeo://",
-            "displayName": "Vimeo"
+            "displayName": "Vimeo",
+            "docs": "https://developer.vimeo.com/apis/simple and https://github.com/vimeo/VIMDeeplink"
         },
         {
             "storeIdentifier": "596961532",
@@ -3143,7 +3138,8 @@
             "storeIdentifier": "871299723",
             "identifier": "stackexchange",
             "scheme": "se-zaphod://",
-            "displayName": "Stack Exchange"
+            "displayName": "Stack Exchange",
+            "docs": "http://stackexchange.com/feeds/sites"
         },
         {
             "storeIdentifier": "306934924",
