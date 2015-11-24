@@ -132,8 +132,17 @@ For example
 }
 ```
 
-
 Testing formats that have `includeHeaders` is not currently possible.
+
+## Minify Script
+
+There's a python script included named 'minify.py', this script takes a copy of the manifest as an input and outputs a file with '-minified.json' as output. This script strips out all unnecessary keys for Opener's operation in the client (testing, documentation, etc.) and minifies the JSON to be compact.
+
+Sample usage:
+
+```
+python minify.py openerManifest-v1.json
+```
 
 ## Contributing
 
