@@ -2848,7 +2848,7 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(?:s)?://(?:(?!help)\\w+\\.)?dribbble\\.com/(?!session|signup|search|skills|teams|meetups|stories|jobs|about)(\\w+).*$",
+            "regex": "http(?:s)?://(?:(?!help)\\w+\\.)?dribbble\\.com/(?!shots|session|signup|search|skills|teams|meetups|stories|jobs|about)(\\w+).*$",
             "testInputs": [
                 "http://m.dribbble.com/letsgorally",
                 "https://dribbble.com/letsgorally",
@@ -2863,7 +2863,8 @@
                 "https://dribbble.com/jobs",
                 "https://dribbble.com/about",
                 "http://help.dribbble.com/#what-is-proper-behavioretiquette-for-members",
-                "http://help.dribbble.com/account"
+                "http://help.dribbble.com/account",
+                "http://m.dribbble.com/shots/2303483"
             ],
             "formats": [
                 {
@@ -2873,6 +2874,7 @@
                         "zeeen://player/letsgorally",
                         "zeeen://player/letsgorally",
                         "zeeen://player/letsgorally",
+                        null,
                         null,
                         null,
                         null,
