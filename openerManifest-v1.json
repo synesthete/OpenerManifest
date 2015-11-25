@@ -2907,6 +2907,15 @@
                         "jira://tempoplugin.jira.com/browse/TT-1208",
                         "jira://jira.blah.com/XXX-12"
                     ]
+                },
+                {
+                    "appIdentifier": "jirapad",
+                    "format": "jira://$1",
+                    "testResults": [
+                        "jira://liquibase.jira.com/browse/CORE-2549",
+                        "jira://tempoplugin.jira.com/browse/TT-1208",
+                        "jira://jira.blah.com/XXX-12"
+                    ]
                 }
             ]
         }
@@ -3465,6 +3474,15 @@
             "identifier": "jira",
             "scheme": "jira://",
             "displayName": "JIRA Connect",
+            "platform": "phone",
+            "new": true
+        },
+        {
+            "storeIdentifier": "628608825",
+            "identifier": "jiraipad",
+            "scheme": "jira://",
+            "displayName": "JIRA Connect",
+            "platform": "pad",
             "new": true
         },
         {
