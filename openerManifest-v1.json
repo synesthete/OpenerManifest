@@ -2918,6 +2918,78 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Track",
+            "regex": "http(?:s)?://(?:www\\.)?tidal\\.com/(?:#!/)?track/(\\d+).*$",
+            "testInputs": [
+                "http://tidal.com/track/35470518",
+                "http://tidal.com/#!/track/35470518"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "tidal",
+                    "format": "tidal://track/$1",
+                    "testResults": [
+                        "tidal://track/35470518",
+                        "tidal://track/35470518"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Album",
+            "regex": "http(?:s)?://(?:www\\.)?tidal\\.com/(?:#!/)?album/(\\d+).*$",
+            "testInputs": [
+                "http://tidal.com/album/52690849",
+                "http://tidal.com/#!/album/52690849"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "tidal",
+                    "format": "tidal://album/$1",
+                    "testResults": [
+                        "tidal://album/52690849",
+                        "tidal://album/52690849"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Artist",
+            "regex": "http(?:s)?://(?:www\\.)?tidal\\.com/(?:#!/)?artist/(\\d+).*$",
+            "testInputs": [
+                "http://tidal.com/artist/6277037",
+                "http://tidal.com/#!/artist/6277037"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "tidal",
+                    "format": "tidal://artist/$1",
+                    "testResults": [
+                        "tidal://artist/6277037",
+                        "tidal://artist/6277037"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Playlist",
+            "regex": "http(?:s)?://(?:www\\.)?tidal\\.com/(?:#!/)?playlist/([a-fA-F0-9\\-]+).*$",
+            "testInputs": [
+                "http://tidal.com/playlist/548c59ac-8ee4-40f4-8f14-3c510ce3ae42",
+                "http://tidal.com/#!/playlist/548c59ac-8ee4-40f4-8f14-3c510ce3ae42"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "tidal",
+                    "format": "tidal://playlist/$1",
+                    "testResults": [
+                        "tidal://playlist/548c59ac-8ee4-40f4-8f14-3c510ce3ae42",
+                        "tidal://playlist/548c59ac-8ee4-40f4-8f14-3c510ce3ae42"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -3461,6 +3533,13 @@
             "identifier": "behance",
             "scheme": "behance://",
             "displayName": "Behance"
+        },
+        {
+            "storeIdentifier": "913943275",
+            "identifier": "tidal",
+            "scheme": "tidal://",
+            "displayName": "TIDAL",
+            "new": true
         },
         {
             "storeIdentifier": "923813895",
