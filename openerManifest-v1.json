@@ -2812,11 +2812,12 @@
         },
         {
             "title": "Open Link",
-            "regex": "http(?:s)?://(?:\\w+\\.)?(imgur\\.com/(gallery/)?\\w+).*?$",
+            "regex": "http(?:s)?://(?:\\w+\\.)?(imgur\\.com/(gallery/|a/)?\\w+).*?$",
             "testInputs": [
                 "http://m.imgur.com/gallery/UW0KFYQ",
                 "http://i.imgur.com/Eo1WO0f.jpg",
-                "http://imgur.com/GxCSO40"
+                "http://imgur.com/GxCSO40",
+                "http://imgur.com/a/q2Isg"
             ],
             "formats": [
                 {
@@ -2825,7 +2826,8 @@
                     "testResults": [
                         "imgur://imgur.com/gallery/UW0KFYQ",
                         "imgur://imgur.com/Eo1WO0f",
-                        "imgur://imgur.com/GxCSO40"
+                        "imgur://imgur.com/GxCSO40",
+                        "imgur://imgur.com/a/q2Isg"
                     ]
                 }
             ]
