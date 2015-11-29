@@ -1740,13 +1740,14 @@
         },
         {
             "title": "Open Subreddit",
-            "regex": "http(?:s)?://(?:www\\.)?reddit\\.com/r/([a-zA-Z0-9_\\-%]+)(?:/(\\?.*)?$|\\?.*$|/$)?$",
+            "regex": "http(?:s)?://(?:www\\.|m\\.)?reddit\\.com/r/([a-zA-Z0-9_\\-%]+)(?:/(\\?.*)?$|\\?.*$|/$)?$",
             "testInputs": [
                 "http://www.reddit.com/r/gaming/",
                 "http://www.reddit.com/r/gaming",
                 "http://www.reddit.com/r/gaming/?hello=world",
                 "http://www.reddit.com/r/gaming?hello=world",
-                "http://www.reddit.com/r/gaming/comments/3d2ewz/nintendo_president_satoru_iwata_passes_away/"
+                "http://www.reddit.com/r/gaming/comments/3d2ewz/nintendo_president_satoru_iwata_passes_away/",
+                "http://m.reddit.com/r/gaming/"
             ],
             "formats": [
                 {
@@ -1757,18 +1758,20 @@
                         "alienblue://r/gaming",
                         "alienblue://r/gaming",
                         "alienblue://r/gaming",
-                        null
+                        null,
+                        "alienblue://r/gaming"
                     ]
                 }
             ]
         },
         {
             "title": "Open Thread",
-            "regex": "(http(?:s)?://(?:www\\.)?reddit\\.com/r/[a-zA-Z0-9_\\-%]+/comments/\\w+/.*)$",
+            "regex": "(http(?:s)?://(?:www\\.|m\\.)?reddit\\.com/r/[a-zA-Z0-9_\\-%]+/comments/\\w+/.*)$",
             "testInputs": [
                 "http://www.reddit.com/r/gaming/comments/3d2ewz/nintendo_president_satoru_iwata_passes_away/",
                 "https://www.reddit.com/r/VintageApple/comments/29xca9/what_is_apples_next_step/",
-                "http://www.reddit.com/r/gaming"
+                "http://www.reddit.com/r/gaming",
+                "https://m.reddit.com/r/starcitizen/comments/3um4z1/best_race_video_ive_seen/"
             ],
             "formats": [
                 {
@@ -1777,7 +1780,8 @@
                     "testResults": [
                         "alienblue://thread/http://www.reddit.com/r/gaming/comments/3d2ewz/nintendo_president_satoru_iwata_passes_away/",
                         "alienblue://thread/https://www.reddit.com/r/VintageApple/comments/29xca9/what_is_apples_next_step/",
-                        null
+                        null,
+                        "alienblue://thread/https://m.reddit.com/r/starcitizen/comments/3um4z1/best_race_video_ive_seen/"
                     ]
                 }
             ]
