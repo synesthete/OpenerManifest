@@ -2852,11 +2852,12 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(?:s)?://(?:(?!help)\\w+\\.)?dribbble\\.com/(?!shots|session|signup|search|skills|teams|meetups|stories|jobs|about)(\\w+).*$",
+            "regex": "http(?:s)?://(?:(?!help)\\w+\\.)?dribbble\\.com/(?:player(?:s)?/)?(?!shots|session|signup|search|skills|teams|meetups|stories|jobs|about)(\\w+).*$",
             "testInputs": [
                 "http://m.dribbble.com/letsgorally",
                 "https://dribbble.com/letsgorally",
                 "https://dribbble.com/letsgorally/projects",
+                "http://dribbble.com/players/robotspacer",
                 "https://dribbble.com/session/new?return_to=%2Fsignup%3Freturn_to%3D%252Fletsgorally%252Flists%252Fmemberships",
                 "https://dribbble.com/signup?return_to=%2Fletsgorally",
                 "https://dribbble.com/search?q=hello",
@@ -2878,6 +2879,7 @@
                         "zeeen://player/letsgorally",
                         "zeeen://player/letsgorally",
                         "zeeen://player/letsgorally",
+                        "zeeen://player/robotspacer",
                         null,
                         null,
                         null,
