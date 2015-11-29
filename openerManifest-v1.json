@@ -560,16 +560,18 @@
         },
         {
             "title": "Open Story",
-            "regex": "http(s?)://(www.?)storehouse.co/stories/.+$",
+            "regex": "http(?:s?)://(?:www.?)storehouse.co/stories/([a-zA-Z0-9]+).*$",
             "testInputs": [
-                "https://www.storehouse.co/stories/41ir-sf-family-visit-2-14"
+                "https://www.storehouse.co/stories/41ir-sf-family-visit-2-14",
+                "https://www.storehouse.co/stories/8PsUkuy7KANA"
             ],
             "formats": [
                 {
                     "appIdentifier": "storehouse",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(storehouse://view/story/\\\\d+).*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "format": "storehouse://stories_by_slug/$1",
                     "testResults": [
-                        "storehouse://view/story/21891"
+                        "storehouse://stories_by_slug/41ir",
+                        "storehouse://stories_by_slug/8PsUkuy7KANA"
                     ]
                 }
             ]
