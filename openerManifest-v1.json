@@ -340,12 +340,13 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(?:s)?://(?:m.|mobile.|www.)?flickr.com(?:/#|/browser/upgrade/\\?continue=)?/(?:photos|people)/([0-9a-zA-Z_@%-]+)(?:/|\\?|/\\?.*)$",
+            "regex": "http(?:s)?://(?:m.|mobile.|www.)?flickr.com(?:/#|/browser/upgrade/\\?continue=)?/(?:photos|people)/([0-9a-zA-Z_@%-]+)(?:/|\\?|/\\?.*)?$",
             "testInputs": [
                 "https://m.flickr.com/#/photos/27933390@N03/",
                 "https://www.flickr.com/people/27933390@N03/",
                 "https://m.flickr.com/#/photos/27933390@N03/16929283568/",
-                "https://www.flickr.com/photos/27933390@N03/16929283568/"
+                "https://www.flickr.com/photos/27933390@N03/16929283568/",
+                "http://www.flickr.com/photos/robotspacer"
             ],
             "formats": [
                 {
@@ -355,7 +356,8 @@
                         "flickr://flickr.com/photos/27933390@N03",
                         "flickr://flickr.com/photos/27933390@N03",
                         null,
-                        null
+                        null,
+                        "flickr://flickr.com/photos/robotspacer"
                     ]
                 }
             ]
