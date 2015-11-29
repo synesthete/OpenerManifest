@@ -447,12 +447,12 @@
                     "appIdentifier": "vscocam",
                     "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(vsco:\/\/.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
                     "testResults": [
+                        "vsco://user/5539600/collection",
                         "vsco://user/5539600/grid",
                         "vsco://user/5539600/grid",
                         "vsco://user/5539600/grid",
                         "vsco://user/5539600/grid",
-                        "vsco://user/5539600/grid",
-                        "vsco://user/5539600/grid",
+                        "vsco://user/5539600/collection",
                         "vsco://user/158596/grid"
                     ]
                 }
