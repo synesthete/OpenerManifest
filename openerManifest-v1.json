@@ -748,7 +748,7 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(?:s)?://weibo\\.(?:com|cn)/(?:u/)?(\\d+)(?:/\\?.*|/)?$",
+            "regex": "http(?:s)?://(?:\\w+\\.)?weibo\\.(?:com|cn)/(?:u/)?(\\d+)(?:/\\?.*|/)?$",
             "testInputs": [
                 "http://weibo.com/2616423197",
                 "http://weibo.com/u/2616423197",
@@ -777,23 +777,26 @@
         },
         {
             "title": "Open Status",
-            "regex": "http(?:s)?://weibo\\.(?:com|cn)/\\d+/(\\w+).*$",
+            "regex": "http(?:s)?://(?:\\w+\\.)?weibo\\.(?:com|cn)/\\d+/(\\w+).*$",
             "testInputs": [
-                "http://weibo.com/2616423197/Cmjs2vh5Q?from=page_1005052616423197_profile&wvr=6&mod=weibotime"
+                "http://weibo.com/2616423197/Cmjs2vh5Q?from=page_1005052616423197_profile&wvr=6&mod=weibotime",
+                "http://m.weibo.cn/5524254784/D5ZxyE1tM"
             ],
             "formats": [
                 {
                     "appIdentifier": "weibo",
                     "format": "sinaweibo://detail?mblogid=$1",
                     "testResults": [
-                        "sinaweibo://detail?mblogid=Cmjs2vh5Q"
+                        "sinaweibo://detail?mblogid=Cmjs2vh5Q",
+                        "sinaweibo://detail?mblogid=D5ZxyE1tM"
                     ]
                 },
                 {
                     "appIdentifier": "moke",
                     "format": "moke:///status?mid=$1",
                     "testResults": [
-                        "moke:///status?mid=Cmjs2vh5Q"
+                        "moke:///status?mid=Cmjs2vh5Q",
+                        "moke:///status?mid=D5ZxyE1tM"
                     ]
                 }
             ]
