@@ -3008,11 +3008,13 @@
         },
         {
             "title": "Open Link",
-            "regex": "http(?:s)?://((?:\\w+\\.)*taobao\\.com/.*)$",
+            "regex": "http(?:s)?://((?:\\w+\\.)*(?:taobao|tmall)\\.com/.*)$",
             "testInputs": [
                 "http://m.intl.taobao.com/detail/detail.html?spm=a214x.7681957.1998488803.3&id=522074348531",
                 "http://shop111126855.m.taobao.com/?spm=a21dc.35706.88393.2&cpp=0",
-                "http://h5.m.taobao.com/awp/core/detail.htm?id=522077715729&toSite=main"
+                "http://h5.m.taobao.com/awp/core/detail.htm?id=522077715729&toSite=main",
+                "http://m.intl.taobao.com/detail/detail.html?plg_nld=1&plg_nld=1&scene=taobao_shop&id=40369149149&plg_auth=1&spm=a1z10.4-b.w5003-12621784871.3.xyscQW&plg_dev=1&plg_uin=1&plg_usr=1&plg_vkey=1&sku_properties=1627207:130164",
+                "https://detail.m.tmall.com/item.htm?plg_nld=1&plg_nld=1&scene=taobao_shop&id=40369149149&plg_auth=1&spm=a1z10.4-b.w5003-12621784871.3.xyscQW&plg_dev=1&plg_uin=1&plg_usr=1&plg_vkey=1&sku_properties=1627207:130164"
             ],
             "formats": [
                 {
@@ -3021,7 +3023,9 @@
                     "testResults": [
                         "taobao://m.intl.taobao.com/detail/detail.html?spm=a214x.7681957.1998488803.3&id=522074348531",
                         "taobao://shop111126855.m.taobao.com/?spm=a21dc.35706.88393.2&cpp=0",
-                        "taobao://h5.m.taobao.com/awp/core/detail.htm?id=522077715729&toSite=main"
+                        "taobao://h5.m.taobao.com/awp/core/detail.htm?id=522077715729&toSite=main",
+                        "taobao://m.intl.taobao.com/detail/detail.html?plg_nld=1&plg_nld=1&scene=taobao_shop&id=40369149149&plg_auth=1&spm=a1z10.4-b.w5003-12621784871.3.xyscQW&plg_dev=1&plg_uin=1&plg_usr=1&plg_vkey=1&sku_properties=1627207:130164",
+                        "taobao://detail.m.tmall.com/item.htm?plg_nld=1&plg_nld=1&scene=taobao_shop&id=40369149149&plg_auth=1&spm=a1z10.4-b.w5003-12621784871.3.xyscQW&plg_dev=1&plg_uin=1&plg_usr=1&plg_vkey=1&sku_properties=1627207:130164"
                     ]
                 },
                 {
@@ -3030,7 +3034,9 @@
                     "testResults": [
                         "taobao://m.intl.taobao.com/detail/detail.html?spm=a214x.7681957.1998488803.3&id=522074348531",
                         "taobao://shop111126855.m.taobao.com/?spm=a21dc.35706.88393.2&cpp=0",
-                        "taobao://h5.m.taobao.com/awp/core/detail.htm?id=522077715729&toSite=main"
+                        "taobao://h5.m.taobao.com/awp/core/detail.htm?id=522077715729&toSite=main",
+                        "taobao://m.intl.taobao.com/detail/detail.html?plg_nld=1&plg_nld=1&scene=taobao_shop&id=40369149149&plg_auth=1&spm=a1z10.4-b.w5003-12621784871.3.xyscQW&plg_dev=1&plg_uin=1&plg_usr=1&plg_vkey=1&sku_properties=1627207:130164",
+                        "taobao://detail.m.tmall.com/item.htm?plg_nld=1&plg_nld=1&scene=taobao_shop&id=40369149149&plg_auth=1&spm=a1z10.4-b.w5003-12621784871.3.xyscQW&plg_dev=1&plg_uin=1&plg_usr=1&plg_vkey=1&sku_properties=1627207:130164"
                     ]
                 }
             ]
