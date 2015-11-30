@@ -3007,6 +3007,35 @@
             ]
         },
         {
+            "title": "Open Link",
+            "regex": "http(?:s)?://((?:\\w+\\.)*taobao\\.com/.*)$",
+            "testInputs": [
+                "http://m.intl.taobao.com/detail/detail.html?spm=a214x.7681957.1998488803.3&id=522074348531",
+                "http://shop111126855.m.taobao.com/?spm=a21dc.35706.88393.2&cpp=0",
+                "http://h5.m.taobao.com/awp/core/detail.htm?id=522077715729&toSite=main"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "taobao",
+                    "format": "taobao://$1",
+                    "testResults": [
+                        "taobao://m.intl.taobao.com/detail/detail.html?spm=a214x.7681957.1998488803.3&id=522074348531",
+                        "taobao://shop111126855.m.taobao.com/?spm=a21dc.35706.88393.2&cpp=0",
+                        "taobao://h5.m.taobao.com/awp/core/detail.htm?id=522077715729&toSite=main"
+                    ]
+                },
+                {
+                    "appIdentifier": "taobaopad",
+                    "format": "taobao://$1",
+                    "testResults": [
+                        "taobao://m.intl.taobao.com/detail/detail.html?spm=a214x.7681957.1998488803.3&id=522074348531",
+                        "taobao://shop111126855.m.taobao.com/?spm=a21dc.35706.88393.2&cpp=0",
+                        "taobao://h5.m.taobao.com/awp/core/detail.htm?id=522077715729&toSite=main"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Item",
             "regex": "http(?:s)?://(?:item\\.(?:m\\.)?jd\\.(?:com|hk)/(?:.*/)?(\\d+)\\.html|m\\.jd\\.(?:com|hk)/ware/view\\.action.*wareId=(\\d+)).*?$",
             "testInputs": [
@@ -3716,6 +3745,22 @@
             "identifier": "youkuhd",
             "scheme": "youkuhd://",
             "platform": "pad"
+        },
+        {
+            "displayName": "Taobao",
+            "storeIdentifier": "387682726",
+            "identifier": "taobao",
+            "scheme": "taobao://",
+            "platform": "phone",
+            "new": true
+        },
+        {
+            "displayName": "Taobao HD",
+            "storeIdentifier": "438865278",
+            "identifier": "taobaopad",
+            "scheme": "taobao://",
+            "platform": "pad",
+            "new": true
         },
         {
             "displayName": "Jingdong",
