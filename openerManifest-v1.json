@@ -2,7 +2,7 @@
     "actions": [
         {
             "title": "Open Tweet",
-            "regex": "http(?:s)?://(?:mobile\\.|www\\.)?twitter\\.com/(?:@?[a-zA-Z0-9_]{1,15}/status|statuses)/(\\d+).*$",
+            "regex": "http(?:s)?://(?:mobile\\.|www\\.|m\\.)?twitter\\.com/(?:@?[a-zA-Z0-9_]{1,15}/status|statuses)/(\\d+).*$",
             "testInputs": [
                 "https://twitter.com/zpower/status/588561590997352448",
                 "https://mobile.twitter.com/kiebk/status/599159327056863232?cn=cmVwbHk%3D&refsrc=email"
@@ -82,7 +82,7 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(?:s?)://(?:mobile\\.|www\\.)?twitter.com/intent/user\\?.*screen_name=?(?:@)?([a-zA-Z0-9_]{1,15}).*$",
+            "regex": "http(?:s?)://(?:mobile\\.|www\\.|m\\.)?twitter.com/intent/user\\?.*screen_name=?(?:@)?([a-zA-Z0-9_]{1,15}).*$",
             "testInputs": [
                 "https://twitter.com/intent/user?screen_name=addyosmani"
             ],
@@ -112,7 +112,7 @@
         },
         {
             "title": "Open Hashtag",
-            "regex": "http(?:s?)://(?:mobile.|www.)?twitter.com/hashtag/([a-zA-Z0-9_]+).*$",
+            "regex": "http(?:s?)://(?:mobile\\.|www\\.|m\\.)?twitter.com/hashtag/([a-zA-Z0-9_]+).*$",
             "testInputs": [
                 "https://mobile.twitter.com/chillmage/with_replies",
                 "https://twitter.com/hashtag/ThingsILearnedFromTheLeft?src=hash"
