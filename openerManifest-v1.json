@@ -145,6 +145,40 @@
             ]
         },
         {
+            "title": "Open Search",
+            "regex": "http(?:s)://(?:www\\.)?twitter\\.com/search.*q=([^&]+).*$",
+            "testInputs": [
+                "https://twitter.com/search?f=tweets&vertical=default&q=To%20the%20dinosaurs%2C%20we%20live%20in%20a%20post-apocalyptic%20future&src=typd",
+                "https://twitter.com/search?q=opener%20app&src=typd"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "twitter",
+                    "format": "twitter://search?query=$1",
+                    "testResults": [
+                        "twitter://search?query=To%20the%20dinosaurs%2C%20we%20live%20in%20a%20post-apocalyptic%20future",
+                        "twitter://search?query=opener%20app"
+                    ]
+                },
+                {
+                    "appIdentifier": "tweetbot",
+                    "format": "tweetbot:///search?query=$1",
+                    "testResults": [
+                        "tweetbot:///search?query=To%20the%20dinosaurs%2C%20we%20live%20in%20a%20post-apocalyptic%20future",
+                        "tweetbot:///search?query=opener%20app"
+                    ]
+                },
+                {
+                    "appIdentifier": "twitteriffic",
+                    "format": "twitterrific:///search?q=$1",
+                    "testResults": [
+                        "twitterrific:///search?q=To%20the%20dinosaurs%2C%20we%20live%20in%20a%20post-apocalyptic%20future",
+                        "twitterrific:///search?q=opener%20app"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Moment",
             "regex": "http(?:s?)://(?:mobile.|www.)?twitter.com/i/moments/(\\d+).*$",
             "testInputs": [
