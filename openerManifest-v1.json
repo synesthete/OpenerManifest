@@ -36,12 +36,13 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(?:s?)://(?:mobile\\.|www\\.)?twitter\\.com/(?:@)?([a-zA-Z0-9_]{1,15})(?:/with_replies)?(?:(?:/)?\\?.*)?$",
+            "regex": "http(?:s?)://(?:mobile\\.|www\\.|m\\.)?twitter\\.com/(?:@)?(?!search)([a-zA-Z0-9_]{1,15})(?:/with_replies)?(?:(?:/)?\\?.*)?$",
             "testInputs": [
                 "https://mobile.twitter.com/chillmage/with_replies",
                 "https://twitter.com/hashtag/ThingsILearnedFromTheLeft?src=hash",
                 "https://mobile.twitter.com/kiebk/status/599159327056863232",
-                "https://twitter.com/chriswelch?protected_redirect=true"
+                "https://twitter.com/chriswelch?protected_redirect=true",
+                "https://twitter.com/search?q=opener%20app&src=typd"
             ],
             "formats": [
                 {
@@ -51,7 +52,8 @@
                         "twitter://user?screen_name=chillmage",
                         null,
                         null,
-                        "twitter://user?screen_name=chriswelch"
+                        "twitter://user?screen_name=chriswelch",
+                        null
                     ]
                 },
                 {
@@ -61,7 +63,8 @@
                         "tweetbot:///user_profile/chillmage",
                         null,
                         null,
-                        "tweetbot:///user_profile/chriswelch"
+                        "tweetbot:///user_profile/chriswelch",
+                        null
                     ]
                 },
                 {
@@ -71,7 +74,8 @@
                         "twitterrific:///profile?screen_name=chillmage",
                         null,
                         null,
-                        "twitterrific:///profile?screen_name=chriswelch"
+                        "twitterrific:///profile?screen_name=chriswelch",
+                        null
                     ]
                 }
             ]
