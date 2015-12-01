@@ -3069,6 +3069,22 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open List",
+            "regex": "http(?:s)?://li\\.st/l/((?:\\w+-)+(?:\\w+)).*?$",
+            "testInputs": [
+                "https://li.st/l/42b77e9d-ad35-4b03-a6de-04dffcaaf5bd"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "thelistapp",
+                    "format": "thelistapp://l/$1",
+                    "testResults": [
+                        "thelistapp://l/42b77e9d-ad35-4b03-a6de-04dffcaaf5bd"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -3791,6 +3807,13 @@
             "identifier": "jingdongpad",
             "scheme": "openApp.jdiPad://",
             "platform": "pad",
+            "new": true
+        },
+        {
+            "displayName": "The List App",
+            "storeIdentifier": "1037098661",
+            "identifier": "thelistapp",
+            "scheme": "thelistapp://",
             "new": true
         }
     ]
