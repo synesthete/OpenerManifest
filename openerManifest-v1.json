@@ -3115,7 +3115,8 @@
             "storeIdentifier": "1018355599",
             "identifier": "tweetbot",
             "scheme": "tweetbot://",
-            "displayName": "Tweetbot"
+            "displayName": "Tweetbot",
+            "docs": "http://tapbots.net/tweetbot3/support/url-schemes/"
         },
         {
             "storeIdentifier": "333903271",
@@ -3139,7 +3140,8 @@
             "storeIdentifier": "580311103",
             "identifier": "twitterrific",
             "scheme": "twitterrific://",
-            "displayName": "Twitterrific"
+            "displayName": "Twitterrific",
+            "docs": "http://twitterrific.com/ios/poweruser"
         },
         {
             "storeIdentifier": "845046425",
