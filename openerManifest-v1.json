@@ -2824,14 +2824,14 @@
             "formats": [
                 {
                     "appIdentifier": "blink",
-                    "script": "function process(url, completionHandler) { completionHandler('blink://x-callback-url/convert?URL=' + encodeURIComponent(url)); }",
+                    "script": "function process(url, completionHandler) { completionHandler('blink://x-callback-url/search?q=' + encodeURIComponent(url)); }",
                     "testResults": [
-                        "blink://x-callback-url/convert?URL=https%3A%2F%2Fitunes.apple.com%2Fau%2Fapp%2Fopener-open-links-in-apps%2Fid989565871%3Fmt%3D8",
-                        "blink://x-callback-url/convert?URL=https%3A%2F%2Fitunes.apple.com%2Fus%2Fapp%2Fopener-open-links-in-apps%2Fid989565871",
-                        "blink://x-callback-url/convert?URL=https%3A%2F%2Fitunes.apple.com%2Fmovie%2Fid673500243",
-                        "blink://x-callback-url/convert?URL=https%3A%2F%2Fitunes.apple.com%2Fus%2Fmovie%2Fdrinking-buddies%2Fid673500243",
-                        "blink://x-callback-url/convert?URL=https%3A%2F%2Fitunes.apple.com%2Fus%2Falbum%2Falmanac%2Fid591108722",
-                        "blink://x-callback-url/convert?URL=https%3A%2F%2Fitunes.apple.com%2Fus%2Fartist%2Fwidowspeak%2Fid420935735"
+                        "blink://x-callback-url/search?q=https%3A%2F%2Fitunes.apple.com%2Fau%2Fapp%2Fopener-open-links-in-apps%2Fid989565871%3Fmt%3D8",
+                        "blink://x-callback-url/search?q=https%3A%2F%2Fitunes.apple.com%2Fus%2Fapp%2Fopener-open-links-in-apps%2Fid989565871",
+                        "blink://x-callback-url/search?q=https%3A%2F%2Fitunes.apple.com%2Fmovie%2Fid673500243",
+                        "blink://x-callback-url/search?q=https%3A%2F%2Fitunes.apple.com%2Fus%2Fmovie%2Fdrinking-buddies%2Fid673500243",
+                        "blink://x-callback-url/search?q=https%3A%2F%2Fitunes.apple.com%2Fus%2Falbum%2Falmanac%2Fid591108722",
+                        "blink://x-callback-url/search?q=https%3A%2F%2Fitunes.apple.com%2Fus%2Fartist%2Fwidowspeak%2Fid420935735"
                     ]
                 }
             ]
