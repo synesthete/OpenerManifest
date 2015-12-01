@@ -3459,7 +3459,6 @@
             "displayName": "Meetup"
         },
         {
-            "new": true,
             "storeIdentifier": "639881495",
             "identifier": "imgur",
             "scheme": "imgur://",
@@ -3648,16 +3647,14 @@
             "identifier": "jira",
             "scheme": "jira://",
             "displayName": "JIRA Connect",
-            "platform": "phone",
-            "new": true
+            "platform": "phone"
         },
         {
             "storeIdentifier": "628608825",
             "identifier": "jiraipad",
             "scheme": "jira://",
             "displayName": "JIRA Connect",
-            "platform": "pad",
-            "new": true
+            "platform": "pad"
         },
         {
             "storeIdentifier": "944064086",
