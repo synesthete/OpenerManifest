@@ -3709,8 +3709,7 @@
             "storeIdentifier": "913943275",
             "identifier": "tidal",
             "scheme": "tidal://",
-            "displayName": "TIDAL",
-            "new": true
+            "displayName": "TIDAL"
         },
         {
             "storeIdentifier": "923813895",
