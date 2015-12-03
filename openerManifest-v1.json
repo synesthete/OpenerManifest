@@ -3170,6 +3170,24 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Post",
+            "regex": "http(?:s)?://tieba\\.baidu\\.(?:com|cn)/p/(\\d+).*$",
+            "testInputs": [
+                "http://tieba.baidu.com/p/4181204653",
+                "http://tieba.baidu.cn/p/4181204653"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "tieba",
+                    "format": "com.baidu.tieba://jumptoforum?kz=$1",
+                    "testResults": [
+                        "com.baidu.tieba://jumptoforum?kz=4181204653",
+                        "com.baidu.tieba://jumptoforum?kz=4181204653"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -3904,6 +3922,13 @@
             "identifier": "jingdongpad",
             "scheme": "openApp.jdiPad://",
             "platform": "pad",
+            "new": true
+        },
+        {
+            "displayName": "Tieba",
+            "storeIdentifier": "477927812",
+            "identifier": "tieba",
+            "scheme": "com.baidu.tieba://",
             "new": true
         },
         {
