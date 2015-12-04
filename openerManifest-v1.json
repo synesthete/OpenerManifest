@@ -2426,7 +2426,7 @@
         },
         {
             "title": "Open Link",
-            "regex": "http(?:s)?://((?!www\\.)(?:(\\w+)\\.)(?:\\w+\\.)*wikipedia\\.(?:com|org)/(?:wiki/)?(.*))$",
+            "regex": "(http(?:s)?://((?!www\\.)(?:(\\w+)\\.)(?:\\w+\\.)*wikipedia\\.(?:com|org)/(?:wiki/)?(.*)))$",
             "testInputs": [
                 "http://www.wikipedia.org/wiki/Bottle_opener",
                 "http://en.wikipedia.org/wiki/Bottle_opener",
@@ -2435,7 +2435,7 @@
             "formats": [
                 {
                     "appIdentifier": "wikipanion",
-                    "format": "wikipedia://$1",
+                    "format": "wikipedia://$2",
                     "testResults": [
                         null,
                         "wikipedia://en.wikipedia.org/wiki/Bottle_opener",
@@ -2444,7 +2444,7 @@
                 },
                 {
                     "appIdentifier": "wikipanionpad",
-                    "format": "wikipedia://$1",
+                    "format": "wikipedia://$2",
                     "testResults": [
                         null,
                         "wikipedia://en.wikipedia.org/wiki/Bottle_opener",
@@ -2452,8 +2452,17 @@
                     ]
                 },
                 {
+                    "appIdentifier": "wikilinks",
+                    "script": "function process(url, completion) { completion('wikilinks://openwikipediaurl?url=' + encodeURIComponent(btoa(url))); }",
+                    "testResults": [
+                        null,
+                        "wikilinks://openwikipediaurl?url=aHR0cDovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9Cb3R0bGVfb3BlbmVy",
+                        "wikilinks://openwikipediaurl?url=aHR0cDovL2VuLm0ud2lraXBlZGlhLm9yZy93aWtpL1NveWxlbnQ%3D"
+                    ]
+                },
+                {
                     "appIdentifier": "dasreferenz",
-                    "format": "dasreferenz://$2/$3",
+                    "format": "dasreferenz://$3/$4",
                     "testResults": [
                         null,
                         "dasreferenz://en/Bottle_opener",
@@ -3606,6 +3615,13 @@
             "identifier": "wikipanionpad",
             "scheme": "wikipanion://",
             "platform": "pad"
+        },
+        {
+            "displayName": "WikiLinks",
+            "storeIdentifier": "990956008",
+            "identifier": "wikilinks",
+            "scheme": "wikilinks://",
+            "new": true
         },
         {
             "storeIdentifier": "310738695",
