@@ -3793,7 +3793,7 @@
             "displayName": "ABC News",
             "storeIdentifier": "300255638",
             "identifier": "abcnewsiphone",
-            "scheme": "abcnewsiphone",
+            "scheme": "abcnewsiphone://",
             "platform": "phone"
         },
         {
@@ -3843,7 +3843,7 @@
             "displayName": "ABC News for iPad",
             "storeIdentifier": "380520716",
             "identifier": "abcnewsipad",
-            "scheme": "abcnewsipad",
+            "scheme": "abcnewsipad://",
             "platform": "pad"
         },
         {
