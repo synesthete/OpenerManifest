@@ -840,6 +840,26 @@
             ]
         },
         {
+            "title": "Open Post",
+            "regex": "http(?:s)?://blog\\.sina\\.(?:com|cn|com\\.cn)/(?:.*/)?s/blog_(\\w+)\\.html.*$",
+            "testInputs": [
+                "http://blog.sina.cn/dpool/blog/s/blog_51177cc40102w0k1.html?cid=95642&vt=4",
+                "http://blog.sina.com.cn/s/blog_6051fbeb0102vtou.html#cre=blogpc&mod=g&loc=8&r=h&rfunc=-1",
+                "http://blog.sina.com.cn/s/blog_6051fbeb0102vtou.html"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "sinablog",
+                    "format": "sinablog://blog.sina.com.cn?from=sinacn&jumptype=app&articleid=$1",
+                    "testResults": [
+                        "sinablog://blog.sina.com.cn?from=sinacn&jumptype=app&articleid=51177cc40102w0k1",
+                        "sinablog://blog.sina.com.cn?from=sinacn&jumptype=app&articleid=6051fbeb0102vtou",
+                        "sinablog://blog.sina.com.cn?from=sinacn&jumptype=app&articleid=6051fbeb0102vtou"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Venue",
             "regex": "(?:http(?:s?)://(?:m.|www.|mobile.)?foursquare.com(?:/mobile)?/v(?:/\\S+)?/([0-9a-fA-F]{24})).*$",
             "testInputs": [
@@ -3906,6 +3926,13 @@
             "storeIdentifier": "752234889",
             "identifier": "indiegogo",
             "scheme": "indiegogo://",
+            "new": true
+        },
+        {
+            "storeIdentifier": "466711718",
+            "identifier": "sinablog",
+            "scheme": "sinablog://",
+            "displayName": "Sina Blog",
             "new": true
         },
         {
