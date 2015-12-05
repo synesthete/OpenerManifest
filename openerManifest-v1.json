@@ -3778,7 +3778,7 @@
         },
         {
             "storeIdentifier": "628608825",
-            "identifier": "jiraipad",
+            "identifier": "jirapad",
             "scheme": "jira://",
             "displayName": "JIRA Connect",
             "platform": "pad"
