@@ -3217,6 +3217,28 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:www\\.|m\\.)?vk\\.(?:com|ru)/(.*)$",
+            "testInputs": [
+                "https://vk.com/album-63183658_224587768",
+                "http://m.vk.com/wall-54066922_1304",
+                "https://vk.com/album289200099_224760504",
+                "https://vk.com/advitafound?w=wall-18750533_7762"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "vk",
+                    "format": "vk://vk.com/$1",
+                    "testResults": [
+                        "vk://vk.com/album-63183658_224587768",
+                        "vk://vk.com/wall-54066922_1304",
+                        "vk://vk.com/album289200099_224760504",
+                        "vk://vk.com/advitafound?w=wall-18750533_7762"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -3926,6 +3948,14 @@
             "storeIdentifier": "752234889",
             "identifier": "indiegogo",
             "scheme": "indiegogo://",
+            "new": true
+        },
+        {
+            "storeIdentifier": "564177498",
+            "identifier": "vk",
+            "scheme": "vk://",
+            "displayName": "VK",
+            "docs": "http://handleopenurl.com/scheme/vk",
             "new": true
         },
         {
