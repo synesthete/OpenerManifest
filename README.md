@@ -14,12 +14,15 @@ Actions contain formats as child dictionaries, and formats are matched with apps
 
 The `apps` top level key in the manifest contains an ordered list of dictionaries, each representing an app supported by Opener. Each app contains the following fields
 
-- `identifier` *string*: A human-readable identifier for this app, used elsewhere in the manifest.
-- `displayName` *string*: The user-facing name for this app within Opener.
-- `storeIdentifier` *number as string*: The identifier of the app on the App Store. (Optional in v2, required in v1)
-- `scheme` *URL as string*: A URL containing only the scheme that will open this app.
-- `new` *bool*: Indicates whether or not this app will be include in the "New Apps" group in Opener. Evaluates to `false` if unspecified.
-- `platform` *string*: Specifies if this app should only show up on iPhone/iPod Touch (value=`phone`) or on iPad (value=`pad`), shows on both if unspecified. *(Opener 1.0.1 and above)*
+<table>
+<tr><th>Key</th><th>Type</th><th>Description</th></tr>
+<tr><td><code>identifier</code></td><td>string</td><td>A human-readable identifier for this app, used elsewhere in the manifest.</td></tr>
+<tr><td><code>displayName</code></td><td>string</td><td>The user-facing name for this app within Opener.</td></tr>
+<tr><td><code>storeIdentifier</code></td><td>number as string</td><td>The identifier of the app on the App Store. (Optional in v2, required in v1)</td></tr>
+<tr><td><code>scheme</code></td><td>URL string</td><td>A URL containing only the scheme that will open this app.</td></tr>
+<tr><td><code>new</code></td><td>bool</td><td>Indicates whether or not this app will be include in the "New Apps" group in Opener.</td></tr>
+<tr><td><code>platform</code></td><td>string</td><td>Specifies if this app should only show up on iPhone/iPod Touch (value=<code>phone</code>) or on iPad (value=<code>pad</code>), shows on both if unspecified. (Opener 1.0.1 and above)</td></tr>
+</table>
 
 For example, if Opener were to include itself as an app
 
@@ -40,23 +43,32 @@ The `actions` top level key in the manifest contains a list of dictionaries, eac
 
 ### Common values
 
-- `title` *string*: The user-facing title for this action.
-- `regex` *string*: A regular expression string that the input URL is matched against. If this regex is matched by Opener for a given input, this action will appear in the list of available opening options.
-- `includeHeaders` *bool*: Indicates if headers should be included in the string that `regex` is matched with. If `true`, the headers are included in the input as a JSON encoded string separated from the input URL by a newline. *(Opener 1.0.2 and above)*
-- `formats` *array of dictionaries*: Specifies the apps that an action can be opened in (see [below](#formats)).
+<table>
+<tr><th>Key</th><th>Type</th><th>Description</th></tr>
+<tr><td><code>title</code></td><td>string</td><td>The user-facing title for this action.</td></tr>
+<tr><td><code>regex</code></td><td>string</td><td>A regular expression string that the input URL is matched against. If this regex is matched by Opener for a given input, this action will appear in the list of available opening options.</td></tr>
+<tr><td><code>includeHeaders</code></td><td>bool</td><td>Indicates if headers should be included in the string that <code>regex</code> is matched with. If <code>true</code>, the headers are included in the input as a JSON encoded string separated from the input URL by a newline. (Opener 1.0.2 and above)</td></tr>
+<tr><td><code>formats</code></td><td>array of dictionaries</td><td>Specifies the apps that an action can be opened in (see <a href="#formats">below</a>).</td></tr>
+</table>
 
-### <a tag="formats">Formats</a>
+### <a tag="#formats">Formats</a>
 
 Because an action could taken in multiple apps, there's an array within each action dictionary named `formats`. Each entry in this array matches the input URL with an app-specific output for the given action. Each of these contains the following keys.
 
-- `appIdentifier` *string*: The identifier of the app that this action applies to. Should match the `identifier` of an app.
-- `format` *string*: The regex template applied to the input. Mutually exclusive with `script`.
+<table>
+<tr><th>Key</th><th>Type</th><th>Description</th></tr>
+<tr><td><code>appIdentifier</code></td><td>string</td><td>The identifier of the app that this action applies to. Should match the <code>identifier</code> of an app.</td></tr>
+<tr><td><code>format</code></td><td>string</td><td>The regex template applied to the input. Mutually exclusive with <code>script</code>.</td></tr>
+</table>
 
 ### Advanced URL generation in formats
 
 Some app native URLs can't be generated using simple regex templating, they require lookups or encoding of some sort. To do this, action formats can provide Javascript methods that are executed to convert input URLs to app native action URLs.
 
-- `script` *Javascript string*: Mutually exclusive with `format`.
+<table>
+<tr><th>Key</th><th>Type</th><th>Description</th></tr>
+<tr><td><code>script</code></td><td>Javascript string</td><td>Mutually exclusive with <code>format</code>.</td></tr>
+</table>
 
 This script must contain a Javascript function named `process` that takes two inputs, a URL and an anonymous function to be called upon completion. Once complete, the completion handler should be called passing the result or `null` on failure.
 
@@ -95,11 +107,17 @@ To keep Opener maintainable, tests for actions can and should be provided.
 
 At the `action` level:
 
-- `testInputs` *array of strings*: An array of test inputs that will be run against `regex` then each action.
+<table>
+<tr><th>Key</th><th>Type</th><th>Description</th></tr>
+<tr><td><code>testInputs</code></td><td>array of strings</td><td>An array of test inputs that will be run against <code>regex</code> then each action.</td></tr>
+</table>
 
 At the `format` level:
 
-- `testResults` *array of strings or null entries*:  An array of expected results for this format for each of the test inputs. `null` should be used to specify that a test input *should not* match.
+<table>
+<tr><th>Key</th><th>Type</th><th>Description</th></tr>
+<tr><td><code>testResults</code></td><td>array of strings or nulls</td><td>An array of expected results for this format for each of the test inputs. <code>null</code> should be used to specify that a test input <i>should not</i> match</td></tr>
+</table>
 
 For example
 
@@ -149,7 +167,7 @@ python minify.py openerManifest-v1.json
 The manifest file has a `-v2` on the end, this indicates the major version of the manifest. If there are ever changes to the app that make the manifest not backwards compatible with a former version, the suffix of the manifest file is bumped.
 
 <table>
-<tr><th style="text-align: left;">Manifest Version</th><th style="text-align: left;">App Version</th><th style="text-align: left;">Changes</th></tr>
+<tr><th>Manifest Version</th><th>App Version</th><th>Changes</th></tr>
 <tr><td>v2</td><td>1.0.10</td><td>Made app dictionary <code>storeIdentifier</code> field optional. This was required in v1. Change was made in order to support first party apps, which lack an iTunes identifier.</td></tr>
 </table>
 
