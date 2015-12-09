@@ -2725,16 +2725,18 @@
         },
         {
             "title": "Open Link",
-            "regex": "http(?:s)?://(?:www\\.)?houzz\\.com/photos/(\\d+).*$",
+            "regex": "http(?:s)?://(?:www\\.)?houzz\\.com/((?:photos|ideabooks)/(\\d+)).*$",
             "testInputs": [
-                "http://www.houzz.com/photos/31036816/Bay-Collection-King-Bed-by-Talenti-Casa-modern-platform-beds"
+                "http://www.houzz.com/photos/31036816/Bay-Collection-King-Bed-by-Talenti-Casa-modern-platform-beds",
+                "http://www.houzz.com/ideabooks/1198907/list/homeowners-workbook-how-to-remodel-your-kitchen"
             ],
             "formats": [
                 {
                     "appIdentifier": "houzz",
-                    "format": "houzz://photos/$1",
+                    "format": "houzz:///$1",
                     "testResults": [
-                        "houzz://photos/31036816"
+                        "houzz:///photos/31036816",
+                        "houzz:///ideabooks/1198907"
                     ]
                 }
             ]
