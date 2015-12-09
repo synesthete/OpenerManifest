@@ -16,7 +16,7 @@ The `apps` top level key in the manifest contains an ordered list of dictionarie
 
 - `identifier` *string*: A human-readable identifier for this app, used elsewhere in the manifest.
 - `displayName` *string*: The user-facing name for this app within Opener.
-- `storeIdentifier` *number as string*: The identifier of the app on the App Store.
+- `storeIdentifier` *number as string*: The identifier of the app on the App Store. (Optional in v2, required in v1)
 - `scheme` *URL as string*: A URL containing only the scheme that will open this app.
 - `new` *bool*: Indicates whether or not this app will be include in the "New Apps" group in Opener. Evaluates to `false` if unspecified.
 - `platform` *string*: Specifies if this app should only show up on iPhone/iPod Touch (value=`phone`) or on iPad (value=`pad`), shows on both if unspecified. *(Opener 1.0.1 and above)*
@@ -143,6 +143,15 @@ Sample usage:
 ```
 python minify.py openerManifest-v1.json
 ```
+
+## Versions
+
+The manifest file has a `-v2` on the end, this indicates the major version of the manifest. If there are ever changes to the app that make the manifest not backwards compatible with a former version, the suffix of the manifest file is bumped.
+
+<table>
+<tr><th style="text-align: left;">Manifest Version</th><th style="text-align: left;">App Version</th><th style="text-align: left;">Changes</th></tr>
+<tr><td>v2</td><td>1.0.10</td><td>Made app dictionary <code>storeIdentifier</code> field optional. This was required in v1. Change was made in order to support first party apps, which lack an iTunes identifier.</td></tr>
+</table>
 
 ## Contributing
 
