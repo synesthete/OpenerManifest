@@ -2821,10 +2821,10 @@
         },
         {
             "title": "View App",
-            "regex": "http(?:s)?://itunes\\.apple\\.com/(?:.*/)*app/(?:.*/)?id(\\d+).*$",
+            "regex": "http(?:s)?://(?:geo\\.)?itunes\\.apple\\.com/(?:.*/)*app/(?:.*/)?id(\\d+).*$",
             "testInputs": [
                 "https://itunes.apple.com/au/app/opener-open-links-in-apps/id989565871?mt=8",
-                "https://itunes.apple.com/us/app/opener-open-links-in-apps/id989565871"
+                "https://geo.itunes.apple.com/us/app/opener-open-links-in-apps/id989565871"
             ],
             "formats": [
                 {
