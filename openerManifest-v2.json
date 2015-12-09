@@ -2828,6 +2828,14 @@
             ],
             "formats": [
                 {
+                    "appIdentifier": "appstore",
+                    "format": "itms-apps://itunes.apple.com/app/id$1?at=1001l3kM",
+                    "testResults": [
+                        "itms-apps://itunes.apple.com/app/id989565871?at=1001l3kM",
+                        "itms-apps://itunes.apple.com/app/id989565871?at=1001l3kM"
+                    ]
+                },
+                {
                     "appIdentifier": "appshopper",
                     "format": "appshoppersocial://app/$1",
                     "testResults": [
@@ -4010,6 +4018,12 @@
             "storeIdentifier": "1037098661",
             "identifier": "thelistapp",
             "scheme": "thelistapp://"
+        },
+        {
+            "displayName": "App Store",
+            "identifier": "appstore",
+            "scheme": "itms-apps",
+            "new": true
         }
     ]
 }
