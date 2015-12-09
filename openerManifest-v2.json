@@ -3976,46 +3976,40 @@
             "storeIdentifier": "387682726",
             "identifier": "taobao",
             "scheme": "taobao://",
-            "platform": "phone",
-            "new": true
+            "platform": "phone"
         },
         {
             "displayName": "Taobao HD",
             "storeIdentifier": "438865278",
             "identifier": "taobaopad",
             "scheme": "taobao://",
-            "platform": "pad",
-            "new": true
+            "platform": "pad"
         },
         {
             "displayName": "Jingdong",
             "storeIdentifier": "414245413",
             "identifier": "jingdong",
             "scheme": "openapp.jdmobile://",
-            "platform": "phone",
-            "new": true
+            "platform": "phone"
         },
         {
             "displayName": "Jingdong HD",
             "storeIdentifier": "434374726",
             "identifier": "jingdongpad",
             "scheme": "openApp.jdiPad://",
-            "platform": "pad",
-            "new": true
+            "platform": "pad"
         },
         {
             "displayName": "Tieba",
             "storeIdentifier": "477927812",
             "identifier": "tieba",
-            "scheme": "com.baidu.tieba://",
-            "new": true
+            "scheme": "com.baidu.tieba://"
         },
         {
             "displayName": "The List App",
             "storeIdentifier": "1037098661",
             "identifier": "thelistapp",
-            "scheme": "thelistapp://",
-            "new": true
+            "scheme": "thelistapp://"
         }
     ]
 }
