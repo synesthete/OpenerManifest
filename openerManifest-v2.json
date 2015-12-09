@@ -2854,6 +2854,36 @@
             ]
         },
         {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:geo\\.)?itunes\\.apple\\.com/(?:.*/)*(artist|album|music-video|movie|tv-season)/(?:.*/)?id(\\d+).*?(?:(?:\\?|&)(i=(?:\\d+)))?.*?$",
+            "testInputs": [
+                "https://itunes.apple.com/us/artist/beck/id312095",
+                "https://itunes.apple.com/us/album/guero/id485498129",
+                "https://itunes.apple.com/us/album/e-pro/id485498129?i=485498131",
+                "https://itunes.apple.com/us/music-video/strange-apparition/id194085560",
+                "https://itunes.apple.com/us/movie/her-2013/id810314926",
+                "https://itunes.apple.com/us/tv-season/breaking-bad-season-1/id271383858",
+                "https://itunes.apple.com/us/tv-season/pilot/id271383858?i=271866344",
+                "https://geo.itunes.apple.com/us/app/opener-open-links-in-apps/id989565871"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "itunesstore",
+                    "format": "itms://itunes.apple.com/$1/id$2?at=1001l3kM&$3",
+                    "testResults": [
+                        "itms://itunes.apple.com/artist/id312095?at=1001l3kM&",
+                        "itms://itunes.apple.com/album/id485498129?at=1001l3kM&",
+                        "itms://itunes.apple.com/album/id485498129?at=1001l3kM&i=485498131",
+                        "itms://itunes.apple.com/music-video/id194085560?at=1001l3kM&",
+                        "itms://itunes.apple.com/movie/id810314926?at=1001l3kM&",
+                        "itms://itunes.apple.com/tv-season/id271383858?at=1001l3kM&",
+                        "itms://itunes.apple.com/tv-season/id271383858?at=1001l3kM&i=271866344",
+                        null
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Convert Link",
             "regex": "http(?:s)?://itunes\\.apple\\.com/(?:.*/)*(\\w+)/(?:.*/)?id(\\d+).*$",
             "testInputs": [
@@ -4023,6 +4053,12 @@
             "displayName": "App Store",
             "identifier": "appstore",
             "scheme": "itms-apps://",
+            "new": true
+        },
+        {
+            "displayName": "iTunes Store",
+            "identifier": "itunesstore",
+            "scheme": "itms://",
             "new": true
         }
     ]
