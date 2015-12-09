@@ -4022,7 +4022,7 @@
         {
             "displayName": "App Store",
             "identifier": "appstore",
-            "scheme": "itms-apps",
+            "scheme": "itms-apps://",
             "new": true
         }
     ]
