@@ -1098,6 +1098,22 @@
             ]
         },
         {
+            "title": "Open Link",
+            "regex": "http(?:s)?://maps\\.apple\\.com/maps\\?(.*)",
+            "testInputs": [
+                "http://maps.apple.com/maps?address=620%20Treat%20Ave%20San%20Francisco%20CA%2094110-2016%20United%20States&auid=8554658162390289549&ll=37.760092,-122.414035&lsp=9902&q=Southern%20Pacific%20Brewing&t=r"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "applemaps",
+                    "format": "maps://maps.apple.com/maps?$1",
+                    "testResults": [
+                        "maps://maps.apple.com/maps?address=620%20Treat%20Ave%20San%20Francisco%20CA%2094110-2016%20United%20States&auid=8554658162390289549&ll=37.760092,-122.414035&lsp=9902&q=Southern%20Pacific%20Brewing&t=r"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Video",
             "regex": "http(?:s)?://(?:www\\.|m\\.)?(?:youtu\\.be/|youtube\\.com/(?:embed/|.*(?:\\?|&)v=))([a-zA-Z0-9_\\-]+).*?((\\?|&)(start|t)=\\w+)?.*?$",
             "testInputs": [
@@ -4190,6 +4206,12 @@
             "displayName": "iTunes Store",
             "identifier": "itunesstore",
             "scheme": "itms://",
+            "new": true
+        },
+        {
+            "displayName": "Maps",
+            "identifier": "applemaps",
+            "scheme": "maps://",
             "new": true
         }
     ]
