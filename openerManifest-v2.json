@@ -3283,6 +3283,130 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Add Tracking Info",
+            "regex": "http(?:s)?://(?:www\\.|m\\.)?(?:tools\\.|trkcnfrm\\.smi\\.|trkcnfrm1\\.smi\\.)?usps\\.com.*(?:\\?|&)(?:tLabels|strOrigTrackNum|origTrackNum|qtc_tLabels1|formattedLabel)=(\\d+).*$",
+            "testInputs": [
+                "https://tools.usps.com/go/TrackConfirmAction_input?origTrackNum=9400111899561802343330",
+                "https://tools.usps.com/go/TrackConfirmAction.action?tLabels=9400110200793517579963",
+                "https://tools.usps.com/go/TrackConfirmAction_input?strOrigTrackNum=9274890100133055843697",
+                "http://trkcnfrm1.smi.usps.com/PTSInternetWeb/InterLabelInquiry.do?origTrackNum=9400110200793460039798"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "deliveries",
+                    "format": "deliveries://add?from=www.usps.com&no=$1",
+                    "testResults": [
+                        "deliveries://add?from=www.usps.com&no=9400111899561802343330",
+                        "deliveries://add?from=www.usps.com&no=9400110200793517579963",
+                        "deliveries://add?from=www.usps.com&no=9274890100133055843697",
+                        "deliveries://add?from=www.usps.com&no=9400110200793460039798"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Add Tracking Info",
+            "regex": "http(?:s)?://(?:www\\.|m\\.)?(?:wwwapps\\.|campusship\\.)?ups\\.com.*(?:\\?|&)(?:InquiryNumber1|tracknum|trackNums|inquiry1|trackingNumber|InquiryNumber)=(\\w+).*$",
+            "testInputs": [
+                "https://wwwapps.ups.com/WebTracking/track?track=yes&trackNums=1Z602E9AYN07811560"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "deliveries",
+                    "format": "deliveries://add?from=www.ups.com&no=$1",
+                    "testResults": [
+                        "deliveries://add?from=www.ups.com&no=1Z602E9AYN07811560"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Add Tracking Info",
+            "regex": "http(?:s)?://(?:www\\.|m\\.)?(?:spportal\\.)?(?:fedex|federalexpress)\\.com.*(?:\\?|&)(?:tracknumbers|tracknums|trackNum|track_number_0|tracknumber_list|TRACKING|PID)=(\\d+).*$",
+            "testInputs": [
+                "http://www.fedex.com/Tracking?action=track&language=english&cntry_code=us&initial=x&tracknumbers=820405462507399",
+                "https://www.fedex.com/insight/findit/nrp.jsp?tracknumbers=760250515283084&language=en&opco=FDEG&clientype=ivshpalrt",
+                "http://www.fedex.com/Tracking?tracknumbers=995365610793322"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "deliveries",
+                    "format": "deliveries://add?from=www.fedex.com&no=$1",
+                    "testResults": [
+                        "deliveries://add?from=www.fedex.com&no=820405462507399",
+                        "deliveries://add?from=www.fedex.com&no=760250515283084",
+                        "deliveries://add?from=www.fedex.com&no=995365610793322"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Add Tracking Info",
+            "regex": "http(?:s)?://(?:www\\.|m\\.)?(?:track\\.)?(?:dhl|dhl-usa|airborne)\\.com.*(?:\\?|&)(?:AWB|ShipmentNumber|shipmentNumber)=(\\d+).*$",
+            "formats": [
+                {
+                    "appIdentifier": "deliveries",
+                    "format": "deliveries://add?from=www.dhl.com&no=$1"
+                }
+            ]
+        },
+        {
+            "title": "Add Tracking Info",
+            "regex": "http(?:s)?://(?:www\\.|m\\.)?(?:webtrack\\.)?(?:dhlglobalmail\\.com|dhlgm\\.mytracking\\.net).*(?:\\?|&)(?:trackingnumber|TrackingID)=(\\d+).*$",
+            "formats": [
+                {
+                    "appIdentifier": "deliveries",
+                    "format": "deliveries://add?from=www.dhlglobalmail.com&no=$1"
+                }
+            ]
+        },
+        {
+            "title": "Add Tracking Info",
+            "regex": "http(?:s)?://(?:(?:\\w+\\.)*dhl\\.de|webportal-at\\.dhl\\.com).*(?:\\?|&)(?:idc|packet_id|sid|AWB|ic)=(\\d+).*$",
+            "formats": [
+                {
+                    "appIdentifier": "deliveries",
+                    "format": "deliveries://add?from=nolp.dhl.de&no=$1"
+                }
+            ]
+        },
+        {
+            "title": "Add Tracking Info",
+            "regex": "http(?:s)?://(?:\\w+\\.)*dhl\\.co\\.uk.*(?:\\?|&)PCL_NO=(\\d+).*$",
+            "formats": [
+                {
+                    "appIdentifier": "deliveries",
+                    "format": "deliveries://add?from=www.dhl.co.uk&no=$1"
+                }
+            ]
+        },
+        {
+            "title": "Add Tracking Info",
+            "regex": "http(?:s)?://checkout\\.google\\.com.*(?:\\?|&)t=(\\d+).*$",
+            "formats": [
+                {
+                    "appIdentifier": "deliveries",
+                    "format": "deliveries://add?from=checkout.google.com&no=$1"
+                }
+            ]
+        },
+        {
+            "title": "Add Tracking Info",
+            "regex": "http(?:s)?://(?:\\w+\\.)?ontrac\\.com.*(?:\\?|&)tracking_number=(\\w+).*$",
+            "testInputs": [
+                "http://www.ontrac.com/trackingres.asp?tracking_number=C11121559239462"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "deliveries",
+                    "format": "deliveries://add?from=www.ontrac.com&no=$1",
+                    "testResults": [
+                        "deliveries://add?from=www.ontrac.com&no=C11121559239462"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -4042,6 +4166,12 @@
             "storeIdentifier": "477927812",
             "identifier": "tieba",
             "scheme": "com.baidu.tieba://"
+        },
+        {
+            "displayName": "Deliveries",
+            "storeIdentifier": "290986013",
+            "identifier": "deliveries",
+            "scheme": "deliveries://"
         },
         {
             "displayName": "The List App",
