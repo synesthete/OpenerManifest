@@ -3827,6 +3827,13 @@
             "platform": "pad"
         },
         {
+            "displayName": "Deliveries",
+            "storeIdentifier": "290986013",
+            "identifier": "deliveries",
+            "scheme": "deliveries://",
+            "new": true
+        },
+        {
             "displayName": "WikiLinks",
             "storeIdentifier": "990956008",
             "identifier": "wikilinks",
@@ -4166,12 +4173,6 @@
             "storeIdentifier": "477927812",
             "identifier": "tieba",
             "scheme": "com.baidu.tieba://"
-        },
-        {
-            "displayName": "Deliveries",
-            "storeIdentifier": "290986013",
-            "identifier": "deliveries",
-            "scheme": "deliveries://"
         },
         {
             "displayName": "The List App",
