@@ -1229,6 +1229,22 @@
             ]
         },
         {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:www\\.)?waze\\.to(?:/)?\\?([^#]+).*$",
+            "testInputs": [
+                "http://waze.to/?ll=34.042892,-118.245853&navigate=yes"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "waze",
+                    "format": "waze://?$1",
+                    "testResults": [
+                        "waze://?ll=34.042892,-118.245853&navigate=yes"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Video",
             "regex": "http(?:s)?://(?:www\\.|m\\.)?(?:youtu\\.be/|youtube\\.com/(?:embed/|.*(?:\\?|&)v=))([a-zA-Z0-9_\\-]+).*?((\\?|&)(start|t)=\\w+)?.*?$",
             "testInputs": [
@@ -4074,6 +4090,14 @@
             "storeIdentifier": "585027354",
             "identifier": "googlemaps",
             "scheme": "comgooglemapsurl://"
+        },
+        {
+            "displayName": "Waze",
+            "storeIdentifier": "323229106",
+            "identifier": "waze",
+            "scheme": "waze://",
+            "docs": "https://www.waze.com/about/dev",
+            "new": true
         },
         {
             "storeIdentifier": "336353151",
