@@ -879,10 +879,10 @@
                 },
                 {
                     "appIdentifier": "googlemaps",
-                    "script": "function process(url, completionHandler) { var regex = new RegExp('http(?:s)?://.*foursquare.com/v/(?:.*/)?(\\\\w+).*$'); var match = regex.exec(url); var venueIdentifier = match[1]; url = 'https://api.foursquare.com/v2/venues/' + venueIdentifier + '?v=20140921&client_id=Q5H4T3CZWKEKK3QKQKIIKWGISC1UKY2IXJ4BZCZXCLDQ0IMR&client_secret=J1TZFLIIZ4LK3I55AIFV3AW3Z4ICLAQIQ5KPNLTPT3ST03XH'; var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); completionHandler('comgooglemaps://?center=' + res['response']['venue']['location']['lat'] + ',' + res['response']['venue']['location']['lng']); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script": "function process(url, completionHandler) { var regex = new RegExp('http(?:s)?://.*foursquare.com/v/(?:.*/)?(\\\\w+).*$'); var match = regex.exec(url); var venueIdentifier = match[1]; url = 'https://api.foursquare.com/v2/venues/' + venueIdentifier + '?v=20140921&client_id=Q5H4T3CZWKEKK3QKQKIIKWGISC1UKY2IXJ4BZCZXCLDQ0IMR&client_secret=J1TZFLIIZ4LK3I55AIFV3AW3Z4ICLAQIQ5KPNLTPT3ST03XH'; var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); completionHandler('comgooglemaps://?q=' + res['response']['venue']['location']['lat'] + ',' + res['response']['venue']['location']['lng']); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
                     "testResults": [
-                        "comgooglemaps://?center=37.756501,-122.421146",
-                        "comgooglemaps://?center=37.756501,-122.421146"
+                        "comgooglemaps://?q=37.756501,-122.421146",
+                        "comgooglemaps://?q=37.756501,-122.421146"
                     ]
                 },
                 {
@@ -2330,9 +2330,9 @@
                 },
                 {
                     "appIdentifier": "googlemaps",
-                    "script": "function process(url, completionHandler) { var regex = new RegExp('http(?:s?)://(?:m\\\\.|mobile\\\\.|www\\\\.)?meetup\\\\.com/([a-zA-Z0-9_\\\\-%]+)(?:/.*)?/(\\\\d+).*$'); var match = regex.exec(url); var groupIdentifier = match[1]; var eventIdentifier = match[2]; url = 'https://api.meetup.com/' + groupIdentifier + '/events/' + eventIdentifier; var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); if (res['venue'] != null && res['venue']['name'] != null && res['venue']['lat'] != null & res['venue']['lon'] != null) { completionHandler('comgooglemaps://?center=' + res['venue']['lat'] + ',' + res['venue']['lon']); } else { completionHandler(null); } } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script": "function process(url, completionHandler) { var regex = new RegExp('http(?:s?)://(?:m\\\\.|mobile\\\\.|www\\\\.)?meetup\\\\.com/([a-zA-Z0-9_\\\\-%]+)(?:/.*)?/(\\\\d+).*$'); var match = regex.exec(url); var groupIdentifier = match[1]; var eventIdentifier = match[2]; url = 'https://api.meetup.com/' + groupIdentifier + '/events/' + eventIdentifier; var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); if (res['venue'] != null && res['venue']['name'] != null && res['venue']['lat'] != null & res['venue']['lon'] != null) { completionHandler('comgooglemaps://?q=' + res['venue']['lat'] + ',' + res['venue']['lon']); } else { completionHandler(null); } } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
                     "testResults": [
-                        "comgooglemaps://?center=44.975250244140625,-93.25302124023438",
+                        "comgooglemaps://?q=44.975250244140625,-93.25302124023438",
                         null
                     ]
                 },
