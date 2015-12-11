@@ -2314,16 +2314,30 @@
         },
         {
             "title": "Open Event",
-            "regex": "http(?:s?)://(?:m.|mobile.|www.)?meetup.com/(?:\\S+)/(\\d+)(?:/|\\?).*$",
+            "regex": "http(?:s?)://(?:m\\.|mobile\\.|www\\.)?meetup\\.com/([a-zA-Z0-9_\\-%]+)(?:/.*)?/(\\d+).*$",
             "testInputs": [
                 "http://www.meetup.com/Mobilize-MN/events/221392586/"
             ],
             "formats": [
                 {
                     "appIdentifier": "meetup",
-                    "format": "meetup://events/$1",
+                    "format": "meetup://events/$2",
                     "testResults": [
                         "meetup://events/221392586"
+                    ]
+                },
+                {
+                    "appIdentifier": "googlemaps",
+                    "script": "function process(url, completionHandler) { var regex = new RegExp('http(?:s?)://(?:m\\\\.|mobile\\\\.|www\\\\.)?meetup\\\\.com/([a-zA-Z0-9_\\\\-%]+)(?:/.*)?/(\\\\d+).*$'); var match = regex.exec(url); var groupIdentifier = match[1]; var eventIdentifier = match[2]; url = 'https://api.meetup.com/' + groupIdentifier + '/events/' + eventIdentifier; var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); completionHandler('comgooglemaps://?center=' + res['venue']['lat'] + ',' + res['venue']['lon']); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "testResults": [
+                        "comgooglemaps://?center=44.975250244140625,-93.25302124023438"
+                    ]
+                },
+                {
+                    "appIdentifier": "applemaps",
+                    "script": "function process(url, completionHandler) { var regex = new RegExp('http(?:s?)://(?:m\\\\.|mobile\\\\.|www\\\\.)?meetup\\\\.com/([a-zA-Z0-9_\\\\-%]+)(?:/.*)?/(\\\\d+).*$'); var match = regex.exec(url); var groupIdentifier = match[1]; var eventIdentifier = match[2]; url = 'https://api.meetup.com/' + groupIdentifier + '/events/' + eventIdentifier; var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); completionHandler('maps://maps.apple.com/maps?q=' + encodeURIComponent(res['venue']['name']) + '&ll=' + res['venue']['lat'] + ',' + res['venue']['lon']); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "testResults": [
+                        "maps://maps.apple.com/maps?q=Day%20Block%20Event%20Center&ll=44.975250244140625,-93.25302124023438"
                     ]
                 }
             ]
