@@ -1126,6 +1126,13 @@
                     "testResults": [
                         "maps://maps.apple.com/maps?address=620%20Treat%20Ave%20San%20Francisco%20CA%2094110-2016%20United%20States&auid=8554658162390289549&ll=37.760092,-122.414035&lsp=9902&q=Southern%20Pacific%20Brewing&t=r"
                     ]
+                },
+                {
+                    "appIdentifier": "googlemaps",
+                    "format": "comgooglemaps://?$1",
+                    "testResults": [
+                        "comgooglemaps://?address=620%20Treat%20Ave%20San%20Francisco%20CA%2094110-2016%20United%20States&auid=8554658162390289549&ll=37.760092,-122.414035&lsp=9902&q=Southern%20Pacific%20Brewing&t=r"
+                    ]
                 }
             ]
         },
