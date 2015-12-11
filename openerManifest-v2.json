@@ -1095,7 +1095,7 @@
         },
         {
             "title": "Open Link",
-            "regex": "http(?:s)?://((maps\\.google(?:\\.\\w+)+/.*)|((?:www\\.)?google(?:\\.\\w+)+/maps/.*))$",
+            "regex": "http(?:s)?://((?:www\\.)?google(?:\\.\\w+)+/maps/place/([^/]+)/(?:@)?([^/]+).*)$",
             "testInputs": [
                 "https://www.google.com/maps/place/Anchor+Brewing+Company/@37.7632216,-122.4009458,15z/data=!4m2!3m1!1s0x0:0x976aee276c5079b2?sa=X&ei=q1qQVaLFN8WqogSI6bsw&ved=0CM4BEPwSMBc",
                 "https://maps.google.com/?q=@37.3161,-122.1836",
@@ -1107,6 +1107,26 @@
                     "format": "comgooglemapsurl://$1",
                     "testResults": [
                         "comgooglemapsurl://www.google.com/maps/place/Anchor+Brewing+Company/@37.7632216,-122.4009458,15z/data=!4m2!3m1!1s0x0:0x976aee276c5079b2?sa=X&ei=q1qQVaLFN8WqogSI6bsw&ved=0CM4BEPwSMBc",
+                        null,
+                        null
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(maps\\.google(?:\\.\\w+)+/(?!maps/place/.*).*)",
+            "testInputs": [
+                "https://www.google.com/maps/place/Anchor+Brewing+Company/@37.7632216,-122.4009458,15z/data=!4m2!3m1!1s0x0:0x976aee276c5079b2?sa=X&ei=q1qQVaLFN8WqogSI6bsw&ved=0CM4BEPwSMBc",
+                "https://maps.google.com/?q=@37.3161,-122.1836",
+                "http://maps.google.co.jp/maps?f=q&hl=ja&geocode=&q=-39.23774,175.3048&ie=UTF8&ll=-39.23774,175.3048&z=6"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "googlemaps",
+                    "format": "comgooglemapsurl://$1",
+                    "testResults": [
+                        null,
                         "comgooglemapsurl://maps.google.com/?q=@37.3161,-122.1836",
                         "comgooglemapsurl://maps.google.co.jp/maps?f=q&hl=ja&geocode=&q=-39.23774,175.3048&ie=UTF8&ll=-39.23774,175.3048&z=6"
                     ]
