@@ -3535,6 +3535,26 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Story",
+            "regex": "http(?:s)?://(?:www\\.)?apple\\.news/([a-zA-Z0-9_\\-]+).*?$",
+            "testInputs": [
+                "https://apple.news/A_qfzJD7KTsqhuT5Ci4XcIw",
+                "https://apple.news/AW5OfgikKQs-rRr_tfTb37w",
+                "https://apple.news/AKY74NN47QC6Ae4io2CrxmQ"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "applenews",
+                    "format": "applenews:/$1",
+                    "testResults": [
+                        "applenews:/A_qfzJD7KTsqhuT5Ci4XcIw",
+                        "applenews:/AW5OfgikKQs-rRr_tfTb37w",
+                        "applenews:/AKY74NN47QC6Ae4io2CrxmQ"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -4324,6 +4344,12 @@
             "displayName": "Maps",
             "identifier": "applemaps",
             "scheme": "maps://",
+            "new": true
+        },
+        {
+            "displayName": "Apple News",
+            "identifier": "applenews",
+            "scheme": "applenews://",
             "new": true
         }
     ]
