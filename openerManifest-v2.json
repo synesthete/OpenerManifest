@@ -4341,7 +4341,7 @@
             "new": true
         },
         {
-            "displayName": "Maps",
+            "displayName": "Apple Maps",
             "identifier": "applemaps",
             "scheme": "maps://",
             "new": true
