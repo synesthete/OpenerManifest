@@ -2927,10 +2927,10 @@
             "formats": [
                 {
                     "appIdentifier": "appstore",
-                    "format": "itms-apps://itunes.apple.com/app/id$1?at=1001l3kM",
+                    "format": "opener://x-callback-url/show-store-product-details?id=$1",
                     "testResults": [
-                        "itms-apps://itunes.apple.com/app/id989565871?at=1001l3kM",
-                        "itms-apps://itunes.apple.com/app/id989565871?at=1001l3kM"
+                        "opener://x-callback-url/show-store-product-details?id=989565871",
+                        "opener://x-callback-url/show-store-product-details?id=989565871"
                     ]
                 },
                 {
