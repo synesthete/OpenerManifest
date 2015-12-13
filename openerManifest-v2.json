@@ -3555,6 +3555,26 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Restaurant",
+            "regex": "http(?:s)?://(?:\\w+\\.)+?opentable(?:\\.\\w+)+(?:/restaurants/.*/(\\d+)|.*rid=(\\d+).*||.*\\n.*er=(\\d+).*)$",
+            "includeHeaders": true,
+            "testInputs": [
+                "http://m.opentable.com/restaurants/le-zinc/7644?rid=7644&restref=&ref=",
+                "http://www.opentable.com/nextavailabletable.aspx?hpu=626690729&shpu=1&cop=1&m=8&d=12%2f12%2f2015+09%3a15%3a00+PM&p=2&rid=52456&mode=singlerest"
+            ],
+            "notes": "This will also work for http://www.opentable.com/crested-duck-charcuterie and http://www.opentable.co.uk/cocochan, which lack identifiers in their actual URLs but do include them in response headers. Since formats with headers can't be tested, they're omitted at the moment.",
+            "formats": [
+                {
+                    "appIdentifier": "opentable",
+                    "format": "reservetable-com.contextoptional.OpenTable-1://?rid=$1$2$3",
+                    "testResults": [
+                        "reservetable-com.contextoptional.OpenTable-1://?rid=7644",
+                        "reservetable-com.contextoptional.OpenTable-1://?rid=52456"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -3911,6 +3931,13 @@
             "identifier": "meerkat",
             "scheme": "meerkat://",
             "displayName": "Meerkat"
+        },
+        {
+            "storeIdentifier": "296581815",
+            "identifier": "opentable",
+            "scheme": "reservetable-com.contextoptional.OpenTable-1://",
+            "displayName": "OpenTable",
+            "new": true
         },
         {
             "storeIdentifier": "284910350",
