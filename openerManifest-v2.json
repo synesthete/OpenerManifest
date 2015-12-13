@@ -3985,8 +3985,7 @@
             "displayName": "WikiLinks",
             "storeIdentifier": "990956008",
             "identifier": "wikilinks",
-            "scheme": "wikilinks://",
-            "new": true
+            "scheme": "wikilinks://"
         },
         {
             "storeIdentifier": "310738695",
@@ -4119,8 +4118,7 @@
             "identifier": "blink",
             "scheme": "blink://",
             "displayName": "Blink",
-            "docs": "http://squibner.com/blink/blink-url-scheme/",
-            "new": true
+            "docs": "http://squibner.com/blink/blink-url-scheme/"
         },
         {
             "storeIdentifier": "913943275",
@@ -4270,8 +4268,7 @@
             "displayName": "Indiegogo",
             "storeIdentifier": "752234889",
             "identifier": "indiegogo",
-            "scheme": "indiegogo://",
-            "new": true
+            "scheme": "indiegogo://"
         },
         {
             "storeIdentifier": "564177498",
