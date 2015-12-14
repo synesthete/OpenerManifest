@@ -19,6 +19,7 @@ The `apps` top level key in the manifest contains an ordered list of dictionarie
 <tr><td><code>identifier</code></td><td>string</td><td>A human-readable identifier for this app, used elsewhere in the manifest.</td></tr>
 <tr><td><code>displayName</code></td><td>string</td><td>The user-facing name for this app within Opener.</td></tr>
 <tr><td><code>storeIdentifier</code></td><td>number as string</td><td>The identifier of the app on the App Store. (Optional in v2, required in v1)</td></tr>
+<tr><td><code>iconURL</code></td><td>URL string</td><td>A URL to an icon for this app, mutually exclusive with <code>storeIdentifier</code>. This is intended for first party app support.</td></tr>
 <tr><td><code>scheme</code></td><td>URL string</td><td>A URL containing only the scheme that will open this app.</td></tr>
 <tr><td><code>new</code></td><td>bool</td><td>Indicates whether or not this app will be include in the "New Apps" group in Opener.</td></tr>
 <tr><td><code>platform</code></td><td>string</td><td>Specifies if this app should only show up on iPhone/iPod Touch (value=<code>phone</code>) or on iPad (value=<code>pad</code>), shows on both if unspecified. (Opener 1.0.1 and above)</td></tr>
