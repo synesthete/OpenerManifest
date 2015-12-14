@@ -2953,7 +2953,7 @@
         },
         {
             "title": "Open Link",
-            "regex": "http(?:s)?://(?:geo\\.)?itunes\\.apple\\.com/(?:.*/)*(artist|album|music-video|movie|tv-season)/(?:.*/)?id(\\d+)(?!.*i=.*).*$",
+            "regex": "http(?:s)?://(?:geo\\.)?itunes\\.apple\\.com/(?:.*/)*(artist|album|music-video)/(?:.*/)?id(\\d+)(?!.*i=.*).*$",
             "testInputs": [
                 "https://itunes.apple.com/us/artist/beck/id312095",
                 "https://itunes.apple.com/us/album/guero/id485498129",
@@ -2973,6 +2973,50 @@
                         "opener://x-callback-url/show-store-product-details?id=485498129",
                         null,
                         "opener://x-callback-url/show-store-product-details?id=194085560",
+                        null,
+                        null,
+                        null,
+                        null
+                    ]
+                },
+                {
+                    "appIdentifier": "applemusic",
+                    "format": "music://itunes.apple.com/$1/id$2?at=1001l3kM",
+                    "testResults": [
+                        "music://itunes.apple.com/artist/id312095?at=1001l3kM",
+                        "music://itunes.apple.com/album/id485498129?at=1001l3kM",
+                        null,
+                        "music://itunes.apple.com/music-video/id194085560?at=1001l3kM",
+                        null,
+                        null,
+                        null,
+                        null
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:geo\\.)?itunes\\.apple\\.com/(?:.*/)*(movie|tv-season)/(?:.*/)?id(\\d+)(?!.*i=.*).*$",
+            "testInputs": [
+                "https://itunes.apple.com/us/artist/beck/id312095",
+                "https://itunes.apple.com/us/album/guero/id485498129",
+                "https://itunes.apple.com/us/album/e-pro/id485498129?i=485498131",
+                "https://itunes.apple.com/us/music-video/strange-apparition/id194085560",
+                "https://itunes.apple.com/us/movie/her-2013/id810314926",
+                "https://itunes.apple.com/us/tv-season/breaking-bad-season-1/id271383858",
+                "https://itunes.apple.com/us/tv-season/pilot/id271383858?i=271866344",
+                "https://geo.itunes.apple.com/us/app/opener-open-links-in-apps/id989565871"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "itunesstore",
+                    "format": "opener://x-callback-url/show-store-product-details?id=$2",
+                    "testResults": [
+                        null,
+                        null,
+                        null,
+                        null,
                         "opener://x-callback-url/show-store-product-details?id=810314926",
                         "opener://x-callback-url/show-store-product-details?id=271383858",
                         null,
@@ -2983,7 +3027,7 @@
         },
         {
             "title": "Open Link",
-            "regex": "http(?:s)?://(?:geo\\.)?itunes\\.apple\\.com/(?:.*/)*(artist|album|music-video|movie|tv-season)/(?:.*/)?id(\\d+).*?(?:(?:\\?|&)(i=(?:\\d+))).*?$",
+            "regex": "http(?:s)?://(?:geo\\.)?itunes\\.apple\\.com/(?:.*/)*(artist|album|music-video)/(?:.*/)?id(\\d+).*?(?:(?:\\?|&)(i=(?:\\d+))).*?$",
             "testInputs": [
                 "https://itunes.apple.com/us/artist/beck/id312095",
                 "https://itunes.apple.com/us/album/guero/id485498129",
@@ -3002,6 +3046,50 @@
                         null,
                         null,
                         "itms://itunes.apple.com/album/id485498129?at=1001l3kM&i=485498131",
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ]
+                },
+                {
+                    "appIdentifier": "applemusic",
+                    "format": "music://itunes.apple.com/$1/id$2?at=1001l3kM&$3",
+                    "testResults": [
+                        null,
+                        null,
+                        "music://itunes.apple.com/album/id485498129?at=1001l3kM&i=485498131",
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:geo\\.)?itunes\\.apple\\.com/(?:.*/)*(movie|tv-season)/(?:.*/)?id(\\d+).*?(?:(?:\\?|&)(i=(?:\\d+))).*?$",
+            "testInputs": [
+                "https://itunes.apple.com/us/artist/beck/id312095",
+                "https://itunes.apple.com/us/album/guero/id485498129",
+                "https://itunes.apple.com/us/album/e-pro/id485498129?i=485498131",
+                "https://itunes.apple.com/us/music-video/strange-apparition/id194085560",
+                "https://itunes.apple.com/us/movie/her-2013/id810314926",
+                "https://itunes.apple.com/us/tv-season/breaking-bad-season-1/id271383858",
+                "https://itunes.apple.com/us/tv-season/pilot/id271383858?i=271866344",
+                "https://geo.itunes.apple.com/us/app/opener-open-links-in-apps/id989565871"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "itunesstore",
+                    "format": "itms://itunes.apple.com/$1/id$2?at=1001l3kM&$3",
+                    "testResults": [
+                        null,
+                        null,
+                        null,
                         null,
                         null,
                         null,
@@ -4362,6 +4450,12 @@
             "displayName": "iTunes Store",
             "identifier": "itunesstore",
             "scheme": "itms://",
+            "new": true
+        },
+        {
+            "displayName": "Apple Music",
+            "identifier": "applemusic",
+            "scheme": "music://",
             "new": true
         },
         {
