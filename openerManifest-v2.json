@@ -4470,30 +4470,37 @@
             "displayName": "App Store",
             "identifier": "appstore",
             "scheme": "itms-apps://",
+            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/appstore-120.jpg",
             "new": true
         },
         {
             "displayName": "iTunes Store",
             "identifier": "itunesstore",
             "scheme": "itms://",
+            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/itunesstore-120.jpg",
             "new": true
         },
         {
             "displayName": "Apple Music",
             "identifier": "applemusic",
             "scheme": "music://",
+            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/applemusic-120.jpg",
+            "useful": "Support page has nice icon https://support.apple.com/en-us/HT204951",
             "new": true
         },
         {
             "displayName": "Apple Maps",
             "identifier": "applemaps",
             "scheme": "maps://",
+            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/applemaps-120.jpg",
             "new": true
         },
         {
             "displayName": "Apple News",
             "identifier": "applenews",
             "scheme": "applenews://",
+            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/applenews-120.jpg",
+            "useful": "Support page has nice icon https://support.apple.com/en-us/HT202329",
             "new": true
         }
     ]
