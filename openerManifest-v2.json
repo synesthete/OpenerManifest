@@ -3114,22 +3114,24 @@
         },
         {
             "title": "Open Link",
-            "regex": "http(?:s)?://(?:\\w+\\.)?(imgur\\.com/(gallery/|a/)?\\w+).*?$",
+            "regex": "http(?:s)?://(?:\\w+\\.)?imgur\\.com/(?:gallery/|a/|r/.*/)?(\\w+).*?$",
             "testInputs": [
                 "http://m.imgur.com/gallery/UW0KFYQ",
                 "http://i.imgur.com/Eo1WO0f.jpg",
                 "http://imgur.com/GxCSO40",
-                "http://imgur.com/a/q2Isg"
+                "http://imgur.com/a/q2Isg",
+                "http://imgur.com/r/funny/hacqrFH"
             ],
             "formats": [
                 {
                     "appIdentifier": "imgur",
-                    "format": "imgur://$1",
+                    "format": "imgur://imgur.com/$1",
                     "testResults": [
-                        "imgur://imgur.com/gallery/UW0KFYQ",
+                        "imgur://imgur.com/UW0KFYQ",
                         "imgur://imgur.com/Eo1WO0f",
                         "imgur://imgur.com/GxCSO40",
-                        "imgur://imgur.com/a/q2Isg"
+                        "imgur://imgur.com/q2Isg",
+                        "imgur://imgur.com/hacqrFH"
                     ]
                 }
             ]
