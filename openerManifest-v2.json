@@ -4492,15 +4492,13 @@
             "identifier": "vk",
             "scheme": "vk://",
             "displayName": "VK",
-            "docs": "http://handleopenurl.com/scheme/vk",
-            "new": true
+            "docs": "http://handleopenurl.com/scheme/vk"
         },
         {
             "storeIdentifier": "466711718",
             "identifier": "sinablog",
             "scheme": "sinablog://",
-            "displayName": "Sina Blog",
-            "new": true
+            "displayName": "Sina Blog"
         },
         {
             "displayName": "Taobao",
