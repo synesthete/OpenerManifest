@@ -440,16 +440,18 @@
         },
         {
             "title": "Open Photo",
-            "regex": "http(s)?://[a-zA-Z0-9_\\-\\.]+\\.vsco\\.co(m)?/media/\\w+.*$",
+            "regex": "http(s)?://(?:[a-zA-Z0-9_\\-\\.]+\\.)?vsco\\.co(m)?/(?:[a-zA-Z0-9_\\-\\.]+/)?media/\\w+.*$",
             "testInputs": [
-                "http://jmcashdollar.vsco.co/media/53baaa357567083d5a8b460a"
+                "http://jmcashdollar.vsco.co/media/53baaa357567083d5a8b460a",
+                "http://vsco.co/smotraghi/media/566f16b4d2a71c17049825ae"
             ],
             "formats": [
                 {
                     "appIdentifier": "vscocam",
                     "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(vsco:\/\/.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
                     "testResults": [
-                        "vsco://user/158596/grid/53baaa357567083d5a8b460a"
+                        "vsco://user/158596/grid/53baaa357567083d5a8b460a",
+                        "vsco://user/11216585/grid/566f16b4d2a71c17049825ae"
                     ]
                 }
             ]
