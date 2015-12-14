@@ -3707,6 +3707,26 @@
             ]
         },
         {
+            "title": "Add Tracking Info",
+            "regex": "http(?:s)?://(?:\\w+\\.)*(amazon(?:\\.\\w+)+).*(?:\\?|&)(?:trackingNumber|orderId|orderID|oid|orderIDs)=(\\d{3,3}-\\d+-\\d+).*$",
+            "testInputs": [
+                "https://www.amazon.com/gp/your-account/ship-track/ref=st_v1_desktop_redirect?ie=UTF8&orderId=114-7368942-6117804&packageIndex=0&shipmentId=Dn1m3M0Nb",
+                "https://www.amazon.com/gp/your-account/ship-track/ref=oh_aui_st_v2_btn?ie=UTF8&itemId=qgjikuirkqttp&orderId=113-6959523-2638633&packageIndex=0&shipmentId=DyzGGykjk",
+                "https://www.amazon.com/gp/your-account/order-details?ie=UTF8&orderID=116-1875409-7478662&ref_=pe_385040_128020140_TE_SIMP_on"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "deliveries",
+                    "format": "deliveries://add?from=$1&no=$2",
+                    "testResults": [
+                        "deliveries://add?from=amazon.com&no=114-7368942-6117804",
+                        "deliveries://add?from=amazon.com&no=113-6959523-2638633",
+                        "deliveries://add?from=amazon.com&no=116-1875409-7478662"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Story",
             "regex": "http(?:s)?://(?:www\\.)?apple\\.news/([a-zA-Z0-9_\\-]+).*?$",
             "testInputs": [
