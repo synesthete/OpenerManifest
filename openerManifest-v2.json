@@ -3100,6 +3100,22 @@
             ]
         },
         {
+            "title": "Open Playlist",
+            "regex": "http(?:s)?://((?:geo\\.)?itunes\\.apple\\.com/(?:.*/)?playlist/.*)$",
+            "testInputs": [
+                "https://itunes.apple.com/us/playlist/friday/idpl.34d586acfcae4f92ab934a72afbab5bf?at=11lbfLct=friday"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "applemusic",
+                    "format": "music://$1",
+                    "testResults": [
+                        "music://itunes.apple.com/us/playlist/friday/idpl.34d586acfcae4f92ab934a72afbab5bf?at=11lbfLct=friday"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Convert Link",
             "regex": "http(?:s)?://itunes\\.apple\\.com/(?:.*/)*(\\w+)/(?:.*/)?id(\\d+).*$",
             "testInputs": [
