@@ -17,7 +17,7 @@ data = json.loads(open(path).read())
 for appIndex,app in enumerate(data['apps']):
 	appKeys = app.keys()
 	for keyIndex,key in enumerate(appKeys):
-		if not key in ["identifier", "displayName", "storeIdentifier", "scheme", "new", "platform"]:
+		if not key in ["identifier", "displayName", "storeIdentifier", "scheme", "new", "platform", "iconURL"]:
 			# print "Removing " + key + " from " + app["identifier"]
 			app.pop(key, None)
 			
