@@ -1160,10 +1160,12 @@
         },
         {
             "title": "Open Link",
-            "regex": "http(?:s)?://maps\\.apple\\.com/maps\\?(.*)",
+            "regex": "http(?:s)?://maps\\.apple\\.com/(?:maps)?\\?(.*)",
             "testInputs": [
                 "http://maps.apple.com/maps?address=620%20Treat%20Ave%20San%20Francisco%20CA%2094110-2016%20United%20States&auid=8554658162390289549&ll=37.760092,-122.414035&lsp=9902&q=Southern%20Pacific%20Brewing&t=r",
-                "http://maps.apple.com/maps?address=967%20Mission%20St%20San%20Francisco%20CA%2094103%20United%20States&ll=37.781510,-122.407999&t=m"
+                "http://maps.apple.com/maps?address=967%20Mission%20St%20San%20Francisco%20CA%2094103%20United%20States&ll=37.781510,-122.407999&t=m",
+                "http://maps.apple.com/?lsp=6489&sll=34.045802,-118.260574&q=645%20W%209th%20St%20%23110-140%20Los%20Angeles%20CA%2090015-1640%20United%20States",
+                "http://maps.apple.com/?lsp=9902&auid=5554799088491316685&sll=28.026687,-81.617854&q=Dundee%20Elementary%20School&hnear=215%20E%20Frederick%20Ave%2C%20Dundee%2C%20FL%20%2033838-4238%2C%20United%20States"
             ],
             "formats": [
                 {
@@ -1171,15 +1173,19 @@
                     "format": "maps://maps.apple.com/maps?$1",
                     "testResults": [
                         "maps://maps.apple.com/maps?address=620%20Treat%20Ave%20San%20Francisco%20CA%2094110-2016%20United%20States&auid=8554658162390289549&ll=37.760092,-122.414035&lsp=9902&q=Southern%20Pacific%20Brewing&t=r",
-                        "maps://maps.apple.com/maps?address=967%20Mission%20St%20San%20Francisco%20CA%2094103%20United%20States&ll=37.781510,-122.407999&t=m"
+                        "maps://maps.apple.com/maps?address=967%20Mission%20St%20San%20Francisco%20CA%2094103%20United%20States&ll=37.781510,-122.407999&t=m",
+                        "maps://maps.apple.com/maps?lsp=6489&sll=34.045802,-118.260574&q=645%20W%209th%20St%20%23110-140%20Los%20Angeles%20CA%2090015-1640%20United%20States",
+                        "maps://maps.apple.com/maps?lsp=9902&auid=5554799088491316685&sll=28.026687,-81.617854&q=Dundee%20Elementary%20School&hnear=215%20E%20Frederick%20Ave%2C%20Dundee%2C%20FL%20%2033838-4238%2C%20United%20States"
                     ]
                 },
                 {
                     "appIdentifier": "googlemaps",
-                    "script": "function getParameterByName(url, name) { name = name.replace(new RegExp('[\\[]'), '\\\\[').replace(new RegExp('[\\]]'), '\\\\]'); var regex = new RegExp('[\\\\?&]' + name + '=([^&#]*)'); results = regex.exec(url); return results === null ? '' : decodeURIComponent(results[1].replace(new RegExp('\\\\+', 'g'), ' ')); } function process(url, completionHandler) { var appleAddress = getParameterByName(url, 'address'); var appleLL = getParameterByName(url, 'll'); var appleQ = getParameterByName(url, 'q');  var googleQ= ''; var googleCenter = null; if (appleQ != null) { googleQ = appleQ; } if (appleAddress != null) { if (googleQ.length > 0) { googleQ = googleQ + ','; } googleQ = googleQ + appleAddress; } if (appleLL != null) { if (googleQ.length > 0) { googleQ = googleQ + ','; } googleQ = googleQ + appleLL; googleCenter = appleLL; } var query = ''; if (googleQ.length > 0) { query = 'q=' + encodeURIComponent(googleQ); } if (googleCenter.length > 0) { if (query.length > 0) { query = query + '&'; } query = query + 'center=' + googleCenter; } var url = 'comgooglemaps://?' + query; completionHandler(url); }",
+                    "script": "function getParameterByName(url, name) { name = name.replace(new RegExp('[\\[]'), '\\\\[').replace(new RegExp('[\\]]'), '\\\\]'); var regex = new RegExp('[\\\\?&]' + name + '=([^&#]*)'); results = regex.exec(url); return results === null ? '' : decodeURIComponent(results[1].replace(new RegExp('\\\\+', 'g'), ' ')); } function process(url, completionHandler) { var appleAddress = getParameterByName(url, 'address'); if (appleAddress == null || appleAddress.length == 0) { appleAddress = getParameterByName(url, 'hnear'); } var appleLL = getParameterByName(url, 'll'); if (!appleLL) { appleLL = getParameterByName(url, 'sll'); } var appleQ = getParameterByName(url, 'q');  var googleQ= ''; var googleCenter = null; if (appleQ != null) { googleQ = appleQ; } if (appleAddress != null && appleAddress.length > 0) { if (googleQ.length > 0) { googleQ = googleQ + ','; } googleQ = googleQ + appleAddress; } if (appleLL != null && appleLL.length > 0) { googleCenter = appleLL; } var query = ''; if (googleQ.length > 0) { query = 'q=' + encodeURIComponent(googleQ); } if (googleCenter.length > 0) { if (query.length > 0) { query = query + '&'; } query = query + 'center=' + googleCenter; } var url = 'comgooglemaps://?' + query; completionHandler(url); }",
                     "testResults": [
-                        "comgooglemaps://?q=Southern%20Pacific%20Brewing%2C620%20Treat%20Ave%20San%20Francisco%20CA%2094110-2016%20United%20States%2C37.760092%2C-122.414035&center=37.760092,-122.414035",
-                        "comgooglemaps://?q=967%20Mission%20St%20San%20Francisco%20CA%2094103%20United%20States%2C37.781510%2C-122.407999&center=37.781510,-122.407999"
+                        "comgooglemaps://?q=Southern%20Pacific%20Brewing%2C620%20Treat%20Ave%20San%20Francisco%20CA%2094110-2016%20United%20States&center=37.760092,-122.414035",
+                        "comgooglemaps://?q=967%20Mission%20St%20San%20Francisco%20CA%2094103%20United%20States&center=37.781510,-122.407999",
+                        "comgooglemaps://?q=645%20W%209th%20St%20%23110-140%20Los%20Angeles%20CA%2090015-1640%20United%20States&center=34.045802,-118.260574",
+                        "comgooglemaps://?q=Dundee%20Elementary%20School%2C215%20E%20Frederick%20Ave%2C%20Dundee%2C%20FL%20%2033838-4238%2C%20United%20States&center=28.026687,-81.617854"
                     ]
                 }
             ]
