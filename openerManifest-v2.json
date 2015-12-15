@@ -3050,14 +3050,15 @@
         },
         {
             "title": "Convert Link",
-            "regex": "http(?:s)?://itunes\\.apple\\.com/(?:.*/)*(\\w+)/(?:.*/)?id(\\d+).*$",
+            "regex": "http(?:s)?://itunes\\.apple\\.com/(?!.*/podcast/.*)(?:.*/)?id(\\d+).*$",
             "testInputs": [
                 "https://itunes.apple.com/au/app/opener-open-links-in-apps/id989565871?mt=8",
                 "https://itunes.apple.com/us/app/opener-open-links-in-apps/id989565871",
                 "https://itunes.apple.com/movie/id673500243",
                 "https://itunes.apple.com/us/movie/drinking-buddies/id673500243",
                 "https://itunes.apple.com/us/album/almanac/id591108722",
-                "https://itunes.apple.com/us/artist/widowspeak/id420935735"
+                "https://itunes.apple.com/us/artist/widowspeak/id420935735",
+                "https://itunes.apple.com/us/podcast/death-sex-money/id870688022?i=356350404&mt=2"
             ],
             "formats": [
                 {
@@ -3069,7 +3070,8 @@
                         "blink://x-callback-url/search?q=https%3A%2F%2Fitunes.apple.com%2Fmovie%2Fid673500243",
                         "blink://x-callback-url/search?q=https%3A%2F%2Fitunes.apple.com%2Fus%2Fmovie%2Fdrinking-buddies%2Fid673500243",
                         "blink://x-callback-url/search?q=https%3A%2F%2Fitunes.apple.com%2Fus%2Falbum%2Falmanac%2Fid591108722",
-                        "blink://x-callback-url/search?q=https%3A%2F%2Fitunes.apple.com%2Fus%2Fartist%2Fwidowspeak%2Fid420935735"
+                        "blink://x-callback-url/search?q=https%3A%2F%2Fitunes.apple.com%2Fus%2Fartist%2Fwidowspeak%2Fid420935735",
+                        null
                     ]
                 }
             ]
