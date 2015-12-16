@@ -295,6 +295,22 @@
             ]
         },
         {
+            "title": "Open Group",
+            "regex": "http(?:s)?://(?:\\w+\\.)?facebook\\.com/groups/(\\d+).*$",
+            "testInputs": [
+                "https://www.facebook.com/groups/158306764190707/"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "facebook",
+                    "format": "fb://group?id=$1",
+                    "testResults": [
+                        "fb://group?id=158306764190707"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open App",
             "regex": "http(?:s)?://apps\\.getpebble\\.com/(?:\\w+/)*application(?:s)?/([:hex:]+)",
             "testInputs": [
