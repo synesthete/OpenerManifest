@@ -526,6 +526,7 @@
                 "http://instagram-engineering.tumblr.com",
                 "http://danielwellingtonwatches.tumblr.com?ref=blahblahblah",
                 "http://www.simplice.tumblr.com/",
+                "http://love-portlandia.tumblr.com/page/8",
                 "http://rickwebb.tumblr.com/post/556400952/the-never-call-there-are-some-people-who-love-to",
                 "http://2kindsofpeople.tumblr.com/tagged/003"
             ],
@@ -538,6 +539,7 @@
                         "tumblr://x-callback-url/blog?blogName=instagram-engineering",
                         "tumblr://x-callback-url/blog?blogName=danielwellingtonwatches",
                         "tumblr://x-callback-url/blog?blogName=simplice",
+                        "tumblr://x-callback-url/blog?blogName=love-portlandia",
                         null,
                         null
                     ]
@@ -557,7 +559,7 @@
         },
         {
             "title": "Open Post",
-            "regex": "http(?:s?)://(?:www\\.)?([a-zA-Z0-9_\\-]+).tumblr.com/(?!tagged)\\w+/(\\d+)(?:(?:/|\\?|#).*)?$",
+            "regex": "http(?:s?)://(?:www\\.)?([a-zA-Z0-9_\\-]+).tumblr.com/(?!tagged|page)\\w+/(\\d+)(?:(?:/|\\?|#).*)?$",
             "testInputs": [
                 "http://visualizingmath.tumblr.com/post/98266724851/hyrodium-the-curvature-of-curves-x-x",
                 "http://unskoolery.tumblr.com/post/90849039693/beesandbombs-stars-squares",
@@ -570,7 +572,8 @@
                 "http://visualizingmath.tumblr.com/",
                 "http://zenchronicles.tumblr.com/post/119420987354",
                 "http://zenchronicles.tumblr.com/post/119442343829#_=_",
-                "http://2kindsofpeople.tumblr.com/tagged/003"
+                "http://2kindsofpeople.tumblr.com/tagged/003",
+                "http://love-portlandia.tumblr.com/page/8"
             ],
             "formats": [
                 {
@@ -588,6 +591,7 @@
                         null,
                         "tumblr://x-callback-url/blog?blogName=zenchronicles&postID=119420987354",
                         "tumblr://x-callback-url/blog?blogName=zenchronicles&postID=119442343829",
+                        null,
                         null
                     ]
                 }
