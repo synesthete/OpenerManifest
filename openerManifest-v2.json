@@ -1640,24 +1640,6 @@
             ]
         },
         {
-            "title": "Open Link",
-            "regex": "(?:http(?:s?)://)(((rd.io/x)|((www.?)rdio.com/artist))/(\\w)+)",
-            "testInputs": [
-                "http://rd.io/x/QVTZKjdcmUZN/",
-                "http://www.rdio.com/artist/Beck/album/Guero/"
-            ],
-            "formats": [
-                {
-                    "appIdentifier": "rdio",
-                    "format": "rdio://$1",
-                    "testResults": [
-                        "rdio://rd.io/x/QVTZKjdcmUZN/",
-                        "rdio://www.rdio.com/artist/Beck/album/Guero/"
-                    ]
-                }
-            ]
-        },
-        {
             "title": "Open Track",
             "regex": "(?:http(?:s?)://(?:play.|open.|www.)?spotify.com/track/)([:alnum:]+).*$",
             "testInputs": [
@@ -4252,12 +4234,6 @@
             "identifier": "weheartit",
             "scheme": "whi://",
             "displayName": "We Heart It"
-        },
-        {
-            "storeIdentifier": "335060889",
-            "identifier": "rdio",
-            "scheme": "rdio://",
-            "displayName": "Rdio"
         },
         {
             "storeIdentifier": "584632814",
