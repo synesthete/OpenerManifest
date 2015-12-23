@@ -36,6 +36,14 @@ for actionIndex,action in enumerate(data['actions']):
 			if not key in ["appIdentifier", "format", "script"]:
 				# print "Removing " + key + " from format"
 				format.pop(key, None)
+
+# Strip unneeded keys from browsers
+for browserIndex,browser in enumerate(data['browsers']):
+	browserKeys = browser.keys()
+	for keyIndex,key in enumerate(browserKeys):
+		if not key in ["identifier", "displayName", "storeIdentifier", "scheme", "platform", "iconURL", "regex", "format", "script"]:
+			print "Removing " + key + " from browser"
+			browser.pop(key, None)
 				
 data = json.dumps(data, separators=(',',':'))
 open(path.replace('.json', '-minified.json'), 'w').write(data)
