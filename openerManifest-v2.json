@@ -3724,6 +3724,56 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Story",
+            "regex": "http(?:s)?://news\\.ycombinator\\.com/item.*(?:\\?|&)id=(\\d+).*?$",
+            "testInputs": [
+                "https://news.ycombinator.com/item?id=10781731"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "boreal",
+                    "format": "borealhn://post?$1",
+                    "testResults": [
+                        "borealhn://post?10781731"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Commentary",
+            "regex": "http(?:s)?://news\\.ycombinator\\.com/item.*(?:\\?|&)id=(\\d+).*?$",
+            "testInputs": [
+                "https://news.ycombinator.com/item?id=10781731"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "boreal",
+                    "format": "borealhn://comments?$1",
+                    "testResults": [
+                        "borealhn://comments?10781731"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Profile",
+            "regex": "http(?:s)?://news\\.ycombinator\\.com/user.*(?:\\?|&)id=([^&]+).*?$",
+            "testInputs": [
+                "https://news.ycombinator.com/user?id=_jomo",
+                "https://news.ycombinator.com/user?id=_jomo&blah=blah"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "boreal",
+                    "format": "borealhn://profile?$1",
+                    "testResults": [
+                        "borealhn://profile?_jomo",
+                        "borealhn://profile?_jomo"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -4490,6 +4540,13 @@
             "storeIdentifier": "1037098661",
             "identifier": "thelistapp",
             "scheme": "thelistapp://"
+        },
+        {
+            "displayName": "Boreal",
+            "storeIdentifier": "925851179",
+            "identifier": "boreal",
+            "scheme": "borealhn://",
+            "new": true
         },
         {
             "displayName": "App Store",
