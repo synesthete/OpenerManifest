@@ -4582,5 +4582,34 @@
             "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/applenews-120.jpg",
             "useful": "Support page has nice icon https://support.apple.com/en-us/HT202329"
         }
+    ],
+    "browsers": [
+        {
+            "displayName": "Safari",
+            "identifier": "safari",
+            "scheme": "http://",
+            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/safari-120.jpg",
+            "regex": "(.*)",
+            "format": "$1"
+        },
+        {
+            "displayName": "Chrome",
+            "identifier": "chrome",
+            "scheme": "googlechrome-x-callback://",
+            "storeIdentifier": "535886823",
+            "regex": "(.*)",
+            "script": "function process(url, completionHandler) { completionHandler('googlechrome-x-callback://x-callback-url/open?url=' + encodeURIComponent(url)); }",
+            "docs": "https://developer.chrome.com/multidevice/ios/links"
+        },
+        {
+            "displayName": "1Password",
+            "identifier": "1password",
+            "scheme": "ophttp://",
+            "storeIdentifier": "568903335",
+            "regex": "(http(?:s)?.*)",
+            "format": "op$1",
+            "docs": "https://blog.agilebits.com/2013/01/24/developers-heres-how-to-add-a-little-1password-to-your-ios-apps/",
+            "known issue": "Only works with HTTP and HTTPS URLs"
+        }
     ]
 }
