@@ -4085,8 +4085,7 @@
             "storeIdentifier": "296581815",
             "identifier": "opentable",
             "scheme": "reservetable-com.contextoptional.OpenTable-1://",
-            "displayName": "OpenTable",
-            "new": true
+            "displayName": "OpenTable"
         },
         {
             "storeIdentifier": "284910350",
@@ -4154,8 +4153,7 @@
             "displayName": "Deliveries",
             "storeIdentifier": "290986013",
             "identifier": "deliveries",
-            "scheme": "deliveries://",
-            "new": true
+            "scheme": "deliveries://"
         },
         {
             "displayName": "WikiLinks",
