@@ -4589,17 +4589,29 @@
             "identifier": "safari",
             "scheme": "http://",
             "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/safari-120.jpg",
-            "regex": "(.*)",
-            "format": "$1"
+            "regex": "(.+)$",
+            "format": "$1",
+            "testInputs": [
+                "http://www.opener.link/"
+            ],
+            "testResults": [
+                "http://www.opener.link/"
+            ]
         },
         {
             "displayName": "Chrome",
             "identifier": "chrome",
             "scheme": "googlechrome-x-callback://",
             "storeIdentifier": "535886823",
-            "regex": "(.*)",
+            "regex": "(.+)$",
             "script": "function process(url, completionHandler) { completionHandler('googlechrome-x-callback://x-callback-url/open?url=' + encodeURIComponent(url)); }",
-            "docs": "https://developer.chrome.com/multidevice/ios/links"
+            "docs": "https://developer.chrome.com/multidevice/ios/links",
+            "testInputs": [
+                "http://www.opener.link/"
+            ],
+            "testResults": [
+                "googlechrome-x-callback://x-callback-url/open?url=http%3A%2F%2Fwww.opener.link%2F"
+            ]
         },
         {
             "displayName": "1Password",
@@ -4609,7 +4621,13 @@
             "regex": "(http(?:s)?.*)",
             "format": "op$1",
             "docs": "https://blog.agilebits.com/2013/01/24/developers-heres-how-to-add-a-little-1password-to-your-ios-apps/",
-            "known issue": "Only works with HTTP and HTTPS URLs"
+            "known issue": "Only works with HTTP and HTTPS URLs",
+            "testInputs": [
+                "http://www.opener.link/"
+            ],
+            "testResults": [
+                "ophttp://www.opener.link/"
+            ]
         }
     ]
 }
