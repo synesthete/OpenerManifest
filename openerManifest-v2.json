@@ -3403,16 +3403,18 @@
         },
         {
             "title": "Open List",
-            "regex": "http(?:s)?://li\\.st/l/((?:\\w+-)+(?:\\w+)).*?$",
+            "regex": "http(?:s)?://li\\.st/l/((?:[:hex:]+-)+(?:[:hex:]+)|\\w+).*?$",
             "testInputs": [
-                "https://li.st/l/42b77e9d-ad35-4b03-a6de-04dffcaaf5bd"
+                "https://li.st/l/42b77e9d-ad35-4b03-a6de-04dffcaaf5bd",
+                "https://li.st/l/46jlhMOt7DfuFJgEYKp1U0"
             ],
             "formats": [
                 {
                     "appIdentifier": "thelistapp",
                     "format": "thelistapp://l/$1",
                     "testResults": [
-                        "thelistapp://l/42b77e9d-ad35-4b03-a6de-04dffcaaf5bd"
+                        "thelistapp://l/42b77e9d-ad35-4b03-a6de-04dffcaaf5bd",
+                        "thelistapp://l/46jlhMOt7DfuFJgEYKp1U0"
                     ]
                 }
             ]
