@@ -4616,6 +4616,22 @@
             ]
         },
         {
+            "displayName": "Firefox",
+            "identifier": "firefox",
+            "scheme": "firefox://",
+            "storeIdentifier": "989804926",
+            "new": true,
+            "regex": "(.+)$",
+            "script": "function process(url, completionHandler) { completionHandler('firefox://x-callback-url/open?url=' + encodeURIComponent(url)); }",
+            "docs": "https://developer.chrome.com/multidevice/ios/links",
+            "testInputs": [
+                "http://www.opener.link/"
+            ],
+            "testResults": [
+                "firefox://x-callback-url/open?url=http%3A%2F%2Fwww.opener.link%2F"
+            ]
+        },
+        {
             "displayName": "1Password",
             "identifier": "1password",
             "scheme": "ophttp://",
@@ -4630,6 +4646,121 @@
             ],
             "testResults": [
                 "ophttp://www.opener.link/"
+            ]
+        },
+        {
+            "displayName": "Opera Mini",
+            "identifier": "operamini",
+            "scheme": "opera-http://",
+            "storeIdentifier": "363729560",
+            "new": true,
+            "regex": "(http(?:s)?.*)",
+            "format": "opera-$1",
+            "docs": "http://handleopenurl.com/scheme/opera-mini",
+            "known issue": "Only works with HTTP and HTTPS URLs",
+            "testInputs": [
+                "http://www.opener.link/"
+            ],
+            "testResults": [
+                "opera-http://www.opener.link/"
+            ]
+        },
+        {
+            "displayName": "Opera Coast",
+            "identifier": "operacoast",
+            "scheme": "coast-http://",
+            "storeIdentifier": "674024845",
+            "new": true,
+            "regex": "(http(?:s)?.*)",
+            "format": "coast-$1",
+            "docs": "http://handleopenurl.com/scheme/opera-coast",
+            "known issue": "Only works with HTTP and HTTPS URLs",
+            "testInputs": [
+                "http://www.opener.link/"
+            ],
+            "testResults": [
+                "coast-http://www.opener.link/"
+            ]
+        },
+        {
+            "displayName": "iCab",
+            "identifier": "icab",
+            "scheme": "x-icabmobile://",
+            "storeIdentifier": "308111628",
+            "new": true,
+            "regex": "(.+)$",
+            "script": "function process(url, completionHandler) { completionHandler('x-icabmobile://x-callback-url/open?url=' + encodeURIComponent(url)); }",
+            "docs": "http://www.icab.de/blog/2012/07/01/icab-mobile-6-0-supports-x-callback-url/",
+            "testInputs": [
+                "http://www.opener.link/"
+            ],
+            "testResults": [
+                "x-icabmobile://x-callback-url/open?url=http%3A%2F%2Fwww.opener.link%2F"
+            ]
+        },
+        {
+            "displayName": "Mercury",
+            "identifier": "mercury",
+            "scheme": "merc://",
+            "storeIdentifier": "1000610117",
+            "new": true,
+            "regex": "(http(?:s)?.*)",
+            "format": "merc://$1",
+            "testInputs": [
+                "http://www.opener.link/"
+            ],
+            "testResults": [
+                "merc://http://www.opener.link/"
+            ]
+        },
+        {
+            "displayName": "Dolphin",
+            "identifier": "dolphinphone",
+            "scheme": "dolphin://",
+            "storeIdentifier": "452204407",
+            "platform": "phone",
+            "new": true,
+            "regex": "(http(?:s)?.*)",
+            "format": "dolphin://$1",
+            "docs": "http://handleopenurl.com/scheme/dolphin-browser",
+            "testInputs": [
+                "http://www.opener.link/"
+            ],
+            "testResults": [
+                "dolphin://http://www.opener.link/"
+            ]
+        },
+        {
+            "displayName": "Dolphin",
+            "identifier": "dolphinpad",
+            "scheme": "dolphin://",
+            "storeIdentifier": "460812023",
+            "platform": "pad",
+            "new": true,
+            "regex": "(http(?:s)?.*)",
+            "format": "dolphin://$1",
+            "docs": "http://handleopenurl.com/scheme/dolphin-browser",
+            "testInputs": [
+                "http://www.opener.link/"
+            ],
+            "testResults": [
+                "dolphin://http://www.opener.link/"
+            ]
+        },
+        {
+            "displayName": "Frameless",
+            "identifier": "frameless",
+            "scheme": "frameless://",
+            "storeIdentifier": "933580264",
+            "new": true,
+            "regex": "http(?:s)?(.*)",
+            "format": "frameless$1",
+            "docs": "https://gist.github.com/stakes/2b3d72fd55021117d3ff",
+            "testInputs": [
+                "http://www.opener.link/"
+            ],
+            "testResults": [
+                "frameless://www.opener.link/"
             ]
         }
     ]
