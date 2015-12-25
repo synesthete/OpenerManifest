@@ -4683,6 +4683,22 @@
             ]
         },
         {
+            "displayName": "Puffin",
+            "identifier": "puffin",
+            "scheme": "puffin-x-callback://",
+            "storeIdentifier": "472937654",
+            "new": true,
+            "regex": "(.+)$",
+            "script": "function process(url, completionHandler) { completionHandler('puffin-x-callback://x-callback-url/open?url=' + encodeURIComponent(url)); }",
+            "docs": "https://www.puffinbrowser.com/development/",
+            "testInputs": [
+                "http://www.opener.link/"
+            ],
+            "testResults": [
+                "puffin-x-callback://x-callback-url/open?url=http%3A%2F%2Fwww.opener.link%2F"
+            ]
+        },
+        {
             "displayName": "iCab",
             "identifier": "icab",
             "scheme": "x-icabmobile://",
