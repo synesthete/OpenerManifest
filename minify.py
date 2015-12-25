@@ -42,7 +42,7 @@ for browserIndex,browser in enumerate(data['browsers']):
 	browserKeys = browser.keys()
 	for keyIndex,key in enumerate(browserKeys):
 		if not key in ["identifier", "displayName", "storeIdentifier", "scheme", "new", "platform", "iconURL", "regex", "format", "script"]:
-			print "Removing " + key + " from browser"
+			# print "Removing " + key + " from browser"
 			browser.pop(key, None)
 				
 data = json.dumps(data, separators=(',',':'))
