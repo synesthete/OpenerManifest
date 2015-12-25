@@ -4589,6 +4589,7 @@
             "identifier": "safari",
             "scheme": "http://",
             "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/safari-120.jpg",
+            "new": true,
             "regex": "(.+)$",
             "format": "$1",
             "testInputs": [
@@ -4603,6 +4604,7 @@
             "identifier": "chrome",
             "scheme": "googlechrome-x-callback://",
             "storeIdentifier": "535886823",
+            "new": true,
             "regex": "(.+)$",
             "script": "function process(url, completionHandler) { completionHandler('googlechrome-x-callback://x-callback-url/open?url=' + encodeURIComponent(url)); }",
             "docs": "https://developer.chrome.com/multidevice/ios/links",
@@ -4618,6 +4620,7 @@
             "identifier": "1password",
             "scheme": "ophttp://",
             "storeIdentifier": "568903335",
+            "new": true,
             "regex": "(http(?:s)?.*)",
             "format": "op$1",
             "docs": "https://blog.agilebits.com/2013/01/24/developers-heres-how-to-add-a-little-1password-to-your-ios-apps/",
