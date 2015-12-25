@@ -41,7 +41,7 @@ for actionIndex,action in enumerate(data['actions']):
 for browserIndex,browser in enumerate(data['browsers']):
 	browserKeys = browser.keys()
 	for keyIndex,key in enumerate(browserKeys):
-		if not key in ["identifier", "displayName", "storeIdentifier", "scheme", "platform", "iconURL", "regex", "format", "script"]:
+		if not key in ["identifier", "displayName", "storeIdentifier", "scheme", "new", "platform", "iconURL", "regex", "format", "script"]:
 			print "Removing " + key + " from browser"
 			browser.pop(key, None)
 				
