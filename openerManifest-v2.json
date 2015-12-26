@@ -4602,17 +4602,19 @@
         {
             "displayName": "Chrome",
             "identifier": "chrome",
-            "scheme": "googlechrome-x-callback://",
+            "scheme": "googlechrome://",
             "storeIdentifier": "535886823",
             "new": true,
-            "regex": "(.+)$",
-            "script": "function process(url, completionHandler) { completionHandler('googlechrome-x-callback://x-callback-url/open?url=' + encodeURIComponent(url)); }",
+            "regex": "http(s)?(.*)$",
+            "format": "googlechrome$1$2",
             "docs": "https://developer.chrome.com/multidevice/ios/links",
             "testInputs": [
-                "http://www.opener.link/"
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
             ],
             "testResults": [
-                "googlechrome-x-callback://x-callback-url/open?url=http%3A%2F%2Fwww.opener.link%2F"
+                "googlechrome://www.opener.link/",
+                "googlechromes://twitter.com/openerapp"
             ]
         },
         {
@@ -4623,7 +4625,7 @@
             "new": true,
             "regex": "(.+)$",
             "script": "function process(url, completionHandler) { completionHandler('firefox://x-callback-url/open?url=' + encodeURIComponent(url)); }",
-            "docs": "https://developer.chrome.com/multidevice/ios/links",
+            "docs": "https://github.com/mozilla/firefox-ios-open-in-client",
             "testInputs": [
                 "http://www.opener.link/"
             ],
@@ -4640,12 +4642,13 @@
             "regex": "(http(?:s)?.*)",
             "format": "op$1",
             "docs": "https://blog.agilebits.com/2013/01/24/developers-heres-how-to-add-a-little-1password-to-your-ios-apps/",
-            "known issue": "Only works with HTTP and HTTPS URLs",
             "testInputs": [
-                "http://www.opener.link/"
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
             ],
             "testResults": [
-                "ophttp://www.opener.link/"
+                "ophttp://www.opener.link/",
+                "ophttps://twitter.com/openerapp"
             ]
         },
         {
@@ -4657,12 +4660,13 @@
             "regex": "(http(?:s)?.*)",
             "format": "opera-$1",
             "docs": "http://handleopenurl.com/scheme/opera-mini",
-            "known issue": "Only works with HTTP and HTTPS URLs",
             "testInputs": [
-                "http://www.opener.link/"
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
             ],
             "testResults": [
-                "opera-http://www.opener.link/"
+                "opera-http://www.opener.link/",
+                "opera-https://twitter.com/openerapp"
             ]
         },
         {
@@ -4674,12 +4678,13 @@
             "regex": "(http(?:s)?.*)",
             "format": "coast-$1",
             "docs": "http://handleopenurl.com/scheme/opera-coast",
-            "known issue": "Only works with HTTP and HTTPS URLs",
             "testInputs": [
-                "http://www.opener.link/"
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
             ],
             "testResults": [
-                "coast-http://www.opener.link/"
+                "coast-http://www.opener.link/",
+                "coast-https://twitter.com/openerapp"
             ]
         },
         {
@@ -4688,14 +4693,16 @@
             "scheme": "puffin-x-callback://",
             "storeIdentifier": "472937654",
             "new": true,
-            "regex": "(.+)$",
-            "script": "function process(url, completionHandler) { completionHandler('puffin-x-callback://x-callback-url/open/?url=' + encodeURIComponent(url)); }",
+            "regex": "http(s)?(.*)$",
+            "format": "puffin$1$2",
             "docs": "https://www.puffinbrowser.com/development/",
             "testInputs": [
-                "http://www.opener.link/"
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
             ],
             "testResults": [
-                "puffin-x-callback://x-callback-url/open/?url=http%3A%2F%2Fwww.opener.link%2F"
+                "puffin://www.opener.link/",
+                "puffins://twitter.com/openerapp"
             ]
         },
         {
