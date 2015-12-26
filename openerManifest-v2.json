@@ -4771,6 +4771,24 @@
             ]
         },
         {
+            "displayName": "Ohajiki",
+            "identifier": "ohajiki",
+            "scheme": "ohajiki://",
+            "storeIdentifier": "926105977",
+            "new": true,
+            "regex": "(http(?:s)?.*)",
+            "format": "oo$1",
+            "docs": "http://en.ohajiki.ios-web.com/url-scheme.html",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "oohttp://www.opener.link/",
+                "oohttps://twitter.com/openerapp"
+            ]
+        },
+        {
             "displayName": "Frameless",
             "identifier": "frameless",
             "scheme": "frameless://",
