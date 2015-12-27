@@ -4591,7 +4591,7 @@
             "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/safari-120.jpg",
             "new": true,
             "regex": "(.+)$",
-            "format": "$1",
+            "script": "function process(url, completionHandler) { completionHandler('https://s3.amazonaws.com/www.opener.link/redirect.html?url=' + encodeURIComponent(url)); }",
             "testInputs": [
                 "http://www.opener.link/"
             ],
