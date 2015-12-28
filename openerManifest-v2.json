@@ -3778,6 +3778,24 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Video",
+            "regex": "http(?:s)?://(?:www\\.|live\\.)?(?:nicovideo\\.jp/watch/|nico\\.ms/)sm(\\d+).*$",
+            "testInputs": [
+                "http://www.nicovideo.jp/watch/sm26814241",
+                "http://nico.ms/sm15757696"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "inico2",
+                    "format": "inico2http://www.nicovideo.jp/watch/sm$1",
+                    "testResults": [
+                        "inico2http://www.nicovideo.jp/watch/sm26814241",
+                        "inico2http://www.nicovideo.jp/watch/sm15757696"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -4550,6 +4568,13 @@
             "storeIdentifier": "925851179",
             "identifier": "boreal",
             "scheme": "borealhn://",
+            "new": true
+        },
+        {
+            "displayName": "iNico 2",
+            "identifier": "inico2",
+            "scheme": "inico2http://",
+            "storeIdentifier": "953856490",
             "new": true
         },
         {
