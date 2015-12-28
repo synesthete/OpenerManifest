@@ -3796,6 +3796,26 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(plus\\.google\\.com/.*)$",
+            "testInputs": [
+                "https://plus.google.com/u/0/100711776131865357077",
+                "https://plus.google.com/u/0/+Flipboard",
+                "https://plus.google.com/u/0/+timonominus/posts/iB3XwQQ95V8"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "googleplus",
+                    "format": "gplus://$1",
+                    "testResults": [
+                        "gplus://plus.google.com/u/0/100711776131865357077",
+                        "gplus://plus.google.com/u/0/+Flipboard",
+                        "gplus://plus.google.com/u/0/+timonominus/posts/iB3XwQQ95V8"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -4562,6 +4582,14 @@
             "storeIdentifier": "1037098661",
             "identifier": "thelistapp",
             "scheme": "thelistapp://"
+        },
+        {
+            "displayName": "Google+",
+            "storeIdentifier": "447119634",
+            "identifier": "googleplus",
+            "scheme": "gplus://",
+            "docs": "http://stackoverflow.com/a/21231485",
+            "new": true
         },
         {
             "displayName": "Boreal",
