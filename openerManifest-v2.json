@@ -3781,7 +3781,7 @@
         },
         {
             "title": "Open Video",
-            "regex": "http(?:s)?://(?:www\\.|live\\.)?(?:nicovideo\\.jp/watch/|nico\\.ms/)sm(\\d+).*$",
+            "regex": "http(?:s)?://(?:\\w+\\.)?(?:nicovideo\\.jp/watch/|nico\\.ms/)sm(\\d+).*$",
             "testInputs": [
                 "http://www.nicovideo.jp/watch/sm26814241",
                 "http://nico.ms/sm15757696"
