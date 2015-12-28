@@ -1839,11 +1839,12 @@
         },
         {
             "title": "Open Product",
-            "regex": "http(?:s)?://(?:www\\.)?producthunt\\.com/(?:posts|tech|games)/([a-zA-Z0-9_\\-%]+).*$",
+            "regex": "http(?:s)?://(?:www\\.)?producthunt\\.com/(?:posts|tech|games|podcasts|books|)/([a-zA-Z0-9_\\-%]+).*$",
             "testInputs": [
                 "http://www.producthunt.com/posts/opener",
                 "http://www.producthunt.com/tech/free",
-                "http://www.producthunt.com/games/codin-game"
+                "http://www.producthunt.com/games/codin-game",
+                "https://www.producthunt.com/podcasts/re-code-decode-ev-williams"
             ],
             "formats": [
                 {
@@ -1852,7 +1853,8 @@
                     "testResults": [
                         "producthunt://post/22922",
                         "producthunt://post/23810",
-                        "producthunt://post/24101"
+                        "producthunt://post/24101",
+                        "producthunt://post/45300"
                     ]
                 }
             ]
