@@ -1284,29 +1284,33 @@
         },
         {
             "title": "Open Profile",
-            "regex": "(?:http(?:s?)://)((?:www.|m.)?youtube.com/user/([\\w]+).*)",
+            "regex": "http(?:s)?://(?:www\\.|m\\.)?youtube\\.com/user/([\\w]+).*",
             "testInputs": [
-                "https://www.youtube.com/user/timonominus"
+                "https://www.youtube.com/user/timonominus",
+                "https://m.youtube.com/user/timonominus"
             ],
             "formats": [
                 {
                     "appIdentifier": "youtube",
-                    "format": "youtube://$1",
+                    "format": "youtube://youtube.com/user/$1",
                     "testResults": [
-                        "youtube://www.youtube.com/user/timonominus"
+                        "youtube://youtube.com/user/timonominus",
+                        "youtube://youtube.com/user/timonominus"
                     ]
                 },
                 {
                     "appIdentifier": "protube",
-                    "format": "protube://user/$2",
+                    "format": "protube://user/$1",
                     "testResults": [
+                        "protube://user/timonominus",
                         "protube://user/timonominus"
                     ]
                 },
                 {
                     "appIdentifier": "youplayer",
-                    "format": "youplayer://youtube.com/user/$2",
+                    "format": "youplayer://youtube.com/user/$1",
                     "testResults": [
+                        "youplayer://youtube.com/user/timonominus",
                         "youplayer://youtube.com/user/timonominus"
                     ]
                 }
