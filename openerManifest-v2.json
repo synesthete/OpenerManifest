@@ -2618,6 +2618,15 @@
                     ]
                 },
                 {
+                    "appIdentifier": "wikiwand",
+                    "format": "wikiwand-article://$3/$4",
+                    "testResults": [
+                        null,
+                        "wikiwand-article://en/Bottle_opener",
+                        "wikiwand-article://en/Soylent"
+                    ]
+                },
+                {
                     "appIdentifier": "dasreferenz",
                     "format": "dasreferenz://$3/$4",
                     "testResults": [
@@ -3912,6 +3921,14 @@
             "platform": "phone"
         },
         {
+            "displayName": "Wikiwand",
+            "storeIdentifier": "947444965",
+            "identifier": "wikiwand",
+            "scheme": "wikiwand-article://",
+            "docs": "https://wikiwand-ios.uservoice.com/knowledgebase/articles/513725-does-the-wikiwand-ios-app-support-url-schemes",
+            "new": true
+        },
+        {
             "storeIdentifier": "888422857",
             "identifier": "overcast",
             "scheme": "overcast://",
@@ -4853,14 +4870,14 @@
             "scheme": "frameless://",
             "storeIdentifier": "933580264",
             "new": true,
-            "regex": "http(?:s)?(.*)",
-            "format": "frameless$1",
+            "regex": "(.+)$",
+            "script": "function process(url, completionHandler) { completionHandler('frameless://s3.amazonaws.com/www.opener.link/redirect.html?url=' + encodeURIComponent(url)); }",
             "docs": "https://gist.github.com/stakes/2b3d72fd55021117d3ff",
             "testInputs": [
                 "http://www.opener.link/"
             ],
             "testResults": [
-                "frameless://www.opener.link/"
+                "frameless://s3.amazonaws.com/www.opener.link/redirect.html?url=http%3A%2F%2Fwww.opener.link%2F"
             ]
         }
     ]
