@@ -4672,7 +4672,7 @@
                 "http://www.opener.link/"
             ],
             "testResults": [
-                "http://www.opener.link/"
+                "https://s3.amazonaws.com/www.opener.link/redirect.html?url=http%3A%2F%2Fwww.opener.link%2F"
             ]
         },
         {
