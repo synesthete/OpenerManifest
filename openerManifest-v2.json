@@ -4694,22 +4694,6 @@
             ]
         },
         {
-            "displayName": "Firefox",
-            "identifier": "firefox",
-            "scheme": "firefox://",
-            "storeIdentifier": "989804926",
-            "new": true,
-            "regex": "(.+)$",
-            "script": "function process(url, completionHandler) { completionHandler('firefox://x-callback-url/open?url=' + encodeURIComponent(url)); }",
-            "docs": "https://github.com/mozilla/firefox-ios-open-in-client",
-            "testInputs": [
-                "http://www.opener.link/"
-            ],
-            "testResults": [
-                "firefox://x-callback-url/open?url=http%3A%2F%2Fwww.opener.link%2F"
-            ]
-        },
-        {
             "displayName": "1Password",
             "identifier": "1password",
             "scheme": "ophttp://",
@@ -4862,22 +4846,6 @@
             "testResults": [
                 "oohttp://www.opener.link/",
                 "oohttps://twitter.com/openerapp"
-            ]
-        },
-        {
-            "displayName": "Frameless",
-            "identifier": "frameless",
-            "scheme": "frameless://",
-            "storeIdentifier": "933580264",
-            "new": true,
-            "regex": "(.+)$",
-            "script": "function process(url, completionHandler) { completionHandler('frameless://s3.amazonaws.com/www.opener.link/redirect.html?url=' + encodeURIComponent(url)); }",
-            "docs": "https://gist.github.com/stakes/2b3d72fd55021117d3ff",
-            "testInputs": [
-                "http://www.opener.link/"
-            ],
-            "testResults": [
-                "frameless://s3.amazonaws.com/www.opener.link/redirect.html?url=http%3A%2F%2Fwww.opener.link%2F"
             ]
         }
     ]
