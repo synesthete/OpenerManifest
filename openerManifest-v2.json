@@ -2587,11 +2587,12 @@
         },
         {
             "title": "Open Link",
-            "regex": "(http(?:s)?://((?!www\\.)(?:(\\w+)\\.)(?:\\w+\\.)*wikipedia\\.(?:com|org)/(?:wiki/)?(.*)))$",
+            "regex": "(http(?:s)?://((?!www\\.)(?:([a-zA-Z0-9\\-]+)\\.)(?:\\w+\\.)*wikipedia\\.(?:com|org)/(?:wiki/)?(.*)))$",
             "testInputs": [
                 "http://www.wikipedia.org/wiki/Bottle_opener",
                 "http://en.wikipedia.org/wiki/Bottle_opener",
-                "http://en.m.wikipedia.org/wiki/Soylent"
+                "http://en.m.wikipedia.org/wiki/Soylent",
+                "https://zh-yue.wikipedia.org/wiki/%E9%96%8B%E4%BF%A1%E5%88%80"
             ],
             "formats": [
                 {
@@ -2600,7 +2601,8 @@
                     "testResults": [
                         null,
                         "wikipedia://en.wikipedia.org/wiki/Bottle_opener",
-                        "wikipedia://en.m.wikipedia.org/wiki/Soylent"
+                        "wikipedia://en.m.wikipedia.org/wiki/Soylent",
+                        "wikipedia://zh-yue.wikipedia.org/wiki/%E9%96%8B%E4%BF%A1%E5%88%80"
                     ]
                 },
                 {
@@ -2609,7 +2611,8 @@
                     "testResults": [
                         null,
                         "wikipedia://en.wikipedia.org/wiki/Bottle_opener",
-                        "wikipedia://en.m.wikipedia.org/wiki/Soylent"
+                        "wikipedia://en.m.wikipedia.org/wiki/Soylent",
+                        "wikipedia://zh-yue.wikipedia.org/wiki/%E9%96%8B%E4%BF%A1%E5%88%80"
                     ]
                 },
                 {
@@ -2618,7 +2621,8 @@
                     "testResults": [
                         null,
                         "wikilinks://openwikipediaurl?url=aHR0cDovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9Cb3R0bGVfb3BlbmVy",
-                        "wikilinks://openwikipediaurl?url=aHR0cDovL2VuLm0ud2lraXBlZGlhLm9yZy93aWtpL1NveWxlbnQ%3D"
+                        "wikilinks://openwikipediaurl?url=aHR0cDovL2VuLm0ud2lraXBlZGlhLm9yZy93aWtpL1NveWxlbnQ%3D",
+                        "wikilinks://openwikipediaurl?url=aHR0cHM6Ly96aC15dWUud2lraXBlZGlhLm9yZy93aWtpLyVFOSU5NiU4QiVFNCVCRiVBMSVFNSU4OCU4MA%3D%3D"
                     ]
                 },
                 {
@@ -2627,7 +2631,8 @@
                     "testResults": [
                         null,
                         "wikiwand-article://en/Bottle_opener",
-                        "wikiwand-article://en/Soylent"
+                        "wikiwand-article://en/Soylent",
+                        "wikiwand-article://zh-yue/%E9%96%8B%E4%BF%A1%E5%88%80"
                     ]
                 },
                 {
@@ -2636,7 +2641,8 @@
                     "testResults": [
                         null,
                         "dasreferenz://en/Bottle_opener",
-                        "dasreferenz://en/Soylent"
+                        "dasreferenz://en/Soylent",
+                        "dazreferenz://zh-yue/%E9%96%8B%E4%BF%A1%E5%88%80"
                     ]
                 }
             ]
