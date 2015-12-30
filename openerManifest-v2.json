@@ -3857,6 +3857,26 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:www\\.|m\\.)?(wolframalpha\\.com/input.*)$",
+            "testInputs": [
+                "http://www.wolframalpha.com/input/?i=number+of+days+since+january+15+1989",
+                "http://m.wolframalpha.com/input/?i=number+of+days+since+january+15+1989",
+                "http://wolframalpha.com/input/?i=number+of+days+since+january+15+1989"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "wolframalpha",
+                    "format": "wolframalpha://$1",
+                    "testResults": [
+                        "wolframalpha://wolframalpha.com/input/?i=number+of+days+since+january+15+1989",
+                        "wolframalpha://wolframalpha.com/input/?i=number+of+days+since+january+15+1989",
+                        "wolframalpha://wolframalpha.com/input/?i=number+of+days+since+january+15+1989"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -4652,6 +4672,13 @@
             "identifier": "inico2",
             "scheme": "inico2http://",
             "storeIdentifier": "953856490",
+            "new": true
+        },
+        {
+            "displayName": "Wolfram Alpha",
+            "identifier": "wolframalpha",
+            "scheme": "wolframalpha://",
+            "storeIdentifier": "334989259",
             "new": true
         },
         {
