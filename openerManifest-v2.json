@@ -4865,6 +4865,24 @@
                 "oohttp://www.opener.link/",
                 "oohttps://twitter.com/openerapp"
             ]
+        },
+        {
+            "displayName": "GoodReader",
+            "identifier": "goodreader",
+            "scheme": "ghttp://",
+            "storeIdentifier": "777310222",
+            "new": true,
+            "regex": "(http(?:s)?.*)",
+            "format": "g$1",
+            "docs": "https://goodreader.com/gr-man-howto.html#openfromother",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "ghttp://www.opener.link/",
+                "ghttps://twitter.com/openerapp"
+            ]
         }
     ]
 }
