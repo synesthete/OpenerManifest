@@ -2636,6 +2636,16 @@
                     ]
                 },
                 {
+                    "appIdentifier": "curiosity",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); var regex = new RegExp('(http(?:s)?://((?!www\\\\.)(?:([a-zA-Z0-9\\\\-]+)\\\\.)(?:\\\\w+\\\\.)*wikipedia\\\\.(?:com|org)/(?:wiki/)?(.*)))$'); var match = regex.exec(url); var locale = match[3]; var title = match[4]; url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&titles=' + title; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); var pageid = Object.keys(res['query']['pages'])[0]; completionHandler('curiosity://p/' + locale + '/' + pageid); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "testResults": [
+                        null,
+                        "curiosity://p/en/1182550",
+                        "curiosity://p/en/4632863",
+                        "curiosity://p/zh-yue/19584"
+                    ]
+                },
+                {
                     "appIdentifier": "dasreferenz",
                     "format": "dasreferenz://$3/$4",
                     "testResults": [
@@ -3967,6 +3977,14 @@
             "identifier": "wikipanion",
             "scheme": "wikipanion://",
             "platform": "phone"
+        },
+        {
+            "displayName": "Curiosity",
+            "storeIdentifier": "1045268097",
+            "identifier": "curiosity",
+            "scheme": "curiosity://",
+            "docs": "https://tamper.zendesk.com/hc/en-us/articles/206610436-Does-Curiosity-have-a-URL-scheme- and http://stackoverflow.com/a/31685114",
+            "new": true
         },
         {
             "displayName": "Wikiwand",
