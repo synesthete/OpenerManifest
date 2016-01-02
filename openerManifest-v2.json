@@ -1252,6 +1252,16 @@
                         "comgooglemaps://?q=645%20W%209th%20St%20%23110-140%20Los%20Angeles%20CA%2090015-1640%20United%20States&center=34.045802,-118.260574",
                         "comgooglemaps://?q=Dundee%20Elementary%20School%2C215%20E%20Frederick%20Ave%2C%20Dundee%2C%20FL%20%2033838-4238%2C%20United%20States&center=28.026687,-81.617854"
                     ]
+                },
+                {
+                    "appIdentifier": "waze",
+                    "script": "function getParameterByName(url, name) { name = name.replace(new RegExp('[\\[]'), '\\\\[').replace(new RegExp('[\\]]'), '\\\\]'); var regex = new RegExp('[\\\\?&]' + name + '=([^&#]*)'); results = regex.exec(url); return results === null ? '' : decodeURIComponent(results[1].replace(new RegExp('\\\\+', 'g'), ' ')); } function process(url, completionHandler) { var appleAddress = getParameterByName(url, 'address'); if (appleAddress == null || appleAddress.length == 0) { appleAddress = getParameterByName(url, 'hnear'); } var appleLL = getParameterByName(url, 'll'); if (!appleLL) { appleLL = getParameterByName(url, 'sll'); } var appleQ = getParameterByName(url, 'q');  var googleQ= ''; var googleCenter = null; if (appleQ != null) { googleQ = appleQ; } if (appleAddress != null && appleAddress.length > 0) { if (googleQ.length > 0) { googleQ = googleQ + ','; } googleQ = googleQ + appleAddress; } if (appleLL != null && appleLL.length > 0) { googleCenter = appleLL; } var query = ''; if (googleQ.length > 0) { query = 'q=' + encodeURIComponent(googleQ); } if (googleCenter.length > 0) { if (query.length > 0) { query = query + '&'; } query = query + 'll=' + googleCenter; } var url = 'waze://?' + query; completionHandler(url); }",
+                    "testResults": [
+                    "waze://?q=Southern%20Pacific%20Brewing%2C620%20Treat%20Ave%20San%20Francisco%20CA%2094110-2016%20United%20States&ll=37.760092,-122.414035",
+                    "waze://?q=967%20Mission%20St%20San%20Francisco%20CA%2094103%20United%20States&ll=37.781510,-122.407999",
+                    "waze://?q=645%20W%209th%20St%20%23110-140%20Los%20Angeles%20CA%2090015-1640%20United%20States&ll=34.045802,-118.260574",
+                    "waze://?q=Dundee%20Elementary%20School%2C215%20E%20Frederick%20Ave%2C%20Dundee%2C%20FL%20%2033838-4238%2C%20United%20States&ll=28.026687,-81.617854"
+                    ]
                 }
             ]
         },
