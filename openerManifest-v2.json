@@ -2672,6 +2672,47 @@
                         "curiosity://p/en/351344",
                         "curiosity://p/en/351344"
                     ]
+                },
+                {
+                    "appIdentifier": "wikipanion",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); var regex = new RegExp('http(?:s)?://(?:www\\\\.)?tamper\\\\.io/curiosity/share.*(?:(?:\\\\?|&)p=(\\\\d+).*&l=([a-zA-Z0-9\\\\-_]+)|(?:\\\\?|&)l=([a-zA-Z0-9\\\\-_]+).*&p=(\\\\d+)).*$'); var match = regex.exec(url); var locale = null; if (match[2] != null) { locale = match[2] } else if (match[3] != null) { locale = match[3]; } var pageid = null; if (match[1] != null) { pageid = match[1] } else if (match[4] != null) { pageid = match[4]; } url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&pageids=' + pageid; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); var key = Object.keys(res['query']['pages'])[0]; var title = res['query']['pages'][key]['title']; completionHandler('wikipedia://' + locale + '.wikipedia.org/wiki/' + encodeURIComponent(title)); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "testResults": [
+                        "wikipedia://en.wikipedia.org/wiki/Noe%20Valley%2C%20San%20Francisco",
+                        "wikipedia://en.wikipedia.org/wiki/Noe%20Valley%2C%20San%20Francisco"
+                    ]
+                },
+                {
+                    "appIdentifier": "wikipanionpad",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); var regex = new RegExp('http(?:s)?://(?:www\\\\.)?tamper\\\\.io/curiosity/share.*(?:(?:\\\\?|&)p=(\\\\d+).*&l=([a-zA-Z0-9\\\\-_]+)|(?:\\\\?|&)l=([a-zA-Z0-9\\\\-_]+).*&p=(\\\\d+)).*$'); var match = regex.exec(url); var locale = null; if (match[2] != null) { locale = match[2] } else if (match[3] != null) { locale = match[3]; } var pageid = null; if (match[1] != null) { pageid = match[1] } else if (match[4] != null) { pageid = match[4]; } url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&pageids=' + pageid; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); var key = Object.keys(res['query']['pages'])[0]; var title = res['query']['pages'][key]['title']; completionHandler('wikipedia://' + locale + '.wikipedia.org/wiki/' + encodeURIComponent(title)); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "testResults": [
+                        "wikipedia://en.wikipedia.org/wiki/Noe%20Valley%2C%20San%20Francisco",
+                        "wikipedia://en.wikipedia.org/wiki/Noe%20Valley%2C%20San%20Francisco"
+                    ]
+                },
+                {
+                    "appIdentifier": "wikilinks",
+                    "xscript": "function process(url, completion) { completion('wikilinks://openwikipediaurl?url=' + encodeURIComponent(btoa(url))); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); var regex = new RegExp('http(?:s)?://(?:www\\\\.)?tamper\\\\.io/curiosity/share.*(?:(?:\\\\?|&)p=(\\\\d+).*&l=([a-zA-Z0-9\\\\-_]+)|(?:\\\\?|&)l=([a-zA-Z0-9\\\\-_]+).*&p=(\\\\d+)).*$'); var match = regex.exec(url); var locale = null; if (match[2] != null) { locale = match[2] } else if (match[3] != null) { locale = match[3]; } var pageid = null; if (match[1] != null) { pageid = match[1] } else if (match[4] != null) { pageid = match[4]; } url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&pageids=' + pageid; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); var key = Object.keys(res['query']['pages'])[0]; var title = res['query']['pages'][key]['title']; var outURL = 'https://' + locale + '.wikipedia.org/wiki/' + encodeURIComponent(title); /*completionHandler(outURL);*/ completionHandler('wikilinks://openwikipediaurl?url=' + encodeURIComponent(btoa(outURL))); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "testResults": [
+                        "wikilinks://openwikipediaurl?url=aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTm9lJTIwVmFsbGV5JTJDJTIwU2FuJTIwRnJhbmNpc2Nv",
+                        "wikilinks://openwikipediaurl?url=aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTm9lJTIwVmFsbGV5JTJDJTIwU2FuJTIwRnJhbmNpc2Nv"
+                    ]
+                },
+                {
+                    "appIdentifier": "wikiwand",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); var regex = new RegExp('http(?:s)?://(?:www\\\\.)?tamper\\\\.io/curiosity/share.*(?:(?:\\\\?|&)p=(\\\\d+).*&l=([a-zA-Z0-9\\\\-_]+)|(?:\\\\?|&)l=([a-zA-Z0-9\\\\-_]+).*&p=(\\\\d+)).*$'); var match = regex.exec(url); var locale = null; if (match[2] != null) { locale = match[2] } else if (match[3] != null) { locale = match[3]; } var pageid = null; if (match[1] != null) { pageid = match[1] } else if (match[4] != null) { pageid = match[4]; } url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&pageids=' + pageid; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); var key = Object.keys(res['query']['pages'])[0]; var title = res['query']['pages'][key]['title']; completionHandler('wikiwand-article://' + locale + '/' + encodeURIComponent(title)); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "testResults": [
+                        "wikiwand-article://en/Noe%20Valley%2C%20San%20Francisco",
+                        "wikiwand-article://en/Noe%20Valley%2C%20San%20Francisco"
+                    ]
+                },
+                {
+                    "appIdentifier": "dasreferenz",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); var regex = new RegExp('http(?:s)?://(?:www\\\\.)?tamper\\\\.io/curiosity/share.*(?:(?:\\\\?|&)p=(\\\\d+).*&l=([a-zA-Z0-9\\\\-_]+)|(?:\\\\?|&)l=([a-zA-Z0-9\\\\-_]+).*&p=(\\\\d+)).*$'); var match = regex.exec(url); var locale = null; if (match[2] != null) { locale = match[2] } else if (match[3] != null) { locale = match[3]; } var pageid = null; if (match[1] != null) { pageid = match[1] } else if (match[4] != null) { pageid = match[4]; } url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&pageids=' + pageid; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); var key = Object.keys(res['query']['pages'])[0]; var title = res['query']['pages'][key]['title']; completionHandler('dasreferenz://' + locale + '/' + encodeURIComponent(title)); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "testResults": [
+                        "dasreferenz://en/Noe%20Valley%2C%20San%20Francisco",
+                        "dasreferenz://en/Noe%20Valley%2C%20San%20Francisco"
+                    ]
                 }
             ]
         },
