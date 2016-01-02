@@ -1172,6 +1172,16 @@
                         null,
                         null
                     ]
+                },
+                {
+                    "appIdentifier": "waze",
+                    "format": "waze://?q=$2&ll=$3",
+                    "testResults": [
+                        "waze://?q=Anchor+Brewing+Company&ll=37.7632216,-122.4009458,15z",
+                        "waze://?q=Indiegogo,+965+Mission+St,+San+Francisco,+CA+94103&ll=",
+                        null,
+                        null
+                    ]
                 }
             ]
         },
@@ -1200,6 +1210,15 @@
                         null,
                         "maps://maps.apple.com/maps?q=@37.3161,-122.1836",
                         "maps://maps.apple.com/maps?f=q&hl=ja&geocode=&q=-39.23774,175.3048&ie=UTF8&ll=-39.23774,175.3048&z=6"
+                    ]
+                },
+                {
+                    "appIdentifier": "waze",
+                    "format": "waze://$2",
+                    "testResults": [
+                        null,
+                        "waze://?q=@37.3161,-122.1836",
+                        "waze://?f=q&hl=ja&geocode=&q=-39.23774,175.3048&ie=UTF8&ll=-39.23774,175.3048&z=6"
                     ]
                 }
             ]
