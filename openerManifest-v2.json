@@ -4019,6 +4019,73 @@
             ]
         },
         {
+            "title": "Open Video",
+            "regex": "http(?:s)?://(?:\\w+\\.)?(?:nicovideo\\.jp/watch/|nico\\.ms/)(so\\d+).*$",
+            "testInputs": [
+                "http://www.nicovideo.jp/watch/so26990332",
+                "http://www.nicovideo.jp/watch/sm26814241"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "inico2",
+                    "format": "inico2http://www.nicovideo.jp/watch/$1",
+                    "testResults": [
+                        "inico2http://www.nicovideo.jp/watch/so26990332",
+                        null
+                    ]
+                },
+                {
+                    "appIdentifier": "smileplayer2",
+                    "format": "smileplayer2://id/$1",
+                    "testResults": [
+                        "smileplayer2://id/so26990332",
+                        null
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Video",
+            "regex": "http(?:s)?://(?:\\w+\\.)?(?:nicovideo\\.jp/watch/|nico\\.ms/)(nm\\d+).*$",
+            "testInputs": [
+                "http://www.nicovideo.jp/watch/nm6195780"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "niconico",
+                    "format": "niconico://$1",
+                    "testResults": [
+                        "niconico://nm6195780"
+                    ]
+                },
+                {
+                    "appIdentifier": "inico2",
+                    "format": "inico2http://www.nicovideo.jp/watch/$1",
+                    "testResults": [
+                        "inico2http://www.nicovideo.jp/watch/nm6195780"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Live Video",
+            "regex": "http(?:s)?://(?:\\w+\\.)?(?:nicovideo\\.jp/watch/|nico\\.ms/)(lv\\d+).*$",
+            "testInputs": [
+                "http://nico.ms/lv243491453",
+                "http://live.nicovideo.jp/watch/lv243491453"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "niconico",
+                    "format": "niconico://$1",
+                    "testResults": [
+                        "niconico://lv243491453",
+                        "niconico://lv243491453"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Link",
             "regex": "http(?:s)?://(plus\\.google\\.com/.*)$",
             "testInputs": [
