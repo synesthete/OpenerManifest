@@ -2659,6 +2659,24 @@
         },
         {
             "title": "Open Link",
+            "regex": "http(?:s)?://(?:www\\.)?tamper\\.io/curiosity/share.*(?:(?:\\?|&)p=(\\d+).*&l=([a-zA-Z0-9\\-_]+)|(?:\\?|&)l=([a-zA-Z0-9\\-_]+).*&p=(\\d+)).*$",
+            "testInputs": [
+                "https://tamper.io/curiosity/share/?p=351344&l=en",
+                "https://tamper.io/curiosity/share/?l=en&p=351344"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "curiosity",
+                    "format": "curiosity://p/$2$3/$1$4",
+                    "testResults": [
+                        "curiosity://p/en/351344",
+                        "curiosity://p/en/351344"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Link",
             "regex": "http(?:s?)://((?:\\w+\\.)*github.com/.*)",
             "formats": [
                 {
