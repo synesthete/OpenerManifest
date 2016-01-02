@@ -1269,14 +1269,42 @@
             "title": "Open Link",
             "regex": "http(?:s)?://(?:www\\.)?waze\\.to(?:/)?\\?([^#]+).*$",
             "testInputs": [
-                "http://waze.to/?ll=34.042892,-118.245853&navigate=yes"
+                "http://waze.to/?ll=34.042892,-118.245853&navigate=yes",
+                "https://www.waze.to/?q=burgers"
             ],
             "formats": [
                 {
                     "appIdentifier": "waze",
                     "format": "waze://?$1",
                     "testResults": [
-                        "waze://?ll=34.042892,-118.245853&navigate=yes"
+                        "waze://?ll=34.042892,-118.245853&navigate=yes",
+                        "waze://?q=burgers"
+                    ]
+                },
+                {
+                    "appIdentifier": "applemaps",
+                    "format": "maps://maps.apple.com/maps?$1",
+                    "testResults": [
+                        "maps://maps.apple.com/maps?ll=34.042892,-118.245853&navigate=yes",
+                        "maps://maps.apple.com/maps?q=burgers"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:www\\.)?waze\\.to(?:/)?\\?(?:.+&)?ll=([^&]+).*$",
+            "testInputs": [
+                "http://waze.to/?ll=34.042892,-118.245853&navigate=yes",
+                "https://www.waze.to/?q=burgers"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "googlemaps",
+                    "format": "comgooglemaps://?q=$1&center=$1",
+                    "testResults": [
+                        "comgooglemaps://?q=34.042892,-118.245853&center=34.042892,-118.245853",
+                        null
                     ]
                 }
             ]
