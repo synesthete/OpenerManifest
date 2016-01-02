@@ -3982,18 +3982,38 @@
         },
         {
             "title": "Open Video",
-            "regex": "http(?:s)?://(?:\\w+\\.)?(?:nicovideo\\.jp/watch/|nico\\.ms/)sm(\\d+).*$",
+            "regex": "http(?:s)?://(?:\\w+\\.)?(?:nicovideo\\.jp/watch/|nico\\.ms/)((?:sm)?\\d+).*$",
             "testInputs": [
                 "http://www.nicovideo.jp/watch/sm26814241",
-                "http://nico.ms/sm15757696"
+                "http://nico.ms/sm15757696",
+                "http://www.nicovideo.jp/watch/1449636328"
             ],
             "formats": [
                 {
+                    "appIdentifier": "niconico",
+                    "format": "niconico://$1",
+                    "testResults": [
+                        "niconico://sm26814241",
+                        "niconico://sm15757696",
+                        "niconico://1449636328"
+                    ]
+                },
+                {
                     "appIdentifier": "inico2",
-                    "format": "inico2http://www.nicovideo.jp/watch/sm$1",
+                    "format": "inico2http://www.nicovideo.jp/watch/$1",
                     "testResults": [
                         "inico2http://www.nicovideo.jp/watch/sm26814241",
-                        "inico2http://www.nicovideo.jp/watch/sm15757696"
+                        "inico2http://www.nicovideo.jp/watch/sm15757696",
+                        "inico2http://www.nicovideo.jp/watch/1449636328"
+                    ]
+                },
+                {
+                    "appIdentifier": "smileplayer2",
+                    "format": "smileplayer2://id/$1",
+                    "testResults": [
+                        "smileplayer2://id/sm26814241",
+                        "smileplayer2://id/sm15757696",
+                        "smileplayer2://id/1449636328"
                     ]
                 }
             ]
@@ -4841,10 +4861,24 @@
             "scheme": "borealhn://"
         },
         {
+            "displayName": "niconico",
+            "identifier": "niconico",
+            "scheme": "niconico://",
+            "storeIdentifier": "307764057",
+            "new": true
+        },
+        {
             "displayName": "iNico 2",
             "identifier": "inico2",
             "scheme": "inico2http://",
             "storeIdentifier": "953856490"
+        },
+        {
+            "displayName": "SmilePlayer2",
+            "identifier": "smileplayer2",
+            "scheme": "smileplayer2://",
+            "storeIdentifier": "876415486",
+            "new": true
         },
         {
             "displayName": "Wolfram Alpha",
