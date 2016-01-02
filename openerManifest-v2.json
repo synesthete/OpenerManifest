@@ -2483,6 +2483,14 @@
                         "maps://maps.apple.com/maps?q=Day%20Block%20Event%20Center&ll=44.975250244140625,-93.25302124023438",
                         null
                     ]
+                },
+                {
+                    "appIdentifier": "waze",
+                    "script": "function process(url, completionHandler) { var regex = new RegExp('http(?:s?)://(?:m\\\\.|mobile\\\\.|www\\\\.)?meetup\\\\.com/([a-zA-Z0-9_\\\\-%]+)(?:/.*)?/(\\\\d+).*$'); var match = regex.exec(url); var groupIdentifier = match[1]; var eventIdentifier = match[2]; url = 'https://api.meetup.com/' + groupIdentifier + '/events/' + eventIdentifier; var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); if (res['venue'] != null && res['venue']['name'] != null && res['venue']['lat'] != null & res['venue']['lon'] != null) { completionHandler('waze://?ll=' + res['venue']['lat'] + ',' + res['venue']['lon']); } else { completionHandler(null); } } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "testResults": [
+                        "waze://?ll=44.975250244140625,-93.25302124023438",
+                        null
+                    ]
                 }
             ]
         },
