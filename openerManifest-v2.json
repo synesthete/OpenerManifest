@@ -4141,8 +4141,7 @@
             "storeIdentifier": "947444965",
             "identifier": "wikiwand",
             "scheme": "wikiwand-article://",
-            "docs": "https://wikiwand-ios.uservoice.com/knowledgebase/articles/513725-does-the-wikiwand-ios-app-support-url-schemes",
-            "new": true
+            "docs": "https://wikiwand-ios.uservoice.com/knowledgebase/articles/513725-does-the-wikiwand-ios-app-support-url-schemes"
         },
         {
             "storeIdentifier": "888422857",
@@ -4833,22 +4832,19 @@
             "storeIdentifier": "447119634",
             "identifier": "googleplus",
             "scheme": "gplus://",
-            "docs": "http://stackoverflow.com/a/21231485",
-            "new": true
+            "docs": "http://stackoverflow.com/a/21231485"
         },
         {
             "displayName": "Boreal",
             "storeIdentifier": "925851179",
             "identifier": "boreal",
-            "scheme": "borealhn://",
-            "new": true
+            "scheme": "borealhn://"
         },
         {
             "displayName": "iNico 2",
             "identifier": "inico2",
             "scheme": "inico2http://",
-            "storeIdentifier": "953856490",
-            "new": true
+            "storeIdentifier": "953856490"
         },
         {
             "displayName": "Wolfram Alpha",
