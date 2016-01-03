@@ -4,11 +4,11 @@
 
 ## Overview
 
-There are three main entities (apps, actions, and formats) under two top level keys (`apps` and `actions`) that define a many-to-many relationship between web URLs and the apps they can be opened in.
+There are four main entities (apps, actions, and formats) under three top level keys (`apps`, `actions`, and `browsers`) that define a many-to-many relationship between web URLs and the apps they can be opened in.
 
 ![](graphic.jpg)
 
-Actions contain formats as child dictionaries, and formats are matched with apps through identifers.
+Actions contain formats as child dictionaries, and formats are matched with apps through identifiers. Browsers contain keys from each of the action, app, and format constructs and are intended to be capable of handling any http or https URL as an input.
 
 ## Apps
 
@@ -153,6 +153,47 @@ For example
 
 Testing formats that have `includeHeaders` is not currently possible.
 
+## Browsers
+
+Support for opening any http or https URL in browsers was added in Opener 1.1. Browsers live under the `browsers` top level key, each one contains a subset of the keys from the other `app`, `action`, and `format` dictionaries.
+
+<table>
+<tr><th>Key</th><th>Type</th><th>Description</th></tr>
+<tr><td><code>identifier</code></td><td>string</td><td>A human-readable identifier for this app, used elsewhere in the manifest.</td></tr>
+<tr><td><code>displayName</code></td><td>string</td><td>The user-facing name for this app within Opener.</td></tr>
+<tr><td><code>storeIdentifier</code></td><td>number as string</td><td>The identifier of the app on the App Store. (Optional in v2, required in v1)</td></tr>
+<tr><td><code>iconURL</code></td><td>URL string</td><td>A URL to an icon for this app, mutually exclusive with <code>storeIdentifier</code>. This is intended for first party app support.</td></tr>
+<tr><td><code>scheme</code></td><td>URL string</td><td>A URL containing only the scheme that will open this app.</td></tr>
+<tr><td><code>new</code></td><td>bool</td><td>Indicates whether or not this app will be include in the "New Apps" group in Opener.</td></tr>
+<tr><td><code>platform</code></td><td>string</td><td>Specifies if this app should only show up on iPhone/iPod Touch (value=<code>phone</code>) or on iPad (value=<code>pad</code>), shows on both if unspecified. (Opener 1.0.1 and above)</td></tr>
+<tr><td><code>regex</code></td><td>string</td><td>A regular expression string that the input URL is matched against, used for pattern replacements.</td></tr>
+<tr><td><code>format</code></td><td>string</td><td>The regex template applied to the input. Mutually exclusive with <code>script</code>.</td></tr>
+<tr><td><code>script</code></td><td>Javascript string</td><td>Mutually exclusive with <code>format</code>.</td></tr>
+<tr><td><code>testInputs</code></td><td>array of strings</td><td>An array of test inputs that will be run against <code>regex</code> then each action.</td></tr>
+<tr><td><code>testResults</code></td><td>array of strings or nulls</td><td>An array of expected results for this format for each of the test inputs. <code>null</code> should be used to specify that a test input <i>should not</i> match</td></tr>
+</table>
+
+For example, here's Google Chrome's dictionary:
+
+```
+{
+    "displayName": "Chrome",
+    "identifier": "chrome",
+    "scheme": "googlechrome://",
+    "storeIdentifier": "535886823",
+    "regex": "http(s)?(.*)$",
+    "format": "googlechrome$1$2",
+    "testInputs": [
+        "http://www.opener.link/",
+        "https://twitter.com/openerapp"
+    ],
+    "testResults": [
+        "googlechrome://www.opener.link/",
+        "googlechromes://twitter.com/openerapp"
+    ]
+}
+```
+
 ## Minify Script
 
 There's a python script included named 'minify.py', this script takes a copy of the manifest as an input and outputs a file with suffix '-minified.json' as output. This script strips out all unnecessary keys for Opener's operation when running in the client (testing, documentation, etc.) and minifies the JSON to be compact.
@@ -160,7 +201,7 @@ There's a python script included named 'minify.py', this script takes a copy of 
 Sample usage:
 
 ```
-python minify.py openerManifest-v1.json
+python minify.py openerManifest-v2.json
 ```
 
 ## Versions
