@@ -4,7 +4,7 @@
 
 ## Overview
 
-There are four main entities (apps, actions, and formats) under three top level keys (`apps`, `actions`, and `browsers`) that define a many-to-many relationship between web URLs and the apps they can be opened in.
+There are four main entities (apps, actions, formats, and browsers) under three top level keys (`apps`, `actions`, and `browsers`) that define a many-to-many relationship between web URLs and the apps they can be opened in.
 
 ![](graphic.jpg)
 
