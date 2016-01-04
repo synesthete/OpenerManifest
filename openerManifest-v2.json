@@ -2816,6 +2816,36 @@
             ]
         },
         {
+            "title": "Show Repository",
+            "regex": "http(?:s)?://((?:\\w+\\.)*(github\\.com|bitbucket\\.org)/[^/]+/[^/]+((/)?\\?.*$)?|\\w+(?:\\.\\w+)+(?:/[^/\\?]+)+\\.git.*)$",
+            "testInputs": [
+                "https://github.com/timonus/OpenerManifest/blob/master/.gitignore",
+                "https://github.com/timonus",
+                "https://github.com/timonus/OpenerManifest",
+                "https://github.com/timonus/OpenerManifest.git",
+                "http://bitbucket.org/timonus",
+                "https://bitbucket.org/timonus/configuration/commits/all",
+                "https://bitbucket.org/timonus/configuration",
+                "https://bitbucket.org/timonus/configuration.git"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "workingcopy",
+                    "script": "function process(url, completionHandler) { completionHandler('working-copy://show?remote=' + encodeURIComponent(url)); }",
+                    "testResults": [
+                        null,
+                        null,
+                        "working-copy://show?remote=https%3A%2F%2Fgithub.com%2Ftimonus%2FOpenerManifest",
+                        "working-copy://show?remote=https%3A%2F%2Fgithub.com%2Ftimonus%2FOpenerManifest.git",
+                        null,
+                        null,
+                        "working-copy://show?remote=https%3A%2F%2Fbitbucket.org%2Ftimonus%2Fconfiguration",
+                        "working-copy://show?remote=https%3A%2F%2Fbitbucket.org%2Ftimonus%2Fconfiguration.git"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Link",
             "regex": "http(?:s?)://((?:\\w+\\.)*(?:(?:stackoverflow|stackexchange|serverfault|superuser|stackapps)\\.com|mathoverflow\\.net)/.*)",
             "testInputs": [
@@ -4312,6 +4342,14 @@
             "identifier": "ioctocat",
             "scheme": "ioc://",
             "displayName": "iOctocat"
+        },
+        {
+            "displayName": "Working Copy",
+            "identifier": "workingcopy",
+            "scheme": "working-copy://",
+            "storeIdentifier": "896694807",
+            "docs": "http://workingcopyapp.com/url-schemes.html",
+            "new": true
         },
         {
             "storeIdentifier": "915249334",
