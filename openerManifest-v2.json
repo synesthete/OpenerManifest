@@ -4124,6 +4124,24 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Story",
+            "regex": "http(?:s)?://(?:www\\.|m\\.|mobile\\.)(nytimes\\.com/\\d+/\\d+/\\d+.*)$",
+            "testInputs": [
+                "http://www.nytimes.com/2016/01/04/us/politics/bernie-sanders-needing-early-lift-builds-iowa-ground-operation.html?ref=politics",
+                "https://m.nytimes.com/2016/01/01/us/politics/state-department-hillary-clinton-email.html?ref=topics"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "nytimes",
+                    "format": "nytimes://www.$1",
+                    "testResults": [
+                        "nytimes://www.nytimes.com/2016/01/04/us/politics/bernie-sanders-needing-early-lift-builds-iowa-ground-operation.html?ref=politics",
+                        "nytimes://www.nytimes.com/2016/01/01/us/politics/state-department-hillary-clinton-email.html?ref=topics"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -4742,6 +4760,13 @@
             "identifier": "wander",
             "scheme": "comgowanderwander://",
             "displayName": "Wander"
+        },
+        {
+            "displayName": "NYTimes",
+            "identifier": "nytimes",
+            "scheme": "nytimes://",
+            "storeIdentifier": "284862083",
+            "new": true
         },
         {
             "displayName": "ABC News",
