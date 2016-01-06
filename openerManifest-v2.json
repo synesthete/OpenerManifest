@@ -3232,6 +3232,22 @@
                         "appzapp://app?appid=989565871",
                         "appzapp://app?appid=989565871"
                     ]
+                },
+                {
+                    "appIdentifier": "catchapp",
+                    "format": "catchapp://app?id=$1",
+                    "testResults": [
+                        "catchapp://app?id=989565871",
+                        "catchapp://app?id=989565871"
+                    ]
+                },
+                {
+                    "appIdentifier": "catchapppad",
+                    "format": "catchapp://app?id=$1",
+                    "testResults": [
+                        "catchapp://app?id=989565871",
+                        "catchapp://app?id=989565871"
+                    ]
                 }
             ]
         },
@@ -5072,6 +5088,22 @@
             "storeIdentifier" : "394075284",
             "identifier" : "youkuhd",
             "platform" : "pad"
+        },
+        {
+            "displayName": "CatchApp",
+            "identifier": "catchapp",
+            "storeIdentifier": "362047999",
+            "scheme": "catchapp://",
+            "platform": "phone",
+            "new": true
+        },
+        {
+            "displayName": "CatchApp",
+            "identifier": "catchapppad",
+            "storeIdentifier": "438159430",
+            "scheme": "catchapp://",
+            "platform": "pad",
+            "new": true
         }
     ],
     "browsers": [
