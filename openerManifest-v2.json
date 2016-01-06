@@ -315,6 +315,28 @@
             ]
         },
         {
+            "title": "Open Photo",
+            "regex": "http(?:s)?://(?:\\w+\\.)?facebook\\.com/(?:photo\\.php.*(?:\\?|&)fbid=|[^/]+/photos/[^/]+/)(\\d+).*?$",
+            "testInputs": [
+                "https://m.facebook.com/photo.php?fbid=10153892256554365",
+                "https://facebook.com/photo.php?fbid=10153892256554365",
+                "https://www.facebook.com/mauriciomacri/photos/a.105382683477.113835.55432788477/10153903314573478/",
+                "https://www.facebook.com/mauriciomacri/photos/a.105382683477.113835.55432788477/10153903314573478/?type=3&theater"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "facebook",
+                    "format": "fb://photo/?id=$1",
+                    "testResults": [
+                        "fb://photo/?id=10153892256554365",
+                        "fb://photo/?id=10153892256554365",
+                        "fb://photo/?id=10153903314573478",
+                        "fb://photo/?id=10153903314573478"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open App",
             "regex": "http(?:s)?://apps\\.getpebble\\.com/(?:\\w+/)*application(?:s)?/([:hex:]+)",
             "testInputs": [
