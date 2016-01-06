@@ -4363,7 +4363,8 @@
             "storeIdentifier" : "736536022",
             "identifier" : "bilibili",
             "scheme" : "bilibili://",
-            "displayName" : "bilibili"
+            "displayName" : "bilibili",
+            "country": "cn"
         },
         {
             "displayName" : "Blink",
@@ -5094,14 +5095,16 @@
             "identifier": "catchapp",
             "storeIdentifier": "362047999",
             "scheme": "catchapp://",
-            "platform": "phone"
+            "platform": "phone",
+            "country": "jp"
         },
         {
             "displayName": "CatchApp",
             "identifier": "catchapppad",
             "storeIdentifier": "438159430",
             "scheme": "catchapp://",
-            "platform": "pad"
+            "platform": "pad",
+            "country": "jp"
         }
     ],
     "browsers": [
