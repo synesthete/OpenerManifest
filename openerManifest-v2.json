@@ -2698,12 +2698,13 @@
         },
         {
             "title": "Open Link",
-            "regex": "(http(?:s)?://((?!www\\.)(?:([a-zA-Z0-9\\-]+)\\.)(?:\\w+\\.)*wikipedia\\.(?:com|org)/(?:wiki/)?(.*)))$",
+            "regex": "(http(?:s)?://((?!www\\.)(?:([a-zA-Z0-9\\-]+)\\.)(?:\\w+\\.)*wikipedia\\.(?:com|org)/(?:[^/]+/)?(.*)))$",
             "testInputs": [
                 "http://www.wikipedia.org/wiki/Bottle_opener",
                 "http://en.wikipedia.org/wiki/Bottle_opener",
                 "http://en.m.wikipedia.org/wiki/Soylent",
-                "https://zh-yue.wikipedia.org/wiki/%E9%96%8B%E4%BF%A1%E5%88%80"
+                "https://zh-yue.wikipedia.org/wiki/%E9%96%8B%E4%BF%A1%E5%88%80",
+                "https://zh.m.wikipedia.org/zh-cn/%E5%90%89%E9%87%8E%E5%AE%B6"
             ],
             "formats": [
                 {
@@ -2713,7 +2714,8 @@
                         null,
                         "wikipedia://en.wikipedia.org/wiki/Bottle_opener",
                         "wikipedia://en.m.wikipedia.org/wiki/Soylent",
-                        "wikipedia://zh-yue.wikipedia.org/wiki/%E9%96%8B%E4%BF%A1%E5%88%80"
+                        "wikipedia://zh-yue.wikipedia.org/wiki/%E9%96%8B%E4%BF%A1%E5%88%80",
+                        "wikipedia://zh.m.wikipedia.org/zh-cn/%E5%90%89%E9%87%8E%E5%AE%B6"
                     ]
                 },
                 {
@@ -2723,7 +2725,8 @@
                         null,
                         "wikipedia://en.wikipedia.org/wiki/Bottle_opener",
                         "wikipedia://en.m.wikipedia.org/wiki/Soylent",
-                        "wikipedia://zh-yue.wikipedia.org/wiki/%E9%96%8B%E4%BF%A1%E5%88%80"
+                        "wikipedia://zh-yue.wikipedia.org/wiki/%E9%96%8B%E4%BF%A1%E5%88%80",
+                        "wikipedia://zh.m.wikipedia.org/zh-cn/%E5%90%89%E9%87%8E%E5%AE%B6"
                     ]
                 },
                 {
@@ -2733,7 +2736,8 @@
                         null,
                         "wikilinks://openwikipediaurl?url=aHR0cDovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9Cb3R0bGVfb3BlbmVy",
                         "wikilinks://openwikipediaurl?url=aHR0cDovL2VuLm0ud2lraXBlZGlhLm9yZy93aWtpL1NveWxlbnQ%3D",
-                        "wikilinks://openwikipediaurl?url=aHR0cHM6Ly96aC15dWUud2lraXBlZGlhLm9yZy93aWtpLyVFOSU5NiU4QiVFNCVCRiVBMSVFNSU4OCU4MA%3D%3D"
+                        "wikilinks://openwikipediaurl?url=aHR0cHM6Ly96aC15dWUud2lraXBlZGlhLm9yZy93aWtpLyVFOSU5NiU4QiVFNCVCRiVBMSVFNSU4OCU4MA%3D%3D",
+                        "wikilinks://openwikipediaurl?url=aHR0cHM6Ly96aC5tLndpa2lwZWRpYS5vcmcvemgtY24vJUU1JTkwJTg5JUU5JTg3JThFJUU1JUFFJUI2"
                     ]
                 },
                 {
@@ -2743,17 +2747,19 @@
                         null,
                         "wikiwand-article://en/Bottle_opener",
                         "wikiwand-article://en/Soylent",
-                        "wikiwand-article://zh-yue/%E9%96%8B%E4%BF%A1%E5%88%80"
+                        "wikiwand-article://zh-yue/%E9%96%8B%E4%BF%A1%E5%88%80",
+                        "wikiwand-article://zh/%E5%90%89%E9%87%8E%E5%AE%B6"
                     ]
                 },
                 {
                     "appIdentifier": "curiosity",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); var regex = new RegExp('(http(?:s)?://((?!www\\\\.)(?:([a-zA-Z0-9\\\\-]+)\\\\.)(?:\\\\w+\\\\.)*wikipedia\\\\.(?:com|org)/(?:wiki/)?(.*)))$'); var match = regex.exec(url); var locale = match[3]; var title = match[4]; url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&titles=' + title; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); var pageid = Object.keys(res['query']['pages'])[0]; completionHandler('curiosity://p/' + locale + '/' + pageid); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); var regex = new RegExp('(http(?:s)?://((?!www\\\\.)(?:([a-zA-Z0-9\\\\-]+)\\\\.)(?:\\\\w+\\\\.)*wikipedia\\\\.(?:com|org)/(?:[^/]+/)?(.*)))$'); var match = regex.exec(url); var locale = match[3]; var title = match[4]; url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&titles=' + title; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); var pageid = Object.keys(res['query']['pages'])[0]; completionHandler('curiosity://p/' + locale + '/' + pageid); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
                     "testResults": [
                         null,
                         "curiosity://p/en/1182550",
                         "curiosity://p/en/4632863",
-                        "curiosity://p/zh-yue/19584"
+                        "curiosity://p/zh-yue/19584",
+                        "curiosity://p/zh/41419"
                     ]
                 },
                 {
@@ -2763,7 +2769,8 @@
                         null,
                         "dasreferenz://en/Bottle_opener",
                         "dasreferenz://en/Soylent",
-                        "dasreferenz://zh-yue/%E9%96%8B%E4%BF%A1%E5%88%80"
+                        "dasreferenz://zh-yue/%E9%96%8B%E4%BF%A1%E5%88%80",
+                        "dasreferenz://zh/%E5%90%89%E9%87%8E%E5%AE%B6"
                     ]
                 }
             ]
