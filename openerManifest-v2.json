@@ -4371,6 +4371,7 @@
             "identifier" : "bilibili",
             "scheme" : "bilibili://",
             "displayName" : "bilibili",
+            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/bilibili-100.jpg",
             "country": "cn"
         },
         {
@@ -5101,6 +5102,7 @@
             "displayName": "CatchApp",
             "identifier": "catchapp",
             "storeIdentifier": "362047999",
+            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/catchapp-100.jpg",
             "scheme": "catchapp://",
             "platform": "phone",
             "country": "jp"
@@ -5109,6 +5111,7 @@
             "displayName": "CatchApp",
             "identifier": "catchapppad",
             "storeIdentifier": "438159430",
+            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/catchapp-100.jpg",
             "scheme": "catchapp://",
             "platform": "pad",
             "country": "jp"
