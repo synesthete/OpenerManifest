@@ -4526,7 +4526,6 @@
         },
         {
             "scheme" : "curiosity://",
-            "new" : true,
             "docs" : "https://tamper.zendesk.com/hc/en-us/articles/206610436-Does-Curiosity-have-a-URL-scheme- and http://stackoverflow.com/a/31685114",
             "displayName" : "Curiosity",
             "storeIdentifier" : "1045268097",
@@ -4578,7 +4577,6 @@
             "storeIdentifier" : "342792525"
         },
         {
-            "new" : true,
             "displayName" : "niconico",
             "identifier" : "niconico",
             "scheme" : "niconico://",
@@ -4598,7 +4596,6 @@
             "displayName" : "Periscope"
         },
         {
-            "new" : true,
             "displayName" : "Wolfram Alpha",
             "identifier" : "wolframalpha",
             "scheme" : "wolframalpha://",
@@ -4611,7 +4608,6 @@
             "displayName" : "Kickstarter"
         },
         {
-            "new" : true,
             "displayName" : "SmilePlayer2",
             "identifier" : "smileplayer2",
             "scheme" : "smileplayer2://",
@@ -4619,7 +4615,6 @@
         },
         {
             "scheme" : "waze://",
-            "new" : true,
             "docs" : "https://www.waze.com/about/dev",
             "displayName" : "Waze",
             "storeIdentifier" : "323229106",
@@ -4754,7 +4749,6 @@
         },
         {
             "storeIdentifier" : "896694807",
-            "new" : true,
             "docs" : "http://workingcopyapp.com/url-schemes.html",
             "displayName" : "Working Copy",
             "identifier" : "workingcopy",
@@ -4952,7 +4946,6 @@
             "displayName" : "Meerkat"
         },
         {
-            "new" : true,
             "displayName" : "NYTimes",
             "identifier" : "nytimes",
             "scheme" : "nytimes://",
