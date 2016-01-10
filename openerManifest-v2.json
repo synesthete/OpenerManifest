@@ -4219,6 +4219,22 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Task",
+            "regex": "http(?:s)?://(?:\\w+\\.)*asana\\.com/(\\d/\\d+/\\d+.*)$",
+            "testInputs": [
+                "https://app.asana.com/0/42994907916648/73995206071709"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "asana",
+                    "format": "asana://app.asana.com/$1",
+                    "testResults": [
+                        "asana://app.asana.com/0/42994907916648/73995206071709"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -4714,6 +4730,13 @@
             "identifier" : "groupon",
             "scheme" : "groupon://",
             "displayName" : "Groupon"
+        },
+        {
+            "displayName": "Asana",
+            "identifier": "asana",
+            "scheme": "asana://",
+            "storeIdentifier": "489969512",
+            "new": true
         },
         {
             "identifier" : "trello",
