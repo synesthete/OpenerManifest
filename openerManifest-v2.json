@@ -5360,6 +5360,24 @@
             ]
         },
         {
+            "displayName": "Sidefari",
+            "identifier": "sidefari",
+            "scheme": "sidefari://",
+            "storeIdentifier": "1046968235",
+            "platform": "pad",
+            "new": true,
+            "regex": "(http(?:s)?.*)",
+            "format": "sidefari$1",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "sidefarihttp://www.opener.link/",
+                "sidefarihttps://twitter.com/openerapp"
+            ]
+        },
+        {
             "displayName": "GoodReader",
             "identifier": "goodreader",
             "scheme": "ghttp://",
