@@ -2208,18 +2208,20 @@
         },
         {
             "title": "Open Profile",
-            "regex": "(?:http(?:s?)://(?:www\\.)?medium\\.com/)(@[a-zA-Z0-9_-]+)(?:(?:\\?|/\\?).*)?$",
+            "regex": "(?:http(?:s?)://(?:www\\.)?medium\\.com/)(@[a-zA-Z0-9_-]+)(/(?:latest|has-recommended|highlights))?(?:(?:\\?|/\\?).*)?$",
             "testInputs": [
                 "https://medium.com/@timonus",
-                "https://www.medium.com/@HelloAngels/hello-color-genomics-c679cddd7ed8"
+                "https://www.medium.com/@HelloAngels/hello-color-genomics-c679cddd7ed8",
+                "https://medium.com/@cba/highlights"
             ],
             "formats": [
                 {
                     "appIdentifier": "medium",
-                    "format": "medium:/$1",
+                    "format": "medium:/$1$2",
                     "testResults": [
                         "medium:/@timonus",
-                        null
+                        null,
+                        "medium:/@cba/highlights"
                     ]
                 }
             ]
