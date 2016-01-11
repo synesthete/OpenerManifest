@@ -4237,6 +4237,22 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Import PDF",
+            "regex": "http(?:s)?://([^?]+(?:\\.pdf).*)$",
+            "testInputs": [
+                "http://www.gnustep.org/resources/OpenStepSpec.pdf"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "pdfexpert",
+                    "format": "pdfehttp://$1",
+                    "testResults": [
+                        "pdfehttp://www.gnustep.org/resources/OpenStepSpec.pdf"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -5133,6 +5149,14 @@
             "scheme": "catchapp://",
             "platform": "pad",
             "country": "jp"
+        },
+        {
+            "displayName": "PDF Expert",
+            "identifier": "pdfexpert",
+            "storeIdentifier": "743974925",
+            "scheme": "pdfehttp://",
+            "docs": "https://helpspot.readdle.com/pdfexpert/index.php?pg=kb.page&id=496",
+            "new": true
         }
     ],
     "browsers": [
