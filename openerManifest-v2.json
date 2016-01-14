@@ -2048,12 +2048,13 @@
         },
         {
             "title": "Open Thread",
-            "regex": "(http(?:s)?://(?:www\\.|m\\.)?reddit\\.com/r/[a-zA-Z0-9_\\-%]+/comments/\\w+/.*)$",
+            "regex": "(http(?:s)?://(?:www\\.|m\\.)?reddit\\.com/r/[a-zA-Z0-9_\\-%]+/(?:comments|info)/\\w+.*)$",
             "testInputs": [
                 "http://www.reddit.com/r/gaming/comments/3d2ewz/nintendo_president_satoru_iwata_passes_away/",
                 "https://www.reddit.com/r/VintageApple/comments/29xca9/what_is_apples_next_step/",
                 "http://www.reddit.com/r/gaming",
-                "https://m.reddit.com/r/starcitizen/comments/3um4z1/best_race_video_ive_seen/"
+                "https://m.reddit.com/r/starcitizen/comments/3um4z1/best_race_video_ive_seen/",
+                "https://m.reddit.com/r/starcitizen/info/3um4z1/best_race_video_ive_seen/"
             ],
             "formats": [
                 {
@@ -2063,23 +2064,26 @@
                         "alienblue://thread/http://www.reddit.com/r/gaming/comments/3d2ewz/nintendo_president_satoru_iwata_passes_away/",
                         "alienblue://thread/https://www.reddit.com/r/VintageApple/comments/29xca9/what_is_apples_next_step/",
                         null,
-                        "alienblue://thread/https://m.reddit.com/r/starcitizen/comments/3um4z1/best_race_video_ive_seen/"
+                        "alienblue://thread/https://m.reddit.com/r/starcitizen/comments/3um4z1/best_race_video_ive_seen/",
+                        "alienblue://thread/https://m.reddit.com/r/starcitizen/info/3um4z1/best_race_video_ive_seen/"
                     ]
                 }
             ]
         },
         {
             "title": "Open Thread",
-            "regex": "(http(?:s)?://(?:www\\.|m\\.)?reddit\\.com/comments/\\w+/.*)$",
+            "regex": "(http(?:s)?://(?:www\\.|m\\.)?reddit\\.com/(?:comments|info)/\\w+.*)$",
             "testInputs": [
-                "http://www.reddit.com/comments/3d2ewz/nintendo_president_satoru_iwata_passes_away/"
+                "http://www.reddit.com/comments/3d2ewz/nintendo_president_satoru_iwata_passes_away/",
+                "http://www.reddit.com/info/3d2ewz"
             ],
             "formats": [
                 {
                     "appIdentifier": "alienblue",
-                    "script": "function process(url, completionHandler) { var regex = new RegExp('reddit.com/comments/(\\\\w+).*$'); var id = regex.exec(url)[1]; url = 'https://api.reddit.com/info/' + id; var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); var permalink = res[0]['data']['children'][0]['data']['permalink']; completionHandler('alienblue://https://www.reddit.com' + permalink); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script": "function process(url, completionHandler) { var regex = new RegExp('reddit.com/(?:comments|info)/(\\\\w+).*?$'); var id = regex.exec(url)[1]; url = 'https://api.reddit.com/info/' + id; var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); var permalink = res[0]['data']['children'][0]['data']['permalink']; completionHandler('alienblue://thread/https://www.reddit.com' + permalink); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
                     "testResults": [
-                        "alienblue://https://www.reddit.com/r/gaming/comments/3d2ewz/nintendo_president_satoru_iwata_passes_away/"
+                        "alienblue://thread/https://www.reddit.com/r/gaming/comments/3d2ewz/nintendo_president_satoru_iwata_passes_away/",
+                        "alienblue://thread/https://www.reddit.com/r/gaming/comments/3d2ewz/nintendo_president_satoru_iwata_passes_away/"
                     ]
                 }
             ]
