@@ -2069,6 +2069,22 @@
             ]
         },
         {
+            "title": "Open Thread",
+            "regex": "(http(?:s)?://(?:www\\.|m\\.)?reddit\\.com/comments/\\w+/.*)$",
+            "testInputs": [
+                "http://www.reddit.com/comments/3d2ewz/nintendo_president_satoru_iwata_passes_away/"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "alienblue",
+                    "script": "function process(url, completionHandler) { var regex = new RegExp('reddit.com/comments/(\\\\w+).*$'); var id = regex.exec(url)[1]; url = 'https://api.reddit.com/info/' + id; var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); var permalink = res[0]['data']['children'][0]['data']['permalink']; completionHandler('alienblue://https://www.reddit.com' + permalink); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "testResults": [
+                        "alienblue://https://www.reddit.com/r/gaming/comments/3d2ewz/nintendo_president_satoru_iwata_passes_away/"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Post",
             "regex": "http(?:s)?://(?:www\\.)?theguardian\\.(?:com|co\\.uk)/(.*)$",
             "testInputs": [
