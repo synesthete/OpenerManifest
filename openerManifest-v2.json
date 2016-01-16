@@ -730,10 +730,11 @@
         },
         {
             "title": "Open Pin",
-            "regex": "(?:http(?:s?)://(?:www.|m.)?pinterest.com/pin/)([:alnum:]+)(?:/?)$",
+            "regex": "(?:http(?:s?)://(?:www.|m.)?pinterest.com/pin/)([:alnum:]+).*?$",
             "testInputs": [
                 "https://www.pinterest.com/pin/515380751084154703/",
-                "https://www.pinterest.com/pin/A2xVdQAQgF0BNTgV0RsAAAA/"
+                "https://www.pinterest.com/pin/A2xVdQAQgF0BNTgV0RsAAAA/",
+                "https://www.pinterest.com/pin/313844667760410380/sent/?invite_code=b8e10eef0a0b837be53d265575387572&sender=49258327082795975"
             ],
             "formats": [
                 {
@@ -741,7 +742,8 @@
                     "format": "pinterest://pin/$1",
                     "testResults": [
                         "pinterest://pin/515380751084154703",
-                        "pinterest://pin/A2xVdQAQgF0BNTgV0RsAAAA"
+                        "pinterest://pin/A2xVdQAQgF0BNTgV0RsAAAA",
+                        "pinterest://pin/313844667760410380"
                     ]
                 }
             ]
