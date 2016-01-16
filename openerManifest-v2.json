@@ -696,16 +696,22 @@
         },
         {
             "title": "Open Profile",
-            "regex": "(?:http(?:s?)://(?:www.)?pinterest.com/)([a-zA-Z0-9-_]+)(?:/?)$",
+            "regex": "(?:http(?:s?)://(?:www.)?pinterest.com/)(?!pin)([a-zA-Z0-9-_]+)(?:/|/?\\?.*)?$",
             "testInputs": [
-                "https://www.pinterest.com/cnnr/"
+                "https://www.pinterest.com/cnnr/",
+                "https://www.pinterest.com/timonus/?foo=bar",
+                "https://www.pinterest.com/pin/515380751084154703/",
+                "https://www.pinterest.com/cnnr/what-time-is-it/"
             ],
             "formats": [
                 {
                     "appIdentifier": "pinterest",
                     "format": "pinterest://user/$1",
                     "testResults": [
-                        "pinterest://user/cnnr"
+                        "pinterest://user/cnnr",
+                        "pinterest://user/timonus",
+                        null,
+                        null
                     ]
                 }
             ]
