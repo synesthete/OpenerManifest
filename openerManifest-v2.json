@@ -5377,6 +5377,23 @@
                 "ghttp://www.opener.link/",
                 "ghttps://twitter.com/openerapp"
             ]
+        },
+        {
+            "displayName": "Instabrowser",
+            "identifier": "instabrowser",
+            "scheme": "instabrowser://",
+            "storeIdentifier": "527221992",
+            "new": true,
+            "regex": "http(?:s)?://(.*)$",
+            "format": "instabrowser://$1",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "instabrowser://www.opener.link/",
+                "instabrowser://twitter.com/openerapp"
+            ]
         }
     ]
 }
