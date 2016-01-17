@@ -4809,8 +4809,7 @@
             "displayName": "Asana",
             "identifier": "asana",
             "scheme": "asana://",
-            "storeIdentifier": "489969512",
-            "new": true
+            "storeIdentifier": "489969512"
         },
         {
             "identifier" : "trello",
@@ -5218,8 +5217,7 @@
             "identifier": "pdfexpert",
             "storeIdentifier": "743974925",
             "scheme": "pdfehttp://",
-            "docs": "https://helpspot.readdle.com/pdfexpert/index.php?pg=kb.page&id=496",
-            "new": true
+            "docs": "https://helpspot.readdle.com/pdfexpert/index.php?pg=kb.page&id=496"
         }
     ],
     "browsers": [
@@ -5242,7 +5240,6 @@
             "identifier": "chrome",
             "scheme": "googlechrome://",
             "storeIdentifier": "535886823",
-            "new": true,
             "regex": "http(s)?(.*)$",
             "format": "googlechrome$1$2",
             "docs": "https://developer.chrome.com/multidevice/ios/links",
@@ -5389,7 +5386,6 @@
             "identifier": "ohajiki",
             "scheme": "ohajiki://",
             "storeIdentifier": "926105977",
-            "new": true,
             "regex": "(http(?:s)?.*)",
             "format": "oo$1",
             "docs": "http://en.ohajiki.ios-web.com/url-scheme.html",
