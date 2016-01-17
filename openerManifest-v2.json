@@ -4293,6 +4293,22 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:\\w+\\.)?goodreads\\.com/(.*)$",
+            "testInputs": [
+                "https://www.goodreads.com/review/show/1514098547"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "goodreads",
+                    "format": "goodreads://$1",
+                    "testResults": [
+                        "goodreads://review/show/1514098547"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -5189,6 +5205,13 @@
             "scheme": "catchapp://",
             "platform": "pad",
             "country": "jp"
+        },
+        {
+            "displayName": "Goodreads",
+            "identifier": "goodreads",
+            "storeIdentifier": "355833469",
+            "scheme": "goodreads://",
+            "new": true
         },
         {
             "displayName": "PDF Expert",
