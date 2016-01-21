@@ -4309,6 +4309,66 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Doc",
+            "regex": "http(?:s)?://(docs\\.google\\.com/.*document/d/.*)$",
+            "testInputs": [
+                "https://docs.google.com/document/d/1qj9Dws3mDUP830CYWhe2Pf9Qtvy5_WNYXsCR2OQGC6Y/edit?usp=sharing",
+                "https://docs.google.com/spreadsheets/d/1CsyrNTdFMASIySE0AS6piHIKoKRPHR9V5ctRTg-kilU/edit?usp=sharing",
+                "https://docs.google.com/presentation/d/1CntJ96QwyuQ72EO3Bu58SVyg-Ua1G7-Ev2RJBXDQSUU/edit?usp=sharing"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "googledocs",
+                    "format": "googledocs://$1",
+                    "testResults": [
+                        "googledocs://docs.google.com/document/d/1qj9Dws3mDUP830CYWhe2Pf9Qtvy5_WNYXsCR2OQGC6Y/edit?usp=sharing",
+                        null,
+                        null
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Sheet",
+            "regex": "http(?:s)?://(docs\\.google\\.com/.*spreadsheets/d/.*)$",
+            "testInputs": [
+                "https://docs.google.com/document/d/1qj9Dws3mDUP830CYWhe2Pf9Qtvy5_WNYXsCR2OQGC6Y/edit?usp=sharing",
+                "https://docs.google.com/spreadsheets/d/1CsyrNTdFMASIySE0AS6piHIKoKRPHR9V5ctRTg-kilU/edit?usp=sharing",
+                "https://docs.google.com/presentation/d/1CntJ96QwyuQ72EO3Bu58SVyg-Ua1G7-Ev2RJBXDQSUU/edit?usp=sharing"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "googlesheets",
+                    "format": "googlesheets://$1",
+                    "testResults": [
+                        null,
+                        "googlesheets://docs.google.com/spreadsheets/d/1CsyrNTdFMASIySE0AS6piHIKoKRPHR9V5ctRTg-kilU/edit?usp=sharing",
+                        null
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Slides",
+            "regex": "http(?:s)?://(docs\\.google\\.com/.*presentation/d/.*)$",
+            "testInputs": [
+                "https://docs.google.com/document/d/1qj9Dws3mDUP830CYWhe2Pf9Qtvy5_WNYXsCR2OQGC6Y/edit?usp=sharing",
+                "https://docs.google.com/spreadsheets/d/1CsyrNTdFMASIySE0AS6piHIKoKRPHR9V5ctRTg-kilU/edit?usp=sharing",
+                "https://docs.google.com/presentation/d/1CntJ96QwyuQ72EO3Bu58SVyg-Ua1G7-Ev2RJBXDQSUU/edit?usp=sharing"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "googleslides",
+                    "format": "googleslides://$1",
+                    "testResults": [
+                        null,
+                        null,
+                        "googleslides://docs.google.com/presentation/d/1CntJ96QwyuQ72EO3Bu58SVyg-Ua1G7-Ev2RJBXDQSUU/edit?usp=sharing"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -4767,6 +4827,27 @@
             "identifier" : "dasreferenz",
             "scheme" : "dasreferenz://",
             "storeIdentifier" : "835944149"
+        },
+        {
+            "displayName": "Google Docs",
+            "identifier": "googledocs",
+            "storeIdentifier": "842842640",
+            "scheme": "googledocs",
+            "new": true
+        },
+        {
+            "displayName": "Google Sheets",
+            "identifier": "googlesheets",
+            "storeIdentifier": "842849113",
+            "scheme": "googlesheets",
+            "new": true
+        },
+        {
+            "displayName": "Google Slides",
+            "identifier": "googleslides",
+            "storeIdentifier": "879478102",
+            "scheme": "googleslides",
+            "new": true
         },
         {
             "scheme" : "gplus://",
