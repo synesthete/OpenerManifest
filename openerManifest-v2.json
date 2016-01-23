@@ -4677,7 +4677,7 @@
         {
             "scheme" : "curiosity://",
             "docs" : "https://tamper.zendesk.com/hc/en-us/articles/206610436-Does-Curiosity-have-a-URL-scheme- and http://stackoverflow.com/a/31685114",
-            "displayName" : "Curiosity",
+            "displayName" : "Inquire",
             "storeIdentifier" : "1045268097",
             "identifier" : "curiosity"
         },
