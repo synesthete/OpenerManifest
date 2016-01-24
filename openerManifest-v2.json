@@ -5290,8 +5290,7 @@
             "displayName": "Goodreads",
             "identifier": "goodreads",
             "storeIdentifier": "355833469",
-            "scheme": "goodreads://",
-            "new": true
+            "scheme": "goodreads://"
         },
         {
             "displayName": "PDF Expert",
@@ -5519,7 +5518,6 @@
             "identifier": "instabrowser",
             "scheme": "instabrowser://",
             "storeIdentifier": "527221992",
-            "new": true,
             "regex": "http(?:s)?://(.*)$",
             "format": "instabrowser://$1",
             "testInputs": [
