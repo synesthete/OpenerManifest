@@ -4832,21 +4832,21 @@
             "displayName": "Google Docs",
             "identifier": "googledocs",
             "storeIdentifier": "842842640",
-            "scheme": "googledocs",
+            "scheme": "googledocs://",
             "new": true
         },
         {
             "displayName": "Google Sheets",
             "identifier": "googlesheets",
             "storeIdentifier": "842849113",
-            "scheme": "googlesheets",
+            "scheme": "googlesheets://",
             "new": true
         },
         {
             "displayName": "Google Slides",
             "identifier": "googleslides",
             "storeIdentifier": "879478102",
-            "scheme": "googleslides",
+            "scheme": "googleslides://",
             "new": true
         },
         {
