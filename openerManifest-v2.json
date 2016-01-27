@@ -5479,6 +5479,23 @@
             ]
         },
         {
+            "displayName": "Frameless",
+            "identifier": "frameless",
+            "scheme": "frameless://",
+            "storeIdentifier": "933580264",
+            "regex": "http(?:s)?://(.*)$",
+            "format": "frameless://$1",
+            "new": true,
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "frameless://www.opener.link/",
+                "frameless://twitter.com/openerapp"
+            ]
+        },
+        {
             "displayName": "Sidefari",
             "identifier": "sidefari",
             "scheme": "sidefari://",
