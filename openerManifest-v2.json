@@ -4369,6 +4369,22 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Add User",
+            "regex": "http(?:s)?://(?:www\\.)?snapchat\\.com/add/([^/]+).*?$",
+            "testInputs": [
+                "https://www.snapchat.com/add/hunterwalk"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "snapchat",
+                    "format": "snapchat://add/$1",
+                    "testResults": [
+                        "snapchat://add/hunterwalk"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -5298,6 +5314,13 @@
             "storeIdentifier": "743974925",
             "scheme": "pdfehttp://",
             "docs": "https://helpspot.readdle.com/pdfexpert/index.php?pg=kb.page&id=496"
+        },
+        {
+            "displayName": "Snapchat",
+            "identifier": "snapchat",
+            "storeIdentifier": "447188370",
+            "scheme": "snapchat://",
+            "new": true
         }
     ],
     "browsers": [
