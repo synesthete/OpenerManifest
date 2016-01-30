@@ -4385,6 +4385,22 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Add User",
+            "regex": "http(?:s)?://(?:www\\.)?peach\\.cool/add/([^/]+).*?$",
+            "testInputs": [
+                "http://peach.cool/add/timonus"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "peach",
+                    "format": "peach://add/$1",
+                    "testResults": [
+                        "peach://add/timonus"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -5320,6 +5336,13 @@
             "identifier": "snapchat",
             "storeIdentifier": "447188370",
             "scheme": "snapchat://",
+            "new": true
+        },
+        {
+            "displayName": "Peach",
+            "identifier": "peach",
+            "storeIdentifier": "1067891186",
+            "scheme": "peach://",
             "new": true
         }
     ],
