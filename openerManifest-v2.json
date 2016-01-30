@@ -2746,7 +2746,8 @@
                 "http://en.wikipedia.org/wiki/Bottle_opener",
                 "http://en.m.wikipedia.org/wiki/Soylent",
                 "https://zh-yue.wikipedia.org/wiki/%E9%96%8B%E4%BF%A1%E5%88%80",
-                "https://zh.m.wikipedia.org/zh-cn/%E5%90%89%E9%87%8E%E5%AE%B6"
+                "https://zh.m.wikipedia.org/zh-cn/%E5%90%89%E9%87%8E%E5%AE%B6",
+                "https://zh.m.wikipedia.org/zh/%E4%B9%A0%E8%BF%91%E5%B9%B3"
             ],
             "formats": [
                 {
@@ -2757,7 +2758,8 @@
                         "wikipedia://en.wikipedia.org/wiki/Bottle_opener",
                         "wikipedia://en.m.wikipedia.org/wiki/Soylent",
                         "wikipedia://zh-yue.wikipedia.org/wiki/%E9%96%8B%E4%BF%A1%E5%88%80",
-                        "wikipedia://zh.m.wikipedia.org/zh-cn/%E5%90%89%E9%87%8E%E5%AE%B6"
+                        "wikipedia://zh.m.wikipedia.org/zh-cn/%E5%90%89%E9%87%8E%E5%AE%B6",
+                        "wikipedia://zh.m.wikipedia.org/zh/%E4%B9%A0%E8%BF%91%E5%B9%B3"
                     ]
                 },
                 {
@@ -2768,18 +2770,20 @@
                         "wikipedia://en.wikipedia.org/wiki/Bottle_opener",
                         "wikipedia://en.m.wikipedia.org/wiki/Soylent",
                         "wikipedia://zh-yue.wikipedia.org/wiki/%E9%96%8B%E4%BF%A1%E5%88%80",
-                        "wikipedia://zh.m.wikipedia.org/zh-cn/%E5%90%89%E9%87%8E%E5%AE%B6"
+                        "wikipedia://zh.m.wikipedia.org/zh-cn/%E5%90%89%E9%87%8E%E5%AE%B6",
+                        "wikipedia://zh.m.wikipedia.org/zh/%E4%B9%A0%E8%BF%91%E5%B9%B3"
                     ]
                 },
                 {
                     "appIdentifier": "wikilinks",
-                    "script": "function process(url, completion) { completion('wikilinks://openwikipediaurl?url=' + encodeURIComponent(btoa(url))); }",
+                    "script": "function process(url, completion) { url = url.replace(new RegExp('\\.org/[^/]+/'), '.org/wiki/'); completion('wikilinks://openwikipediaurl?url=' + encodeURIComponent(btoa(url))); }",
                     "testResults": [
                         null,
                         "wikilinks://openwikipediaurl?url=aHR0cDovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9Cb3R0bGVfb3BlbmVy",
                         "wikilinks://openwikipediaurl?url=aHR0cDovL2VuLm0ud2lraXBlZGlhLm9yZy93aWtpL1NveWxlbnQ%3D",
                         "wikilinks://openwikipediaurl?url=aHR0cHM6Ly96aC15dWUud2lraXBlZGlhLm9yZy93aWtpLyVFOSU5NiU4QiVFNCVCRiVBMSVFNSU4OCU4MA%3D%3D",
-                        "wikilinks://openwikipediaurl?url=aHR0cHM6Ly96aC5tLndpa2lwZWRpYS5vcmcvemgtY24vJUU1JTkwJTg5JUU5JTg3JThFJUU1JUFFJUI2"
+                        "wikilinks://openwikipediaurl?url=aHR0cHM6Ly96aC5tLndpa2lwZWRpYS5vcmcvd2lraS8lRTUlOTAlODklRTklODclOEUlRTUlQUUlQjY%3D",
+                        "wikilinks://openwikipediaurl?url=aHR0cHM6Ly96aC5tLndpa2lwZWRpYS5vcmcvd2lraS8lRTQlQjklQTAlRTglQkYlOTElRTUlQjklQjM%3D"
                     ]
                 },
                 {
@@ -2790,7 +2794,8 @@
                         "wikiwand-article://en/Bottle_opener",
                         "wikiwand-article://en/Soylent",
                         "wikiwand-article://zh-yue/%E9%96%8B%E4%BF%A1%E5%88%80",
-                        "wikiwand-article://zh/%E5%90%89%E9%87%8E%E5%AE%B6"
+                        "wikiwand-article://zh/%E5%90%89%E9%87%8E%E5%AE%B6",
+                        "wikiwand-article://zh/%E4%B9%A0%E8%BF%91%E5%B9%B3"
                     ]
                 },
                 {
@@ -2801,7 +2806,8 @@
                         "curiosity://p/en/1182550",
                         "curiosity://p/en/4632863",
                         "curiosity://p/zh-yue/19584",
-                        "curiosity://p/zh/41419"
+                        "curiosity://p/zh/41419",
+                        "curiosity://p/zh/112582"
                     ]
                 },
                 {
@@ -2812,7 +2818,8 @@
                         "dasreferenz://en/Bottle_opener",
                         "dasreferenz://en/Soylent",
                         "dasreferenz://zh-yue/%E9%96%8B%E4%BF%A1%E5%88%80",
-                        "dasreferenz://zh/%E5%90%89%E9%87%8E%E5%AE%B6"
+                        "dasreferenz://zh/%E5%90%89%E9%87%8E%E5%AE%B6",
+                        "dasreferenz://zh/%E4%B9%A0%E8%BF%91%E5%B9%B3"
                     ]
                 }
             ]
