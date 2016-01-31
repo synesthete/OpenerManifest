@@ -4407,6 +4407,24 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Post",
+            "regex": "http(?:s)?://(?:www\\.)?wear\\.jp/[^/]+/coordinate/(\\d+).*?$",
+            "testInputs": [
+                "http://wear.jp/chihirok1215/coordinate/6088645/",
+                "http://wear.jp/kumikofunayama/coordinate/6086529/?utm_source=twitter&utm_medium=w_aps&utm_campaign=code02_6086529"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "wear",
+                    "format": "wear2020://wear.jp/coordinate/$1",
+                    "testResults": [
+                        "wear2020://wear.jp/coordinate/6088645",
+                        "wear2020://wear.jp/coordinate/6086529"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -5349,6 +5367,13 @@
             "identifier": "peach",
             "storeIdentifier": "1067891186",
             "scheme": "peach://",
+            "new": true
+        },
+        {
+            "displayName": "WEAR",
+            "identifier": "wear",
+            "storeIdentifier": "725208930",
+            "scheme": "wear2020://",
             "new": true
         }
     ],
