@@ -1444,6 +1444,24 @@
             ]
         },
         {
+            "title": "Open Channel",
+            "regex": "http(?:s)?://(?:www\\.|m\\.)?youtube\\.com/channel/([a-zA-Z0-9_\\-]+).*",
+            "testInputs": [
+                "https://www.youtube.com/channel/UC4eYXhJI4-7wSWc8UNRwD4A",
+                "https://www.youtube.com/channel/UCqPTgFxqw_46kJGmEznQqqQ"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "youtube",
+                    "format": "youtube://youtube.com/channel/$1",
+                    "testResults": [
+                        "youtube://youtube.com/channel/UC4eYXhJI4-7wSWc8UNRwD4A",
+                        "youtube://youtube.com/channel/UCqPTgFxqw_46kJGmEznQqqQ"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Video",
             "regex": "(http(s?)://(www.)?vine.co/v/[0-9a-zA-Z]+(/?))$",
             "testInputs": [
