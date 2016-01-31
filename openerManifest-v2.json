@@ -1411,7 +1411,7 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(?:s)?://(?:www\\.|m\\.)?youtube\\.com/user/([\\w]+).*",
+            "regex": "http(?:s)?://(?:www\\.|m\\.)?youtube\\.com/user/([\\w]+).*$",
             "testInputs": [
                 "https://www.youtube.com/user/timonominus",
                 "https://m.youtube.com/user/timonominus"
@@ -1445,7 +1445,7 @@
         },
         {
             "title": "Open Channel",
-            "regex": "http(?:s)?://(?:www\\.|m\\.)?youtube\\.com/channel/([a-zA-Z0-9_\\-]+).*",
+            "regex": "http(?:s)?://(?:www\\.|m\\.)?youtube\\.com/channel/([a-zA-Z0-9_\\-]+).*$",
             "testInputs": [
                 "https://www.youtube.com/channel/UC4eYXhJI4-7wSWc8UNRwD4A",
                 "https://www.youtube.com/channel/UCqPTgFxqw_46kJGmEznQqqQ"
@@ -1457,6 +1457,22 @@
                     "testResults": [
                         "youtube://youtube.com/channel/UC4eYXhJI4-7wSWc8UNRwD4A",
                         "youtube://youtube.com/channel/UCqPTgFxqw_46kJGmEznQqqQ"
+                    ]
+                },
+                {
+                    "appIdentifier": "protube",
+                    "format": "protube://channel/$1",
+                    "testResults": [
+                        "protube://channel/UC4eYXhJI4-7wSWc8UNRwD4A",
+                        "protube://channel/UCqPTgFxqw_46kJGmEznQqqQ"
+                    ]
+                },
+                {
+                    "appIdentifier": "youplayer",
+                    "format": "youplayer://youtube.com/channel/$1",
+                    "testResults": [
+                        "youplayer://youtube.com/channel/UC4eYXhJI4-7wSWc8UNRwD4A",
+                        "youplayer://youtube.com/channel/UCqPTgFxqw_46kJGmEznQqqQ"
                     ]
                 }
             ]
