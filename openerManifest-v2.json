@@ -1478,6 +1478,36 @@
             ]
         },
         {
+            "title": "Open Playlist",
+            "regex": "http(?:s)?://(?:www\\.|m\\.)?youtube\\.com/playlist.*list=([a-zA-Z0-9_\\-]+).*?$",
+            "testInputs": [
+                "https://www.youtube.com/playlist?list=PL2ED57C3E5C561B91"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "youtube",
+                    "format": "youtube://youtube.com/playlist?list=$1",
+                    "testResults": [
+                        "youtube://youtube.com/playlist?list=PL2ED57C3E5C561B91"
+                    ]
+                },
+                {
+                    "appIdentifier": "protube",
+                    "format": "protube://playlist/$1",
+                    "testResults": [
+                        "protube://playlist/PL2ED57C3E5C561B91"
+                    ]
+                },
+                {
+                    "appIdentifier": "youplayer",
+                    "format": "youplayer://youtube.com/playlist?list=$1",
+                    "testResults": [
+                        "youplayer://youtube.com/playlist?list=PL2ED57C3E5C561B91"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Video",
             "regex": "(http(s?)://(www.)?vine.co/v/[0-9a-zA-Z]+(/?))$",
             "testInputs": [
