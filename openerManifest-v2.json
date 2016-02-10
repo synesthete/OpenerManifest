@@ -1420,6 +1420,20 @@
                         "cornertube://video/S4WNO4tchUk",
                         "cornertube://video/ngElkyQ6Rhs"
                     ]
+                },
+                {
+                    "appIdentifier": "piptube",
+                    "format": "piptube://openvideo?url=https://www.youtube.com/watch?v=$1",
+                    "testResults": [
+                        "piptube://openvideo?url=https://www.youtube.com/watch?v=MTY1Kje0yLg",
+                        "piptube://openvideo?url=https://www.youtube.com/watch?v=0uY7gLZDmn4",
+                        "piptube://openvideo?url=https://www.youtube.com/watch?v=MFzDaBzBlL0",
+                        "piptube://openvideo?url=https://www.youtube.com/watch?v=mzun7_Ynmks",
+                        "piptube://openvideo?url=https://www.youtube.com/watch?v=JEiSTzK-A2A",
+                        "piptube://openvideo?url=https://www.youtube.com/watch?v=yWDJoJm-Rk0",
+                        "piptube://openvideo?url=https://www.youtube.com/watch?v=S4WNO4tchUk",
+                        "piptube://openvideo?url=https://www.youtube.com/watch?v=ngElkyQ6Rhs"
+                    ]
                 }
             ]
         },
@@ -4642,6 +4656,14 @@
             "identifier": "cornertube",
             "storeIdentifier": "1073199994",
             "scheme": "cornertube://",
+            "platform": "pad",
+            "new": true
+        },
+        {
+            "displayName": "PipTube",
+            "identifier": "piptube",
+            "storeIdentifier": "1064959109",
+            "scheme": "piptube://",
             "platform": "pad",
             "new": true
         },
