@@ -1406,6 +1406,20 @@
                         "youplayer://youtube.com/watch?v=S4WNO4tchUk",
                         "youplayer://youtube.com/watch?v=ngElkyQ6Rhs"
                     ]
+                },
+                {
+                    "appIdentifier": "cornertube",
+                    "format": "cornertube://video/$1",
+                    "testResults": [
+                        "cornertube://video/MTY1Kje0yLg",
+                        "cornertube://video/0uY7gLZDmn4",
+                        "cornertube://video/MFzDaBzBlL0",
+                        "cornertube://video/mzun7_Ynmks",
+                        "cornertube://video/JEiSTzK-A2A",
+                        "cornertube://video/yWDJoJm-Rk0",
+                        "cornertube://video/S4WNO4tchUk",
+                        "cornertube://video/ngElkyQ6Rhs"
+                    ]
                 }
             ]
         },
@@ -4622,6 +4636,14 @@
             "identifier" : "youplayer",
             "scheme" : "youplayer://",
             "displayName" : "YouPlayer"
+        },
+        {
+            "displayName": "CornerTube",
+            "identifier": "cornertube",
+            "storeIdentifier": "1073199994",
+            "scheme": "cornertube://",
+            "platform": "pad",
+            "new": true
         },
         {
             "storeIdentifier" : "639881495",
