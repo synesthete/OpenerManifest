@@ -5464,22 +5464,19 @@
             "displayName": "Snapchat",
             "identifier": "snapchat",
             "storeIdentifier": "447188370",
-            "scheme": "snapchat://",
-            "new": true
+            "scheme": "snapchat://"
         },
         {
             "displayName": "Peach",
             "identifier": "peach",
             "storeIdentifier": "1067891186",
-            "scheme": "peach://",
-            "new": true
+            "scheme": "peach://"
         },
         {
             "displayName": "WEAR",
             "identifier": "wear",
             "storeIdentifier": "725208930",
-            "scheme": "wear2020://",
-            "new": true
+            "scheme": "wear2020://"
         }
     ],
     "browsers": [
@@ -5667,7 +5664,6 @@
             "storeIdentifier": "933580264",
             "regex": "http(?:s)?://(.*)$",
             "format": "frameless://$1",
-            "new": true,
             "testInputs": [
                 "http://www.opener.link/",
                 "https://twitter.com/openerapp"
