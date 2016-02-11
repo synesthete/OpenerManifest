@@ -1409,16 +1409,16 @@
                 },
                 {
                     "appIdentifier": "cornertube",
-                    "format": "cornertube://video/$1",
+                    "format": "cornertube://video/https://youtu.be/$1",
                     "testResults": [
-                        "cornertube://video/MTY1Kje0yLg",
-                        "cornertube://video/0uY7gLZDmn4",
-                        "cornertube://video/MFzDaBzBlL0",
-                        "cornertube://video/mzun7_Ynmks",
-                        "cornertube://video/JEiSTzK-A2A",
-                        "cornertube://video/yWDJoJm-Rk0",
-                        "cornertube://video/S4WNO4tchUk",
-                        "cornertube://video/ngElkyQ6Rhs"
+                        "cornertube://video/https://youtu.be/MTY1Kje0yLg",
+                        "cornertube://video/https://youtu.be/0uY7gLZDmn4",
+                        "cornertube://video/https://youtu.be/MFzDaBzBlL0",
+                        "cornertube://video/https://youtu.be/mzun7_Ynmks",
+                        "cornertube://video/https://youtu.be/JEiSTzK-A2A",
+                        "cornertube://video/https://youtu.be/yWDJoJm-Rk0",
+                        "cornertube://video/https://youtu.be/S4WNO4tchUk",
+                        "cornertube://video/https://youtu.be/ngElkyQ6Rhs"
                     ]
                 },
                 {
