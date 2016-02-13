@@ -3900,58 +3900,30 @@
         {
             "title": "Add Tracking Info",
             "regex": "http(?:s)?://(?:www\\.|m\\.)?(?:tools\\.|trkcnfrm\\.smi\\.|trkcnfrm1\\.smi\\.)?usps\\.com.*(?:\\?|&)(?:tLabels|strOrigTrackNum|origTrackNum|qtc_tLabels1|formattedLabel)=(\\d+).*$",
-            "testInputs": [
-                "https://tools.usps.com/go/TrackConfirmAction_input?origTrackNum=9400111899561802343330",
-                "https://tools.usps.com/go/TrackConfirmAction.action?tLabels=9400110200793517579963",
-                "https://tools.usps.com/go/TrackConfirmAction_input?strOrigTrackNum=9274890100133055843697",
-                "http://trkcnfrm1.smi.usps.com/PTSInternetWeb/InterLabelInquiry.do?origTrackNum=9400110200793460039798"
-            ],
             "formats": [
                 {
                     "appIdentifier": "deliveries",
-                    "format": "deliveries://add?from=www.usps.com&no=$1",
-                    "testResults": [
-                        "deliveries://add?from=www.usps.com&no=9400111899561802343330",
-                        "deliveries://add?from=www.usps.com&no=9400110200793517579963",
-                        "deliveries://add?from=www.usps.com&no=9274890100133055843697",
-                        "deliveries://add?from=www.usps.com&no=9400110200793460039798"
-                    ]
+                    "script": "function process(url, completionHandler) { completionHandler('deliveries://add/' + encodeURIComponent(url)); }"
                 }
             ]
         },
         {
             "title": "Add Tracking Info",
             "regex": "http(?:s)?://(?:www\\.|m\\.)?(?:wwwapps\\.|campusship\\.)?ups\\.com.*(?:\\?|&)(?:InquiryNumber1|tracknum|trackNums|inquiry1|trackingNumber|InquiryNumber)=(\\w+).*$",
-            "testInputs": [
-                "https://wwwapps.ups.com/WebTracking/track?track=yes&trackNums=1Z602E9AYN07811560"
-            ],
             "formats": [
                 {
                     "appIdentifier": "deliveries",
-                    "format": "deliveries://add?from=www.ups.com&no=$1",
-                    "testResults": [
-                        "deliveries://add?from=www.ups.com&no=1Z602E9AYN07811560"
-                    ]
+                    "script": "function process(url, completionHandler) { completionHandler('deliveries://add/' + encodeURIComponent(url)); }"
                 }
             ]
         },
         {
             "title": "Add Tracking Info",
             "regex": "http(?:s)?://(?:www\\.|m\\.)?(?:spportal\\.)?(?:fedex|federalexpress)\\.com.*(?:\\?|&)(?:tracknumbers|tracknums|trackNum|track_number_0|tracknumber_list|TRACKING|PID)=(\\d+).*$",
-            "testInputs": [
-                "http://www.fedex.com/Tracking?action=track&language=english&cntry_code=us&initial=x&tracknumbers=820405462507399",
-                "https://www.fedex.com/insight/findit/nrp.jsp?tracknumbers=760250515283084&language=en&opco=FDEG&clientype=ivshpalrt",
-                "http://www.fedex.com/Tracking?tracknumbers=995365610793322"
-            ],
             "formats": [
                 {
                     "appIdentifier": "deliveries",
-                    "format": "deliveries://add?from=www.fedex.com&no=$1",
-                    "testResults": [
-                        "deliveries://add?from=www.fedex.com&no=820405462507399",
-                        "deliveries://add?from=www.fedex.com&no=760250515283084",
-                        "deliveries://add?from=www.fedex.com&no=995365610793322"
-                    ]
+                    "script": "function process(url, completionHandler) { completionHandler('deliveries://add/' + encodeURIComponent(url)); }"
                 }
             ]
         },
@@ -3961,7 +3933,7 @@
             "formats": [
                 {
                     "appIdentifier": "deliveries",
-                    "format": "deliveries://add?from=www.dhl.com&no=$1"
+                    "script": "function process(url, completionHandler) { completionHandler('deliveries://add/' + encodeURIComponent(url)); }"
                 }
             ]
         },
@@ -3971,7 +3943,7 @@
             "formats": [
                 {
                     "appIdentifier": "deliveries",
-                    "format": "deliveries://add?from=www.dhlglobalmail.com&no=$1"
+                    "script": "function process(url, completionHandler) { completionHandler('deliveries://add/' + encodeURIComponent(url)); }"
                 }
             ]
         },
@@ -3981,7 +3953,7 @@
             "formats": [
                 {
                     "appIdentifier": "deliveries",
-                    "format": "deliveries://add?from=nolp.dhl.de&no=$1"
+                    "script": "function process(url, completionHandler) { completionHandler('deliveries://add/' + encodeURIComponent(url)); }"
                 }
             ]
         },
@@ -3991,7 +3963,7 @@
             "formats": [
                 {
                     "appIdentifier": "deliveries",
-                    "format": "deliveries://add?from=www.dhl.co.uk&no=$1"
+                    "script": "function process(url, completionHandler) { completionHandler('deliveries://add/' + encodeURIComponent(url)); }"
                 }
             ]
         },
@@ -4001,79 +3973,47 @@
             "formats": [
                 {
                     "appIdentifier": "deliveries",
-                    "format": "deliveries://add?from=checkout.google.com&no=$1"
+                    "script": "function process(url, completionHandler) { completionHandler('deliveries://add/' + encodeURIComponent(url)); }"
                 }
             ]
         },
         {
             "title": "Add Tracking Info",
             "regex": "http(?:s)?://(?:\\w+\\.)?ontrac\\.com.*(?:\\?|&)tracking_number=(\\w+).*$",
-            "testInputs": [
-                "http://www.ontrac.com/trackingres.asp?tracking_number=C11121559239462"
-            ],
             "formats": [
                 {
                     "appIdentifier": "deliveries",
-                    "format": "deliveries://add?from=www.ontrac.com&no=$1",
-                    "testResults": [
-                        "deliveries://add?from=www.ontrac.com&no=C11121559239462"
-                    ]
+                    "script": "function process(url, completionHandler) { completionHandler('deliveries://add/' + encodeURIComponent(url)); }"
                 }
             ]
         },
         {
             "title": "Add Tracking Info",
             "regex": "http(?:s)?://(?:www\\.)?(?:secure\\.|secure1\\.|secure2\\.)?(?:store\\.)?apple\\.com/(?:.*)?(?!hk-zh/|jp/)(?:order/guest/|vieworder/|orderNumberField=|olsson=)(\\w+).*$",
-            "testInputs": [
-                "http://store.apple.com/xc/us/vieworder/W577308877",
-                "https://secure1.store.apple.com/shop/order/guest/W562164668/9ff09f2b53368a8ef9859718fd72db66ad1a281020568d56e7dc2612f5ead177e54385d02923bc0da45c137cbdbfb11215b3daef840d78d5398e209eae60165b83bd8ccc5fa47465b2b789e0024d0b57?e=true",
-                "https://secure1.store.apple.com/us-iphotoprint/shop/order/guest/W232388946/99ad9e8032c3acd1ec34ada9f66062c22f3f15cb363c16cf9f578f7c300f2bf3f5b9a784bf0da756747f15685a9d5d5a35f2bce1a1c9a72ce0328901c3ca88c9d0e01954038a477454b0a090a6668a03?e=true",
-                "https://secure1.store.apple.com/shop/order/guest/W252766103/ef79b9bbdcc076e491a5df64e8eed86c66f8fbc750669691df6a80b449e45d45775acd6de032af40e6d93d7505134a2e1308829bfaf8089f381c22d864023d682df8ae8aa395a469005cb8463abb6a9c?e=true",
-                "https://secure1.store.apple.com/shop/order/guest/W415609115/46bace3a988c2db31dea18fbdc90a993b20acda3d6ae8077988a799283e3912c603edebdef63c5f316103416843e17f5b86983d5b3678fdd933030aae384e3890dd02eb7f81e2b83257f3e586403e802?e=true"
-            ],
             "formats": [
                 {
                     "appIdentifier": "deliveries",
-                    "format": "deliveries://add?from=www.apple.com&no=$1",
-                    "testResults": [
-                        "deliveries://add?from=www.apple.com&no=W577308877",
-                        "deliveries://add?from=www.apple.com&no=W562164668",
-                        "deliveries://add?from=www.apple.com&no=W232388946",
-                        "deliveries://add?from=www.apple.com&no=W252766103",
-                        "deliveries://add?from=www.apple.com&no=W415609115"
-                    ]
+                    "script": "function process(url, completionHandler) { completionHandler('deliveries://add/' + encodeURIComponent(url)); }"
                 }
             ]
         },
         {
             "title": "Add Tracking Info",
             "regex": "http(?:s)?://(?:www\\.)?(?:secure\\.|secure1\\.|secure2\\.)?(?:store\\.)?apple\\.com/(?:.*)?hk-zh(/.*)?(?:order/guest/|vieworder/|orderNumberField=|olsson=)(\\w+).*$",
-            "testInputs": [
-                "http://store.apple.com/xc/us/vieworder/W577308877"
-            ],
             "formats": [
                 {
                     "appIdentifier": "deliveries",
-                    "format": "deliveries://add?from=www.apple.com/hk&no=$1",
-                    "testResults": [
-                        null
-                    ]
+                    "script": "function process(url, completionHandler) { completionHandler('deliveries://add/' + encodeURIComponent(url)); }"
                 }
             ]
         },
         {
             "title": "Add Tracking Info",
             "regex": "http(?:s)?://(?:www\\.)?(?:secure\\.|secure1\\.|secure2\\.)?(?:store\\.)?apple\\.com/(?:.*)?hk-zh(/.*)?(?:order/guest/|vieworder/|orderNumberField=|olsson=)(\\w+).*$",
-            "testInputs": [
-                "http://store.apple.com/xc/us/vieworder/W577308877"
-            ],
             "formats": [
                 {
                     "appIdentifier": "deliveries",
-                    "format": "deliveries://add?from=www.apple.com/japan&no=$1",
-                    "testResults": [
-                        null
-                    ]
+                    "script": "function process(url, completionHandler) { completionHandler('deliveries://add/' + encodeURIComponent(url)); }"
                 }
             ]
         },
@@ -4083,27 +4023,17 @@
             "formats": [
                 {
                     "appIdentifier": "deliveries",
-                    "format": "deliveries://add?from=www.apple.com&no=$1"
+                    "script": "function process(url, completionHandler) { completionHandler('deliveries://add/' + encodeURIComponent(url)); }"
                 }
             ]
         },
         {
             "title": "Add Tracking Info",
             "regex": "http(?:s)?://(?:\\w+\\.)*(amazon(?:\\.\\w+)+).*(?:\\?|&)(?:trackingNumber|orderId|orderID|oid|orderIDs)=(\\d{3,3}-\\d+-\\d+).*$",
-            "testInputs": [
-                "https://www.amazon.com/gp/your-account/ship-track/ref=st_v1_desktop_redirect?ie=UTF8&orderId=114-7368942-6117804&packageIndex=0&shipmentId=Dn1m3M0Nb",
-                "https://www.amazon.com/gp/your-account/ship-track/ref=oh_aui_st_v2_btn?ie=UTF8&itemId=qgjikuirkqttp&orderId=113-6959523-2638633&packageIndex=0&shipmentId=DyzGGykjk",
-                "https://www.amazon.com/gp/your-account/order-details?ie=UTF8&orderID=116-1875409-7478662&ref_=pe_385040_128020140_TE_SIMP_on"
-            ],
             "formats": [
                 {
                     "appIdentifier": "deliveries",
-                    "format": "deliveries://add?from=www.$1&no=$2",
-                    "testResults": [
-                        "deliveries://add?from=www.amazon.com&no=114-7368942-6117804",
-                        "deliveries://add?from=www.amazon.com&no=113-6959523-2638633",
-                        "deliveries://add?from=www.amazon.com&no=116-1875409-7478662"
-                    ]
+                    "script": "function process(url, completionHandler) { completionHandler('deliveries://add/' + encodeURIComponent(url)); }"
                 }
             ]
         },
