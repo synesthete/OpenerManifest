@@ -2072,7 +2072,7 @@
             "formats": [
                 {
                     "appIdentifier": "producthunt",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*/r/[0-9a-fA-F]+/(\\\\d+).*'); var match = regex.exec(res)[1]; completionHandler('producthunt://post/' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*producthunt://post/(\\\\d+).*'); var match = regex.exec(res)[1]; completionHandler('producthunt://post/' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
                     "testResults": [
                         "producthunt://post/22922",
                         "producthunt://post/23810",
