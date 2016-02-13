@@ -4517,6 +4517,28 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Story",
+            "regex": "http(?:s)?://(?:\\w+\\.)*media\\.daum\\.net/(?:m/media/(?:[^/]+/)?newsview/|v/)(\\d+).*?$",
+            "testInputs": [
+                "http://m.media.daum.net/m/media/politics/newsview/20160213102546878",
+                "http://m.media.daum.net/m/media/politics/newsview/20160213063403758",
+                "http://m.media.daum.net/m/media/newsview/20090423095421323",
+                "http://v.media.daum.net/v/20160213102546878?f=m"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "daum",
+                    "format": "daumapps://web?url=http%3A%2F%2Fv.media.daum.net%2Fv%2F$1%3Ff%3Dm",
+                    "testResults": [
+                        "daumapps://web?url=http%3A%2F%2Fv.media.daum.net%2Fv%2F20160213102546878%3Ff%3Dm",
+                        "daumapps://web?url=http%3A%2F%2Fv.media.daum.net%2Fv%2F20160213063403758%3Ff%3Dm",
+                        "daumapps://web?url=http%3A%2F%2Fv.media.daum.net%2Fv%2F20090423095421323%3Ff%3Dm",
+                        "daumapps://web?url=http%3A%2F%2Fv.media.daum.net%2Fv%2F20160213102546878%3Ff%3Dm"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -5477,6 +5499,13 @@
             "identifier": "wear",
             "storeIdentifier": "725208930",
             "scheme": "wear2020://"
+        },
+        {
+            "displayName": "Daum",
+            "identifier": "daum",
+            "storeIdentifier": "365494029",
+            "scheme": "daumapps://",
+            "new": true
         }
     ],
     "browsers": [
