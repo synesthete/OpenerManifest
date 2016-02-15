@@ -217,6 +217,22 @@
             ]
         },
         {
+            "title": "Open Muffle",
+            "regex": "http(?:s)?://(?:www\\.)?twitterrific\\.com/ios/muffle(?:/)?\\?add=([^&]*)$",
+            "testInputs": [
+                "http://twitterrific.com/ios/muffle?add=Imma%20let%20you%20finish%20%3A%3A%20Kanye"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "twitterrific",
+                    "format": "twitterrific://muffle?add=$1",
+                    "testResults": [
+                        "twitterrific://muffle?add=Imma%20let%20you%20finish%20%3A%3A%20Kanye"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Post",
             "regex": "http(?:s)?://(?:www\\.)?(?:instagram\\.com|instagr\\.am)/p/([a-zA-Z0-9_\\-\\.]+).*$",
             "testInputs": [
