@@ -4469,6 +4469,108 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Profile",
+            "regex": "http(?:s)?://([^\\.]+)\\.deviantart\\.com(?:(/)?\\?.*|/(gallery(/)?(\\?.*)?)?)?$",
+            "testInputs": [
+                "http://eving-1.deviantart.com/",
+                "http://eving-1.deviantart.com/gallery",
+                "http://eving-1.deviantart.com/gallery/",
+                "http://eving-1.deviantart.com/gallery/?foo=bar",
+                "http://eving-1.deviantart.com/gallery?foo=bar",
+                "http://fiookami.deviantart.com/",
+                "http://eving-1.deviantart.com/art/Girl-and-rain-558640205",
+                "http://eving-1.deviantart.com/gallery/xyz"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "deviantart",
+                    "format": "deviantart://profile/$1",
+                    "testResults": [
+                        "deviantart://profile/eving-1",
+                        "deviantart://profile/eving-1",
+                        "deviantart://profile/eving-1",
+                        "deviantart://profile/eving-1",
+                        "deviantart://profile/eving-1",
+                        "deviantart://profile/fiookami",
+                        null,
+                        null
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Gallery",
+            "regex": "http(?:s)?://([^\\.]+)\\.deviantart\\.com/gallery/\\d+.*$",
+            "testInputs": [
+                "http://daekazu.deviantart.com/gallery/778245/Pink-Sugar"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "deviantart",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*://gallery/([^\\\"]+).*'); var match = regex.exec(res)[1]; completionHandler('deviantart://gallery/' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "testResults": [
+                        "deviantart://gallery/daekazu/D70348AB-51C4-4086-088F-BA379308C7EA"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Collection",
+            "regex": "http(?:s)?://([^\\.]+)\\.deviantart\\.com/favourites/\\d+.*$",
+            "testInputs": [
+                "http://dark-tiramisu.deviantart.com/favourites/67530142/Gravity-Falls?offset=0"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "deviantart",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*://collection/([^\\\"]+).*'); var match = regex.exec(res)[1]; completionHandler('deviantart://collection/' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "testResults": [
+                        "deviantart://collection/Dark-Tiramisu/43D895CE-68F8-962A-A949-0A2F261EC497"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Deviation",
+            "regex": "http(?:s)?://(([^\\.]+)\\.deviantart\\.com/(art|journal)/|sta\\.sh/).*$",
+            "testInputs": [
+                "http://eving-1.deviantart.com/art/Firewatch-583795685",
+                "http://cryptid-creations.deviantart.com/journal/Daily-Delayed-564105524",
+                "http://sta.sh/02c0su9x1gep",
+                "http://eving-1.deviantart.com/",
+                "http://fiookami.deviantart.com/"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "deviantart",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*://deviation/([^\\\"]+).*'); var match = regex.exec(res)[1]; completionHandler('deviantart://deviation/' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "testResults": [
+                        "deviantart://deviation/06060A99-62E7-3212-444E-CBB6A82A1B5F",
+                        "deviantart://deviation/478A8090-48B1-8053-37A9-6A696A106980",
+                        "deviantart://deviation/35BF8D14-541D-B917-577D-35773756CD32",
+                        null,
+                        null
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Tag",
+            "regex": "http(?:s)?://(?:\\w+\\.)*deviantart\\.com/tag/([^/]+).*$",
+            "testInputs": [
+                "http://www.deviantart.com/tag/firewatch"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "deviantart",
+                    "format": "deviantart://tag/$1",
+                    "testResults": [
+                        "deviantart://tag/firewatch"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -5411,6 +5513,14 @@
             "storeIdentifier": "743974925",
             "scheme": "pdfehttp://",
             "docs": "https://helpspot.readdle.com/pdfexpert/index.php?pg=kb.page&id=496"
+        },
+        {
+            "displayName": "DeviantArt",
+            "identifier": "deviantart",
+            "storeIdentifier": "925219396",
+            "scheme": "deviantart://",
+            "docs": "https://www.deviantart.com/developers/app_links",
+            "new": true
         },
         {
             "displayName": "Snapchat",
