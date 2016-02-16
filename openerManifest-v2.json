@@ -4603,6 +4603,24 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Story",
+            "regex": "http(?:s)?://(?:\\w+\\.)*9gag\\.com/gag/([^/]+).*$",
+            "testInputs": [
+                "http://m.9gag.com/gag/a97qAPm",
+                "http://9gag.com/gag/a3BZ4pQ"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "9gag",
+                    "format": "ninegag://9gag.com/gag/$1",
+                    "testResults": [
+                        "ninegag://9gag.com/gag/a97qAPm",
+                        "ninegag://9gag.com/gag/a3BZ4pQ"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -5559,6 +5577,13 @@
             "identifier": "anchor",
             "storeIdentifier": "1056182234",
             "scheme": "anchorfm://",
+            "new": true
+        },
+        {
+            "displayName": "9GAG",
+            "identifier": "9gag",
+            "storeIdentifier": "545551605",
+            "scheme": "ninegag://",
             "new": true
         },
         {
