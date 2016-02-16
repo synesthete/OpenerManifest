@@ -4587,6 +4587,22 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:www\\.)?anchor\\.fm/(w/.*)$",
+            "testInputs": [
+                "https://anchor.fm/w/991A5F"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "anchor",
+                    "format": "anchorfm://app/$1",
+                    "testResults": [
+                        "anchorfm://app/w/991A5F"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -5536,6 +5552,13 @@
             "storeIdentifier": "925219396",
             "scheme": "deviantart://",
             "docs": "https://www.deviantart.com/developers/app_links",
+            "new": true
+        },
+        {
+            "displayName": "Anchor",
+            "identifier": "anchor",
+            "storeIdentifier": "1056182234",
+            "scheme": "anchorfm://",
             "new": true
         },
         {
