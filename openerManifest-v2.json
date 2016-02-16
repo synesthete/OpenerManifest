@@ -4760,16 +4760,14 @@
             "identifier": "cornertube",
             "storeIdentifier": "1073199994",
             "scheme": "cornertube://",
-            "platform": "pad",
-            "new": true
+            "platform": "pad"
         },
         {
             "displayName": "PipTube",
             "identifier": "piptube",
             "storeIdentifier": "1064959109",
             "scheme": "piptube://",
-            "platform": "pad",
-            "new": true
+            "platform": "pad"
         },
         {
             "storeIdentifier" : "639881495",
