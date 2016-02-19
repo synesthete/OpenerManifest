@@ -5641,12 +5641,12 @@
             "scheme": "http://",
             "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/safari-120.jpg",
             "regex": "(.+)$",
-            "script": "function process(url, completionHandler) { completionHandler('https://www.opener.link/redirect.html?url=' + encodeURIComponent(url)); }",
+            "script": "function process(url, completionHandler) { completionHandler('http://www.opener.link/redirect.html?url=' + encodeURIComponent(url)); }",
             "testInputs": [
                 "http://www.opener.link/"
             ],
             "testResults": [
-                "https://www.opener.link/redirect.html?url=http%3A%2F%2Fwww.opener.link%2F"
+                "http://www.opener.link/redirect.html?url=http%3A%2F%2Fwww.opener.link%2F"
             ]
         },
         {
