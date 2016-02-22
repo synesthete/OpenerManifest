@@ -5593,8 +5593,7 @@
             "identifier": "deviantart",
             "storeIdentifier": "925219396",
             "scheme": "deviantart://",
-            "docs": "https://www.deviantart.com/developers/app_links",
-            "new": true
+            "docs": "https://www.deviantart.com/developers/app_links"
         },
         {
             "displayName": "Anchor",
@@ -5607,8 +5606,7 @@
             "displayName": "9GAG",
             "identifier": "9gag",
             "storeIdentifier": "545551605",
-            "scheme": "ninegag://",
-            "new": true
+            "scheme": "ninegag://"
         },
         {
             "displayName": "Snapchat",
@@ -5632,8 +5630,7 @@
             "displayName": "Daum",
             "identifier": "daum",
             "storeIdentifier": "365494029",
-            "scheme": "daumapps://",
-            "new": true
+            "scheme": "daumapps://"
         }
     ],
     "browsers": [
