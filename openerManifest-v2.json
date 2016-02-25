@@ -326,16 +326,18 @@
         },
         {
             "title": "Open Group",
-            "regex": "http(?:s)?://(?:\\w+\\.)?facebook\\.com/groups/(\\d+).*$",
+            "regex": "http(?:s)?://(?:\\w+\\.)?facebook\\.com/groups/(?:[^/]+/)?(\\d+).*$",
             "testInputs": [
-                "https://www.facebook.com/groups/158306764190707/"
+                "https://www.facebook.com/groups/158306764190707/",
+                "https://www.facebook.com/groups/it.jobs.croatia/1669475099985409/"
             ],
             "formats": [
                 {
                     "appIdentifier": "facebook",
                     "format": "fb://group?id=$1",
                     "testResults": [
-                        "fb://group?id=158306764190707"
+                        "fb://group?id=158306764190707",
+                        "fb://group?id=1669475099985409"
                     ]
                 }
             ]
