@@ -2722,10 +2722,11 @@
         },
         {
             "title": "Open Doodle",
-            "regex": "http(?:s)?://(?:www\\.)?doodle\\.com/([a-z0-9]{16}).*$",
+            "regex": "http(?:s)?://(?:www\\.)?doodle\\.com/(?:poll/)?([a-z0-9]{16}).*$",
             "testInputs": [
                 "http://doodle.com/bg7qh3q9k44n6vvr",
-                "http://doodle.com/nq77e46backa2szr"
+                "http://doodle.com/nq77e46backa2szr",
+                "http://doodle.com/poll/vi84pz8wcdknmyp7"
             ],
             "formats": [
                 {
@@ -2733,7 +2734,8 @@
                     "format": "doodle://?pollId=$1",
                     "testResults": [
                         "doodle://?pollId=bg7qh3q9k44n6vvr",
-                        "doodle://?pollId=nq77e46backa2szr"
+                        "doodle://?pollId=nq77e46backa2szr",
+                        "doodle://?pollId=vi84pz8wcdknmyp7"
                     ]
                 }
             ]
