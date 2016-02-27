@@ -5601,8 +5601,7 @@
             "displayName": "Anchor",
             "identifier": "anchor",
             "storeIdentifier": "1056182234",
-            "scheme": "anchorfm://",
-            "new": true
+            "scheme": "anchorfm://"
         },
         {
             "displayName": "9GAG",
@@ -5674,7 +5673,6 @@
             "storeIdentifier": "989804926",
             "regex": "(.+)$",
             "script": "function process(url, completionHandler) { completionHandler('firefox://open-url?url=' + encodeURIComponent(url)); }",
-            "new": true,
             "docs": "https://github.com/mozilla/firefox-ios-open-in-client",
             "testInputs": [
                 "http://www.opener.link/",
