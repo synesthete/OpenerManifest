@@ -1070,6 +1070,24 @@
             ]
         },
         {
+            "title": "Open Search",
+            "regex": "http(?:s?)://(?:m.|www.|mobile.)?foursquare.com(?:/mobile)?/explore.*q=([^&]+).*?$",
+            "testInputs": [
+                "https://foursquare.com/explore?q=bars",
+                "https://foursquare.com/explore/?q=bars"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "foursquare",
+                    "format": "foursquare://venues/explore?query=$1",
+                    "testResults": [
+                        "foursquare://venues/explore?query=bars",
+                        "foursquare://venues/explore?query=bars"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Check-in",
             "regex": "(?:http(?:s?)://(?:www.?)swarmapp.com(?:/\\w+)?/checkin/)([a-fA-F0-9]+\\?s=[a-zA-Z0-9_-]+)(?:.*)$",
             "testInputs": [
