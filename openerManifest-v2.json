@@ -4669,6 +4669,24 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:\\w+\\.)?tabelog\\.com/(?:\\w+/){3,4}(\\d+).*?$",
+            "testInputs": [
+                "http://s.tabelog.com/tokyo/A1301/A130101/13002260/",
+                "http://tabelog.com/en/tokyo/A1301/A130101/13002260/"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "tabelog",
+                    "format": "tabelog-v2://rstdtl/$1",
+                    "testResults": [
+                        "tabelog-v2://rstdtl/13002260",
+                        "tabelog-v2://rstdtl/13002260"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -5640,6 +5658,14 @@
             "identifier": "peach",
             "storeIdentifier": "1067891186",
             "scheme": "peach://"
+        },
+        {
+            "displayName": "Tabelog",
+            "identifier": "tabelog",
+            "storeIdentifier": "763377066",
+            "scheme": "tabelog-v2://",
+            "country": "jp",
+            "new": true
         },
         {
             "displayName": "WEAR",
