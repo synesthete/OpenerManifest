@@ -975,7 +975,7 @@
         },
         {
             "title": "Open Venue",
-            "regex": "(?:http(?:s?)://(?:m.|www.|mobile.)?foursquare.com(?:/mobile)?/v(?:/\\S+)?/([0-9a-fA-F]{24})).*$",
+            "regex": "http(?:s?)://(?:m.|www.|mobile.)?foursquare.com(?:/mobile)?/v(?:/\\S+)?/([0-9a-fA-F]{24}).*$",
             "testInputs": [
                 "https://foursquare.com/v/ritual-coffee-roasters/42853f80f964a5200c231fe3",
                 "https://foursquare.com/v/42853f80f964a5200c231fe3"
@@ -1037,7 +1037,7 @@
         },
         {
             "title": "Open Tip",
-            "regex": "(?:http(?:s?)://(?:m.|www.|mobile.)?foursquare.com(?:/mobile)?/item/([0-9a-fA-F]{24}))(?:/?)$",
+            "regex": "http(?:s?)://(?:m.|www.|mobile.)?foursquare.com(?:/mobile)?/item/([0-9a-fA-F]{24})(?:/?)$",
             "testInputs": [
                 "https://foursquare.com/item/552b6f5f498e0073829b16b1"
             ],
@@ -1053,7 +1053,7 @@
         },
         {
             "title": "Open Profile",
-            "regex": "(?:http(?:s?)://(?:m.|www.|mobile.)?foursquare.com(?:/mobile)?/(?:u|user)/(\\d+))(?:/?)$",
+            "regex": "http(?:s?)://(?:m.|www.|mobile.)?foursquare.com(?:/mobile)?/(?:u|user)/(\\d+)(?:/?)$",
             "testInputs": [
                 "http://foursquare.com/u/558158",
                 "https://foursquare.com/user/558158"
