@@ -5702,6 +5702,7 @@
             "identifier": "yahooauctions",
             "storeIdentifier": "356968629",
             "scheme": "yjauctions://",
+            "country": "jp",
             "new": true
         }
     ],
