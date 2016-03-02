@@ -2975,6 +2975,18 @@
                         "dasreferenz://zh/%E5%90%89%E9%87%8E%E5%AE%B6",
                         "dasreferenz://zh/%E4%B9%A0%E8%BF%91%E5%B9%B3"
                     ]
+                },
+                {
+                    "appIdentifier": "viki",
+                    "format": "viki://article/$3/$4",
+                    "testResults": [
+                        null,
+                        "viki://article/en/Bottle_opener",
+                        "viki://article/en/Soylent",
+                        "viki://article/zh-yue/%E9%96%8B%E4%BF%A1%E5%88%80",
+                        "viki://article/zh/%E5%90%89%E9%87%8E%E5%AE%B6",
+                        "viki://article/zh/%E4%B9%A0%E8%BF%91%E5%B9%B3"
+                    ]
                 }
             ]
         },
@@ -5050,6 +5062,14 @@
             "displayName": "Inquire",
             "storeIdentifier": "1045268097",
             "identifier": "curiosity"
+        },
+        {
+            "displayName": "Viki",
+            "identifier": "viki",
+            "storeIdentifier": "993435362",
+            "scheme": "viki://",
+            "docs": "http://bit.ly/1RIpw7c",
+            "new": true
         },
         {
             "scheme": "youku://",
