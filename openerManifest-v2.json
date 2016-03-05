@@ -2375,14 +2375,14 @@
             "formats": [
                 {
                     "appIdentifier": "medium",
-                    "format": "medium:/p/$1",
+                    "format": "medium://p/$1",
                     "testResults": [
                         null,
-                        "medium:/p/c679cddd7ed8",
-                        "medium:/p/67c841702a70",
-                        "medium:/p/822960e8653d",
-                        "medium:/p/ead679cb506d",
-                        "medium:/p/523f48fe90cb"
+                        "medium://p/c679cddd7ed8",
+                        "medium://p/67c841702a70",
+                        "medium://p/822960e8653d",
+                        "medium://p/ead679cb506d",
+                        "medium://p/523f48fe90cb"
                     ]
                 }
             ]
@@ -2394,7 +2394,7 @@
             "formats": [
                 {
                     "appIdentifier": "medium",
-                    "format": "medium:/p/$1"
+                    "format": "medium://p/$1"
                 }
             ]
         },
@@ -2409,11 +2409,11 @@
             "formats": [
                 {
                     "appIdentifier": "medium",
-                    "format": "medium:/$1$2",
+                    "format": "medium://$1$2",
                     "testResults": [
-                        "medium:/@timonus",
+                        "medium://@timonus",
                         null,
-                        "medium:/@cba/highlights"
+                        "medium://@cba/highlights"
                     ]
                 }
             ]
