@@ -2405,6 +2405,17 @@
             ]
         },
         {
+            "title": "Open Publication",
+            "regex": "http(?:s)?://(?!.*medium\\.com)[a-zA-Z0-9\\-.]+/?\\n.*\"(?:(?i)x-powered-by)\":\"(?i)kale\".*$",
+            "includeHeaders": true,
+            "formats": [
+                {
+                    "appIdentifier": "medium",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(medium://.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url.split('\\n')[0], true); xmlhttp.send(); }"
+                }
+            ]
+        },
+        {
             "title": "Open Product",
             "regex": "http(?:s)?://(?:\\w+\\.)*(?:amazon|amzn)((?:\\.\\w+)+)/(?:.*?/)?(?:(?:(?:dp|gp)(?:/aw/d)?)|product|.*/ASIN)/([a-zA-Z0-9]+).*$",
             "testInputs": [
