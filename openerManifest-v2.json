@@ -2394,7 +2394,7 @@
             ]
         },
         {
-            "title": "Open Story",
+            "title": "Open Link",
             "regex": "http(?:s)?://(?!.*medium\\.com)[a-zA-Z0-9\\-.]+/(.+)\\n.*\"(?:(?i)x-powered-by)\":\"(?i)kale\".*$",
             "includeHeaders": true,
             "formats": [
