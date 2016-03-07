@@ -2780,18 +2780,20 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(?:s)?://(?:touch\\.)?(?:www\\.|m\\.)?linkedin\\.com/(?:.*(?:/|#))?profile/(?:view?.*id=)?(\\d+).*$",
+            "regex": "http(?:s)?://(?:touch\\.)?(?:www\\.|m\\.)?linkedin\\.com/(?:(?:.*(?:/|#))?profile/(?:view?.*id=)?(\\d+)|in/([^/]+)).*$",
             "testInputs": [
                 "https://www.linkedin.com/profile/view?id=26225641&authType=name&trk=hp-feed-member-name",
-                "https://touch.www.linkedin.com/?ai=1&spcon=memberInvite&redirectUrl=%23acceptInvite%2Fundefined%3Fsessionid%3D2033203783139328%26trk%3Deml-comm_invm-b-accept-newinvite%26memberId%3D46675429%26invitationID%3D6079891961110679553%26sharedKey%3DZcu9UEa9&dl=no#profile/2256217/name:93fJ"
+                "https://touch.www.linkedin.com/?ai=1&spcon=memberInvite&redirectUrl=%23acceptInvite%2Fundefined%3Fsessionid%3D2033203783139328%26trk%3Deml-comm_invm-b-accept-newinvite%26memberId%3D46675429%26invitationID%3D6079891961110679553%26sharedKey%3DZcu9UEa9&dl=no#profile/2256217/name:93fJ",
+                "https://www.linkedin.com/in/timonus"
             ],
             "formats": [
                 {
                     "appIdentifier": "linkedin",
-                    "format": "linkedin://profile/$1",
+                    "format": "linkedin://profile/$1$2",
                     "testResults": [
                         "linkedin://profile/26225641",
-                        "linkedin://profile/2256217"
+                        "linkedin://profile/2256217",
+                        "linkedin://profile/timonus"
                     ]
                 }
             ]
