@@ -5077,8 +5077,7 @@
             "identifier": "viki",
             "storeIdentifier": "993435362",
             "scheme": "viki://",
-            "docs": "http://bit.ly/1RIpw7c",
-            "new": true
+            "docs": "http://bit.ly/1RIpw7c"
         },
         {
             "displayName": "Youku",
@@ -5313,8 +5312,7 @@
             "identifier": "tabelog",
             "storeIdentifier": "763377066",
             "country": "jp",
-            "scheme": "tabelog-v2://",
-            "new": true
+            "scheme": "tabelog-v2://"
         },
         {
             "displayName": "TED",
@@ -5731,8 +5729,7 @@
             "identifier": "yahooauctions",
             "storeIdentifier": "356968629",
             "country": "jp",
-            "scheme": "yjauctions://",
-            "new": true
+            "scheme": "yjauctions://"
         }
     ],
     "browsers": [
@@ -6011,8 +6008,7 @@
             "testResults": [
                 "oodhttp://www.opener.link/",
                 "oodhttps://twitter.com/openerapp"
-            ],
-            "new": true
+            ]
         }
     ]
 }
