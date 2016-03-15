@@ -365,7 +365,7 @@
             ]
         },
         {
-            "title": "Open App",
+            "title": "View App",
             "regex": "http(?:s)?://apps\\.getpebble\\.com/(?:\\w+/)*application(?:s)?/([:hex:]+)",
             "testInputs": [
                 "https://apps.getpebble.com/en_US/application/555c5ce445377a3938000095",
