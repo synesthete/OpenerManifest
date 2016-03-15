@@ -4835,7 +4835,7 @@
             "scheme": "inico2http://"
         },
         {
-            "displayName": "amrc",
+            "displayName": "Antenna",
             "identifier": "amrc",
             "storeIdentifier": "572391252",
             "scheme": "amrc://",
@@ -5444,7 +5444,7 @@
             "scheme": "peach://"
         },
         {
-            "displayName": "RunKeeper",
+            "displayName": "Runkeeper",
             "identifier": "runkeeper",
             "storeIdentifier": "300235330",
             "scheme": "runkeeper://"
