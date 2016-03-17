@@ -916,11 +916,13 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(?:s)?://(?:\\w+\\.)?weibo\\.(?:com|cn)/(?:u/)?(\\d+)(?:/\\?.*|/)?$",
+            "regex": "http(?:s)?://(?:\\w+\\.)?weibo\\.(?:com|cn)/(?:(?:u|d)/)?(\\w+)(?:/\\?.*|/)?$",
             "testInputs": [
                 "http://weibo.com/2616423197",
                 "http://weibo.com/u/2616423197",
-                "http://weibo.com/2616423197/Cmjs2vh5Q?from=page_1005052616423197_profile&wvr=6&mod=weibotime"
+                "http://weibo.com/2616423197/Cmjs2vh5Q?from=page_1005052616423197_profile&wvr=6&mod=weibotime",
+                "http://m.weibo.cn/d/ifixit2016",
+                "http://m.weibo.cn/ifixit2016"
             ],
             "formats": [
                 {
@@ -929,7 +931,9 @@
                     "testResults": [
                         "sinaweibo://userinfo?uid=2616423197",
                         "sinaweibo://userinfo?uid=2616423197",
-                        null
+                        null,
+                        "sinaweibo://userinfo?uid=ifixit2016",
+                        "sinaweibo://userinfo?uid=ifixit2016"
                     ]
                 },
                 {
@@ -938,7 +942,57 @@
                     "testResults": [
                         "moke:///user?id=2616423197",
                         "moke:///user?id=2616423197",
+                        null,
+                        "moke:///user?id=ifixit2016",
+                        "moke:///user?id=ifixit2016"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Profile",
+            "regex": "http(?:s)?://(?:\\w+\\.)?weibo\\.(?:com|cn)/(?:u/)?(\\d+)(?:/\\?.*|/)?$",
+            "testInputs": [
+                "http://weibo.com/2616423197",
+                "http://weibo.com/u/2616423197",
+                "http://weibo.com/2616423197/Cmjs2vh5Q?from=page_1005052616423197_profile&wvr=6&mod=weibotime",
+                "http://m.weibo.cn/d/ifixit2016",
+                "http://m.weibo.cn/ifixit2016"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "moke",
+                    "format": "moke:///user?id=$1",
+                    "testResults": [
+                        "moke:///user?id=2616423197",
+                        "moke:///user?id=2616423197",
+                        null,
+                        null,
                         null
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Profile",
+            "regex": "http(?:s)?://(?:\\w+\\.)?weibo\\.(?:com|cn)/(?:d/)?(?!\\d+)(\\w+)(?:/\\?.*|/)?$",
+            "testInputs": [
+                "http://weibo.com/2616423197",
+                "http://weibo.com/u/2616423197",
+                "http://weibo.com/2616423197/Cmjs2vh5Q?from=page_1005052616423197_profile&wvr=6&mod=weibotime",
+                "http://m.weibo.cn/d/ifixit2016",
+                "http://m.weibo.cn/ifixit2016"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "moke",
+                    "format": "moke:///user?domain=$1",
+                    "testResults": [
+                        null,
+                        null,
+                        null,
+                        "moke:///user?domain=ifixit2016",
+                        "moke:///user?domain=ifixit2016"
                     ]
                 }
             ]
