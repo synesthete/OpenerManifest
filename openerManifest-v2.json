@@ -3141,7 +3141,7 @@
         },
         {
             "title": "Show Repository",
-            "regex": "http(?:s)?://(?:(?:(?!gist)\\w+\\.)*(?:(github)\\.com|(bitbucket)\\.org)/([^/]+)/([^/]+?)(?:\\.git)?((/)?\\?.*$)?)$",
+            "regex": "http(?:s)?://(?:(?:(?!gist)\\w+\\.)*(?:(github)\\.com|(bitbucket)\\.org|(gitlab)\\.com)/([^/]+)/([^/]+?)(?:\\.git)?((/)?\\?.*$)?)$",
             "testInputs": [
                 "https://github.com/timonus/OpenerManifest/blob/master/.gitignore",
                 "https://github.com/timonus",
@@ -3151,7 +3151,10 @@
                 "http://bitbucket.org/timonus",
                 "https://bitbucket.org/timonus/configuration/commits/all",
                 "https://bitbucket.org/timonus/configuration",
-                "https://bitbucket.org/timonus/configuration.git"
+                "https://bitbucket.org/timonus/configuration.git",
+                "https://gitlab.com/timonus/",
+                "https://gitlab.com/timonus/OpenerManifest/commits/master",
+                "https://gitlab.com/timonus/OpenerManifest"
             ],
             "formats": [
                 {
@@ -3166,12 +3169,15 @@
                         null,
                         null,
                         "working-copy://show?remote=https%3A%2F%2Fbitbucket.org%2Ftimonus%2Fconfiguration",
-                        "working-copy://show?remote=https%3A%2F%2Fbitbucket.org%2Ftimonus%2Fconfiguration.git"
+                        "working-copy://show?remote=https%3A%2F%2Fbitbucket.org%2Ftimonus%2Fconfiguration.git",
+                        null,
+                        null,
+                        "working-copy://show?remote=https%3A%2F%2Fgitlab.com%2Ftimonus%2FOpenerManifest"
                     ]
                 },
                 {
                     "appIdentifier": "git2go",
-                    "format": "gittogo://repositories/$1$2/$3/$4$5",
+                    "format": "gittogo://repositories/$1$2$3/$4/$5$6",
                     "testResults": [
                         null,
                         null,
@@ -3181,7 +3187,10 @@
                         null,
                         null,
                         "gittogo://repositories/bitbucket/timonus/configuration",
-                        "gittogo://repositories/bitbucket/timonus/configuration"
+                        "gittogo://repositories/bitbucket/timonus/configuration",
+                        null,
+                        null,
+                        "gittogo://repositories/gitlab/timonus/OpenerManifest"
                     ]
                 }
             ]
