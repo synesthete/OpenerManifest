@@ -3141,7 +3141,7 @@
         },
         {
             "title": "Show Repository",
-            "regex": "http(?:s)?://((?:(?!gist)\\w+\\.)*(github\\.com|bitbucket\\.org)/[^/]+/[^/]+((/)?\\?.*$)?|\\w+(?:\\.\\w+)+(?:/[^/\\?]+)+\\.git.*)$",
+            "regex": "http(?:s)?://(?:(?:(?!gist)\\w+\\.)*(?:(github)\\.com|(bitbucket)\\.org)/([^/]+)/([^/]+?)(?:\\.git)?((/)?\\?.*$)?)$",
             "testInputs": [
                 "https://github.com/timonus/OpenerManifest/blob/master/.gitignore",
                 "https://github.com/timonus",
@@ -3167,6 +3167,21 @@
                         null,
                         "working-copy://show?remote=https%3A%2F%2Fbitbucket.org%2Ftimonus%2Fconfiguration",
                         "working-copy://show?remote=https%3A%2F%2Fbitbucket.org%2Ftimonus%2Fconfiguration.git"
+                    ]
+                },
+                {
+                    "appIdentifier": "git2go",
+                    "format": "gittogo://repositories/$1$2/$3/$4$5",
+                    "testResults": [
+                        null,
+                        null,
+                        null,
+                        "gittogo://repositories/github/timonus/OpenerManifest",
+                        "gittogo://repositories/github/timonus/OpenerManifest",
+                        null,
+                        null,
+                        "gittogo://repositories/bitbucket/timonus/configuration",
+                        "gittogo://repositories/bitbucket/timonus/configuration"
                     ]
                 }
             ]
@@ -5369,6 +5384,14 @@
             "storeIdentifier": "896694807",
             "scheme": "working-copy://",
             "docs": "http://workingcopyapp.com/url-schemes.html"
+        },
+        {
+            "displayName": "Git2Go",
+            "identifier": "git2go",
+            "storeIdentifier": "963577401",
+            "scheme": "gittogo://",
+            "docs": "http://faq.git2go.com/2016/01/24/How-to-use-URL-schemes.html",
+            "new": true
         },
         {
             "displayName": "Yelp",
