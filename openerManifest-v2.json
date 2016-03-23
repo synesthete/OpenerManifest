@@ -254,11 +254,13 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(?:s)?://(?:www\\.)?(?:instagram\\.com|instagr\\.am)/([a-zA-Z0-9_\\.]{1,30})(?:/|/?\\?.*)?$",
+            "regex": "http(?:s)?://(?:www\\.)?(?:instagram\\.com|instagr\\.am)/(?!explore)([a-zA-Z0-9_\\.]{1,30})(?:/|/?\\?.*)?$",
             "testInputs": [
                 "http://instagr.am/timonus",
                 "https://www.instagram.com/noelwells/?hl=en",
-                "https://instagram.com/p/1t0oDmGQfp/"
+                "https://www.instagram.com/noelwells?hl=en",
+                "https://instagram.com/p/1t0oDmGQfp/",
+                "https://www.instagram.com/explore/"
             ],
             "formats": [
                 {
@@ -267,6 +269,8 @@
                     "testResults": [
                         "instagram://user?username=timonus",
                         "instagram://user?username=noelwells",
+                        "instagram://user?username=noelwells",
+                        null,
                         null
                     ]
                 }
