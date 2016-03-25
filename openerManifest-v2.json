@@ -6019,6 +6019,24 @@
             ]
         },
         {
+            "displayName": "Documents",
+            "identifier": "documents",
+            "scheme": "rhttp://",
+            "storeIdentifier": "364901807",
+            "regex": "(http(?:s)?.*)",
+            "format": "r$1",
+            "docs": "https://helpspot.readdle.com/documents/index.php?pg=kb.page&id=516",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "rhttp://www.opener.link/",
+                "rhttps://twitter.com/openerapp"
+            ],
+            "new": true
+        },
+        {
             "displayName": "Instabrowser",
             "identifier": "instabrowser",
             "scheme": "instabrowser://",
