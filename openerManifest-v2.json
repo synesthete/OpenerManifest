@@ -5403,8 +5403,7 @@
             "identifier": "git2go",
             "storeIdentifier": "963577401",
             "scheme": "gittogo://",
-            "docs": "http://faq.git2go.com/2016/01/24/How-to-use-URL-schemes.html",
-            "new": true
+            "docs": "http://faq.git2go.com/2016/01/24/How-to-use-URL-schemes.html"
         },
         {
             "displayName": "Yelp",
@@ -5869,8 +5868,7 @@
             "displayName": "Geocaching Classic",
             "identifier": "geocachingclassic",
             "storeIdentifier": "292242503",
-            "scheme": "gcapp://",
-            "new": true
+            "scheme": "gcapp://"
         }
     ],
     "browsers": [
