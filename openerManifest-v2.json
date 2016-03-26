@@ -2268,14 +2268,15 @@
         },
         {
             "title": "Open Subreddit",
-            "regex": "http(?:s)?://(?:www\\.|m\\.)?reddit\\.com/r/([a-zA-Z0-9_\\-%]+)(?:/(\\?.*)?$|\\?.*$|/$)?$",
+            "regex": "http(?:s)?://(?:\\w+\\.)?reddit\\.com/r/([a-zA-Z0-9_\\-%]+)(?:/(\\?.*)?$|\\?.*$|/$)?$",
             "testInputs": [
                 "http://www.reddit.com/r/gaming/",
                 "http://www.reddit.com/r/gaming",
                 "http://www.reddit.com/r/gaming/?hello=world",
                 "http://www.reddit.com/r/gaming?hello=world",
                 "http://www.reddit.com/r/gaming/comments/3d2ewz/nintendo_president_satoru_iwata_passes_away/",
-                "http://m.reddit.com/r/gaming/"
+                "http://m.reddit.com/r/gaming/",
+                "http://np.reddit.com/r/gaming/"
             ],
             "formats": [
                 {
@@ -2287,6 +2288,7 @@
                         "alienblue://r/gaming",
                         "alienblue://r/gaming",
                         null,
+                        "alienblue://r/gaming",
                         "alienblue://r/gaming"
                     ]
                 }
@@ -2294,13 +2296,14 @@
         },
         {
             "title": "Open Thread",
-            "regex": "http(?:s)?://(?:www\\.|m\\.)?reddit\\.com/(r/[a-zA-Z0-9_\\-%]+/(?:comments|info)/\\w+.*)$",
+            "regex": "http(?:s)?://(?:\\w+\\.)?reddit\\.com/(r/[a-zA-Z0-9_\\-%]+/(?:comments|info)/\\w+.*)$",
             "testInputs": [
                 "http://www.reddit.com/r/gaming/comments/3d2ewz/nintendo_president_satoru_iwata_passes_away/",
                 "https://www.reddit.com/r/VintageApple/comments/29xca9/what_is_apples_next_step/",
                 "http://www.reddit.com/r/gaming",
                 "https://m.reddit.com/r/starcitizen/comments/3um4z1/best_race_video_ive_seen/",
-                "https://m.reddit.com/r/starcitizen/info/3um4z1/best_race_video_ive_seen/"
+                "https://m.reddit.com/r/starcitizen/info/3um4z1/best_race_video_ive_seen/",
+                "https://np.reddit.com/r/OutOfTheLoop/comments/4bwshx/why_are_people_so_mean_to_neil_degrasse_tyson_on/"
             ],
             "formats": [
                 {
@@ -2311,14 +2314,15 @@
                         "alienblue://thread/r/VintageApple/comments/29xca9/what_is_apples_next_step/",
                         null,
                         "alienblue://thread/r/starcitizen/comments/3um4z1/best_race_video_ive_seen/",
-                        "alienblue://thread/r/starcitizen/info/3um4z1/best_race_video_ive_seen/"
+                        "alienblue://thread/r/starcitizen/info/3um4z1/best_race_video_ive_seen/",
+                        "alienblue://thread/r/OutOfTheLoop/comments/4bwshx/why_are_people_so_mean_to_neil_degrasse_tyson_on/"
                     ]
                 }
             ]
         },
         {
             "title": "Open Thread",
-            "regex": "(http(?:s)?://(?:www\\.|m\\.)?reddit\\.com/(?:comments|info)/\\w+.*)$",
+            "regex": "(http(?:s)?://(?:\\w+\\.)?reddit\\.com/(?:comments|info)/\\w+.*)$",
             "testInputs": [
                 "http://www.reddit.com/comments/3d2ewz/nintendo_president_satoru_iwata_passes_away/",
                 "http://www.reddit.com/info/3d2ewz"
@@ -2372,23 +2376,26 @@
         },
         {
             "title": "Open Link",
-            "regex": "(?:http(?:s)?)://((?:www\\.|m\\.)?reddit\\.com/.*)",
+            "regex": "(?:http(?:s)?)://((?:\\w+\\.)?reddit\\.com/.*)",
             "testInputs": [
-                "https://m.reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/"
+                "https://m.reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/",
+                "https://np.reddit.com/r/gaming/"
             ],
             "formats": [
                 {
                     "appIdentifier": "narwhal",
                     "script": "function process(url, completionHandler) { completionHandler('narwhal://open-url/' + encodeURIComponent(url)); }",
                     "testResults": [
-                        "narwhal://open-url/https%3A%2F%2Fm.reddit.com%2Fr%2Fsports%2Fcomments%2F38uhq3%2Famerican_pharoah_wins_belmont_stakes_and_triple%2F"
+                        "narwhal://open-url/https%3A%2F%2Fm.reddit.com%2Fr%2Fsports%2Fcomments%2F38uhq3%2Famerican_pharoah_wins_belmont_stakes_and_triple%2F",
+                        "narwhal://open-url/https%3A%2F%2Fnp.reddit.com%2Fr%2Fgaming%2F"
                     ]
                 },
                 {
                     "appIdentifier": "amrc",
                     "format": "amrc://$1",
                     "testResults": [
-                        "amrc://m.reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/"
+                        "amrc://m.reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/",
+                        "amrc://np.reddit.com/r/gaming/"
                     ]
                 }
             ]
