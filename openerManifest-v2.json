@@ -4859,6 +4859,24 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Song",
+            "regex": "http(?:s)?://(?:www\\.)?(soundhound\\.com/?.*t=\\d+.*)$",
+            "testInputs": [
+                "http://soundhound.com/?t=100233113174326718",
+                "https://www.soundhound.com/?foo=bar&t=100233113174326718"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "soundhound",
+                    "format": "soundhound://$1",
+                    "testResults": [
+                        "soundhound://soundhound.com/?t=100233113174326718",
+                        "soundhound://soundhound.com/?foo=bar&t=100233113174326718"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -5876,6 +5894,13 @@
             "identifier": "geocachingclassic",
             "storeIdentifier": "292242503",
             "scheme": "gcapp://"
+        },
+        {
+            "displayName": "SoundHound",
+            "identifier": "soundhound",
+            "storeIdentifier": "355554941",
+            "scheme": "soundhound://",
+            "new": true
         }
     ],
     "browsers": [
