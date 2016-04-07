@@ -5924,8 +5924,7 @@
             "displayName": "SoundHound",
             "identifier": "soundhound",
             "storeIdentifier": "355554941",
-            "scheme": "soundhound://",
-            "new": true
+            "scheme": "soundhound://"
         }
     ],
     "browsers": [
@@ -6088,8 +6087,7 @@
             "testResults": [
                 "rhttp://www.opener.link/",
                 "rhttps://twitter.com/openerapp"
-            ],
-            "new": true
+            ]
         },
         {
             "displayName": "Instabrowser",
