@@ -2383,6 +2383,14 @@
             ],
             "formats": [
                 {
+                    "appIdentifier": "reddit",
+                    "format": "reddit://$1",
+                    "testResults": [
+                        "reddit://m.reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/",
+                        "reddit://np.reddit.com/r/gaming/"
+                    ]
+                },
+                {
                     "appIdentifier": "narwhal",
                     "script": "function process(url, completionHandler) { completionHandler('narwhal://open-url/' + encodeURIComponent(url)); }",
                     "testResults": [
@@ -5049,6 +5057,13 @@
             "storeIdentifier": "564177498",
             "scheme": "vk://",
             "docs": "http://handleopenurl.com/scheme/vk"
+        },
+        {
+            "displayName": "Reddit",
+            "identifier": "reddit",
+            "storeIdentifier": "1064216828",
+            "scheme": "reddit://",
+            "new": true
         },
         {
             "displayName": "Alien Blue",
