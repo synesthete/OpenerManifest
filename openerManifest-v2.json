@@ -4927,6 +4927,24 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Story",
+            "regex": "http(?:s)?://(?:\\w+\\.)*thescore\\.com/(?:[^/]+/)?news/(\\d+).*?$",
+            "testInputs": [
+                "http://www.thescore.com/nba/news/1003047",
+                "http://www.thescore.com/news/1003738"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "thescore",
+                    "format": "thescore:///news/$1",
+                    "testResults": [
+                        "thescore:///news/1003047",
+                        "thescore:///news/1003738"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -5972,6 +5990,13 @@
             "identifier": "hatenablog",
             "storeIdentifier": "583299321",
             "scheme": "hatenablog://",
+            "new": true
+        },
+        {
+            "displayName": "The Score",
+            "identifier": "thescore",
+            "storeIdentifier": "285692706",
+            "scheme": "thescore://",
             "new": true
         }
     ],
