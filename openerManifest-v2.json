@@ -4903,6 +4903,30 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:[^\\.])+\\.hatenablog(?:\\.\\w+)+.*$",
+            "testInputs": [
+                "http://ko-chanblog.hatenablog.com/entry/2016/04/10/093117",
+                "http://iphone-news.hatenablog.jp/entry/perfume-instagram-cosmic-explorer",
+                "http://hmp2.hatenablog.jp/entry/shindafuriBlog",
+                "http://hmp2.hatenablog.jp/",
+                "http://hatenablog.jp/"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "hatenablog",
+                    "script": "function process(url, completionHandler) { completionHandler('hatenablog:///open?uri=' + encodeURIComponent(url)); }",
+                    "testResults": [
+                        "hatenablog:///open?uri=http%3A%2F%2Fko-chanblog.hatenablog.com%2Fentry%2F2016%2F04%2F10%2F093117",
+                        "hatenablog:///open?uri=http%3A%2F%2Fiphone-news.hatenablog.jp%2Fentry%2Fperfume-instagram-cosmic-explorer",
+                        "hatenablog:///open?uri=http%3A%2F%2Fhmp2.hatenablog.jp%2Fentry%2FshindafuriBlog",
+                        "hatenablog:///open?uri=http%3A%2F%2Fhmp2.hatenablog.jp%2F",
+                        null
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -5942,6 +5966,13 @@
             "identifier": "soundhound",
             "storeIdentifier": "355554941",
             "scheme": "soundhound://"
+        },
+        {
+            "displayName": "Hatena Blog",
+            "identifier": "hatenablog",
+            "storeIdentifier": "583299321",
+            "scheme": "hatenablog://",
+            "new": true
         }
     ],
     "browsers": [
