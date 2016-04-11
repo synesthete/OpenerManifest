@@ -5151,8 +5151,7 @@
             "identifier": "bilibili",
             "storeIdentifier": "736536022",
             "country": "cn",
-            "scheme": "bilibili://",
-            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/bilibili-100.jpg"
+            "scheme": "bilibili://"
         },
         {
             "displayName": "Dropbox",
@@ -5697,8 +5696,7 @@
             "storeIdentifier": "438159430",
             "platform": "pad",
             "country": "jp",
-            "scheme": "catchapp://",
-            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/catchapp-100.jpg"
+            "scheme": "catchapp://"
         },
         {
             "displayName": "DeviantArt",
