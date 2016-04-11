@@ -5968,7 +5968,8 @@
             "displayName": "Geocaching Classic",
             "identifier": "geocachingclassic",
             "storeIdentifier": "292242503",
-            "scheme": "gcapp://"
+            "scheme": "gcapp://",
+            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/geocaching-120.jpg"
         },
         {
             "displayName": "Ticketfly",
