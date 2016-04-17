@@ -2376,7 +2376,7 @@
         },
         {
             "title": "Open Link",
-            "regex": "(?:http(?:s)?)://((?:\\w+\\.)?reddit\\.com/.*)",
+            "regex": "(?:http(?:s)?)://((?:\\w+\\.)?(reddit\\.com/.*))",
             "testInputs": [
                 "https://m.reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/",
                 "https://np.reddit.com/r/gaming/"
@@ -2400,10 +2400,10 @@
                 },
                 {
                     "appIdentifier": "amrc",
-                    "format": "amrc://$1",
+                    "format": "amrc://$2",
                     "testResults": [
-                        "amrc://m.reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/",
-                        "amrc://np.reddit.com/r/gaming/"
+                        "amrc://reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/",
+                        "amrc://reddit.com/r/gaming/"
                     ]
                 }
             ]
