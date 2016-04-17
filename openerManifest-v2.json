@@ -5104,8 +5104,7 @@
             "displayName": "Reddit",
             "identifier": "reddit",
             "storeIdentifier": "1064216828",
-            "scheme": "reddit://",
-            "new": true
+            "scheme": "reddit://"
         },
         {
             "displayName": "Alien Blue",
@@ -5975,8 +5974,7 @@
             "displayName": "Ticketfly",
             "identifier": "ticketfly",
             "storeIdentifier": "943114354",
-            "scheme": "ticketfly://",
-            "new": true
+            "scheme": "ticketfly://"
         },
         {
             "displayName": "SoundHound",
@@ -5988,15 +5986,13 @@
             "displayName": "Hatena Blog",
             "identifier": "hatenablog",
             "storeIdentifier": "583299321",
-            "scheme": "hatenablog://",
-            "new": true
+            "scheme": "hatenablog://"
         },
         {
             "displayName": "The Score",
             "identifier": "thescore",
             "storeIdentifier": "285692706",
-            "scheme": "thescore://",
-            "new": true
+            "scheme": "thescore://"
         }
     ],
     "browsers": [
