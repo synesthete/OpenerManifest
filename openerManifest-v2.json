@@ -2545,18 +2545,10 @@
         {
             "title": "Open Deal",
             "regex": "http(?:s)?://(?:www\\.)groupon(?:\\.\\w+)+/deals/.*$",
-            "testInputs": [
-                "https://www.groupon.com/deals/massagexone?offerReferralId=9d0c57a1-81c4-4c29-9aa3-7bcbb8d582db&utm_campaign=OfferReferral&utm_source=bwf_tw&utm_medium=bwf#bwf-details-modal",
-                "https://www.groupon.com/deals/museum-of-contemporary-craft-1?elq=b3bd271a41c34aa49546bddcd097c628&elqCampaignId=&elqaid=1975&elqat=1&elqTrackId=887710138f7048b19d8c3b617c9f6603"
-            ],
             "formats": [
                 {
                     "appIdentifier": "groupon",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*ios-app://352683833/groupon/dispatch/(.*?)\".*'); var match = regex.exec(res)[1]; completionHandler('groupon:///dispatch/' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "testResults": [
-                        "groupon:///dispatch/us/deal/massagexone",
-                        "groupon:///dispatch/us/deal/museum-of-contemporary-craft-1"
-                    ]
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*ios-app://352683833/groupon/dispatch/(.*?)\".*'); var match = regex.exec(res)[1]; completionHandler('groupon:///dispatch/' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }"
                 }
             ]
         },
