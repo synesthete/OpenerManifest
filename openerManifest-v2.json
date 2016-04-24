@@ -4853,32 +4853,6 @@
             ]
         },
         {
-            "title": "Open Geocache",
-            "regex": "http(?:s)?://(?:www\\.)?(?:geocaching\\.com/geocache|coord\\.info)/(GC[A-Za-z0-9]+).*$",
-            "testInputs": [
-                "https://www.geocaching.com/geocache/GC46P90_positive-outlook",
-                "https://www.geocaching.com/geocache/GC59ZFJ_kermit-und-super-grobi",
-                "https://www.geocaching.com/geocache/GC68XHH_tour-dialysis-6",
-                "http://coord.info/GCPEK2",
-                "http://coord.info/GC46P90",
-                "https://www.geocaching.com/seek/log.aspx?LUID=a88b7b5e-9253-46cf-b9a3-e9f230b7819e"
-            ],
-            "formats": [
-                {
-                    "appIdentifier": "geocachingclassic",
-                    "format": "gcapp://$1",
-                    "testResults": [
-                        "gcapp://GC46P90",
-                        "gcapp://GC59ZFJ",
-                        "gcapp://GC68XHH",
-                        "gcapp://GCPEK2",
-                        "gcapp://GC46P90",
-                        null
-                    ]
-                }
-            ]
-        },
-        {
             "title": "Open ",
             "regex": "http(?:s)?://(?:www\\.)?ticketfly\\.com/(?:purchase/)?event/(\\d+).*?$",
             "testInputs": [
@@ -5979,13 +5953,6 @@
             "identifier": "xkcdhd",
             "storeIdentifier": "369631343",
             "scheme": "xkcd://"
-        },
-        {
-            "displayName": "Geocaching Classic",
-            "identifier": "geocachingclassic",
-            "storeIdentifier": "292242503",
-            "scheme": "gcapp://",
-            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/geocaching-120.jpg"
         },
         {
             "displayName": "Ticketfly",
