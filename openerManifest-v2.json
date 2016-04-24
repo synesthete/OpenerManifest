@@ -5188,8 +5188,7 @@
             "storeIdentifier": "362047999",
             "platform": "phone",
             "country": "jp",
-            "scheme": "catchapp://",
-            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/catchapp-100.jpg"
+            "scheme": "catchapp://"
         },
         {
             "displayName": "Jingdong",
