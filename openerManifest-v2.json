@@ -2554,6 +2554,24 @@
         },
         {
             "title": "Open Product",
+            "regex": "http(?:s)?://(?:\\w+\\.)?aliexpress\\.com/item(?:/[^/]+)?/(\\d+)\\.html.*$",
+            "testInputs": [
+                "http://m.aliexpress.com/item/32409017535.html",
+                "http://www.aliexpress.com/item/Foliage-plant-seeds-wheat-grass-cat-grass-seeds-wheat-seeds-about-200-particles/32439617530.html?spm=5261.7749171.1998596321.8.wpCnkX&sdom=561.108229.97206.0_32439617530"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "aliexpress",
+                    "format": "aliexpress://product/detail?productId=$1",
+                    "testResults": [
+                        "aliexpress://product/detail?productId=32409017535",
+                        "aliexpress://product/detail?productId=32439617530"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Product",
             "regex": "http(?:s)?://(?:\\w+\\.)?alibaba\\.com/product(?:-detail)?/(?:[a-zA-Z0-9_\\-]*_)?(\\d+).*$",
             "testInputs": [
                 "http://m.alibaba.com/product/60244850644/Genuine-Leather-Watch-Band-Strap-for.html?s=p",
@@ -5638,6 +5656,13 @@
             "identifier": "airbnb",
             "storeIdentifier": "401626263",
             "scheme": "airbnb://"
+        },
+        {
+            "displayName": "AliExpress",
+            "identifier": "aliexpress",
+            "storeIdentifier": "436672029",
+            "scheme": "aliexpress://",
+            "new": true
         },
         {
             "displayName": "Alibaba",
