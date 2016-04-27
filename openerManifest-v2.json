@@ -758,14 +758,15 @@
         },
         {
             "title": "Open Board",
-            "regex": "http(?:s?)://(?:\\w+\\.)?pinterest.com/(?!pin|search)([a-zA-Z0-9-_]+)(?:/)([a-zA-Z0-9-_]+).*?$",
+            "regex": "http(?:s?)://(?:\\w+\\.)?pinterest.com/(?!pin|search)([a-zA-Z0-9-_]+)(?:/)(?!pins)([a-zA-Z0-9-_]+).*?$",
             "testInputs": [
                 "https://pinterest.com/cnnr/what-time-is-it/",
                 "https://www.pinterest.com/cnnr/what-time-is-it/",
                 "https://fr.pinterest.com/cnnr/what-time-is-it/",
                 "https://www.pinterest.com/cnnr/what-time-is-it/?foo=bar",
                 "https://www.pinterest.com/pin/515380751084154703/",
-                "https://www.pinterest.com/search/pins/?q=cute%20animal"
+                "https://www.pinterest.com/search/pins/?q=cute%20animal",
+                "https://www.pinterest.com/chels/pins/"
             ],
             "formats": [
                 {
@@ -776,6 +777,7 @@
                         "pinterest://board/cnnr/what-time-is-it",
                         "pinterest://board/cnnr/what-time-is-it",
                         "pinterest://board/cnnr/what-time-is-it",
+                        null,
                         null,
                         null
                     ]
