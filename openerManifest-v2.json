@@ -5636,8 +5636,7 @@
             "displayName": "AliExpress",
             "identifier": "aliexpress",
             "storeIdentifier": "436672029",
-            "scheme": "aliexpress://",
-            "new": true
+            "scheme": "aliexpress://"
         },
         {
             "displayName": "Alibaba",
