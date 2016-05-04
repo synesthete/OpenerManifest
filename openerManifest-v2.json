@@ -4873,6 +4873,22 @@
             ]
         },
         {
+            "title": "Open Recommendation",
+            "regex": "http(?:s)?://rex\\.is/p/(\\d+).*?$",
+            "testInputs": [
+                "https://rex.is/p/70731"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "rex",
+                    "format": "rex://pick/$1/view",
+                    "testResults": [
+                        "rex://pick/70731/view"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Song",
             "regex": "http(?:s)?://(?:www\\.)?(soundhound\\.com/?.*t=\\d+.*)$",
             "testInputs": [
@@ -5959,6 +5975,13 @@
             "identifier": "ticketfly",
             "storeIdentifier": "943114354",
             "scheme": "ticketfly://"
+        },
+        {
+            "displayName": "REX",
+            "identifier": "rex",
+            "storeIdentifier": "965827767",
+            "scheme": "rex://",
+            "new": true
         },
         {
             "displayName": "SoundHound",
