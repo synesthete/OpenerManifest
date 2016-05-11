@@ -728,7 +728,7 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(?:s?)://(?:\\w+\\.)?pinterest.com/(?!pin|search)([a-zA-Z0-9-_]+)(/pins)?(?:/|/?\\?.*)?$",
+            "regex": "http(?:s?)://(?:\\w+\\.)?pinterest.com/(?!pin|search|explore|categories)([a-zA-Z0-9-_]+)(/pins)?(?:/|/?\\?.*)?$",
             "testInputs": [
                 "https://pinterest.com/cnnr/",
                 "https://www.pinterest.com/cnnr/",
@@ -737,7 +737,9 @@
                 "https://www.pinterest.com/techcrunch/pins/",
                 "https://www.pinterest.com/pin/515380751084154703/",
                 "https://www.pinterest.com/cnnr/what-time-is-it/",
-                "https://www.pinterest.com/search/pins/?q=cute%20animal"
+                "https://www.pinterest.com/search/pins/?q=cute%20animal",
+                "https://www.pinterest.com/explore/popular",
+                "https://www.pinterest.com/categories/popular"
             ],
             "formats": [
                 {
@@ -751,6 +753,8 @@
                         "pinterest://user/techcrunch",
                         null,
                         null,
+                        null,
+                        null,
                         null
                     ]
                 }
@@ -758,7 +762,7 @@
         },
         {
             "title": "Open Board",
-            "regex": "http(?:s?)://(?:\\w+\\.)?pinterest.com/(?!pin|search)([a-zA-Z0-9-_]+)(?:/)(?!pins)([a-zA-Z0-9-_]+).*?$",
+            "regex": "http(?:s?)://(?:\\w+\\.)?pinterest.com/(?!pin|search|explore|categories)([a-zA-Z0-9-_]+)(?:/)(?!pins)([a-zA-Z0-9-_]+).*?$",
             "testInputs": [
                 "https://pinterest.com/cnnr/what-time-is-it/",
                 "https://www.pinterest.com/cnnr/what-time-is-it/",
@@ -766,7 +770,9 @@
                 "https://www.pinterest.com/cnnr/what-time-is-it/?foo=bar",
                 "https://www.pinterest.com/pin/515380751084154703/",
                 "https://www.pinterest.com/search/pins/?q=cute%20animal",
-                "https://www.pinterest.com/chels/pins/"
+                "https://www.pinterest.com/chels/pins/",
+                "https://www.pinterest.com/explore/popular",
+                "https://www.pinterest.com/categories/popular"
             ],
             "formats": [
                 {
@@ -777,6 +783,8 @@
                         "pinterest://board/cnnr/what-time-is-it",
                         "pinterest://board/cnnr/what-time-is-it",
                         "pinterest://board/cnnr/what-time-is-it",
+                        null,
+                        null,
                         null,
                         null,
                         null
@@ -826,6 +834,32 @@
                         "pinterest://search/pins/?q=cute%20animal",
                         "pinterest://search/pins/?q=cute%20animal",
                         "pinterest://search/people/?q=tim%20johnsen"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Category",
+            "regex": "http(?:s)?://(?:\\w+\\.)?pinterest\\.com/(?:categories|explore)(/[^\\/\\?#]+)?.*?",
+            "testInputs": [
+                "https://www.pinterest.com/categories",
+                "https://www.pinterest.com/categories/",
+                "https://www.pinterest.com/categories/popular",
+                "https://www.pinterest.com/explore",
+                "https://www.pinterest.com/explore/",
+                "https://www.pinterest.com/explore/popular"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "pinterest",
+                    "format": "pinterest://categories$1",
+                    "testResults": [
+                        "pinterest://categories",
+                        "pinterest://categories/",
+                        "pinterest://categories/popular",
+                        "pinterest://categories",
+                        "pinterest://categories/",
+                        "pinterest://categories/popular"
                     ]
                 }
             ]
