@@ -5889,8 +5889,7 @@
             "displayName": "REX",
             "identifier": "rex",
             "storeIdentifier": "965827767",
-            "scheme": "rex://",
-            "new": true
+            "scheme": "rex://"
         },
         {
             "displayName": "Runkeeper",
