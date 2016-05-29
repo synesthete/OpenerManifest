@@ -5145,9 +5145,8 @@
             "displayName": "Alien Blue",
             "identifier": "alienblue",
             "storeIdentifier": "923394341",
-            "scheme": "alienblue://",
-            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/alienblue-100.jpg",
-            "todo": "Make this pad-only, faking iPhone for now since a lot of people still probably have it on their phones"
+            "platform": "pad",
+            "scheme": "alienblue://"
         },
         {
             "displayName": "Medium",
