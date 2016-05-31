@@ -4981,6 +4981,26 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Chat",
+            "regex": "http(?:s)://(?:www\\.)?telegram\\.me/([^/\\?#]+).*$",
+            "testInputs": [
+                "https://telegram.me/MacStories",
+                "http://telegram.me/",
+                "https://www.telegram.me/?foo=bar"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "telegram",
+                    "format": "tg://resolve?domain=$1",
+                    "testResults": [
+                        "tg://resolve?domain=MacStories",
+                        null,
+                        null
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -6032,6 +6052,13 @@
             "identifier": "xkcdhd",
             "storeIdentifier": "369631343",
             "scheme": "xkcd://"
+        },
+        {
+            "displayName": "Telegram",
+            "identifier": "telegram",
+            "storeIdentifier": "686449807",
+            "scheme": "tg://",
+            "new": true
         }
     ],
     "browsers": [
