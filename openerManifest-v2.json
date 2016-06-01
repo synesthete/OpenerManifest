@@ -5001,6 +5001,24 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Show",
+            "regex": "http(?:s)?://(?:\\w+\\.)*miaopai\\.com/show(?:/channel)?/([^/\\?\\.]+).*$",
+            "testInputs": [
+                "http://m.miaopai.com/show/channel/3Due-Z7rXW1ht0z-782ewg__",
+                "http://www.miaopai.com/show/3Due-Z7rXW1ht0z-782ewg__.htm"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "miaopai",
+                    "format": "miaopai://detail?scid=$1.",
+                    "testResults": [
+                        "miaopai://detail?scid=3Due-Z7rXW1ht0z-782ewg__.",
+                        "miaopai://detail?scid=3Due-Z7rXW1ht0z-782ewg__."
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -6058,6 +6076,13 @@
             "identifier": "telegram",
             "storeIdentifier": "686449807",
             "scheme": "tg://",
+            "new": true
+        },
+        {
+            "displayName": "Miaopai",
+            "identifier": "miaopai",
+            "storeIdentifier": "1047562725",
+            "scheme": "miaopai://",
             "new": true
         }
     ],
