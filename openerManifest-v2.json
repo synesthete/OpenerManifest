@@ -4983,6 +4983,24 @@
             ]
         },
         {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:\\w+\\.)*glassdoor\\.com/(.*)$",
+            "testInputs": [
+                "https://www.glassdoor.com/Overview/Working-at-Pinterest-EI_IE503467.11,20.htm",
+                "https://www.glassdoor.com/Reviews/Employee-Review-Flipboard-RVW10328958.htm"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "glassdoor",
+                    "format": "glassdoor://$1",
+                    "testResults": [
+                        "glassdoor://Overview/Working-at-Pinterest-EI_IE503467.11,20.htm",
+                        "glassdoor://Reviews/Employee-Review-Flipboard-RVW10328958.htm"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Chat",
             "regex": "http(?:s)://(?:www\\.)?telegram\\.me/([^/\\?#]+).*$",
             "testInputs": [
@@ -6070,6 +6088,13 @@
             "identifier": "xkcdhd",
             "storeIdentifier": "369631343",
             "scheme": "xkcd://"
+        },
+        {
+            "displayName": "Glassdoor",
+            "identifier": "glassdoor",
+            "storeIdentifier": "589698942",
+            "scheme": "glassdoor://",
+            "new": true
         },
         {
             "displayName": "Telegram",
