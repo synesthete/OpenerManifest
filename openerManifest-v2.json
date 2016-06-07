@@ -5020,6 +5020,28 @@
                 }
             ]
         },
+		{
+			"title": "Open Link",
+			"regex": "http(?:s)?://(?:\\w+\\.)*mobile01\\.com/(\\w+detail)\\.php\\?(.*)$",
+			"testInputs": [
+				"http://www.mobile01.com/topicdetail.php?f=116&t=4824149",
+				"http://www.mobile01.com/newsdetail.php?id=18806",
+				"http://www.mobile01.com/topicdetail.php?f=502&t=4774267",
+				"http://m.mobile01.com/topicdetail.php?f=697&t=4821236"
+			],
+			"formats": [
+				{
+					"appIdentifier": "mobile01",
+					"format": "m01://$1?$2",
+					"testResults": [
+						"m01://topicdetail?f=116&t=4824149",
+						"m01://newsdetail?id=18806",
+						"m01://topicdetail?f=502&t=4774267",
+						"m01://topicdetail?f=697&t=4821236"
+					]
+				}
+			]
+		},
         {
             "title": "Open Show",
             "regex": "http(?:s)?://(?:\\w+\\.)*miaopai\\.com/show(?:/channel)?/([^/\\?\\.]+).*$",
@@ -6103,6 +6125,13 @@
             "scheme": "tg://",
             "new": true
         },
+		{
+			"displayName": "Mobile01",
+			"identifier": "mobile01",
+			"storeIdentifier": "444909583",
+			"scheme": "m01://",
+			"new": true
+		},
         {
             "displayName": "Miaopai",
             "identifier": "miaopai",
