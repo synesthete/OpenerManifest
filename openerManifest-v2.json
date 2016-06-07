@@ -6405,6 +6405,23 @@
                 "sidefarihttp://www.opener.link/",
                 "sidefarihttps://twitter.com/openerapp"
             ]
-        }
+        },
+		{
+			"displayName": "Adblock Browser",
+			"identifier": "adblockbrowser",
+			"scheme": "adblockbrowser://",
+			"storeIdentifier": "1015653330",
+            "regex": "http(?:s)?://(.*)$",
+			"format": "adblockbrowser://$1",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "adblockbrowser://www.opener.link/",
+                "adblockbrowser://twitter.com/openerapp"
+            ],
+			"new": true
+		}
     ]
 }
