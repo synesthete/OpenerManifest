@@ -6122,8 +6122,7 @@
             "displayName": "Telegram",
             "identifier": "telegram",
             "storeIdentifier": "686449807",
-            "scheme": "tg://",
-            "new": true
+            "scheme": "tg://"
         },
 		{
 			"displayName": "Mobile01",
