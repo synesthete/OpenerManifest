@@ -6406,6 +6406,24 @@
                 "sidefarihttps://twitter.com/openerapp"
             ]
         },
+        {
+            "displayName": "Brave",
+            "identifier": "brave",
+            "scheme": "brave://",
+            "storeIdentifier": "1052879175",
+            "regex": "(.+)$",
+            "script": "function process(url, completionHandler) { completionHandler('brave://open-url?url=' + encodeURIComponent(url)); }",
+            "docs": "https://github.com/brave/ios-open-thirdparty-browser",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "brave://open-url?url=http%3A%2F%2Fwww.opener.link%2F",
+                "brave://open-url?url=https%3A%2F%2Ftwitter.com%2Fopenerapp"
+            ],
+			"new": true
+        },
 		{
 			"displayName": "Adblock Browser",
 			"identifier": "adblockbrowser",
