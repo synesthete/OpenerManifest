@@ -895,7 +895,7 @@
                     "testResults": [
                         "flipboard://showSection/auth/flipboard/user%252F230604372?title=Catherine%20Scowcroft%20on%20Flipboard",
                         "flipboard://showSection/sid/5ha7nr15y/catherinesc63kn?title=Liverpool%20Post%20on%20Flipboard",
-                        "flipboard://showSection/sid/217ha2rt47oa1f62?title=Foodies%20on%20Flipboard"
+                        "flipboard://flipit?url=http%3A%2F%2Fflip.it%2FMS9XR"
                     ]
                 }
             ]
