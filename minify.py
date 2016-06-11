@@ -12,6 +12,12 @@ if len(sys.argv) < 2:
     
 path = sys.argv[1]
 
+# Use the --prefer-script-v1 flag when use need the v2 format (includes only 'script', not 'script2')
+preferredScriptName = 'script2'
+if len(sys.argv) > 2:
+    if sys.argv[2] == '--prefer-script-v1':
+        preferredScriptName = 'script'
+
 data = json.loads(open(path).read(), object_pairs_hook=OrderedDict) # http://stackoverflow.com/a/6921760
 
 # Strip unneeded keys from apps
@@ -24,19 +30,36 @@ for appIndex,app in enumerate(data['apps']):
 			
 # Strip unneeded keys from actions
 for actionIndex,action in enumerate(data['actions']):
-	actionKeys = action.keys()
-	for keyIndex,key in enumerate(actionKeys):
-		if not key in ["title", "regex", "includeHeaders", "formats"]:
-			# print "Removing " + key + " from action"
-			action.pop(key, None)
-		
-	# Strip unneeded keys from formats
-	for format in action['formats']:
-		formatKeys = format.keys()
-		for keyIndex,key in enumerate(formatKeys):
-			if not key in ["appIdentifier", "format", "script", "script2"]:
-				# print "Removing " + key + " from format"
-				format.pop(key, None)
+    actionKeys = action.keys()
+    for keyIndex,key in enumerate(actionKeys):
+        if not key in ["title", "regex", "includeHeaders", "formats"]:
+            # print "Removing " + key + " from action"
+            action.pop(key, None)
+
+    # Strip unneeded keys from formats
+    for format in action['formats']:
+        formatKeys = format.keys()
+        for keyIndex,key in enumerate(formatKeys):
+            if not key in ["appIdentifier", "format", "script", "script2"]:
+                # print "Removing " + key + " from format"
+                format.pop(key, None)
+
+        # Ensure only necessary script is included
+        if not 'format' in formatKeys:
+            if preferredScriptName == 'script2' and 'script2' in formatKeys:
+                # print 'Removing v1 script from ' + format['appIdentifier']
+                format.pop('script', None)
+            elif preferredScriptName == 'script':
+                if 'script' in formatKeys:
+                    # print 'Removing v2 script from ' + format['appIdentifier']
+                    format.pop('script2', None)
+                else:
+                    # print 'Removing format ' + format['appIdentifier'] + ' from ' + action['title']
+                    action['formats'].remove(format)
+
+    if len(action['formats']) == 0:
+        # print 'Removing action ' + action['title']
+        data['actions'].remove(action)
 
 # Strip unneeded keys from browsers
 if 'browsers' in data:
@@ -44,8 +67,28 @@ if 'browsers' in data:
 		browserKeys = browser.keys()
 		for keyIndex,key in enumerate(browserKeys):
 			if not key in ["identifier", "displayName", "storeIdentifier", "scheme", "new", "platform", "iconURL", "regex", "format", "script", "script2"]:
-				# print "Removing " + key + " from browser"
+                # print "Removing " + key + " from browser"
 				browser.pop(key, None)
+    
+        # Ensure only necessary script is included
+		if not 'format' in browserKeys:
+			if preferredScriptName == 'script2' and 'script2' in browserKeys:
+                # print 'Removing v1 script from ' + browser['identifier']
+				browser.pop('script', None)
+			elif preferredScriptName == 'script':
+				if 'script' in browserKeys:
+                    # print 'Removing v2 script from ' + browser['identifier']
+					browser.pop('script2', None)
+				else:
+                    # print 'Removing browser ' + browser['identifier']
+					data['browsers'].remove(browser)
+
 				
 data = json.dumps(data, separators=(',',':'))
 open(path.replace('.json', '-minified.json'), 'w').write(data)
+
+# if v3
+#     pop script if both exist
+# else if v2
+#     pop script2 if both exist
+#     pop format if script1 doesn't exist
