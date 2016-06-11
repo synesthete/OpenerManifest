@@ -34,7 +34,7 @@ for actionIndex,action in enumerate(data['actions']):
 	for format in action['formats']:
 		formatKeys = format.keys()
 		for keyIndex,key in enumerate(formatKeys):
-			if not key in ["appIdentifier", "format", "script"]:
+			if not key in ["appIdentifier", "format", "script", "script2"]:
 				# print "Removing " + key + " from format"
 				format.pop(key, None)
 
@@ -43,7 +43,7 @@ if 'browsers' in data:
 	for browserIndex,browser in enumerate(data['browsers']):
 		browserKeys = browser.keys()
 		for keyIndex,key in enumerate(browserKeys):
-			if not key in ["identifier", "displayName", "storeIdentifier", "scheme", "new", "platform", "iconURL", "regex", "format", "script"]:
+			if not key in ["identifier", "displayName", "storeIdentifier", "scheme", "new", "platform", "iconURL", "regex", "format", "script", "script2"]:
 				# print "Removing " + key + " from browser"
 				browser.pop(key, None)
 				
