@@ -6115,8 +6115,7 @@
             "displayName": "Glassdoor",
             "identifier": "glassdoor",
             "storeIdentifier": "589698942",
-            "scheme": "glassdoor://",
-            "new": true
+            "scheme": "glassdoor://"
         },
         {
             "displayName": "Telegram",
@@ -6135,8 +6134,7 @@
             "displayName": "Miaopai",
             "identifier": "miaopai",
             "storeIdentifier": "1047562725",
-            "scheme": "miaopai://",
-            "new": true
+            "scheme": "miaopai://"
         }
     ],
     "browsers": [
