@@ -213,6 +213,7 @@ The manifest file has a `-v2` on the end, this indicates the major version of th
 <table>
 <tr><th>Manifest Version</th><th>App Version</th><th>Changes</th></tr>
 <tr><td>v2</td><td>1.0.10</td><td>Made app dictionary <code>storeIdentifier</code> field optional. This was required in v1. Change was made in order to support first party apps, which lack an iTunes identifier.</td></tr>
+<tr><td>v3</td><td>1.1.8</td><td>Add support for <code>script2</code> field, which is processed using JavascriptCore instead of a UIWebView.</td></tr>
 </table>
 
 ## Contributing
