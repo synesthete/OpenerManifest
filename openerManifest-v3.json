@@ -535,9 +535,10 @@
         },
         {
             "title": "Open Journal",
-            "regex": "http(s)?://[a-zA-Z0-9_\\-\\.]+\\.vsco\\.co(m)?/journal/\\w+.*$",
+            "regex": "http(s)?://(?:[a-zA-Z0-9_\\-\\.]+\\.)?vsco\\.co(m)?/(?:[a-zA-Z0-9_\\-\\.]+/)?journal/\\w+.*$",
             "testInputs": [
-                "http://artistinitiative.vsco.co/journal/a-century-of-artifice-launch-recap"
+                "http://artistinitiative.vsco.co/journal/a-century-of-artifice-launch-recap",
+				"http://vsco.co/brendanryan/journal/iceland"
             ],
             "formats": [
                 {
@@ -545,7 +546,8 @@
                     "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(vsco://.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
                     "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(vsco://.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); }",
                     "testResults": [
-                        "vsco://user/556895/journal/5644edcf2b331e1d2f8b4569"
+                        "vsco://user/556895/journal/5644edcf2b331e1d2f8b4569",
+						"vsco://user/28777/journal/575cad7e74e8a0e4638b456c"
                     ]
                 }
             ]
