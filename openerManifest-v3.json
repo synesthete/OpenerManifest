@@ -6509,6 +6509,23 @@
                 "sidefarihttps://twitter.com/openerapp"
             ]
         },
+		{
+			"displayName": "Sleipnir",
+			"identifier": "sleipnir",
+			"scheme": "shttp://",
+			"storeIdentifier": "404732112",
+            "regex": "(http(?:s)?.*)",
+            "format": "s$1",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "shttp://www.opener.link/",
+                "shttps://twitter.com/openerapp"
+            ],
+			"new": true
+		},
         {
             "displayName": "Brave",
             "identifier": "brave",
