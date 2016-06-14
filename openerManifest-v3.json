@@ -6201,8 +6201,7 @@
 			"displayName": "Mobile01",
 			"identifier": "mobile01",
 			"storeIdentifier": "444909583",
-			"scheme": "m01://",
-			"new": true
+			"scheme": "m01://"
 		},
         {
             "displayName": "Miaopai",
@@ -6542,8 +6541,7 @@
             "testResults": [
                 "brave://open-url?url=http%3A%2F%2Fwww.opener.link%2F",
                 "brave://open-url?url=https%3A%2F%2Ftwitter.com%2Fopenerapp"
-            ],
-			"new": true
+            ]
         },
 		{
 			"displayName": "Adblock Browser",
@@ -6559,8 +6557,7 @@
             "testResults": [
                 "adblockbrowser://www.opener.link/",
                 "adblockbrowser://twitter.com/openerapp"
-            ],
-			"new": true
+            ]
 		}
     ]
 }
