@@ -2813,16 +2813,18 @@
         },
         {
             "title": "Open Comic",
-            "regex": "(?:http(?:s?)://(?:www.)?xkcd.com/)(\\d+)(?:\\S*)$",
+            "regex": "(?:http(?:s?)://(?:www\\.|m\\.)?xkcd\\.com/)(\\d+).*$",
             "testInputs": [
-                "http://xkcd.com/1508/"
+                "http://xkcd.com/1508/",
+				"http://m.xkcd.com/1694/"
             ],
             "formats": [
                 {
                     "appIdentifier": "xkcdhd",
                     "format": "xkcd://$1",
                     "testResults": [
-                        "xkcd://1508"
+                        "xkcd://1508",
+						"xkcd://1694"
                     ]
                 }
             ]
