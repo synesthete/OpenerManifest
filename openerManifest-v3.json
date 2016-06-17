@@ -614,7 +614,7 @@
         {
             "title": "Open Tumblog",
             "includeHeaders": true,
-            "regex": "http://(?!.*\\.tumblr\\.com)[a-zA-Z0-9-\\.]+/(?!post|image|tagged).*\\n.*\"(?:(?i)X-Tumblr-User)\":\"([a-zA-Z0-9_\\-]+)\".*$",
+            "regex": "http(?:s)?://(?!.*\\.tumblr\\.com)[a-zA-Z0-9-\\.]+/(?!post|image|tagged).*\\n.*\"(?:(?i)X-Tumblr-User)\":\"([a-zA-Z0-9_\\-]+)\".*$",
             "formats": [
                 {
                     "appIdentifier": "tumblr",
@@ -664,7 +664,7 @@
         },
         {
             "title": "Open Post",
-            "regex": "http(?:s?)://(?:www\\.)?([a-zA-Z0-9_\\-]+).tumblr.com/tagged/(\\d+)(?:(?:/|\\?|#).*)?$",
+            "regex": "http(?:s)?://(?:www\\.)?([a-zA-Z0-9_\\-]+).tumblr.com/tagged/(\\d+)(?:(?:/|\\?|#).*)?$",
             "testInputs": [
                 "http://2kindsofpeople.tumblr.com/tagged/003"
             ],
@@ -681,7 +681,7 @@
         },
         {
             "title": "Open Post",
-            "regex": "http://(?!.*\\.tumblr\\.com)[a-zA-Z0-9-.]+/(?!tagged)\\w+/(\\d+).*\\n.*\"(?:(?i)X-Tumblr-User)\":\"([a-zA-Z0-9_\\-]+)\".*$",
+            "regex": "http(?:s)?://(?!.*\\.tumblr\\.com)[a-zA-Z0-9-.]+/(?!tagged)\\w+/(\\d+).*\\n.*\"(?:(?i)X-Tumblr-User)\":\"([a-zA-Z0-9_\\-]+)\".*$",
             "includeHeaders": true,
             "formats": [
                 {
