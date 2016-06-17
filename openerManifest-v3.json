@@ -538,7 +538,7 @@
             "regex": "http(s)?://(?:[a-zA-Z0-9_\\-\\.]+\\.)?vsco\\.co(m)?/(?:[a-zA-Z0-9_\\-\\.]+/)?journal/\\w+.*$",
             "testInputs": [
                 "http://artistinitiative.vsco.co/journal/a-century-of-artifice-launch-recap",
-				"http://vsco.co/brendanryan/journal/iceland"
+                "http://vsco.co/brendanryan/journal/iceland"
             ],
             "formats": [
                 {
@@ -547,7 +547,7 @@
                     "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(vsco://.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); }",
                     "testResults": [
                         "vsco://user/556895/journal/5644edcf2b331e1d2f8b4569",
-						"vsco://user/28777/journal/575cad7e74e8a0e4638b456c"
+                        "vsco://user/28777/journal/575cad7e74e8a0e4638b456c"
                     ]
                 }
             ]
@@ -2816,7 +2816,7 @@
             "regex": "(?:http(?:s?)://(?:www\\.|m\\.)?xkcd\\.com/)(\\d+).*$",
             "testInputs": [
                 "http://xkcd.com/1508/",
-				"http://m.xkcd.com/1694/"
+                "http://m.xkcd.com/1694/"
             ],
             "formats": [
                 {
@@ -2824,7 +2824,7 @@
                     "format": "xkcd://$1",
                     "testResults": [
                         "xkcd://1508",
-						"xkcd://1694"
+                        "xkcd://1694"
                     ]
                 }
             ]
@@ -5096,28 +5096,28 @@
                 }
             ]
         },
-		{
-			"title": "Open Link",
-			"regex": "http(?:s)?://(?:\\w+\\.)*mobile01\\.com/(\\w+detail)\\.php\\?(.*)$",
-			"testInputs": [
-				"http://www.mobile01.com/topicdetail.php?f=116&t=4824149",
-				"http://www.mobile01.com/newsdetail.php?id=18806",
-				"http://www.mobile01.com/topicdetail.php?f=502&t=4774267",
-				"http://m.mobile01.com/topicdetail.php?f=697&t=4821236"
-			],
-			"formats": [
-				{
-					"appIdentifier": "mobile01",
-					"format": "m01://$1?$2",
-					"testResults": [
-						"m01://topicdetail?f=116&t=4824149",
-						"m01://newsdetail?id=18806",
-						"m01://topicdetail?f=502&t=4774267",
-						"m01://topicdetail?f=697&t=4821236"
-					]
-				}
-			]
-		},
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:\\w+\\.)*mobile01\\.com/(\\w+detail)\\.php\\?(.*)$",
+            "testInputs": [
+                "http://www.mobile01.com/topicdetail.php?f=116&t=4824149",
+                "http://www.mobile01.com/newsdetail.php?id=18806",
+                "http://www.mobile01.com/topicdetail.php?f=502&t=4774267",
+                "http://m.mobile01.com/topicdetail.php?f=697&t=4821236"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "mobile01",
+                    "format": "m01://$1?$2",
+                    "testResults": [
+                        "m01://topicdetail?f=116&t=4824149",
+                        "m01://newsdetail?id=18806",
+                        "m01://topicdetail?f=502&t=4774267",
+                        "m01://topicdetail?f=697&t=4821236"
+                    ]
+                }
+            ]
+        },
         {
             "title": "Open Show",
             "regex": "http(?:s)?://(?:\\w+\\.)*miaopai\\.com/show(?:/channel)?/([^/\\?\\.]+).*$",
@@ -6199,12 +6199,12 @@
             "storeIdentifier": "686449807",
             "scheme": "tg://"
         },
-		{
-			"displayName": "Mobile01",
-			"identifier": "mobile01",
-			"storeIdentifier": "444909583",
-			"scheme": "m01://"
-		},
+        {
+            "displayName": "Mobile01",
+            "identifier": "mobile01",
+            "storeIdentifier": "444909583",
+            "scheme": "m01://"
+        },
         {
             "displayName": "Miaopai",
             "identifier": "miaopai",
@@ -6510,11 +6510,11 @@
                 "sidefarihttps://twitter.com/openerapp"
             ]
         },
-		{
-			"displayName": "Sleipnir",
-			"identifier": "sleipnir",
-			"scheme": "shttp://",
-			"storeIdentifier": "404732112",
+        {
+            "displayName": "Sleipnir",
+            "identifier": "sleipnir",
+            "scheme": "shttp://",
+            "storeIdentifier": "404732112",
             "regex": "(http(?:s)?.*)",
             "format": "s$1",
             "testInputs": [
@@ -6525,8 +6525,8 @@
                 "shttp://www.opener.link/",
                 "shttps://twitter.com/openerapp"
             ],
-			"new": true
-		},
+            "new": true
+        },
         {
             "displayName": "Brave",
             "identifier": "brave",
@@ -6545,13 +6545,13 @@
                 "brave://open-url?url=https%3A%2F%2Ftwitter.com%2Fopenerapp"
             ]
         },
-		{
-			"displayName": "Adblock Browser",
-			"identifier": "adblockbrowser",
-			"scheme": "adblockbrowser://",
-			"storeIdentifier": "1015653330",
+        {
+            "displayName": "Adblock Browser",
+            "identifier": "adblockbrowser",
+            "scheme": "adblockbrowser://",
+            "storeIdentifier": "1015653330",
             "regex": "http(?:s)?://(.*)$",
-			"format": "adblockbrowser://$1",
+            "format": "adblockbrowser://$1",
             "testInputs": [
                 "http://www.opener.link/",
                 "https://twitter.com/openerapp"
@@ -6560,6 +6560,6 @@
                 "adblockbrowser://www.opener.link/",
                 "adblockbrowser://twitter.com/openerapp"
             ]
-		}
+        }
     ]
 }
