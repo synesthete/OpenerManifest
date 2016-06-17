@@ -244,8 +244,8 @@
             "formats": [
                 {
                     "appIdentifier": "instagram",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); url = 'http://api.instagram.com/oembed?url=' + url; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4) { if (xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); completionHandler('instagram://media?id=' + res['media_id']); } else { completionHandler(null); } } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = jsonRequest('http://api.instagram.com/oembed?url=' + url); if (res != null) { var mediaIdentifier = res['media_id']; } if (mediaIdentifier != null) { completionHandler('instagram://media?id=' + mediaIdentifier); } else { completionHandler(null); } }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); url = 'https://api.instagram.com/oembed?url=' + url; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4) { if (xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); completionHandler('instagram://media?id=' + res['media_id']); } else { completionHandler(null); } } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = jsonRequest('https://api.instagram.com/oembed?url=' + url); if (res != null) { var mediaIdentifier = res['media_id']; } if (mediaIdentifier != null) { completionHandler('instagram://media?id=' + mediaIdentifier); } else { completionHandler(null); } }",
                     "testResults": [
                         "instagram://media?id=967661734046795771_263571600",
                         null,
@@ -2135,8 +2135,8 @@
             "formats": [
                 {
                     "appIdentifier": "soundcloud",
-                    "script": "function process(url, completionHandler) { url = 'http://api.soundcloud.com/resolve?client_id=27fcfadd796648a26072b6041ff5bf74&url=' + url; var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var result = JSON.parse(xmlhttp.responseText); var appURL = null; if (result['kind'] === 'track') { appURL = 'soundcloud://sounds:' + result['id']; } else if (result['kind'] === 'user') { appURL = 'soundcloud://users:' + result['id']; } else if (result['kind'] === 'playlist') { appURL = 'soundcloud://sets:' + result['id']; } completionHandler(appURL); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { url = 'http://api.soundcloud.com/resolve?client_id=27fcfadd796648a26072b6041ff5bf74&url=' + url; var result = jsonRequest(url); var appURL = null; if (result['kind'] === 'track') { appURL = 'soundcloud://sounds:' + result['id']; } else if (result['kind'] === 'user') { appURL = 'soundcloud://users:' + result['id']; } else if (result['kind'] === 'playlist') { appURL = 'soundcloud://sets:' + result['id']; } completionHandler(appURL); }",
+                    "script": "function process(url, completionHandler) { url = 'https://api.soundcloud.com/resolve?client_id=27fcfadd796648a26072b6041ff5bf74&url=' + url; var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var result = JSON.parse(xmlhttp.responseText); var appURL = null; if (result['kind'] === 'track') { appURL = 'soundcloud://sounds:' + result['id']; } else if (result['kind'] === 'user') { appURL = 'soundcloud://users:' + result['id']; } else if (result['kind'] === 'playlist') { appURL = 'soundcloud://sets:' + result['id']; } completionHandler(appURL); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { url = 'https://api.soundcloud.com/resolve?client_id=27fcfadd796648a26072b6041ff5bf74&url=' + url; var result = jsonRequest(url); var appURL = null; if (result['kind'] === 'track') { appURL = 'soundcloud://sounds:' + result['id']; } else if (result['kind'] === 'user') { appURL = 'soundcloud://users:' + result['id']; } else if (result['kind'] === 'playlist') { appURL = 'soundcloud://sets:' + result['id']; } completionHandler(appURL); }",
                     "testResults": [
                         "soundcloud://sounds:192620860",
                         "soundcloud://users:139227139",
@@ -6219,8 +6219,8 @@
             "scheme": "http://",
             "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/safari-120.jpg",
             "regex": "(.+)$",
-            "script": "function process(url, completionHandler) { completionHandler('http://www.opener.link/redirect.html?url=' + encodeURIComponent(url)); }",
-            "script2": "function process(url, completionHandler) { completionHandler('http://www.opener.link/redirect.html?url=' + encodeURIComponent(url)); }",
+            "script": "function process(url, completionHandler) { completionHandler('https://s3.amazonaws.com/www.opener.link/redirect.html?url=' + encodeURIComponent(url)); }",
+            "script2": "function process(url, completionHandler) { completionHandler('https://s3.amazonaws.com/www.opener.link/redirect.html?url=' + encodeURIComponent(url)); }",
             "testInputs": [
                 "http://www.opener.link/"
             ],
