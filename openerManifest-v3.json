@@ -6524,8 +6524,7 @@
             "testResults": [
                 "shttp://www.opener.link/",
                 "shttps://twitter.com/openerapp"
-            ],
-            "new": true
+            ]
         },
         {
             "displayName": "Brave",
