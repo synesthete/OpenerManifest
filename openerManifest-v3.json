@@ -2610,24 +2610,24 @@
                         "com.amazon.mobile.shopping://amazon.com/products/0812972155"
                     ]
                 },
-				{
-					"appIdentifier": "associate",
-		            "script": "function process(url, completionHandler) { completionHandler('associate://x-callback-url/convert?url=' + encodeURIComponent(url)); }",
-		            "script2": "function process(url, completionHandler) { completionHandler('associate://x-callback-url/convert?url=' + encodeURIComponent(url)); }",
-					"testResults": [
-		                "associate://x-callback-url/convert?url=http%3A%2F%2Fwww.amazon.com%2FMondaine-A990-CLOCK-11SBC-Clock-White-Frame%2Fdp%2FB0016QNNP6%2Fref%3Dsr_1_1%3Fie%3DUTF8%26qid%3D1429471063%26sr%3D8-1%26keywords%3Dmondaine%2Bclock",
-		                "associate://x-callback-url/convert?url=http%3A%2F%2Fwww.amazon.com%2Fdp%2FB0016QNNP6",
-		                "associate://x-callback-url/convert?url=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0016QNNP6",
-		                "associate://x-callback-url/convert?url=http%3A%2F%2Fwww.amazon.com%2Fdp%2FB0016QNNP6%2Fref%3Dcm_sw_su_dp",
-		                "associate://x-callback-url/convert?url=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0016QNNP6",
-		                "associate://x-callback-url/convert?url=http%3A%2F%2Fwww.amazon.co.uk%2FUntitled%2Fdp%2F1472230078%2Fref%3Dsr_1_1%2F277-2117425-9287062%3Fie%3DUTF8%26qid%3D1428652808%26sr%3D8-1%26keywords%3D9781472230072",
-		                "associate://x-callback-url/convert?url=http%3A%2F%2Fwww.amazon.de%2Fdp%2FB00N5BQ62",
-		                "associate://x-callback-url/convert?url=http%3A%2F%2Fsmile.amazon.com%2Fdp%2F0812522397%2Fref%3Dcm_sw_r_awd_m6xOvb9NW6G48",
-		                "associate://x-callback-url/convert?url=http%3A%2F%2Fwww.amazon.com%2FAdjustable-Flashlight-Bright-Batteries-Included%2Fdp%2FB005FEGYCO",
-		                "associate://x-callback-url/convert?url=http%3A%2F%2Fwww.amazon.com%2Fgp%2Faw%2Fd%2FB005FEGYCO%2Fref%3Dmp_s_a_1_1%3Fqid%3D1444785369%26sr%3D8-1%26pi%3DSY200_QL40%26keywords%3Dflashlight%26dpPl%3D1%26dpID%3D41uqlYcT30L%26ref%3DplSrch",
-		                "associate://x-callback-url/convert?url=http%3A%2F%2Fwww.amazon.com%2Fexec%2Fobidos%2FASIN%2F0812972155%2Fcodihorr-20"
-					]
-				}
+                {
+                    "appIdentifier": "associate",
+                    "script": "function process(url, completionHandler) { completionHandler('associate://x-callback-url/convert?url=' + encodeURIComponent(url)); }",
+                    "script2": "function process(url, completionHandler) { completionHandler('associate://x-callback-url/convert?url=' + encodeURIComponent(url)); }",
+                    "testResults": [
+                        "associate://x-callback-url/convert?url=http%3A%2F%2Fwww.amazon.com%2FMondaine-A990-CLOCK-11SBC-Clock-White-Frame%2Fdp%2FB0016QNNP6%2Fref%3Dsr_1_1%3Fie%3DUTF8%26qid%3D1429471063%26sr%3D8-1%26keywords%3Dmondaine%2Bclock",
+                        "associate://x-callback-url/convert?url=http%3A%2F%2Fwww.amazon.com%2Fdp%2FB0016QNNP6",
+                        "associate://x-callback-url/convert?url=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0016QNNP6",
+                        "associate://x-callback-url/convert?url=http%3A%2F%2Fwww.amazon.com%2Fdp%2FB0016QNNP6%2Fref%3Dcm_sw_su_dp",
+                        "associate://x-callback-url/convert?url=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB0016QNNP6",
+                        "associate://x-callback-url/convert?url=http%3A%2F%2Fwww.amazon.co.uk%2FUntitled%2Fdp%2F1472230078%2Fref%3Dsr_1_1%2F277-2117425-9287062%3Fie%3DUTF8%26qid%3D1428652808%26sr%3D8-1%26keywords%3D9781472230072",
+                        "associate://x-callback-url/convert?url=http%3A%2F%2Fwww.amazon.de%2Fdp%2FB00N5BQ62",
+                        "associate://x-callback-url/convert?url=http%3A%2F%2Fsmile.amazon.com%2Fdp%2F0812522397%2Fref%3Dcm_sw_r_awd_m6xOvb9NW6G48",
+                        "associate://x-callback-url/convert?url=http%3A%2F%2Fwww.amazon.com%2FAdjustable-Flashlight-Bright-Batteries-Included%2Fdp%2FB005FEGYCO",
+                        "associate://x-callback-url/convert?url=http%3A%2F%2Fwww.amazon.com%2Fgp%2Faw%2Fd%2FB005FEGYCO%2Fref%3Dmp_s_a_1_1%3Fqid%3D1444785369%26sr%3D8-1%26pi%3DSY200_QL40%26keywords%3Dflashlight%26dpPl%3D1%26dpID%3D41uqlYcT30L%26ref%3DplSrch",
+                        "associate://x-callback-url/convert?url=http%3A%2F%2Fwww.amazon.com%2Fexec%2Fobidos%2FASIN%2F0812972155%2Fcodihorr-20"
+                    ]
+                }
             ]
         },
         {
@@ -5751,14 +5751,14 @@
             "storeIdentifier": "376183339",
             "scheme": "ted://"
         },
-		{
-			"displayName": "Associate",
-			"identifier": "associate",
-			"storeIdentifier": "1083291558",
-			"scheme": "associate://",
+        {
+            "displayName": "Associate",
+            "identifier": "associate",
+            "storeIdentifier": "1083291558",
+            "scheme": "associate://",
             "docs": "http://squibner.com/associate/associate-url-scheme",
-			"new": true
-		},
+            "new": true
+        },
         {
             "displayName": "Daum",
             "identifier": "daum",
