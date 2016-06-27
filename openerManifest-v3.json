@@ -1140,6 +1140,25 @@
             ]
         },
         {
+            "title": "Check in at venue",
+            "regex": "http(?:s?)://(?:m.|www.|mobile.)?foursquare.com(?:/mobile)?/v(?:/\\S+)?/([0-9a-fA-F]{24}).*$",
+            "testInputs": [
+                "https://foursquare.com/v/ritual-coffee-roasters/42853f80f964a5200c231fe3",
+                "https://foursquare.com/v/42853f80f964a5200c231fe3"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "swarm",
+                    "format": "swarm://checkins/add?venueId=$1",
+                    "testResults": [
+                        "swarm://checkins/add?venueId=42853f80f964a5200c231fe3",
+                        "swarm://checkins/add?venueId=42853f80f964a5200c231fe3"
+                    ],
+                    "docs": "http://stackoverflow.com/a/33129925/3943258"
+                }
+            ]
+        },
+        {
             "title": "Open List",
             "regex": "http(?:s)?://(m\\.|mobile\\.|www\\.)?foursquare\\.com/(?:(?:user/\\d+|[a-zA-Z0-9_%\\-]+)/list|list)/[a-zA-Z0-9_%\\-]+.*$",
             "testInputs": [
