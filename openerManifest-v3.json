@@ -5775,8 +5775,7 @@
             "identifier": "associate",
             "storeIdentifier": "1083291558",
             "scheme": "associate://",
-            "docs": "http://squibner.com/associate/associate-url-scheme",
-            "new": true
+            "docs": "http://squibner.com/associate/associate-url-scheme"
         },
         {
             "displayName": "Daum",
