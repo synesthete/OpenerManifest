@@ -5428,7 +5428,7 @@
             "displayName": "Alien Blue",
             "identifier": "alienblue",
             "storeIdentifier": "923394341",
-            "platform": "pad",
+            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/alienblue-100.jpg",
             "scheme": "alienblue://"
         },
         {
