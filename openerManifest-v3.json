@@ -280,10 +280,11 @@
         },
         {
             "title": "Open Tag",
-            "regex": "(?:(?:http(?:s?)://(?:www.)?(?:(?:instagram.com)|(?:instagr.am))/))explore/tags/([a-zA-Z0-9_%]+).*$",
+            "regex": "(?:(?:http(?:s?)://(?:www.)?(?:(?:instagram.com)|(?:instagr.am))/))(?:explore/)?tags/([a-zA-Z0-9_%]+).*$",
             "testInputs": [
                 "https://instagram.com/explore/tags/darkroomapp/",
-                "https://instagram.com/explore/tags/%F0%9F%98%80/"
+                "https://instagram.com/explore/tags/%F0%9F%98%80/",
+                "https://instagram.com/tags/4thofjuly"
             ],
             "formats": [
                 {
@@ -291,7 +292,8 @@
                     "format": "instagram://tag?name=$1",
                     "testResults": [
                         "instagram://tag?name=darkroomapp",
-                        "instagram://tag?name=%F0%9F%98%80"
+                        "instagram://tag?name=%F0%9F%98%80",
+                        "instagram://tag?name=4thofjuly"
                     ]
                 }
             ]
