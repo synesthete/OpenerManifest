@@ -586,7 +586,7 @@
             ]
         },
         {
-            "title": "Open Tumblog",
+            "title": "Open Blog",
             "regex": "http(?:s?)://(?:www\\.)?([a-zA-Z0-9_\\-]+).tumblr.com(?:/(?!(post|image|tagged)/).*|\\?.*|#.*)?$",
             "testInputs": [
                 "http://visualizingmath.tumblr.com/",
@@ -614,7 +614,7 @@
             ]
         },
         {
-            "title": "Open Tumblog",
+            "title": "Open Blog",
             "includeHeaders": true,
             "regex": "http(?:s)?://(?!.*\\.tumblr\\.com)[a-zA-Z0-9-\\.]+/(?!post|image|tagged).*\\n.*\"(?:(?i)X-Tumblr-User)\":\"([a-zA-Z0-9_\\-]+)\".*$",
             "formats": [
