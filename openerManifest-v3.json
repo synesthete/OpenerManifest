@@ -5143,6 +5143,28 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "View Lyrics",
+            "regex": "http(?:s)?://(?:www\\.)?genius\\.com/(\\d+|.*-lyrics).*$",
+            "testInputs": [
+                "http://genius.com/Drake-one-dance-lyrics",
+                "http://genius.com/Gwen-stefani-me-without-you-lyrics",
+                "http://genius.com/3429394",
+                "http://genius.com/10006630"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "genius",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(genius://.*?)\".*'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler(match); }",
+                    "testResults": [
+                        "genius://songs/2450584",
+                        "genius://songs/2421134",
+                        "genius://songs/156522",
+                        null
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -6218,6 +6240,13 @@
             "identifier": "miaopai",
             "storeIdentifier": "1047562725",
             "scheme": "miaopai://"
+        },
+        {
+            "displayName": "Genius",
+            "identifier": "genius",
+            "storeIdentifier": "709482991",
+            "scheme": "genius://",
+            "new": true
         }
     ],
     "browsers": [
