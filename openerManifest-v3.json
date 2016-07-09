@@ -6245,8 +6245,7 @@
             "displayName": "Genius",
             "identifier": "genius",
             "storeIdentifier": "709482991",
-            "scheme": "genius://",
-            "new": true
+            "scheme": "genius://"
         }
     ],
     "browsers": [
