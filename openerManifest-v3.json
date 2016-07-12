@@ -219,6 +219,28 @@
             ]
         },
         {
+            "title": "Open Custom Timeline",
+            "regex": "http(?:s)://(?:mobile\\.|www\\.|m\\.)?twitter\\.com/(?:@)?([a-zA-Z0-9_]{1,15})/timelines/(\\d+).*?$",
+            "testInputs": [
+                "https://twitter.com/benward/timelines/648313913201692672",
+                "https://twitter.com/@benward/timelines/648313913201692672",
+                "https://mobile.twitter.com/benward/timelines/648313913201692672",
+                "https://mobile.twitter.com/benward/timelines/648313913201692672?foo=bar"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "twitter",
+                    "format": "twitter://custom_timeline?screen_name=$1&timeline_id=$2",
+                    "testResults": [
+                        "twitter://custom_timeline?screen_name=benward&timeline_id=648313913201692672",
+                        "twitter://custom_timeline?screen_name=benward&timeline_id=648313913201692672",
+                        "twitter://custom_timeline?screen_name=benward&timeline_id=648313913201692672",
+                        "twitter://custom_timeline?screen_name=benward&timeline_id=648313913201692672"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Mute Filter",
             "regex": "http(?:s)?://(?:www\\.)?tapbots\\.com/tweetbot/mute\\?url=(.*)$",
             "testInputs": [
