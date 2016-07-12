@@ -35,6 +35,24 @@
             ]
         },
         {
+            "title": "Add Tweet to Collection",
+            "regex": "http(?:s)?://(?:mobile\\.|www\\.|m\\.)?twitter\\.com/(?:@?[a-zA-Z0-9_]{1,15}/status|statuses)/(\\d+).*$",
+            "testInputs": [
+                "https://twitter.com/zpower/status/588561590997352448",
+                "https://mobile.twitter.com/kiebk/status/599159327056863232?cn=cmVwbHk%3D&refsrc=email"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "charm",
+                    "format": "x-charm://collect/$1",
+                    "testResults": [
+                        "x-charm://collect/588561590997352448",
+                        "x-charm://collect/599159327056863232"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Profile",
             "regex": "http(?:s?)://(?:mobile\\.|www\\.|m\\.)?twitter\\.com/(?:@)?(?!search)([a-zA-Z0-9_]{1,15})(?:/with_replies)?(?:(?:/)?\\?.*)?$",
             "testInputs": [
@@ -6246,6 +6264,14 @@
             "identifier": "genius",
             "storeIdentifier": "709482991",
             "scheme": "genius://"
+        },
+        {
+            "displayName": "Charm",
+            "identifier": "charm",
+            "storeIdentifier": "1102153379",
+            "docs": "http://bit.ly/29sCrgV",
+            "scheme": "x-charm://",
+            "new": true
         }
     ],
     "browsers": [
