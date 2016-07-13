@@ -5336,9 +5336,8 @@
         {
             "displayName": "Apple Music",
             "identifier": "applemusic",
-            "scheme": "music://",
-            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/applemusic-120.jpg",
-            "useful": "Support page has nice icon https://support.apple.com/en-us/HT204951"
+            "storeIdentifier": "1108187390",
+            "scheme": "music://"
         },
         {
             "displayName": "Imgur",
@@ -5400,8 +5399,8 @@
         {
             "displayName": "Apple Maps",
             "identifier": "applemaps",
-            "scheme": "maps://",
-            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/applemaps-120.jpg"
+            "storeIdentifier": "915056765",
+            "scheme": "maps://"
         },
         {
             "displayName": "Facebook",
@@ -5613,8 +5612,8 @@
         {
             "displayName": "iTunes Store",
             "identifier": "itunesstore",
-            "scheme": "itms://",
-            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/itunesstore-120.jpg"
+            "storeIdentifier": "915061235",
+            "scheme": "itms://"
         },
         {
             "displayName": "Zillow",
@@ -5676,9 +5675,8 @@
         {
             "displayName": "Apple News",
             "identifier": "applenews",
-            "scheme": "applenews://",
-            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/applenews-120.jpg",
-            "useful": "Support page has nice icon https://support.apple.com/en-us/HT202329"
+            "storeIdentifier": "1066498020",
+            "scheme": "applenews://"
         },
         {
             "displayName": "CornerTube",
