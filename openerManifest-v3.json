@@ -3576,6 +3576,14 @@
                     "testResults": [
                         "launch://import?url=tweetbot%3A%2F%2F%2Fpost%3Ftext%3D%5Bclipboard%5D&title=Tweet%20Text&description="
                     ]
+                },
+                {
+                    "appIdentifier": "launchcenterproipad",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(launch://import.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(launch://import.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); }",
+                    "testResults": [
+                        "launch://import?url=tweetbot%3A%2F%2F%2Fpost%3Ftext%3D%5Bclipboard%5D&title=Tweet%20Text&description="
+                    ]
                 }
             ]
         },
@@ -5736,7 +5744,15 @@
             "displayName": "Launch Center Pro",
             "identifier": "launchcenterpro",
             "storeIdentifier": "532016360",
-            "scheme": "launch://"
+            "scheme": "launch://",
+            "platform": "phone"
+        },
+        {
+            "displayName": "Launch Center Pro",
+            "identifier": "launchcenterproipad",
+            "storeIdentifier": "532016360",
+            "scheme": "launch://",
+            "platform": "pad"
         },
         {
             "displayName": "PipTube",
