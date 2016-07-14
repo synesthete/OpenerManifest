@@ -242,9 +242,10 @@
         },
         {
             "title": "Open Mute Filter",
-            "regex": "http(?:s)?://(?:www\\.)?tapbots\\.com/tweetbot/mute\\?url=(.*)$",
+            "regex": "http(?:s)?://(?:www\\.)?tapbots\\.com.*\\?url=(.*)$",
             "testInputs": [
-                "https://tapbots.com/tweetbot/mute?url=tweetbot%3A%2F%2F%2Fmute%2Fkeyword%3Fregex%3D1%26text%3D%2528%253Fi%2529%2528keep%2520calm%2520and%2520%255Cw%252B%2529"
+                "https://tapbots.com/tweetbot/mute?url=tweetbot%3A%2F%2F%2Fmute%2Fkeyword%3Fregex%3D1%26text%3D%2528%253Fi%2529%2528keep%2520calm%2520and%2520%255Cw%252B%2529",
+                "http://tapbots.com/?url=tweetbot%3A%2F%2F%2Fmute%2Fkeyword%3FmuteLists%3D1%26regex%3D1%26text%3D%2528%253Fi%2529%2528pok.%2528%255CS%2529%257B3%252C%257D%257Cgym%2528%2520%2529%253Fbattle%2529"
             ],
             "formats": [
                 {
@@ -252,7 +253,8 @@
                     "script": "function process(url, completionHandler) { completionHandler('tweetbot:///' + decodeURIComponent(url.split('tweetbot%3A%2F%2F%2F')[1])) }",
                     "script2": "function process(url, completionHandler) { completionHandler('tweetbot:///' + decodeURIComponent(url.split('tweetbot%3A%2F%2F%2F')[1])) }",
                     "testResults": [
-                        "tweetbot:///mute/keyword?regex=1&text=%28%3Fi%29%28keep%20calm%20and%20%5Cw%2B%29"
+                        "tweetbot:///mute/keyword?regex=1&text=%28%3Fi%29%28keep%20calm%20and%20%5Cw%2B%29",
+                        "tweetbot:///mute/keyword?muteLists=1&regex=1&text=%28%3Fi%29%28pok.%28%5CS%29%7B3%2C%7D%7Cgym%28%20%29%3Fbattle%29"
                     ]
                 }
             ]
