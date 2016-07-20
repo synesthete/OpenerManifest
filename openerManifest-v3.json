@@ -6308,8 +6308,7 @@
             "identifier": "charm",
             "storeIdentifier": "1102153379",
             "docs": "http://bit.ly/29sCrgV",
-            "scheme": "x-charm://",
-            "new": true
+            "scheme": "x-charm://"
         }
     ],
     "browsers": [
