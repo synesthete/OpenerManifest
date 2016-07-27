@@ -735,24 +735,6 @@
             ]
         },
         {
-            "title": "Open Story",
-            "regex": "http(?:s?)://(?:www.?)storehouse.co/stories/([a-zA-Z0-9]+).*$",
-            "testInputs": [
-                "https://www.storehouse.co/stories/41ir-sf-family-visit-2-14",
-                "https://www.storehouse.co/stories/8PsUkuy7KANA"
-            ],
-            "formats": [
-                {
-                    "appIdentifier": "storehouse",
-                    "format": "storehouse://stories_by_slug/$1",
-                    "testResults": [
-                        "storehouse://stories_by_slug/41ir",
-                        "storehouse://stories_by_slug/8PsUkuy7KANA"
-                    ]
-                }
-            ]
-        },
-        {
             "title": "Open Journal",
             "regex": "http(?:s)?://app\\.gowander\\.co/web/v1/journals/(\\d+).*$",
             "testInputs": [
@@ -6173,12 +6155,6 @@
             "identifier": "soundhound",
             "storeIdentifier": "355554941",
             "scheme": "soundhound://"
-        },
-        {
-            "displayName": "Storehouse",
-            "identifier": "storehouse",
-            "storeIdentifier": "791297521",
-            "scheme": "storehouse://"
         },
         {
             "displayName": "Strava",
