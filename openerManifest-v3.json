@@ -100,7 +100,7 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(?:s?)://(?:mobile\\.|www\\.|m\\.)?twitter.com/intent/user\\?.*screen_name=?(?:@)?([a-zA-Z0-9_]{1,15}).*$",
+            "regex": "http(?:s?)://(?:mobile\\.|www\\.|m\\.)?twitter\\.com/intent/user\\?.*screen_name=?(?:@)?([a-zA-Z0-9_]{1,15}).*$",
             "testInputs": [
                 "https://twitter.com/intent/user?screen_name=addyosmani"
             ],
@@ -130,7 +130,7 @@
         },
         {
             "title": "Open Hashtag",
-            "regex": "http(?:s?)://(?:mobile\\.|www\\.|m\\.)?twitter.com/hashtag/([a-zA-Z0-9_]+).*$",
+            "regex": "http(?:s?)://(?:mobile\\.|www\\.|m\\.)?twitter\\.com/hashtag/([a-zA-Z0-9_]+).*$",
             "testInputs": [
                 "https://mobile.twitter.com/chillmage/with_replies",
                 "https://twitter.com/hashtag/ThingsILearnedFromTheLeft?src=hash"
@@ -202,7 +202,7 @@
         },
         {
             "title": "Open Moment",
-            "regex": "http(?:s?)://(?:mobile.|www.)?twitter.com/i/moments/(\\d+).*$",
+            "regex": "http(?:s?)://(?:mobile.|www.)?twitter\\.com/i/moments/(\\d+).*$",
             "testInputs": [
                 "https://twitter.com/i/moments/651796284307849217",
                 "https://mobile.twitter.com/i/moments/651796284307849217"
@@ -322,7 +322,7 @@
         },
         {
             "title": "Open Tag",
-            "regex": "(?:(?:http(?:s?)://(?:www.)?(?:(?:instagram.com)|(?:instagr.am))/))(?:explore/)?tags/([a-zA-Z0-9_%]+).*$",
+            "regex": "(?:(?:http(?:s?)://(?:www.)?(?:(?:instagram\\.com)|(?:instagr\\.am))/))(?:explore/)?tags/([a-zA-Z0-9_%]+).*$",
             "testInputs": [
                 "https://instagram.com/explore/tags/darkroomapp/",
                 "https://instagram.com/explore/tags/%F0%9F%98%80/",
@@ -342,7 +342,7 @@
         },
         {
             "title": "Open Location",
-            "regex": "(?:(?:http(?:s?)://(?:www.)?(?:(?:instagram.com)|(?:instagr.am))/))explore/locations/(\\d+).*$",
+            "regex": "(?:(?:http(?:s?)://(?:www.)?(?:(?:instagram\\.com)|(?:instagr\\.am))/))explore/locations/(\\d+).*$",
             "testInputs": [
                 "https://instagram.com/explore/locations/215262672/"
             ],
@@ -434,7 +434,7 @@
         },
         {
             "title": "Open Photo",
-            "regex": "http(?:s?)://(?:www.)?500px.com/photo/(\\d+)(?:(?:/|\\?).*)?$",
+            "regex": "http(?:s?)://(?:www.)?500px\\.com/photo/(\\d+)(?:(?:/|\\?).*)?$",
             "testInputs": [
                 "https://500px.com/timonus",
                 "https://500px.com/photo/106606873/wood-anemone-by-fredrik-m%C3%B6rk",
@@ -454,7 +454,7 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(?:s?)://(?:www.)?500px.com/(?!photo)([0-9a-zA-Z_-]+)(?:/|\\?)?.*$",
+            "regex": "http(?:s?)://(?:www.)?500px\\.com/(?!photo)([0-9a-zA-Z_-]+)(?:/|\\?)?.*$",
             "testInputs": [
                 "https://500px.com/timonus",
                 "https://500px.com/photo/40145312/7-7-13-by-tim-johnsen?from=user_library"
@@ -472,7 +472,7 @@
         },
         {
             "title": "Open Photo",
-            "regex": "http(?:s)?://(?:m.|mobile.|www.)?flickr.com(?:/#|/browser/upgrade/\\?continue=)?/photos/([0-9a-zA-Z_@%-]+)/(\\d+)(?:(?:/|\\?).*)?$",
+            "regex": "http(?:s)?://(?:m\\.|mobile\\.|www\\.)?flickr\\.com(?:/#|/browser/upgrade/\\?continue=)?/photos/([0-9a-zA-Z_@%-]+)/(\\d+)(?:(?:/|\\?).*)?$",
             "testInputs": [
                 "https://m.flickr.com/#/photos/27933390@N03/16929283568/",
                 "https://www.flickr.com/photos/27933390@N03/16929283568/",
@@ -498,7 +498,7 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(?:s)?://(?:m.|mobile.|www.)?flickr.com(?:/#|/browser/upgrade/\\?continue=)?/(?:photos|people)/([0-9a-zA-Z_@%-]+)(?:/|\\?|/\\?.*)?$",
+            "regex": "http(?:s)?://(?:m\\.|mobile\\.|www\\.)?flickr\\.com(?:/#|/browser/upgrade/\\?continue=)?/(?:photos|people)/([0-9a-zA-Z_@%-]+)(?:/|\\?|/\\?.*)?$",
             "testInputs": [
                 "https://m.flickr.com/#/photos/27933390@N03/",
                 "https://www.flickr.com/people/27933390@N03/",
@@ -522,7 +522,7 @@
         },
         {
             "title": "Open Photoset",
-            "regex": "http(?:s)?://(?:m.|mobile.|www.)?flickr.com(?:/#|/browser/upgrade/\\?continue=)?/photos/([0-9a-zA-Z_@%-]+)/sets/(\\d+)(?:(?:/|\\?).*)?$",
+            "regex": "http(?:s)?://(?:m\\.|mobile\\.|www\\.)?flickr\\.com(?:/#|/browser/upgrade/\\?continue=)?/photos/([0-9a-zA-Z_@%-]+)/sets/(\\d+)(?:(?:/|\\?).*)?$",
             "testInputs": [
                 "https://m.flickr.com/#/photos/27933390@N03/sets/72157651034989505/",
                 "https://m.flickr.com/#/photos/27933390@N03/16929283568/",
@@ -544,7 +544,7 @@
         },
         {
             "title": "Open Group",
-            "regex": "http(?:s)?://(?:m.|mobile.|www.)?flickr.com(?:/#|/browser/upgrade/\\?continue=)?/groups/([0-9a-zA-Z_@%-]+).*$",
+            "regex": "http(?:s)?://(?:m\\.|mobile\\.|www\\.)?flickr\\.com(?:/#|/browser/upgrade/\\?continue=)?/groups/([0-9a-zA-Z_@%-]+).*$",
             "testInputs": [
                 "https://www.flickr.com/groups/lifehacker-workspace-showandtell/pool/"
             ],
@@ -629,7 +629,7 @@
         },
         {
             "title": "Open Blog",
-            "regex": "http(?:s?)://(?:www\\.)?([a-zA-Z0-9_\\-]+).tumblr.com(?:/(?!(post|image|tagged)/).*|\\?.*|#.*)?$",
+            "regex": "http(?:s?)://(?:www\\.)?([a-zA-Z0-9_\\-]+)\\.tumblr\\.com(?:/(?!(post|image|tagged)/).*|\\?.*|#.*)?$",
             "testInputs": [
                 "http://visualizingmath.tumblr.com/",
                 "http://instagram-engineering.tumblr.com",
@@ -668,7 +668,7 @@
         },
         {
             "title": "Open Post",
-            "regex": "http(?:s?)://(?:www\\.)?([a-zA-Z0-9_\\-]+).tumblr.com/(?!tagged|page)\\w+/(\\d+)(?:(?:/|\\?|#).*)?$",
+            "regex": "http(?:s?)://(?:www\\.)?([a-zA-Z0-9_\\-]+)\\.tumblr\\.com/(?!tagged|page)\\w+/(\\d+)(?:(?:/|\\?|#).*)?$",
             "testInputs": [
                 "http://visualizingmath.tumblr.com/post/98266724851/hyrodium-the-curvature-of-curves-x-x",
                 "http://unskoolery.tumblr.com/post/90849039693/beesandbombs-stars-squares",
@@ -708,7 +708,7 @@
         },
         {
             "title": "Open Post",
-            "regex": "http(?:s)?://(?:www\\.)?([a-zA-Z0-9_\\-]+).tumblr.com/tagged/(\\d+)(?:(?:/|\\?|#).*)?$",
+            "regex": "http(?:s)?://(?:www\\.)?([a-zA-Z0-9_\\-]+)\\.tumblr\\.com/tagged/(\\d+)(?:(?:/|\\?|#).*)?$",
             "testInputs": [
                 "http://2kindsofpeople.tumblr.com/tagged/003"
             ],
@@ -752,7 +752,7 @@
         },
         {
             "title": "Open Moment",
-            "regex": "http(?:s?)://(?:www\\.)?path.com/(?:p|moment)/.*$",
+            "regex": "http(?:s?)://(?:www\\.)?path\\.com/(?:p|moment)/.*$",
             "formats": [
                 {
                     "appIdentifier": "path",
@@ -797,7 +797,7 @@
         },
         {
             "title": "Open Board",
-            "regex": "http(?:s?)://(?:\\w+\\.)?pinterest.com/(?!pin|search|explore|categories)([a-zA-Z0-9-_]+)(?:/)(?!pins)([a-zA-Z0-9-_]+).*?$",
+            "regex": "http(?:s?)://(?:\\w+\\.)?pinterest\\.com/(?!pin|search|explore|categories)([a-zA-Z0-9-_]+)(?:/)(?!pins)([a-zA-Z0-9-_]+).*?$",
             "testInputs": [
                 "https://pinterest.com/cnnr/what-time-is-it/",
                 "https://www.pinterest.com/cnnr/what-time-is-it/",
@@ -829,7 +829,7 @@
         },
         {
             "title": "Open Pin",
-            "regex": "http(?:s?)://(?:\\w+\\.)?pinterest.com/pin/([:alnum:]+).*?$",
+            "regex": "http(?:s?)://(?:\\w+\\.)?pinterest\\.com/pin/([:alnum:]+).*?$",
             "testInputs": [
                 "https://pinterest.com/pin/515380751084154703/",
                 "https://www.pinterest.com/pin/515380751084154703/",
@@ -1122,7 +1122,7 @@
         },
         {
             "title": "Open Venue",
-            "regex": "http(?:s?)://(?:m.|www.|mobile.)?foursquare.com(?:/mobile)?/v(?:/\\S+)?/([0-9a-fA-F]{24}).*$",
+            "regex": "http(?:s?)://(?:m\\.|www\\.|mobile\\.)?foursquare\\.com(?:/mobile)?/v(?:/\\S+)?/([0-9a-fA-F]{24}).*$",
             "testInputs": [
                 "https://foursquare.com/v/ritual-coffee-roasters/42853f80f964a5200c231fe3",
                 "https://foursquare.com/v/42853f80f964a5200c231fe3"
@@ -1167,7 +1167,7 @@
         },
         {
             "title": "Check in at venue",
-            "regex": "http(?:s?)://(?:m.|www.|mobile.)?foursquare.com(?:/mobile)?/v(?:/\\S+)?/([0-9a-fA-F]{24}).*$",
+            "regex": "http(?:s)?://(?:m\\.|www\\.|mobile\\.)?foursquare\\.com(?:/mobile)?/v(?:/\\S+)?/([0-9a-fA-F]{24}).*$",
             "testInputs": [
                 "https://foursquare.com/v/ritual-coffee-roasters/42853f80f964a5200c231fe3",
                 "https://foursquare.com/v/42853f80f964a5200c231fe3"
@@ -1207,7 +1207,7 @@
         },
         {
             "title": "Open Tip",
-            "regex": "http(?:s?)://(?:m.|www.|mobile.)?foursquare.com(?:/mobile)?/item/([0-9a-fA-F]{24})(?:/?)$",
+            "regex": "http(?:s)?://(?:m\\.|www\\.|mobile\\.)?foursquare\\.com(?:/mobile)?/item/([0-9a-fA-F]{24})(?:/?)$",
             "testInputs": [
                 "https://foursquare.com/item/552b6f5f498e0073829b16b1"
             ],
@@ -1223,7 +1223,7 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(?:s?)://(?:m.|www.|mobile.)?foursquare.com(?:/mobile)?/(?:u|user)/(\\d+)(?:/?)$",
+            "regex": "http(?:s)?://(?:m\\.|www\\.|mobile\\.)?foursquare\\.com(?:/mobile)?/(?:u|user)/(\\d+)(?:/?)$",
             "testInputs": [
                 "http://foursquare.com/u/558158",
                 "https://foursquare.com/user/558158"
@@ -1241,7 +1241,7 @@
         },
         {
             "title": "Open Search",
-            "regex": "http(?:s?)://(?:m.|www.|mobile.)?foursquare.com(?:/mobile)?/explore.*q=([^&]+).*?$",
+            "regex": "http(?:s)?://(?:m\\.|www\\.|mobile\\.)?foursquare\\.com(?:/mobile)?/explore.*q=([^&]+).*?$",
             "testInputs": [
                 "https://foursquare.com/explore?q=bars",
                 "https://foursquare.com/explore/?q=bars"
@@ -1259,7 +1259,7 @@
         },
         {
             "title": "Open Check-in",
-            "regex": "(?:http(?:s?)://(?:www.?)swarmapp.com(?:/\\w+)?/checkin/)([a-fA-F0-9]+\\?s=[a-zA-Z0-9_-]+)(?:.*)$",
+            "regex": "(?:http(?:s)?://(?:www\\.)?swarmapp\\.com(?:/\\w+)?/checkin/)([a-fA-F0-9]+\\?s=[a-zA-Z0-9_-]+)(?:.*)$",
             "testInputs": [
                 "https://www.swarmapp.com/checkin/5500f9a8498efebcbce3b88e?s=7mh4SF_b0MM2qFM3aJEzQpu-SDo&ref=tw",
                 "https://www.swarmapp.com/timonus/checkin/5500f9a8498efebcbce3b88e?s=7mh4SF_b0MM2qFM3aJEzQpu-SDo&ref=tw",
@@ -1279,7 +1279,7 @@
         },
         {
             "title": "Open Check-in",
-            "regex": "(?:http(?:s?)://(?:www.?)swarmapp.com/c/)([a-zA-Z0-9_-]+)(?:.*)$",
+            "regex": "(?:http(?:s)?://(?:www\\.)?swarmapp\\.com/c/)([a-zA-Z0-9_-]+)(?:.*)$",
             "testInputs": [
                 "https://www.swarmapp.com/c/cnwYJbPfuAd"
             ],
@@ -1296,9 +1296,10 @@
         },
         {
             "title": "Open Listing",
-            "regex": "http(?:s)?://(?:www\\.|m\\.)airbnb(?:\\.\\w+)+/(?:rooms|listings)/(\\d+).*$",
+            "regex": "http(?:s)?://(?:www\\.|m\\.)?airbnb(?:\\.\\w+)+/(?:rooms|listings)/(\\d+).*$",
             "testInputs": [
                 "https://m.airbnb.com/listings/3342418",
+                "https://airbnb.com/rooms/3342418",
                 "https://www.airbnb.com/rooms/3342418",
                 "https://www.airbnb.fr/rooms/5224117"
             ],
@@ -1307,6 +1308,7 @@
                     "appIdentifier": "airbnb",
                     "format": "airbnb://rooms/$1",
                     "testResults": [
+                        "airbnb://rooms/3342418",
                         "airbnb://rooms/3342418",
                         "airbnb://rooms/3342418",
                         "airbnb://rooms/5224117"
