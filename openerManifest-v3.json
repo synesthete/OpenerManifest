@@ -976,22 +976,6 @@
             ]
         },
         {
-            "title": "Open Seene",
-            "regex": "http(?:s)?://(?:www\\.)?seene\\.co/s/(\\w+).*$",
-            "testInputs": [
-                "http://seene.co/s/2bqbKa/"
-            ],
-            "formats": [
-                {
-                    "appIdentifier": "seene",
-                    "format": "seene://s/$1",
-                    "testResults": [
-                        "seene://s/2bqbKa"
-                    ]
-                }
-            ]
-        },
-        {
             "title": "Open Profile",
             "regex": "http(?:s)?://(?:\\w+\\.)?weibo\\.(?:com|cn)/(?:(?:u|d)/)?(\\w+)(?:/\\?.*|/)?$",
             "testInputs": [
@@ -6133,12 +6117,6 @@
             "identifier": "scribd",
             "storeIdentifier": "542557212",
             "scheme": "iscribd://"
-        },
-        {
-            "displayName": "Seene",
-            "identifier": "seene",
-            "storeIdentifier": "698878590",
-            "scheme": "seene://"
         },
         {
             "displayName": "Sina Blog",
