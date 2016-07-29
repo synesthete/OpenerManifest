@@ -5145,24 +5145,6 @@
             ]
         },
         {
-            "title": "Open Show",
-            "regex": "http(?:s)?://(?:\\w+\\.)*miaopai\\.com/show(?:/channel)?/([^/\\?\\.]+).*$",
-            "testInputs": [
-                "http://m.miaopai.com/show/channel/3Due-Z7rXW1ht0z-782ewg__",
-                "http://www.miaopai.com/show/3Due-Z7rXW1ht0z-782ewg__.htm"
-            ],
-            "formats": [
-                {
-                    "appIdentifier": "miaopai",
-                    "format": "miaopai://detail?scid=$1.",
-                    "testResults": [
-                        "miaopai://detail?scid=3Due-Z7rXW1ht0z-782ewg__.",
-                        "miaopai://detail?scid=3Due-Z7rXW1ht0z-782ewg__."
-                    ]
-                }
-            ]
-        },
-        {
             "title": "View Lyrics",
             "regex": "http(?:s)?://(?:www\\.)?genius\\.com/(\\d+|.*-lyrics).*$",
             "testInputs": [
@@ -6246,12 +6228,6 @@
             "identifier": "mobile01",
             "storeIdentifier": "444909583",
             "scheme": "m01://"
-        },
-        {
-            "displayName": "Miaopai",
-            "identifier": "miaopai",
-            "storeIdentifier": "1047562725",
-            "scheme": "miaopai://"
         },
         {
             "displayName": "Genius",
