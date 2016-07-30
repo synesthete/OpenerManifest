@@ -1976,15 +1976,21 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(?:s)?://vimeo.com/([a-zA-Z](\\w+))(?:/?)$",
+            "regex": "http(?:s)?://vimeo.com/([a-zA-Z](\\w+))(?:/)?(?:\\?.*)?$",
             "testInputs": [
-                "http://vimeo.com/timonus"
+                "http://vimeo.com/timonus",
+                "http://vimeo.com/timonus/",
+                "http://vimeo.com/timonus?foo=bar",
+                "http://vimeo.com/timonus/?foo=bar"
             ],
             "formats": [
                 {
                     "appIdentifier": "vimeo",
                     "format": "vimeo://app.vimeo.com/users/$1",
                     "testResults": [
+                        "vimeo://app.vimeo.com/users/timonus",
+                        "vimeo://app.vimeo.com/users/timonus",
+                        "vimeo://app.vimeo.com/users/timonus",
                         "vimeo://app.vimeo.com/users/timonus"
                     ]
                 }
@@ -1995,7 +2001,8 @@
             "regex": "http(?:s)?://vimeo.com/(\\d+)(?:/)?.*$",
             "testInputs": [
                 "https://vimeo.com/121634963",
-                "https://vimeo.com/125074876?ref=tw-share"
+                "https://vimeo.com/125074876?ref=tw-share",
+                "https://vimeo.com/125074876/?ref=tw-share"
             ],
             "formats": [
                 {
@@ -2003,6 +2010,7 @@
                     "format": "vimeo://app.vimeo.com/videos/$1",
                     "testResults": [
                         "vimeo://app.vimeo.com/videos/121634963",
+                        "vimeo://app.vimeo.com/videos/125074876",
                         "vimeo://app.vimeo.com/videos/125074876"
                     ]
                 }
