@@ -1976,24 +1976,23 @@
         },
         {
             "title": "Open Profile",
-            "regex": "(?:http(s?)://vimeo.com/([a-zA-Z])(\\w+))(?:/?)$",
+            "regex": "http(?:s)?://vimeo.com/([a-zA-Z](\\w+))(?:/?)$",
             "testInputs": [
                 "http://vimeo.com/timonus"
             ],
             "formats": [
                 {
                     "appIdentifier": "vimeo",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); var regex = /(?:http(?:s)?:\\/\\/vimeo.com\\/([a-zA-Z])(\\w+))(?:\\/?)$/; var match = regex.exec(url); var name = match[1] + match[2]; url = 'https://vimeo.com/api/v2/' + name + '/info.json'; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); completionHandler('vimeo://app.vimeo.com/users/' + res['id']); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var regex = /(?:http(?:s)?:\\/\\/vimeo.com\\/([a-zA-Z])(\\w+))(?:\\/?)$/; var match = regex.exec(url); var name = match[1] + match[2]; url = 'https://vimeo.com/api/v2/' + name + '/info.json'; var res = jsonRequest(url); completionHandler('vimeo://app.vimeo.com/users/' + res['id']); }",
+                    "format": "vimeo://app.vimeo.com/users/$1",
                     "testResults": [
-                        "vimeo://app.vimeo.com/users/4373647"
+                        "vimeo://app.vimeo.com/users/timonus"
                     ]
                 }
             ]
         },
         {
             "title": "Open Video",
-            "regex": "(http(s?)://vimeo.com/(\\d+))(/?)(.*)$",
+            "regex": "http(?:s)?://vimeo.com/(\\d+)(?:/)?.*$",
             "testInputs": [
                 "https://vimeo.com/121634963",
                 "https://vimeo.com/125074876?ref=tw-share"
@@ -2001,8 +2000,7 @@
             "formats": [
                 {
                     "appIdentifier": "vimeo",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); url = 'https://vimeo.com/api/oembed.json?url=' + encodeURIComponent(url); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); completionHandler('vimeo://app.vimeo.com' + res['uri']); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { url = 'https://vimeo.com/api/oembed.json?url=' + encodeURIComponent(url); var res = jsonRequest(url); completionHandler('vimeo://app.vimeo.com' + res['uri']); }",
+                    "format": "vimeo://app.vimeo.com/videos/$1",
                     "testResults": [
                         "vimeo://app.vimeo.com/videos/121634963",
                         "vimeo://app.vimeo.com/videos/125074876"
