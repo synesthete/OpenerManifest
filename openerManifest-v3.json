@@ -6304,12 +6304,13 @@
             "scheme": "https://",
             "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/safari-120.jpg",
             "regex": "(.+)$",
-            "format": "$1",
+            "script": "function process(url, completionHandler) { completionHandler('https://s3.amazonaws.com/www.opener.link/redirect.html?url=' + encodeURIComponent(url)); }",
+            "script2": "function process(url, completionHandler) { completionHandler('https://s3.amazonaws.com/www.opener.link/redirect.html?url=' + encodeURIComponent(url)); }",
             "testInputs": [
                 "http://www.opener.link/"
             ],
             "testResults": [
-                "http://www.opener.link/"
+                "https://s3.amazonaws.com/www.opener.link/redirect.html?url=http%3A%2F%2Fwww.opener.link%2F"
             ]
         },
         {
