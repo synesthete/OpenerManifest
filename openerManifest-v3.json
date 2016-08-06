@@ -4175,12 +4175,13 @@
         },
         {
             "title": "Open Item",
-            "regex": "http(?:s)?://(?:(?:\\w+\\.)*(?:m\\.)?jd\\.(?:com|hk)/(?:.*/)?(\\d+)\\.html|m\\.jd\\.(?:com|hk)/ware/view\\.action.*wareId=(\\d+)).*?$",
+            "regex": "http(?:s)?://(?:(?:\\w+\\.)*jd\\.(?:com|hk)/(?:.*/)?(\\d+)\\.(?:s)?html|(?:\\w+\\.)*jd\\.(?:com|hk)/(?:ware/view\\.action|my/).*(?:wareId|sku)=(\\d+)).*?$",
             "testInputs": [
                 "http://item.jd.com/1057746.html?cpdad=1DLSUE",
                 "http://item.m.jd.com/product/1057746.html",
                 "http://m.jd.hk/ware/view.action?wareId=1980390&cachekey=9f0f01741e0e74994b24aa9f2d926387",
-                "http://re.m.jd.com/cps/item/1042041.html?cu=true&utm_source=www.smzdm.com&utm_medium=tuiguang&utm_campaign=t_4298_ABYH&utm_term=027a328e7fc346c595778325f97249e7"
+                "http://re.m.jd.com/cps/item/1042041.html?cu=true&utm_source=www.smzdm.com&utm_medium=tuiguang&utm_campaign=t_4298_ABYH&utm_term=027a328e7fc346c595778325f97249e7",
+                "http://wqs.jd.com/my/pingou/detail.shtml?platform=2&PTAG=17053.1.1&sku=2481037&activeid=14701057013756&tuanid=1470496965961316295&from=singlemessage&isappinstalled=0"
             ],
             "formats": [
                 {
@@ -4191,17 +4192,19 @@
                         "openapp.jdmobile://virtual?params=%7B%22category%22%3A%22jump%22%2C%22des%22%3A%22productDetail%22%2C%22sourceType%22%3A%22unknown%22%2C%22sourceValue%22%3A%22unknown%22%2C%22skuId%22%3A%221057746%22%7D",
                         "openapp.jdmobile://virtual?params=%7B%22category%22%3A%22jump%22%2C%22des%22%3A%22productDetail%22%2C%22sourceType%22%3A%22unknown%22%2C%22sourceValue%22%3A%22unknown%22%2C%22skuId%22%3A%221057746%22%7D",
                         "openapp.jdmobile://virtual?params=%7B%22category%22%3A%22jump%22%2C%22des%22%3A%22productDetail%22%2C%22sourceType%22%3A%22unknown%22%2C%22sourceValue%22%3A%22unknown%22%2C%22skuId%22%3A%221980390%22%7D",
-                        "openapp.jdmobile://virtual?params=%7B%22category%22%3A%22jump%22%2C%22des%22%3A%22productDetail%22%2C%22sourceType%22%3A%22unknown%22%2C%22sourceValue%22%3A%22unknown%22%2C%22skuId%22%3A%221042041%22%7D"
+                        "openapp.jdmobile://virtual?params=%7B%22category%22%3A%22jump%22%2C%22des%22%3A%22productDetail%22%2C%22sourceType%22%3A%22unknown%22%2C%22sourceValue%22%3A%22unknown%22%2C%22skuId%22%3A%221042041%22%7D",
+                        "openapp.jdmobile://virtual?params=%7B%22category%22%3A%22jump%22%2C%22des%22%3A%22productDetail%22%2C%22sourceType%22%3A%22unknown%22%2C%22sourceValue%22%3A%22unknown%22%2C%22skuId%22%3A%222481037%22%7D"
                     ]
                 },
                 {
                     "appIdentifier": "jingdongpad",
-                    "format": "openapp.jdiPad://virtual?params=%7B%22category%22%3A%22jump%22%2C%22des%22%3A%22productDetail%22%2C%22sourceType%22%3A%22unknown%22%2C%22sourceValue%22%3A%22unknown%22%2C%22skuId%22%3A%$1$2%22%7D",
+                    "format": "openapp.jdiPad://virtual?params=%7B%22category%22%3A%22jump%22%2C%22des%22%3A%22productDetail%22%2C%22sourceType%22%3A%22unknown%22%2C%22sourceValue%22%3A%22unknown%22%2C%22skuId%22%3A%\u0032\u0032$1$2%22%7D",
                     "testResults": [
-                        "openapp.jdiPad://virtual?params=%7B%22category%22%3A%22jump%22%2C%22des%22%3A%22productDetail%22%2C%22sourceType%22%3A%22unknown%22%2C%22sourceValue%22%3A%22unknown%22%2C%22skuId%22%3A%1057746%22%7D",
-                        "openapp.jdiPad://virtual?params=%7B%22category%22%3A%22jump%22%2C%22des%22%3A%22productDetail%22%2C%22sourceType%22%3A%22unknown%22%2C%22sourceValue%22%3A%22unknown%22%2C%22skuId%22%3A%1057746%22%7D",
-                        "openapp.jdiPad://virtual?params=%7B%22category%22%3A%22jump%22%2C%22des%22%3A%22productDetail%22%2C%22sourceType%22%3A%22unknown%22%2C%22sourceValue%22%3A%22unknown%22%2C%22skuId%22%3A%1980390%22%7D",
-                        "openapp.jdiPad://virtual?params=%7B%22category%22%3A%22jump%22%2C%22des%22%3A%22productDetail%22%2C%22sourceType%22%3A%22unknown%22%2C%22sourceValue%22%3A%22unknown%22%2C%22skuId%22%3A%1042041%22%7D"
+                        "openapp.jdiPad://virtual?params=%7B%22category%22%3A%22jump%22%2C%22des%22%3A%22productDetail%22%2C%22sourceType%22%3A%22unknown%22%2C%22sourceValue%22%3A%22unknown%22%2C%22skuId%22%3A%221057746%22%7D",
+                        "openapp.jdiPad://virtual?params=%7B%22category%22%3A%22jump%22%2C%22des%22%3A%22productDetail%22%2C%22sourceType%22%3A%22unknown%22%2C%22sourceValue%22%3A%22unknown%22%2C%22skuId%22%3A%221057746%22%7D",
+                        "openapp.jdiPad://virtual?params=%7B%22category%22%3A%22jump%22%2C%22des%22%3A%22productDetail%22%2C%22sourceType%22%3A%22unknown%22%2C%22sourceValue%22%3A%22unknown%22%2C%22skuId%22%3A%221980390%22%7D",
+                        "openapp.jdiPad://virtual?params=%7B%22category%22%3A%22jump%22%2C%22des%22%3A%22productDetail%22%2C%22sourceType%22%3A%22unknown%22%2C%22sourceValue%22%3A%22unknown%22%2C%22skuId%22%3A%221042041%22%7D",
+                        "openapp.jdiPad://virtual?params=%7B%22category%22%3A%22jump%22%2C%22des%22%3A%22productDetail%22%2C%22sourceType%22%3A%22unknown%22%2C%22sourceValue%22%3A%22unknown%22%2C%22skuId%22%3A%222481037%22%7D"
                     ]
                 }
             ]
