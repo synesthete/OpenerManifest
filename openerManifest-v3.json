@@ -2559,6 +2559,14 @@
                         "amrc://reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/",
                         "amrc://reddit.com/r/gaming/"
                     ]
+                },
+                {
+                    "appIdentifier": "beam",
+                    "format": "beamapp://$2",
+                    "testResults": [
+                        "beamapp://reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/",
+                        "beamapp://reddit.com/r/gaming/"
+                    ]
                 }
             ]
         },
@@ -6302,6 +6310,14 @@
             "storeIdentifier": "1102153379",
             "docs": "http://bit.ly/29sCrgV",
             "scheme": "x-charm://"
+        },
+        {
+            "displayName": "Beam",
+            "identifier": "beam",
+            "storeIdentifier": "937987469",
+            "docs": "https://twitter.com/beamreddit/status/762625995568472064",
+            "scheme": "beamapp://",
+            "new": true
         }
     ],
     "browsers": [
