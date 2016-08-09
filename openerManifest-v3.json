@@ -1146,6 +1146,15 @@
                         "waze://?q=Ritual%20Coffee%20Roasters&ll=37.756501,-122.421146",
                         "waze://?q=Ritual%20Coffee%20Roasters&ll=37.756501,-122.421146"
                     ]
+                },
+                {
+                    "appIdentifier": "transit",
+                    "script": "function process(url, completionHandler) { var regex = new RegExp('http(?:s)?://.*foursquare.com/v/(?:.*/)?(\\\\w+).*$'); var match = regex.exec(url); var venueIdentifier = match[1]; url = 'https://api.foursquare.com/v2/venues/' + venueIdentifier + '?v=20140921&client_id=Q5H4T3CZWKEKK3QKQKIIKWGISC1UKY2IXJ4BZCZXCLDQ0IMR&client_secret=J1TZFLIIZ4LK3I55AIFV3AW3Z4ICLAQIQ5KPNLTPT3ST03XH'; var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); completionHandler('transit://directions?to=' + res['response']['venue']['location']['lat'] + ',' + res['response']['venue']['location']['lng']); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var regex = new RegExp('http(?:s)?://.*foursquare.com/v/(?:.*/)?(\\\\w+).*$'); var match = regex.exec(url); var venueIdentifier = match[1]; url = 'https://api.foursquare.com/v2/venues/' + venueIdentifier + '?v=20140921&client_id=Q5H4T3CZWKEKK3QKQKIIKWGISC1UKY2IXJ4BZCZXCLDQ0IMR&client_secret=J1TZFLIIZ4LK3I55AIFV3AW3Z4ICLAQIQ5KPNLTPT3ST03XH'; var res = jsonRequest(url); completionHandler('transit://directions?to=' + res['response']['venue']['location']['lat'] + ',' + res['response']['venue']['location']['lng']); }",
+                    "testResults": [
+                        "transit://directions?to=37.756501,-122.421146",
+                        "transit://directions?to=37.756501,-122.421146"
+                    ]
                 }
             ]
         },
@@ -1566,6 +1575,34 @@
                     "testResults": [
                         "comgooglemaps://?q=34.042892,-118.245853&center=34.042892,-118.245853",
                         null
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:\\w+\\.)*(?:maps\\.(?:apple|google)(?:.\\w+)+|google(?:\\.\\w+)+/maps|waze\\.to).*(?:ll=|@)([\\-0-9\\.]+,[\\-0-9\\.]+).*?$",
+            "testInputs": [
+                "http://maps.google.co.jp/maps?f=q&hl=ja&geocode=&q=-39.23774,175.3048&ie=UTF8&ll=-39.23774,175.3048&z=6",
+                "https://www.google.com/maps/place/Schwartz+and+Architecture/@37.7588677,-122.4044106,17z/data=!3m1!4b1!4m5!3m4!1s0x808f7e355b27add5:0xbea02036f8bac009!8m2!3d37.7588677!4d-122.4022219",
+                "http://maps.apple.com/maps?address=620%20Treat%20Ave%20San%20Francisco%20CA%2094110-2016%20United%20States&auid=8554658162390289549&ll=37.760092,-122.414035&lsp=9902&q=Southern%20Pacific%20Brewing&t=r",
+                "http://maps.apple.com/maps?address=967%20Mission%20St%20San%20Francisco%20CA%2094103%20United%20States&ll=37.781510,-122.407999&t=m",
+                "http://maps.apple.com/?lsp=6489&sll=34.045802,-118.260574&q=645%20W%209th%20St%20%23110-140%20Los%20Angeles%20CA%2090015-1640%20United%20States",
+                "http://maps.apple.com/?lsp=9902&auid=5554799088491316685&sll=28.026687,-81.617854&q=Dundee%20Elementary%20School&hnear=215%20E%20Frederick%20Ave%2C%20Dundee%2C%20FL%20%2033838-4238%2C%20United%20States",
+                "http://waze.to/?ll=34.042892,-118.245853&navigate=yes"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "transit",
+                    "format": "transit://directions?to=$1",
+                    "testResults": [
+                        "transit://directions?to=-39.23774,175.3048",
+                        "transit://directions?to=37.7588677,-122.4044106",
+                        "transit://directions?to=37.760092,-122.414035",
+                        "transit://directions?to=37.781510,-122.407999",
+                        "transit://directions?to=34.045802,-118.260574",
+                        "transit://directions?to=28.026687,-81.617854",
+                        "transit://directions?to=34.042892,-118.245853"
                     ]
                 }
             ]
@@ -3023,6 +3060,15 @@
                         "waze://?q=Day%20Block%20Event%20Center&ll=44.975250244140625,-93.25302124023438",
                         null
                     ]
+                },
+                {
+                    "appIdentifier": "transit",
+                    "script": "function process(url, completionHandler) { var regex = new RegExp('http(?:s?)://(?:m\\\\.|mobile\\\\.|www\\\\.)?meetup\\\\.com/([a-zA-Z0-9_\\\\-%]+)(?:/.*)?/(\\\\d+).*$'); var match = regex.exec(url); var groupIdentifier = match[1]; var eventIdentifier = match[2]; url = 'https://api.meetup.com/' + groupIdentifier + '/events/' + eventIdentifier; var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); if (res['venue'] != null && res['venue']['lat'] != null & res['venue']['lon'] != null) { completionHandler('transit://directions?to=' + res['venue']['lat'] + ',' + res['venue']['lon']); } else { completionHandler(null); } } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var regex = new RegExp('http(?:s?)://(?:m\\\\.|mobile\\\\.|www\\\\.)?meetup\\\\.com/([a-zA-Z0-9_\\\\-%]+)(?:/.*)?/(\\\\d+).*$'); var match = regex.exec(url); var groupIdentifier = match[1]; var eventIdentifier = match[2]; url = 'https://api.meetup.com/' + groupIdentifier + '/events/' + eventIdentifier;  var res = jsonRequest(url); if (res['venue'] != null && res['venue']['lat'] != null & res['venue']['lon'] != null) { completionHandler('transit://directions?to=' + res['venue']['lat'] + ',' + res['venue']['lon']); } else { completionHandler(null); } }",
+                    "testResults": [
+                        "transit://directions?to=44.975250244140625,-93.25302124023438",
+                        null
+                    ]
                 }
             ]
         },
@@ -4195,7 +4241,7 @@
             "formats": [
                 {
                     "appIdentifier": "jingdong",
-                    "format": "openapp.jdmobile://virtual?params=%7B%22category%22%3A%22jump%22%2C%22des%22%3A%22productDetail%22%2C%22sourceType%22%3A%22unknown%22%2C%22sourceValue%22%3A%22unknown%22%2C%22skuId%22%3A%\u0032\u0032$1$2%22%7D",
+                    "format": "openapp.jdmobile://virtual?params=%7B%22category%22%3A%22jump%22%2C%22des%22%3A%22productDetail%22%2C%22sourceType%22%3A%22unknown%22%2C%22sourceValue%22%3A%22unknown%22%2C%22skuId%22%3A\u0032%\u0032$1$2%22%7D",
                     "note": "Use of crazy unicode characters above fixed a bug where the %22 was being considered in the replacement $1 (like %22$1) []",
                     "testResults": [
                         "openapp.jdmobile://virtual?params=%7B%22category%22%3A%22jump%22%2C%22des%22%3A%22productDetail%22%2C%22sourceType%22%3A%22unknown%22%2C%22sourceValue%22%3A%22unknown%22%2C%22skuId%22%3A%221057746%22%7D",
@@ -6317,6 +6363,14 @@
             "storeIdentifier": "937987469",
             "docs": "https://twitter.com/beamreddit/status/762625995568472064",
             "scheme": "beamapp://",
+            "new": true
+        },
+        {
+            "displayName": "Transit",
+            "identifier": "transit",
+            "storeIdentifier": "498151501",
+            "docs": "http://transitapp.com/developers",
+            "scheme": "transit://",
             "new": true
         }
     ],
