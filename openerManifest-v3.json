@@ -2188,10 +2188,10 @@
             "formats": [
                 {
                     "appIdentifier": "spotify",
-                    "format": "spotify://track:$1",
+                    "format": "spotify:track:$1",
                     "testResults": [
-                        "spotify://track:5QZJAcP4nu3xL2NQV4AVHO",
-                        "spotify://track:77Ezu3tBE7gmzQ4mRnZZUf"
+                        "spotify:track:5QZJAcP4nu3xL2NQV4AVHO",
+                        "spotify:track:77Ezu3tBE7gmzQ4mRnZZUf"
                     ]
                 }
             ]
@@ -2200,14 +2200,16 @@
             "title": "Open Album",
             "regex": "(?:http(?:s?)://(?:play.|open.|www.)?spotify.com/album/)([:alnum:]+).*$",
             "testInputs": [
-                "http://open.spotify.com/album/6BK3muExDOuk0VnyMn9NVw"
+                "http://open.spotify.com/album/6BK3muExDOuk0VnyMn9NVw",
+                "https://open.spotify.com/album/4G8WKL5DGAFbWNTXxp3emz?utm_content=http%3A%2F%2Fsmarturl.it%2FWowGuauSP&utm_medium=email&utm_umg_et=1543198706&utm_source=ExactTarget&utm_campaign=21323559"
             ],
             "formats": [
                 {
                     "appIdentifier": "spotify",
-                    "format": "spotify://album:$1",
+                    "format": "spotify:album:$1",
                     "testResults": [
-                        "spotify://album:6BK3muExDOuk0VnyMn9NVw"
+                        "spotify:album:6BK3muExDOuk0VnyMn9NVw",
+                        "spotify:album:4G8WKL5DGAFbWNTXxp3emz"
                     ]
                 }
             ]
@@ -2222,10 +2224,10 @@
             "formats": [
                 {
                     "appIdentifier": "spotify",
-                    "format": "spotify://user/$1/playlist/$2",
+                    "format": "spotify:user:$1:playlist:$2",
                     "testResults": [
-                        "spotify://user/naveenium/playlist/1zw42kQZUSZlHyVVn8AecH",
-                        "spotify://user/timonominus/playlist/7rdUGYrNIMEdL6xdJDlMzZ"
+                        "spotify:user:naveenium:playlist:1zw42kQZUSZlHyVVn8AecH",
+                        "spotify:user:timonominus:playlist:7rdUGYrNIMEdL6xdJDlMzZ"
                     ]
                 }
             ]
@@ -2239,9 +2241,9 @@
             "formats": [
                 {
                     "appIdentifier": "spotify",
-                    "format": "spotify://artist/$1",
+                    "format": "spotify:artist:$1",
                     "testResults": [
-                        "spotify://artist/3vbKDsSS70ZX9D2OcvbZmS"
+                        "spotify:artist:3vbKDsSS70ZX9D2OcvbZmS"
                     ]
                 }
             ]
