@@ -5303,6 +5303,36 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:\\w+\\.)*espn\\.com(?:\\.\\w+)?/(?!video).*id/(\\d+).*$",
+            "testInputs": [
+                "http://www.espn.com/olympics/swimming/story/_/id/17299461/usoc-confirms-ryan-lochte-three-other-us-swimmers-robbed-rio?ex_cid=espntw",
+                "http://www.espn.com.mx/olimpicos/nota/_/id/2761177",
+                "http://www.espn.com.mx/video/clip/_/id/2761245",
+                "http://www.espn.com/olympics/story/_/id/17310907/happened-agony-defeat-ski-jumper",
+                "http://www.espn.com/espn/now?nowId=21-0557026347680013003-4",
+                "http://www.espn.com/olympics/swimming/story/_/id/17299461/usoc-confirms-ryan-lochte-three-other-us-swimmers-robbed-rio?ex_cid=espntw",
+                "http://www.espn.com/mlb/story/_/id/17299647/marlins-giancarlo-stanton-done-year-adam-conley-disabled-list&ex_cid=sportscenterTW?sf33356419=1",
+                "http://www.espn.com.ar/video/clip/_/id/2761282"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "espn",
+                    "format": "sportscenter://x-callback-url/showStory?uid=$1",
+                    "testResults": [
+                        "sportscenter://x-callback-url/showStory?uid=17299461",
+                        "sportscenter://x-callback-url/showStory?uid=2761177",
+                        null,
+                        "sportscenter://x-callback-url/showStory?uid=17310907",
+                        null,
+                        "sportscenter://x-callback-url/showStory?uid=17299461",
+                        "sportscenter://x-callback-url/showStory?uid=17299647",
+                        null
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -6403,6 +6433,13 @@
             "identifier": "weheartit",
             "storeIdentifier": "539124565",
             "scheme": "whi://"
+        },
+        {
+            "displayName": "ESPN",
+            "identifier": "espn",
+            "storeIdentifier": "317469184",
+            "scheme": "sportscenter://",
+            "new": true
         }
     ],
     "browsers": [
