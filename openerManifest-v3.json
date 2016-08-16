@@ -598,7 +598,7 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(s)?://(?:[a-zA-Z0-9_\\-\\.]+\\.)?vsco\\.co(m)?((/[a-zA-Z0-9_\\-\\.]+)?(/(collection|grid)|(/)?\\?).*|/)?$",
+            "regex": "http(s)?://(?:[a-zA-Z0-9_\\-\\.]+\\.)?vsco\\.co(m)?((/[a-zA-Z0-9_\\-\\.]+)?(/(collection)|(/)?\\?).*|/)?$",
             "testInputs": [
                 "http://modernandmundane.vsco.co/collection/1",
                 "http://modernandmundane.vsco.co/",
@@ -621,8 +621,8 @@
                         "vsco://user/5539600/grid",
                         "vsco://user/5539600/grid",
                         "vsco://user/5539600/collection",
-                        "vsco://user/158596/grid",
-                        "vsco://user/11216585/grid"
+                        null,
+                        null
                     ]
                 }
             ]
