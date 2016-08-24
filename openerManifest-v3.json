@@ -5806,8 +5806,7 @@
             "identifier": "beam",
             "storeIdentifier": "937987469",
             "docs": "https://twitter.com/beamreddit/status/762625995568472064",
-            "scheme": "beamapp://",
-            "new": true
+            "scheme": "beamapp://"
         },
         {
             "displayName": "Tabelog",
@@ -5921,8 +5920,7 @@
             "identifier": "transit",
             "storeIdentifier": "498151501",
             "docs": "http://transitapp.com/developers",
-            "scheme": "transit://",
-            "new": true
+            "scheme": "transit://"
         },
         {
             "displayName": "Evernote",
@@ -6089,8 +6087,7 @@
             "identifier": "wonder",
             "storeIdentifier": "1050888989",
             "docs": "http://jonathanthiry.com/wonder/url-schemes",
-            "scheme": "wonder://",
-            "new": true
+            "scheme": "wonder://"
         },
         {
             "displayName": "9GAG",
