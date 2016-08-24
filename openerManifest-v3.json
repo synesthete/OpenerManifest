@@ -763,7 +763,7 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(?:s?)://(?:\\w+\\.)?pinterest.com/(?!pin|search|explore|categories)([a-zA-Z0-9-_]+)(/pins)?(?:/|/?\\?.*)?$",
+            "regex": "http(?:s?)://(?:\\w+\\.)?pinterest.com/(?!pin|search|explore|categories|join)([a-zA-Z0-9-_]+)(/pins)?(?:/|/?\\?.*)?$",
             "testInputs": [
                 "https://pinterest.com/cnnr/",
                 "https://www.pinterest.com/cnnr/",
@@ -774,7 +774,8 @@
                 "https://www.pinterest.com/cnnr/what-time-is-it/",
                 "https://www.pinterest.com/search/pins/?q=cute%20animal",
                 "https://www.pinterest.com/explore/popular",
-                "https://www.pinterest.com/categories/popular"
+                "https://www.pinterest.com/categories/popular",
+                "https://www.pinterest.com/join/?next=/pin/create/button/%3Furl%3Dhttps%253A%252F%252Fmedia0.giphy.com%252Fmedia%252FemWySpOLFLUAM%252Fgiphy.gif%26media%3Dhttps%253A%252F%252Fmedia0.giphy.com%252Fmedia%252FemWySpOLFLUAM%252Fgiphy.gif%26description%3Dvia%2520GIPHY"
             ],
             "formats": [
                 {
@@ -786,6 +787,7 @@
                         "pinterest://user/cnnr",
                         "pinterest://user/timonus",
                         "pinterest://user/techcrunch",
+                        null,
                         null,
                         null,
                         null,
