@@ -829,13 +829,14 @@
         },
         {
             "title": "Open Pin",
-            "regex": "http(?:s?)://(?:\\w+\\.)?pinterest\\.com/pin/([:alnum:]+).*?$",
+            "regex": "http(?:s?)://(?:\\w+\\.)?pinterest\\.com/pin/(?!create)([:alnum:]+).*?$",
             "testInputs": [
                 "https://pinterest.com/pin/515380751084154703/",
                 "https://www.pinterest.com/pin/515380751084154703/",
                 "https://fr.pinterest.com/pin/515380751084154703/",
                 "https://www.pinterest.com/pin/A2xVdQAQgF0BNTgV0RsAAAA/",
-                "https://www.pinterest.com/pin/313844667760410380/sent/?invite_code=b8e10eef0a0b837be53d265575387572&sender=49258327082795975"
+                "https://www.pinterest.com/pin/313844667760410380/sent/?invite_code=b8e10eef0a0b837be53d265575387572&sender=49258327082795975",
+                "https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fmedia0.giphy.com%2Fmedia%2FemWySpOLFLUAM%2Fgiphy.gif&media=https%3A%2F%2Fmedia0.giphy.com%2Fmedia%2FemWySpOLFLUAM%2Fgiphy.gif&description=via%20GIPHY"
             ],
             "formats": [
                 {
@@ -846,7 +847,8 @@
                         "pinterest://pin/515380751084154703",
                         "pinterest://pin/515380751084154703",
                         "pinterest://pin/A2xVdQAQgF0BNTgV0RsAAAA",
-                        "pinterest://pin/313844667760410380"
+                        "pinterest://pin/313844667760410380",
+                        null
                     ]
                 }
             ]
