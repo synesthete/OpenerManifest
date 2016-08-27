@@ -6443,8 +6443,7 @@
             "displayName": "ESPN",
             "identifier": "espn",
             "storeIdentifier": "317469184",
-            "scheme": "sportscenter://",
-            "new": true
+            "scheme": "sportscenter://"
         }
     ],
     "browsers": [
