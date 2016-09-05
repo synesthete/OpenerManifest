@@ -3000,13 +3000,13 @@
             "regex": "http(s?)://(www.)?(frontback\\.me/p|frntb\\.ac)/[a-zA-Z0-9]+(\\S*)$",
             "testInputs": [
                 "http://frontback.me/p/4EWgW7lD",
-                "https://frntb.ac/QNCJ0YvE"
+                "http://frntb.ac/QNCJ0YvE"
             ],
             "formats": [
                 {
                     "appIdentifier": "frontback",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*<meta content=\"(.*)\" name=\"twitter:app:url:iphone\".*>.*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*<meta content=\"(.*)\" name=\"twitter:app:url:iphone\".*>.*'); var match = regex.exec(res)[1]; completionHandler(match); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(frontback://posts/\\\\d+).*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(frontback://posts/\\\\d+).*'); var match = regex.exec(res)[1]; completionHandler(match); }",
                     "testResults": [
                         "frontback://posts/1628618",
                         "frontback://posts/2006271"
