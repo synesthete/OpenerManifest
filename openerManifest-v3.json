@@ -5349,6 +5349,28 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Media",
+            "regex": "(http(?:s)?://[^?]+\\.(?i)(mp4|mkv|tp|mov|avi|wmv|asf|flv|ogv|rmvb|mp3|wav|wma|flac|ape))",
+            "testInputs": [
+                "https://dl.dropboxusercontent.com/s/s6n8yt4bm7z9mur/Opener.mp4",
+                "http://dl.dropboxusercontent.com/s/s6n8yt4bm7z9mur/Opener.mp4",
+                "http://dl.dropboxusercontent.com/s/s6n8yt4bm7z9mur/Opener.MP4",
+                "http://foo.bar.blah?query=mp4"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "nplayer",
+                    "format": "nplayer-$1",
+                    "testResults": [
+                        "nplayer-https://dl.dropboxusercontent.com/s/s6n8yt4bm7z9mur/Opener.mp4",
+                        "nplayer-http://dl.dropboxusercontent.com/s/s6n8yt4bm7z9mur/Opener.mp4",
+                        "nplayer-http://dl.dropboxusercontent.com/s/s6n8yt4bm7z9mur/Opener.MP4",
+                        null
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -6446,6 +6468,14 @@
             "identifier": "weheartit",
             "storeIdentifier": "539124565",
             "scheme": "whi://"
+        },
+        {
+            "displayName": "nPlayer",
+            "identifier": "nplayer",
+            "storeIdentifier": "539397400",
+            "scheme": "nplayer://",
+            "docs": "http://forum.nplayer.tv/topic/328/custom-url-scheme/7 and https://db.tt/fyXxQtMW",
+            "new": true
         },
         {
             "displayName": "ESPN",
