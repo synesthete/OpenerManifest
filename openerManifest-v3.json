@@ -3448,6 +3448,10 @@
                 {
                     "appIdentifier": "ioctocat",
                     "format": "ioc://$1"
+                },
+                {
+                    "appIdentifier": "codehub",
+                    "format": "codehub://$1"
                 }
             ]
         },
@@ -6568,6 +6572,14 @@
             "identifier": "cachly",
             "storeIdentifier": "645384141",
             "scheme": "cachly://",
+            "new": true
+        },
+        {
+            "displayName": "CodeHub",
+            "identifier": "codehub",
+            "storeIdentifier": "707173885",
+            "scheme": "codehub://",
+            "docs": "https://github.com/thedillonb/CodeHub/blob/master/CodeHub.iOS/AppDelegate.cs#L258-L280 and https://github.com/thedillonb/CodeHub/issues/19",
             "new": true
         }
     ],
