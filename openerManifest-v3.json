@@ -5388,6 +5388,32 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Geocache",
+            "regex": "http(?:s)?://(?:www\\.)?(?:geocaching\\.com/geocache|coord\\.info)/(GC[A-Za-z0-9]+).*$",
+            "testInputs": [
+                "https://www.geocaching.com/geocache/GC46P90_positive-outlook",
+                "https://www.geocaching.com/geocache/GC59ZFJ_kermit-und-super-grobi",
+                "https://www.geocaching.com/geocache/GC68XHH_tour-dialysis-6",
+                "http://coord.info/GCPEK2",
+                "http://coord.info/GC46P90",
+                "https://www.geocaching.com/seek/log.aspx?LUID=a88b7b5e-9253-46cf-b9a3-e9f230b7819e"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "cachly",
+                    "format": "cachly://gccode=$1",
+                    "testResults": [
+                        "cachly://gccode=GC46P90",
+                        "cachly://gccode=GC59ZFJ",
+                        "cachly://gccode=GC68XHH",
+                        "cachly://gccode=GCPEK2",
+                        "cachly://gccode=GC46P90",
+                        null
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -6505,6 +6531,13 @@
             "identifier": "jianshu",
             "storeIdentifier": "888237539",
             "scheme": "jianshu://",
+            "new": true
+        },
+        {
+            "displayName": "Cachly",
+            "identifier": "cachly",
+            "storeIdentifier": "645384141",
+            "scheme": "cachly://",
             "new": true
         }
     ],
