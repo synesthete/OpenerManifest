@@ -4307,18 +4307,20 @@
         },
         {
             "title": "Open List",
-            "regex": "http(?:s)?://li\\.st/l/((?:[:hex:]+-)+(?:[:hex:]+)|\\w+).*?$",
+            "regex": "http(?:s)?://li\\.st/(?:l/((?:[:hex:]+-)+(?:[:hex:]+)|\\w+)|(?!l)[^/]+/.*-(\\w+)).*?$",
             "testInputs": [
                 "https://li.st/l/42b77e9d-ad35-4b03-a6de-04dffcaaf5bd",
-                "https://li.st/l/46jlhMOt7DfuFJgEYKp1U0"
+                "https://li.st/l/46jlhMOt7DfuFJgEYKp1U0",
+                "https://li.st/triketora/seven-sisters-and-sussex-explorations-1plVxQFtdsHJ0VmP5CBCJm"
             ],
             "formats": [
                 {
                     "appIdentifier": "thelistapp",
-                    "format": "thelistapp://l/$1",
+                    "format": "thelistapp://l/$1$2",
                     "testResults": [
                         "thelistapp://l/42b77e9d-ad35-4b03-a6de-04dffcaaf5bd",
-                        "thelistapp://l/46jlhMOt7DfuFJgEYKp1U0"
+                        "thelistapp://l/46jlhMOt7DfuFJgEYKp1U0",
+                        "thelistapp://l/1plVxQFtdsHJ0VmP5CBCJm"
                     ]
                 }
             ]
