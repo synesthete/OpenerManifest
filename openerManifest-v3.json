@@ -4307,7 +4307,7 @@
         },
         {
             "title": "Open List",
-            "regex": "http(?:s)?://li\\.st/(?:l/((?:[:hex:]+-)+(?:[:hex:]+)|\\w+)|(?!l)[^/]+/.*-(\\w+)).*?$",
+            "regex": "http(?:s)?://li\\.st/(?:l/((?:[:hex:]+-)+(?:[:hex:]+)|\\w+)|(?!l|about|contact|faq|community|privacy|terms)[^/]+/.*-(\\w+)).*?$",
             "testInputs": [
                 "https://li.st/l/42b77e9d-ad35-4b03-a6de-04dffcaaf5bd",
                 "https://li.st/l/46jlhMOt7DfuFJgEYKp1U0",
@@ -4321,6 +4321,34 @@
                         "thelistapp://l/42b77e9d-ad35-4b03-a6de-04dffcaaf5bd",
                         "thelistapp://l/46jlhMOt7DfuFJgEYKp1U0",
                         "thelistapp://l/1plVxQFtdsHJ0VmP5CBCJm"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Profile",
+            "regex": "http(?:s)?://li\\.st/(?:u/)?(?!l|about|contact|faq|community|privacy|terms)([^/\\?]+)(?:(?:/)?\\?.*|/)?$",
+            "testInputs": [
+                "https://li.st/triketora",
+                "https://li.st/u/triketora",
+                "https://li.st/u/triketora/",
+                "https://li.st/u/triketora?foo=bar",
+                "https://li.st/u/triketora/?foo=bar",
+                "https://li.st/l/46jlhMOt7DfuFJgEYKp1U0",
+                "https://li.st/triketora/seven-sisters-and-sussex-explorations-1plVxQFtdsHJ0VmP5CBCJm"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "thelistapp",
+                    "format": "thelistapp://u/$1",
+                    "testResults": [
+                        "thelistapp://u/triketora",
+                        "thelistapp://u/triketora",
+                        "thelistapp://u/triketora",
+                        "thelistapp://u/triketora",
+                        "thelistapp://u/triketora",
+                        null,
+                        null
                     ]
                 }
             ]
