@@ -2851,11 +2851,12 @@
         },
         {
             "title": "Open Project",
-            "regex": "(?:http(?:s?)://)((?:www.)?kickstarter.com/projects/[a-zA-Z0-9_%-]+/[a-zA-Z0-9_%-]+)/?(\\?.*)?$",
+            "regex": "(?:http(?:s?)://)((?:www.)?kickstarter.com/projects/[a-zA-Z0-9_%-]+/[a-zA-Z0-9_%-]+).*?$",
             "testInputs": [
                 "https://www.kickstarter.com/projects/1425492550/sesame-your-key-reinvented?ref=dash",
                 "https://www.kickstarter.com/projects/paulgtoys/pterodactyl-5-rc-flying-lizard",
-                "https://www.kickstarter.com/projects/hyperchiller/hyperchiller-make-iced-coffee-in-one-minute/?ref=kicktraq"
+                "https://www.kickstarter.com/projects/hyperchiller/hyperchiller-make-iced-coffee-in-one-minute/?ref=kicktraq",
+                "https://www.kickstarter.com/projects/1238747394/the-vamp-bring-back-the-sound/posts/1679516?ref=backer_project_update"
             ],
             "formats": [
                 {
@@ -2864,7 +2865,8 @@
                     "testResults": [
                         "ksr://www.kickstarter.com/projects/1425492550/sesame-your-key-reinvented",
                         "ksr://www.kickstarter.com/projects/paulgtoys/pterodactyl-5-rc-flying-lizard",
-                        "ksr://www.kickstarter.com/projects/hyperchiller/hyperchiller-make-iced-coffee-in-one-minute"
+                        "ksr://www.kickstarter.com/projects/hyperchiller/hyperchiller-make-iced-coffee-in-one-minute",
+                        "ksr://www.kickstarter.com/projects/1238747394/the-vamp-bring-back-the-sound"
                     ]
                 }
             ]
