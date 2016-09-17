@@ -5450,6 +5450,24 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:www\\.)?netflix\\.com/((watch|title)/.*)$",
+            "testInputs": [
+                "https://www.netflix.com/watch/70129452",
+                "https://www.netflix.com/title/70077544"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "netflix",
+                    "format": "nflx://$1",
+                    "testResults": [
+                        "nflx://watch/70129452",
+                        "nflx://title/70077544"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -6547,6 +6565,13 @@
             "identifier": "weheartit",
             "storeIdentifier": "539124565",
             "scheme": "whi://"
+        },
+        {
+            "displayName": "Netflix",
+            "identifier": "netflix",
+            "storeIdentifier": "363590051",
+            "scheme": "nflx://",
+            "new": true
         },
         {
             "displayName": "nPlayer",
