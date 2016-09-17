@@ -6578,8 +6578,7 @@
             "identifier": "nplayer",
             "storeIdentifier": "539397400",
             "scheme": "nplayer://",
-            "docs": "http://forum.nplayer.tv/topic/328/custom-url-scheme/7 and https://db.tt/fyXxQtMW",
-            "new": true
+            "docs": "http://forum.nplayer.tv/topic/328/custom-url-scheme/7 and https://db.tt/fyXxQtMW"
         },
         {
             "displayName": "ESPN",
@@ -6591,8 +6590,7 @@
             "displayName": "Jianshu",
             "identifier": "jianshu",
             "storeIdentifier": "888237539",
-            "scheme": "jianshu://",
-            "new": true
+            "scheme": "jianshu://"
         },
         {
             "displayName": "Cachly",
