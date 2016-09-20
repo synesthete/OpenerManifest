@@ -5506,6 +5506,26 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:www\\.|m\\.)?douyu\\.(?:com|tv)/(\\d+).*?$",
+            "testInputs": [
+                "https://www.douyu.com/2570",
+                "https://m.douyu.com/2570",
+                "http://douyu.tv/2570"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "douyu",
+                    "format": "douyutv://$1&0&",
+                    "testResults": [
+                        "douyutv://2570&0&",
+                        "douyutv://2570&0&",
+                        "douyutv://2570&0&"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -6651,6 +6671,13 @@
             "storeIdentifier": "707173885",
             "scheme": "codehub://",
             "docs": "https://github.com/thedillonb/CodeHub/blob/master/CodeHub.iOS/AppDelegate.cs#L258-L280 and https://github.com/thedillonb/CodeHub/issues/19",
+            "new": true
+        },
+        {
+            "displayName": "Douyu",
+            "identifier": "douyu",
+            "storeIdentifier": "863882795",
+            "scheme": "douyutv://",
             "new": true
         }
     ],
