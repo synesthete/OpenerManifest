@@ -2791,10 +2791,12 @@
         },
         {
             "title": "Open Product",
-            "regex": "http(?:s)?://(?:\\w+\\.)?aliexpress\\.com/item(?:/[^/]+)?/(\\d+)\\.html.*$",
+            "regex": "http(?:s)?://(?:\\w+\\.)*aliexpress\\.com/item(?:/[^/]+)?/(\\d+)\\.html.*$",
             "testInputs": [
                 "http://m.aliexpress.com/item/32409017535.html",
-                "http://www.aliexpress.com/item/Foliage-plant-seeds-wheat-grass-cat-grass-seeds-wheat-seeds-about-200-particles/32439617530.html?spm=5261.7749171.1998596321.8.wpCnkX&sdom=561.108229.97206.0_32439617530"
+                "http://www.aliexpress.com/item/Foliage-plant-seeds-wheat-grass-cat-grass-seeds-wheat-seeds-about-200-particles/32439617530.html?spm=5261.7749171.1998596321.8.wpCnkX&sdom=561.108229.97206.0_32439617530",
+                "https://de.aliexpress.com/item/Original-Xiaomi-Mi-Band-2-MiBand-2-Smart-Bracelet-Fitness-Wristband-OLED-Display-Heart-Rate-Monitor/32712227119.html?spm=2114.47010108.6.6.JdBz1z&&scm=1007.12785.38449.0",
+                "https://m.de.aliexpress.com/item/32712227119.html?trace=wwwdetail2mobilesitedetail&productId=32712227119&productSubject=Original-Xiaomi-Mi-Band-2-MiBand-2-Smart-Bracelet-Fitness-Wristband-OLED-Display-Heart-Rate-Monitor&spm=2114.47010108.6.6.JdBz1z&&scm=1007.12785.38449.0"
             ],
             "formats": [
                 {
@@ -2802,7 +2804,9 @@
                     "format": "aliexpress://product/detail?productId=$1",
                     "testResults": [
                         "aliexpress://product/detail?productId=32409017535",
-                        "aliexpress://product/detail?productId=32439617530"
+                        "aliexpress://product/detail?productId=32439617530",
+                        "aliexpress://product/detail?productId=32712227119",
+                        "aliexpress://product/detail?productId=32712227119"
                     ]
                 }
             ]
