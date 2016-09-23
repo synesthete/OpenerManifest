@@ -5512,6 +5512,24 @@
             ]
         },
         {
+            "title": "Open Sale",
+            "regex": "http(?:s)?://(?:\\w+\\.)?wallapop\\.com/(?:i/|item/.*-)(\\d+).*?$",
+            "testInputs": [
+                "http://es.wallapop.com/item/vetusta-morla-memoria-instantanea-105787925",
+                "http://p.wallapop.com/i/106451972?_pid=wi&_uid=28825318&_me=s_tw"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "wallapop",
+                    "format": "wallapop://i/$1",
+                    "testResults": [
+                        "wallapop://i/105787925",
+                        "wallapop://i/106451972"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Link",
             "regex": "http(?:s)?://(?:www\\.|m\\.)?douyu\\.(?:com|tv)/(\\d+).*?$",
             "testInputs": [
@@ -6674,6 +6692,14 @@
             "storeIdentifier": "707173885",
             "scheme": "codehub://",
             "docs": "https://github.com/thedillonb/CodeHub/blob/master/CodeHub.iOS/AppDelegate.cs#L258-L280 and https://github.com/thedillonb/CodeHub/issues/19"
+        },
+        {
+            "displayName": "Wallapop",
+            "identifier": "wallapop",
+            "storeIdentifier": "692753615",
+            "scheme": "wallapop://",
+            "country": "es",
+            "new": true
         },
         {
             "displayName": "Douyu",
