@@ -1916,24 +1916,6 @@
             ]
         },
         {
-            "title": "Open Stream",
-            "regex": "http(?:s?)://meerkatapp.co/[a-zA-Z0-9_-]+/((\\w+-)+\\w+).*$",
-            "testInputs": [
-                "http://meerkatapp.co/bad_beef/21513832-acdc-456d-b28b-7f55925ef99a?utm_source=twitter",
-                "http://meerkatapp.co/rrhoover/sch-44ab01ef-dfcd-4354-99c8-68b3e4abc537?utm_source=twitter"
-            ],
-            "formats": [
-                {
-                    "appIdentifier": "meerkat",
-                    "format": "meerkat://live/$1",
-                    "testResults": [
-                        "meerkat://live/21513832-acdc-456d-b28b-7f55925ef99a",
-                        "meerkat://live/sch-44ab01ef-dfcd-4354-99c8-68b3e4abc537"
-                    ]
-                }
-            ]
-        },
-        {
             "title": "Open File",
             "regex": "http(?:s?)://(?:www\\.)?dropbox\\.com/s/\\w+.*$",
             "testInputs": [
@@ -6548,12 +6530,6 @@
             "storeIdentifier": "532016360",
             "scheme": "launch://",
             "platform": "pad"
-        },
-        {
-            "displayName": "Meerkat",
-            "identifier": "meerkat",
-            "storeIdentifier": "954105918",
-            "scheme": "meerkat://"
         },
         {
             "displayName": "Mobile01",
