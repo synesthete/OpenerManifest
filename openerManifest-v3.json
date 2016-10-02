@@ -763,7 +763,7 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(?:s?)://(?:\\w+\\.)?pinterest.com/(?!pin|search|explore|categories|join)([a-zA-Z0-9-_]+)(/pins)?(?:/|/?\\?.*)?$",
+            "regex": "http(?:s?)://(?!help\\.)(?:\\w+\\.)?pinterest.com/(?!pin|search|explore|categories|join)([a-zA-Z0-9-_]+)(/pins)?(?:/|/?\\?.*)?$",
             "testInputs": [
                 "https://pinterest.com/cnnr/",
                 "https://www.pinterest.com/cnnr/",
@@ -775,7 +775,8 @@
                 "https://www.pinterest.com/search/pins/?q=cute%20animal",
                 "https://www.pinterest.com/explore/popular",
                 "https://www.pinterest.com/categories/popular",
-                "https://www.pinterest.com/join/?next=/pin/create/button/%3Furl%3Dhttps%253A%252F%252Fmedia0.giphy.com%252Fmedia%252FemWySpOLFLUAM%252Fgiphy.gif%26media%3Dhttps%253A%252F%252Fmedia0.giphy.com%252Fmedia%252FemWySpOLFLUAM%252Fgiphy.gif%26description%3Dvia%2520GIPHY"
+                "https://www.pinterest.com/join/?next=/pin/create/button/%3Furl%3Dhttps%253A%252F%252Fmedia0.giphy.com%252Fmedia%252FemWySpOLFLUAM%252Fgiphy.gif%26media%3Dhttps%253A%252F%252Fmedia0.giphy.com%252Fmedia%252FemWySpOLFLUAM%252Fgiphy.gif%26description%3Dvia%2520GIPHY",
+                "https://help.pinterest.com/cnnr/"
             ],
             "formats": [
                 {
@@ -792,6 +793,7 @@
                         null,
                         null,
                         null,
+                        null,
                         null
                     ]
                 }
@@ -799,7 +801,7 @@
         },
         {
             "title": "Open Board",
-            "regex": "http(?:s?)://(?:\\w+\\.)?pinterest\\.com/(?!pin|search|explore|categories)([a-zA-Z0-9-_]+)(?:/)(?!pins)([a-zA-Z0-9-_]+).*?$",
+            "regex": "http(?:s?)://(?!help\\.)(?:\\w+\\.)?pinterest\\.com/(?!pin|search|explore|categories)([a-zA-Z0-9-_]+)(?:/)(?!pins)([a-zA-Z0-9-_]+).*?$",
             "testInputs": [
                 "https://pinterest.com/cnnr/what-time-is-it/",
                 "https://www.pinterest.com/cnnr/what-time-is-it/",
@@ -809,7 +811,8 @@
                 "https://www.pinterest.com/search/pins/?q=cute%20animal",
                 "https://www.pinterest.com/chels/pins/",
                 "https://www.pinterest.com/explore/popular",
-                "https://www.pinterest.com/categories/popular"
+                "https://www.pinterest.com/categories/popular",
+                "https://help.pinterest.com/categories/popular"
             ],
             "formats": [
                 {
@@ -824,6 +827,7 @@
                         null,
                         null,
                         null,
+                        null,
                         null
                     ]
                 }
@@ -831,14 +835,15 @@
         },
         {
             "title": "Open Pin",
-            "regex": "http(?:s?)://(?:\\w+\\.)?pinterest\\.com/pin/(?!create)([:alnum:]+).*?$",
+            "regex": "http(?:s?)://(?!help\\.)(?:\\w+\\.)?pinterest\\.com/pin/(?!create)([:alnum:]+).*?$",
             "testInputs": [
                 "https://pinterest.com/pin/515380751084154703/",
                 "https://www.pinterest.com/pin/515380751084154703/",
                 "https://fr.pinterest.com/pin/515380751084154703/",
                 "https://www.pinterest.com/pin/A2xVdQAQgF0BNTgV0RsAAAA/",
                 "https://www.pinterest.com/pin/313844667760410380/sent/?invite_code=b8e10eef0a0b837be53d265575387572&sender=49258327082795975",
-                "https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fmedia0.giphy.com%2Fmedia%2FemWySpOLFLUAM%2Fgiphy.gif&media=https%3A%2F%2Fmedia0.giphy.com%2Fmedia%2FemWySpOLFLUAM%2Fgiphy.gif&description=via%20GIPHY"
+                "https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fmedia0.giphy.com%2Fmedia%2FemWySpOLFLUAM%2Fgiphy.gif&media=https%3A%2F%2Fmedia0.giphy.com%2Fmedia%2FemWySpOLFLUAM%2Fgiphy.gif&description=via%20GIPHY",
+                "https://help.pinterest.com/pin/515380751084154703/"
             ],
             "formats": [
                 {
@@ -850,6 +855,7 @@
                         "pinterest://pin/515380751084154703",
                         "pinterest://pin/A2xVdQAQgF0BNTgV0RsAAAA",
                         "pinterest://pin/313844667760410380",
+                        null,
                         null
                     ]
                 }
@@ -857,12 +863,13 @@
         },
         {
             "title": "Open Search",
-            "regex": "http(?:s)?://(?:\\w+\\.)?pinterest\\.com/search/([^/|\\?]+).*q=([^&]+).*$",
+            "regex": "http(?:s)?://(?!help\\.)(?:\\w+\\.)?pinterest\\.com/search/([^/|\\?]+).*q=([^&]+).*$",
             "testInputs": [
                 "https://pinterest.com/search/pins/?q=cute%20animal",
                 "https://www.pinterest.com/search/pins/?q=cute%20animal",
                 "https://fr.pinterest.com/search/pins/?q=cute%20animal",
-                "https://www.pinterest.com/search/people/?q=tim%20johnsen&rs=typed&0=tim%7Ctyped&1=johnsen%7Ctyped"
+                "https://www.pinterest.com/search/people/?q=tim%20johnsen&rs=typed&0=tim%7Ctyped&1=johnsen%7Ctyped",
+                "https://help.pinterest.com/search/pins/?q=cute%20animal"
             ],
             "formats": [
                 {
@@ -872,21 +879,23 @@
                         "pinterest://search/pins/?q=cute%20animal",
                         "pinterest://search/pins/?q=cute%20animal",
                         "pinterest://search/pins/?q=cute%20animal",
-                        "pinterest://search/people/?q=tim%20johnsen"
+                        "pinterest://search/people/?q=tim%20johnsen",
+                        null
                     ]
                 }
             ]
         },
         {
             "title": "Open Category",
-            "regex": "http(?:s)?://(?:\\w+\\.)?pinterest\\.com/(?:categories|explore)(/[^\\/\\?#]+)?.*?",
+            "regex": "http(?:s)?://(?!help\\.)(?:\\w+\\.)?pinterest\\.com/(?:categories|explore)(/[^\\/\\?#]+)?.*?",
             "testInputs": [
                 "https://www.pinterest.com/categories",
                 "https://www.pinterest.com/categories/",
                 "https://www.pinterest.com/categories/popular",
                 "https://www.pinterest.com/explore",
                 "https://www.pinterest.com/explore/",
-                "https://www.pinterest.com/explore/popular"
+                "https://www.pinterest.com/explore/popular",
+                "https://help.pinterest.com/explore/popular"
             ],
             "formats": [
                 {
@@ -898,7 +907,8 @@
                         "pinterest://categories/popular",
                         "pinterest://categories",
                         "pinterest://categories/",
-                        "pinterest://categories/popular"
+                        "pinterest://categories/popular",
+                        null
                     ]
                 }
             ]
