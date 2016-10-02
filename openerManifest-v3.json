@@ -5852,8 +5852,7 @@
             "identifier": "vlc",
             "storeIdentifier": "650377962",
             "scheme": "vlc-x-callback://",
-            "docs": "https://wiki.videolan.org/Documentation:IOS/#x-callback-url and https://wiki.videolan.org/VLC_Features_Formats/",
-            "new": true
+            "docs": "https://wiki.videolan.org/Documentation:IOS/#x-callback-url and https://wiki.videolan.org/VLC_Features_Formats/"
         },
         {
             "displayName": "Evernote",
@@ -6272,8 +6271,7 @@
             "displayName": "Netflix",
             "identifier": "netflix",
             "storeIdentifier": "363590051",
-            "scheme": "nflx://",
-            "new": true
+            "scheme": "nflx://"
         },
         {
             "displayName": "Snapchat",
@@ -6310,8 +6308,7 @@
             "displayName": "Douyu",
             "identifier": "douyu",
             "storeIdentifier": "863882795",
-            "scheme": "douyutv://",
-            "new": true
+            "scheme": "douyutv://"
         },
         {
             "displayName": "Git2Go",
@@ -6687,8 +6684,7 @@
             "identifier": "wallapop",
             "storeIdentifier": "692753615",
             "scheme": "wallapop://",
-            "country": "es",
-            "new": true
+            "country": "es"
         },
         {
             "displayName": "Wander",
