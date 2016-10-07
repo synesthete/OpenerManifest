@@ -5565,6 +5565,24 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Video",
+            "regex": "http(?:s)?://(?:www\\.)?abemafresh\\.tv/(?:[^/]+)/(\\d+).*?$",
+            "testInputs": [
+                "https://abemafresh.tv/official2/46773",
+                "http://abemafresh.tv/pico/47464"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "amebafresh",
+                    "format": "amebafresh://program/$1",
+                    "testResults": [
+                        "amebafresh://program/46773",
+                        "amebafresh://program/47464"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -6722,6 +6740,13 @@
             "platform": "pad",
             "scheme": "dasreferenz://",
             "docs": "https://dasreferenz.uservoice.com/knowledgebase/articles/377297-url-scheme"
+        },
+        {
+            "displayName": "FRESH!",
+            "identifier": "amebafresh",
+            "storeIdentifier": "1026540588",
+            "scheme": "amebafresh://",
+            "new": true
         }
     ],
     "browsers": [
