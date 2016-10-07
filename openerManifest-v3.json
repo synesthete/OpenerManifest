@@ -54,13 +54,15 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(?:s?)://(?:mobile\\.|www\\.|m\\.)?twitter\\.com/(?:@)?(?!search)([a-zA-Z0-9_]{1,15})(?:/with_replies)?(?:(?:/)?\\?.*)?$",
+            "regex": "http(?:s?)://(?:mobile\\.|www\\.|m\\.)?twitter\\.com/(?:@)?(?!search)([a-zA-Z0-9_]{1,15})(?:/with_replies)?/?(\\?.*)?$",
             "testInputs": [
                 "https://mobile.twitter.com/chillmage/with_replies",
                 "https://twitter.com/hashtag/ThingsILearnedFromTheLeft?src=hash",
                 "https://mobile.twitter.com/kiebk/status/599159327056863232",
                 "https://twitter.com/chriswelch?protected_redirect=true",
-                "https://twitter.com/search?q=opener%20app&src=typd"
+                "https://twitter.com/search?q=opener%20app&src=typd",
+                "https://twitter.com/branches_app/",
+                "https://twitter.com/branches_app/?"
             ],
             "formats": [
                 {
@@ -71,7 +73,9 @@
                         null,
                         null,
                         "twitter://user?screen_name=chriswelch",
-                        null
+                        null,
+                        "twitter://user?screen_name=branches_app",
+                        "twitter://user?screen_name=branches_app"
                     ]
                 },
                 {
@@ -82,7 +86,9 @@
                         null,
                         null,
                         "tweetbot:///user_profile/chriswelch",
-                        null
+                        null,
+                        "tweetbot:///user_profile/branches_app",
+                        "tweetbot:///user_profile/branches_app"
                     ]
                 },
                 {
@@ -93,7 +99,9 @@
                         null,
                         null,
                         "twitterrific:///profile?screen_name=chriswelch",
-                        null
+                        null,
+                        "twitterrific:///profile?screen_name=branches_app",
+                        "twitterrific:///profile?screen_name=branches_app"
                     ]
                 }
             ]
