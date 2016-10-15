@@ -5809,8 +5809,7 @@
             "identifier": "wikipedia",
             "storeIdentifier": "324715238",
             "scheme": "wikipedia://",
-            "docs": "https://goo.gl/HPyqeR and https://goo.gl/XvFQr4",
-            "new": true
+            "docs": "https://goo.gl/HPyqeR and https://goo.gl/XvFQr4"
         },
         {
             "displayName": "WikiLinks",
@@ -6753,8 +6752,7 @@
             "displayName": "FRESH!",
             "identifier": "amebafresh",
             "storeIdentifier": "1026540588",
-            "scheme": "amebafresh://",
-            "new": true
+            "scheme": "amebafresh://"
         }
     ],
     "browsers": [
