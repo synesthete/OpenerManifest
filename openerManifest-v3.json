@@ -761,11 +761,17 @@
         {
             "title": "Open Moment",
             "regex": "http(?:s?)://(?:www\\.)?path\\.com/(?:p|moment)/.*$",
+            "testInputs": [
+                "https://path.com/p/4BozlA"
+            ],
             "formats": [
                 {
                     "appIdentifier": "path",
                     "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(path://moments/[a-f0-9]+)'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(path://moments/[a-f0-9]+)'); var match = regex.exec(res)[1]; completionHandler(match); }"
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(path://moments/[a-f0-9]+)'); var match = regex.exec(res)[1]; completionHandler(match); }",
+                    "testResults": [
+                        "path://moments/580c055e7651c2a8c743cb44"
+                    ]
                 }
             ]
         },
@@ -2360,11 +2366,17 @@
         {
             "title": "Add Podcast",
             "regex": "http(?:s)?://(?:www\\.)?overcast\\.fm/\\+.+$",
+            "testInputs": [
+                "https://overcast.fm/+lu7oErhY"
+            ],
             "formats": [
                 {
                     "appIdentifier": "overcast",
                     "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(overcast:///\\\\d+)'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(overcast:///\\\\d+)'); var match = regex.exec(res)[1]; completionHandler(match); }"
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(overcast:///\\\\d+)'); var match = regex.exec(res)[1]; completionHandler(match); }",
+                    "testResults": [
+                        "overcast:///41488209980950"
+                    ]
                 }
             ]
         },
