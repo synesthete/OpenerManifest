@@ -576,8 +576,8 @@
             "formats": [
                 {
                     "appIdentifier": "vscocam",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(vsco://.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(vsco://.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(vsco://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(vsco://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); }",
                     "testResults": [
                         "vsco://user/158596/grid/53baaa357567083d5a8b460a",
                         "vsco://user/11216585/grid/566f16b4d2a71c17049825ae"
@@ -595,8 +595,8 @@
             "formats": [
                 {
                     "appIdentifier": "vscocam",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(vsco://.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(vsco://.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(vsco://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(vsco://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); }",
                     "testResults": [
                         "vsco://user/556895/journal/5644edcf2b331e1d2f8b4569",
                         "vsco://user/28777/journal/575cad7e74e8a0e4638b456c"
@@ -620,8 +620,8 @@
             "formats": [
                 {
                     "appIdentifier": "vscocam",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(vsco://.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(vsco://.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(vsco://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(vsco://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); }",
                     "testResults": [
                         "vsco://user/5539600/collection",
                         "vsco://user/5539600/grid",
@@ -723,8 +723,8 @@
             "formats": [
                 {
                     "appIdentifier": "tumblr",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*?([a-zA-Z0-9_\\-]+)\\.tumblr\\.com/post/(\\\\d+).*'); var match = regex.exec(res); var blogName = match[1]; var postID = match[2]; completionHandler('tumblr://x-callback-url/blog?blogName=' + blogName + '&postID=' + postID); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*?([a-zA-Z0-9_\\-]+)\\.tumblr\\.com/post/(\\\\d+).*'); var match = regex.exec(res); var blogName = match[1]; var postID = match[2]; completionHandler('tumblr://x-callback-url/blog?blogName=' + blogName + '&postID=' + postID); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('([a-zA-Z0-9_\\-]+)\\.tumblr\\.com/post/(\\\\d+)'); var match = regex.exec(res); var blogName = match[1]; var postID = match[2]; completionHandler('tumblr://x-callback-url/blog?blogName=' + blogName + '&postID=' + postID); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('([a-zA-Z0-9_\\-]+)\\.tumblr\\.com/post/(\\\\d+)'); var match = regex.exec(res); var blogName = match[1]; var postID = match[2]; completionHandler('tumblr://x-callback-url/blog?blogName=' + blogName + '&postID=' + postID); }",
                     "testResults": [
                         "tumblr://x-callback-url/blog?blogName=2kindsofpeople&postID=115652499436"
                     ]
@@ -764,8 +764,8 @@
             "formats": [
                 {
                     "appIdentifier": "path",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(path://moments/[a-f0-9]+).*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(path://moments/[a-f0-9]+).*'); var match = regex.exec(res)[1]; completionHandler(match); }"
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(path://moments/[a-f0-9]+)'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(path://moments/[a-f0-9]+)'); var match = regex.exec(res)[1]; completionHandler(match); }"
                 }
             ]
         },
@@ -930,8 +930,8 @@
             "formats": [
                 {
                     "appIdentifier": "flipboard",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(flipboard://.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(flipboard://.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(flipboard://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(flipboard://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); }",
                     "testResults": [
                         "flipboard://showSection/flipboard/topic%252Findependenceday?title=July%204th%20on%20Flipboard"
                     ]
@@ -949,8 +949,8 @@
             "formats": [
                 {
                     "appIdentifier": "flipboard",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(flipboard://.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(flipboard://.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(flipboard://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(flipboard://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); }",
                     "testResults": [
                         "flipboard://showSection/auth/flipboard/user%252F230604372?title=Catherine%20Scowcroft%20on%20Flipboard",
                         "flipboard://showSection/sid/5ha7nr15y/catherinesc63kn?title=LIVERPOOL%20on%20Flipboard",
@@ -1191,8 +1191,8 @@
             "formats": [
                 {
                     "appIdentifier": "foursquare",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(foursquare://.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(foursquare://.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(foursquare://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(foursquare://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); }",
                     "testResults": [
                         "foursquare://lists/5550f48b498e5d3067c36795",
                         "foursquare://lists/5550f48b498e5d3067c36795",
@@ -1282,8 +1282,8 @@
             "formats": [
                 {
                     "appIdentifier": "swarm",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(swarm://.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(swarm://.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(swarm://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(swarm://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); }",
                     "testResults": [
                         "swarm://checkins/54dc6e7d498e6f759fed73ad?s=9Mrny6Nrgw8DeC5kn1m79HuAx_E"
                     ]
@@ -1301,8 +1301,8 @@
             "formats": [
                 {
                     "appIdentifier": "foursquare",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*foursquare\\.com/v/(?:.*?/)?(\\\\w+).*'); var match = regex.exec(res)[1]; completionHandler('foursquare://venues/' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*foursquare\\.com/v/(?:.*?/)?(\\\\w+).*'); var match = regex.exec(res)[1]; completionHandler('foursquare://venues/' + match); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('foursquare\\.com/v/(?:.*?/)?(\\\\w+)'); var match = regex.exec(res)[1]; completionHandler('foursquare://venues/' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('foursquare\\.com/v/(?:.*?/)?(\\\\w+)'); var match = regex.exec(res)[1]; completionHandler('foursquare://venues/' + match); }",
                     "testResults": [
                         "foursquare://venues/49ba1cbdf964a5205d531fe3",
                         "foursquare://venues/49ba1cbdf964a5205d531fe3",
@@ -1828,8 +1828,8 @@
             "formats": [
                 {
                     "appIdentifier": "vine",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(vine://post/\\\\d+).*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(vine://post/\\\\d+).*'); var match = regex.exec(res)[1]; completionHandler(match); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(vine://post/\\\\d+)'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(vine://post/\\\\d+)'); var match = regex.exec(res)[1]; completionHandler(match); }",
                     "testResults": [
                         "vine://post/1268687962565677056"
                     ]
@@ -1842,8 +1842,8 @@
             "formats": [
                 {
                     "appIdentifier": "periscope",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(pscp://broadcast/\\\\d+).*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(pscp://broadcast/\\\\d+).*'); var match = regex.exec(res)[1]; completionHandler(match); }"
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(pscp://broadcast/\\\\d+)'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(pscp://broadcast/\\\\d+)'); var match = regex.exec(res)[1]; completionHandler(match); }"
                 }
             ]
         },
@@ -2363,8 +2363,8 @@
             "formats": [
                 {
                     "appIdentifier": "overcast",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(overcast:///\\\\d+).*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(overcast:///\\\\d+).*'); var match = regex.exec(res)[1]; completionHandler(match); }"
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(overcast:///\\\\d+)'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(overcast:///\\\\d+)'); var match = regex.exec(res)[1]; completionHandler(match); }"
                 }
             ]
         },
@@ -2403,8 +2403,8 @@
             "formats": [
                 {
                     "appIdentifier": "producthunt",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*producthunt://post/(\\\\d+).*'); var match = regex.exec(res)[1]; completionHandler('producthunt://post/' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*producthunt://post/(\\\\d+).*'); var match = regex.exec(res)[1]; completionHandler('producthunt://post/' + match); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('producthunt://post/(\\\\d+)'); var match = regex.exec(res)[1]; completionHandler('producthunt://post/' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('producthunt://post/(\\\\d+)'); var match = regex.exec(res)[1]; completionHandler('producthunt://post/' + match); }",
                     "testResults": [
                         "producthunt://post/22922",
                         "producthunt://post/23810",
@@ -2423,8 +2423,8 @@
             "formats": [
                 {
                     "appIdentifier": "producthunt",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*producthunt://user/(\\\\d+).*'); var match = regex.exec(res)[1]; completionHandler('producthunt://user/' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*producthunt://user/(\\\\d+).*'); var match = regex.exec(res)[1]; completionHandler('producthunt://user/' + match); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('producthunt://user/(\\\\d+)'); var match = regex.exec(res)[1]; completionHandler('producthunt://user/' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('producthunt://user/(\\\\d+)'); var match = regex.exec(res)[1]; completionHandler('producthunt://user/' + match); }",
                     "testResults": [
                         "producthunt://user/141594"
                     ]
@@ -2440,8 +2440,8 @@
             "formats": [
                 {
                     "appIdentifier": "producthunt",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*producthunt://collection/(\\\\d+).*'); var match = regex.exec(res)[1]; completionHandler('producthunt://collection/' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*producthunt://collection/(\\\\d+).*'); var match = regex.exec(res)[1]; completionHandler('producthunt://collection/' + match); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('producthunt://collection/(\\\\d+)'); var match = regex.exec(res)[1]; completionHandler('producthunt://collection/' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('producthunt://collection/(\\\\d+)'); var match = regex.exec(res)[1]; completionHandler('producthunt://collection/' + match); }",
                     "testResults": [
                         "producthunt://collection/12529"
                     ]
@@ -2458,8 +2458,8 @@
             "formats": [
                 {
                     "appIdentifier": "ted",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(ted://talks/\\\\d+).*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(ted://talks/\\\\d+).*'); var match = regex.exec(res)[1]; completionHandler(match); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(ted://talks/\\\\d+)'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(ted://talks/\\\\d+)'); var match = regex.exec(res)[1]; completionHandler(match); }",
                     "testResults": [
                         "ted://talks/2253",
                         "ted://talks/1815"
@@ -2719,8 +2719,8 @@
             "formats": [
                 {
                     "appIdentifier": "medium",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(medium://.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url.split('\\n')[0], true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url.split('\\n')[0]); var regex = RegExp('.*(medium://.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); }"
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(medium://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url.split('\\n')[0], true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url.split('\\n')[0]); var regex = RegExp('(medium://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); }"
                 }
             ]
         },
@@ -2784,8 +2784,8 @@
             "formats": [
                 {
                     "appIdentifier": "groupon",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*ios-app://352683833/groupon/dispatch/(.*?)\".*'); var match = regex.exec(res)[1]; completionHandler('groupon:///dispatch/' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*ios-app://352683833/groupon/dispatch/(.*?)\".*'); var match = regex.exec(res)[1]; completionHandler('groupon:///dispatch/' + match); }"
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('ios-app://352683833/groupon/dispatch/(.*?)\"'); var match = regex.exec(res)[1]; completionHandler('groupon:///dispatch/' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('ios-app://352683833/groupon/dispatch/(.*?)\"'); var match = regex.exec(res)[1]; completionHandler('groupon:///dispatch/' + match); }"
                 }
             ]
         },
@@ -3011,8 +3011,8 @@
             "formats": [
                 {
                     "appIdentifier": "frontback",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(frontback://posts/\\\\d+).*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(frontback://posts/\\\\d+).*'); var match = regex.exec(res)[1]; completionHandler(match); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(frontback://posts/\\\\d+)'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(frontback://posts/\\\\d+)'); var match = regex.exec(res)[1]; completionHandler(match); }",
                     "testResults": [
                         "frontback://posts/1628618",
                         "frontback://posts/2006271"
@@ -3143,8 +3143,8 @@
             "formats": [
                 {
                     "appIdentifier": "goldstar",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(goldstar://.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(goldstar://.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(goldstar://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(goldstar://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); }",
                     "testResults": [
                         "goldstar://goldstar.com/event/100763"
                     ]
@@ -3245,8 +3245,8 @@
             "formats": [
                 {
                     "appIdentifier": "runkeeper",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(runkeeper://.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(runkeeper://.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(runkeeper://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(runkeeper://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); }",
                     "testResults": [
                         "runkeeper://?view=activity&tripuuid=2fa7223f-508e-450f-abe5-9e6c436db151&deepLinkSource=twitterCard",
                         "runkeeper://?view=activity&tripuuid=18ff2a03-f397-4376-8c00-ded503b5732f&deepLinkSource=twitterCard"
@@ -3646,8 +3646,8 @@
             "formats": [
                 {
                     "appIdentifier": "evernote",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(evernote://.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(evernote://.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(evernote://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(evernote://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); }",
                     "testResults": [
                         "evernote:///view/7633933/s69/e431cabb-3ece-4a8b-9b82-74ff084a788d/e431cabb-3ece-4a8b-9b82-74ff084a788d/"
                     ]
@@ -3719,16 +3719,16 @@
             "formats": [
                 {
                     "appIdentifier": "launchcenterpro",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(launch://import.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(launch://import.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(launch://import.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(launch://import.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); }",
                     "testResults": [
                         "launch://import?url=tweetbot%3A%2F%2F%2Fpost%3Ftext%3D%5Bclipboard%5D&title=Tweet%20Text&description="
                     ]
                 },
                 {
                     "appIdentifier": "launchcenterproipad",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(launch://import.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(launch://import.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(launch://import.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(launch://import.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); }",
                     "testResults": [
                         "launch://import?url=tweetbot%3A%2F%2F%2Fpost%3Ftext%3D%5Bclipboard%5D&title=Tweet%20Text&description="
                     ]
@@ -3763,8 +3763,8 @@
             "formats": [
                 {
                     "appIdentifier": "workflow",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(workflow://import-workflow/.*)\".*'); var match = regex.exec(res)[1]; /* http://stackoverflow.com/a/7394787/3943258 */ var txt = document.createElement('textarea'); txt.innerHTML = match; match = txt.value; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(workflow://import-workflow/.*)\".*'); var match = regex.exec(res)[1]; match = htmlDecode(match); completionHandler(match); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(workflow://import-workflow/.*)\"'); var match = regex.exec(res)[1]; /* http://stackoverflow.com/a/7394787/3943258 */ var txt = document.createElement('textarea'); txt.innerHTML = match; match = txt.value; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(workflow://import-workflow/.*)\"'); var match = regex.exec(res)[1]; match = htmlDecode(match); completionHandler(match); }",
                     "testResults": [
                         "workflow://import-workflow/?url=https%3A%2F%2Fworkflow.is%2Fworkflows%2F304554907e6a473e9e810297509b00c5.wflow&name=Expand%20URL",
                         "workflow://import-workflow/?url=https%3A%2F%2Fworkflow.is%2Fworkflows%2Fe37a43302f63402a973af02e7fa8d97e.wflow&name=Listening%20In%20Overcast"
@@ -3834,8 +3834,8 @@
             "formats": [
                 {
                     "appIdentifier": "trulia",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(urlHash=.*?)\".*'); var match = regex.exec(res)[1]; completionHandler('truliapdpforsale://?' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(urlHash=.*?)\".*'); var match = regex.exec(res)[1]; completionHandler('truliapdpforsale://?' + match); }"
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(urlHash=.*?)\"'); var match = regex.exec(res)[1]; completionHandler('truliapdpforsale://?' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(urlHash=.*?)\"'); var match = regex.exec(res)[1]; completionHandler('truliapdpforsale://?' + match); }"
                 }
             ]
         },
@@ -3845,8 +3845,8 @@
             "formats": [
                 {
                     "appIdentifier": "truliarent",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(urlHash=.*?)\".*'); var match = regex.exec(res)[1]; completionHandler('truliapdpforrent://?' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(urlHash=.*?)\".*'); var match = regex.exec(res)[1]; completionHandler('truliapdpforrent://?' + match); }"
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(urlHash=.*?)\"'); var match = regex.exec(res)[1]; completionHandler('truliapdpforrent://?' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(urlHash=.*?)\"'); var match = regex.exec(res)[1]; completionHandler('truliapdpforrent://?' + match); }"
                 }
             ]
         },
@@ -4394,7 +4394,7 @@
             "formats": [
                 {
                     "appIdentifier": "indiegogo",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(indiegogo://.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(indiegogo://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
                     "testResults": [
                         "indiegogo://campaigns/1498429",
                         "indiegogo://campaigns/1494528"
@@ -5068,8 +5068,8 @@
             "formats": [
                 {
                     "appIdentifier": "deviantart",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*://gallery/([^\\\"]+).*'); var match = regex.exec(res)[1]; completionHandler('deviantart://gallery/' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*://gallery/([^\\\"]+).*'); var match = regex.exec(res)[1]; completionHandler('deviantart://gallery/' + match); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('://gallery/([^\\\"]+)'); var match = regex.exec(res)[1]; completionHandler('deviantart://gallery/' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('://gallery/([^\\\"]+)'); var match = regex.exec(res)[1]; completionHandler('deviantart://gallery/' + match); }",
                     "testResults": [
                         "deviantart://gallery/daekazu/D70348AB-51C4-4086-088F-BA379308C7EA"
                     ]
@@ -5085,8 +5085,8 @@
             "formats": [
                 {
                     "appIdentifier": "deviantart",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*://collection/([^\\\"]+).*'); var match = regex.exec(res)[1]; completionHandler('deviantart://collection/' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*://collection/([^\\\"]+).*'); var match = regex.exec(res)[1]; completionHandler('deviantart://collection/' + match); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('://collection/([^\\\"]+)'); var match = regex.exec(res)[1]; completionHandler('deviantart://collection/' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('://collection/([^\\\"]+)'); var match = regex.exec(res)[1]; completionHandler('deviantart://collection/' + match); }",
                     "testResults": [
                         "deviantart://collection/Dark-Tiramisu/43D895CE-68F8-962A-A949-0A2F261EC497"
                     ]
@@ -5106,8 +5106,8 @@
             "formats": [
                 {
                     "appIdentifier": "deviantart",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*://deviation/([^\\\"]+).*'); var match = regex.exec(res)[1]; completionHandler('deviantart://deviation/' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*://deviation/([^\\\"]+).*'); var match = regex.exec(res)[1]; completionHandler('deviantart://deviation/' + match); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('://deviation/([^\\\"]+)'); var match = regex.exec(res)[1]; completionHandler('deviantart://deviation/' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('://deviation/([^\\\"]+)'); var match = regex.exec(res)[1]; completionHandler('deviantart://deviation/' + match); }",
                     "testResults": [
                         "deviantart://deviation/06060A99-62E7-3212-444E-CBB6A82A1B5F",
                         "deviantart://deviation/478A8090-48B1-8053-37A9-6A696A106980",
@@ -5371,7 +5371,7 @@
             "formats": [
                 {
                     "appIdentifier": "genius",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(genius://.*?)\".*'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler(match); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(genius://.*?)\"'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler(match); }",
                     "testResults": [
                         "genius://songs/2450584",
                         "genius://songs/2421134",
@@ -5484,8 +5484,8 @@
             "formats": [
                 {
                     "appIdentifier": "jianshu",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(jianshu://notes/\\\\d+).*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(jianshu://notes/\\\\d+).*'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler(match); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(jianshu://notes/\\\\d+)'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(jianshu://notes/\\\\d+)'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler(match); }",
                     "testResults": [
                         "jianshu://notes/2312808"
                     ]
