@@ -6788,8 +6788,7 @@
             "displayName": "Namuwiki",
             "identifier": "namuviewer",
             "storeIdentifier": "993035669",
-            "scheme": "namuviewer://",
-            "new": true
+            "scheme": "namuviewer://"
         }
     ],
     "browsers": [
