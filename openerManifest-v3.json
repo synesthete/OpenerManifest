@@ -605,7 +605,7 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(s)?://(?:[a-zA-Z0-9_\\-\\.]+\\.)?vsco\\.co(m)?((/[a-zA-Z0-9_\\-\\.]+)?(/(collection)|(/)?\\?).*|/)?$",
+            "regex": "http(s)?://(?:[a-zA-Z0-9_\\-\\.]+\\.)?vsco\\.co(m)?((/[a-zA-Z0-9_\\-\\.]+)?(/(collection|images)|(/)?\\?).*|/)?$",
             "testInputs": [
                 "http://modernandmundane.vsco.co/collection/1",
                 "http://modernandmundane.vsco.co/",
@@ -613,6 +613,7 @@
                 "http://modernandmundane.vsco.co/?foo=bar",
                 "http://modernandmundane.vsco.co?foo=bar",
                 "http://modernandmundane.vsco.co/collection/1?foo=bar",
+                "http://vsco.co/yebster/images/1",
                 "http://jmcashdollar.vsco.co/grid/1",
                 "http://vsco.co/smotraghi/grid/1"
             ],
@@ -628,6 +629,7 @@
                         "vsco://user/5539600/grid",
                         "vsco://user/5539600/grid",
                         "vsco://user/5539600/collection",
+                        "vsco://user/22016668/grid",
                         null,
                         null
                     ]
