@@ -5622,6 +5622,50 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:\\w+\\.)?pandora\\.com/(?!station/play/).*",
+            "testInputs": [
+                "http://www.pandora.com/fall-out-boy/from-under-cork-tree/dance-dance?station=939625762651725460&shareImp=true&referrer=gonzalez_252",
+                "https://www.pandora.com/chris-brown/x-deluxe-version/do-better",
+                "https://www.pandora.com/station/play/3379768435072334643",
+                "https://www.pandora.com/korn/greatest-hits-vol-1-explicit/word-up"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "pandora",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(pandorav\\\\d+:/.*?)\"'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler(match); }",
+                    "testResults": [
+                        "pandorav4:/createStation?musicId=S253709&amp;shareImp=true",
+                        "pandorav4:/createStation?musicId=S2698967",
+                        null,
+                        "pandorav4:/createStation?musicId=S185713"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:\\w+\\.)?pandora\\.com/station/play/(\\d+).*?",
+            "testInputs": [
+                "http://www.pandora.com/fall-out-boy/from-under-cork-tree/dance-dance?station=939625762651725460&shareImp=true&referrer=gonzalez_252",
+                "https://www.pandora.com/chris-brown/x-deluxe-version/do-better",
+                "https://www.pandora.com/station/play/3379768435072334643",
+                "https://www.pandora.com/korn/greatest-hits-vol-1-explicit/word-up"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "pandora",
+                    "format": "pandorav2:/createStation?stationId=$1",
+                    "testResults": [
+                        null,
+                        null,
+                        "pandorav2:/createStation?stationId=3379768435072334643",
+                        null
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -6790,6 +6834,13 @@
             "identifier": "namuviewer",
             "storeIdentifier": "993035669",
             "scheme": "namuviewer://"
+        },
+        {
+            "displayName": "Pandora",
+            "identifier": "pandora",
+            "storeIdentifier": "284035177",
+            "scheme": "pandorav4://",
+            "new": true
         }
     ],
     "browsers": [
