@@ -54,7 +54,7 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(?:s?)://(?:mobile\\.|www\\.|m\\.)?twitter\\.com/(?:@)?(?!search)([a-zA-Z0-9_]{1,15})(?:/with_replies)?/?(\\?.*)?$",
+            "regex": "http(?:s?)://(?:mobile\\.|www\\.|m\\.)?twitter\\.com/(?:@)?(?!search)([a-zA-Z0-9_]{1,15})(?:/with_replies|/following|/followers|/media|/favorites)?/?(\\?.*)?$",
             "testInputs": [
                 "https://mobile.twitter.com/chillmage/with_replies",
                 "https://twitter.com/hashtag/ThingsILearnedFromTheLeft?src=hash",
@@ -62,7 +62,8 @@
                 "https://twitter.com/chriswelch?protected_redirect=true",
                 "https://twitter.com/search?q=opener%20app&src=typd",
                 "https://twitter.com/branches_app/",
-                "https://twitter.com/branches_app/?"
+                "https://twitter.com/branches_app/?",
+				"https://mobile.twitter.com/FrancescoD_Ales/following"
             ],
             "formats": [
                 {
@@ -75,7 +76,8 @@
                         "twitter://user?screen_name=chriswelch",
                         null,
                         "twitter://user?screen_name=branches_app",
-                        "twitter://user?screen_name=branches_app"
+                        "twitter://user?screen_name=branches_app",
+                        "twitter://user?screen_name=FrancescoD_Ales"
                     ]
                 },
                 {
@@ -88,7 +90,8 @@
                         "tweetbot:///user_profile/chriswelch",
                         null,
                         "tweetbot:///user_profile/branches_app",
-                        "tweetbot:///user_profile/branches_app"
+                        "tweetbot:///user_profile/branches_app",
+                        "tweetbot:///user_profile/FrancescoD_Ales"
                     ]
                 },
                 {
@@ -101,7 +104,8 @@
                         "twitterrific:///profile?screen_name=chriswelch",
                         null,
                         "twitterrific:///profile?screen_name=branches_app",
-                        "twitterrific:///profile?screen_name=branches_app"
+                        "twitterrific:///profile?screen_name=branches_app",
+                        "twitterrific:///profile?screen_name=FrancescoD_Ales"
                     ]
                 }
             ]
