@@ -214,7 +214,7 @@
         },
         {
             "title": "Open Moment",
-            "regex": "http(?:s?)://(?:mobile.|www.)?twitter\\.com/i/moments/(\\d+).*$",
+            "regex": "http(?:s?)://(?:mobile\\.|www\\.)?twitter\\.com/i/moments/(\\d+).*$",
             "testInputs": [
                 "https://twitter.com/i/moments/651796284307849217",
                 "https://mobile.twitter.com/i/moments/651796284307849217"
@@ -334,7 +334,7 @@
         },
         {
             "title": "Open Tag",
-            "regex": "(?:(?:http(?:s?)://(?:www.)?(?:(?:instagram\\.com)|(?:instagr\\.am))/))(?:explore/)?tags/([a-zA-Z0-9_%]+).*$",
+            "regex": "(?:(?:http(?:s?)://(?:www\\.)?(?:(?:instagram\\.com)|(?:instagr\\.am))/))(?:explore/)?tags/([a-zA-Z0-9_%]+).*$",
             "testInputs": [
                 "https://instagram.com/explore/tags/darkroomapp/",
                 "https://instagram.com/explore/tags/%F0%9F%98%80/",
@@ -354,7 +354,7 @@
         },
         {
             "title": "Open Location",
-            "regex": "(?:(?:http(?:s?)://(?:www.)?(?:(?:instagram\\.com)|(?:instagr\\.am))/))explore/locations/(\\d+).*$",
+            "regex": "(?:(?:http(?:s?)://(?:www\\.)?(?:(?:instagram\\.com)|(?:instagr\\.am))/))explore/locations/(\\d+).*$",
             "testInputs": [
                 "https://instagram.com/explore/locations/215262672/"
             ],
@@ -446,7 +446,7 @@
         },
         {
             "title": "Open Photo",
-            "regex": "http(?:s?)://(?:www.)?500px\\.com/photo/(\\d+)(?:(?:/|\\?).*)?$",
+            "regex": "http(?:s?)://(?:www\\.)?500px\\.com/photo/(\\d+)(?:(?:/|\\?).*)?$",
             "testInputs": [
                 "https://500px.com/timonus",
                 "https://500px.com/photo/106606873/wood-anemone-by-fredrik-m%C3%B6rk",
@@ -466,7 +466,7 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(?:s?)://(?:www.)?500px\\.com/(?!photo)([0-9a-zA-Z_-]+)(?:/|\\?)?.*$",
+            "regex": "http(?:s?)://(?:www\\.)?500px\\.com/(?!photo)([0-9a-zA-Z_-]+)(?:/|\\?)?.*$",
             "testInputs": [
                 "https://500px.com/timonus",
                 "https://500px.com/photo/40145312/7-7-13-by-tim-johnsen?from=user_library"
@@ -1834,7 +1834,7 @@
         },
         {
             "title": "Open Video",
-            "regex": "(http(s?)://(www.)?vine.co/v/[0-9a-zA-Z]+(/?))$",
+            "regex": "(http(s?)://(www\\.)?vine.co/v/[0-9a-zA-Z]+(/?))$",
             "testInputs": [
                 "https://vine.co/v/eVWDFgHQ5pX"
             ],
@@ -2203,7 +2203,7 @@
         },
         {
             "title": "Open Track",
-            "regex": "(?:http(?:s?)://(?:play.|open.|www.)?spotify\\.com/track/)([:alnum:]+).*$",
+            "regex": "(?:http(?:s?)://(?:play\\.|open\\.|www\\.)?spotify\\.com/track/)([:alnum:]+).*$",
             "testInputs": [
                 "http://open.spotify.com/track/5QZJAcP4nu3xL2NQV4AVHO",
                 "https://play.spotify.com/track/77Ezu3tBE7gmzQ4mRnZZUf?play=true"
@@ -2221,7 +2221,7 @@
         },
         {
             "title": "Open Album",
-            "regex": "(?:http(?:s?)://(?:play.|open.|www.)?spotify\\.com/album/)([:alnum:]+).*$",
+            "regex": "(?:http(?:s?)://(?:play\\.|open\\.|www\\.)?spotify\\.com/album/)([:alnum:]+).*$",
             "testInputs": [
                 "http://open.spotify.com/album/6BK3muExDOuk0VnyMn9NVw",
                 "https://open.spotify.com/album/4G8WKL5DGAFbWNTXxp3emz?utm_content=http%3A%2F%2Fsmarturl.it%2FWowGuauSP&utm_medium=email&utm_umg_et=1543198706&utm_source=ExactTarget&utm_campaign=21323559"
@@ -2239,7 +2239,7 @@
         },
         {
             "title": "Open Playlist",
-            "regex": "(?:http(?:s?)://(?:play.|open.|www.)?spotify\\.com/user/(\\w+)/playlist/)([:alnum:]+).*$",
+            "regex": "(?:http(?:s?)://(?:play\\.|open\\.|www\\.)?spotify\\.com/user/(\\w+)/playlist/)([:alnum:]+).*$",
             "testInputs": [
                 "https://open.spotify.com/user/naveenium/playlist/1zw42kQZUSZlHyVVn8AecH?utm_content=buffer30eb8&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer",
                 "http://open.spotify.com/user/timonominus/playlist/7rdUGYrNIMEdL6xdJDlMzZ"
@@ -2257,7 +2257,7 @@
         },
         {
             "title": "Open Artist",
-            "regex": "(?:http(?:s?)://(?:play.|open.|www.)?spotify\\.com/artist/(\\w+)).*$",
+            "regex": "(?:http(?:s?)://(?:play\\.|open\\.|www\\.)?spotify\\.com/artist/(\\w+)).*$",
             "testInputs": [
                 "https://open.spotify.com/artist/3vbKDsSS70ZX9D2OcvbZmS?ref=wp"
             ],
@@ -2850,7 +2850,7 @@
         },
         {
             "title": "Open Product",
-            "regex": "(?:(?:http(?:s?)://)(?:www.|rover.|m.)?ebay(?:\\.\\w+)+/itm/(?:[0-9A-Za-z_-]+/)?)(\\d+)(?:/|\\?)?(?:.*)$",
+            "regex": "(?:(?:http(?:s?)://)(?:www\\.|rover\\.|m\\.)?ebay(?:\\.\\w+)+/itm/(?:[0-9A-Za-z_-]+/)?)(\\d+)(?:/|\\?)?(?:.*)$",
             "testInputs": [
                 "http://www.ebay.com/itm/Mondaine-Classic-Swiss-Railways-White-Dial-Black-Leather-Mens-Watch-/181453530366?pt=LH_DefaultDomain_0&hash=item2a3f7924fe",
                 "http://www.ebay.com/itm/181453530366",
@@ -2874,7 +2874,7 @@
         },
         {
             "title": "Open Project",
-            "regex": "(?:http(?:s?)://)((?:www.)?kickstarter\\.com/projects/[a-zA-Z0-9_%-]+/[a-zA-Z0-9_%-]+).*?$",
+            "regex": "(?:http(?:s?)://)((?:www\\.)?kickstarter\\.com/projects/[a-zA-Z0-9_%-]+/[a-zA-Z0-9_%-]+).*?$",
             "testInputs": [
                 "https://www.kickstarter.com/projects/1425492550/sesame-your-key-reinvented?ref=dash",
                 "https://www.kickstarter.com/projects/paulgtoys/pterodactyl-5-rc-flying-lizard",
@@ -2896,7 +2896,7 @@
         },
         {
             "title": "Open Item",
-            "regex": "http(?:s?)://(?:www.|m.)?etsy\\.com/(?:.+/)*listing/(\\d+).*$",
+            "regex": "http(?:s?)://(?:www\\.|m\\.)?etsy\\.com/(?:.+/)*listing/(\\d+).*$",
             "testInputs": [
                 "https://www.etsy.com/listing/104204797/antiqued-brass-finished-golf-king-coat?ref=shop_home_active_8#20150510032301",
                 "https://www.etsy.com/listing/232911333/hand-painted-saw-blade-summer-old-truck",
@@ -3022,7 +3022,7 @@
         },
         {
             "title": "Open Frontback",
-            "regex": "http(s?)://(www.)?(frontback\\.me/p|frntb\\.ac)/[a-zA-Z0-9]+(\\S*)$",
+            "regex": "http(s?)://(www\\.)?(frontback\\.me/p|frntb\\.ac)/[a-zA-Z0-9]+(\\S*)$",
             "testInputs": [
                 "http://frontback.me/p/4EWgW7lD",
                 "http://frntb.ac/QNCJ0YvE"
@@ -3756,7 +3756,7 @@
         },
         {
             "title": "Open Recipe",
-            "regex": "http(?:s?)://(?:www.)?ifttt\\.com/recipes/([0-9]+).*$",
+            "regex": "http(?:s?)://(?:www\\.)?ifttt\\.com/recipes/([0-9]+).*$",
             "testInputs": [
                 "https://ifttt.com/recipes/144705?z=119662",
                 "https://ifttt.com/recipes/144705-new-twitter-followers-in-a-google-spreadsheet?z=119662"
@@ -3774,7 +3774,7 @@
         },
         {
             "title": "Add Workflow",
-            "regex": "http(?:s?)://(?:www.)?workflow.is/workflows/([:hex:]+).*$",
+            "regex": "http(?:s?)://(?:www\\.)?workflow.is/workflows/([:hex:]+).*$",
             "testInputs": [
                 "https://workflow.is/workflows/304554907e6a473e9e810297509b00c5",
                 "https://workflow.is/workflows/e37a43302f63402a973af02e7fa8d97e"
