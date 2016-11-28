@@ -1141,7 +1141,7 @@
         },
         {
             "title": "Open Venue",
-            "regex": "http(?:s?)://(?:m\\.|www\\.|mobile\\.)?foursquare\\.com(?:/mobile)?/v(?:/\\S+)?/([0-9a-fA-F]{24}).*$",
+            "regex": "http(?:s?)://(?:m\\.|www\\.|mobile\\.)?foursquare\\.com(?:/mobile)?/v(?:/\\S+)?/([:hex:]{24}).*$",
             "testInputs": [
                 "https://foursquare.com/v/ritual-coffee-roasters/42853f80f964a5200c231fe3",
                 "https://foursquare.com/v/42853f80f964a5200c231fe3"
@@ -1216,7 +1216,7 @@
         },
         {
             "title": "Open Tip",
-            "regex": "http(?:s)?://(?:m\\.|www\\.|mobile\\.)?foursquare\\.com(?:/mobile)?/item/([0-9a-fA-F]{24})(?:/?)$",
+            "regex": "http(?:s)?://(?:m\\.|www\\.|mobile\\.)?foursquare\\.com(?:/mobile)?/item/([:hex:]{24})(?:/?)$",
             "testInputs": [
                 "https://foursquare.com/item/552b6f5f498e0073829b16b1"
             ],
@@ -3658,7 +3658,7 @@
         },
         {
             "title": "Open Note",
-            "regex": "http(?:s)?://(?:www\\.)evernote\\.com/shard/s\\d+/sh/[0-9a-fA-F\\-]+/[0-9a-fA-F]+.*$",
+            "regex": "http(?:s)?://(?:www\\.)evernote\\.com/shard/s\\d+/sh/([:hex:]+-)*[:hex:]+/[:hex:]+.*$",
             "testInputs": [
                 "https://www.evernote.com/shard/s69/sh/e431cabb-3ece-4a8b-9b82-74ff084a788d/b5b1ca28e7d947370a8c8ebb0e81b3e6"
             ],
@@ -3774,7 +3774,7 @@
         },
         {
             "title": "Add Workflow",
-            "regex": "http(?:s?)://(?:www.)?workflow.is/workflows/([0-9a-f]+).*$",
+            "regex": "http(?:s?)://(?:www.)?workflow.is/workflows/([:hex:]+).*$",
             "testInputs": [
                 "https://workflow.is/workflows/304554907e6a473e9e810297509b00c5",
                 "https://workflow.is/workflows/e37a43302f63402a973af02e7fa8d97e"
