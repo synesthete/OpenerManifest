@@ -2273,11 +2273,20 @@
         },
         {
             "title": "Open Link",
-            "regex": "(http(s?)://(m.)?soundcloud\\.com/(\\S+)(/(\\S+))?)",
+            "regex": "(http(s?)://(www\\.|m\\.)?soundcloud\\.com/([^/]+)(/([^/]+))?)",
             "testInputs": [
                 "http://m.soundcloud.com/ukgoldfilm/tap24-hiha24-1",
+                "http://m.soundcloud.com/ukgoldfilm/tap24-hiha24-1/",
+                "http://m.soundcloud.com/ukgoldfilm/tap24-hiha24-1?foo=bar",
+                "http://m.soundcloud.com/ukgoldfilm/tap24-hiha24-1/?foo=bar",
                 "https://soundcloud.com/ukgoldfilm",
-                "https://soundcloud.com/ukgoldfilm/sets/uk-gold-soundtrack"
+                "https://soundcloud.com/ukgoldfilm/",
+                "https://soundcloud.com/ukgoldfilm?foo=bar",
+                "https://soundcloud.com/ukgoldfilm/?foo=bar",
+                "https://www.soundcloud.com/ukgoldfilm/sets/uk-gold-soundtrack",
+                "https://www.soundcloud.com/ukgoldfilm/sets/uk-gold-soundtrack/",
+				"https://www.soundcloud.com/ukgoldfilm/sets/uk-gold-soundtrack?foo=bar",
+				"https://www.soundcloud.com/ukgoldfilm/sets/uk-gold-soundtrack/?foo=bar"
             ],
             "formats": [
                 {
@@ -2286,7 +2295,16 @@
                     "script2": "function process(url, completionHandler) { url = 'https://api.soundcloud.com/resolve?client_id=27fcfadd796648a26072b6041ff5bf74&url=' + url; var result = jsonRequest(url); var appURL = null; if (result['kind'] === 'track') { appURL = 'soundcloud://sounds:' + result['id']; } else if (result['kind'] === 'user') { appURL = 'soundcloud://users:' + result['id']; } else if (result['kind'] === 'playlist') { appURL = 'soundcloud://sets:' + result['id']; } completionHandler(appURL); }",
                     "testResults": [
                         "soundcloud://sounds:192620860",
+                        "soundcloud://sounds:192620860",
+                        "soundcloud://sounds:192620860",
+                        "soundcloud://sounds:192620860",
                         "soundcloud://users:139227139",
+                        "soundcloud://users:139227139",
+                        "soundcloud://users:139227139",
+                        "soundcloud://users:139227139",
+                        "soundcloud://sets:83870213",
+                        "soundcloud://sets:83870213",
+                        "soundcloud://sets:83870213",
                         "soundcloud://sets:83870213"
                     ]
                 }
