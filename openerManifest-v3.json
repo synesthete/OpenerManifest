@@ -782,7 +782,7 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(?:s?)://(?!help\\.)(?:\\w+\\.)?pinterest.com/(?!pin|search|explore|categories|join)([a-zA-Z0-9-_]+)(/pins)?(?:/|/?\\?.*)?$",
+            "regex": "http(?:s?)://(?!help\\.)(?:\\w+\\.)?pinterest\\.com/(?!pin|search|explore|categories|join)([a-zA-Z0-9-_]+)(/pins)?(?:/|/?\\?.*)?$",
             "testInputs": [
                 "https://pinterest.com/cnnr/",
                 "https://www.pinterest.com/cnnr/",
@@ -2036,7 +2036,7 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(?:s)?://vimeo.com/([a-zA-Z](\\w+))(?:/)?(?:\\?.*)?$",
+            "regex": "http(?:s)?://vimeo\\.com/([a-zA-Z](\\w+))(?:/)?(?:\\?.*)?$",
             "testInputs": [
                 "http://vimeo.com/timonus",
                 "http://vimeo.com/timonus/",
@@ -2062,7 +2062,7 @@
         },
         {
             "title": "Open Video",
-            "regex": "http(?:s)?://vimeo.com/(\\d+)(?:/)?.*$",
+            "regex": "http(?:s)?://vimeo\\.com/(\\d+)(?:/)?.*$",
             "testInputs": [
                 "https://vimeo.com/121634963",
                 "https://vimeo.com/125074876?ref=tw-share",
@@ -2082,7 +2082,7 @@
         },
         {
             "title": "Open Channel",
-            "regex": "http(?:s)?://vimeo.com/channels/(\\w+)(?:/)?(?:\\?.*)?$",
+            "regex": "http(?:s)?://vimeo\\.com/channels/(\\w+)(?:/)?(?:\\?.*)?$",
             "testInputs": [
                 "http://vimeo.com/channels/nicetype",
                 "http://vimeo.com/channels/nicetype/",
@@ -2104,7 +2104,7 @@
         },
         {
             "title": "Open Category",
-            "regex": "http(?:s)?://vimeo.com/categories/(\\w+)(?:/)?(?:\\?.*)?$",
+            "regex": "http(?:s)?://vimeo\\.com/categories/(\\w+)(?:/)?(?:\\?.*)?$",
             "testInputs": [
                 "http://vimeo.com/categories/animation",
                 "http://vimeo.com/categories/animation/",
@@ -2203,7 +2203,7 @@
         },
         {
             "title": "Open Track",
-            "regex": "(?:http(?:s?)://(?:play.|open.|www.)?spotify.com/track/)([:alnum:]+).*$",
+            "regex": "(?:http(?:s?)://(?:play.|open.|www.)?spotify\\.com/track/)([:alnum:]+).*$",
             "testInputs": [
                 "http://open.spotify.com/track/5QZJAcP4nu3xL2NQV4AVHO",
                 "https://play.spotify.com/track/77Ezu3tBE7gmzQ4mRnZZUf?play=true"
@@ -2221,7 +2221,7 @@
         },
         {
             "title": "Open Album",
-            "regex": "(?:http(?:s?)://(?:play.|open.|www.)?spotify.com/album/)([:alnum:]+).*$",
+            "regex": "(?:http(?:s?)://(?:play.|open.|www.)?spotify\\.com/album/)([:alnum:]+).*$",
             "testInputs": [
                 "http://open.spotify.com/album/6BK3muExDOuk0VnyMn9NVw",
                 "https://open.spotify.com/album/4G8WKL5DGAFbWNTXxp3emz?utm_content=http%3A%2F%2Fsmarturl.it%2FWowGuauSP&utm_medium=email&utm_umg_et=1543198706&utm_source=ExactTarget&utm_campaign=21323559"
@@ -2239,7 +2239,7 @@
         },
         {
             "title": "Open Playlist",
-            "regex": "(?:http(?:s?)://(?:play.|open.|www.)?spotify.com/user/(\\w+)/playlist/)([:alnum:]+).*$",
+            "regex": "(?:http(?:s?)://(?:play.|open.|www.)?spotify\\.com/user/(\\w+)/playlist/)([:alnum:]+).*$",
             "testInputs": [
                 "https://open.spotify.com/user/naveenium/playlist/1zw42kQZUSZlHyVVn8AecH?utm_content=buffer30eb8&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer",
                 "http://open.spotify.com/user/timonominus/playlist/7rdUGYrNIMEdL6xdJDlMzZ"
@@ -2257,7 +2257,7 @@
         },
         {
             "title": "Open Artist",
-            "regex": "(?:http(?:s?)://(?:play.|open.|www.)?spotify.com/artist/(\\w+)).*$",
+            "regex": "(?:http(?:s?)://(?:play.|open.|www.)?spotify\\.com/artist/(\\w+)).*$",
             "testInputs": [
                 "https://open.spotify.com/artist/3vbKDsSS70ZX9D2OcvbZmS?ref=wp"
             ],
@@ -2273,7 +2273,7 @@
         },
         {
             "title": "Open Link",
-            "regex": "(http(s?)://(m.)?soundcloud.com/(\\S+)(/(\\S+))?)",
+            "regex": "(http(s?)://(m.)?soundcloud\\.com/(\\S+)(/(\\S+))?)",
             "testInputs": [
                 "http://m.soundcloud.com/ukgoldfilm/tap24-hiha24-1",
                 "https://soundcloud.com/ukgoldfilm",
@@ -2350,7 +2350,7 @@
         },
         {
             "title": "Open Station",
-            "regex": "http(?:s)?://(?:www\\.)?tunein.com/(?:station(?:/)?\\?StationId=|radio/(?:\\S*-)*s)(\\d+).*$",
+            "regex": "http(?:s)?://(?:www\\.)?tunein\\.com/(?:station(?:/)?\\?StationId=|radio/(?:\\S*-)*s)(\\d+).*$",
             "testInputs": [
                 "http://tunein.com/radio/Sparkx-Radio-s213837/",
                 "http://tunein.com/radio/Go-Go-Radio-Gibraltar-s201872/",
@@ -2874,7 +2874,7 @@
         },
         {
             "title": "Open Project",
-            "regex": "(?:http(?:s?)://)((?:www.)?kickstarter.com/projects/[a-zA-Z0-9_%-]+/[a-zA-Z0-9_%-]+).*?$",
+            "regex": "(?:http(?:s?)://)((?:www.)?kickstarter\\.com/projects/[a-zA-Z0-9_%-]+/[a-zA-Z0-9_%-]+).*?$",
             "testInputs": [
                 "https://www.kickstarter.com/projects/1425492550/sesame-your-key-reinvented?ref=dash",
                 "https://www.kickstarter.com/projects/paulgtoys/pterodactyl-5-rc-flying-lizard",
@@ -2896,7 +2896,7 @@
         },
         {
             "title": "Open Item",
-            "regex": "http(?:s?)://(?:www.|m.)?etsy.com/(?:.+/)*listing/(\\d+).*$",
+            "regex": "http(?:s?)://(?:www.|m.)?etsy\\.com/(?:.+/)*listing/(\\d+).*$",
             "testInputs": [
                 "https://www.etsy.com/listing/104204797/antiqued-brass-finished-golf-king-coat?ref=shop_home_active_8#20150510032301",
                 "https://www.etsy.com/listing/232911333/hand-painted-saw-blade-summer-old-truck",
@@ -3240,7 +3240,7 @@
         },
         {
             "title": "Open Activity",
-            "regex": "http(?:s)?://(?:www\\.|m\\.)?strava.com/activities/(\\d+).*$",
+            "regex": "http(?:s)?://(?:www\\.|m\\.)?strava\\.com/activities/(\\d+).*$",
             "testInputs": [
                 "https://www.strava.com/activities/304977054"
             ],
@@ -3489,7 +3489,7 @@
         },
         {
             "title": "Open Link",
-            "regex": "http(?:s?)://((?:\\w+\\.)*github.com/.*)",
+            "regex": "http(?:s?)://((?:\\w+\\.)*github\\.com/.*)",
             "formats": [
                 {
                     "appIdentifier": "ioctocat",
@@ -3756,7 +3756,7 @@
         },
         {
             "title": "Open Recipe",
-            "regex": "http(?:s?)://(?:www.)?ifttt.com/recipes/([0-9]+).*$",
+            "regex": "http(?:s?)://(?:www.)?ifttt\\.com/recipes/([0-9]+).*$",
             "testInputs": [
                 "https://ifttt.com/recipes/144705?z=119662",
                 "https://ifttt.com/recipes/144705-new-twitter-followers-in-a-google-spreadsheet?z=119662"
