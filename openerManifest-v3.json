@@ -231,7 +231,7 @@
             ]
         },
         {
-            "title": "Open Custom Timeline",
+            "title": "Open Collection",
             "regex": "http(?:s)://(?:mobile\\.|www\\.|m\\.)?twitter\\.com/(?:@)?([a-zA-Z0-9_]{1,15})/timelines/(\\d+).*?$",
             "testInputs": [
                 "https://twitter.com/benward/timelines/648313913201692672",
