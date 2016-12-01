@@ -2390,7 +2390,7 @@
         },
         {
             "title": "Add Podcast",
-            "regex": "http(?:s)?://(?:www\\.)?overcast\\.fm/\\+.+$",
+            "regex": "http(?:s)?://(?:www\\.)?(overcast\\.fm/\\+.+)$",
             "testInputs": [
                 "https://overcast.fm/+lu7oErhY"
             ],
@@ -2402,12 +2402,19 @@
                     "testResults": [
                         "overcast:///41488209980950"
                     ]
-                }
+                },
+				{
+					"appIdentifier": "castro",
+					"format": "castro://subscribe/$1",
+					"testResults": [
+						"castro://subscribe/overcast.fm/+lu7oErhY"
+					]
+				}
             ]
         },
         {
             "title": "Add iTunes Podcast",
-            "regex": "http(?:s)?://(?:geo\\.)?itunes\\.apple\\.com/(.*/)*podcast/(.*/)?id\\d+.*$",
+            "regex": "http(?:s)?://(?:geo\\.)?(itunes\\.apple\\.com/(?:.*/)*podcast/(?:.*/)?id\\d+.*)$",
             "testInputs": [
                 "https://itunes.apple.com/us/podcast/serial/id917918570?mt=2",
                 "https://itunes.apple.com/us/podcast/episode-01-the-alibi/id917918570?i=319686008&mt=2",
@@ -2425,7 +2432,17 @@
                         "overcast://x-callback-url/add?url=https%3A%2F%2Fitunes.apple.com%2Fus%2Fpodcast%2Fid909109678",
                         "overcast://x-callback-url/add?url=https%3A%2F%2Fitunes.apple.com%2Fpodcast%2Fid909109678"
                     ]
-                }
+                },
+				{
+					"appIdentifier": "castro",
+					"format": "castro://subscribe/$1",
+					"testResults": [
+						"castro://subscribe/itunes.apple.com/us/podcast/serial/id917918570?mt=2",
+						"castro://subscribe/itunes.apple.com/us/podcast/episode-01-the-alibi/id917918570?i=319686008&mt=2",
+						"castro://subscribe/itunes.apple.com/us/podcast/id909109678",
+						"castro://subscribe/itunes.apple.com/podcast/id909109678"
+					]
+				}
             ]
         },
         {
@@ -5920,6 +5937,14 @@
             "scheme": "viki://",
             "docs": "http://bit.ly/1RIpw7c"
         },
+		{
+			"displayName": "Castro",
+			"identifier": "castro",
+			"storeIdentifier": "1080840241",
+			"scheme": "castro://",
+			"docs": "https://db.tt/W3jwOEI2",
+			"new": true
+		},
         {
             "displayName": "Overcast",
             "identifier": "overcast",
