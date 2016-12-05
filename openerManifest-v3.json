@@ -5955,8 +5955,8 @@
             "displayName": "Beam",
             "identifier": "beam",
             "storeIdentifier": "937987469",
-            "docs": "https://twitter.com/beamreddit/status/762625995568472064",
-            "scheme": "beamapp://"
+            "scheme": "beamapp://",
+            "docs": "https://twitter.com/beamreddit/status/762625995568472064"
         },
         {
             "displayName": "Twitch",
@@ -6039,8 +6039,8 @@
             "displayName": "Charm",
             "identifier": "charm",
             "storeIdentifier": "1102153379",
-            "docs": "http://bit.ly/29sCrgV",
-            "scheme": "x-charm://"
+            "scheme": "x-charm://",
+            "docs": "http://bit.ly/29sCrgV"
         },
         {
             "displayName": "Vine",
@@ -6092,8 +6092,8 @@
             "displayName": "Alien Blue",
             "identifier": "alienblue",
             "storeIdentifier": "923394341",
-            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/alienblue-100.jpg",
-            "scheme": "alienblue://"
+            "scheme": "alienblue://",
+            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/alienblue-100.jpg"
         },
         {
             "displayName": "Flipboard",
@@ -6392,8 +6392,8 @@
             "displayName": "Wonder",
             "identifier": "wonder",
             "storeIdentifier": "1050888989",
-            "docs": "http://jonathanthiry.com/wonder/url-schemes",
-            "scheme": "wonder://"
+            "scheme": "wonder://",
+            "docs": "http://jonathanthiry.com/wonder/url-schemes"
         },
         {
             "displayName": "Working Copy",
@@ -6486,8 +6486,8 @@
             "displayName": "Transit",
             "identifier": "transit",
             "storeIdentifier": "498151501",
-            "docs": "http://transitapp.com/developers",
-            "scheme": "transit://"
+            "scheme": "transit://",
+            "docs": "http://transitapp.com/developers"
         },
         {
             "displayName": "Houzz",
@@ -6560,8 +6560,8 @@
             "displayName": "Wallapop",
             "identifier": "wallapop",
             "storeIdentifier": "692753615",
-            "scheme": "wallapop://",
-            "country": "es"
+            "country": "es",
+            "scheme": "wallapop://"
         },
         {
             "displayName": "WEAR",
@@ -6591,15 +6591,15 @@
             "displayName": "Launch Center Pro",
             "identifier": "launchcenterpro",
             "storeIdentifier": "532016360",
-            "scheme": "launch://",
-            "platform": "phone"
+            "platform": "phone",
+            "scheme": "launch://"
         },
         {
             "displayName": "Launch Center Pro",
             "identifier": "launchcenterproipad",
             "storeIdentifier": "532016360",
-            "scheme": "launch://",
-            "platform": "pad"
+            "platform": "pad",
+            "scheme": "launch://"
         },
         {
             "displayName": "Mobile01",
