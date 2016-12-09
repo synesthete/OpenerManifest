@@ -7202,6 +7202,22 @@
                 "adblockbrowser://www.opener.link/",
                 "adblockbrowser://twitter.com/openerapp"
             ]
+        },
+        {
+            "displayName": "Red Onion",
+            "identifier": "redonion",
+            "scheme": "redbrowser://",
+            "storeIdentifier": "829739720",
+            "regex": "http((?:s)?.*)",
+            "format": "redbrowser$1",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "redbrowser://www.opener.link/",
+                "redbrowsers://twitter.com/openerapp"
+            ]
         }
     ]
 }
