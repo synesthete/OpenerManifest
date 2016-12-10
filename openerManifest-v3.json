@@ -3408,14 +3408,14 @@
                 },
                 {
                     "appIdentifier": "viki",
-                    "format": "viki://article/$3/$4",
+                    "format": "v-for-wiki://article/$3/$4",
                     "testResults": [
                         null,
-                        "viki://article/en/Bottle_opener",
-                        "viki://article/en/Soylent",
-                        "viki://article/zh-yue/%E9%96%8B%E4%BF%A1%E5%88%80",
-                        "viki://article/zh/%E5%90%89%E9%87%8E%E5%AE%B6",
-                        "viki://article/zh/%E4%B9%A0%E8%BF%91%E5%B9%B3"
+                        "v-for-wiki://article/en/Bottle_opener",
+                        "v-for-wiki://article/en/Soylent",
+                        "v-for-wiki://article/zh-yue/%E9%96%8B%E4%BF%A1%E5%88%80",
+                        "v-for-wiki://article/zh/%E5%90%89%E9%87%8E%E5%AE%B6",
+                        "v-for-wiki://article/zh/%E4%B9%A0%E8%BF%91%E5%B9%B3"
                     ]
                 },
                 {
@@ -3504,11 +3504,11 @@
                 },
                 {
                     "appIdentifier": "viki",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); var regex = new RegExp('http(?:s)?://(?:www\\\\.)?tamper\\\\.io/(?:curiosity|inquire)/share.*(?:(?:\\\\?|&)p=(\\\\d+).*&l=([a-zA-Z0-9\\\\-_]+)|(?:\\\\?|&)l=([a-zA-Z0-9\\\\-_]+).*&p=(\\\\d+)).*$'); var match = regex.exec(url); var locale = null; if (match[2] != null) { locale = match[2] } else if (match[3] != null) { locale = match[3]; } var pageid = null; if (match[1] != null) { pageid = match[1] } else if (match[4] != null) { pageid = match[4]; } url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&pageids=' + pageid; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); var key = Object.keys(res['query']['pages'])[0]; var title = res['query']['pages'][key]['title']; completionHandler('viki://article/' + locale + '/' + encodeURIComponent(title)); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var regex = new RegExp('http(?:s)?://(?:www\\\\.)?tamper\\\\.io/(?:curiosity|inquire)/share.*(?:(?:\\\\?|&)p=(\\\\d+).*&l=([a-zA-Z0-9\\\\-_]+)|(?:\\\\?|&)l=([a-zA-Z0-9\\\\-_]+).*&p=(\\\\d+)).*$'); var match = regex.exec(url); var locale = null; if (match[2] != null) { locale = match[2] } else if (match[3] != null) { locale = match[3]; } var pageid = null; if (match[1] != null) { pageid = match[1] } else if (match[4] != null) { pageid = match[4]; } url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&pageids=' + pageid; var res = jsonRequest(url); var key = Object.keys(res['query']['pages'])[0]; var title = res['query']['pages'][key]['title']; completionHandler('viki://article/' + locale + '/' + encodeURIComponent(title)); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); var regex = new RegExp('http(?:s)?://(?:www\\\\.)?tamper\\\\.io/(?:curiosity|inquire)/share.*(?:(?:\\\\?|&)p=(\\\\d+).*&l=([a-zA-Z0-9\\\\-_]+)|(?:\\\\?|&)l=([a-zA-Z0-9\\\\-_]+).*&p=(\\\\d+)).*$'); var match = regex.exec(url); var locale = null; if (match[2] != null) { locale = match[2] } else if (match[3] != null) { locale = match[3]; } var pageid = null; if (match[1] != null) { pageid = match[1] } else if (match[4] != null) { pageid = match[4]; } url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&pageids=' + pageid; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); var key = Object.keys(res['query']['pages'])[0]; var title = res['query']['pages'][key]['title']; completionHandler('v-for-wiki://article/' + locale + '/' + encodeURIComponent(title)); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var regex = new RegExp('http(?:s)?://(?:www\\\\.)?tamper\\\\.io/(?:curiosity|inquire)/share.*(?:(?:\\\\?|&)p=(\\\\d+).*&l=([a-zA-Z0-9\\\\-_]+)|(?:\\\\?|&)l=([a-zA-Z0-9\\\\-_]+).*&p=(\\\\d+)).*$'); var match = regex.exec(url); var locale = null; if (match[2] != null) { locale = match[2] } else if (match[3] != null) { locale = match[3]; } var pageid = null; if (match[1] != null) { pageid = match[1] } else if (match[4] != null) { pageid = match[4]; } url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&pageids=' + pageid; var res = jsonRequest(url); var key = Object.keys(res['query']['pages'])[0]; var title = res['query']['pages'][key]['title']; completionHandler('v-for-wiki://article/' + locale + '/' + encodeURIComponent(title)); }",
                     "testResults": [
-                        "viki://article/en/Noe%20Valley%2C%20San%20Francisco",
-                        "viki://article/en/Noe%20Valley%2C%20San%20Francisco"
+                        "v-for-wiki://article/en/Noe%20Valley%2C%20San%20Francisco",
+                        "v-for-wiki://article/en/Noe%20Valley%2C%20San%20Francisco"
                     ]
                 },
                 {
@@ -5934,7 +5934,7 @@
             "displayName": "V for Wikipedia",
             "identifier": "viki",
             "storeIdentifier": "993435362",
-            "scheme": "viki://",
+            "scheme": "v-for-wiki://",
             "docs": "http://bit.ly/1RIpw7c"
         },
         {
