@@ -5705,6 +5705,25 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Article",
+            "regex": "http(?:s)?://(?:\\w+\\.)?wsj\\.com/articles/.*$",
+            "testInputs": [
+                "http://www.wsj.com/articles/exxons-rex-tillerson-is-top-candidate-for-secretary-of-state-1481318464",
+                "http://www.wsj.com/articles/opec-russia-upbeat-about-securing-oil-output-deal-as-meeting-begins-1481362580"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "wsj",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(wsj://.*?)\"'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = results[1].replace(new RegExp('&headline=[^&]*'), '') }; completionHandler(match); }",
+                    "note": "We strip out the headline query item because WSJ seems to encode it in a non-standard way (details here https://goo.gl/t1rKyg). The headline in the first URL below is Exxon%u2019s%20Rex%20Tillerson%20is%20expected%20to%20be%20Trump%u2019s%20pick%20for%20secretary%20of%20state, for example, the %u causes NSURL to be incapable of parsing the result.",
+                    "testResults": [
+                        "wsj://launch?articleid=SB11202777042148913632204582487202009421794&weburl=http://www.wsj.com/articles/SB11202777042148913632204582487202009421794",
+                        "wsj://launch?articleid=SB11202777042148913632204582488220182121442&weburl=http://www.wsj.com/articles/SB11202777042148913632204582488220182121442"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -6886,6 +6905,13 @@
             "platform": "pad",
             "scheme": "dasreferenz://",
             "docs": "https://dasreferenz.uservoice.com/knowledgebase/articles/377297-url-scheme"
+        },
+        {
+            "displayName": "The Wall Street Journal",
+            "identifier": "wsj",
+            "storeIdentifier": "364387007",
+            "scheme": "wsj://",
+            "new": true
         }
     ],
     "browsers": [
