@@ -5733,6 +5733,30 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:\\w+\\.)?mixcloud\\.com/(.+)$",
+            "testInputs": [
+                "https://m.mixcloud.com/dashradio/skee-1-on-1-with-adrian-peterson/",
+                "https://www.mixcloud.com/dashradio/skee-1-on-1-with-adrian-peterson/",
+                "https://beta.mixcloud.com/alexadregarcia/alexandre-garcia-121216/",
+                "https://www.mixcloud.com/alexadregarcia/alexandre-garcia-121216/",
+                "https://www.mixcloud.com/DJQuantize/147-emergency-fm-jungle-show-dec-9th-2016/"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "mixcloud",
+                    "format": "mc://$1",
+                    "testResults": [
+                        "mc://dashradio/skee-1-on-1-with-adrian-peterson/",
+                        "mc://dashradio/skee-1-on-1-with-adrian-peterson/",
+                        "mc://alexadregarcia/alexandre-garcia-121216/",
+                        "mc://alexadregarcia/alexandre-garcia-121216/",
+                        "mc://DJQuantize/147-emergency-fm-jungle-show-dec-9th-2016/"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -6920,6 +6944,13 @@
             "identifier": "wsj",
             "storeIdentifier": "364387007",
             "scheme": "wsj://",
+            "new": true
+        },
+        {
+            "displayName": "Mixcloud",
+            "identifier": "mixcloud",
+            "storeIdentifier": "401206431",
+            "scheme": "mc://",
             "new": true
         }
     ],
