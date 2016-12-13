@@ -5757,6 +5757,24 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Story",
+            "regex": "http(?:s)?://(?:\\w+\\.)?lemonde\\.fr/[^/]+/article/.*?_(\\d+).*?$",
+            "testInputs": [
+                "http://www.lemonde.fr/pixels/article/2016/12/11/jean-luc-melenchon-declare-qu-il-accordera-la-nationalite-francaise-a-mm-snowden-et-assange-s-il-est-elu_5047179_4408996.html?utm_medium=Social&utm_campaign=Echobox&utm_source=Twitter&utm_term=Autofeed#link_time=1481485993",
+                "http://www.lemonde.fr/international/article/2016/12/12/le-futur-secretaire-general-de-l-onu-antonio-guterres-appelle-a-une-reforme-globale_5047799_3210.html"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "lemonde",
+                    "format": "lmfr://element/article/$1",
+                    "testResults": [
+                        "lmfr://element/article/5047179",
+                        "lmfr://element/article/5047799"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -6951,6 +6969,13 @@
             "identifier": "mixcloud",
             "storeIdentifier": "401206431",
             "scheme": "mc://",
+            "new": true
+        },
+        {
+            "displayName": "Le Monde",
+            "identifier": "lemonde",
+            "storeIdentifier": "294047850",
+            "scheme": "lmfr://",
             "new": true
         }
     ],
