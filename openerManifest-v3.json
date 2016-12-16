@@ -231,6 +231,24 @@
             ]
         },
         {
+            "title": "Open Live Moment",
+            "regex": "http(?:s?)://(?:mobile\\.|www\\.)?twitter\\.com/i/live/(\\d+).*$",
+            "testInputs": [
+                "https://mobile.twitter.com/i/live/768633364911788032",
+                "https://twitter.com/i/live/768633364911788032"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "twitter",
+                    "format": "twitter://live/timeline/$1",
+                    "testResults": [
+                        "twitter://live/timeline/768633364911788032",
+                        "twitter://live/timeline/768633364911788032"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Collection",
             "regex": "http(?:s)://(?:mobile\\.|www\\.|m\\.)?twitter\\.com/(?:@)?([a-zA-Z0-9_]{1,15})/timelines/(\\d+).*?$",
             "testInputs": [
