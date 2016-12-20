@@ -6979,22 +6979,19 @@
             "displayName": "The Wall Street Journal",
             "identifier": "wsj",
             "storeIdentifier": "364387007",
-            "scheme": "wsj://",
-            "new": true
+            "scheme": "wsj://"
         },
         {
             "displayName": "Mixcloud",
             "identifier": "mixcloud",
             "storeIdentifier": "401206431",
-            "scheme": "mc://",
-            "new": true
+            "scheme": "mc://"
         },
         {
             "displayName": "Le Monde",
             "identifier": "lemonde",
             "storeIdentifier": "294047850",
-            "scheme": "lmfr://",
-            "new": true
+            "scheme": "lmfr://"
         }
     ],
     "browsers": [
