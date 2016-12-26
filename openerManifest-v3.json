@@ -3351,6 +3351,31 @@
                     ]
                 },
                 {
+                    "appIdentifier": "viki",
+                    "format": "v-for-wiki://article/$3/$4",
+                    "testResults": [
+                        null,
+                        "v-for-wiki://article/en/Bottle_opener",
+                        "v-for-wiki://article/en/Soylent",
+                        "v-for-wiki://article/zh-yue/%E9%96%8B%E4%BF%A1%E5%88%80",
+                        "v-for-wiki://article/zh/%E5%90%89%E9%87%8E%E5%AE%B6",
+                        "v-for-wiki://article/zh/%E4%B9%A0%E8%BF%91%E5%B9%B3"
+                    ]
+                },
+                {
+                    "appIdentifier": "wikilinks",
+                    "script": "function process(url, completion) { url = url.replace(new RegExp('\\.org/[^/]+/'), '.org/wiki/'); completion('wikilinks://openwikipediaurl?url=' + encodeURIComponent(btoa(url))); }",
+                    "script2": "function process(url, completion) { url = url.replace(new RegExp('\\.org/[^/]+/'), '.org/wiki/'); completion('wikilinks://openwikipediaurl?url=' + encodeURIComponent(btoa(url))); }",
+                    "testResults": [
+                        null,
+                        "wikilinks://openwikipediaurl?url=aHR0cDovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9Cb3R0bGVfb3BlbmVy",
+                        "wikilinks://openwikipediaurl?url=aHR0cDovL2VuLm0ud2lraXBlZGlhLm9yZy93aWtpL1NveWxlbnQ%3D",
+                        "wikilinks://openwikipediaurl?url=aHR0cHM6Ly96aC15dWUud2lraXBlZGlhLm9yZy93aWtpLyVFOSU5NiU4QiVFNCVCRiVBMSVFNSU4OCU4MA%3D%3D",
+                        "wikilinks://openwikipediaurl?url=aHR0cHM6Ly96aC5tLndpa2lwZWRpYS5vcmcvd2lraS8lRTUlOTAlODklRTklODclOEUlRTUlQUUlQjY%3D",
+                        "wikilinks://openwikipediaurl?url=aHR0cHM6Ly96aC5tLndpa2lwZWRpYS5vcmcvd2lraS8lRTQlQjklQTAlRTglQkYlOTElRTUlQjklQjM%3D"
+                    ]
+                },
+                {
                     "appIdentifier": "wikipanion",
                     "format": "wplink://$2",
                     "testResults": [
@@ -3375,19 +3400,6 @@
                     ]
                 },
                 {
-                    "appIdentifier": "wikilinks",
-                    "script": "function process(url, completion) { url = url.replace(new RegExp('\\.org/[^/]+/'), '.org/wiki/'); completion('wikilinks://openwikipediaurl?url=' + encodeURIComponent(btoa(url))); }",
-                    "script2": "function process(url, completion) { url = url.replace(new RegExp('\\.org/[^/]+/'), '.org/wiki/'); completion('wikilinks://openwikipediaurl?url=' + encodeURIComponent(btoa(url))); }",
-                    "testResults": [
-                        null,
-                        "wikilinks://openwikipediaurl?url=aHR0cDovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9Cb3R0bGVfb3BlbmVy",
-                        "wikilinks://openwikipediaurl?url=aHR0cDovL2VuLm0ud2lraXBlZGlhLm9yZy93aWtpL1NveWxlbnQ%3D",
-                        "wikilinks://openwikipediaurl?url=aHR0cHM6Ly96aC15dWUud2lraXBlZGlhLm9yZy93aWtpLyVFOSU5NiU4QiVFNCVCRiVBMSVFNSU4OCU4MA%3D%3D",
-                        "wikilinks://openwikipediaurl?url=aHR0cHM6Ly96aC5tLndpa2lwZWRpYS5vcmcvd2lraS8lRTUlOTAlODklRTklODclOEUlRTUlQUUlQjY%3D",
-                        "wikilinks://openwikipediaurl?url=aHR0cHM6Ly96aC5tLndpa2lwZWRpYS5vcmcvd2lraS8lRTQlQjklQTAlRTglQkYlOTElRTUlQjklQjM%3D"
-                    ]
-                },
-                {
                     "appIdentifier": "wikiwand",
                     "format": "wikiwand-article://$3/$4",
                     "testResults": [
@@ -3397,6 +3409,18 @@
                         "wikiwand-article://zh-yue/%E9%96%8B%E4%BF%A1%E5%88%80",
                         "wikiwand-article://zh/%E5%90%89%E9%87%8E%E5%AE%B6",
                         "wikiwand-article://zh/%E4%B9%A0%E8%BF%91%E5%B9%B3"
+                    ]
+                },
+                {
+                    "appIdentifier": "wonder",
+                    "format": "wonder://$2",
+                    "testResults": [
+                        null,
+                        "wonder://en.wikipedia.org/wiki/Bottle_opener",
+                        "wonder://en.m.wikipedia.org/wiki/Soylent",
+                        "wonder://zh-yue.wikipedia.org/wiki/%E9%96%8B%E4%BF%A1%E5%88%80",
+                        "wonder://zh.m.wikipedia.org/zh-cn/%E5%90%89%E9%87%8E%E5%AE%B6",
+                        "wonder://zh.m.wikipedia.org/zh/%E4%B9%A0%E8%BF%91%E5%B9%B3"
                     ]
                 },
                 {
@@ -3423,30 +3447,6 @@
                         "dasreferenz://zh/%E5%90%89%E9%87%8E%E5%AE%B6",
                         "dasreferenz://zh/%E4%B9%A0%E8%BF%91%E5%B9%B3"
                     ]
-                },
-                {
-                    "appIdentifier": "viki",
-                    "format": "v-for-wiki://article/$3/$4",
-                    "testResults": [
-                        null,
-                        "v-for-wiki://article/en/Bottle_opener",
-                        "v-for-wiki://article/en/Soylent",
-                        "v-for-wiki://article/zh-yue/%E9%96%8B%E4%BF%A1%E5%88%80",
-                        "v-for-wiki://article/zh/%E5%90%89%E9%87%8E%E5%AE%B6",
-                        "v-for-wiki://article/zh/%E4%B9%A0%E8%BF%91%E5%B9%B3"
-                    ]
-                },
-                {
-                    "appIdentifier": "wonder",
-                    "format": "wonder://$2",
-                    "testResults": [
-                        null,
-                        "wonder://en.wikipedia.org/wiki/Bottle_opener",
-                        "wonder://en.m.wikipedia.org/wiki/Soylent",
-                        "wonder://zh-yue.wikipedia.org/wiki/%E9%96%8B%E4%BF%A1%E5%88%80",
-                        "wonder://zh.m.wikipedia.org/zh-cn/%E5%90%89%E9%87%8E%E5%AE%B6",
-                        "wonder://zh.m.wikipedia.org/zh/%E4%B9%A0%E8%BF%91%E5%B9%B3"
-                    ]
                 }
             ]
         },
@@ -3459,20 +3459,30 @@
             ],
             "formats": [
                 {
-                    "appIdentifier": "curiosity",
-                    "format": "curiosity://p/$2$3/$1$4",
-                    "testResults": [
-                        "curiosity://p/en/351344",
-                        "curiosity://p/en/351344"
-                    ]
-                },
-                {
                     "appIdentifier": "wikipedia",
                     "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); var regex = new RegExp('http(?:s)?://(?:www\\\\.)?tamper\\\\.io/(?:curiosity|inquire)/share.*(?:(?:\\\\?|&)p=(\\\\d+).*&l=([a-zA-Z0-9\\\\-_]+)|(?:\\\\?|&)l=([a-zA-Z0-9\\\\-_]+).*&p=(\\\\d+)).*$'); var match = regex.exec(url); var locale = null; if (match[2] != null) { locale = match[2] } else if (match[3] != null) { locale = match[3]; } var pageid = null; if (match[1] != null) { pageid = match[1] } else if (match[4] != null) { pageid = match[4]; } url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&pageids=' + pageid; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); var key = Object.keys(res['query']['pages'])[0]; var title = res['query']['pages'][key]['title']; completionHandler('wikipedia://' + locale + '.wikipedia.org/wiki/' + encodeURIComponent(title)); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
                     "script2": "function process(url, completionHandler) { var regex = new RegExp('http(?:s)?://(?:www\\\\.)?tamper\\\\.io/(?:curiosity|inquire)/share.*(?:(?:\\\\?|&)p=(\\\\d+).*&l=([a-zA-Z0-9\\\\-_]+)|(?:\\\\?|&)l=([a-zA-Z0-9\\\\-_]+).*&p=(\\\\d+)).*$'); var match = regex.exec(url); var locale = null; if (match[2] != null) { locale = match[2] } else if (match[3] != null) { locale = match[3]; } var pageid = null; if (match[1] != null) { pageid = match[1] } else if (match[4] != null) { pageid = match[4]; } url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&pageids=' + pageid; var res = jsonRequest(url); var key = Object.keys(res['query']['pages'])[0]; var title = res['query']['pages'][key]['title']; completionHandler('wikipedia://' + locale + '.wikipedia.org/wiki/' + encodeURIComponent(title)); }",
                     "testResults": [
                         "wikipedia://en.wikipedia.org/wiki/Noe%20Valley%2C%20San%20Francisco",
                         "wikipedia://en.wikipedia.org/wiki/Noe%20Valley%2C%20San%20Francisco"
+                    ]
+                },
+                {
+                    "appIdentifier": "viki",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); var regex = new RegExp('http(?:s)?://(?:www\\\\.)?tamper\\\\.io/(?:curiosity|inquire)/share.*(?:(?:\\\\?|&)p=(\\\\d+).*&l=([a-zA-Z0-9\\\\-_]+)|(?:\\\\?|&)l=([a-zA-Z0-9\\\\-_]+).*&p=(\\\\d+)).*$'); var match = regex.exec(url); var locale = null; if (match[2] != null) { locale = match[2] } else if (match[3] != null) { locale = match[3]; } var pageid = null; if (match[1] != null) { pageid = match[1] } else if (match[4] != null) { pageid = match[4]; } url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&pageids=' + pageid; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); var key = Object.keys(res['query']['pages'])[0]; var title = res['query']['pages'][key]['title']; completionHandler('v-for-wiki://article/' + locale + '/' + encodeURIComponent(title)); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var regex = new RegExp('http(?:s)?://(?:www\\\\.)?tamper\\\\.io/(?:curiosity|inquire)/share.*(?:(?:\\\\?|&)p=(\\\\d+).*&l=([a-zA-Z0-9\\\\-_]+)|(?:\\\\?|&)l=([a-zA-Z0-9\\\\-_]+).*&p=(\\\\d+)).*$'); var match = regex.exec(url); var locale = null; if (match[2] != null) { locale = match[2] } else if (match[3] != null) { locale = match[3]; } var pageid = null; if (match[1] != null) { pageid = match[1] } else if (match[4] != null) { pageid = match[4]; } url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&pageids=' + pageid; var res = jsonRequest(url); var key = Object.keys(res['query']['pages'])[0]; var title = res['query']['pages'][key]['title']; completionHandler('v-for-wiki://article/' + locale + '/' + encodeURIComponent(title)); }",
+                    "testResults": [
+                        "v-for-wiki://article/en/Noe%20Valley%2C%20San%20Francisco",
+                        "v-for-wiki://article/en/Noe%20Valley%2C%20San%20Francisco"
+                    ]
+                },
+                {
+                    "appIdentifier": "wikilinks",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); var regex = new RegExp('http(?:s)?://(?:www\\\\.)?tamper\\\\.io/(?:curiosity|inquire)/share.*(?:(?:\\\\?|&)p=(\\\\d+).*&l=([a-zA-Z0-9\\\\-_]+)|(?:\\\\?|&)l=([a-zA-Z0-9\\\\-_]+).*&p=(\\\\d+)).*$'); var match = regex.exec(url); var locale = null; if (match[2] != null) { locale = match[2] } else if (match[3] != null) { locale = match[3]; } var pageid = null; if (match[1] != null) { pageid = match[1] } else if (match[4] != null) { pageid = match[4]; } url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&pageids=' + pageid; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); var key = Object.keys(res['query']['pages'])[0]; var title = res['query']['pages'][key]['title']; var outURL = 'https://' + locale + '.wikipedia.org/wiki/' + encodeURIComponent(title); completionHandler('wikilinks://openwikipediaurl?url=' + encodeURIComponent(btoa(outURL))); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var regex = new RegExp('http(?:s)?://(?:www\\\\.)?tamper\\\\.io/(?:curiosity|inquire)/share.*(?:(?:\\\\?|&)p=(\\\\d+).*&l=([a-zA-Z0-9\\\\-_]+)|(?:\\\\?|&)l=([a-zA-Z0-9\\\\-_]+).*&p=(\\\\d+)).*$'); var match = regex.exec(url); var locale = null; if (match[2] != null) { locale = match[2] } else if (match[3] != null) { locale = match[3]; } var pageid = null; if (match[1] != null) { pageid = match[1] } else if (match[4] != null) { pageid = match[4]; } url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&pageids=' + pageid; var res = jsonRequest(url); var key = Object.keys(res['query']['pages'])[0]; var title = res['query']['pages'][key]['title']; var outURL = 'https://' + locale + '.wikipedia.org/wiki/' + encodeURIComponent(title); completionHandler('wikilinks://openwikipediaurl?url=' + encodeURIComponent(btoa(outURL))); }",
+                    "testResults": [
+                        "wikilinks://openwikipediaurl?url=aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTm9lJTIwVmFsbGV5JTJDJTIwU2FuJTIwRnJhbmNpc2Nv",
+                        "wikilinks://openwikipediaurl?url=aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTm9lJTIwVmFsbGV5JTJDJTIwU2FuJTIwRnJhbmNpc2Nv"
                     ]
                 },
                 {
@@ -3494,15 +3504,6 @@
                     ]
                 },
                 {
-                    "appIdentifier": "wikilinks",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); var regex = new RegExp('http(?:s)?://(?:www\\\\.)?tamper\\\\.io/(?:curiosity|inquire)/share.*(?:(?:\\\\?|&)p=(\\\\d+).*&l=([a-zA-Z0-9\\\\-_]+)|(?:\\\\?|&)l=([a-zA-Z0-9\\\\-_]+).*&p=(\\\\d+)).*$'); var match = regex.exec(url); var locale = null; if (match[2] != null) { locale = match[2] } else if (match[3] != null) { locale = match[3]; } var pageid = null; if (match[1] != null) { pageid = match[1] } else if (match[4] != null) { pageid = match[4]; } url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&pageids=' + pageid; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); var key = Object.keys(res['query']['pages'])[0]; var title = res['query']['pages'][key]['title']; var outURL = 'https://' + locale + '.wikipedia.org/wiki/' + encodeURIComponent(title); completionHandler('wikilinks://openwikipediaurl?url=' + encodeURIComponent(btoa(outURL))); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var regex = new RegExp('http(?:s)?://(?:www\\\\.)?tamper\\\\.io/(?:curiosity|inquire)/share.*(?:(?:\\\\?|&)p=(\\\\d+).*&l=([a-zA-Z0-9\\\\-_]+)|(?:\\\\?|&)l=([a-zA-Z0-9\\\\-_]+).*&p=(\\\\d+)).*$'); var match = regex.exec(url); var locale = null; if (match[2] != null) { locale = match[2] } else if (match[3] != null) { locale = match[3]; } var pageid = null; if (match[1] != null) { pageid = match[1] } else if (match[4] != null) { pageid = match[4]; } url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&pageids=' + pageid; var res = jsonRequest(url); var key = Object.keys(res['query']['pages'])[0]; var title = res['query']['pages'][key]['title']; var outURL = 'https://' + locale + '.wikipedia.org/wiki/' + encodeURIComponent(title); completionHandler('wikilinks://openwikipediaurl?url=' + encodeURIComponent(btoa(outURL))); }",
-                    "testResults": [
-                        "wikilinks://openwikipediaurl?url=aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTm9lJTIwVmFsbGV5JTJDJTIwU2FuJTIwRnJhbmNpc2Nv",
-                        "wikilinks://openwikipediaurl?url=aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTm9lJTIwVmFsbGV5JTJDJTIwU2FuJTIwRnJhbmNpc2Nv"
-                    ]
-                },
-                {
                     "appIdentifier": "wikiwand",
                     "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); var regex = new RegExp('http(?:s)?://(?:www\\\\.)?tamper\\\\.io/(?:curiosity|inquire)/share.*(?:(?:\\\\?|&)p=(\\\\d+).*&l=([a-zA-Z0-9\\\\-_]+)|(?:\\\\?|&)l=([a-zA-Z0-9\\\\-_]+).*&p=(\\\\d+)).*$'); var match = regex.exec(url); var locale = null; if (match[2] != null) { locale = match[2] } else if (match[3] != null) { locale = match[3]; } var pageid = null; if (match[1] != null) { pageid = match[1] } else if (match[4] != null) { pageid = match[4]; } url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&pageids=' + pageid; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); var key = Object.keys(res['query']['pages'])[0]; var title = res['query']['pages'][key]['title']; completionHandler('wikiwand-article://' + locale + '/' + encodeURIComponent(title)); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
                     "script2": "function process(url, completionHandler) { var regex = new RegExp('http(?:s)?://(?:www\\\\.)?tamper\\\\.io/(?:curiosity|inquire)/share.*(?:(?:\\\\?|&)p=(\\\\d+).*&l=([a-zA-Z0-9\\\\-_]+)|(?:\\\\?|&)l=([a-zA-Z0-9\\\\-_]+).*&p=(\\\\d+)).*$'); var match = regex.exec(url); var locale = null; if (match[2] != null) { locale = match[2] } else if (match[3] != null) { locale = match[3]; } var pageid = null; if (match[1] != null) { pageid = match[1] } else if (match[4] != null) { pageid = match[4]; } url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&pageids=' + pageid; var res = jsonRequest(url); var key = Object.keys(res['query']['pages'])[0]; var title = res['query']['pages'][key]['title']; completionHandler('wikiwand-article://' + locale + '/' + encodeURIComponent(title)); }",
@@ -3512,30 +3513,29 @@
                     ]
                 },
                 {
-                    "appIdentifier": "dasreferenz",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); var regex = new RegExp('http(?:s)?://(?:www\\\\.)?tamper\\\\.io/(?:curiosity|inquire)/share.*(?:(?:\\\\?|&)p=(\\\\d+).*&l=([a-zA-Z0-9\\\\-_]+)|(?:\\\\?|&)l=([a-zA-Z0-9\\\\-_]+).*&p=(\\\\d+)).*$'); var match = regex.exec(url); var locale = null; if (match[2] != null) { locale = match[2] } else if (match[3] != null) { locale = match[3]; } var pageid = null; if (match[1] != null) { pageid = match[1] } else if (match[4] != null) { pageid = match[4]; } url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&pageids=' + pageid; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); var key = Object.keys(res['query']['pages'])[0]; var title = res['query']['pages'][key]['title']; completionHandler('dasreferenz://' + locale + '/' + encodeURIComponent(title)); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) {var regex = new RegExp('http(?:s)?://(?:www\\\\.)?tamper\\\\.io/(?:curiosity|inquire)/share.*(?:(?:\\\\?|&)p=(\\\\d+).*&l=([a-zA-Z0-9\\\\-_]+)|(?:\\\\?|&)l=([a-zA-Z0-9\\\\-_]+).*&p=(\\\\d+)).*$'); var match = regex.exec(url); var locale = null; if (match[2] != null) { locale = match[2] } else if (match[3] != null) { locale = match[3]; } var pageid = null; if (match[1] != null) { pageid = match[1] } else if (match[4] != null) { pageid = match[4]; } url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&pageids=' + pageid; var res = jsonRequest(url); var key = Object.keys(res['query']['pages'])[0]; var title = res['query']['pages'][key]['title']; completionHandler('dasreferenz://' + locale + '/' + encodeURIComponent(title)); }",
-                    "testResults": [
-                        "dasreferenz://en/Noe%20Valley%2C%20San%20Francisco",
-                        "dasreferenz://en/Noe%20Valley%2C%20San%20Francisco"
-                    ]
-                },
-                {
-                    "appIdentifier": "viki",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); var regex = new RegExp('http(?:s)?://(?:www\\\\.)?tamper\\\\.io/(?:curiosity|inquire)/share.*(?:(?:\\\\?|&)p=(\\\\d+).*&l=([a-zA-Z0-9\\\\-_]+)|(?:\\\\?|&)l=([a-zA-Z0-9\\\\-_]+).*&p=(\\\\d+)).*$'); var match = regex.exec(url); var locale = null; if (match[2] != null) { locale = match[2] } else if (match[3] != null) { locale = match[3]; } var pageid = null; if (match[1] != null) { pageid = match[1] } else if (match[4] != null) { pageid = match[4]; } url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&pageids=' + pageid; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); var key = Object.keys(res['query']['pages'])[0]; var title = res['query']['pages'][key]['title']; completionHandler('v-for-wiki://article/' + locale + '/' + encodeURIComponent(title)); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var regex = new RegExp('http(?:s)?://(?:www\\\\.)?tamper\\\\.io/(?:curiosity|inquire)/share.*(?:(?:\\\\?|&)p=(\\\\d+).*&l=([a-zA-Z0-9\\\\-_]+)|(?:\\\\?|&)l=([a-zA-Z0-9\\\\-_]+).*&p=(\\\\d+)).*$'); var match = regex.exec(url); var locale = null; if (match[2] != null) { locale = match[2] } else if (match[3] != null) { locale = match[3]; } var pageid = null; if (match[1] != null) { pageid = match[1] } else if (match[4] != null) { pageid = match[4]; } url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&pageids=' + pageid; var res = jsonRequest(url); var key = Object.keys(res['query']['pages'])[0]; var title = res['query']['pages'][key]['title']; completionHandler('v-for-wiki://article/' + locale + '/' + encodeURIComponent(title)); }",
-                    "testResults": [
-                        "v-for-wiki://article/en/Noe%20Valley%2C%20San%20Francisco",
-                        "v-for-wiki://article/en/Noe%20Valley%2C%20San%20Francisco"
-                    ]
-                },
-                {
                     "appIdentifier": "wonder",
                     "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); var regex = new RegExp('http(?:s)?://(?:www\\\\.)?tamper\\\\.io/(?:curiosity|inquire)/share.*(?:(?:\\\\?|&)p=(\\\\d+).*&l=([a-zA-Z0-9\\\\-_]+)|(?:\\\\?|&)l=([a-zA-Z0-9\\\\-_]+).*&p=(\\\\d+)).*$'); var match = regex.exec(url); var locale = null; if (match[2] != null) { locale = match[2] } else if (match[3] != null) { locale = match[3]; } var pageid = null; if (match[1] != null) { pageid = match[1] } else if (match[4] != null) { pageid = match[4]; } url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&pageids=' + pageid; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); var key = Object.keys(res['query']['pages'])[0]; var title = res['query']['pages'][key]['title']; completionHandler('wonder://' + locale + '.wikipedia.org/wiki/' + encodeURIComponent(title)); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
                     "script2": "function process(url, completionHandler) { var regex = new RegExp('http(?:s)?://(?:www\\\\.)?tamper\\\\.io/(?:curiosity|inquire)/share.*(?:(?:\\\\?|&)p=(\\\\d+).*&l=([a-zA-Z0-9\\\\-_]+)|(?:\\\\?|&)l=([a-zA-Z0-9\\\\-_]+).*&p=(\\\\d+)).*$'); var match = regex.exec(url); var locale = null; if (match[2] != null) { locale = match[2] } else if (match[3] != null) { locale = match[3]; } var pageid = null; if (match[1] != null) { pageid = match[1] } else if (match[4] != null) { pageid = match[4]; } url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&pageids=' + pageid; var res = jsonRequest(url); var key = Object.keys(res['query']['pages'])[0]; var title = res['query']['pages'][key]['title']; completionHandler('wonder://' + locale + '.wikipedia.org/wiki/' + encodeURIComponent(title)); }",
                     "testResults": [
                         "wonder://en.wikipedia.org/wiki/Noe%20Valley%2C%20San%20Francisco",
                         "wonder://en.wikipedia.org/wiki/Noe%20Valley%2C%20San%20Francisco"
+                    ]
+                },
+                {
+                    "appIdentifier": "curiosity",
+                    "format": "curiosity://p/$2$3/$1$4",
+                    "testResults": [
+                        "curiosity://p/en/351344",
+                        "curiosity://p/en/351344"
+                    ]
+                },
+                {
+                    "appIdentifier": "dasreferenz",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); var regex = new RegExp('http(?:s)?://(?:www\\\\.)?tamper\\\\.io/(?:curiosity|inquire)/share.*(?:(?:\\\\?|&)p=(\\\\d+).*&l=([a-zA-Z0-9\\\\-_]+)|(?:\\\\?|&)l=([a-zA-Z0-9\\\\-_]+).*&p=(\\\\d+)).*$'); var match = regex.exec(url); var locale = null; if (match[2] != null) { locale = match[2] } else if (match[3] != null) { locale = match[3]; } var pageid = null; if (match[1] != null) { pageid = match[1] } else if (match[4] != null) { pageid = match[4]; } url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&pageids=' + pageid; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); var key = Object.keys(res['query']['pages'])[0]; var title = res['query']['pages'][key]['title']; completionHandler('dasreferenz://' + locale + '/' + encodeURIComponent(title)); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) {var regex = new RegExp('http(?:s)?://(?:www\\\\.)?tamper\\\\.io/(?:curiosity|inquire)/share.*(?:(?:\\\\?|&)p=(\\\\d+).*&l=([a-zA-Z0-9\\\\-_]+)|(?:\\\\?|&)l=([a-zA-Z0-9\\\\-_]+).*&p=(\\\\d+)).*$'); var match = regex.exec(url); var locale = null; if (match[2] != null) { locale = match[2] } else if (match[3] != null) { locale = match[3]; } var pageid = null; if (match[1] != null) { pageid = match[1] } else if (match[4] != null) { pageid = match[4]; } url = 'https://' + locale + '.wikipedia.org/w/api.php?action=query&format=json&pageids=' + pageid; var res = jsonRequest(url); var key = Object.keys(res['query']['pages'])[0]; var title = res['query']['pages'][key]['title']; completionHandler('dasreferenz://' + locale + '/' + encodeURIComponent(title)); }",
+                    "testResults": [
+                        "dasreferenz://en/Noe%20Valley%2C%20San%20Francisco",
+                        "dasreferenz://en/Noe%20Valley%2C%20San%20Francisco"
                     ]
                 }
             ]
