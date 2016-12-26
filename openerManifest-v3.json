@@ -973,8 +973,8 @@
             "title": "Open Section",
             "regex": "http(?:s)?://(?:www\\.)?flipboard\\.com/(@\\w+(?:/\\w*(-\\w*)+)?|section/.*).*$",
             "testInputs": [
-                "https://flipboard.com/@catherinesc63kn",
-                "https://flipboard.com/@catherinesc63kn/liverpool-post-5ha7nr15y",
+                "https://flipboard.com/@catherine_265",
+                "https://flipboard.com/@catherine_265/liverpool-post-5ha7nr15y",
                 "https://flipboard.com/section/foodies-217ha2rt47oa1f62?flipit=http%3A%2F%2Fflip.it%2FMS9XR&intent=gift_of_flipboard"
             ],
             "formats": [
@@ -984,7 +984,7 @@
                     "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(flipboard://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); }",
                     "testResults": [
                         "flipboard://showSection/auth/flipboard/user%252F230604372?title=Catherine%20Scowcroft%20on%20Flipboard",
-                        "flipboard://showSection/sid/5ha7nr15y/catherinesc63kn?title=LIVERPOOL%20on%20Flipboard",
+                        "flipboard://showSection/sid/5ha7nr15y/catherine_265?title=LIVERPOOL%20on%20Flipboard",
                         "flipboard://flipit?url=http%3A%2F%2Fflip.it%2FMS9XR"
                     ]
                 }
