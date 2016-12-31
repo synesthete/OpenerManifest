@@ -2,10 +2,11 @@
     "actions": [
         {
             "title": "Open Tweet",
-            "regex": "http(?:s)?://(?:mobile\\.|www\\.|m\\.)?twitter\\.com/(?:@?[a-zA-Z0-9_]{1,15}/status|statuses)/(\\d+).*$",
+            "regex": "http(?:s)?://(?:mobile\\.|www\\.|m\\.)?twitter\\.com/(?:@?[a-zA-Z0-9_]{1,15}/status|i/web/status|statuses)/(\\d+).*$",
             "testInputs": [
                 "https://twitter.com/zpower/status/588561590997352448",
-                "https://mobile.twitter.com/kiebk/status/599159327056863232?cn=cmVwbHk%3D&refsrc=email"
+                "https://mobile.twitter.com/kiebk/status/599159327056863232?cn=cmVwbHk%3D&refsrc=email",
+                "https://twitter.com/i/web/status/814237378382622720"
             ],
             "formats": [
                 {
@@ -13,7 +14,8 @@
                     "format": "twitter://status?id=$1",
                     "testResults": [
                         "twitter://status?id=588561590997352448",
-                        "twitter://status?id=599159327056863232"
+                        "twitter://status?id=599159327056863232",
+                        "twitter://status?id=814237378382622720"
                     ]
                 },
                 {
@@ -21,7 +23,8 @@
                     "format": "tweetbot:///status/$1",
                     "testResults": [
                         "tweetbot:///status/588561590997352448",
-                        "tweetbot:///status/599159327056863232"
+                        "tweetbot:///status/599159327056863232",
+                        "tweetbot:///status/814237378382622720"
                     ]
                 },
                 {
@@ -29,17 +32,19 @@
                     "format": "twitterrific:///tweet?id=$1",
                     "testResults": [
                         "twitterrific:///tweet?id=588561590997352448",
-                        "twitterrific:///tweet?id=599159327056863232"
+                        "twitterrific:///tweet?id=599159327056863232",
+                        "twitterrific:///tweet?id=814237378382622720"
                     ]
                 }
             ]
         },
         {
             "title": "Add Tweet to Collection",
-            "regex": "http(?:s)?://(?:mobile\\.|www\\.|m\\.)?twitter\\.com/(?:@?[a-zA-Z0-9_]{1,15}/status|statuses)/(\\d+).*$",
+            "regex": "http(?:s)?://(?:mobile\\.|www\\.|m\\.)?twitter\\.com/(?:@?[a-zA-Z0-9_]{1,15}/status|i/web/status|statuses)/(\\d+).*$",
             "testInputs": [
                 "https://twitter.com/zpower/status/588561590997352448",
-                "https://mobile.twitter.com/kiebk/status/599159327056863232?cn=cmVwbHk%3D&refsrc=email"
+                "https://mobile.twitter.com/kiebk/status/599159327056863232?cn=cmVwbHk%3D&refsrc=email",
+                "https://twitter.com/i/web/status/814237378382622720"
             ],
             "formats": [
                 {
@@ -47,7 +52,8 @@
                     "format": "x-charm://collect/$1",
                     "testResults": [
                         "x-charm://collect/588561590997352448",
-                        "x-charm://collect/599159327056863232"
+                        "x-charm://collect/599159327056863232",
+                        "x-charm://collect/814237378382622720"
                     ]
                 }
             ]
