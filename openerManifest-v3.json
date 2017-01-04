@@ -415,7 +415,21 @@
             "regex": "http(?:s)?://(?:\\w+\\.)?facebook\\.com/groups/(?:[^/]+/)?(\\d+).*$",
             "testInputs": [
                 "https://www.facebook.com/groups/158306764190707/",
-                "https://www.facebook.com/groups/it.jobs.croatia/1669475099985409/"
+                "https://www.facebook.com/groups/158306764190707",
+                "https://www.facebook.com/groups/158306764190707?foo=bar",
+                "https://www.facebook.com/groups/158306764190707/?foo=bar",
+                "https://www.facebook.com/groups/it.jobs.croatia/1669475099985409/",
+                "https://www.facebook.com/groups/it.jobs.croatia/1669475099985409",
+                "https://www.facebook.com/groups/it.jobs.croatia/1669475099985409?foo=bar",
+                "https://www.facebook.com/groups/it.jobs.croatia/1669475099985409/?foo=bar",
+                "https://www.facebook.com/groups/workoholic.zmanamiti/",
+                "https://www.facebook.com/groups/workoholic.zmanamiti",
+                "https://www.facebook.com/groups/workoholic.zmanamiti?foo=bar",
+                "https://www.facebook.com/groups/workoholic.zmanamiti/?foo=bar",
+                "https://www.facebook.com/groups/dogspotting/",
+                "https://www.facebook.com/groups/dogspotting",
+                "https://www.facebook.com/groups/dogspotting?foo=bar",
+                "https://www.facebook.com/groups/dogspotting/?foo=bar"
             ],
             "formats": [
                 {
@@ -423,7 +437,69 @@
                     "format": "fb://group?id=$1",
                     "testResults": [
                         "fb://group?id=158306764190707",
-                        "fb://group?id=1669475099985409"
+                        "fb://group?id=158306764190707",
+                        "fb://group?id=158306764190707",
+                        "fb://group?id=158306764190707",
+                        "fb://group?id=1669475099985409",
+                        "fb://group?id=1669475099985409",
+                        "fb://group?id=1669475099985409",
+                        "fb://group?id=1669475099985409",
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Group",
+            "regex": "http(?:s)?://(?:\\w+\\.)?facebook\\.com/groups/(?!\\d+)[^/]+(/(?!\\d+)[^/]*)?$",
+            "testInputs": [
+                "https://www.facebook.com/groups/158306764190707/",
+                "https://www.facebook.com/groups/158306764190707",
+                "https://www.facebook.com/groups/158306764190707?foo=bar",
+                "https://www.facebook.com/groups/158306764190707/?foo=bar",
+                "https://www.facebook.com/groups/it.jobs.croatia/1669475099985409/",
+                "https://www.facebook.com/groups/it.jobs.croatia/1669475099985409",
+                "https://www.facebook.com/groups/it.jobs.croatia/1669475099985409?foo=bar",
+                "https://www.facebook.com/groups/it.jobs.croatia/1669475099985409/?foo=bar",
+                "https://www.facebook.com/groups/workoholic.zmanamiti/",
+                "https://www.facebook.com/groups/workoholic.zmanamiti",
+                "https://www.facebook.com/groups/workoholic.zmanamiti?foo=bar",
+                "https://www.facebook.com/groups/workoholic.zmanamiti/?foo=bar",
+                "https://www.facebook.com/groups/dogspotting/",
+                "https://www.facebook.com/groups/dogspotting",
+                "https://www.facebook.com/groups/dogspotting?foo=bar",
+                "https://www.facebook.com/groups/dogspotting/?foo=bar"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "facebook",
+                    "note": "when using UIWebView processor the loaded page doesn't seem to include fb:// links, so we fish for facebook.\\w+/groups/\\d+ instead",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*facebook(?:\\\\.\\\\w+)+/groups/(\\\\d+).*'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = 'fb://group/?id=' + results[1]; }; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(fb://group(?:/)?\\\\?id=\\\\d+).*'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler(match); }",
+                    "testResults": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        "fb://group/?id=10487409466",
+                        "fb://group/?id=10487409466",
+                        "fb://group/?id=10487409466",
+                        "fb://group/?id=10487409466"
                     ]
                 }
             ]
