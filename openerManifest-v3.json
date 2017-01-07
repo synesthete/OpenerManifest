@@ -5473,14 +5473,16 @@
         },
         {
             "title": "Open Chat",
-            "regex": "http(?:s)://(?:www\\.)?(?:telegram|t)\\.me/([^/\\?#]+).*$",
+            "regex": "http(?:s)://(?:www\\.)?(?:telegram|t)\\.me/(?!(?i)addstickers)([^/\\?#]+).*$",
             "testInputs": [
                 "https://telegram.me/MacStories",
                 "http://telegram.me/",
                 "https://www.telegram.me/?foo=bar",
                 "https://t.me/MacStories",
                 "http://t.me/",
-                "https://www.t.me/?foo=bar"
+                "https://www.t.me/?foo=bar",
+                "https://t.me/addstickers/NickSantini",
+                "https://telegram.me/addStickers/NickSantini"
             ],
             "formats": [
                 {
@@ -5492,7 +5494,27 @@
                         null,
                         "tg://resolve?domain=MacStories",
                         null,
+                        null,
+                        null,
                         null
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Add Stickers",
+            "regex": "http(?:s)://(?:www\\.)?(?:telegram|t)\\.me/(?i)addstickers/([^/\\?#]+).*$",
+            "testInputs": [
+                "https://t.me/addstickers/NickSantini",
+                "https://telegram.me/addStickers/NickSantini"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "telegram",
+                    "format": "tg://addstickers?set=$1",
+                    "testResults": [
+                        "tg://addstickers?set=NickSantini",
+                        "tg://addstickers?set=NickSantini"
                     ]
                 }
             ]
