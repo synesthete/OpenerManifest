@@ -5473,17 +5473,23 @@
         },
         {
             "title": "Open Chat",
-            "regex": "http(?:s)://(?:www\\.)?telegram\\.me/([^/\\?#]+).*$",
+            "regex": "http(?:s)://(?:www\\.)?(?:telegram|t)\\.me/([^/\\?#]+).*$",
             "testInputs": [
                 "https://telegram.me/MacStories",
                 "http://telegram.me/",
-                "https://www.telegram.me/?foo=bar"
+                "https://www.telegram.me/?foo=bar",
+                "https://t.me/MacStories",
+                "http://t.me/",
+                "https://www.t.me/?foo=bar"
             ],
             "formats": [
                 {
                     "appIdentifier": "telegram",
                     "format": "tg://resolve?domain=$1",
                     "testResults": [
+                        "tg://resolve?domain=MacStories",
+                        null,
+                        null,
                         "tg://resolve?domain=MacStories",
                         null,
                         null
