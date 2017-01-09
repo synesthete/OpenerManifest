@@ -5903,6 +5903,27 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Slides",
+            "regex": "http(s)?://(www\\.)?slideshare\\.net/[^/]+/[^/|\\?]+.*$",
+            "testInputs": [
+                "http://www.slideshare.net/PeterHoddie/io-t-is-something-to-figure-out?utm_content=buffer9fb42&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer",
+                "http://www.slideshare.net/PeterHoddie",
+                "http://www.slideshare.net/PeterHoddie/?foo=bar"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "slideshare",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(slideshare-app://ss/\\\\d+).*'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = results[1]; }; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(slideshare-app://ss/\\\\d+).*'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler(match); }",
+                    "testResults": [
+                        "slideshare-app://ss/61965473",
+                        null,
+                        null
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -7102,6 +7123,13 @@
             "identifier": "lemonde",
             "storeIdentifier": "294047850",
             "scheme": "lmfr://"
+        },
+        {
+            "displayName": "SlideShare",
+            "identifier": "slideshare",
+            "storeIdentifier": "917418728",
+            "scheme": "slideshare-app://",
+            "new": true
         }
     ],
     "browsers": [
