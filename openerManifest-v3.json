@@ -3459,26 +3459,26 @@
                 },
                 {
                     "appIdentifier": "wikipanion",
-                    "format": "wplink://$2",
+                    "format": "wplink://$3.wikipedia.org/wiki/$4",
                     "testResults": [
                         null,
                         "wplink://en.wikipedia.org/wiki/Bottle_opener",
-                        "wplink://en.m.wikipedia.org/wiki/Soylent",
+                        "wplink://en.wikipedia.org/wiki/Soylent",
                         "wplink://zh-yue.wikipedia.org/wiki/%E9%96%8B%E4%BF%A1%E5%88%80",
-                        "wplink://zh.m.wikipedia.org/zh-cn/%E5%90%89%E9%87%8E%E5%AE%B6",
-                        "wplink://zh.m.wikipedia.org/zh/%E4%B9%A0%E8%BF%91%E5%B9%B3"
+                        "wplink://zh.wikipedia.org/wiki/%E5%90%89%E9%87%8E%E5%AE%B6",
+                        "wplink://zh.wikipedia.org/wiki/%E4%B9%A0%E8%BF%91%E5%B9%B3"
                     ]
                 },
                 {
                     "appIdentifier": "wikipanionpad",
-                    "format": "wplink://$2",
+                    "format": "wplink://$3.wikipedia.org/wiki/$4",
                     "testResults": [
                         null,
                         "wplink://en.wikipedia.org/wiki/Bottle_opener",
-                        "wplink://en.m.wikipedia.org/wiki/Soylent",
+                        "wplink://en.wikipedia.org/wiki/Soylent",
                         "wplink://zh-yue.wikipedia.org/wiki/%E9%96%8B%E4%BF%A1%E5%88%80",
-                        "wplink://zh.m.wikipedia.org/zh-cn/%E5%90%89%E9%87%8E%E5%AE%B6",
-                        "wplink://zh.m.wikipedia.org/zh/%E4%B9%A0%E8%BF%91%E5%B9%B3"
+                        "wplink://zh.wikipedia.org/wiki/%E5%90%89%E9%87%8E%E5%AE%B6",
+                        "wplink://zh.wikipedia.org/wiki/%E4%B9%A0%E8%BF%91%E5%B9%B3"
                     ]
                 },
                 {
