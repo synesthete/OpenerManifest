@@ -7448,6 +7448,23 @@
             ]
         },
         {
+            "displayName": "Onion Browser",
+            "identifier": "onionbrowser",
+            "scheme": "onionbrowsers://",
+            "storeIdentifier": "519296448",
+            "regex": "http((?:s)?.*)",
+            "format": "onionbrowser$1",
+            "docs": "https://github.com/mtigas/OnionBrowser/blob/1.X/OnionBrowser/OnionBrowser/AppDelegate.m#L355",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "onionbrowser://www.opener.link/",
+                "onionbrowsers://twitter.com/openerapp"
+            ]
+        },
+        {
             "displayName": "Red Onion",
             "identifier": "redonion",
             "scheme": "redbrowser://",
