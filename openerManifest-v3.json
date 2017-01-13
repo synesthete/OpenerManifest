@@ -5652,15 +5652,16 @@
             "title": "Open Note",
             "regex": "http(s)?://(www\\.)?jianshu\\.com/p/\\w+",
             "testInputs": [
-                "http://www.jianshu.com/p/90c10a242199"
+                "http://www.jianshu.com/p/90c10a242199",
+                "http://www.jianshu.com/p/90c10a24219"
             ],
             "formats": [
                 {
                     "appIdentifier": "jianshu",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(jianshu://notes/\\\\d+)'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
                     "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(jianshu://notes/\\\\d+)'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler(match); }",
                     "testResults": [
-                        "jianshu://notes/2312808"
+                        "jianshu://notes/2312808",
+                        null
                     ]
                 }
             ]
