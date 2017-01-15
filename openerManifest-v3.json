@@ -7105,8 +7105,7 @@
             "displayName": "SlideShare",
             "identifier": "slideshare",
             "storeIdentifier": "917418728",
-            "scheme": "slideshare-app://",
-            "new": true
+            "scheme": "slideshare-app://"
         }
     ],
     "browsers": [
