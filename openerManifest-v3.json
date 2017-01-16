@@ -358,7 +358,7 @@
         },
         {
             "title": "Open Tag",
-            "regex": "(?:(?:http(?:s?)://(?:www\\.)?(?:(?:instagram\\.com)|(?:instagr\\.am))/))(?:explore/)?tags/([a-zA-Z0-9_%]+).*$",
+            "regex": "http(?:s)?://(?:www\\.)?(?:instagram\\.com|instagr\\.am)/(?:explore/)?tags/([a-zA-Z0-9_%]+).*$",
             "testInputs": [
                 "https://instagram.com/explore/tags/darkroomapp/",
                 "https://instagram.com/explore/tags/%F0%9F%98%80/",
@@ -378,7 +378,7 @@
         },
         {
             "title": "Open Location",
-            "regex": "(?:(?:http(?:s?)://(?:www\\.)?(?:(?:instagram\\.com)|(?:instagr\\.am))/))explore/locations/(\\d+).*$",
+            "regex": "http(?:s)?://(?:www\\.)?(?:instagram\\.com|instagr\\.am)/explore/locations/(\\d+).*$",
             "testInputs": [
                 "https://instagram.com/explore/locations/215262672/"
             ],
@@ -1934,7 +1934,7 @@
         },
         {
             "title": "Open Video",
-            "regex": "(http(s?)://(www\\.)?vine.co/v/[0-9a-zA-Z]+(/?))$",
+            "regex": "http(s?)://(www\\.)?vine.co/v/[0-9a-zA-Z]+(/?)$",
             "testInputs": [
                 "https://vine.co/v/eVWDFgHQ5pX"
             ],
@@ -2303,7 +2303,7 @@
         },
         {
             "title": "Open Track",
-            "regex": "(?:http(?:s?)://(?:play\\.|open\\.|www\\.)?spotify\\.com/track/)([:alnum:]+).*$",
+            "regex": "http(?:s?)://(?:play\\.|open\\.|www\\.)?spotify\\.com/track/([:alnum:]+).*$",
             "testInputs": [
                 "http://open.spotify.com/track/5QZJAcP4nu3xL2NQV4AVHO",
                 "https://play.spotify.com/track/77Ezu3tBE7gmzQ4mRnZZUf?play=true"
@@ -2321,7 +2321,7 @@
         },
         {
             "title": "Open Album",
-            "regex": "(?:http(?:s?)://(?:play\\.|open\\.|www\\.)?spotify\\.com/album/)([:alnum:]+).*$",
+            "regex": "http(?:s?)://(?:play\\.|open\\.|www\\.)?spotify\\.com/album/([:alnum:]+).*$",
             "testInputs": [
                 "http://open.spotify.com/album/6BK3muExDOuk0VnyMn9NVw",
                 "https://open.spotify.com/album/4G8WKL5DGAFbWNTXxp3emz?utm_content=http%3A%2F%2Fsmarturl.it%2FWowGuauSP&utm_medium=email&utm_umg_et=1543198706&utm_source=ExactTarget&utm_campaign=21323559"
@@ -2339,7 +2339,7 @@
         },
         {
             "title": "Open Playlist",
-            "regex": "(?:http(?:s?)://(?:play\\.|open\\.|www\\.)?spotify\\.com/user/(\\w+)/playlist/)([:alnum:]+).*$",
+            "regex": "http(?:s?)://(?:play\\.|open\\.|www\\.)?spotify\\.com/user/(\\w+)/playlist/([:alnum:]+).*$",
             "testInputs": [
                 "https://open.spotify.com/user/naveenium/playlist/1zw42kQZUSZlHyVVn8AecH?utm_content=buffer30eb8&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer",
                 "http://open.spotify.com/user/timonominus/playlist/7rdUGYrNIMEdL6xdJDlMzZ"
@@ -2357,7 +2357,7 @@
         },
         {
             "title": "Open Artist",
-            "regex": "(?:http(?:s?)://(?:play\\.|open\\.|www\\.)?spotify\\.com/artist/(\\w+)).*$",
+            "regex": "http(?:s?)://(?:play\\.|open\\.|www\\.)?spotify\\.com/artist/(\\w+).*$",
             "testInputs": [
                 "https://open.spotify.com/artist/3vbKDsSS70ZX9D2OcvbZmS?ref=wp"
             ],
@@ -2373,7 +2373,7 @@
         },
         {
             "title": "Open Link",
-            "regex": "(http(s?)://(www\\.|m\\.)?soundcloud\\.com/([^/]+)(/([^/]+))?)",
+            "regex": "http(s?)://(www\\.|m\\.)?soundcloud\\.com/[^/]+(/[^/]+)?",
             "testInputs": [
                 "http://m.soundcloud.com/ukgoldfilm/tap24-hiha24-1",
                 "http://m.soundcloud.com/ukgoldfilm/tap24-hiha24-1/",
@@ -2677,7 +2677,7 @@
         },
         {
             "title": "Open Thread",
-            "regex": "(http(?:s)?://(?:\\w+\\.)?reddit\\.com/(?:comments|info)/\\w+.*)$",
+            "regex": "http(?:s)?://(?:\\w+\\.)?reddit\\.com/(?:comments|info)/\\w+.*$",
             "testInputs": [
                 "http://www.reddit.com/comments/3d2ewz/nintendo_president_satoru_iwata_passes_away/",
                 "http://www.reddit.com/info/3d2ewz"
@@ -2732,7 +2732,7 @@
         },
         {
             "title": "Open Link",
-            "regex": "(?:http(?:s)?)://((?:\\w+\\.)?(reddit\\.com/.*))",
+            "regex": "http(?:s)?://((?:\\w+\\.)?(reddit\\.com/.*))",
             "testInputs": [
                 "https://m.reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/",
                 "https://np.reddit.com/r/gaming/",
@@ -2985,7 +2985,7 @@
         },
         {
             "title": "Open Product",
-            "regex": "(?:(?:http(?:s?)://)(?:www\\.|rover\\.|m\\.)?ebay(?:\\.\\w+)+/itm/(?:[0-9A-Za-z_-]+/)?)(\\d+)(?:/|\\?)?(?:.*)$",
+            "regex": "http(?:s)?://(?:www\\.|rover\\.|m\\.)?ebay(?:\\.\\w+)+/itm/(?:[0-9A-Za-z_-]+/)?(\\d+)(?:/|\\?)?(?:.*)$",
             "testInputs": [
                 "http://www.ebay.com/itm/Mondaine-Classic-Swiss-Railways-White-Dial-Black-Leather-Mens-Watch-/181453530366?pt=LH_DefaultDomain_0&hash=item2a3f7924fe",
                 "http://www.ebay.com/itm/181453530366",
@@ -3009,7 +3009,7 @@
         },
         {
             "title": "Open Project",
-            "regex": "(?:http(?:s?)://)((?:www\\.)?kickstarter\\.com/projects/[a-zA-Z0-9_%-]+/[a-zA-Z0-9_%-]+).*?$",
+            "regex": "http(?:s)?://((?:www\\.)?kickstarter\\.com/projects/[a-zA-Z0-9_%-]+/[a-zA-Z0-9_%-]+).*?$",
             "testInputs": [
                 "https://www.kickstarter.com/projects/1425492550/sesame-your-key-reinvented?ref=dash",
                 "https://www.kickstarter.com/projects/paulgtoys/pterodactyl-5-rc-flying-lizard",
@@ -3139,7 +3139,7 @@
         },
         {
             "title": "Open Comic",
-            "regex": "(?:http(?:s?)://(?:www\\.|m\\.)?xkcd\\.com/)(\\d+).*$",
+            "regex": "http(?:s)?://(?:www\\.|m\\.)?xkcd\\.com/(\\d+).*$",
             "testInputs": [
                 "http://xkcd.com/1508/",
                 "http://m.xkcd.com/1694/"
@@ -3410,7 +3410,7 @@
         },
         {
             "title": "Open Link",
-            "regex": "(http(?:s)?://((?!www\\.)(?:([a-zA-Z0-9\\-]+)\\.)(?:\\w+\\.)*wikipedia\\.(?:com|org)/(?:[^/]+/)?(.*)))$",
+            "regex": "http(?:s)?://((?!www\\.)(?:([a-zA-Z0-9\\-]+)\\.)(?:\\w+\\.)*wikipedia\\.(?:com|org)/(?:[^/]+/)?(.*))$",
             "testInputs": [
                 "http://www.wikipedia.org/wiki/Bottle_opener",
                 "http://en.wikipedia.org/wiki/Bottle_opener",
@@ -3422,7 +3422,7 @@
             "formats": [
                 {
                     "appIdentifier": "wikipedia",
-                    "format": "wikipedia://$2",
+                    "format": "wikipedia://$1",
                     "testResults": [
                         null,
                         "wikipedia://en.wikipedia.org/wiki/Bottle_opener",
@@ -3434,7 +3434,7 @@
                 },
                 {
                     "appIdentifier": "viki",
-                    "format": "v-for-wiki://article/$3/$4",
+                    "format": "v-for-wiki://article/$2/$3",
                     "testResults": [
                         null,
                         "v-for-wiki://article/en/Bottle_opener",
@@ -3459,7 +3459,7 @@
                 },
                 {
                     "appIdentifier": "wikipanion",
-                    "format": "wplink://$3.wikipedia.org/wiki/$4",
+                    "format": "wplink://$2.wikipedia.org/wiki/$3",
                     "testResults": [
                         null,
                         "wplink://en.wikipedia.org/wiki/Bottle_opener",
@@ -3471,7 +3471,7 @@
                 },
                 {
                     "appIdentifier": "wikipanionpad",
-                    "format": "wplink://$3.wikipedia.org/wiki/$4",
+                    "format": "wplink://$2.wikipedia.org/wiki/$3",
                     "testResults": [
                         null,
                         "wplink://en.wikipedia.org/wiki/Bottle_opener",
@@ -3483,7 +3483,7 @@
                 },
                 {
                     "appIdentifier": "wikiwand",
-                    "format": "wikiwand-article://$3/$4",
+                    "format": "wikiwand-article://$2/$3",
                     "testResults": [
                         null,
                         "wikiwand-article://en/Bottle_opener",
@@ -3495,7 +3495,7 @@
                 },
                 {
                     "appIdentifier": "wonder",
-                    "format": "wonder://$2",
+                    "format": "wonder://$1",
                     "testResults": [
                         null,
                         "wonder://en.wikipedia.org/wiki/Bottle_opener",
@@ -3520,7 +3520,7 @@
                 },
                 {
                     "appIdentifier": "dasreferenz",
-                    "format": "dasreferenz://$3/$4",
+                    "format": "dasreferenz://$2/$3",
                     "testResults": [
                         null,
                         "dasreferenz://en/Bottle_opener",
