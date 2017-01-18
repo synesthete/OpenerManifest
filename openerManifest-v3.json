@@ -4840,6 +4840,15 @@
                         "smileplayer2://id/sm15757696",
                         "smileplayer2://id/1449636328"
                     ]
+                },
+                {
+                    "appIdentifier": "nicoli",
+                    "format": "nicoli://$1",
+                    "testResults": [
+                        "nicoli://sm26814241",
+                        "nicoli://sm15757696",
+                        "nicoli://1449636328"
+                    ]
                 }
             ]
         },
@@ -4866,6 +4875,14 @@
                         "smileplayer2://id/so26990332",
                         null
                     ]
+                },
+                {
+                    "appIdentifier": "nicoli",
+                    "format": "nicoli://$1",
+                    "testResults": [
+                        "nicoli://so26990332",
+                        null
+                    ]
                 }
             ]
         },
@@ -4888,6 +4905,13 @@
                     "format": "inico2http://www.nicovideo.jp/watch/$1",
                     "testResults": [
                         "inico2http://www.nicovideo.jp/watch/nm6195780"
+                    ]
+                },
+                {
+                    "appIdentifier": "nicoli",
+                    "format": "nicoli://$1",
+                    "testResults": [
+                        "nicoli://nm6195780"
                     ]
                 }
             ]
@@ -7083,6 +7107,14 @@
             "identifier": "slideshare",
             "storeIdentifier": "917418728",
             "scheme": "slideshare-app://"
+        },
+        {
+            "displayName": "nicoli",
+            "identifier": "nicoli",
+            "storeIdentifier": "918184283",
+            "scheme": "nicoli://",
+            "docs": "https://db.tt/jes30BC1aR and https://db.tt/YFaVbFzlcb",
+            "new": true
         }
     ],
     "browsers": [
