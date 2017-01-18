@@ -1933,23 +1933,6 @@
             ]
         },
         {
-            "title": "Open Video",
-            "regex": "http(s?)://(www\\.)?vine.co/v/[0-9a-zA-Z]+(/?)$",
-            "testInputs": [
-                "https://vine.co/v/eVWDFgHQ5pX"
-            ],
-            "formats": [
-                {
-                    "appIdentifier": "vine",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(vine://post/\\\\d+)'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(vine://post/\\\\d+)'); var match = regex.exec(res)[1]; completionHandler(match); }",
-                    "testResults": [
-                        "vine://post/1268687962565677056"
-                    ]
-                }
-            ]
-        },
-        {
             "title": "Open Broadcast",
             "regex": "http(?:s?)://(?:www\\.)?periscope.tv/w/.*$",
             "formats": [
@@ -6242,12 +6225,6 @@
             "storeIdentifier": "1102153379",
             "scheme": "x-charm://",
             "docs": "http://bit.ly/29sCrgV"
-        },
-        {
-            "displayName": "Vine",
-            "identifier": "vine",
-            "storeIdentifier": "592447445",
-            "scheme": "vine://"
         },
         {
             "displayName": "Jingdong",
