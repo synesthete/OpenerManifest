@@ -4843,11 +4843,11 @@
                 },
                 {
                     "appIdentifier": "nicoli",
-                    "format": "nicoli://$1",
+                    "format": "nicolihttp://www.nicovideo.jp/watch/$1",
                     "testResults": [
-                        "nicoli://sm26814241",
-                        "nicoli://sm15757696",
-                        "nicoli://1449636328"
+                        "nicolihttp://www.nicovideo.jp/watch/sm26814241",
+                        "nicolihttp://www.nicovideo.jp/watch/sm15757696",
+                        "nicolihttp://www.nicovideo.jp/watch/1449636328"
                     ]
                 }
             ]
@@ -4878,9 +4878,9 @@
                 },
                 {
                     "appIdentifier": "nicoli",
-                    "format": "nicoli://$1",
+                    "format": "nicolihttp://www.nicovideo.jp/watch/$1",
                     "testResults": [
-                        "nicoli://so26990332",
+                        "nicolihttp://www.nicovideo.jp/watch/so26990332",
                         null
                     ]
                 }
@@ -4909,9 +4909,9 @@
                 },
                 {
                     "appIdentifier": "nicoli",
-                    "format": "nicoli://$1",
+                    "format": "nicolihttp://www.nicovideo.jp/watch/$1",
                     "testResults": [
-                        "nicoli://nm6195780"
+                        "nicolihttp://www.nicovideo.jp/watch/nm6195780"
                     ]
                 }
             ]
@@ -7112,7 +7112,7 @@
             "displayName": "nicoli",
             "identifier": "nicoli",
             "storeIdentifier": "918184283",
-            "scheme": "nicoli://",
+            "scheme": "nicolihttp://",
             "docs": "https://db.tt/jes30BC1aR and https://db.tt/YFaVbFzlcb",
             "new": true
         }
