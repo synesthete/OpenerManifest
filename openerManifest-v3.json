@@ -5914,6 +5914,30 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:www\\.)?(appadvice\\.com/.*)$",
+            "testInputs": [
+                "https://appadvice.com/game/collection/best-party-games-for-party-time",
+                "https://appadvice.com/post/original-television-programming/734838",
+                "https://appadvice.com/collection/best-news-apps",
+                "https://appadvice.com/appnn/2017/01/todays-apps-gone-free-vantage-calendar-tone-super-barista-and-more",
+                "https://appadvice.com/appnn"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "appadvice",
+                    "format": "appadvice://$1",
+                    "testResults": [
+                        "appadvice://appadvice.com/game/collection/best-party-games-for-party-time",
+                        "appadvice://appadvice.com/post/original-television-programming/734838",
+                        "appadvice://appadvice.com/collection/best-news-apps",
+                        "appadvice://appadvice.com/appnn/2017/01/todays-apps-gone-free-vantage-calendar-tone-super-barista-and-more",
+                        "appadvice://appadvice.com/appnn"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -7107,6 +7131,13 @@
             "identifier": "slideshare",
             "storeIdentifier": "917418728",
             "scheme": "slideshare-app://"
+        },
+        {
+            "displayName": "AppAdvice",
+            "identifier": "appadvice",
+            "storeIdentifier": "364906378",
+            "scheme": "appadvice://",
+            "new": true
         },
         {
             "displayName": "nicoli",
