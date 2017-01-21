@@ -238,7 +238,7 @@
         },
         {
             "title": "Open Live Moment",
-            "regex": "http(?:s?)://(?:mobile\\.|www\\.)?twitter\\.com/i/live/(\\d+).*$",
+            "regex": "http(?:s?)://(?:mobile\\.|www\\.|m\\.)?twitter\\.com/i/live/(\\d+).*$",
             "testInputs": [
                 "https://mobile.twitter.com/i/live/768633364911788032",
                 "https://twitter.com/i/live/768633364911788032"
