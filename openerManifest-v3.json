@@ -742,7 +742,7 @@
         },
         {
             "title": "Open Blog",
-            "regex": "http(?:s?)://(?:www\\.)?([a-zA-Z0-9_\\-]+)\\.tumblr\\.com(?:/(?!(post|image|tagged)/).*|\\?.*|#.*)?$",
+            "regex": "http(?:s?)://(?:www\\.)?([a-zA-Z0-9_\\-]+)\\.tumblr\\.com(?:/(?!(post|image|tagged|app)/).*|\\?.*|#.*)?$",
             "testInputs": [
                 "http://visualizingmath.tumblr.com/",
                 "http://instagram-engineering.tumblr.com",
@@ -750,7 +750,8 @@
                 "http://www.simplice.tumblr.com/",
                 "http://love-portlandia.tumblr.com/page/8",
                 "http://rickwebb.tumblr.com/post/556400952/the-never-call-there-are-some-people-who-love-to",
-                "http://2kindsofpeople.tumblr.com/tagged/003"
+                "http://2kindsofpeople.tumblr.com/tagged/003",
+                "https://www.tumblr.com/app/closeup"
             ],
             "formats": [
                 {
@@ -763,6 +764,7 @@
                         "tumblr://x-callback-url/blog?blogName=simplice",
                         "tumblr://x-callback-url/blog?blogName=love-portlandia",
                         null,
+                        null,
                         null
                     ]
                 }
@@ -771,7 +773,7 @@
         {
             "title": "Open Blog",
             "includeHeaders": true,
-            "regex": "http(?:s)?://(?!.*\\.tumblr\\.com)[a-zA-Z0-9-\\.]+/(?!post|image|tagged).*\\n.*\"(?:(?i)X-Tumblr-User)\":\"([a-zA-Z0-9_\\-]+)\".*$",
+            "regex": "http(?:s)?://(?!.*\\.tumblr\\.com)[a-zA-Z0-9-\\.]+/(?!post|image|tagged|app).*\\n.*\"(?:(?i)X-Tumblr-User)\":\"([a-zA-Z0-9_\\-]+)\".*$",
             "formats": [
                 {
                     "appIdentifier": "tumblr",
