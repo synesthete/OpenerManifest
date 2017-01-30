@@ -7184,8 +7184,7 @@
             "displayName": "AppAdvice",
             "identifier": "appadvice",
             "storeIdentifier": "364906378",
-            "scheme": "appadvice://",
-            "new": true
+            "scheme": "appadvice://"
         },
         {
             "displayName": "nicoli",
