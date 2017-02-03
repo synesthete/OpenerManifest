@@ -5883,11 +5883,12 @@
             "formats": [
                 {
                     "appIdentifier": "wsj",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(wsj://.*?)\"'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = results[1].replace(new RegExp('&headline=[^&]*'), '') }; completionHandler(match); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(wsj://.*?)\"'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = results[1].replace(new RegExp('&headline=[^&]*'), '') + '&headline=' }; completionHandler(match); }",
                     "note": "We strip out the headline query item because WSJ seems to encode it in a non-standard way (details here https://goo.gl/t1rKyg). The headline in the first URL below is Exxon%u2019s%20Rex%20Tillerson%20is%20expected%20to%20be%20Trump%u2019s%20pick%20for%20secretary%20of%20state, for example, the %u causes NSURL to be incapable of parsing the result.",
+                    "note2": "We provide a blank headline because if you don't the WSJ app ignores your URL",
                     "testResults": [
-                        "wsj://launch?articleid=SB11202777042148913632204582487202009421794&weburl=http://www.wsj.com/articles/SB11202777042148913632204582487202009421794",
-                        "wsj://launch?articleid=SB11202777042148913632204582488220182121442&weburl=http://www.wsj.com/articles/SB11202777042148913632204582488220182121442"
+                        "wsj://launch?articleid=SB11202777042148913632204582487202009421794&weburl=http://www.wsj.com/articles/SB11202777042148913632204582487202009421794&headline=",
+                        "wsj://launch?articleid=SB11202777042148913632204582488220182121442&weburl=http://www.wsj.com/articles/SB11202777042148913632204582488220182121442&headline="
                     ]
                 }
             ]
