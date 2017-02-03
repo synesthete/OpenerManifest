@@ -6692,8 +6692,7 @@
             "identifier": "blink",
             "storeIdentifier": "946766863",
             "scheme": "blink://",
-            "docs": "http://squibner.com/blink/blink-url-scheme/",
-            "new": true
+            "docs": "http://squibner.com/blink/blink-url-scheme/"
         },
         {
             "displayName": "Associate",
