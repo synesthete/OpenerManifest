@@ -2955,6 +2955,17 @@
                         "aliexpress://product/detail?productId=32712227119",
                         "aliexpress://product/detail?productId=1121184844"
                     ]
+                },
+                {
+                    "appIdentifier": "aliexpresshd",
+                    "format": "aliexpresshd://product/detail?productId=$1",
+                    "testResults": [
+                        "aliexpresshd://product/detail?productId=32409017535",
+                        "aliexpresshd://product/detail?productId=32439617530",
+                        "aliexpresshd://product/detail?productId=32712227119",
+                        "aliexpresshd://product/detail?productId=32712227119",
+                        "aliexpresshd://product/detail?productId=1121184844"
+                    ]
                 }
             ]
         },
@@ -6038,7 +6049,15 @@
             "displayName": "AliExpress",
             "identifier": "aliexpress",
             "storeIdentifier": "436672029",
+            "platform": "phone",
             "scheme": "aliexpress://"
+        },
+        {
+            "displayName": "AliExpress",
+            "identifier": "aliexpresshd",
+            "storeIdentifier": "854356557",
+            "platform": "pad",
+            "scheme": "aliexpresshd://"
         },
         {
             "displayName": "Taobao",
