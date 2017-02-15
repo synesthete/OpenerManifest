@@ -2504,6 +2504,13 @@
                     "testResults": [
                         "castro://subscribe/overcast.fm/+lu7oErhY"
                     ]
+                },
+                {
+                    "appIdentifier": "pocketcasts",
+                    "format": "pktc://subscribe/$1",
+                    "testResults": [
+                        "pktc://subscribe/overcast.fm/+lu7oErhY"
+                    ]
                 }
             ]
         },
@@ -2536,6 +2543,16 @@
                         "castro://subscribe/itunes.apple.com/us/podcast/episode-01-the-alibi/id917918570?i=319686008&mt=2",
                         "castro://subscribe/itunes.apple.com/us/podcast/id909109678",
                         "castro://subscribe/itunes.apple.com/podcast/id909109678"
+                    ]
+                },
+                {
+                    "appIdentifier": "pocketcasts",
+                    "format": "pktc://subscribe/$1",
+                    "testResults": [
+                        "pktc://subscribe/itunes.apple.com/us/podcast/serial/id917918570?mt=2",
+                        "pktc://subscribe/itunes.apple.com/us/podcast/episode-01-the-alibi/id917918570?i=319686008&mt=2",
+                        "pktc://subscribe/itunes.apple.com/us/podcast/id909109678",
+                        "pktc://subscribe/itunes.apple.com/podcast/id909109678"
                     ]
                 }
             ]
@@ -7217,6 +7234,14 @@
             "identifier": "xkcdhd",
             "storeIdentifier": "369631343",
             "scheme": "xkcd://"
+        },
+        {
+            "displayName": "Pocket Casts",
+            "identifier": "pocketcasts",
+            "storeIdentifier": "414834813",
+            "scheme": "pktc://",
+            "docs": "http://support.pocketcasts.com/article/how-can-i-use-pocket-casts-with-apps-like-launch-center/",
+            "new": true
         }
     ],
     "browsers": [
