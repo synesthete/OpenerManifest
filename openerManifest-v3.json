@@ -6367,8 +6367,8 @@
             "displayName": "Alien Blue",
             "identifier": "alienblue",
             "storeIdentifier": "923394341",
-            "scheme": "alienblue://",
-            "platform": "pad"
+            "platform": "pad",
+            "scheme": "alienblue://"
         },
         {
             "displayName": "Quora",
