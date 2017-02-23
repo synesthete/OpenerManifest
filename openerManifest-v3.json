@@ -7240,8 +7240,7 @@
             "identifier": "pocketcasts",
             "storeIdentifier": "414834813",
             "scheme": "pktc://",
-            "docs": "http://support.pocketcasts.com/article/how-can-i-use-pocket-casts-with-apps-like-launch-center/",
-            "new": true
+            "docs": "http://support.pocketcasts.com/article/how-can-i-use-pocket-casts-with-apps-like-launch-center/"
         }
     ],
     "browsers": [
