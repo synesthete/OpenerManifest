@@ -5191,6 +5191,22 @@
             ]
         },
         {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:www\\.)?snapchat\\.com/unlock(.*)$",
+            "testInputs": [
+                "https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=7d61fcc34ad3496f8b58d52211253de3&metadata=1"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "snapchat",
+                    "format": "snapchat://unlock$1",
+                    "testResults": [
+                        "snapchat://unlock/?type=SNAPCODE&uuid=7d61fcc34ad3496f8b58d52211253de3&metadata=1"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Add User",
             "regex": "http(?:s)?://(?:www\\.)?peach\\.cool/add/([^/]+).*?$",
             "testInputs": [
