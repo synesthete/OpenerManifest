@@ -5718,6 +5718,17 @@
                         null,
                         null
                     ]
+                },
+                {
+                    "appIdentifier": "infuse",
+                    "script": "function process(url, completionHandler) { completionHandler('infuse://x-callback-url/play?url=' + encodeURIComponent(url)); }",
+                    "script2": "function process(url, completionHandler) { completionHandler('infuse://x-callback-url/play?url=' + encodeURIComponent(url)); }",
+                    "testResults": [
+                        "infuse://x-callback-url/play?url=https%3A%2F%2Fdl.dropboxusercontent.com%2Fs%2Fs6n8yt4bm7z9mur%2FOpener.mp4",
+                        null,
+                        null,
+                        null
+                    ]
                 }
             ]
         },
@@ -7257,6 +7268,14 @@
             "storeIdentifier": "414834813",
             "scheme": "pktc://",
             "docs": "http://support.pocketcasts.com/article/how-can-i-use-pocket-casts-with-apps-like-launch-center/"
+        },
+        {
+            "displayName": "Infuse",
+            "identifier": "infuse",
+            "storeIdentifier": "1136220934",
+            "scheme": "infuse://",
+            "docs": "https://support.firecore.com/hc/en-us/articles/215090997-Callback-URLs",
+            "new": true
         }
     ],
     "browsers": [
