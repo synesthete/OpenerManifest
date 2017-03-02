@@ -85,23 +85,7 @@ function process(url, completionHandler) {
 }
 ```
 
-Opener enforces a timeout of 15 seconds if `completionHandler` isn't called.
-
-#### Common scenarios
-
-If you're planning on using the **Twitter Cards** tags embedded on a page, you should isolate the app's URL scheme and do something like this, which is used for [Swarm](https://www.swarmapp.com/).
-
-```
-function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(swarm:\/\/.*?)\".*'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }
-```
-
-If you need to **URL encode** something, here's an example for [Overcast](https://overcast.fm/).
-
-```
-function process(url, completionHandler) { completionHandler('overcast://x-callback-url/add?url=' + encodeURIComponent(url)); }
-```
-
-If you need to pick a component out of the URL passed in, you can use the JavaScript `RegExp` class.
+Some common scenarios and best practices for using `script` are outlined [here](Best\ Practices.md). Opener enforces a timeout of 15 seconds if `completionHandler` isn't called.
 
 ### Testing
 
