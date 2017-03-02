@@ -65,14 +65,14 @@ Because an action could taken in multiple apps, there's an array within each act
 
 ### Advanced URL generation in formats
 
-Some app native URLs can't be generated using simple regex templating, they require lookups or encoding of some sort. To do this, action formats can provide Javascript methods that are executed to convert input URLs to app native action URLs.
+Some app native URLs can't be generated using simple regex templating, they require lookups or encoding of some sort. To do this, action formats can provide JavaScript methods that are executed to convert input URLs to app native action URLs.
 
 <table>
 <tr><th>Key</th><th>Type</th><th>Description</th></tr>
-<tr><td><code>script</code></td><td>Javascript string</td><td>Mutually exclusive with <code>format</code>.</td></tr>
+<tr><td><code>script</code></td><td>JavaScript string</td><td>Mutually exclusive with <code>format</code>.</td></tr>
 </table>
 
-This script must contain a Javascript function named `process` that takes two inputs, a URL and an anonymous function to be called upon completion. Once complete, the completion handler should be called passing the result or `null` on failure.
+This script must contain a JavaScript function named `process` that takes two inputs, a URL and an anonymous function to be called upon completion. Once complete, the completion handler should be called passing the result or `null` on failure.
 
 For example
 
@@ -101,7 +101,7 @@ If you need to **URL encode** something, here's an example for [Overcast](https:
 function process(url, completionHandler) { completionHandler('overcast://x-callback-url/add?url=' + encodeURIComponent(url)); }
 ```
 
-If you need to pick a component out of the URL passed in, you can use the Javascript `RegExp` class.
+If you need to pick a component out of the URL passed in, you can use the JavaScript `RegExp` class.
 
 ### Testing
 
@@ -156,7 +156,7 @@ Testing formats that have `includeHeaders` is not currently possible.
 
 ## Browsers
 
-Support for opening any http or https URL in browsers was added in Opener 1.1. Browsers live under the `browsers` top level key, each one contains a subset of the keys from the other `app`, `action`, and `format` dictionaries.
+Support for opening any http or https URL in browsers was added in Opener 1.1. Browsers live under the `browsers` top level key, each one contains a subset of the keys from the other `app`, `action`, and `format` dictionaries.
 
 <table>
 <tr><th>Key</th><th>Type</th><th>Description</th></tr>
@@ -170,7 +170,7 @@ Support for opening any http or https URL in browsers was added in Opener 1.1. B
 <tr><td><code>country</code></td><td>string</td><td>If the app isn't globally available, including a country code in which it is available in this field will allow the app's icon to show regardless of the user's store. (Opener 1.1.1 and above)</td></tr>
 <tr><td><code>regex</code></td><td>string</td><td>A regular expression string that the input URL is matched against, used for pattern replacements.</td></tr>
 <tr><td><code>format</code></td><td>string</td><td>The regex template applied to the input. Mutually exclusive with <code>script</code>.</td></tr>
-<tr><td><code>script</code></td><td>Javascript string</td><td>Mutually exclusive with <code>format</code>.</td></tr>
+<tr><td><code>script</code></td><td>JavaScript string</td><td>Mutually exclusive with <code>format</code>.</td></tr>
 <tr><td><code>testInputs</code></td><td>array of strings</td><td>An array of test inputs that will be run against <code>regex</code> then each action.</td></tr>
 <tr><td><code>testResults</code></td><td>array of strings or nulls</td><td>An array of expected results for this format for each of the test inputs. <code>null</code> should be used to specify that a test input <i>should not</i> match</td></tr>
 </table>
@@ -203,17 +203,17 @@ There's a python script included named [minify.py](./minify.py), this script tak
 Sample usage:
 
 ```
-python minify.py openerManifest-v2.json
+python minify.py openerManifest-v3.json
 ```
 
 ## Versions
 
-The manifest file has a `-v2` on the end, this indicates the major version of the manifest. If there are ever changes to the app that make the manifest not backwards compatible with a former version, the suffix of the manifest file is bumped.
+The manifest file has a `-v3` on the end, this indicates the major version of the manifest. If there are ever changes to the app that make the manifest not backwards compatible with a former version, the suffix of the manifest file is bumped.
 
 <table>
 <tr><th>Manifest Version</th><th>App Version</th><th>Changes</th></tr>
 <tr><td>v2</td><td>1.0.10</td><td>Made app dictionary <code>storeIdentifier</code> field optional. This was required in v1. Change was made in order to support first party apps, which lack an iTunes identifier.</td></tr>
-<tr><td>v3</td><td>1.1.8</td><td>Add support for <code>script2</code> field, which is processed using JavascriptCore instead of a UIWebView.</td></tr>
+<tr><td>v3</td><td>1.1.8</td><td>Add support for <code>script2</code> field, which is processed using JavaScriptCore instead of a <code>UIWebView</code>.</td></tr>
 </table>
 
 ## Contributing
