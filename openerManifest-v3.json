@@ -2515,6 +2515,41 @@
             ]
         },
         {
+            "title": "Open Link",
+            "regex": "http(s)?://pca.st/\\w+$",
+            "testInputs": [
+                "http://pca.st/AmWl",
+                "http://pca.st/8gdy"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "pocketcasts",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(pktc://.*?)\\'.*'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = results[1]; }; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(pktc://.*?)\\'.*'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler(match); }",
+                    "testResults": [
+                        "pktc://www.pocketcasts.com/social/share/show/AmWl",
+                        "pktc://www.pocketcasts.com/social/share/show/8gdy"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open List",
+            "regex": "http(?:s)?://lists\\.pocketcasts\\.com/([^/]*).*$",
+            "testInputs": [
+                "https://lists.pocketcasts.com/c5cf328e-ee81-47ed-9d7c-e36c5675a9d4"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "pocketcasts",
+                    "format": "pktc://sharelist/lists.pocketcasts.com/$1",
+                    "testResults": [
+                        "pktc://sharelist/lists.pocketcasts.com/c5cf328e-ee81-47ed-9d7c-e36c5675a9d4"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Add iTunes Podcast",
             "regex": "http(?:s)?://(?:geo\\.)?(itunes\\.apple\\.com/(?:.*/)*podcast/(?:.*/)?id\\d+.*)$",
             "testInputs": [
