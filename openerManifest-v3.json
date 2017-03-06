@@ -7309,8 +7309,7 @@
             "identifier": "infuse",
             "storeIdentifier": "1136220934",
             "scheme": "infuse://",
-            "docs": "https://support.firecore.com/hc/en-us/articles/215090997-Callback-URLs",
-            "new": true
+            "docs": "https://support.firecore.com/hc/en-us/articles/215090997-Callback-URLs"
         }
     ],
     "browsers": [
