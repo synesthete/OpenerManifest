@@ -7418,20 +7418,6 @@
             ]
         },
         {
-            "displayName": "Mercury",
-            "identifier": "mercury",
-            "scheme": "merc://",
-            "storeIdentifier": "1000610117",
-            "regex": "(http(?:s)?.*)",
-            "format": "merc://$1",
-            "testInputs": [
-                "http://www.opener.link/"
-            ],
-            "testResults": [
-                "merc://http://www.opener.link/"
-            ]
-        },
-        {
             "displayName": "Sleipnir",
             "identifier": "sleipnir",
             "scheme": "shttp://",
