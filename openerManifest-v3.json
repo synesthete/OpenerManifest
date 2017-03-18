@@ -7618,6 +7618,23 @@
                 "onionbrowser://www.opener.link/",
                 "onionbrowsers://twitter.com/openerapp"
             ]
+        },
+        {
+            "displayName": "Files",
+            "identifier": "files",
+            "scheme": "downloadslite://",
+            "storeIdentifier": "349275540",
+            "regex": "(http(?:s)?.*)",
+            "format": "downloadslite://$1",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "downloadslite://http://www.opener.link/",
+                "downloadslite://https://twitter.com/openerapp"
+            ],
+            "new": true
         }
     ]
 }
