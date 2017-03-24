@@ -7677,6 +7677,23 @@
                 "endlesshttps://twitter.com/openerapp"
             ],
             "new": true
+        },
+        {
+            "displayName": "Perfect Browser",
+            "identifier": "perfectbrowser",
+            "scheme": "perfect://",
+            "storeIdentifier": "317836614",
+            "regex": "http(?:s)?(.*)",
+            "format": "perfect$1",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "perfect://www.opener.link/",
+                "perfect://twitter.com/openerapp"
+            ],
+            "new": true
         }
     ]
 }
