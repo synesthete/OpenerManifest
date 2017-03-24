@@ -6056,6 +6056,23 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Doc",
+            "regex": "http(?:s)?://paper\\.dropbox\\.com/doc/.*$",
+            "testInputs": [
+                "https://paper.dropbox.com/doc/Tangent-Release-Notes-xYQoYzNM07FVmuQ3Jp286"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "dropboxpaper",
+                    "script": "function process(url, completionHandler) { completionHandler('dbx-paper://open-doc?url=' + encodeURIComponent(url)); }",
+                    "script2": "function process(url, completionHandler) { completionHandler('dbx-paper://open-doc?url=' + encodeURIComponent(url)); }",
+                    "testResults": [
+                        "dbx-paper://open-doc?url=https%3A%2F%2Fpaper.dropbox.com%2Fdoc%2FTangent-Release-Notes-xYQoYzNM07FVmuQ3Jp286"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -7283,6 +7300,13 @@
             "identifier": "xkcdhd",
             "storeIdentifier": "369631343",
             "scheme": "xkcd://"
+        },
+        {
+            "displayName": "Dropbox Paper",
+            "identifier": "dropboxpaper",
+            "storeIdentifier": "1126623662",
+            "scheme": "dbxpaper://",
+            "new": true
         }
     ],
     "browsers": [
