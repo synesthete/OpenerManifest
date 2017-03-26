@@ -7305,7 +7305,7 @@
             "displayName": "Dropbox Paper",
             "identifier": "dropboxpaper",
             "storeIdentifier": "1126623662",
-            "scheme": "dbxpaper://",
+            "scheme": "dbx-paper://",
             "new": true
         }
     ],
