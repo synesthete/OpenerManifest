@@ -7657,8 +7657,7 @@
             "testResults": [
                 "downloadslite://http://www.opener.link/",
                 "downloadslite://https://twitter.com/openerapp"
-            ],
-            "new": true
+            ]
         },
         {
             "displayName": "Endless",
