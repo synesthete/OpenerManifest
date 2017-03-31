@@ -874,8 +874,8 @@
             "formats": [
                 {
                     "appIdentifier": "path",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(path://moments/[a-f0-9]+)'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(path://moments/[a-f0-9]+)'); var match = regex.exec(res)[1]; completionHandler(match); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('https://path.com/moment/([a-f0-9]+)'); var match = regex.exec(res)[1]; completionHandler('path://moments/' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('https://path.com/moment/([a-f0-9]+)'); var match = regex.exec(res)[1]; completionHandler('path://moments/' + match); }",
                     "testResults": [
                         "path://moments/580c055e7651c2a8c743cb44"
                     ]
@@ -1071,7 +1071,7 @@
                     "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(flipboard://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
                     "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(flipboard://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); }",
                     "testResults": [
-                        "flipboard://showSection/auth/flipboard/user%252F230604372?title=Catherine%20Scowcroft%20on%20Flipboard",
+                        "flipboard://showSection/flipboard/user%252F230604372?title=Catherine%20Scowcroft%20on%20Flipboard",
                         "flipboard://showSection/sid/5ha7nr15y/catherine_265?title=LIVERPOOL%20on%20Flipboard",
                         "flipboard://flipit?url=http%3A%2F%2Fflip.it%2FMS9XR"
                     ]
@@ -3461,11 +3461,11 @@
             "formats": [
                 {
                     "appIdentifier": "runkeeper",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(runkeeper://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(runkeeper://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(runkeeper://\\\\?view=activity&tripuuid=(\\\\w+|-)+)'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(runkeeper://\\\\?view=activity&tripuuid=(\\\\w+|-)+)'); var match = regex.exec(res)[1]; completionHandler(match); }",
                     "testResults": [
-                        "runkeeper://?view=activity&tripuuid=2fa7223f-508e-450f-abe5-9e6c436db151&deepLinkSource=twitterCard",
-                        "runkeeper://?view=activity&tripuuid=18ff2a03-f397-4376-8c00-ded503b5732f&deepLinkSource=twitterCard"
+                        "runkeeper://?view=activity&tripuuid=2fa7223f-508e-450f-abe5-9e6c436db151",
+                        "runkeeper://?view=activity&tripuuid=18ff2a03-f397-4376-8c00-ded503b5732f"
                     ]
                 }
             ]
@@ -3958,11 +3958,11 @@
             "formats": [
                 {
                     "appIdentifier": "workflow",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(workflow://import-workflow/.*)\"'); var match = regex.exec(res)[1]; /* http://stackoverflow.com/a/7394787/3943258 */ var txt = document.createElement('textarea'); txt.innerHTML = match; match = txt.value; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(workflow://import-workflow/.*)\"'); var match = regex.exec(res)[1]; match = htmlDecode(match); completionHandler(match); }",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(workflow://workflows/.*)\"'); var match = regex.exec(res)[1]; /* http://stackoverflow.com/a/7394787/3943258 */ var txt = document.createElement('textarea'); txt.innerHTML = match; match = txt.value; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(workflow://workflows/.*)\"'); var match = regex.exec(res)[1]; match = htmlDecode(match); completionHandler(match); }",
                     "testResults": [
-                        "workflow://import-workflow/?url=https%3A%2F%2Fworkflow.is%2Fworkflows%2F304554907e6a473e9e810297509b00c5.wflow&name=Expand%20URL",
-                        "workflow://import-workflow/?url=https%3A%2F%2Fworkflow.is%2Fworkflows%2Fe37a43302f63402a973af02e7fa8d97e.wflow&name=Listening%20In%20Overcast"
+                        "workflow://workflows/304554907e6a473e9e810297509b00c5",
+                        "workflow://workflows/e37a43302f63402a973af02e7fa8d97e"
                     ]
                 }
             ]
@@ -5920,10 +5920,10 @@
                     "appIdentifier": "pandora",
                     "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(pandorav\\\\d+:/.*?)\"'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler(match); }",
                     "testResults": [
-                        "pandorav4:/createStation?musicId=S253709&amp;shareImp=true",
-                        "pandorav4:/createStation?musicId=S2698967",
+                        "pandorav4:/backstage/track?token=d76f8acfb83a50de&amp;pandoraId=TR:253709&amp;shareImp=true",
+                        "pandorav4:/backstage/track?token=ce2785efb5403508425ba2910f7abf8b&amp;pandoraId=TR:2698967",
                         null,
-                        "pandorav4:/createStation?musicId=S185713"
+                        "pandorav4:/backstage/track?token=1dd92632839300d3&amp;pandoraId=TR:185713"
                     ]
                 }
             ]
