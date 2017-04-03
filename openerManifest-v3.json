@@ -7305,8 +7305,7 @@
             "displayName": "Dropbox Paper",
             "identifier": "dropboxpaper",
             "storeIdentifier": "1126623662",
-            "scheme": "dbx-paper://",
-            "new": true
+            "scheme": "dbx-paper://"
         }
     ],
     "browsers": [
@@ -7674,8 +7673,7 @@
             "testResults": [
                 "endlesshttp://www.opener.link/",
                 "endlesshttps://twitter.com/openerapp"
-            ],
-            "new": true
+            ]
         },
         {
             "displayName": "Perfect Browser",
@@ -7691,8 +7689,7 @@
             "testResults": [
                 "perfect://www.opener.link/",
                 "perfect://twitter.com/openerapp"
-            ],
-            "new": true
+            ]
         }
     ]
 }
