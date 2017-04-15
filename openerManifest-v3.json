@@ -7494,22 +7494,6 @@
             ]
         },
         {
-            "displayName": "Instabrowser",
-            "identifier": "instabrowser",
-            "scheme": "instabrowser://",
-            "storeIdentifier": "527221992",
-            "regex": "http(?:s)?://(.*)$",
-            "format": "instabrowser://$1",
-            "testInputs": [
-                "http://www.opener.link/",
-                "https://twitter.com/openerapp"
-            ],
-            "testResults": [
-                "instabrowser://www.opener.link/",
-                "instabrowser://twitter.com/openerapp"
-            ]
-        },
-        {
             "displayName": "Dolphin",
             "identifier": "dolphinpad",
             "scheme": "dolphin://",
