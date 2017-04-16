@@ -7494,6 +7494,22 @@
             ]
         },
         {
+            "displayName": "Instabrowser",
+            "identifier": "instabrowser",
+            "scheme": "instabrowser://",
+            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/instabrowser-120.jpg",
+            "regex": "http(?:s)?://(.*)$",
+            "format": "instabrowser://$1",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "instabrowser://www.opener.link/",
+                "instabrowser://twitter.com/openerapp"
+            ]
+        },
+        {
             "displayName": "Dolphin",
             "identifier": "dolphinpad",
             "scheme": "dolphin://",
