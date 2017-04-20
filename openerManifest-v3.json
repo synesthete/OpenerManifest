@@ -7704,7 +7704,8 @@
             ],
             "testResults": [
                 "yandexbrowser-open-url://www.opener.link/"
-            ]
+            ],
+            "new": true
         },
         {
             "displayName": "Yandex",
@@ -7719,7 +7720,8 @@
             ],
             "testResults": [
                 "yandexbrowser-open-url://www.opener.link/"
-            ]
+            ],
+            "new": true
         }
     ]
 }
