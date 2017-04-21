@@ -2823,6 +2823,15 @@
                         "beamapp://reddit.com/r/gaming/",
                         "beamapp://reddit.com/r/spotify?utm_source=mweb_redirect&compact=true"
                     ]
+                },
+                {
+                    "appIdentifier": "readder",
+                    "format": "readder://open-url/https://$2",
+                    "testResults": [
+                        "readder://open-url/https://reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/",
+                        "readder://open-url/https://reddit.com/r/gaming/",
+                        "readder://open-url/https://reddit.com/r/spotify?utm_source=mweb_redirect&compact=true"
+                    ]
                 }
             ]
         },
@@ -7306,6 +7315,14 @@
             "identifier": "dropboxpaper",
             "storeIdentifier": "1126623662",
             "scheme": "dbx-paper://"
+        },
+        {
+            "displayName": "Readder",
+            "identifier": "readder",
+            "storeIdentifier": "1043575806",
+            "scheme": "readder://",
+            "docs": "https://www.reddit.com/r/readder/comments/5sbf3b/url_schemexcallback_support/",
+            "new": true
         }
     ],
     "browsers": [
