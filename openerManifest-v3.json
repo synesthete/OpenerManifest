@@ -922,7 +922,7 @@
         },
         {
             "title": "Open Board",
-            "regex": "http(?:s?)://(?!(?:help|blog|engineering)\\.)(?:\\w+\\.)?pinterest\\.com/(?!pin|search|explore|categories)([a-zA-Z0-9-_]+)(?:/)(?!pins)([a-zA-Z0-9-_]+).*?$",
+            "regex": "http(?:s?)://(?!(?:help|blog|engineering)\\.)(?:\\w+\\.)?pinterest\\.com/(?!pin|search|explore|categories|discover)([a-zA-Z0-9-_]+)(?:/)(?!pins)([a-zA-Z0-9-_]+).*?$",
             "testInputs": [
                 "https://pinterest.com/cnnr/what-time-is-it/",
                 "https://www.pinterest.com/cnnr/what-time-is-it/",
@@ -935,7 +935,8 @@
                 "https://www.pinterest.com/categories/popular",
                 "https://help.pinterest.com/categories/popular",
                 "https://blog.pinterest.com/en/search-outside-box-new-pinterest-visual-discovery-tools",
-                "https://engineering.pinterest.com/blog/engineering-shop-look-pinterest"
+                "https://engineering.pinterest.com/blog/engineering-shop-look-pinterest",
+                "https://fr.pinterest.com/discover/article/4896370179342087833/"
             ],
             "formats": [
                 {
@@ -946,6 +947,7 @@
                         "pinterest://board/cnnr/what-time-is-it",
                         "pinterest://board/cnnr/what-time-is-it",
                         "pinterest://board/cnnr/what-time-is-it",
+                        null,
                         null,
                         null,
                         null,
