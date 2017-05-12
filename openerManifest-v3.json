@@ -693,7 +693,7 @@
             "regex": "http(s)?://(?:[a-zA-Z0-9_\\-\\.]+\\.)?vsco\\.co(m)?/(?:[a-zA-Z0-9_\\-\\.]+/)?journal/\\w+.*$",
             "testInputs": [
                 "http://artistinitiative.vsco.co/journal/a-century-of-artifice-launch-recap",
-                "http://vsco.co/brendanryan/journal/iceland"
+                "http://vsco.co/whomstmikejones/journal/iceland"
             ],
             "formats": [
                 {
