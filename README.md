@@ -69,7 +69,8 @@ Some app native URLs can't be generated using simple regex templating, they requ
 
 <table>
 <tr><th>Key</th><th>Type</th><th>Description</th></tr>
-<tr><td><code>script</code></td><td>JavaScript string</td><td>Mutually exclusive with <code>format</code>.</td></tr>
+<tr><td><code>script</code></td><td>JavaScript string</td><td>Mutually exclusive with <code>format</code>, can coexist with <code>script2</code>.</td></tr>
+<tr><td><code>script2</code></td><td>JavaScript string</td><td>Mutually exclusive with <code>format</code>, can coexist with <code>script</code>.</td></tr>
 </table>
 
 This script must contain a JavaScript function named `process` that takes two inputs, a URL and an anonymous function to be called upon completion. Once complete, the completion handler should be called passing the result or `null` on failure.
@@ -85,7 +86,16 @@ function process(url, completionHandler) {
 }
 ```
 
-Some common scenarios and best practices for using `script` are outlined [here](Best\ Practices.md). Opener enforces a timeout of 15 seconds if `completionHandler` isn't called.
+The contents of the `script` field are executed in a `UIWebView`, which gives it a full set of functionality but is a bit slow and costly. The `script2` field is instead run inside of an engine that uses JavaScriptCore, which is much more performant but doesn't have some small functionality that the `UIWebView` has. For convenience, the environment that the `script2` field is executed in has the following functions.
+
+- `httpRequest` makes a blocking call to download the contents of a URL.
+- `jsonRequest` makes a blocking call to download the contents of a URL and parses the results into JSON.
+- `btoa` base 64 encodes its input.
+- `htmlDecode` decodes HTML entities in the input string.
+
+If `script2` is provided it's used, otherwise we fall back to `script` if specified. Clients prior to version 1.1.8 are only capable of using the `script` field.
+
+Some common scenarios and best practices for using the script fields are outlined [here](Best\ Practices.md). Opener enforces a timeout of 15 seconds if `completionHandler` isn't called.
 
 ### Testing
 
