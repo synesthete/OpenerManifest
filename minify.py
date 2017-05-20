@@ -14,18 +14,24 @@ path = sys.argv[1]
 
 # Use the --prefer-script-v1 flag when use need the v2 format (includes only 'script', not 'script2')
 preferredScriptName = 'script2'
+stripNewField = False
 if len(sys.argv) > 2:
     if sys.argv[2] == '--prefer-script-v1':
         preferredScriptName = 'script'
+    elif sys.argv[2] == '--strip-new':
+        stripNewField = True
 
 data = json.loads(open(path).read(), object_pairs_hook=OrderedDict) # http://stackoverflow.com/a/6921760
 
 # Strip unneeded keys from apps
+appKeysToKeep = ["identifier", "displayName", "storeIdentifier", "scheme", "platform", "iconURL", "country"]
+if not stripNewField:
+    appKeysToKeep.append("new");
 for appIndex,app in enumerate(data['apps']):
 	appKeys = app.keys()
 	for keyIndex,key in enumerate(appKeys):
-		if not key in ["identifier", "displayName", "storeIdentifier", "scheme", "new", "platform", "iconURL", "country"]:
-			# print "Removing " + key + " from " + app["identifier"]
+		if not key in appKeysToKeep:
+			print "Removing " + key + " from " + app["identifier"]
 			app.pop(key, None)
 			
 # Strip unneeded keys from actions
@@ -62,11 +68,14 @@ for actionIndex,action in enumerate(data['actions']):
         data['actions'].remove(action)
 
 # Strip unneeded keys from browsers
+browserKeysToKeep = ["identifier", "displayName", "storeIdentifier", "scheme", "platform", "iconURL", "regex", "format", "script", "script2"]
+if not stripNewField:
+    browserKeysToKeep.append("new");
 if 'browsers' in data:
 	for browserIndex,browser in enumerate(data['browsers']):
 		browserKeys = browser.keys()
 		for keyIndex,key in enumerate(browserKeys):
-			if not key in ["identifier", "displayName", "storeIdentifier", "scheme", "new", "platform", "iconURL", "regex", "format", "script", "script2"]:
+			if not key in browserKeysToKeep:
                 # print "Removing " + key + " from browser"
 				browser.pop(key, None)
     
