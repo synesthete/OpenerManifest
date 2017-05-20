@@ -6084,6 +6084,30 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Song",
+            "regex": "http(?:s)?://music\\.163\\.com/(?:(?:m|#)/)?song(?:(?:.*(?:&|\\?)id=|/))(\\d+).*$",
+            "testInputs": [
+                "http://music.163.com/m/song?id=475072294&userid=16656993",
+                "http://music.163.com/m/song/?id=475072294&userid=16656993",
+                "http://music.163.com/#/song/475072294/?userid=16656993",
+                "http://music.163.com/song/17124997",
+                "http://music.163.com/#/song/17124997"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "orpheus",
+                    "format": "orpheus://song/$1",
+                    "testResults": [
+                        "orpheus://song/475072294",
+                        "orpheus://song/475072294",
+                        "orpheus://song/475072294",
+                        "orpheus://song/17124997",
+                        "orpheus://song/17124997"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -7324,6 +7348,14 @@
             "storeIdentifier": "1050888989",
             "scheme": "wonder://",
             "docs": "http://jonathanthiry.com/wonder/url-schemes"
+        },
+        {
+            "displayName": "music.163.com",
+            "identifier": "orpheus",
+            "storeIdentifier": "590338362",
+            "scheme": "orpheus://",
+            "country": "cn",
+            "new": true
         }
     ],
     "browsers": [
