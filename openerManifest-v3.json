@@ -6102,8 +6102,8 @@
             ]
         },
         {
-            "title": "Open Song",
-            "regex": "http(?:s)?://music\\.163\\.com/(?:(?:m|#)/)?song(?:(?:.*(?:&|\\?)id=|/))(\\d+).*$",
+            "title": "Open Link",
+            "regex": "http(?:s)?://music\\.163\\.com/(?:(?:m|#)/)?(song|album|playlist|program)(?:(?:.*(?:&|\\?)id=|/))(\\d+).*$",
             "testInputs": [
                 "http://music.163.com/m/song?id=475072294&userid=16656993",
                 "http://music.163.com/m/song/?id=475072294&userid=16656993",
@@ -6114,7 +6114,7 @@
             "formats": [
                 {
                     "appIdentifier": "orpheus",
-                    "format": "orpheus://song/$1",
+                    "format": "orpheus://$1/$2",
                     "testResults": [
                         "orpheus://song/475072294",
                         "orpheus://song/475072294",
