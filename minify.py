@@ -31,7 +31,7 @@ for appIndex,app in enumerate(data['apps']):
 	appKeys = app.keys()
 	for keyIndex,key in enumerate(appKeys):
 		if not key in appKeysToKeep:
-			print "Removing " + key + " from " + app["identifier"]
+			# print "Removing " + key + " from " + app["identifier"]
 			app.pop(key, None)
 			
 # Strip unneeded keys from actions
