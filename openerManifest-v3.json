@@ -5127,16 +5127,23 @@
         },
         {
             "title": "Import PDF",
-            "regex": "http(?:s)?://([^?]+(?:\\.pdf).*)$",
+            "regex": "(http(?:s)?://([^?]+(?:\\.pdf).*))$",
             "testInputs": [
                 "http://www.gnustep.org/resources/OpenStepSpec.pdf"
             ],
             "formats": [
                 {
                     "appIdentifier": "pdfexpert",
-                    "format": "pdfehttp://$1",
+                    "format": "pdfehttp://$2",
                     "testResults": [
                         "pdfehttp://www.gnustep.org/resources/OpenStepSpec.pdf"
+                    ]
+                },
+                {
+                    "appIdentifier": "pdfviewer",
+                    "format": "pdfviewer://x-callback-url/add-file?url=$1",
+                    "testResults": [
+                        "pdfviewer://x-callback-url/add-file?url=http://www.gnustep.org/resources/OpenStepSpec.pdf"
                     ]
                 }
             ]
@@ -6299,6 +6306,14 @@
             "storeIdentifier": "743974925",
             "scheme": "pdfehttp://",
             "docs": "https://helpspot.readdle.com/pdfexpert/index.php?pg=kb.page&id=496"
+        },
+        {
+            "displayName": "PDF Viewer",
+            "identifier": "pdfviewer",
+            "storeIdentifier": "1120099014",
+            "scheme": "pdfviewer://",
+            "docs": "https://pdfviewer.io/guides/ios/url-scheme/",
+            "new": true
         },
         {
             "displayName": "SmilePlayer2",
