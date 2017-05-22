@@ -7391,8 +7391,8 @@
             "displayName": "music.163.com",
             "identifier": "orpheus",
             "storeIdentifier": "590338362",
-            "scheme": "orpheus://",
             "country": "cn",
+            "scheme": "orpheus://",
             "new": true
         }
     ],
