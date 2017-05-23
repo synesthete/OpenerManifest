@@ -4112,10 +4112,11 @@
         },
         {
             "title": "View App",
-            "regex": "http(?:s)?://(?:geo\\.)?itunes\\.apple\\.com/(?:.*/)*app/(?:.*/)?id(\\d+).*$",
+            "regex": "http(?:s)?://(?:geo\\.)?itunes\\.apple\\.com/(?:.*/)*app/(?:.*/)?id(\\d+)(?!.*(?:&|\\?)mt=12.*).*$",
             "testInputs": [
                 "https://itunes.apple.com/au/app/opener-open-links-in-apps/id989565871?mt=8",
-                "https://geo.itunes.apple.com/us/app/opener-open-links-in-apps/id989565871"
+                "https://geo.itunes.apple.com/us/app/opener-open-links-in-apps/id989565871",
+                "https://itunes.apple.com/us/app/things-3/id904280696?mt=12"
             ],
             "formats": [
                 {
@@ -4123,7 +4124,8 @@
                     "format": "opener://x-callback-url/show-store-product-details?id=$1",
                     "testResults": [
                         "opener://x-callback-url/show-store-product-details?id=989565871",
-                        "opener://x-callback-url/show-store-product-details?id=989565871"
+                        "opener://x-callback-url/show-store-product-details?id=989565871",
+                        null
                     ]
                 },
                 {
@@ -4131,7 +4133,8 @@
                     "format": "appshoppersocial://app/$1",
                     "testResults": [
                         "appshoppersocial://app/989565871",
-                        "appshoppersocial://app/989565871"
+                        "appshoppersocial://app/989565871",
+                        null
                     ]
                 },
                 {
@@ -4139,7 +4142,8 @@
                     "format": "appzapp://app?appid=$1",
                     "testResults": [
                         "appzapp://app?appid=989565871",
-                        "appzapp://app?appid=989565871"
+                        "appzapp://app?appid=989565871",
+                        null
                     ]
                 },
                 {
@@ -4147,7 +4151,8 @@
                     "format": "catchapp://app?id=$1",
                     "testResults": [
                         "catchapp://app?id=989565871",
-                        "catchapp://app?id=989565871"
+                        "catchapp://app?id=989565871",
+                        null
                     ]
                 },
                 {
@@ -4155,7 +4160,8 @@
                     "format": "catchapp://app?id=$1",
                     "testResults": [
                         "catchapp://app?id=989565871",
-                        "catchapp://app?id=989565871"
+                        "catchapp://app?id=989565871",
+                        null
                     ]
                 }
             ]
