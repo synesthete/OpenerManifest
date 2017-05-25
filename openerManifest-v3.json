@@ -2353,6 +2353,30 @@
             ]
         },
         {
+            "title": "Open User",
+            "regex": "http(?:s?)://(?:play\\.|open\\.|www\\.)?spotify\\.com/user/(\\w+)(?!.*/playlist.*).*$",
+            "testInputs": [
+                "https://open.spotify.com/user/naveenium/playlist/1zw42kQZUSZlHyVVn8AecH?utm_content=buffer30eb8&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer",
+                "http://open.spotify.com/user/timonominus/playlist/7rdUGYrNIMEdL6xdJDlMzZ",
+                "https://open.spotify.com/user/naveenium/",
+                "http://open.spotify.com/user/timonominus/?foo=bar",
+                "http://open.spotify.com/user/timonominus"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "spotify",
+                    "format": "spotify:user:$1",
+                    "testResults": [
+                        null,
+                        null,
+                        "spotify:user:naveenium",
+                        "spotify:user:timonominus",
+                        "spotify:user:timonominus"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Artist",
             "regex": "http(?:s?)://(?:play\\.|open\\.|www\\.)?spotify\\.com/artist/(\\w+).*$",
             "testInputs": [
