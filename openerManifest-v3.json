@@ -6342,8 +6342,7 @@
             "identifier": "pdfviewer",
             "storeIdentifier": "1120099014",
             "scheme": "pdfviewer://",
-            "docs": "https://pdfviewer.io/guides/ios/url-scheme/",
-            "new": true
+            "docs": "https://pdfviewer.io/guides/ios/url-scheme/"
         },
         {
             "displayName": "SmilePlayer2",
@@ -6858,8 +6857,7 @@
             "displayName": "Stack Overflow",
             "identifier": "stackoverflow",
             "storeIdentifier": "1155618808",
-            "scheme": "com.stackexchange.stackoverflow://",
-            "new": true
+            "scheme": "com.stackexchange.stackoverflow://"
         },
         {
             "displayName": "Stack Exchange",
@@ -7422,8 +7420,7 @@
             "identifier": "orpheus",
             "storeIdentifier": "590338362",
             "country": "cn",
-            "scheme": "orpheus://",
-            "new": true
+            "scheme": "orpheus://"
         }
     ],
     "browsers": [
