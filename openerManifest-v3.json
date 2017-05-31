@@ -1948,12 +1948,27 @@
         },
         {
             "title": "Open Broadcast",
-            "regex": "http(?:s?)://(?:www\\.)?periscope.tv/w/.*$",
+            "regex": "http(?:s?)://(?:www\\.)?(?:periscope|pscp)\\.tv/[^/]+/([^/|\\?]+)(?:/|/?\\?.*)?$",
+            "testInputs": [
+                "https://www.pscp.tv/w/1mnxeEVprZqxX",
+                "https://www.pscp.tv/w/1BdGYvPdWLvJX",
+                "https://www.periscope.tv/AndrewScheer/1BdGYvPdWLvJX",
+                "https://www.pscp.tv/timonus",
+                "https://www.pscp.tv/timonus?foo=bar",
+                "https://www.pscp.tv/timonus/?foo=bar"
+            ],
             "formats": [
                 {
                     "appIdentifier": "periscope",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(pscp://broadcast/\\\\d+)'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(pscp://broadcast/\\\\d+)'); var match = regex.exec(res)[1]; completionHandler(match); }"
+                    "format": "pscp://broadcast/$1",
+                    "testResults": [
+                        "pscp://broadcast/1mnxeEVprZqxX",
+                        "pscp://broadcast/1BdGYvPdWLvJX",
+                        "pscp://broadcast/1BdGYvPdWLvJX",
+                        null,
+                        null,
+                        null
+                    ]
                 }
             ]
         },
