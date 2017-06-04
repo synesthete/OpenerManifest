@@ -6176,6 +6176,24 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Story",
+            "regex": "http(?:s)?://(?:www\\.)?blendle\\.com/(?:i|item)/(?:[^/]+/[^/]+/)?([^/|\\?]*).*$",
+            "testInputs": [
+                "https://blendle.com/i/the-new-york-times/in-the-world-of-the-sapiosexual-the-hottest-body-part-is-the-brain/bnl-newyorktimes-20170603-18_1?sharer=eyJ2ZXJzaW9uIjoiMSIsInVpZCI6InRpbW9udXMiLCJpdGVtX2lkIjoiYm5sLW5ld3lvcmt0aW1lcy0yMDE3MDYwMy0xOF8xIn0%3D",
+                "https://blendle.com/item/bnl-newyorktimes-20170603-18_1"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "blendle",
+                    "format": "blendle://item/$1",
+                    "testResults": [
+                        "blendle://item/bnl-newyorktimes-20170603-18_1",
+                        "blendle://item/bnl-newyorktimes-20170603-18_1"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -7436,6 +7454,13 @@
             "storeIdentifier": "590338362",
             "country": "cn",
             "scheme": "orpheus://"
+        },
+        {
+            "displayName": "Blendle",
+            "identifier": "blendle",
+            "storeIdentifier": "947936149",
+            "scheme": "blendle://",
+            "new": true
         }
     ],
     "browsers": [
