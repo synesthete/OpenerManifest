@@ -30,11 +30,11 @@ For example, if Opener were to include itself as an app
 
 ```
 {
-	"identifier": "opener",
-	"storeIdentifier": "989565871",
-	"displayName": "Opener",
-	"scheme": "opener://",
-	"new": true
+    "identifier": "opener",
+    "storeIdentifier": "989565871",
+    "displayName": "Opener",
+    "scheme": "opener://",
+    "new": true
 }
 ```
 
@@ -79,10 +79,10 @@ For example
 
 ```
 function process(url, completionHandler) {
-	// do something with URL...
-	url = rot13(url);
-	
-	completionHandler(url);
+    // do something with URL...
+    url = rot13(url);
+    
+    completionHandler(url);
 }
 ```
 
@@ -119,30 +119,30 @@ For example
 
 ```
 {
-	...
-	"regex": "http(?:s)?://(?:www\\.)?foo\.bar/(\\d+).*$",
-	"testInputs": [
-		"https://foo.bar/1234"
-		"http://www.foo.bar/wat"
-	],
-	"formats": [
-		{
-			...
-			"format": "foo-app://entry/$1",
-			"testResults": [
-				"foo-app://entry/1234",
-				null
-			]
-		},
-		{
-			...
-			"script": "function process(url, completion) { completion('bar-app://' + encodeURIComponent(url)); }",
-			"testResults": [
-				"bar-app://https%3A%2F%2Ffoo.bar%2F1234",
-				null
-			]
-		}
-	]
+    ...
+    "regex": "http(?:s)?://(?:www\\.)?foo\.bar/(\\d+).*$",
+    "testInputs": [
+        "https://foo.bar/1234"
+        "http://www.foo.bar/wat"
+    ],
+    "formats": [
+        {
+            ...
+            "format": "foo-app://entry/$1",
+            "testResults": [
+                "foo-app://entry/1234",
+                null
+            ]
+        },
+        {
+            ...
+            "script": "function process(url, completion) { completion('bar-app://' + encodeURIComponent(url)); }",
+            "testResults": [
+                "bar-app://https%3A%2F%2Ffoo.bar%2F1234",
+                null
+            ]
+        }
+    ]
 }
 ```
 
