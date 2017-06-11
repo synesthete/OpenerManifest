@@ -7461,8 +7461,7 @@
             "displayName": "Blendle",
             "identifier": "blendle",
             "storeIdentifier": "947936149",
-            "scheme": "blendle://",
-            "new": true
+            "scheme": "blendle://"
         }
     ],
     "browsers": [
