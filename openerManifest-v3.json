@@ -2148,9 +2148,9 @@
         },
         {
             "title": "Open Profile",
-            "regex": "http(?:s)?://vimeo\\.com/([a-zA-Z](\\w+))(?:/)?(?:\\?.*)?$",
+            "regex": "http(?:s)?://(?:www\\.)?vimeo\\.com/([a-zA-Z](\\w+))(?:/)?(?:\\?.*)?$",
             "testInputs": [
-                "http://vimeo.com/timonus",
+                "http://www.vimeo.com/timonus",
                 "http://vimeo.com/timonus/",
                 "http://vimeo.com/timonus?foo=bar",
                 "http://vimeo.com/timonus/?foo=bar",
@@ -2174,11 +2174,12 @@
         },
         {
             "title": "Open Video",
-            "regex": "http(?:s)?://vimeo\\.com/(\\d+)(?:/)?.*$",
+            "regex": "http(?:s)?://(?:www\\.|player\\.)?vimeo\\.com/(?:video/)?(\\d+)(?:/)?.*$",
             "testInputs": [
-                "https://vimeo.com/121634963",
+                "https://www.vimeo.com/121634963",
                 "https://vimeo.com/125074876?ref=tw-share",
-                "https://vimeo.com/125074876/?ref=tw-share"
+                "https://vimeo.com/125074876/?ref=tw-share",
+                "https://player.vimeo.com/video/220770851"
             ],
             "formats": [
                 {
@@ -2187,16 +2188,17 @@
                     "testResults": [
                         "vimeo://app.vimeo.com/videos/121634963",
                         "vimeo://app.vimeo.com/videos/125074876",
-                        "vimeo://app.vimeo.com/videos/125074876"
+                        "vimeo://app.vimeo.com/videos/125074876",
+                        "vimeo://app.vimeo.com/videos/220770851"
                     ]
                 }
             ]
         },
         {
             "title": "Open Channel",
-            "regex": "http(?:s)?://vimeo\\.com/channels/(\\w+)(?:/)?(?:\\?.*)?$",
+            "regex": "http(?:s)?://(?:www\\.)?vimeo\\.com/channels/(\\w+)(?:/)?(?:\\?.*)?$",
             "testInputs": [
-                "http://vimeo.com/channels/nicetype",
+                "http://www.vimeo.com/channels/nicetype",
                 "http://vimeo.com/channels/nicetype/",
                 "http://vimeo.com/channels/nicetype?foo=bar",
                 "http://vimeo.com/channels/nicetype/?foo=bar"
@@ -2216,9 +2218,9 @@
         },
         {
             "title": "Open Category",
-            "regex": "http(?:s)?://vimeo\\.com/categories/(\\w+)(?:/)?(?:\\?.*)?$",
+            "regex": "http(?:s)?://(?:www\\.)?vimeo\\.com/categories/(\\w+)(?:/)?(?:\\?.*)?$",
             "testInputs": [
-                "http://vimeo.com/categories/animation",
+                "http://www.vimeo.com/categories/animation",
                 "http://vimeo.com/categories/animation/",
                 "http://vimeo.com/categories/animation?foo=bar",
                 "http://vimeo.com/categories/animation/?foo=bar"
