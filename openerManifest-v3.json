@@ -7869,22 +7869,6 @@
             "identifier": "yandex",
             "scheme": "yandexbrowser-open-url://",
             "storeIdentifier": "483693909",
-            "platform": "phone",
-            "regex": "http(?:s)?(.*)",
-            "format": "yandexbrowser-open-url$1",
-            "testInputs": [
-                "http://www.opener.link/"
-            ],
-            "testResults": [
-                "yandexbrowser-open-url://www.opener.link/"
-            ]
-        },
-        {
-            "displayName": "Yandex",
-            "identifier": "yandexipad",
-            "scheme": "yandexbrowser-open-url://",
-            "storeIdentifier": "574939428",
-            "platform": "pad",
             "regex": "http(?:s)?(.*)",
             "format": "yandexbrowser-open-url$1",
             "testInputs": [
