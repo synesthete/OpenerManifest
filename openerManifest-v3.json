@@ -1081,26 +1081,6 @@
             ]
         },
         {
-            "title": "Open Phhhoto",
-            "regex": "http(?:s)?://(?:www\\.)?phhhoto\\.com/i/([a-zA-Z0-9_\\-]+).*$",
-            "testInputs": [
-                "http://phhhoto.com/i/DW3eS123ejf",
-                "http://phhhoto.com/i/c8_e8124t9w",
-                "http://phhhoto.com/i/7kT6-124t2z"
-            ],
-            "formats": [
-                {
-                    "appIdentifier": "phhhoto",
-                    "format": "phhhoto://banner/?type=photo&identifier=$1",
-                    "testResults": [
-                        "phhhoto://banner/?type=photo&identifier=DW3eS123ejf",
-                        "phhhoto://banner/?type=photo&identifier=c8_e8124t9w",
-                        "phhhoto://banner/?type=photo&identifier=7kT6-124t2z"
-                    ]
-                }
-            ]
-        },
-        {
             "title": "Open Link",
             "regex": "http(?:s)?://byte\\.co/~([a-zA-Z0-9_\\-]+).*$",
             "testInputs": [
@@ -7314,12 +7294,6 @@
             "identifier": "opentable",
             "storeIdentifier": "296581815",
             "scheme": "reservetable-com.contextoptional.OpenTable-1://"
-        },
-        {
-            "displayName": "PHHHOTO",
-            "identifier": "phhhoto",
-            "storeIdentifier": "871169596",
-            "scheme": "phhhoto://"
         },
         {
             "displayName": "Pandora",
