@@ -693,7 +693,7 @@
             "regex": "http(s)?://(?:[a-zA-Z0-9_\\-\\.]+\\.)?vsco\\.co(m)?/(?:[a-zA-Z0-9_\\-\\.]+/)?journal/\\w+.*$",
             "testInputs": [
                 "http://artistinitiative.vsco.co/journal/a-century-of-artifice-launch-recap",
-                "http://vsco.co/whomstmikejones/journal/iceland"
+                "http://vsco.co/brendanryan/journal/iceland"
             ],
             "formats": [
                 {
@@ -1063,8 +1063,8 @@
             "title": "Open Section",
             "regex": "http(?:s)?://(?:www\\.)?flipboard\\.com/(@\\w+(?:/\\w*(-\\w*)+)?|section/.*).*$",
             "testInputs": [
-                "https://flipboard.com/@catherine_265",
-                "https://flipboard.com/@catherine_265/liverpool-post-5ha7nr15y",
+                "https://flipboard.com/@timonus",
+                "https://flipboard.com/@timonus/aural-siebp7eqy",
                 "https://flipboard.com/section/foodies-217ha2rt47oa1f62?flipit=http%3A%2F%2Fflip.it%2FMS9XR&intent=gift_of_flipboard"
             ],
             "formats": [
@@ -1073,8 +1073,8 @@
                     "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(flipboard://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
                     "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(flipboard://.*?)\"'); var match = regex.exec(res)[1]; completionHandler(match); }",
                     "testResults": [
-                        "flipboard://showSection/flipboard/user%252F230604372?title=Catherine%20Scowcroft%20on%20Flipboard",
-                        "flipboard://showSection/sid/5ha7nr15y/catherine_265?title=LIVERPOOL%20on%20Flipboard",
+                        "flipboard://showSection/flipboard/user%252F3204246?title=Tim%20Johnsen%20on%20Flipboard",
+                        "flipboard://showSection/sid/siebp7eqy/timonus?title=Aural%20on%20Flipboard",
                         "flipboard://flipit?url=http%3A%2F%2Fflip.it%2FMS9XR"
                     ]
                 }
@@ -5420,7 +5420,7 @@
             "testInputs": [
                 "http://eving-1.deviantart.com/art/Firewatch-583795685",
                 "http://cryptid-creations.deviantart.com/journal/Daily-Delayed-564105524",
-                "http://sta.sh/02c0su9x1gep",
+                "http://sta.sh/01d8vjlvsc4a",
                 "http://eving-1.deviantart.com/",
                 "http://fiookami.deviantart.com/"
             ],
@@ -5432,7 +5432,7 @@
                     "testResults": [
                         "deviantart://deviation/06060A99-62E7-3212-444E-CBB6A82A1B5F",
                         "deviantart://deviation/478A8090-48B1-8053-37A9-6A696A106980",
-                        "deviantart://deviation/35BF8D14-541D-B917-577D-35773756CD32",
+                        "deviantart://deviation/1C8AACC8-600F-73F8-7AF8-208976A9F5F8",
                         null,
                         null
                     ]
