@@ -95,7 +95,7 @@ The contents of the `script` field are executed in a `UIWebView`, which gives it
 
 If `script2` is provided it's used, otherwise we fall back to `script` if specified. Clients prior to version 1.1.8 are only capable of using the `script` field.
 
-Some common scenarios and best practices for using the script fields are outlined [here](./Best\ Practices.md). Opener enforces a timeout of 15 seconds if `completionHandler` isn't called.
+Some common scenarios and best practices for using the script fields are outlined [here](./Best Practices.md). Opener enforces a timeout of 15 seconds if `completionHandler` isn't called.
 
 ### Testing
 
