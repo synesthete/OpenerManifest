@@ -4148,14 +4148,25 @@
                         "opener://x-callback-url/show-store-product-details?id=989565871",
                         null
                     ]
-                },
+                }
+            ]
+        },
+        {
+            "title": "View App",
+            "regex": "http(?:s)?://(?:geo\\.)?itunes\\.apple\\.com/(?:.*/)*app/(?:.*/)?id(\\d+).*$",
+            "testInputs": [
+                "https://itunes.apple.com/au/app/opener-open-links-in-apps/id989565871?mt=8",
+                "https://geo.itunes.apple.com/us/app/opener-open-links-in-apps/id989565871",
+                "https://itunes.apple.com/us/app/things-3/id904280696?mt=12"
+            ],
+            "formats": [
                 {
                     "appIdentifier": "appshopper",
                     "format": "appshoppersocial://app/$1",
                     "testResults": [
                         "appshoppersocial://app/989565871",
                         "appshoppersocial://app/989565871",
-                        null
+                        "appshoppersocial://app/904280696"
                     ]
                 },
                 {
@@ -4164,7 +4175,7 @@
                     "testResults": [
                         "appzapp://app?appid=989565871",
                         "appzapp://app?appid=989565871",
-                        null
+                        "appzapp://app?appid=904280696"
                     ]
                 },
                 {
@@ -4173,7 +4184,7 @@
                     "testResults": [
                         "catchapp://app?id=989565871",
                         "catchapp://app?id=989565871",
-                        null
+                        "catchapp://app?id=904280696"
                     ]
                 },
                 {
@@ -4182,7 +4193,7 @@
                     "testResults": [
                         "catchapp://app?id=989565871",
                         "catchapp://app?id=989565871",
-                        null
+                        "catchapp://app?id=904280696"
                     ]
                 }
             ]
