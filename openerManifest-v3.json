@@ -6187,6 +6187,28 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:\\w+\\.)?(?:zomato\\.com|zoma\\.to).*$",
+            "testInputs": [
+                "https://www.zomato.com/chennai/murugan-idli-shop-nanganallur/menu",
+                "http://www.zoma.to/kpYxKa",
+                "https://www.zomato.com/review/kpYxKa",
+                "http://www.zoma.to/pv/u_NTk2NzA0MjIzMT"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "zomato",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(zomato://[^\"]+).*'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler(match); }",
+                    "testResults": [
+                        "zomato://r/70085",
+                        "zomato://review/30981346",
+                        "zomato://review/30981346",
+                        "zomato://pv/u_NTk2NzA0MjIzMT"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -7447,6 +7469,13 @@
             "identifier": "xkcdhd",
             "storeIdentifier": "369631343",
             "scheme": "xkcd://"
+        },
+        {
+            "displayName": "Zomato",
+            "identifier": "zomato",
+            "storeIdentifier": "434613896",
+            "scheme": "zomato://",
+            "new": true
         }
     ],
     "browsers": [
