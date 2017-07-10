@@ -6209,6 +6209,24 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:\\w+\\.)?eventshigh\\.com/(.*)$",
+            "testInputs": [
+                "https://www.eventshigh.com/detail/chennai/012f0b70d10a36ac7cc6396a4a0d9802-business-storytelling-for-corporates-start",
+                "https://www.eventshigh.com/chennai/outdoors"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "eventshigh",
+                    "format": "ehapp://$1",
+                    "testResults": [
+                        "ehapp://detail/chennai/012f0b70d10a36ac7cc6396a4a0d9802-business-storytelling-for-corporates-start",
+                        "ehapp://chennai/outdoors"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -7475,6 +7493,13 @@
             "identifier": "zomato",
             "storeIdentifier": "434613896",
             "scheme": "zomato://",
+            "new": true
+        },
+        {
+            "displayName": "Events High",
+            "identifier": "eventshigh",
+            "storeIdentifier": "1061912828",
+            "scheme": "ehapp://",
             "new": true
         }
     ],
