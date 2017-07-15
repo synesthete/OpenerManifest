@@ -7916,25 +7916,6 @@
             "testResults": [
                 "yandexbrowser-open-url://www.opener.link/"
             ]
-        },
-        {
-            "displayName": "Aloha",
-            "identifier": "aloha",
-            "scheme": "alohabrowser://",
-            "storeIdentifier": "1105317682",
-            "regex": "(.+)$",
-            "script": "function process(url, completionHandler) { completionHandler('alohabrowser://open_link?link=' + encodeURIComponent(url)); }",
-            "script2": "function process(url, completionHandler) { completionHandler('alohabrowser://open_link?link=' + encodeURIComponent(url)); }",
-            "docs": "https://db.tt/iZB4HjFsdw",
-            "testInputs": [
-                "http://www.opener.link/",
-                "https://twitter.com/openerapp"
-            ],
-            "testResults": [
-                "alohabrowser://open_link?link=http%3A%2F%2Fwww.opener.link%2F",
-                "alohabrowser://open_link?link=https%3A%2F%2Ftwitter.com%2Fopenerapp"
-            ],
-            "new": true
         }
     ]
 }
