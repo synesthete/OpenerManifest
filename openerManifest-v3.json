@@ -7492,15 +7492,13 @@
             "displayName": "Zomato",
             "identifier": "zomato",
             "storeIdentifier": "434613896",
-            "scheme": "zomato://",
-            "new": true
+            "scheme": "zomato://"
         },
         {
             "displayName": "Events High",
             "identifier": "eventshigh",
             "storeIdentifier": "1061912828",
-            "scheme": "ehapp://",
-            "new": true
+            "scheme": "ehapp://"
         }
     ],
     "browsers": [
