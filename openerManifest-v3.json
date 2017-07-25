@@ -7914,6 +7914,23 @@
             "testResults": [
                 "yandexbrowser-open-url://www.opener.link/"
             ]
+        },
+        {
+            "displayName": "Quark",
+            "identifier": "quark",
+            "scheme": "quark",
+            "storeIdentifier": "1160172628",
+            "regex": "http(?:s)?://(.*)$",
+            "format": "quark://$1",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "quark://www.opener.link/",
+                "quark://twitter.com/openerapp"
+            ],
+            "new": true
         }
     ]
 }
