@@ -7916,6 +7916,25 @@
             ]
         },
         {
+            "displayName": "Aloha",
+            "identifier": "aloha",
+            "scheme": "alohabrowser://",
+            "storeIdentifier": "1105317682",
+            "regex": "(.+)$",
+            "script": "function process(url, completionHandler) { completionHandler('alohabrowser://open?link=' + encodeURIComponent(url)); }",
+            "script2": "function process(url, completionHandler) { completionHandler('alohabrowser://open?link=' + encodeURIComponent(url)); }",
+            "docs": "https://db.tt/iZB4HjFsdw",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "alohabrowser://open?link=http%3A%2F%2Fwww.opener.link%2F",
+                "alohabrowser://open?link=https%3A%2F%2Ftwitter.com%2Fopenerapp"
+            ],
+            "new": true
+        },
+        {
             "displayName": "Quark",
             "identifier": "quark",
             "scheme": "quark://",
