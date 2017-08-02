@@ -7931,8 +7931,7 @@
             "testResults": [
                 "alohabrowser://open?link=http%3A%2F%2Fwww.opener.link%2F",
                 "alohabrowser://open?link=https%3A%2F%2Ftwitter.com%2Fopenerapp"
-            ],
-            "new": true
+            ]
         },
         {
             "displayName": "Quark",
@@ -7948,8 +7947,7 @@
             "testResults": [
                 "quark://www.opener.link/",
                 "quark://twitter.com/openerapp"
-            ],
-            "new": true
+            ]
         }
     ]
 }
