@@ -7753,23 +7753,6 @@
             ]
         },
         {
-            "displayName": "Opera Coast",
-            "identifier": "operacoast",
-            "scheme": "coast-http://",
-            "storeIdentifier": "674024845",
-            "regex": "(http(?:s)?.*)",
-            "format": "coast-$1",
-            "docs": "http://handleopenurl.com/scheme/opera-coast",
-            "testInputs": [
-                "http://www.opener.link/",
-                "https://twitter.com/openerapp"
-            ],
-            "testResults": [
-                "coast-http://www.opener.link/",
-                "coast-https://twitter.com/openerapp"
-            ]
-        },
-        {
             "displayName": "Adblock Browser",
             "identifier": "adblockbrowser",
             "scheme": "adblockbrowser://",
