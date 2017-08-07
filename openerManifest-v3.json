@@ -5183,6 +5183,13 @@
                     "testResults": [
                         "pdfviewer://x-callback-url/add-file?url=http://www.gnustep.org/resources/OpenStepSpec.pdf"
                     ]
+                },
+                {
+                    "appIdentifier": "goodreader",
+                    "format": "g$1",
+                    "testResults": [
+                        "ghttp://www.gnustep.org/resources/OpenStepSpec.pdf"
+                    ]
                 }
             ]
         },
@@ -6838,6 +6845,12 @@
             "storeIdentifier": "1120099014",
             "scheme": "pdfviewer://",
             "docs": "https://pdfviewer.io/guides/ios/url-scheme/"
+        },
+        {
+            "displayName": "GoodReader",
+            "identifier": "goodreader",
+            "storeIdentifier": "777310222",
+            "scheme": "ghttp://"
         },
         {
             "displayName": "PipTube",
