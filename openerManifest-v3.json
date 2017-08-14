@@ -6234,6 +6234,24 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "https(?:s)?://play\\.google(?:\\.\\w+)+(/music/.*)$",
+            "testInputs": [
+                "https://play.google.com/music/m/Tshzbcoyxaujk47mk5v5cyuzucq?t=Balloon_Heads_Ft_Kye_-_Muph__Plutonic",
+                "https://play.google.com/music/listen#/album/Bdlk43qn3e5irmuyln7d4wyzkyu/Muph/%E2%80%A6and+Then+Tomorrow+Came"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "googleplaymusic",
+                    "format": "googleplaymusic://$1",
+                    "testResults": [
+                        "googleplaymusic:///music/m/Tshzbcoyxaujk47mk5v5cyuzucq?t=Balloon_Heads_Ft_Kye_-_Muph__Plutonic",
+                        "googleplaymusic:///music/listen#/album/Bdlk43qn3e5irmuyln7d4wyzkyu/Muph/%E2%80%A6and+Then+Tomorrow+Came"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -7500,6 +7518,13 @@
             "identifier": "xkcdhd",
             "storeIdentifier": "369631343",
             "scheme": "xkcd://"
+        },
+        {
+            "displayName": "Play Music",
+            "identifier": "googleplaymusic",
+            "storeIdentifier": "691797987",
+            "scheme": "googleplaymusic://",
+            "new": true
         },
         {
             "displayName": "Zomato",
