@@ -7523,8 +7523,7 @@
             "displayName": "Play Music",
             "identifier": "googleplaymusic",
             "storeIdentifier": "691797987",
-            "scheme": "googleplaymusic://",
-            "new": true
+            "scheme": "googleplaymusic://"
         },
         {
             "displayName": "Zomato",
