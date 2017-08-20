@@ -6442,7 +6442,7 @@
             "displayName": "App Store",
             "identifier": "appstore",
             "scheme": "itms-apps://",
-            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/appstore-120.jpg"
+            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/appstore-ios11-120.jpg"
         },
         {
             "displayName": "pixiv",
@@ -7670,7 +7670,7 @@
             "displayName": "Safari",
             "identifier": "safari",
             "scheme": "https://",
-            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/safari-120.jpg",
+            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/safari-ios11-120.jpg",
             "regex": "(.+)$",
             "script": "function process(url, completionHandler) { completionHandler('https://s3.amazonaws.com/www.opener.link/redirect.html?url=' + encodeURIComponent(url)); }",
             "script2": "function process(url, completionHandler) { completionHandler('https://s3.amazonaws.com/www.opener.link/redirect.html?url=' + encodeURIComponent(url)); }",
