@@ -2467,6 +2467,28 @@
             ]
         },
         {
+            "title": "Open Premiere",
+            "regex": "http(?:s)?://(?:www\\.)?hypem\\.com/premiere/(\\w+).*$",
+            "testInputs": [
+                "http://hypem.com/espiegel",
+                "http://hypem.com/track/28vqc/Empty+Houses+-+Thunderstorms",
+                "http://hypem.com/popular/artists",
+                "http://hypem.com/premiere/widowspeak"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "hypemachine",
+                    "format": "hypem://premiere/$1",
+                    "testResults": [
+                        null,
+                        null,
+                        null,
+                        "hypem://premiere/widowspeak"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Station",
             "regex": "http(?:s)?://(?:www\\.)?tunein\\.com/(?:station(?:/)?\\?StationId=|radio/(?:\\S*-)*s)(\\d+).*$",
             "testInputs": [
