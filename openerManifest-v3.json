@@ -2445,12 +2445,13 @@
             ]
         },
         {
-            "title": "Open Profile",
-            "regex": "http(?:s)?://(?:www\\.)?hypem\\.com/(?!track|popular|twitter|tags)(\\w+).*$",
+            "title": "Open Playlist",
+            "regex": "http(?:s)?://(?:www\\.)?hypem\\.com/(?!premiere|track|popular|latest|twitter|tags)(\\w+).*$",
             "testInputs": [
                 "http://hypem.com/espiegel",
                 "http://hypem.com/track/28vqc/Empty+Houses+-+Thunderstorms",
-                "http://hypem.com/popular/artists"
+                "http://hypem.com/popular/artists",
+                "http://hypem.com/premiere/widowspeak"
             ],
             "formats": [
                 {
@@ -2459,25 +2460,6 @@
                     "testResults": [
                         "hypem://playlist/?key=PlaylistFriend&section=users&username=espiegel",
                         null,
-                        null
-                    ]
-                }
-            ]
-        },
-        {
-            "title": "Open Playlist",
-            "regex": "http(?:s)?://(?:www\\.)?hypem\\.com/(?!track|popular|latest|twitter|tags)(\\w+).*$",
-            "testInputs": [
-                "http://hypem.com/espiegel",
-                "http://hypem.com/track/28vqc/Empty+Houses+-+Thunderstorms",
-                "http://hypem.com/popular/artists"
-            ],
-            "formats": [
-                {
-                    "appIdentifier": "hypemachine",
-                    "format": "hypem://playlist/?key=PlaylistFriend&section=users&username=$1",
-                    "testResults": [
-                        "hypem://playlist/?key=PlaylistFriend&section=users&username=espiegel",
                         null,
                         null
                     ]
