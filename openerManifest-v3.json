@@ -4310,7 +4310,7 @@
         },
         {
             "title": "Convert Link",
-            "regex": "(http(?:s)?://(?:geo\\.)?itunes\\.apple\\.com/(?!.*/podcast/.*)(?:.*/)?id(\\d+).*)$",
+            "regex": "(http(?:s)?://(?:geo\\.)?itunes\\.apple\\.com/(?!.*/(?:story|podcast)/.*)(?:.*/)?id(\\d+).*)$",
             "testInputs": [
                 "https://itunes.apple.com/au/app/opener-open-links-in-apps/id989565871?mt=8",
                 "https://itunes.apple.com/us/app/opener-open-links-in-apps/id989565871",
@@ -4319,7 +4319,8 @@
                 "https://itunes.apple.com/us/album/almanac/id591108722",
                 "https://itunes.apple.com/us/artist/widowspeak/id420935735",
                 "https://itunes.apple.com/us/podcast/death-sex-money/id870688022?i=356350404&mt=2",
-                "https://geo.itunes.apple.com/us/app/logmyrun/id513718134?mt=8&uo=4&at=11lbfL&ct=twitter"
+                "https://geo.itunes.apple.com/us/app/logmyrun/id513718134?mt=8&uo=4&at=11lbfL&ct=twitter",
+                "https://itunes.apple.com/us/story/id1268017618"
             ],
             "formats": [
                 {
@@ -4333,7 +4334,8 @@
                         "blink://x-callback-url/search?q=https://itunes.apple.com/us/album/almanac/id591108722",
                         "blink://x-callback-url/search?q=https://itunes.apple.com/us/artist/widowspeak/id420935735",
                         null,
-                        "blink://x-callback-url/search?q=https://geo.itunes.apple.com/us/app/logmyrun/id513718134?mt=8&uo=4&at=11lbfL&ct=twitter"
+                        "blink://x-callback-url/search?q=https://geo.itunes.apple.com/us/app/logmyrun/id513718134?mt=8&uo=4&at=11lbfL&ct=twitter",
+                        null
                     ]
                 }
             ]
