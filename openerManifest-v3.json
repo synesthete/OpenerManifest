@@ -4156,6 +4156,22 @@
             ]
         },
         {
+            "title": "View Story",
+            "regex": "http(?:s)?://(?:geo\\.)?itunes\\.apple\\.com/(?:.*/)*story/id(\\d+).*$",
+            "testInputs": [
+                "https://itunes.apple.com/us/story/id1268017618"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "appstore",
+                    "format": "itms-apps://itunes.apple.com/story/id$1",
+                    "testResults": [
+                        "itms-apps://itunes.apple.com/story/id1268017618"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "View App",
             "regex": "http(?:s)?://(?:geo\\.)?itunes\\.apple\\.com/(?:.*/)*app/(?:.*/)?id(\\d+).*$",
             "testInputs": [
