@@ -7750,6 +7750,7 @@
             "identifier": "files",
             "scheme": "downloadslite://",
             "storeIdentifier": "349275540",
+            "platform": "phone",
             "regex": "(http(?:s)?.*)",
             "format": "downloadslite://$1",
             "testInputs": [
@@ -7759,6 +7760,23 @@
             "testResults": [
                 "downloadslite://http://www.opener.link/",
                 "downloadslite://https://twitter.com/openerapp"
+            ]
+        },
+        {
+            "displayName": "Files HD",
+            "identifier": "fileshd",
+            "scheme": "dlhdlite://",
+            "storeIdentifier": "383846063",
+            "platform": "pad",
+            "regex": "(http(?:s)?.*)",
+            "format": "dlhdlite://$1",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "dlhdlite://http://www.opener.link/",
+                "dlhdlite://https://twitter.com/openerapp"
             ]
         },
         {
