@@ -394,9 +394,11 @@
         },
         {
             "title": "Open Event",
-            "regex": "http(?:s)?://(?:\\w+\\.)?facebook\\.com/events/(\\d+).*$",
+            "regex": "http(?:s)?://(?:\\w+\\.)?facebook\\.com/(?:n/?\\?)?events/(\\d+).*$",
             "testInputs": [
                 "https://www.facebook.com/events/878295485593070/",
+                "https://www.facebook.com/n?events/878295485593070/",
+                "https://www.facebook.com/n/?events/878295485593070/",
                 "https://m.facebook.com/events/394680094069835?acontext=%7B%22ref%22%3A2%2C%22"
             ],
             "formats": [
@@ -405,6 +407,8 @@
                     "format": "fb://event?id=$1",
                     "testResults": [
                         "fb://event?id=878295485593070",
+                        "fb://event?id=878295485593070",
+                        "fb://event?id=878295485593070",
                         "fb://event?id=394680094069835"
                     ]
                 }
@@ -412,7 +416,7 @@
         },
         {
             "title": "Open Group",
-            "regex": "http(?:s)?://(?:\\w+\\.)?facebook\\.com/groups/(?:[^/]+/)?(\\d+).*$",
+            "regex": "http(?:s)?://(?:\\w+\\.)?facebook\\.com/(?:n/?\\?)?groups/(?:[^/]+/)?(\\d+).*$",
             "testInputs": [
                 "https://www.facebook.com/groups/158306764190707/",
                 "https://www.facebook.com/groups/158306764190707",
@@ -422,6 +426,8 @@
                 "https://www.facebook.com/groups/it.jobs.croatia/1669475099985409",
                 "https://www.facebook.com/groups/it.jobs.croatia/1669475099985409?foo=bar",
                 "https://www.facebook.com/groups/it.jobs.croatia/1669475099985409/?foo=bar",
+                "https://www.facebook.com/n?groups/it.jobs.croatia/1669475099985409/",
+                "https://www.facebook.com/n/?groups/it.jobs.croatia/1669475099985409/",
                 "https://www.facebook.com/groups/workoholic.zmanamiti/",
                 "https://www.facebook.com/groups/workoholic.zmanamiti",
                 "https://www.facebook.com/groups/workoholic.zmanamiti?foo=bar",
@@ -440,6 +446,8 @@
                         "fb://group?id=158306764190707",
                         "fb://group?id=158306764190707",
                         "fb://group?id=158306764190707",
+                        "fb://group?id=1669475099985409",
+                        "fb://group?id=1669475099985409",
                         "fb://group?id=1669475099985409",
                         "fb://group?id=1669475099985409",
                         "fb://group?id=1669475099985409",
@@ -506,12 +514,14 @@
         },
         {
             "title": "Open Photo",
-            "regex": "http(?:s)?://(?:\\w+\\.)?facebook\\.com/(?:photo\\.php.*(?:\\?|&)fbid=|[^/]+/photos/[^/]+/)(\\d+).*?$",
+            "regex": "http(?:s)?://(?:\\w+\\.)?facebook\\.com/(?:n/?\\?)?(?:photo\\.php.*(?:\\?|&)fbid=|[^/]+/photos/[^/]+/)(\\d+).*?$",
             "testInputs": [
                 "https://m.facebook.com/photo.php?fbid=10153892256554365",
                 "https://facebook.com/photo.php?fbid=10153892256554365",
                 "https://www.facebook.com/mauriciomacri/photos/a.105382683477.113835.55432788477/10153903314573478/",
-                "https://www.facebook.com/mauriciomacri/photos/a.105382683477.113835.55432788477/10153903314573478/?type=3&theater"
+                "https://www.facebook.com/mauriciomacri/photos/a.105382683477.113835.55432788477/10153903314573478/?type=3&theater",
+                "https://www.facebook.com/n?photo.php&fbid=10159121928595063&set=a.10152710534540063.1073741825.776810062&type=3&medium=email&mid=5578d48f70a02G2a0d62e5G5578d928d0cd4G314&bcode=2.1503640444.AbwuEhN1mfMcSUYCPrA",
+                "https://www.facebook.com/n/?photo.php&fbid=10159121928595063&set=a.10152710534540063.1073741825.776810062&type=3&medium=email&mid=5578d48f70a02G2a0d62e5G5578d928d0cd4G314&bcode=2.1503640444.AbwuEhN1mfMcSUYCPrA"
             ],
             "formats": [
                 {
@@ -521,7 +531,9 @@
                         "fb://photo/?id=10153892256554365",
                         "fb://photo/?id=10153892256554365",
                         "fb://photo/?id=10153903314573478",
-                        "fb://photo/?id=10153903314573478"
+                        "fb://photo/?id=10153903314573478",
+                        "fb://photo/?id=10159121928595063",
+                        "fb://photo/?id=10159121928595063"
                     ]
                 }
             ]
