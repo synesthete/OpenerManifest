@@ -6262,15 +6262,18 @@
             "regex": "https(?:s)?://play\\.google(?:\\.\\w+)+(/music/.*)$",
             "testInputs": [
                 "https://play.google.com/music/m/Tshzbcoyxaujk47mk5v5cyuzucq?t=Balloon_Heads_Ft_Kye_-_Muph__Plutonic",
-                "https://play.google.com/music/listen#/album/Bdlk43qn3e5irmuyln7d4wyzkyu/Muph/%E2%80%A6and+Then+Tomorrow+Came"
+                "https://play.google.com/music/listen#/album/Bdlk43qn3e5irmuyln7d4wyzkyu/Muph/%E2%80%A6and+Then+Tomorrow+Came",
+                "https://play.google.com/music/preview/T4g2cgxbq7hwcqxfxdpcz66a4gu?t=Cerebellum_Serenade_-_Mr_Bill"
             ],
             "formats": [
                 {
                     "appIdentifier": "googleplaymusic",
-                    "format": "googleplaymusic://$1",
+                    "script": "function process(url, completionHandler) { var regex = RegExp('https(?:s)?://play\\\\.google(?:\\\\.\\\\w+)+(/music/.*)$'); var results = regex.exec(url); var match = null; if (results != null && results.length > 1) { match = 'googleplaymusic://' + results[1].replace('/preview/', '/m/') }; completionHandler(match); }",
+                    "script2": "function process(url, completionHandler) { var regex = RegExp('https(?:s)?://play\\\\.google(?:\\\\.\\\\w+)+(/music/.*)$'); var results = regex.exec(url); var match = null; if (results != null && results.length > 1) { match = 'googleplaymusic://' + results[1].replace('/preview/', '/m/') }; completionHandler(match); }",
                     "testResults": [
                         "googleplaymusic:///music/m/Tshzbcoyxaujk47mk5v5cyuzucq?t=Balloon_Heads_Ft_Kye_-_Muph__Plutonic",
-                        "googleplaymusic:///music/listen#/album/Bdlk43qn3e5irmuyln7d4wyzkyu/Muph/%E2%80%A6and+Then+Tomorrow+Came"
+                        "googleplaymusic:///music/listen#/album/Bdlk43qn3e5irmuyln7d4wyzkyu/Muph/%E2%80%A6and+Then+Tomorrow+Came",
+                        "googleplaymusic:///music/m/T4g2cgxbq7hwcqxfxdpcz66a4gu?t=Cerebellum_Serenade_-_Mr_Bill"
                     ]
                 }
             ]
