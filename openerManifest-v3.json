@@ -6296,6 +6296,7 @@
             "displayName": "ProTube",
             "identifier": "protube",
             "scheme": "protube://",
+            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/protube.jpg",
             "docs": "http://j-gessner.de/1/post/2014/12/protube-2-url-scheme.html"
         },
         {
