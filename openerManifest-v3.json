@@ -6295,7 +6295,6 @@
         {
             "displayName": "ProTube",
             "identifier": "protube",
-            "storeIdentifier": "931201696",
             "scheme": "protube://",
             "docs": "http://j-gessner.de/1/post/2014/12/protube-2-url-scheme.html"
         },
