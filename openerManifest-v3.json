@@ -867,6 +867,24 @@
             ]
         },
         {
+            "title": "Open Tag",
+            "regex": "http(?:s)?://(?:www\\.)?tumblr\\.com/(?:tagged|search)/([^/]+)(?:(?:/|\\?|#).*)?$",
+            "testInputs": [
+                "https://www.tumblr.com/search/Hartmut+Esslinger",
+                "https://www.tumblr.com/tagged/Hartmut+Esslinger"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "tumblr",
+                    "format": "tumblr://x-callback-url/tag?tag=$1",
+                    "testResults": [
+                        "tumblr://x-callback-url/tag?tag=Hartmut+Esslinger",
+                        "tumblr://x-callback-url/tag?tag=Hartmut+Esslinger"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Journal",
             "regex": "http(?:s)?://app\\.gowander\\.co/web/v1/journals/(\\d+).*$",
             "testInputs": [
