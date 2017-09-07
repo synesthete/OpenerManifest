@@ -2960,6 +2960,15 @@
                     "notes": "Narwhal doesn't tolerate queries it seems https://twitter.com/jad_chaar/status/770055945707716608"
                 },
                 {
+                    "appIdentifier": "apollo",
+                    "format": "apollo://$2",
+                    "testResult": [
+                        "apollo://reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/",
+                        "apollo://reddit.com/r/gaming/",
+                        "apollo://reddit.com/r/spotify?utm_source=mweb_redirect&compact=true"
+                    ]
+                },
+                {
                     "appIdentifier": "amrc",
                     "format": "amrc://$2",
                     "testResults": [
@@ -6547,6 +6556,13 @@
             "identifier": "narwhal",
             "storeIdentifier": "845422455",
             "scheme": "narwhal://"
+        },
+        {
+            "displayName": "Apollo",
+            "identifier": "apollo",
+            "storeIdentifier": "979274575",
+            "scheme": "apollo://",
+            "new": true
         },
         {
             "displayName": "AliExpress",
