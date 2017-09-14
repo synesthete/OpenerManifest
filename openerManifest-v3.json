@@ -7681,6 +7681,25 @@
             ]
         },
         {
+            "displayName": "Firefox Focus",
+            "identifier": "firefoxfocus",
+            "scheme": "firefox-focus://",
+            "storeIdentifier": "1055677337",
+            "regex": "(.+)$",
+            "script": "function process(url, completionHandler) { completionHandler('firefox-focus://open-url?url=' + encodeURIComponent(url)); }",
+            "script2": "function process(url, completionHandler) { completionHandler('firefox-focus://open-url?url=' + encodeURIComponent(url)); }",
+            "docs": "https://github.com/mozilla-mobile/focus-ios/issues/32",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "firefox-focus://open-url?url=http%3A%2F%2Fwww.opener.link%2F",
+                "firefox-focus://open-url?url=https%3A%2F%2Ftwitter.com%2Fopenerapp"
+            ],
+            "new": true
+        },
+        {
             "displayName": "Puffin",
             "identifier": "puffin",
             "scheme": "puffin-x-callback://",
