@@ -1781,7 +1781,7 @@
         },
         {
             "title": "Open Link",
-            "regex": "http(?:s)?://(?:\\w+\\.)*(?:maps\\.(?:apple|google)(?:.\\w+)+|google(?:\\.\\w+)+/maps|waze\\.to).*(?:ll=|@)([\\-0-9\\.]+,[\\-0-9\\.]+).*?$",
+            "regex": "http(?:s)?://(?:\\w+\\.)*(?:maps\\.(?:apple|google)(?:\\.\\w+)+|google(?:\\.\\w+)+/maps|waze\\.to).*(?:ll=|@)([\\-0-9\\.]+,[\\-0-9\\.]+).*?$",
             "testInputs": [
                 "http://maps.google.co.jp/maps?f=q&hl=ja&geocode=&q=-39.23774,175.3048&ie=UTF8&ll=-39.23774,175.3048&z=6",
                 "https://www.google.com/maps/place/Schwartz+and+Architecture/@37.7588677,-122.4044106,17z/data=!3m1!4b1!4m5!3m4!1s0x808f7e355b27add5:0xbea02036f8bac009!8m2!3d37.7588677!4d-122.4022219",
@@ -1789,7 +1789,8 @@
                 "http://maps.apple.com/maps?address=967%20Mission%20St%20San%20Francisco%20CA%2094103%20United%20States&ll=37.781510,-122.407999&t=m",
                 "http://maps.apple.com/?lsp=6489&sll=34.045802,-118.260574&q=645%20W%209th%20St%20%23110-140%20Los%20Angeles%20CA%2090015-1640%20United%20States",
                 "http://maps.apple.com/?lsp=9902&auid=5554799088491316685&sll=28.026687,-81.617854&q=Dundee%20Elementary%20School&hnear=215%20E%20Frederick%20Ave%2C%20Dundee%2C%20FL%20%2033838-4238%2C%20United%20States",
-                "http://waze.to/?ll=34.042892,-118.245853&navigate=yes"
+                "http://waze.to/?ll=34.042892,-118.245853&navigate=yes",
+                "https://maps.google.com/maps?hl=en-us&client=safari&yv=2&um=1&ie=UTF-8&fb=1&gl=us&entry=s&sa=X&ftid=0x89ace4f20060d85d:0x6f60980dc6d325c2&gmm=CgIgAQ%3D%3D"
             ],
             "formats": [
                 {
@@ -1802,7 +1803,8 @@
                         "transit://directions?to=37.781510,-122.407999",
                         "transit://directions?to=34.045802,-118.260574",
                         "transit://directions?to=28.026687,-81.617854",
-                        "transit://directions?to=34.042892,-118.245853"
+                        "transit://directions?to=34.042892,-118.245853",
+                        null
                     ]
                 }
             ]
