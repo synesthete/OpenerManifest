@@ -569,6 +569,25 @@
             ]
         },
         {
+            "title": "Open Post",
+            "test": "yes",
+            "regex": "http(?:s)?://m\\.facebook\\.com/story\\.php.*(?:story_fbid=(\\d+).*id=(\\d+)|id=(\\d+).*story_fbid=(\\d+)).*?$",
+            "testInputs": [
+                "https://m.facebook.com/story.php?story_fbid=1558737434162594&id=193742123995472&_rdr",
+                "https://m.facebook.com/story.php?&id=193742123995472&story_fbid=1558737434162594"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "facebook",
+                    "format": "fb://story/?id=$2$3_$1$4",
+                    "testResults": [
+                        "fb://story/?id=193742123995472_1558737434162594",
+                        "fb://story/?id=193742123995472_1558737434162594"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "View App",
             "regex": "http(?:s)?://apps\\.getpebble\\.com/(?:\\w+/)*application(?:s)?/([:hex:]+)",
             "testInputs": [
