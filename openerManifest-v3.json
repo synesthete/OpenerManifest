@@ -5409,6 +5409,18 @@
             ]
         },
         {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:www\\.)?snapchat\\.com/discover(.*)$",
+            "notes": "Hard to test because Snap adds a bunch of session-specific params to the end. This works for now, a good testing URL is https://www.snapchat.com/discover/The-Verge/0517884694?sc_referrer=None&sc_ua=",
+            "formats": [
+                {
+                    "appIdentifier": "snapchat",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*(snapchat://.*?)\".*'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = results[1]; }; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(snapchat://.*?)\".*'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler(match); }"
+                }
+            ]
+        },
+        {
             "title": "Add User",
             "regex": "http(?:s)?://(?:www\\.)?peach\\.cool/add/([^/]+).*?$",
             "testInputs": [
