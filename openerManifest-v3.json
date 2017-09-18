@@ -540,7 +540,7 @@
         },
         {
             "title": "Open Post",
-            "regex": "http(?:s)?://(?:\\w+\\.)?facebook\\.com/(?:n/?\\?)?([^/|%2F]+)(?:/|%2F)posts(?:/|%2F)(\\d+).*$",
+            "regex": "http(?:s)?://(?:\\w+\\.)?facebook\\.com/(?:n/?\\?)?([^/|%2F]+)(?:/|%2F)(?:posts|videos)(?:/|%2F)(\\d+).*$",
             "testInputs": [
                 "https://www.facebook.com/timonus/posts/10154879225363318",
                 "https://www.facebook.com/dbhuynh/posts/10107195283476043",
@@ -549,12 +549,14 @@
                 "https://www.facebook.com/n?timonus/posts/10154879225363318",
                 "https://www.facebook.com/n?dbhuynh/posts/10107195283476043",
                 "https://www.facebook.com/n/?timonus%2Fposts%2F10154879225363318",
-                "https://www.facebook.com/n/?dbhuynh%2Fposts%2F10107195283476043"
+                "https://www.facebook.com/n/?dbhuynh%2Fposts%2F10107195283476043",
+                "https://www.facebook.com/verge/videos/1558737434162594/",
+                "https://www.facebook.com/techcrunch/videos/10156003235202952/"
             ],
             "formats": [
                 {
                     "appIdentifier": "facebook",
-                    "script2": "function process(url, completionHandler) { var urlResults = RegExp('http(?:s)?://(?:\\\\w+\\\\.)?facebook\\\\.com/(?:n/?\\\\?)?([^/|%2F]+)(?:/|%2F)posts(?:/|%2F)(\\\\d+)').exec(url); var profileURL = 'https://m.facebook.com/' + urlResults[1]; var res = httpRequest(profileURL); var regex = RegExp('[^a-z_]id=(\\\\d+)'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = 'fb://story/?id=' + results[1] + '_' + urlResults[2]; }; completionHandler(match); }",
+                    "script2": "function process(url, completionHandler) { var urlResults = RegExp('http(?:s)?://(?:\\\\w+\\\\.)?facebook\\\\.com/(?:n/?\\\\?)?([^/|%2F]+)(?:/|%2F)(?:posts|videos)(?:/|%2F)(\\\\d+)').exec(url); var profileURL = 'https://m.facebook.com/' + urlResults[1]; var res = httpRequest(profileURL); var regex = RegExp('[^a-z_]id=(\\\\d+)'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = 'fb://story/?id=' + results[1] + '_' + urlResults[2]; }; completionHandler(match); }",
                     "testResults": [
                         "fb://story/?id=501898317_10154879225363318",
                         null,
@@ -563,7 +565,9 @@
                         "fb://story/?id=501898317_10154879225363318",
                         null,
                         "fb://story/?id=501898317_10154879225363318",
-                        null
+                        null,
+                        "fb://story/?id=193742123995472_1558737434162594",
+                        "fb://story/?id=8062627951_10156003235202952"
                     ]
                 }
             ]
