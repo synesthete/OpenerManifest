@@ -570,7 +570,6 @@
         },
         {
             "title": "Open Post",
-            "test": "yes",
             "regex": "http(?:s)?://m\\.facebook\\.com/story\\.php.*(?:story_fbid=(\\d+).*id=(\\d+)|id=(\\d+).*story_fbid=(\\d+)).*?$",
             "testInputs": [
                 "https://m.facebook.com/story.php?story_fbid=1558737434162594&id=193742123995472&_rdr",
