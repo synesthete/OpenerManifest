@@ -7732,8 +7732,7 @@
             "testResults": [
                 "firefox-focus://open-url?url=http%3A%2F%2Fwww.opener.link%2F",
                 "firefox-focus://open-url?url=https%3A%2F%2Ftwitter.com%2Fopenerapp"
-            ],
-            "new": true
+            ]
         },
         {
             "displayName": "Puffin",
