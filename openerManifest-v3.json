@@ -7672,13 +7672,12 @@
             "scheme": "https://",
             "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/safari-ios11-120.jpg",
             "regex": "(.+)$",
-            "script": "function process(url, completionHandler) { completionHandler('https://s3.amazonaws.com/www.opener.link/redirect.html?url=' + encodeURIComponent(url)); }",
-            "script2": "function process(url, completionHandler) { completionHandler('https://s3.amazonaws.com/www.opener.link/redirect.html?url=' + encodeURIComponent(url)); }",
+            "format": "$1",
             "testInputs": [
                 "http://www.opener.link/"
             ],
             "testResults": [
-                "https://s3.amazonaws.com/www.opener.link/redirect.html?url=http%3A%2F%2Fwww.opener.link%2F"
+                "http://www.opener.link/"
             ]
         },
         {
