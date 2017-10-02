@@ -7157,7 +7157,8 @@
         {
             "displayName": "ZEEEN",
             "identifier": "zeeen",
-            "scheme": "zeeen://"
+            "scheme": "zeeen://",
+            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/zeen-120.jpg"
         },
         {
             "displayName": "Alibaba",
