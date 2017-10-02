@@ -6350,8 +6350,7 @@
             "displayName": "YouTube",
             "identifier": "youtube",
             "storeIdentifier": "544007664",
-            "scheme": "youtube://",
-            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/youtube-120.png"
+            "scheme": "youtube://"
         },
         {
             "displayName": "Twitter",
