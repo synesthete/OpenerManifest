@@ -6330,6 +6330,24 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Article",
+            "regex": "http(?:s)?://(?:www\\.)?lefigaro\\.fr/[^/]*/\\d+/\\d+/\\d+/\\d+-(\\w+)-.*$",
+            "testInputs": [
+                "http://www.lefigaro.fr/actualite-france/2017/10/02/01016-20171002ARTFIG00286-attentat-de-marseille-un-texte-depose-mardi-pour-systematiser-l-expulsion-des-etrangers-delinquants.php?utm_term=Autofeed&utm_campaign=Echobox&utm_medium=Social&utm_source=Twitter#link_time=1506970243",
+                "http://www.lefigaro.fr/flash-eco/2017/10/03/97002-20171003FILWWW00014-lait-des-paturages-plus-ecolo-et-plus-rentable.php"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "lefigaro",
+                    "format": "lefigarofr://article/$1/lefigaro.fr",
+                    "testResults": [
+                        "lefigarofr://article/20171002ARTFIG00286/lefigaro.fr",
+                        "lefigarofr://article/20171003FILWWW00014/lefigaro.fr"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -7608,6 +7626,13 @@
             "identifier": "eventshigh",
             "storeIdentifier": "1061912828",
             "scheme": "ehapp://"
+        },
+        {
+            "displayName": "Le Figaro",
+            "identifier": "lefigaro",
+            "storeIdentifier": "319557427",
+            "scheme": "lefigarofr://",
+            "new": true
         }
     ],
     "browsers": [
