@@ -3513,6 +3513,26 @@
             ]
         },
         {
+            "title": "Open Group",
+            "regex": "http(?:s)?://(?:touch\\.)?(?:\\w+\\.)?linkedin\\.com/(?:[^/]*/)?groups/(\\d+).*$",
+            "testInputs": [
+                "https://www.linkedin.com/groups/2366091/profile",
+                "https://www.linkedin.com/comm/groups/2366091/2366091-6320570575274287105?midToken=AQHsmk9LvK00kw&trk=eml-b2_anet_digest_weekly-group_discussions-16-grouppost%7Edisc%7E0&trkEmail=eml-b2_anet_digest_weekly-group_discussions-16-grouppost%7Edisc%7E0-null-4vfem%7Ej8aeugp2%7E5g-null-communities%7Egroup%7Ediscussion&lipi=urn%3Ali%3Apage%3Aemail_b2_anet_digest_weekly%3Bnh3Bx59KTWifF7LAPNrV2g%3D%3D",
+                "https://www.linkedin.com/comm/groups/2366091"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "linkedin",
+                    "format": "linkedin://groups/$1",
+                    "testResults": [
+                        "linkedin://groups/2366091",
+                        "linkedin://groups/2366091",
+                        "linkedin://groups/2366091"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Title",
             "regex": "http(?:s)?://(?:www\\.|m\\.)imdb\\.com/title/(tt\\d+).*$",
             "testInputs": [
