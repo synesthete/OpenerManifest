@@ -6368,6 +6368,38 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Listing",
+            "regex": "http(?:s)?://(?:www\\.)airbnb\\.com/rooms/(\\d+).*$",
+            "testInputs": [
+                "https://www.airbnb.com/rooms/1415908"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "airbnb",
+                    "format": "airbnb://d/listing?id=$1",
+                    "testResults": [
+                        "airbnb://d/listing?id=1415908"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Experience",
+            "regex": "http(?:s)?://(?:www\\.)airbnb\\.com/experiences/(\\d+).*$",
+            "testInputs": [
+                "https://www.airbnb.com/experiences/70986?source=p2&searchId=648044c8-7f3b-4d66-bc3d-d65b1a86a6ac&pdpReferrer=12&pdpContext%5Bmt_pdp_referrer_id%5D=25"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "airbnb",
+                    "format": "airbnb://d/experiences/$1",
+                    "testResults": [
+                        "airbnb://d/experiences/70986"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -7646,6 +7678,13 @@
             "identifier": "eventshigh",
             "storeIdentifier": "1061912828",
             "scheme": "ehapp://"
+        },
+        {
+            "displayName": "Airbnb",
+            "identifier": "airbnb",
+            "storeIdentifier": "401626263",
+            "scheme": "airbnb://",
+            "new": true
         },
         {
             "displayName": "Le Figaro",
