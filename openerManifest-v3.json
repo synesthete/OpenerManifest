@@ -6384,6 +6384,72 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Event",
+            "regex": "http(?:s)?://(?:www\\.|m\\.)?ticketmaster\\.com/(?:[^/]*/)?event/(\\w+).*$",
+            "testInputs": [
+                "http://www.ticketmaster.com/event/1C00533D161BD381?camefrom=CFC_ANOTHERPLANET_web&brand=anotherplanet",
+                "http://m.ticketmaster.com/event/1C00533D161BD381?camefrom=CFC_ANOTHERPLANET_web&brand=anotherplanet",
+                "http://www.ticketmaster.com/foo-bar/event/1C00533D161BD381?camefrom=CFC_ANOTHERPLANET_web&brand=anotherplanet",
+                "http://m.ticketmaster.com/foo-bar/event/1C00533D161BD381?camefrom=CFC_ANOTHERPLANET_web&brand=anotherplanet"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "ticketmaster",
+                    "format": "ticketmaster:///event/$1",
+                    "testResults": [
+                        "ticketmaster:///event/1C00533D161BD381",
+                        "ticketmaster:///event/1C00533D161BD381",
+                        "ticketmaster:///event/1C00533D161BD381",
+                        "ticketmaster:///event/1C00533D161BD381"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Artist",
+            "regex": "http(?:s)?://(?:www\\.|m\\.)?ticketmaster\\.com/(?:[^/]*/)?artist/(\\w+).*$",
+            "testInputs": [
+                "http://www.ticketmaster.com/Thom-Yorke-tickets/artist/1370037?tm_link=edp_Artist_Name",
+                "http://m.ticketmaster.com/Thom-Yorke-tickets/artist/1370037?tm_link=edp_Artist_Name",
+                "http://www.ticketmaster.com/artist/1370037?tm_link=edp_Artist_Name",
+                "http://m.ticketmaster.com/artist/1370037?tm_link=edp_Artist_Name"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "ticketmaster",
+                    "format": "ticketmaster:///artist/$1",
+                    "testResults": [
+                        "ticketmaster:///artist/1370037",
+                        "ticketmaster:///artist/1370037",
+                        "ticketmaster:///artist/1370037",
+                        "ticketmaster:///artist/1370037"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Venue",
+            "regex": "http(?:s)?://(?:www\\.|m\\.)?ticketmaster\\.com/(?:[^/]*/)?venue/(\\w+).*$",
+            "testInputs": [
+                "http://www.ticketmaster.com/Fox-Theater-Oakland-tickets-Oakland/venue/229846?tm_link=edp_Venue_Name_1",
+                "http://m.ticketmaster.com/Fox-Theater-Oakland-tickets-Oakland/venue/229846?tm_link=edp_Venue_Name_1",
+                "http://www.ticketmaster.com/venue/229846?tm_link=edp_Venue_Name_1",
+                "http://m.ticketmaster.com/venue/229846?tm_link=edp_Venue_Name_1"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "ticketmaster",
+                    "format": "ticketmaster:///venue/$1",
+                    "testResults": [
+                        "ticketmaster:///venue/229846",
+                        "ticketmaster:///venue/229846",
+                        "ticketmaster:///venue/229846",
+                        "ticketmaster:///venue/229846"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -7662,6 +7728,13 @@
             "identifier": "eventshigh",
             "storeIdentifier": "1061912828",
             "scheme": "ehapp://"
+        },
+        {
+            "displayName": "Ticketmaster",
+            "identifier": "ticketmaster",
+            "storeIdentifier": "500003565",
+            "scheme": "ticketmaster://",
+            "new": true
         },
         {
             "displayName": "Le Figaro",
