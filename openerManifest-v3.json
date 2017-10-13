@@ -7733,15 +7733,13 @@
             "displayName": "Ticketmaster",
             "identifier": "ticketmaster",
             "storeIdentifier": "500003565",
-            "scheme": "ticketmaster://",
-            "new": true
+            "scheme": "ticketmaster://"
         },
         {
             "displayName": "Le Figaro",
             "identifier": "lefigaro",
             "storeIdentifier": "319557427",
-            "scheme": "lefigarofr://",
-            "new": true
+            "scheme": "lefigarofr://"
         }
     ],
     "browsers": [
