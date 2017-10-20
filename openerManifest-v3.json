@@ -1904,6 +1904,20 @@
                     ]
                 },
                 {
+                    "appIdentifier": "youtubemusic",
+                    "format": "youtubemusic://$1$2",
+                    "testResults": [
+                        "youtubemusic://MTY1Kje0yLg",
+                        "youtubemusic://0uY7gLZDmn4?start=96",
+                        "youtubemusic://MFzDaBzBlL0",
+                        "youtubemusic://mzun7_Ynmks",
+                        "youtubemusic://JEiSTzK-A2A",
+                        "youtubemusic://yWDJoJm-Rk0?t=4m30s",
+                        "youtubemusic://S4WNO4tchUk",
+                        "youtubemusic://ngElkyQ6Rhs"
+                    ]
+                },
+                {
                     "appIdentifier": "cornertube",
                     "format": "cornertube://video/https://youtu.be/$1",
                     "testResults": [
@@ -2027,6 +2041,13 @@
                     "format": "youplayer://youtube.com/playlist?list=$1",
                     "testResults": [
                         "youplayer://youtube.com/playlist?list=PL2ED57C3E5C561B91"
+                    ]
+                },
+                {
+                    "appIdentifier": "youtubemusic",
+                    "format": "youtubemusic://youtube.com/playlist?list=$1",
+                    "testResults": [
+                        "youtubemusic://youtube.com/playlist?list=PL2ED57C3E5C561B91"
                     ]
                 }
             ]
@@ -7740,6 +7761,13 @@
             "identifier": "lefigaro",
             "storeIdentifier": "319557427",
             "scheme": "lefigarofr://"
+        },
+        {
+            "displayName": "YouTube Music",
+            "identifier": "youtubemusic",
+            "storeIdentifier": "1017492454",
+            "scheme": "youtubemusic://",
+            "new": true
         }
     ],
     "browsers": [
