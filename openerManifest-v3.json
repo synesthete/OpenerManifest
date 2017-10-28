@@ -7782,8 +7782,7 @@
             "displayName": "YouTube Music",
             "identifier": "youtubemusic",
             "storeIdentifier": "1017492454",
-            "scheme": "youtubemusic://",
-            "new": true
+            "scheme": "youtubemusic://"
         }
     ],
     "browsers": [
