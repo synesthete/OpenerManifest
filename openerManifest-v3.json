@@ -1876,17 +1876,17 @@
                     ]
                 },
                 {
-                    "appIdentifier": "protube",
-                    "format": "protube://video/$1",
+                    "appIdentifier": "youtubemusic",
+                    "format": "youtubemusic://$1$2",
                     "testResults": [
-                        "protube://video/MTY1Kje0yLg",
-                        "protube://video/0uY7gLZDmn4",
-                        "protube://video/MFzDaBzBlL0",
-                        "protube://video/mzun7_Ynmks",
-                        "protube://video/JEiSTzK-A2A",
-                        "protube://video/yWDJoJm-Rk0",
-                        "protube://video/S4WNO4tchUk",
-                        "protube://video/ngElkyQ6Rhs"
+                        "youtubemusic://MTY1Kje0yLg",
+                        "youtubemusic://0uY7gLZDmn4?start=96",
+                        "youtubemusic://MFzDaBzBlL0",
+                        "youtubemusic://mzun7_Ynmks",
+                        "youtubemusic://JEiSTzK-A2A",
+                        "youtubemusic://yWDJoJm-Rk0?t=4m30s",
+                        "youtubemusic://S4WNO4tchUk",
+                        "youtubemusic://ngElkyQ6Rhs"
                     ]
                 },
                 {
@@ -1904,17 +1904,17 @@
                     ]
                 },
                 {
-                    "appIdentifier": "youtubemusic",
-                    "format": "youtubemusic://$1$2",
+                    "appIdentifier": "protube",
+                    "format": "protube://video/$1",
                     "testResults": [
-                        "youtubemusic://MTY1Kje0yLg",
-                        "youtubemusic://0uY7gLZDmn4?start=96",
-                        "youtubemusic://MFzDaBzBlL0",
-                        "youtubemusic://mzun7_Ynmks",
-                        "youtubemusic://JEiSTzK-A2A",
-                        "youtubemusic://yWDJoJm-Rk0?t=4m30s",
-                        "youtubemusic://S4WNO4tchUk",
-                        "youtubemusic://ngElkyQ6Rhs"
+                        "protube://video/MTY1Kje0yLg",
+                        "protube://video/0uY7gLZDmn4",
+                        "protube://video/MFzDaBzBlL0",
+                        "protube://video/mzun7_Ynmks",
+                        "protube://video/JEiSTzK-A2A",
+                        "protube://video/yWDJoJm-Rk0",
+                        "protube://video/S4WNO4tchUk",
+                        "protube://video/ngElkyQ6Rhs"
                     ]
                 },
                 {
@@ -1964,19 +1964,19 @@
                     ]
                 },
                 {
-                    "appIdentifier": "protube",
-                    "format": "protube://user/$1",
-                    "testResults": [
-                        "protube://user/timonominus",
-                        "protube://user/timonominus"
-                    ]
-                },
-                {
                     "appIdentifier": "youplayer",
                     "format": "youplayer://youtube.com/user/$1",
                     "testResults": [
                         "youplayer://youtube.com/user/timonominus",
                         "youplayer://youtube.com/user/timonominus"
+                    ]
+                },
+                {
+                    "appIdentifier": "protube",
+                    "format": "protube://user/$1",
+                    "testResults": [
+                        "protube://user/timonominus",
+                        "protube://user/timonominus"
                     ]
                 }
             ]
@@ -1998,19 +1998,19 @@
                     ]
                 },
                 {
-                    "appIdentifier": "protube",
-                    "format": "protube://channel/$1",
-                    "testResults": [
-                        "protube://channel/UC4eYXhJI4-7wSWc8UNRwD4A",
-                        "protube://channel/UCqPTgFxqw_46kJGmEznQqqQ"
-                    ]
-                },
-                {
                     "appIdentifier": "youplayer",
                     "format": "youplayer://youtube.com/channel/$1",
                     "testResults": [
                         "youplayer://youtube.com/channel/UC4eYXhJI4-7wSWc8UNRwD4A",
                         "youplayer://youtube.com/channel/UCqPTgFxqw_46kJGmEznQqqQ"
+                    ]
+                },
+                {
+                    "appIdentifier": "protube",
+                    "format": "protube://channel/$1",
+                    "testResults": [
+                        "protube://channel/UC4eYXhJI4-7wSWc8UNRwD4A",
+                        "protube://channel/UCqPTgFxqw_46kJGmEznQqqQ"
                     ]
                 }
             ]
@@ -2030,10 +2030,10 @@
                     ]
                 },
                 {
-                    "appIdentifier": "protube",
-                    "format": "protube://playlist/$1",
+                    "appIdentifier": "youtubemusic",
+                    "format": "youtubemusic://youtube.com/playlist?list=$1",
                     "testResults": [
-                        "protube://playlist/PL2ED57C3E5C561B91"
+                        "youtubemusic://youtube.com/playlist?list=PL2ED57C3E5C561B91"
                     ]
                 },
                 {
@@ -2044,10 +2044,10 @@
                     ]
                 },
                 {
-                    "appIdentifier": "youtubemusic",
-                    "format": "youtubemusic://youtube.com/playlist?list=$1",
+                    "appIdentifier": "protube",
+                    "format": "protube://playlist/$1",
                     "testResults": [
-                        "youtubemusic://youtube.com/playlist?list=PL2ED57C3E5C561B91"
+                        "protube://playlist/PL2ED57C3E5C561B91"
                     ]
                 }
             ]
