@@ -6512,8 +6512,7 @@
             "displayName": "Apollo",
             "identifier": "apollo",
             "storeIdentifier": "979274575",
-            "scheme": "apollo://",
-            "new": true
+            "scheme": "apollo://"
         },
         {
             "displayName": "Tweetbot",
