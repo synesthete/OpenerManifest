@@ -2949,6 +2949,15 @@
                     ]
                 },
                 {
+                    "appIdentifier": "apollo",
+                    "format": "apollo://$2",
+                    "testResult": [
+                        "apollo://reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/",
+                        "apollo://reddit.com/r/gaming/",
+                        "apollo://reddit.com/r/spotify?utm_source=mweb_redirect&compact=true"
+                    ]
+                },
+                {
                     "appIdentifier": "narwhal",
                     "script": "function process(url, completionHandler) { completionHandler('narwhal://open-url/' + encodeURIComponent(url.split('?')[0])); }",
                     "script2": "function process(url, completionHandler) { completionHandler('narwhal://open-url/' + encodeURIComponent(url.split('?')[0])); }",
@@ -2958,15 +2967,6 @@
                         "narwhal://open-url/https%3A%2F%2Fm.reddit.com%2Fr%2Fspotify"
                     ],
                     "notes": "Narwhal doesn't tolerate queries it seems https://twitter.com/jad_chaar/status/770055945707716608"
-                },
-                {
-                    "appIdentifier": "apollo",
-                    "format": "apollo://$2",
-                    "testResult": [
-                        "apollo://reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/",
-                        "apollo://reddit.com/r/gaming/",
-                        "apollo://reddit.com/r/spotify?utm_source=mweb_redirect&compact=true"
-                    ]
                 },
                 {
                     "appIdentifier": "amrc",
