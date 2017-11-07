@@ -7763,6 +7763,7 @@
         {
             "displayName": "ZEEEN",
             "identifier": "zeeen",
+            "storeIdentifier": "923813895",
             "scheme": "zeeen://",
             "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/zeen-120.jpg"
         },
