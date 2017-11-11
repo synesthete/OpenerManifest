@@ -1371,6 +1371,15 @@
                         "transit://directions?to=37.756501,-122.421146",
                         "transit://directions?to=37.756501,-122.421146"
                     ]
+                },
+                {
+                    "appIdentifier": "citymapper",
+                    "script": "function process(url, completionHandler) { var regex = new RegExp('http(?:s)?://.*foursquare\\.com/v/(?:.*/)?(\\\\w+).*$'); var match = regex.exec(url); var venueIdentifier = match[1]; url = 'https://api.foursquare.com/v2/venues/' + venueIdentifier + '?v=20140921&client_id=Q5H4T3CZWKEKK3QKQKIIKWGISC1UKY2IXJ4BZCZXCLDQ0IMR&client_secret=J1TZFLIIZ4LK3I55AIFV3AW3Z4ICLAQIQ5KPNLTPT3ST03XH'; var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); completionHandler('citymapper://x-callback-url/directions?endcoord=' + res['response']['venue']['location']['lat'] + ',' + res['response']['venue']['location']['lng'] + '&endname=' + encodeURIComponent(res['response']['venue']['name'])); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var regex = new RegExp('http(?:s)?://.*foursquare\\.com/v/(?:.*/)?(\\\\w+).*$'); var match = regex.exec(url); var venueIdentifier = match[1]; url = 'https://api.foursquare.com/v2/venues/' + venueIdentifier + '?v=20140921&client_id=Q5H4T3CZWKEKK3QKQKIIKWGISC1UKY2IXJ4BZCZXCLDQ0IMR&client_secret=J1TZFLIIZ4LK3I55AIFV3AW3Z4ICLAQIQ5KPNLTPT3ST03XH'; var res = jsonRequest(url); completionHandler('citymapper://x-callback-url/directions?endcoord=' + res['response']['venue']['location']['lat'] + ',' + res['response']['venue']['location']['lng'] + '&endname=' + encodeURIComponent(res['response']['venue']['name'])); }",
+                    "testResults": [
+                        "citymapper://x-callback-url/directions?endcoord=37.756501,-122.421146&endname=Ritual%20Coffee%20Roasters",
+                        "citymapper://x-callback-url/directions?endcoord=37.756501,-122.421146&endname=Ritual%20Coffee%20Roasters"
+                    ]
                 }
             ]
         },
@@ -7797,6 +7806,14 @@
             "scheme": "rhttp://",
             "storeIdentifier": "364901807",
             "docs": "https://helpspot.readdle.com/documents/index.php?pg=kb.page&id=516"
+        },
+        {
+            "displayName": "Citymapper",
+            "identifier": "citymapper",
+            "scheme": "citymapper://",
+            "storeIdentifier": "469463298",
+            "docs": "https://citymapper.com/tools/1053/launch-citymapper-for-directions",
+            "new": true
         }
     ],
     "browsers": [
