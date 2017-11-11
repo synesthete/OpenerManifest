@@ -1666,7 +1666,7 @@
         },
         {
             "title": "Open Link",
-            "regex": "http(?:s)?://((?:www\\.)?google(?:\\.\\w+)+/maps/place/([^/]+)/(?:(?:@([^/]+)|(?!data)([^/]+)))?.*)$",
+            "regex": "http(?:s)?://((?:www\\.)?google(?:\\.\\w+)+/maps/place/([^/]+)/(?:(?:@(([^/]+,[^/]+)(?:,[^/]+))|(?!data)([^/]+)))?.*)$",
             "testInputs": [
                 "https://www.google.com/maps/place/Anchor+Brewing+Company/@37.7632216,-122.4009458,15z/data=!4m2!3m1!1s0x0:0x976aee276c5079b2?sa=X&ei=q1qQVaLFN8WqogSI6bsw&ved=0CM4BEPwSMBc",
                 "https://www.google.com/maps/place/Indiegogo,+965+Mission+St,+San+Francisco,+CA+94103/data=!4m2!3m1!1s0x808f7e29d40a8017:0x80a0cb606fe684b2?hl=en-US&dg=dbrw&newdg=1",
@@ -1676,7 +1676,7 @@
             "formats": [
                 {
                     "appIdentifier": "applemaps",
-                    "format": "maps://maps.apple.com/maps?q=$2&ll=$3&address=$4",
+                    "format": "maps://maps.apple.com/maps?q=$2&ll=$3&address=$5",
                     "testResults": [
                         "maps://maps.apple.com/maps?q=Anchor+Brewing+Company&ll=37.7632216,-122.4009458,15z&address=",
                         "maps://maps.apple.com/maps?q=Indiegogo,+965+Mission+St,+San+Francisco,+CA+94103&ll=&address=",
@@ -1690,6 +1690,16 @@
                     "testResults": [
                         "waze://?q=Anchor+Brewing+Company&ll=37.7632216,-122.4009458,15z",
                         "waze://?q=Indiegogo,+965+Mission+St,+San+Francisco,+CA+94103&ll=",
+                        null,
+                        null
+                    ]
+                },
+                {
+                    "appIdentifier": "citymapper",
+                    "format": "citymapper://x-callback-url/directions?endcoord=$4&endname=$2&endaddress=$5",
+                    "testResults": [
+                        "citymapper://x-callback-url/directions?endcoord=37.7632216,-122.4009458&endname=Anchor+Brewing+Company&endaddress=",
+                        "citymapper://x-callback-url/directions?endcoord=&endname=Indiegogo,+965+Mission+St,+San+Francisco,+CA+94103&endaddress=",
                         null,
                         null
                     ]
@@ -1851,6 +1861,20 @@
                         "transit://directions?to=34.045802,-118.260574",
                         "transit://directions?to=28.026687,-81.617854",
                         "transit://directions?to=34.042892,-118.245853",
+                        null
+                    ]
+                },
+                {
+                    "appIdentifier": "citymapper",
+                    "format": "citymapper://x-callback-url/directions?endcoord=$1",
+                    "testResults": [
+                        "citymapper://x-callback-url/directions?endcoord=-39.23774,175.3048",
+                        "citymapper://x-callback-url/directions?endcoord=37.7588677,-122.4044106",
+                        "citymapper://x-callback-url/directions?endcoord=37.760092,-122.414035",
+                        "citymapper://x-callback-url/directions?endcoord=37.781510,-122.407999",
+                        "citymapper://x-callback-url/directions?endcoord=34.045802,-118.260574",
+                        "citymapper://x-callback-url/directions?endcoord=28.026687,-81.617854",
+                        "citymapper://x-callback-url/directions?endcoord=34.042892,-118.245853",
                         null
                     ]
                 }
@@ -3485,6 +3509,15 @@
                     "script2": "function process(url, completionHandler) { var regex = new RegExp('http(?:s?)://(?:m\\\\.|mobile\\\\.|www\\\\.)?meetup\\\\.com/([a-zA-Z0-9_\\\\-%]+)(?:/.*)?/(\\\\d+).*$'); var match = regex.exec(url); var groupIdentifier = match[1]; var eventIdentifier = match[2]; url = 'https://api.meetup.com/' + groupIdentifier + '/events/' + eventIdentifier;  var res = jsonRequest(url); if (res['venue'] != null && res['venue']['lat'] != null & res['venue']['lon'] != null) { completionHandler('transit://directions?to=' + res['venue']['lat'] + ',' + res['venue']['lon']); } else { completionHandler(null); } }",
                     "testResults": [
                         "transit://directions?to=44.975250244140625,-93.25302124023438",
+                        null
+                    ]
+                },
+                {
+                    "appIdentifier": "citymapper",
+                    "script": "function process(url, completionHandler) { var regex = new RegExp('http(?:s?)://(?:m\\\\.|mobile\\\\.|www\\\\.)?meetup\\\\.com/([a-zA-Z0-9_\\\\-%]+)(?:/.*)?/(\\\\d+).*$'); var match = regex.exec(url); var groupIdentifier = match[1]; var eventIdentifier = match[2]; url = 'https://api.meetup.com/' + groupIdentifier + '/events/' + eventIdentifier; var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); if (res['venue'] != null && res['venue']['lat'] != null & res['venue']['lon'] != null) { completionHandler('citymapper://x-callback-url/directions?endcoord=' + res['venue']['lat'] + ',' + res['venue']['lon']); } else { completionHandler(null); } } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var regex = new RegExp('http(?:s?)://(?:m\\\\.|mobile\\\\.|www\\\\.)?meetup\\\\.com/([a-zA-Z0-9_\\\\-%]+)(?:/.*)?/(\\\\d+).*$'); var match = regex.exec(url); var groupIdentifier = match[1]; var eventIdentifier = match[2]; url = 'https://api.meetup.com/' + groupIdentifier + '/events/' + eventIdentifier;  var res = jsonRequest(url); if (res['venue'] != null && res['venue']['lat'] != null & res['venue']['lon'] != null) { completionHandler('citymapper://x-callback-url/directions?endcoord=' + res['venue']['lat'] + ',' + res['venue']['lon']); } else { completionHandler(null); } }",
+                    "testResults": [
+                        "citymapper://x-callback-url/directions?endcoord=44.975250244140625,-93.25302124023438",
                         null
                     ]
                 }
