@@ -5319,6 +5319,13 @@
                     "testResults": [
                         "ghttp://www.gnustep.org/resources/OpenStepSpec.pdf"
                     ]
+                },
+                {
+                    "appIdentifier": "documents",
+                    "format": "r$1",
+                    "testResults": [
+                        "rhttp://www.gnustep.org/resources/OpenStepSpec.pdf"
+                    ]
                 }
             ]
         },
@@ -7783,6 +7790,13 @@
             "identifier": "xkcdhd",
             "storeIdentifier": "369631343",
             "scheme": "xkcd://"
+        },
+        {
+            "displayName": "Documents",
+            "identifier": "documents",
+            "scheme": "rhttp://",
+            "storeIdentifier": "364901807",
+            "docs": "https://helpspot.readdle.com/documents/index.php?pg=kb.page&id=516"
         }
     ],
     "browsers": [
