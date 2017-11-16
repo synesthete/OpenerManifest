@@ -8325,6 +8325,22 @@
                 "redbrowser://www.opener.link/",
                 "redbrowsers://twitter.com/openerapp"
             ]
+        },
+        {
+            "displayName": "Maven+",
+            "identifier": "mavenplus",
+            "scheme": "mavp://",
+            "storeIdentifier": "514510093",
+            "regex": "http(?:s)?://(.*)$",
+            "format": "mavp://$1",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "mavp://www.opener.link/",
+                "mavp://twitter.com/openerapp"
+            ]
         }
     ]
 }
