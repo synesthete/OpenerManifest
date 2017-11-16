@@ -4423,7 +4423,7 @@
         },
         {
             "title": "Open Link",
-            "regex": "http(?:s)?://(?:geo\\.)?itunes\\.apple\\.com/(?:.*/)*(artist|album|music-video)/(?:.*/)?id(\\d+).*?(?:(?:\\?|&)(i=(?:\\d+)))?.*?$",
+            "regex": "http(?:s)?://(?:geo\\.)?itunes\\.apple\\.com/(?:.*/)*(artist|album|music-video)/(?:.*/)?(?:id)?(\\d+).*?(?:(?:\\?|&)(i=(?:\\d+)))?.*?$",
             "testInputs": [
                 "https://itunes.apple.com/us/artist/beck/id312095",
                 "https://itunes.apple.com/us/album/guero/id485498129",
@@ -4432,7 +4432,8 @@
                 "https://itunes.apple.com/us/movie/her-2013/id810314926",
                 "https://itunes.apple.com/us/tv-season/breaking-bad-season-1/id271383858",
                 "https://itunes.apple.com/us/tv-season/pilot/id271383858?i=271866344",
-                "https://geo.itunes.apple.com/us/app/opener-open-links-in-apps/id989565871"
+                "https://geo.itunes.apple.com/us/app/opener-open-links-in-apps/id989565871",
+                "https://itunes.apple.com/us/album/audio-video-disco/470073062"
             ],
             "formats": [
                 {
@@ -4446,7 +4447,8 @@
                         null,
                         null,
                         null,
-                        null
+                        null,
+                        "itms://itunes.apple.com/album/id470073062?at=1001l3kM&"
                     ]
                 },
                 {
@@ -4460,14 +4462,15 @@
                         null,
                         null,
                         null,
-                        null
+                        null,
+                        "music://itunes.apple.com/album/id470073062?at=1001l3kM&"
                     ]
                 }
             ]
         },
         {
             "title": "Open Link",
-            "regex": "http(?:s)?://(?:geo\\.)?itunes\\.apple\\.com/(?:.*/)*(movie|tv-season)/(?:.*/)?id(\\d+).*?(?:(?:\\?|&)(i=(?:\\d+)))?.*?$",
+            "regex": "http(?:s)?://(?:geo\\.)?itunes\\.apple\\.com/(?:.*/)*(movie|tv-season)/(?:.*/)?(?:id)?(\\d+).*?(?:(?:\\?|&)(i=(?:\\d+)))?.*?$",
             "testInputs": [
                 "https://itunes.apple.com/us/artist/beck/id312095",
                 "https://itunes.apple.com/us/album/guero/id485498129",
@@ -4476,7 +4479,8 @@
                 "https://itunes.apple.com/us/movie/her-2013/id810314926",
                 "https://itunes.apple.com/us/tv-season/breaking-bad-season-1/id271383858",
                 "https://itunes.apple.com/us/tv-season/pilot/id271383858?i=271866344",
-                "https://geo.itunes.apple.com/us/app/opener-open-links-in-apps/id989565871"
+                "https://geo.itunes.apple.com/us/app/opener-open-links-in-apps/id989565871",
+                "https://itunes.apple.com/us/album/audio-video-disco/470073062"
             ],
             "formats": [
                 {
@@ -4490,6 +4494,7 @@
                         "itms://itunes.apple.com/movie/id810314926?at=1001l3kM&",
                         "itms://itunes.apple.com/tv-season/id271383858?at=1001l3kM&",
                         "itms://itunes.apple.com/tv-season/id271383858?at=1001l3kM&i=271866344",
+                        null,
                         null
                     ]
                 }
