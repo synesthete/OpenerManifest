@@ -1270,7 +1270,7 @@
         },
         {
             "title": "Open Status",
-            "regex": "http(?:s)?://(?:\\w+\\.)?weibo\\.(?:com|cn)/(?:\\d+|status)/(\\w+).*$",
+            "regex": "(http(?:s)?://(?:\\w+\\.)?weibo\\.(?:com|cn)/(?:\\d+|status)/(\\w+).*)$",
             "testInputs": [
                 "http://weibo.com/2616423197/Cmjs2vh5Q?from=page_1005052616423197_profile&wvr=6&mod=weibotime",
                 "http://m.weibo.cn/5524254784/D5ZxyE1tM",
@@ -1280,7 +1280,7 @@
             "formats": [
                 {
                     "appIdentifier": "weibo",
-                    "format": "sinaweibo://detail?mblogid=$1",
+                    "format": "sinaweibo://detail?mblogid=$2",
                     "testResults": [
                         "sinaweibo://detail?mblogid=Cmjs2vh5Q",
                         "sinaweibo://detail?mblogid=D5ZxyE1tM",
@@ -1290,12 +1290,22 @@
                 },
                 {
                     "appIdentifier": "moke",
-                    "format": "moke:///status?mid=$1",
+                    "format": "moke:///status?mid=$2",
                     "testResults": [
                         "moke:///status?mid=Cmjs2vh5Q",
                         "moke:///status?mid=D5ZxyE1tM",
                         "moke:///status?mid=D5ZxyE1tM",
                         "moke:///status?mid=4066781620224386"
+                    ]
+                },
+                {
+                    "appIdentifier": "cosmos",
+                    "format": "cosmos://detail?link=$1",
+                    "testResults": [
+                        "cosmos://detail?link=http://weibo.com/2616423197/Cmjs2vh5Q?from=page_1005052616423197_profile&wvr=6&mod=weibotime",
+                        "cosmos://detail?link=http://m.weibo.cn/5524254784/D5ZxyE1tM",
+                        "cosmos://detail?link=http://m.weibo.cn/status/D5ZxyE1tM",
+                        "cosmos://detail?link=http://m.weibo.cn/status/4066781620224386"
                     ]
                 }
             ]
@@ -7858,6 +7868,13 @@
             "identifier": "xkcdhd",
             "storeIdentifier": "369631343",
             "scheme": "xkcd://"
+        },
+        {
+            "displayName": "Cosmos",
+            "identifier": "cosmos",
+            "storeIdentifier": "1260925935",
+            "scheme": "cosmos://",
+            "new": true
         }
     ],
     "browsers": [
