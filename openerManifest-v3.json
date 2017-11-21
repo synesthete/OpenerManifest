@@ -6971,8 +6971,7 @@
             "identifier": "citymapper",
             "scheme": "citymapper://",
             "storeIdentifier": "469463298",
-            "docs": "https://citymapper.com/tools/1053/launch-citymapper-for-directions",
-            "new": true
+            "docs": "https://citymapper.com/tools/1053/launch-citymapper-for-directions"
         },
         {
             "displayName": "Google Docs",
