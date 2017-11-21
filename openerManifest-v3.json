@@ -4637,6 +4637,15 @@
             ],
             "formats": [
                 {
+                    "appIdentifier": "dribbble",
+                    "format": "dribbble://shots/$1",
+                    "testResults": [
+                        "dribbble://shots/2368108",
+                        "dribbble://shots/2303483",
+                        "dribbble://shots/2303483"
+                    ]
+                },
+                {
                     "appIdentifier": "zeeen",
                     "format": "zeeen://shot/$1",
                     "testResults": [
@@ -4669,6 +4678,28 @@
                 "http://m.dribbble.com/shots/2303483"
             ],
             "formats": [
+                {
+                    "appIdentifier": "dribbble",
+                    "format": "dribbble://$1",
+                    "testResults": [
+                        "dribbble://letsgorally",
+                        "dribbble://letsgorally",
+                        "dribbble://letsgorally",
+                        "dribbble://robotspacer",
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ]
+                },
                 {
                     "appIdentifier": "zeeen",
                     "format": "zeeen://player/$1",
@@ -7868,6 +7899,13 @@
             "identifier": "xkcdhd",
             "storeIdentifier": "369631343",
             "scheme": "xkcd://"
+        },
+        {
+            "displayName": "Dribbble",
+            "identifier": "dribbble",
+            "storeIdentifier": "1228326440",
+            "scheme": "dribbble://",
+            "new": true
         },
         {
             "displayName": "Cosmos",
