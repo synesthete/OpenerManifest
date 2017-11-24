@@ -1891,6 +1891,48 @@
             ]
         },
         {
+            "title": "Open Link",
+            "regex": "http(?:s)?://((?:(?:\\w+\\.)?(?:youtube\\.com|youtu\\.be))/.*)$",
+            "testInputs": [
+                "https://m.youtube.com/watch?v=MTY1Kje0yLg",
+                "https://www.youtube.com/embed/0uY7gLZDmn4?start=96",
+                "https://www.youtube.com/watch?v=MFzDaBzBlL0&app=desktop",
+                "https://youtu.be/mzun7_Ynmks",
+                "http://youtu.be/JEiSTzK-A2A",
+                "https://youtu.be/yWDJoJm-Rk0?t=4m30s",
+                "https://www.youtube.com/watch?v=S4WNO4tchUk",
+                "https://www.youtube.com/watch?v=ngElkyQ6Rhs",
+                "https://www.youtube.com/user/timonominus",
+                "https://m.youtube.com/user/timonominus",
+                "https://www.youtube.com/channel/UC4eYXhJI4-7wSWc8UNRwD4A",
+                "https://www.youtube.com/channel/UCqPTgFxqw_46kJGmEznQqqQ",
+                "https://www.youtube.com/playlist?list=PL2ED57C3E5C561B91",
+                "https://www.youtube.com/vintagespace"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "youtube",
+                    "format": "vnd.youtube://$1",
+                    "testResults": [
+                        "vnd.youtube://m.youtube.com/watch?v=MTY1Kje0yLg",
+                        "vnd.youtube://www.youtube.com/embed/0uY7gLZDmn4?start=96",
+                        "vnd.youtube://www.youtube.com/watch?v=MFzDaBzBlL0&app=desktop",
+                        "vnd.youtube://youtu.be/mzun7_Ynmks",
+                        "vnd.youtube://youtu.be/JEiSTzK-A2A",
+                        "vnd.youtube://youtu.be/yWDJoJm-Rk0?t=4m30s",
+                        "vnd.youtube://www.youtube.com/watch?v=S4WNO4tchUk",
+                        "vnd.youtube://www.youtube.com/watch?v=ngElkyQ6Rhs",
+                        "vnd.youtube://www.youtube.com/user/timonominus",
+                        "vnd.youtube://m.youtube.com/user/timonominus",
+                        "vnd.youtube://www.youtube.com/channel/UC4eYXhJI4-7wSWc8UNRwD4A",
+                        "vnd.youtube://www.youtube.com/channel/UCqPTgFxqw_46kJGmEznQqqQ",
+                        "vnd.youtube://www.youtube.com/playlist?list=PL2ED57C3E5C561B91",
+                        "vnd.youtube://www.youtube.com/vintagespace"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Video",
             "regex": "http(?:s)?://(?:www\\.|m\\.)?(?:youtu\\.be/|youtube\\.com/(?:embed/|.*(?:\\?|&)v=))([a-zA-Z0-9_\\-]+).*?((\\?|&)(start|t)=\\w+)?.*?$",
             "testInputs": [
@@ -1904,20 +1946,6 @@
                 "https://www.youtube.com/watch?v=ngElkyQ6Rhs"
             ],
             "formats": [
-                {
-                    "appIdentifier": "youtube",
-                    "format": "youtube://$1$2",
-                    "testResults": [
-                        "youtube://MTY1Kje0yLg",
-                        "youtube://0uY7gLZDmn4?start=96",
-                        "youtube://MFzDaBzBlL0",
-                        "youtube://mzun7_Ynmks",
-                        "youtube://JEiSTzK-A2A",
-                        "youtube://yWDJoJm-Rk0?t=4m30s",
-                        "youtube://S4WNO4tchUk",
-                        "youtube://ngElkyQ6Rhs"
-                    ]
-                },
                 {
                     "appIdentifier": "youtubemusic",
                     "format": "youtubemusic://$1$2",
@@ -1999,14 +2027,6 @@
             ],
             "formats": [
                 {
-                    "appIdentifier": "youtube",
-                    "format": "youtube://youtube.com/user/$1",
-                    "testResults": [
-                        "youtube://youtube.com/user/timonominus",
-                        "youtube://youtube.com/user/timonominus"
-                    ]
-                },
-                {
                     "appIdentifier": "youplayer",
                     "format": "youplayer://youtube.com/user/$1",
                     "testResults": [
@@ -2033,14 +2053,6 @@
             ],
             "formats": [
                 {
-                    "appIdentifier": "youtube",
-                    "format": "youtube://youtube.com/channel/$1",
-                    "testResults": [
-                        "youtube://youtube.com/channel/UC4eYXhJI4-7wSWc8UNRwD4A",
-                        "youtube://youtube.com/channel/UCqPTgFxqw_46kJGmEznQqqQ"
-                    ]
-                },
-                {
                     "appIdentifier": "youplayer",
                     "format": "youplayer://youtube.com/channel/$1",
                     "testResults": [
@@ -2065,13 +2077,6 @@
                 "https://www.youtube.com/playlist?list=PL2ED57C3E5C561B91"
             ],
             "formats": [
-                {
-                    "appIdentifier": "youtube",
-                    "format": "youtube://youtube.com/playlist?list=$1",
-                    "testResults": [
-                        "youtube://youtube.com/playlist?list=PL2ED57C3E5C561B91"
-                    ]
-                },
                 {
                     "appIdentifier": "youtubemusic",
                     "format": "youtubemusic://youtube.com/playlist?list=$1",
