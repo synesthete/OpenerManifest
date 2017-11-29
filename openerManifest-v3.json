@@ -7908,15 +7908,13 @@
             "displayName": "Dribbble",
             "identifier": "dribbble",
             "storeIdentifier": "1228326440",
-            "scheme": "dribbble://",
-            "new": true
+            "scheme": "dribbble://"
         },
         {
             "displayName": "Cosmos",
             "identifier": "cosmos",
             "storeIdentifier": "1260925935",
-            "scheme": "cosmos://",
-            "new": true
+            "scheme": "cosmos://"
         }
     ],
     "browsers": [
