@@ -316,18 +316,23 @@
             "regex": "http(?:s)?://(?:www\\.)?(?:instagram\\.com|instagr\\.am)/p/([a-zA-Z0-9_\\-\\.]+).*$",
             "testInputs": [
                 "https://instagram.com/p/1t0zhgmQf7/",
-                "https://instagram.com/p/1t0oDmGQfp/",
-                "https://instagram.com/p/zAoa96gwQg/?taken-by=lukesbeard"
+                "https://instagram.com/p/zAoa96gwQg/?taken-by=lukesbeard",
+                "https://www.instagram.com/p/D/",
+                "https://www.instagram.com/p/J_NvB",
+                "https://www.instagram.com/p/BcETi8Fh-iInKXHOzaLYEuVlz03w9oqp0TzVI40/"
             ],
             "formats": [
                 {
                     "appIdentifier": "instagram",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); url = 'https://api.instagram.com/oembed?url=' + url; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4) { if (xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); completionHandler('instagram://media?id=' + res['media_id']); } else { completionHandler(null); } } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { if (typeof base64DigitsToBase10String !== 'undefined' && typeof base64DigitsToBase10String === 'function') { var regex = RegExp('http(?:s)?://(?:www\\\\.)?(?:instagram\\\\.com|instagr\\\\.am)/p/([a-zA-Z0-9_\\\\-]+).*$'); var results = regex.exec(url); var match = null; if (results != null && results.length > 1) { match = results[1] }; var table = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_'; var base64Digits = []; for (i = 0; i < match.length; i++) { var digit = table.indexOf(match.charAt(i)); base64Digits.push(digit); } completionHandler('instagram://media?id=' + base64DigitsToBase10String(base64Digits)); } else { var res = jsonRequest('https://api.instagram.com/oembed?url=' + url); if (res != null) { var mediaIdentifier = res['media_id']; } if (mediaIdentifier != null) { completionHandler('instagram://media?id=' + mediaIdentifier); } else { completionHandler(null); } } }",
+                    "note": "How to generate Instagram media identifiers without making a request https://carrot.is/coding/instagram-ids. Max length 11 was found experimentally.",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); url = 'https://api.instagram.com/oembed?url=' + url; xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4) { if (xmlhttp.status == 200) { var res = JSON.parse(xmlhttp.responseText); completionHandler('instagram://media?id=' + res['media_id'].split('_')[0]); } else { completionHandler(null); } } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { if (typeof base64DigitsToBase10String !== 'undefined' && typeof base64DigitsToBase10String === 'function') { var regex = RegExp('http(?:s)?://(?:www\\\\.)?(?:instagram\\\\.com|instagr\\\\.am)/p/([a-zA-Z0-9_\\\\-]{1,11}).*$'); var results = regex.exec(url); var match = null; if (results != null && results.length > 1) { match = results[1] }; var table = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_'; var base64Digits = []; for (i = 0; i < match.length; i++) { var digit = table.indexOf(match.charAt(i)); base64Digits.push(digit); } completionHandler('instagram://media?id=' + base64DigitsToBase10String(base64Digits)); } else { var res = jsonRequest('https://api.instagram.com/oembed?url=' + url); if (res != null) { var mediaIdentifier = res['media_id']; } if (mediaIdentifier != null) { completionHandler('instagram://media?id=' + mediaIdentifier.split('_')[0]); } else { completionHandler(null); } } }",
                     "testResults": [
-                        "instagram://media?id=967661734046795771_263571600",
-                        null,
-                        "instagram://media?id=918912099030336544_192"
+                        "instagram://media?id=967661734046795771",
+                        "instagram://media?id=918912099030336544",
+                        "instagram://media?id=3",
+                        "instagram://media?id=167566273",
+                        "instagram://media?id=1658536526642407560"
                     ]
                 }
             ]
