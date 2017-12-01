@@ -8403,6 +8403,22 @@
                 "quark://www.opener.link/",
                 "quark://twitter.com/openerapp"
             ]
+        },
+        {
+            "displayName": "Microsoft Edge",
+            "identifier": "microsoftedge",
+            "scheme": "microsoft-edge://",
+            "storeIdentifier": "1288723196",
+            "regex": "http(?:s)?://(.*)$",
+            "format": "microsoft-edge://$1",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "microsoft-edge://www.opener.link/",
+                "microsoft-edge://twitter.com/openerapp"
+            ]
         }
     ]
 }
