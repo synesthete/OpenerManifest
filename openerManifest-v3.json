@@ -8152,7 +8152,7 @@
             "displayName": "Dolphin",
             "identifier": "dolphinphone",
             "scheme": "dolphin://",
-            "storeIdentifier": "452204407",
+            "storeIdentifier": "634693702",
             "platform": "phone",
             "regex": "(http(?:s)?.*)",
             "format": "dolphin://$1",
