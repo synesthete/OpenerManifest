@@ -6735,8 +6735,8 @@
         {
             "displayName": "Documents",
             "identifier": "documents",
-            "scheme": "rhttp://",
             "storeIdentifier": "364901807",
+            "scheme": "rhttp://",
             "docs": "https://helpspot.readdle.com/documents/index.php?pg=kb.page&id=516"
         },
         {
@@ -7506,8 +7506,8 @@
         {
             "displayName": "Citymapper",
             "identifier": "citymapper",
-            "scheme": "citymapper://",
             "storeIdentifier": "469463298",
+            "scheme": "citymapper://",
             "docs": "https://citymapper.com/tools/1053/launch-citymapper-for-directions"
         },
         {
