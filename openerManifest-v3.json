@@ -6591,6 +6591,22 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:www\\.)?(scrapbox\\.io/.*)$",
+            "testInputs": [
+                "https://scrapbox.io/walpurgisn/%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88%E7%B7%B4%E7%BF%92%E5%B8%B3"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "porter",
+                    "format": "sbporter://$1",
+                    "testResults": [
+                        "sbporter://scrapbox.io/walpurgisn/%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88%E7%B7%B4%E7%BF%92%E5%B8%B3"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -7920,6 +7936,12 @@
             "identifier": "xkcdhd",
             "storeIdentifier": "369631343",
             "scheme": "xkcd://"
+        },
+        {
+            "displayName": "Porter",
+            "identifier": "porter",
+            "storeIdentifier": "1305805708",
+            "scheme": "sbporter://"
         }
     ],
     "browsers": [
