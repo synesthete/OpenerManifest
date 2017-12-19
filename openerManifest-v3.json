@@ -8440,6 +8440,22 @@
                 "redbrowser://www.opener.link/",
                 "redbrowsers://twitter.com/openerapp"
             ]
+        },
+        {
+            "displayName": "QQ Browser",
+            "identifier": "qqbrowser",
+            "scheme": "mqqbrowser://",
+            "storeIdentifier": "370139302",
+            "regex": "(http(?:s)?.*)",
+            "format": "mqqbrowser://url=$1",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "mqqbrowser://url=http://www.opener.link/",
+                "mqqbrowser://url=https://twitter.com/openerapp"
+            ]
         }
     ]
 }
