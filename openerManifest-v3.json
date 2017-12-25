@@ -4375,6 +4375,15 @@
                         "opener://x-callback-url/show-store-product-details?id=989565871",
                         null
                     ]
+                },
+                {
+                    "appIdentifier": "pricetag",
+                    "format": "pricetag://app?url=https://itunes.apple.com/app/id$1",
+                    "testResults": [
+                        "pricetag://app?url=https://itunes.apple.com/app/id989565871",
+                        "pricetag://app?url=https://itunes.apple.com/app/id989565871",
+                        null
+                    ]
                 }
             ]
         },
@@ -7941,6 +7950,12 @@
             "identifier": "zomato",
             "storeIdentifier": "434613896",
             "scheme": "zomato://"
+        },
+        {
+            "displayName": "Price Tag",
+            "identifier": "pricetag",
+            "storeIdentifier": "1166819590",
+            "scheme": "pricetag://"
         }
     ],
     "browsers": [
