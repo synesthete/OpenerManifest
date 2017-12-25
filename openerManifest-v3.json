@@ -8471,6 +8471,22 @@
                 "mqqbrowser://url=http://www.opener.link/",
                 "mqqbrowser://url=https://twitter.com/openerapp"
             ]
+        },
+        {
+            "displayName": "DS Get",
+            "identifier": "dsget",
+            "scheme": "synodownloads://",
+            "storeIdentifier": "540948028",
+            "regex": "http((?:s)?.*)",
+            "format": "synodownload$1",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "synodownload://www.opener.link/",
+                "synodownloads://twitter.com/openerapp"
+            ]
         }
     ]
 }
