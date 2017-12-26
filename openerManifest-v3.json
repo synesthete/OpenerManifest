@@ -4413,15 +4413,6 @@
             ],
             "formats": [
                 {
-                    "appIdentifier": "appshopper",
-                    "format": "appshoppersocial://app/$1",
-                    "testResults": [
-                        "appshoppersocial://app/989565871",
-                        "appshoppersocial://app/989565871",
-                        "appshoppersocial://app/904280696"
-                    ]
-                },
-                {
                     "appIdentifier": "appzapp",
                     "format": "appzapp://app?appid=$1",
                     "testResults": [
@@ -4446,6 +4437,15 @@
                         "catchapp://app?id=989565871",
                         "catchapp://app?id=989565871",
                         "catchapp://app?id=904280696"
+                    ]
+                },
+                {
+                    "appIdentifier": "appshopper",
+                    "format": "appshoppersocial://app/$1",
+                    "testResults": [
+                        "appshoppersocial://app/989565871",
+                        "appshoppersocial://app/989565871",
+                        "appshoppersocial://app/904280696"
                     ]
                 }
             ]
