@@ -8308,8 +8308,7 @@
             "testResults": [
                 "shtp://www.opener.link/",
                 "shtps://twitter.com/openerapp"
-            ],
-            "new": true
+            ]
         },
         {
             "displayName": "Adblock Browser",
