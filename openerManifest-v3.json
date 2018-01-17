@@ -3994,6 +3994,44 @@
             ]
         },
         {
+            "title": "Show Repository",
+            "regex": "http(?:s)?://(?:(?:(?!gist)\\w+\\.)*(?:(github)\\.com)/([^/]+)/([^/]+?)(?:\\.git)?((/)?\\?.*$)?)$",
+            "testInputs": [
+                "https://github.com/timonus/OpenerManifest/blob/master/.gitignore",
+                "https://github.com/timonus",
+                "https://gist.github.com/timonus/717c9b24880167641021",
+                "https://github.com/timonus/OpenerManifest",
+                "https://github.com/timonus/OpenerManifest.git",
+                "http://bitbucket.org/timonus",
+                "https://bitbucket.org/timonus/configuration/commits/all",
+                "https://bitbucket.org/timonus/configuration",
+                "https://bitbucket.org/timonus/configuration.git",
+                "https://gitlab.com/timonus/",
+                "https://gitlab.com/timonus/OpenerManifest/commits/master",
+                "https://gitlab.com/timonus/OpenerManifest"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "pphub",
+                    "format": "pphub://repo?owner=$2&repo=$3$4",
+                    "testResults": [
+                        null,
+                        null,
+                        null,
+                        "pphub://repo?owner=timonus&repo=OpenerManifest",
+                        "pphub://repo?owner=timonus&repo=OpenerManifest",
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Link",
             "regex": "http(?:s?)://((?:\\w+\\.)*stackoverflow\\.com/.*)",
             "testInputs": [
@@ -7955,6 +7993,13 @@
             "identifier": "xkcdhd",
             "storeIdentifier": "369631343",
             "scheme": "xkcd://"
+        },
+        {
+            "displayName": "PPHub",
+            "identifier": "pphub",
+            "storeIdentifier": "1314212521",
+            "scheme": "pphub://",
+            "docs": "https://db.tt/d6RQ8Fe4Ie"
         }
     ],
     "browsers": [
