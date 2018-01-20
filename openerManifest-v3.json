@@ -8193,7 +8193,7 @@
         {
             "displayName": "Microsoft Edge",
             "identifier": "microsoftedge",
-            "scheme": "microsoft-edge://",
+            "scheme": "microsoft-edge-https://",
             "storeIdentifier": "1288723196",
             "regex": "(http(?:s)?.*)",
             "format": "microsoft-edge-$1",
