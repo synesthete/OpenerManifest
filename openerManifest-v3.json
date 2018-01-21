@@ -6660,6 +6660,40 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Post",
+            "regex": "http(?:s)?://(?:www\\.|m\\.)?kwai\\.com/i/photo/.*photoId=(\\d+).*?$",
+            "testInputs": [
+                "http://www.kwai.com/i/photo/lwx?et=1_a%2F1590209410251264001_p0&photoId=4704203541&type=2&userId=604908634&fid=796339652&timestamp=1516541906439&cc=share_twitter"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "kwai",
+                    "format": "kwai://work/$1",
+                    "testResults": [
+                        "kwai://work/4704203541"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Profile",
+            "regex": "http(?:s)?://(?:www\\.|m\\.)?kuaishou\\.com/(?:live/)?user/(\\d+).*?$",
+            "testInputs": [
+                "https://m.kuaishou.com/user/604908634",
+                "https://www.kuaishou.com/live/user/604908634"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "kwai",
+                    "format": "kwai://profile/$1",
+                    "testResults": [
+                        "kwai://profile/604908634",
+                        "kwai://profile/604908634"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -7999,6 +8033,13 @@
             "identifier": "xkcdhd",
             "storeIdentifier": "369631343",
             "scheme": "xkcd://"
+        },
+        {
+            "displayName": "Kwai",
+            "identifier": "kwai",
+            "storeIdentifier": "440948110",
+            "scheme": "kwai://"
+            , "new": true
         },
         {
             "displayName": "PPHub",
