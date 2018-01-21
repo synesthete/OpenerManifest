@@ -2,11 +2,12 @@
     "actions": [
         {
             "title": "Open Tweet",
-            "regex": "http(?:s)?://(?:mobile\\.|www\\.|m\\.)?twitter\\.com/(?:@?[a-zA-Z0-9_]{1,15}/status|i/web/status|statuses)/(\\d+).*$",
+            "regex": "http(?:s)?://(?:mobile\\.|www\\.|m\\.)?twitter\\.com/(?:@?[a-zA-Z0-9_]{1,15}/)?(?:status|i/web/status|statuses)/(\\d+).*$",
             "testInputs": [
                 "https://twitter.com/zpower/status/588561590997352448",
                 "https://mobile.twitter.com/kiebk/status/599159327056863232?cn=cmVwbHk%3D&refsrc=email",
-                "https://twitter.com/i/web/status/814237378382622720"
+                "https://twitter.com/i/web/status/814237378382622720",
+                "https://twitter.com/hamburger/statuses/221225038941126657"
             ],
             "formats": [
                 {
@@ -15,7 +16,8 @@
                     "testResults": [
                         "twitter://status?id=588561590997352448",
                         "twitter://status?id=599159327056863232",
-                        "twitter://status?id=814237378382622720"
+                        "twitter://status?id=814237378382622720",
+                        "twitter://status?id=221225038941126657"
                     ]
                 },
                 {
@@ -24,7 +26,8 @@
                     "testResults": [
                         "tweetbot:///status/588561590997352448",
                         "tweetbot:///status/599159327056863232",
-                        "tweetbot:///status/814237378382622720"
+                        "tweetbot:///status/814237378382622720",
+                        "tweetbot:///status/221225038941126657"
                     ]
                 },
                 {
@@ -33,18 +36,20 @@
                     "testResults": [
                         "twitterrific:///tweet?id=588561590997352448",
                         "twitterrific:///tweet?id=599159327056863232",
-                        "twitterrific:///tweet?id=814237378382622720"
+                        "twitterrific:///tweet?id=814237378382622720",
+                        "twitterrific:///tweet?id=221225038941126657"
                     ]
                 }
             ]
         },
         {
             "title": "Add Tweet to Collection",
-            "regex": "http(?:s)?://(?:mobile\\.|www\\.|m\\.)?twitter\\.com/(?:@?[a-zA-Z0-9_]{1,15}/status|i/web/status|statuses)/(\\d+).*$",
+            "regex": "http(?:s)?://(?:mobile\\.|www\\.|m\\.)?twitter\\.com/(?:@?[a-zA-Z0-9_]{1,15}/)?(?:status|i/web/status|statuses)/(\\d+).*$",
             "testInputs": [
                 "https://twitter.com/zpower/status/588561590997352448",
                 "https://mobile.twitter.com/kiebk/status/599159327056863232?cn=cmVwbHk%3D&refsrc=email",
-                "https://twitter.com/i/web/status/814237378382622720"
+                "https://twitter.com/i/web/status/814237378382622720",
+                "https://twitter.com/hamburger/statuses/221225038941126657"
             ],
             "formats": [
                 {
@@ -53,7 +58,8 @@
                     "testResults": [
                         "x-charm://collect/588561590997352448",
                         "x-charm://collect/599159327056863232",
-                        "x-charm://collect/814237378382622720"
+                        "x-charm://collect/814237378382622720",
+                        "x-charm://collect/221225038941126657"
                     ]
                 }
             ]
