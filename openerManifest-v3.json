@@ -8609,6 +8609,23 @@
                 "shtp://www.opener.link/",
                 "shtps://twitter.com/openerapp"
             ]
+        },
+        {
+            "displayName": "SiteSucker",
+            "identifier": "sitesucker",
+            "scheme": "sitesucker://",
+            "storeIdentifier": "346896838",
+            "regex": "(http(?:s)?.*)",
+            "format": "sitesucker:$1",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "sitesucker:http://www.opener.link/",
+                "sitesucker:https://twitter.com/openerapp"
+            ]
+            , "new": true
         }
     ]
 }
