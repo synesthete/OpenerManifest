@@ -1767,13 +1767,14 @@
         },
         {
             "title": "Open Link",
-            "regex": "http(?:s)?://maps\\.apple\\.com/(?:maps)?\\?(.*)",
+            "regex": "http(?:s)?://maps\\.apple\\.com(?:/)?(?:maps)?\\?(.*)",
             "testInputs": [
                 "http://maps.apple.com/maps?address=620%20Treat%20Ave%20San%20Francisco%20CA%2094110-2016%20United%20States&auid=8554658162390289549&ll=37.760092,-122.414035&lsp=9902&q=Southern%20Pacific%20Brewing&t=r",
                 "http://maps.apple.com/maps?address=967%20Mission%20St%20San%20Francisco%20CA%2094103%20United%20States&ll=37.781510,-122.407999&t=m",
                 "http://maps.apple.com/?lsp=6489&sll=34.045802,-118.260574&q=645%20W%209th%20St%20%23110-140%20Los%20Angeles%20CA%2090015-1640%20United%20States",
                 "http://maps.apple.com/?lsp=9902&auid=5554799088491316685&sll=28.026687,-81.617854&q=Dundee%20Elementary%20School&hnear=215%20E%20Frederick%20Ave%2C%20Dundee%2C%20FL%20%2033838-4238%2C%20United%20States",
-                "https://maps.apple.com/?address=1%20Dana%20St,%20Cambridge,%20MA%20%2002138,%20United%20States&ll=42.369732,-71.110707&q=1%20Dana%20St"
+                "https://maps.apple.com/?address=1%20Dana%20St,%20Cambridge,%20MA%20%2002138,%20United%20States&ll=42.369732,-71.110707&q=1%20Dana%20St",
+                "https://maps.apple.com?address=1%20Dana%20St,%20Cambridge,%20MA%20%2002138,%20United%20States&ll=42.369732,-71.110707&q=1%20Dana%20St"
             ],
             "formats": [
                 {
@@ -1784,6 +1785,7 @@
                         "maps://maps.apple.com/maps?address=967%20Mission%20St%20San%20Francisco%20CA%2094103%20United%20States&ll=37.781510,-122.407999&t=m",
                         "maps://maps.apple.com/maps?lsp=6489&sll=34.045802,-118.260574&q=645%20W%209th%20St%20%23110-140%20Los%20Angeles%20CA%2090015-1640%20United%20States",
                         "maps://maps.apple.com/maps?lsp=9902&auid=5554799088491316685&sll=28.026687,-81.617854&q=Dundee%20Elementary%20School&hnear=215%20E%20Frederick%20Ave%2C%20Dundee%2C%20FL%20%2033838-4238%2C%20United%20States",
+                        "maps://maps.apple.com/maps?address=1%20Dana%20St,%20Cambridge,%20MA%20%2002138,%20United%20States&ll=42.369732,-71.110707&q=1%20Dana%20St",
                         "maps://maps.apple.com/maps?address=1%20Dana%20St,%20Cambridge,%20MA%20%2002138,%20United%20States&ll=42.369732,-71.110707&q=1%20Dana%20St"
                     ]
                 },
@@ -1796,6 +1798,7 @@
                         "comgooglemaps://?q=967%20Mission%20St%20San%20Francisco%20CA%2094103%20United%20States&center=37.781510,-122.407999",
                         "comgooglemaps://?q=645%20W%209th%20St%20%23110-140%20Los%20Angeles%20CA%2090015-1640%20United%20States&center=34.045802,-118.260574",
                         "comgooglemaps://?q=215%20E%20Frederick%20Ave%2C%20Dundee%2C%20FL%20%2033838-4238%2C%20United%20States&center=28.026687,-81.617854",
+                        "comgooglemaps://?q=1%20Dana%20St%2C%20Cambridge%2C%20MA%20%2002138%2C%20United%20States&center=42.369732,-71.110707",
                         "comgooglemaps://?q=1%20Dana%20St%2C%20Cambridge%2C%20MA%20%2002138%2C%20United%20States&center=42.369732,-71.110707"
                     ]
                 },
@@ -1808,6 +1811,7 @@
                         "waze://?q=967%20Mission%20St%20San%20Francisco%20CA%2094103%20United%20States&ll=37.781510,-122.407999",
                         "waze://?q=645%20W%209th%20St%20%23110-140%20Los%20Angeles%20CA%2090015-1640%20United%20States&ll=34.045802,-118.260574",
                         "waze://?q=Dundee%20Elementary%20School%2C215%20E%20Frederick%20Ave%2C%20Dundee%2C%20FL%20%2033838-4238%2C%20United%20States&ll=28.026687,-81.617854",
+                        "waze://?q=1%20Dana%20St%2C1%20Dana%20St%2C%20Cambridge%2C%20MA%20%2002138%2C%20United%20States&ll=42.369732,-71.110707",
                         "waze://?q=1%20Dana%20St%2C1%20Dana%20St%2C%20Cambridge%2C%20MA%20%2002138%2C%20United%20States&ll=42.369732,-71.110707"
                     ]
                 }
