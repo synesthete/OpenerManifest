@@ -2988,21 +2988,21 @@
                     ]
                 },
                 {
-                    "appIdentifier": "beam",
-                    "format": "beamapp://$2",
-                    "testResults": [
-                        "beamapp://reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/",
-                        "beamapp://reddit.com/r/gaming/",
-                        "beamapp://reddit.com/r/spotify?utm_source=mweb_redirect&compact=true"
-                    ]
-                },
-                {
                     "appIdentifier": "readder",
                     "format": "readder://open-url/https://$2",
                     "testResults": [
                         "readder://open-url/https://reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/",
                         "readder://open-url/https://reddit.com/r/gaming/",
                         "readder://open-url/https://reddit.com/r/spotify?utm_source=mweb_redirect&compact=true"
+                    ]
+                },
+                {
+                    "appIdentifier": "beam",
+                    "format": "beamapp://$2",
+                    "testResults": [
+                        "beamapp://reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/",
+                        "beamapp://reddit.com/r/gaming/",
+                        "beamapp://reddit.com/r/spotify?utm_source=mweb_redirect&compact=true"
                     ]
                 }
             ]
