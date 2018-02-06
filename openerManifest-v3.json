@@ -6181,6 +6181,40 @@
             ]
         },
         {
+            "title": "Stream Media",
+            "regex": "http(?:s)?://(?:www\\.)?streamable\\.com/(\\w+)/?(\\?.*)?$$",
+            "notes": "No tests because there's an expiring token on the end of these URLs, but you can test with this https://streamable.com/y11x2",
+            "formats": [
+                {
+                    "appIdentifier": "nplayer",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*og:video.*?content=\"(.*)\".*'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = 'nplayer-' + results[1]; }; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*og:video.*?content=\"(.*)\".*'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = 'nplayer-' + results[1]; }; completionHandler(match); }"
+                },
+                {
+                    "appIdentifier": "vlc",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*og:video.*?content=\"(.*)\".*'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = 'vlc-x-callback://x-callback-url/stream?url=' + encodeURIComponent(results[1]); }; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*og:video.*?content=\"(.*)\".*'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = match = 'vlc-x-callback://x-callback-url/stream?url=' + encodeURIComponent(results[1]); }; completionHandler(match); }"
+                },
+                {
+                    "appIdentifier": "infuse",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*og:video.*?content=\"(.*)\".*'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = 'infuse://x-callback-url/play?url=' + encodeURIComponent(results[1]); }; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*og:video.*?content=\"(.*)\".*'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = match = 'infuse://x-callback-url/play?url=' + encodeURIComponent(results[1]); }; completionHandler(match); }"
+                }
+            ]
+        },
+        {
+            "title": "Download Media",
+            "regex": "http(?:s)?://(?:www\\.)?streamable\\.com/(\\w+)/?(\\?.*)?$$",
+            "notes": "No tests because there's an expiring token on the end of these URLs, but you can test with this https://streamable.com/y11x2",
+            "formats": [
+                {
+                    "appIdentifier": "vlc",
+                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('.*og:video.*?content=\"(.*)\".*'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = 'vlc-x-callback://x-callback-url/download?url=' + encodeURIComponent(results[1]); }; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*og:video.*?content=\"(.*)\".*'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = match = 'vlc-x-callback://x-callback-url/download?url=' + encodeURIComponent(results[1]); }; completionHandler(match); }"
+                }
+            ]
+        },
+        {
             "title": "Open Note",
             "regex": "http(s)?://(www\\.)?jianshu\\.com/p/\\w+",
             "testInputs": [
