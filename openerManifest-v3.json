@@ -6097,7 +6097,7 @@
             ]
         },
         {
-            "title": "Open Media",
+            "title": "Stream Media",
             "regex": "(http(?:s)?://([^:/\\s]+)/[^?]+\\.(?i)(mp4|mkv|tp|mov|avi|wmv|asf|flv|ogv|rmvb|mp3|wav|wma|flac|ape))/?(\\?.*)?$",
             "useful": "http://stackoverflow.com/a/27755/3943258",
             "testInputs": [
