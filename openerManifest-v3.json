@@ -4614,8 +4614,42 @@
             ]
         },
         {
+            "title": "View Item",
+            "regex": "(http(?:s)?://(?:geo\\.)?itunes\\.apple\\.com/(?!.*/(?:story|podcast)/.*)(?:.*/)?id(\\d+).*)$",
+            "note": "same as blink entry below",
+            "testInputs": [
+                "https://itunes.apple.com/au/app/opener-open-links-in-apps/id989565871?mt=8",
+                "https://itunes.apple.com/us/app/opener-open-links-in-apps/id989565871",
+                "https://itunes.apple.com/movie/id673500243",
+                "https://itunes.apple.com/us/movie/drinking-buddies/id673500243",
+                "https://itunes.apple.com/us/album/almanac/id591108722",
+                "https://itunes.apple.com/us/artist/widowspeak/id420935735",
+                "https://itunes.apple.com/us/podcast/death-sex-money/id870688022?i=356350404&mt=2",
+                "https://geo.itunes.apple.com/us/app/logmyrun/id513718134?mt=8&uo=4&at=11lbfL&ct=twitter",
+                "https://itunes.apple.com/us/story/id1268017618"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "lookmark",
+                    "format": "lookmark://add?url=$1",
+                    "testResults": [
+                        "lookmark://add?url=https://itunes.apple.com/au/app/opener-open-links-in-apps/id989565871?mt=8",
+                        "lookmark://add?url=https://itunes.apple.com/us/app/opener-open-links-in-apps/id989565871",
+                        "lookmark://add?url=https://itunes.apple.com/movie/id673500243",
+                        "lookmark://add?url=https://itunes.apple.com/us/movie/drinking-buddies/id673500243",
+                        "lookmark://add?url=https://itunes.apple.com/us/album/almanac/id591108722",
+                        "lookmark://add?url=https://itunes.apple.com/us/artist/widowspeak/id420935735",
+                        null,
+                        "lookmark://add?url=https://geo.itunes.apple.com/us/app/logmyrun/id513718134?mt=8&uo=4&at=11lbfL&ct=twitter",
+                        null
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Convert Link",
             "regex": "(http(?:s)?://(?:geo\\.)?itunes\\.apple\\.com/(?!.*/(?:story|podcast)/.*)(?:.*/)?id(\\d+).*)$",
+            "note": "same as lookmark entry above",
             "testInputs": [
                 "https://itunes.apple.com/au/app/opener-open-links-in-apps/id989565871?mt=8",
                 "https://itunes.apple.com/us/app/opener-open-links-in-apps/id989565871",
@@ -8104,6 +8138,13 @@
             "identifier": "xkcdhd",
             "storeIdentifier": "369631343",
             "scheme": "xkcd://"
+        },
+        {
+            "displayName": "Lookmark",
+            "identifier": "lookmark",
+            "storeIdentifier": "1016517297",
+            "scheme": "lookmark://"
+            , "new": true
         }
     ],
     "browsers": [
