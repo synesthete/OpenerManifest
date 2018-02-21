@@ -6959,8 +6959,7 @@
             "displayName": "Lookmark",
             "identifier": "lookmark",
             "storeIdentifier": "1016517297",
-            "scheme": "lookmark://",
-            "new": true
+            "scheme": "lookmark://"
         },
         {
             "displayName": "NYTimes",
