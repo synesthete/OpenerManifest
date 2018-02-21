@@ -8708,6 +8708,22 @@
             "testResults": [
                 "yandexbrowser-open-url://www.opener.link/"
             ]
+        },
+        {
+            "displayName": "DuckDuckGo",
+            "identifier": "duckduckgo",
+            "scheme": "ddgQuickLink://",
+            "storeIdentifier": "663592361",
+            "regex": "http(?:s)?://(.*)$",
+            "format": "ddgQuickLink://$1",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "ddgQuickLink://www.opener.link/",
+                "ddgQuickLink://twitter.com/openerapp"
+            ]
         }
     ]
 }
