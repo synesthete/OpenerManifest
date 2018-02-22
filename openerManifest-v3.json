@@ -1729,6 +1729,44 @@
         },
         {
             "title": "Open Link",
+            "regex": "https(?:s)?://(?:www\\.|maps\\.)?google(?:\\.\\w+)+/maps/search/(?:@)?([^/,]+,[^/,]+)(?:,[^/]+)?.*$",
+            "testInputs": [
+                "https://www.google.com/maps/search/37.755225,-122.476069",
+                "https://www.google.com/maps/search/37.755225,-122.476069/data=!4m2!2m1!4b1?hl=en-US&gl=us&dg=dbrw&newdg=1",
+                "https://maps.google.com/maps/search/37.755225,-122.476069",
+                "https://maps.google.com/maps/search/37.755225,-122.476069/data=!4m2!2m1!4b1?hl=en-US&gl=us&dg=dbrw&newdg=1",
+                "https://www.google.com/maps/search/37.755225,-122.476069,15z",
+                "https://www.google.com/maps/search/@37.755225,-122.476069"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "applemaps",
+                    "format": "maps://maps.apple.com/maps?q=$1",
+                    "testResults": [
+                        "maps://maps.apple.com/maps?q=37.755225,-122.476069",
+                        "maps://maps.apple.com/maps?q=37.755225,-122.476069",
+                        "maps://maps.apple.com/maps?q=37.755225,-122.476069",
+                        "maps://maps.apple.com/maps?q=37.755225,-122.476069",
+                        "maps://maps.apple.com/maps?q=37.755225,-122.476069",
+                        "maps://maps.apple.com/maps?q=37.755225,-122.476069"
+                    ]
+                },
+                {
+                    "appIdentifier": "waze",
+                    "format": "waze://?q=$1",
+                    "testResults": [
+                        "waze://?q=37.755225,-122.476069",
+                        "waze://?q=37.755225,-122.476069",
+                        "waze://?q=37.755225,-122.476069",
+                        "waze://?q=37.755225,-122.476069",
+                        "waze://?q=37.755225,-122.476069",
+                        "waze://?q=37.755225,-122.476069"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Link",
             "regex": "http(?:s)?://(maps\\.google(?:\\.\\w+)+/(?!maps/place/.*).*(\\?.*))",
             "testInputs": [
                 "https://www.google.com/maps/place/Anchor+Brewing+Company/@37.7632216,-122.4009458,15z/data=!4m2!3m1!1s0x0:0x976aee276c5079b2?sa=X&ei=q1qQVaLFN8WqogSI6bsw&ved=0CM4BEPwSMBc",
