@@ -1300,6 +1300,16 @@
                     ]
                 },
                 {
+                    "appIdentifier": "weibointernational",
+                    "format": "weibointernational://detail?weiboid=$1",
+                    "testResults": [
+                        "weibointernational://detail?weiboid=Cmjs2vh5Q",
+                        "weibointernational://detail?weiboid=D5ZxyE1tM",
+                        "weibointernational://detail?weiboid=D5ZxyE1tM",
+                        "weibointernational://detail?weiboid=4066781620224386"
+                    ]
+                },
+                {
                     "appIdentifier": "moke",
                     "format": "moke:///status?mid=$2",
                     "testResults": [
@@ -7031,6 +7041,12 @@
             "identifier": "weibo",
             "storeIdentifier": "350962117",
             "scheme": "weibo://"
+        },
+        {
+            "displayName": "Weibo Intl.",
+            "identifier": "weibointernational",
+            "storeIdentifier": "1215210046",
+            "scheme": "weibointernational://"
         },
         {
             "displayName": "Price Tag",
