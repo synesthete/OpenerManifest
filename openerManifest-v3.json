@@ -1332,6 +1332,48 @@
             ]
         },
         {
+            "title": "Open Status",
+            "regex": "http(?:s)?://(?:\\w+\\.)?weico\\.cc/share/.*\\?weibo_id=(\\w+).*?$",
+            "testInputs": [
+                "http://fx.weico.cc/share/17463951.html?weibo_id=4202871811882629",
+                "http://fx.weico.cc/share/17463951.html?weibo_id=4202871811882629&foo=bar"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "weibo",
+                    "format": "sinaweibo://detail?mblogid=$1",
+                    "testResults": [
+                        "sinaweibo://detail?mblogid=4202871811882629",
+                        "sinaweibo://detail?mblogid=4202871811882629"
+                    ]
+                },
+                {
+                    "appIdentifier": "weibointernational",
+                    "format": "weibointernational://detail?weiboid=$1",
+                    "testResults": [
+                        "weibointernational://detail?weiboid=4202871811882629",
+                        "weibointernational://detail?weiboid=4202871811882629"
+                    ]
+                },
+                {
+                    "appIdentifier": "moke",
+                    "format": "moke:///status?mid=$1",
+                    "testResults": [
+                        "moke:///status?mid=4202871811882629",
+                        "moke:///status?mid=4202871811882629"
+                    ]
+                },
+                {
+                    "appIdentifier": "cosmos",
+                    "format": "cosmos://detail?link=https://m.weibo.cn/status/$1",
+                    "testResults": [
+                        "cosmos://detail?link=https://m.weibo.cn/status/4202871811882629",
+                        "cosmos://detail?link=https://m.weibo.cn/status/4202871811882629"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Post",
             "regex": "http(?:s)?://blog\\.sina\\.(?:com|cn|com\\.cn)/(?:.*/)?s/blog_(\\w+)\\.html.*$",
             "testInputs": [
