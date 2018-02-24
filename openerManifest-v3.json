@@ -1281,7 +1281,7 @@
         },
         {
             "title": "Open Status",
-            "regex": "(http(?:s)?://(?:\\w+\\.)?weibo\\.(?:com|cn)/(?:\\d+|status)/(\\w+).*)$",
+            "regex": "(http(?:s)?://(?:\\w+\\.)?weibo\\.(?:com|cn)/(?:\\d+|status)/((\\d+)|(\\w+)).*)$",
             "testInputs": [
                 "http://weibo.com/2616423197/Cmjs2vh5Q?from=page_1005052616423197_profile&wvr=6&mod=weibotime",
                 "http://m.weibo.cn/5524254784/D5ZxyE1tM",
@@ -1311,12 +1311,12 @@
                 },
                 {
                     "appIdentifier": "moke",
-                    "format": "moke:///status?mid=$2",
+                    "format": "moke:///status?mid=$4&id=$3",
                     "testResults": [
-                        "moke:///status?mid=Cmjs2vh5Q",
-                        "moke:///status?mid=D5ZxyE1tM",
-                        "moke:///status?mid=D5ZxyE1tM",
-                        "moke:///status?mid=4066781620224386"
+                        "moke:///status?mid=Cmjs2vh5Q&id=",
+                        "moke:///status?mid=D5ZxyE1tM&id=",
+                        "moke:///status?mid=D5ZxyE1tM&id=",
+                        "moke:///status?mid=&id=4066781620224386"
                     ]
                 },
                 {
@@ -1333,7 +1333,7 @@
         },
         {
             "title": "Open Status",
-            "regex": "http(?:s)?://(?:\\w+\\.)?weico\\.cc/share/.*\\?weibo_id=(\\w+).*?$",
+            "regex": "http(?:s)?://(?:\\w+\\.)?weico\\.cc/share/.*\\?weibo_id=((\\d+)|(\\w+)).*?$",
             "testInputs": [
                 "http://fx.weico.cc/share/17463951.html?weibo_id=4202871811882629",
                 "http://fx.weico.cc/share/17463951.html?weibo_id=4202871811882629&foo=bar"
@@ -1357,10 +1357,10 @@
                 },
                 {
                     "appIdentifier": "moke",
-                    "format": "moke:///status?mid=$1",
+                    "format": "moke:///status?mid=$3&id=$2",
                     "testResults": [
-                        "moke:///status?mid=4202871811882629",
-                        "moke:///status?mid=4202871811882629"
+                        "moke:///status?mid=&id=4202871811882629",
+                        "moke:///status?mid=&id=4202871811882629"
                     ]
                 },
                 {
