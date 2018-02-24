@@ -1301,7 +1301,7 @@
                 },
                 {
                     "appIdentifier": "weibointernational",
-                    "format": "weibointernational://detail?weiboid=$1",
+                    "format": "weibointernational://detail?weiboid=$2",
                     "testResults": [
                         "weibointernational://detail?weiboid=Cmjs2vh5Q",
                         "weibointernational://detail?weiboid=D5ZxyE1tM",
