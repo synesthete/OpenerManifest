@@ -1217,17 +1217,6 @@
                         "sinaweibo://userinfo?uid=ifixit2016",
                         "sinaweibo://userinfo?uid=ifixit2016"
                     ]
-                },
-                {
-                    "appIdentifier": "moke",
-                    "format": "moke:///user?id=$1",
-                    "testResults": [
-                        "moke:///user?id=2616423197",
-                        "moke:///user?id=2616423197",
-                        null,
-                        "moke:///user?id=ifixit2016",
-                        "moke:///user?id=ifixit2016"
-                    ]
                 }
             ]
         },
