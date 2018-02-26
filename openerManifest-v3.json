@@ -8809,6 +8809,23 @@
                 "ddgQuickLink://www.opener.link/",
                 "ddgQuickLink://twitter.com/openerapp"
             ]
+        },
+        {
+            "displayName": "Lion",
+            "identifier": "lionbrowser",
+            "scheme": "lionapp://",
+            "storeIdentifier": "1072142180",
+            "regex": "http(?:s)?://(.*)$",
+            "format": "lionapp://$1",
+            "docs": "https://twitter.com/patrickleeadams/status/968221902094458881",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "lionapp://www.opener.link/",
+                "lionapp://twitter.com/openerapp"
+            ]
         }
     ]
 }
