@@ -8800,6 +8800,7 @@
             "storeIdentifier": "663592361",
             "regex": "http(?:s)?://(.*)$",
             "format": "ddgQuickLink://$1",
+            "docs": "https://github.com/duckduckgo/iOS/pull/274",
             "testInputs": [
                 "http://www.opener.link/",
                 "https://twitter.com/openerapp"
