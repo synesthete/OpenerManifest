@@ -2915,8 +2915,7 @@
             "testInputs": [
                 "http://www.producthunt.com/posts/opener",
                 "http://www.producthunt.com/tech/free",
-                "http://www.producthunt.com/games/codin-game",
-                "https://www.producthunt.com/podcasts/re-code-decode-ev-williams"
+                "http://www.producthunt.com/games/codin-game"
             ],
             "formats": [
                 {
@@ -2926,8 +2925,7 @@
                     "testResults": [
                         "producthunt://post/22922",
                         "producthunt://post/23810",
-                        "producthunt://post/24101",
-                        "producthunt://post/45300"
+                        "producthunt://post/24101"
                     ]
                 }
             ]
