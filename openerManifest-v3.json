@@ -3659,7 +3659,7 @@
             ]
         },
         {
-            "title": "Open Doodle",
+            "title": "Open Poll",
             "regex": "http(?:s)?://(?:www\\.)?doodle\\.com/(?:poll/)?([a-z0-9]{16}).*$",
             "testInputs": [
                 "http://doodle.com/bg7qh3q9k44n6vvr",
@@ -3788,7 +3788,7 @@
             ]
         },
         {
-            "title": "Open Name",
+            "title": "Open Actor",
             "regex": "http(?:s)?://(?:www\\.|m\\.)imdb\\.com/name/(nm\\d+).*$",
             "testInputs": [
                 "http://m.imdb.com/name/nm0251986/?ref_=m_tt_cl_i1"
