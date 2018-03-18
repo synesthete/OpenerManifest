@@ -3537,24 +3537,6 @@
             ]
         },
         {
-            "title": "Open Comic",
-            "regex": "http(?:s)?://(?:www\\.|m\\.)?xkcd\\.com/(\\d+).*$",
-            "testInputs": [
-                "http://xkcd.com/1508/",
-                "http://m.xkcd.com/1694/"
-            ],
-            "formats": [
-                {
-                    "appIdentifier": "xkcdhd",
-                    "format": "xkcd://$1",
-                    "testResults": [
-                        "xkcd://1508",
-                        "xkcd://1694"
-                    ]
-                }
-            ]
-        },
-        {
             "title": "Open Frontback",
             "regex": "http(s?)://(www\\.)?(frontback\\.me/p|frntb\\.ac)/[a-zA-Z0-9]+(\\S*)$",
             "testInputs": [
@@ -4790,15 +4772,6 @@
                         "abcnewsiphone://link/story,35232234",
                         "abcnewsiphone://link/story,35319879",
                         "abcnewsiphone://link/story,35348689"
-                    ]
-                },
-                {
-                    "appIdentifier": "abcnewsipad",
-                    "format": "abcnewsipad://link/story,$1",
-                    "testResults": [
-                        "abcnewsipad://link/story,35232234",
-                        "abcnewsipad://link/story,35319879",
-                        "abcnewsipad://link/story,35348689"
                     ]
                 }
             ]
@@ -7723,13 +7696,6 @@
             "scheme": "abcnewsiphone://"
         },
         {
-            "displayName": "ABC News",
-            "identifier": "abcnewsipad",
-            "storeIdentifier": "380520716",
-            "platform": "pad",
-            "scheme": "abcnewsipad://"
-        },
-        {
             "displayName": "AliExpress",
             "identifier": "aliexpresshd",
             "storeIdentifier": "854356557",
@@ -8223,12 +8189,6 @@
             "identifier": "zomato",
             "storeIdentifier": "434613896",
             "scheme": "zomato://"
-        },
-        {
-            "displayName": "xkcd HD",
-            "identifier": "xkcdhd",
-            "storeIdentifier": "369631343",
-            "scheme": "xkcd://"
         }
     ],
     "browsers": [
