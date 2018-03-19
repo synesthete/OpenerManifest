@@ -6856,6 +6856,28 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:www\\.)?openrec\\.tv/.*$",
+            "testInputs": [
+                "https://www.openrec.tv/live/akinose_163cm",
+                "https://www.openrec.tv/live/BDESsPDMFBG",
+                "https://www.openrec.tv/user/tikubimen",
+                "https://www.openrec.tv/game/playerunknowns-battlegrounds-pubg"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "openrectv",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(jp.co.cyber-z.openrec://.*?)\\\\\".*'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler(match); }",
+                    "testResults": [
+                        "jp.co.cyber-z.openrec://live?id=781729&amp;identify_id=akinose_163cm",
+                        "jp.co.cyber-z.openrec://live?id=781716&amp;identify_id=BDESsPDMFBG",
+                        "jp.co.cyber-z.openrec://user?id=82422651&amp;identify_id=EQdL8kGmxcP1T",
+                        "jp.co.cyber-z.openrec://game?id=1438"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -8213,6 +8235,12 @@
             "identifier": "sspai",
             "storeIdentifier": "1191720421",
             "scheme": "sspai://"
+        },
+        {
+            "displayName": "OPENREC.tv",
+            "identifier": "openrectv",
+            "storeIdentifier": "912776162",
+            "scheme": "jp.co.cyber-z.openrec://"
         }
     ],
     "browsers": [
