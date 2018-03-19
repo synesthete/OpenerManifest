@@ -6841,9 +6841,9 @@
         },
         {
             "title": "Open Post",
-            "regex": "http(?:s)?://(sspai\\.com/post/(\\d+)).*?$",
+            "regex": "http(?:s)?://(?:www\\.)?(sspai\\.com/post/(\\d+)).*?$",
             "testInputs": [
-                "https://sspai.com/post/43552",
+                "https://www.sspai.com/post/43552",
                 "https://sspai.com/post/41311"
             ],
             "formats": [
