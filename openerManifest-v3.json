@@ -8786,6 +8786,22 @@
                 "mqqbrowser://url=http://www.opener.link/",
                 "mqqbrowser://url=https://twitter.com/openerapp"
             ]
+        },
+        {
+            "displayName": "Pure",
+            "identifier": "pure",
+            "scheme": "purewebbrowser://",
+            "storeIdentifier": "1301166115",
+            "regex": "http(?:s)?://(.*)$",
+            "format": "purewebbrowser://$1",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "purewebbrowser://www.opener.link/",
+                "purewebbrowser://twitter.com/openerapp"
+            ]
         }
     ]
 }
