@@ -6838,6 +6838,24 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Post",
+            "regex": "http(?:s)?://(sspai\\.com/post/(\\d+)).*?$",
+            "testInputs": [
+                "https://sspai.com/post/43552",
+                "https://sspai.com/post/41311"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "sspai",
+                    "format": "sspai://$1",
+                    "testResults": [
+                        "sspai://sspai.com/post/43552",
+                        "sspai://sspai.com/post/41311"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -8189,6 +8207,12 @@
             "identifier": "zomato",
             "storeIdentifier": "434613896",
             "scheme": "zomato://"
+        },
+        {
+            "displayName": "sspai",
+            "identifier": "sspai",
+            "storeIdentifier": "1191720421",
+            "scheme": "sspai://"
         }
     ],
     "browsers": [
