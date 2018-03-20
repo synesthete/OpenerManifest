@@ -6898,6 +6898,24 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Product",
+            "regex": "http(?:s)?://(?:www\\.)?(?:newegg\\.com/Product/Product\\.aspx\\?.*Item=|flash\\.newegg\\.com/Product/)(\\w+).*?$",
+            "testInputs": [
+                "https://www.newegg.com/Product/Product.aspx?Item=N82E16889651010&ignorebbr=1",
+                "https://flash.newegg.com/Product/9SIA9UW6TX4004?icid=WP_0_03192018"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "newegg",
+                    "format": "newegg://products/$1",
+                    "testResults": [
+                        "newegg://products/N82E16889651010",
+                        "newegg://products/9SIA9UW6TX4004"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -8255,6 +8273,12 @@
             "identifier": "tripadvisor",
             "storeIdentifier": "284876795",
             "scheme": "tripadvisor://"
+        },
+        {
+            "displayName": "Newegg",
+            "identifier": "newegg",
+            "storeIdentifier": "345188269",
+            "scheme": "newegg://"
         },
         {
             "displayName": "sspai",
