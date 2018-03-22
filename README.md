@@ -92,6 +92,7 @@ The contents of the `script` field are executed in a `UIWebView`, which gives it
 - `jsonRequest` makes a blocking call to download the contents of a URL and parses the results into JSON.
 - `btoa` base 64 encodes its input.
 - `htmlDecode` decodes HTML entities in the input string.
+- `base64DigitsToBase10String` takes an array of base 64 digits as integers and converts them into a base 10 string. (Used for decoding [some types of identifiers](http://carrot.is/coding/instagram-ids)).
 
 If `script2` is provided it's used, otherwise we fall back to `script` if specified. Clients prior to version 1.1.8 are only capable of using the `script` field.
 
