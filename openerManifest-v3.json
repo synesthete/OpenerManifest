@@ -6936,6 +6936,24 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:\\w+\\.)?mercadolibre(?:\\.\\w+)+/(\\w\\w\\w)-(\\d+).*?$",
+            "testInputs": [
+                "https://articulo.mercadolibre.com.ve/MLV-506096816-kit-rodaje-rodamiento-moto-tx-200-rin-paleta-42-15-132-_JM",
+                "https://auto.mercadolibre.com.ar/MLA-714415418-ford-ranger-30-cd-xlt-4x2-2008-unica-mano-de-uso-particular-_JM"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "mercadolibre",
+                    "format": "meli://item?id=$1$2",
+                    "testResults": [
+                        "meli://item?id=MLV506096816",
+                        "meli://item?id=MLA714415418"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -8317,6 +8335,12 @@
             "identifier": "sportsru",
             "storeIdentifier": "542339626",
             "scheme": "sports://"
+        },
+        {
+            "displayName": "Mercado Libre",
+            "identifier": "mercadolibre",
+            "storeIdentifier": "463624852",
+            "scheme": "meli://"
         }
     ],
     "browsers": [
