@@ -6954,6 +6954,24 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Video",
+            "regex": "http(?:s)?://seiga\\.nicovideo\\.jp/watch/(mg\\d+).*$",
+            "testInputs": [
+                "http://seiga.nicovideo.jp/watch/mg308978?ref=nicoms",
+                "http://seiga.nicovideo.jp/watch/mg307641?ref=nicoms"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "nicoseiga",
+                    "format": "nicoseiga://watch/$1",
+                    "testResults": [
+                        "nicoseiga://watch/mg308978",
+                        "nicoseiga://watch/mg307641"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -8341,6 +8359,12 @@
             "identifier": "mercadolibre",
             "storeIdentifier": "463624852",
             "scheme": "meli://"
+        },
+        {
+            "displayName": "ニコニコ漫画",
+            "identifier": "nicoseiga",
+            "storeIdentifier": "1045938821",
+            "scheme": "nicoseiga://"
         }
     ],
     "browsers": [
