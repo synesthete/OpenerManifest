@@ -6916,6 +6916,26 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:www\\.)?sports\\.ru/.*$",
+            "testInputs": [
+                "https://www.sports.ru/tribuna/blogs/russiateam/1628831.html",
+                "https://www.sports.ru/quincy-promes/",
+                "https://www.sports.ru/euroleague/"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "sportsru",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(sports://.*?)\\\\\".*'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler(match); }",
+                    "testResults": [
+                        "sports://blog-post/1628831",
+                        "sports://player/136385111?category_id=208",
+                        "sports://tournament/1364371?category_id=210"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -8291,6 +8311,12 @@
             "identifier": "openrectv",
             "storeIdentifier": "912776162",
             "scheme": "jp.co.cyber-z.openrec://"
+        },
+        {
+            "displayName": "Sports.ru",
+            "identifier": "sportsru",
+            "storeIdentifier": "542339626",
+            "scheme": "sports://"
         }
     ],
     "browsers": [
