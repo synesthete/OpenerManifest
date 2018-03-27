@@ -4576,6 +4576,15 @@
                         "appshoppersocial://app/989565871",
                         "appshoppersocial://app/904280696"
                     ]
+                },
+                {
+                    "appIdentifier": "freshgrapefruit",
+                    "format": "xmstatuscn://appinfo?id=$1",
+                    "testResults": [
+                        "xmstatuscn://appinfo?id=989565871",
+                        "xmstatuscn://appinfo?id=989565871",
+                        "xmstatuscn://appinfo?id=904280696"
+                    ]
                 }
             ]
         },
@@ -8365,6 +8374,14 @@
             "identifier": "nicoseiga",
             "storeIdentifier": "1045938821",
             "scheme": "nicoseiga://"
+        },
+        {
+            "displayName": "鲜柚应用",
+            "identifier": "freshgrapefruit",
+            "storeIdentifier": "426610238",
+            "country": "cn",
+            "scheme": "xmstatuscn://",
+            "docs": "https://db.tt/N2AInHnMZ5"
         }
     ],
     "browsers": [
