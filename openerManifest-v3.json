@@ -8994,6 +8994,22 @@
                 "purewebbrowser://www.opener.link/",
                 "purewebbrowser://twitter.com/openerapp"
             ]
+        },
+        {
+            "displayName": "Private Browser",
+            "identifier": "privatebrowser",
+            "scheme": "private://",
+            "storeIdentifier": "368483462",
+            "regex": "http(?:s)?://(.*)$",
+            "format": "private://$1",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "private://www.opener.link/",
+                "private://twitter.com/openerapp"
+            ]
         }
     ]
 }
