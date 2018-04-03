@@ -7366,8 +7366,8 @@
         {
             "displayName": "iOctocat",
             "identifier": "ioctocat",
-            "storeIdentifier": "669642611",
-            "scheme": "ioc://"
+            "scheme": "ioc://",
+            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/ioctocat-114.jpg"
         },
         {
             "displayName": "Kickstarter",
