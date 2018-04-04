@@ -4828,15 +4828,6 @@
                         "dribbble://shots/2303483",
                         "dribbble://shots/2303483"
                     ]
-                },
-                {
-                    "appIdentifier": "zeeen",
-                    "format": "zeeen://shot/$1",
-                    "testResults": [
-                        "zeeen://shot/2368108",
-                        "zeeen://shot/2303483",
-                        "zeeen://shot/2303483"
-                    ]
                 }
             ]
         },
@@ -4870,28 +4861,6 @@
                         "dribbble://letsgorally",
                         "dribbble://letsgorally",
                         "dribbble://robotspacer",
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null
-                    ]
-                },
-                {
-                    "appIdentifier": "zeeen",
-                    "format": "zeeen://player/$1",
-                    "testResults": [
-                        "zeeen://player/letsgorally",
-                        "zeeen://player/letsgorally",
-                        "zeeen://player/letsgorally",
-                        "zeeen://player/robotspacer",
                         null,
                         null,
                         null,
@@ -8316,12 +8285,6 @@
             "storeIdentifier": "394075284",
             "platform": "pad",
             "scheme": "youkuhd://"
-        },
-        {
-            "displayName": "ZEEEN",
-            "identifier": "zeeen",
-            "storeIdentifier": "923813895",
-            "scheme": "zeeen://"
         },
         {
             "displayName": "Zillow",
