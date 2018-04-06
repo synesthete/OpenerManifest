@@ -6952,6 +6952,22 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:www\\.)?airtable\\.com/(\\w+/\\w+).*?$",
+            "testInputs": [
+                "https://airtable.com/tbl41aPSQnB2JJ1uE/viw6mQSohadJqqdg1"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "airtable",
+                    "format": "airtable:///$1",
+                    "testResults": [
+                        "airtable:///tbl41aPSQnB2JJ1uE/viw6mQSohadJqqdg1"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -8346,6 +8362,12 @@
             "storeIdentifier": "426610238",
             "scheme": "xmstatuscn://",
             "docs": "https://db.tt/N2AInHnMZ5"
+        },
+        {
+            "displayName": "Airtable",
+            "identifier": "airtable",
+            "storeIdentifier": "914172636",
+            "scheme": "airtable://"
         }
     ],
     "browsers": [
