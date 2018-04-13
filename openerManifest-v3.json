@@ -8677,7 +8677,7 @@
             "displayName": "DS Get",
             "identifier": "dsget",
             "scheme": "synodownloads://",
-            "storeIdentifier": "540948028",
+            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/dsget-114.jpg",
             "regex": "http((?:s)?.*)",
             "format": "synodownload$1",
             "testInputs": [
