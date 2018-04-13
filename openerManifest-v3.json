@@ -6968,6 +6968,22 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Podcast",
+            "regex": "http(?:s)?://one\\.npr\\.org/.*sharedMediaId=(\\d+:\\d+).*?$",
+            "testInputs": [
+                "https://one.npr.org/?sharedMediaId=601759872:601759873"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "nprone",
+                    "format": "nprone://listen?sharedMediaId=$1",
+                    "testResults": [
+                        "nprone://listen?sharedMediaId=601759872:601759873"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -8368,6 +8384,12 @@
             "identifier": "nicoseiga",
             "storeIdentifier": "1045938821",
             "scheme": "nicoseiga://"
+        },
+        {
+            "displayName": "NPR One",
+            "identifier": "nprone",
+            "storeIdentifier": "874498884",
+            "scheme": "nprone://"
         }
     ],
     "browsers": [
