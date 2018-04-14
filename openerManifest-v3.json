@@ -9019,6 +9019,23 @@
                 "sitesucker:http://www.opener.link/",
                 "sitesucker:https://twitter.com/openerapp"
             ]
+        },
+        {
+            "displayName": "Alook",
+            "identifier": "alook",
+            "scheme": "alook://",
+            "storeIdentifier": "1261944766",
+            "regex": "http(?:s)?://(.*)$",
+            "format": "alook://$1",
+            "docs": "https://db.tt/eOvfiHRdgU",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "alook://www.opener.link/",
+                "alook://twitter.com/openerapp"
+            ]
         }
     ]
 }
