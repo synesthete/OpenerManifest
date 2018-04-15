@@ -9287,6 +9287,10 @@
             "regex": "http(?:s)?://(?:\\w+\\.)?imgur\\.com/(?:gallery/|a/|r/.*/)?(\\w+).*?$",
             "format": "https://i.imgur.com/$1h.jpg",
             "docs": "https://thomas.vanhoutte.be/miniblog/imgur-thumbnail-trick/"
+        },
+        {
+            "regex": "http(?:s)?://(?:\\w+\\.)?pixiv\\.net/member_illust\\.php?.*illust_id=(\\d+).*?$",
+            "format": "https://embed.pixiv.net/decorate.php?illust_id=$1"
         }
     ],
     "redirectRules": {
