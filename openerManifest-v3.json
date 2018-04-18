@@ -2100,6 +2100,20 @@
                     ]
                 },
                 {
+                    "appIdentifier": "ivory",
+                    "format": "ivory://https://www.youtube.com/watch?v=$1",
+                    "testResults": [
+                        "ivory://https://www.youtube.com/watch?v=MTY1Kje0yLg",
+                        "ivory://https://www.youtube.com/watch?v=0uY7gLZDmn4",
+                        "ivory://https://www.youtube.com/watch?v=MFzDaBzBlL0",
+                        "ivory://https://www.youtube.com/watch?v=mzun7_Ynmks",
+                        "ivory://https://www.youtube.com/watch?v=JEiSTzK-A2A",
+                        "ivory://https://www.youtube.com/watch?v=yWDJoJm-Rk0",
+                        "ivory://https://www.youtube.com/watch?v=S4WNO4tchUk",
+                        "ivory://https://www.youtube.com/watch?v=ngElkyQ6Rhs"
+                    ]
+                },
+                {
                     "appIdentifier": "youplayer",
                     "format": "youplayer://youtube.com/watch?v=$1",
                     "testResults": [
@@ -8407,6 +8421,12 @@
             "identifier": "nicoseiga",
             "storeIdentifier": "1045938821",
             "scheme": "nicoseiga://"
+        },
+        {
+            "displayName": "Ivory",
+            "identifier": "ivory",
+            "storeIdentifier": "1294347486",
+            "scheme": "ivory://"
         },
         {
             "displayName": "NPR One",
