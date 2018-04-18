@@ -283,7 +283,7 @@
             ]
         },
         {
-            "title": "Open Profile",
+            "title": "Open List",
             "regex": "http(?:s?)://(?:mobile\\.|www\\.|m\\.)?twitter\\.com/(?:@)?(?!search)([a-zA-Z0-9_]{1,15})/lists/([^/]+)/?(\\?.*)?$",
             "testInputs": [
                 "https://twitter.com/ImJeffBell/lists/jeff-s-central-asia-list"
