@@ -283,6 +283,29 @@
             ]
         },
         {
+            "title": "Open Profile",
+            "regex": "http(?:s?)://(?:mobile\\.|www\\.|m\\.)?twitter\\.com/(?:@)?(?!search)([a-zA-Z0-9_]{1,15})/lists/([^/]+)/?(\\?.*)?$",
+            "testInputs": [
+                "https://twitter.com/ImJeffBell/lists/jeff-s-central-asia-list"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "tweetbot",
+                    "format": "tweetbot://$1/list/$2",
+                    "testResults": [
+                        "tweetbot://ImJeffBell/list/jeff-s-central-asia-list"
+                    ]
+                },
+                {
+                    "appIdentifier": "twitterrific",
+                    "format": "twitterrific5://$1/list?name=$2",
+                    "testResults": [
+                        "twitterrific5://ImJeffBell/list?name=jeff-s-central-asia-list"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Mute Filter",
             "regex": "http(?:s)?://(?:www\\.)?tapbots\\.com.*\\?url=(.*)$",
             "testInputs": [
@@ -7068,7 +7091,7 @@
             "identifier": "twitterrific",
             "storeIdentifier": "580311103",
             "scheme": "twitterrific://",
-            "docs": "http://twitterrific.com/ios/poweruser"
+            "docs": "http://support.iconfactory.com/kb/twitterrific/url-schemes-in-twitterrific and http://twitterrific.com/ios/poweruser"
         },
         {
             "displayName": "narwhal",
