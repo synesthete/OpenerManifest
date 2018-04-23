@@ -35,7 +35,10 @@ for appIndex,app in enumerate(data['apps']):
 			app.pop(key, None)
 			
 # Strip unneeded keys from actions
-for actionIndex,action in enumerate(data['actions']):
+actionIndex = 0
+while actionIndex < len(data['actions']):
+    action = data['actions'][actionIndex]
+    actionIndex = actionIndex + 1
     actionKeys = action.keys()
     for keyIndex,key in enumerate(actionKeys):
         if not key in ["title", "regex", "includeHeaders", "formats"]:
@@ -43,7 +46,12 @@ for actionIndex,action in enumerate(data['actions']):
             action.pop(key, None)
 
     # Strip unneeded keys from formats
-    for format in action['formats']:
+    formatIndex = 0
+    while formatIndex < len(action['formats']):
+        format = action['formats'][formatIndex]
+        formatIndex = formatIndex + 1
+        # print '== ' + format['appIdentifier'] + ' ' + action['title'] + ' =='
+        
         formatKeys = format.keys()
         for keyIndex,key in enumerate(formatKeys):
             if not key in ["appIdentifier", "format", "script", "script2"]:
@@ -62,17 +70,22 @@ for actionIndex,action in enumerate(data['actions']):
                 else:
                     # print 'Removing format ' + format['appIdentifier'] + ' from ' + action['title']
                     action['formats'].remove(format)
+                    formatIndex = formatIndex - 1
 
     if len(action['formats']) == 0:
         # print 'Removing action ' + action['title']
         data['actions'].remove(action)
+        actionIndex = actionIndex - 1
 
 # Strip unneeded keys from browsers
 browserKeysToKeep = ["identifier", "displayName", "storeIdentifier", "scheme", "platform", "iconURL", "regex", "format", "script", "script2"]
 if not stripNewField:
     browserKeysToKeep.append("new");
 if 'browsers' in data:
-	for browserIndex,browser in enumerate(data['browsers']):
+	browserIndex = 0
+	while browserIndex < len(data['browsers']):
+		browser = data['browsers'][browserIndex]
+		browserIndex = browserIndex + 1
 		browserKeys = browser.keys()
 		for keyIndex,key in enumerate(browserKeys):
 			if not key in browserKeysToKeep:
@@ -91,6 +104,7 @@ if 'browsers' in data:
 				else:
                     # print 'Removing browser ' + browser['identifier']
 					data['browsers'].remove(browser)
+					browserIndex = browserIndex - 1
 
 				
 data = json.dumps(data, separators=(',',':'))
