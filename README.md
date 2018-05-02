@@ -28,7 +28,7 @@ The `apps` top level key in the manifest contains an ordered list of dictionarie
 
 For example, if Opener were to include itself as an app
 
-```
+```json5
 {
     "identifier": "opener",
     "storeIdentifier": "989565871",
@@ -77,7 +77,7 @@ This script must contain a JavaScript function named `process` that takes two in
 
 For example
 
-```
+```javascript
 function process(url, completionHandler) {
     // do something with URL...
     url = rot13(url);
@@ -118,7 +118,7 @@ At the `format` level:
 
 For example
 
-```
+```json5
 {
     ...
     "regex": "http(?:s)?://(?:www\\.)?foo\.bar/(\\d+).*$",
@@ -172,7 +172,7 @@ Support for opening any http or https URL in browsers was added in Opener 1.1. B
 
 For example, here's Google Chrome's dictionary:
 
-```
+```json5
 {
     "displayName": "Chrome",
     "identifier": "chrome",
@@ -193,11 +193,11 @@ For example, here's Google Chrome's dictionary:
 
 ## Minify Script
 
-There's a python script included named [minify.py](./minify.py), this script takes a copy of the manifest as an input and outputs a file with suffix '-minified.json' as output. This script strips out all unnecessary keys for Opener's operation when running in the client (testing, documentation, etc.) and minifies the JSON to be compact.
+There's a python script included named [minify.py](./minify.py), this script takes a copy of the manifest as an input and outputs a file with suffix `-minified.json` as output. This script strips out all unnecessary keys for Opener's operation when running in the client (testing, documentation, etc.) and minifies the JSON to be compact.
 
 Sample usage:
 
-```
+```shell
 python minify.py openerManifest-v3.json
 ```
 
