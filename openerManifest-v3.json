@@ -1259,6 +1259,17 @@
             ],
             "formats": [
                 {
+                    "appIdentifier": "weibointernational",
+                    "format": "weibointernational://userprofile?userid=$1",
+                    "testResults": [
+                        "weibointernational://userprofile?userid=2616423197",
+                        "weibointernational://userprofile?userid=2616423197",
+                        null,
+                        null,
+                        null
+                    ]
+                },
+                {
                     "appIdentifier": "moke",
                     "format": "moke:///user?id=$1",
                     "testResults": [
@@ -1282,6 +1293,17 @@
                 "http://m.weibo.cn/ifixit2016"
             ],
             "formats": [
+                {
+                    "appIdentifier": "weibointernational",
+                    "format": "weibointernational://userprofile?username=$1",
+                    "testResults": [
+                        null,
+                        null,
+                        null,
+                        "weibointernational://userprofile?username=ifixit2016",
+                        "weibointernational://userprofile?username=ifixit2016"
+                    ]
+                },
                 {
                     "appIdentifier": "moke",
                     "format": "moke:///user?domain=$1",
@@ -7602,7 +7624,8 @@
             "displayName": "Weibo Intl.",
             "identifier": "weibointernational",
             "storeIdentifier": "1215210046",
-            "scheme": "weibointernational://"
+            "scheme": "weibointernational://",
+            "docs": "https://db.tt/7vAu94IQ8i"
         },
         {
             "displayName": "WikiLinks",
