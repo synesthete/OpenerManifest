@@ -3144,6 +3144,15 @@
                         "beamapp://reddit.com/r/gaming/",
                         "beamapp://reddit.com/r/spotify?utm_source=mweb_redirect&compact=true"
                     ]
+                },
+                {
+                    "appIdentifier": "monochrome",
+                    "format": "com.falconassets.monochrome://$2",
+                    "testResults": [
+                        "com.falconassets.monochrome://reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/",
+                        "com.falconassets.monochrome://reddit.com/r/gaming/",
+                        "com.falconassets.monochrome://reddit.com/r/spotify?utm_source=mweb_redirect&compact=true"
+                    ]
                 }
             ]
         },
@@ -8456,6 +8465,13 @@
             "identifier": "nicoseiga",
             "storeIdentifier": "1045938821",
             "scheme": "nicoseiga://"
+        },
+        {
+            "displayName": "Monochrome",
+            "identifier": "monochrome",
+            "storeIdentifier": "1128991367",
+            "scheme": "com.falconassets.monochrome://",
+            "docs": "https://bit.ly/2Gn5AWf (hard copy https://db.tt/wfRHS2GF3s)"
         }
     ],
     "browsers": [
