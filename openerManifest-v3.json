@@ -7083,8 +7083,8 @@
         {
             "displayName": "AppZapp",
             "identifier": "appzapp",
-            "storeIdentifier": "845046425",
-            "scheme": "appzapp://"
+            "scheme": "appzapp://",
+            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/appzapp-114.jpg"
         },
         {
             "displayName": "Instagram",
