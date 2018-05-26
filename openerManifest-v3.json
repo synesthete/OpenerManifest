@@ -4612,15 +4612,6 @@
             ],
             "formats": [
                 {
-                    "appIdentifier": "appzapp",
-                    "format": "appzapp://app?appid=$1",
-                    "testResults": [
-                        "appzapp://app?appid=989565871",
-                        "appzapp://app?appid=989565871",
-                        "appzapp://app?appid=904280696"
-                    ]
-                },
-                {
                     "appIdentifier": "catchapp",
                     "format": "catchapp://app?id=$1",
                     "testResults": [
@@ -7079,12 +7070,6 @@
             "storeIdentifier": "1018355599",
             "scheme": "tweetbot://",
             "docs": "http://tapbots.net/tweetbot3/support/url-schemes/"
-        },
-        {
-            "displayName": "AppZapp",
-            "identifier": "appzapp",
-            "scheme": "appzapp://",
-            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/appzapp-114.jpg"
         },
         {
             "displayName": "Instagram",
