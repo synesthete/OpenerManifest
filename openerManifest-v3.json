@@ -4558,35 +4558,6 @@
             ]
         },
         {
-            "title": "View App",
-            "regex": "http(?:s)?://(?:geo\\.)?itunes\\.apple\\.com/(?:.*/)*app/(?:.*/)?id(\\d+)(?!.*(?:&|\\?)mt=12.*).*$",
-            "testInputs": [
-                "https://itunes.apple.com/au/app/opener-open-links-in-apps/id989565871?mt=8",
-                "https://geo.itunes.apple.com/us/app/opener-open-links-in-apps/id989565871",
-                "https://itunes.apple.com/us/app/things-3/id904280696?mt=12"
-            ],
-            "formats": [
-                {
-                    "appIdentifier": "appstore",
-                    "format": "opener://x-callback-url/show-store-product-details?id=$1",
-                    "testResults": [
-                        "opener://x-callback-url/show-store-product-details?id=989565871",
-                        "opener://x-callback-url/show-store-product-details?id=989565871",
-                        null
-                    ]
-                },
-                {
-                    "appIdentifier": "pricetag",
-                    "format": "pricetag://app?url=https://itunes.apple.com/app/id$1",
-                    "testResults": [
-                        "pricetag://app?url=https://itunes.apple.com/app/id989565871",
-                        "pricetag://app?url=https://itunes.apple.com/app/id989565871",
-                        null
-                    ]
-                }
-            ]
-        },
-        {
             "title": "Open Story",
             "regex": "http(?:s)?://(?:geo\\.)?itunes\\.apple\\.com/(?:.*/)*story/id(\\d+).*$",
             "testInputs": [
@@ -4611,6 +4582,16 @@
                 "https://itunes.apple.com/us/app/things-3/id904280696?mt=12"
             ],
             "formats": [
+                {
+                    "appIdentifier": "appstore",
+                    "script": "function process(url, completionHandler) { var regex = RegExp('http(?:s)?://(?:geo\\\\.)?itunes\\\\.apple\\\\.com/(?:.*/)*app/(?:.*/)?id(\\\\d+).*$'); var results = regex.exec(url); var match = null; if (results != null && results.length > 1) { if (url.indexOf('mt=12') == -1) { match = 'opener://x-callback-url/show-store-product-details?id=' + results[1]; } else { match = 'itms-apps://itunes.apple.com/app/id' + results[1] + '?at=1001l3kM'; } }; completionHandler(match); }",
+                    "script2": "function process(url, completionHandler) { var regex = RegExp('http(?:s)?://(?:geo\\\\.)?itunes\\\\.apple\\\\.com/(?:.*/)*app/(?:.*/)?id(\\\\d+).*$'); var results = regex.exec(url); var match = null; if (results != null && results.length > 1) { if (url.indexOf('mt=12') == -1) { match = 'opener://x-callback-url/show-store-product-details?id=' + results[1]; } else { match = 'itms-apps://itunes.apple.com/app/id' + results[1] + '?at=1001l3kM'; } }; completionHandler(match); }",
+                    "testResults": [
+                        "opener://x-callback-url/show-store-product-details?id=989565871",
+                        "opener://x-callback-url/show-store-product-details?id=989565871",
+                        "itms-apps://itunes.apple.com/app/id904280696?at=1001l3kM"
+                    ]
+                },
                 {
                     "appIdentifier": "catchapp",
                     "format": "catchapp://app?id=$1",
@@ -4645,6 +4626,26 @@
                         "xmstatuscn://appinfo?id=989565871",
                         "xmstatuscn://appinfo?id=989565871",
                         "xmstatuscn://appinfo?id=904280696"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "View App",
+            "regex": "http(?:s)?://(?:geo\\.)?itunes\\.apple\\.com/(?:.*/)*app/(?:.*/)?id(\\d+)(?!.*(?:&|\\?)mt=12.*).*$",
+            "testInputs": [
+                "https://itunes.apple.com/au/app/opener-open-links-in-apps/id989565871?mt=8",
+                "https://geo.itunes.apple.com/us/app/opener-open-links-in-apps/id989565871",
+                "https://itunes.apple.com/us/app/things-3/id904280696?mt=12"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "pricetag",
+                    "format": "pricetag://app?url=https://itunes.apple.com/app/id$1",
+                    "testResults": [
+                        "pricetag://app?url=https://itunes.apple.com/app/id989565871",
+                        "pricetag://app?url=https://itunes.apple.com/app/id989565871",
+                        null
                     ]
                 }
             ]
