@@ -9150,6 +9150,23 @@
             "testResults": [
                 "yandexbrowser-open-url://www.opener.link/"
             ]
+        },
+        {
+            "displayName": "Smooz",
+            "identifier": "smooz",
+            "scheme": "smooz://",
+            "storeIdentifier": "1151364449",
+            "regex": "(http(?:s)?.*)",
+            "format": "smooz://url/$1",
+            "docs": "https://bit.ly/2Jh15Pz",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "smooz://url/http://www.opener.link/",
+                "smooz://url/https://twitter.com/openerapp"
+            ]
         }
     ]
 }
