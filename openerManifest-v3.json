@@ -9167,6 +9167,24 @@
                 "smooz://url/http://www.opener.link/",
                 "smooz://url/https://twitter.com/openerapp"
             ]
+        },
+        {
+            "displayName": "Berry",
+            "identifier": "berrybrowser",
+            "scheme": "berrybrowser://",
+            "storeIdentifier": "1385743638",
+            "regex": "(.+)$",
+            "script": "function process(url, completionHandler) { completionHandler('berrybrowser://?url=' + encodeURIComponent(url)); }",
+            "script2": "function process(url, completionHandler) { completionHandler('berrybrowser://?url=' + encodeURIComponent(url)); }",
+            "docs": "https://db.tt/XFBJzBxqxM",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "berrybrowser://?url=http%3A%2F%2Fwww.opener.link%2F",
+                "berrybrowser://?url=https%3A%2F%2Ftwitter.com%2Fopenerapp"
+            ]
         }
     ]
 }
