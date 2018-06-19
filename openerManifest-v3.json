@@ -2127,7 +2127,7 @@
         },
         {
             "title": "Open Video",
-            "regex": "http(?:s)?://(?:www\\.|m\\.)?(?:youtu\\.be/|youtube\\.com/(?:embed/|.*(?:\\?|&)v=))([a-zA-Z0-9_\\-]+).*?((\\?|&)(start|t)=\\w+)?.*?$",
+            "regex": "http(?:s)?://(?:www\\.|m\\.|music\\.)?(?:youtu\\.be/|youtube\\.com/(?:embed/|.*(?:\\?|&)v=))([a-zA-Z0-9_\\-]+).*?((\\?|&)(start|t)=\\w+)?.*?$",
             "testInputs": [
                 "https://m.youtube.com/watch?v=MTY1Kje0yLg",
                 "https://www.youtube.com/embed/0uY7gLZDmn4?start=96",
@@ -2136,7 +2136,8 @@
                 "http://youtu.be/JEiSTzK-A2A",
                 "https://youtu.be/yWDJoJm-Rk0?t=4m30s",
                 "https://www.youtube.com/watch?v=S4WNO4tchUk",
-                "https://www.youtube.com/watch?v=ngElkyQ6Rhs"
+                "https://www.youtube.com/watch?v=ngElkyQ6Rhs",
+                "https://music.youtube.com/watch?v=KVQxACAEpso&feature=share"
             ],
             "formats": [
                 {
@@ -2150,7 +2151,8 @@
                         "youtubemusic://JEiSTzK-A2A",
                         "youtubemusic://yWDJoJm-Rk0?t=4m30s",
                         "youtubemusic://S4WNO4tchUk",
-                        "youtubemusic://ngElkyQ6Rhs"
+                        "youtubemusic://ngElkyQ6Rhs",
+                        "youtubemusic://KVQxACAEpso"
                     ]
                 },
                 {
@@ -2164,7 +2166,8 @@
                         "nplayer-https://www.youtube.com/watch?v=JEiSTzK-A2A",
                         "nplayer-https://www.youtube.com/watch?v=yWDJoJm-Rk0",
                         "nplayer-https://www.youtube.com/watch?v=S4WNO4tchUk",
-                        "nplayer-https://www.youtube.com/watch?v=ngElkyQ6Rhs"
+                        "nplayer-https://www.youtube.com/watch?v=ngElkyQ6Rhs",
+                        "nplayer-https://www.youtube.com/watch?v=KVQxACAEpso"
                     ]
                 },
                 {
@@ -2178,7 +2181,8 @@
                         "ivory://https://www.youtube.com/watch?v=JEiSTzK-A2A",
                         "ivory://https://www.youtube.com/watch?v=yWDJoJm-Rk0",
                         "ivory://https://www.youtube.com/watch?v=S4WNO4tchUk",
-                        "ivory://https://www.youtube.com/watch?v=ngElkyQ6Rhs"
+                        "ivory://https://www.youtube.com/watch?v=ngElkyQ6Rhs",
+                        "ivory://https://www.youtube.com/watch?v=KVQxACAEpso"
                     ]
                 },
                 {
@@ -2192,7 +2196,8 @@
                         "youplayer://youtube.com/watch?v=JEiSTzK-A2A",
                         "youplayer://youtube.com/watch?v=yWDJoJm-Rk0",
                         "youplayer://youtube.com/watch?v=S4WNO4tchUk",
-                        "youplayer://youtube.com/watch?v=ngElkyQ6Rhs"
+                        "youplayer://youtube.com/watch?v=ngElkyQ6Rhs",
+                        "youplayer://youtube.com/watch?v=KVQxACAEpso"
                     ]
                 },
                 {
@@ -2206,7 +2211,8 @@
                         "protube://video/JEiSTzK-A2A",
                         "protube://video/yWDJoJm-Rk0",
                         "protube://video/S4WNO4tchUk",
-                        "protube://video/ngElkyQ6Rhs"
+                        "protube://video/ngElkyQ6Rhs",
+                        "protube://video/KVQxACAEpso"
                     ]
                 },
                 {
@@ -2220,7 +2226,8 @@
                         "cornertube://video/https://youtu.be/JEiSTzK-A2A",
                         "cornertube://video/https://youtu.be/yWDJoJm-Rk0",
                         "cornertube://video/https://youtu.be/S4WNO4tchUk",
-                        "cornertube://video/https://youtu.be/ngElkyQ6Rhs"
+                        "cornertube://video/https://youtu.be/ngElkyQ6Rhs",
+                        "cornertube://video/https://youtu.be/KVQxACAEpso"
                     ]
                 },
                 {
@@ -2234,7 +2241,8 @@
                         "piptube://openvideo?url=https://www.youtube.com/watch?v=JEiSTzK-A2A",
                         "piptube://openvideo?url=https://www.youtube.com/watch?v=yWDJoJm-Rk0",
                         "piptube://openvideo?url=https://www.youtube.com/watch?v=S4WNO4tchUk",
-                        "piptube://openvideo?url=https://www.youtube.com/watch?v=ngElkyQ6Rhs"
+                        "piptube://openvideo?url=https://www.youtube.com/watch?v=ngElkyQ6Rhs",
+                        "piptube://openvideo?url=https://www.youtube.com/watch?v=KVQxACAEpso"
                     ]
                 }
             ]
