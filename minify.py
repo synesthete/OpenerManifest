@@ -12,16 +12,17 @@ if len(sys.argv) < 2:
     
 path = sys.argv[1]
 
+data = json.loads(open(path).read(), object_pairs_hook=OrderedDict) # http://stackoverflow.com/a/6921760
+
 # Use the --prefer-script-v1 flag when use need the v2 format (includes only 'script', not 'script2')
 preferredScriptName = 'script2'
 stripNewField = False
 if len(sys.argv) > 2:
     if sys.argv[2] == '--prefer-script-v1':
         preferredScriptName = 'script'
+        data.pop('redirectRules', None) # Also strip the "redirectRules" entry, which isn't supported by older versions of the app.
     elif sys.argv[2] == '--strip-new':
         stripNewField = True
-
-data = json.loads(open(path).read(), object_pairs_hook=OrderedDict) # http://stackoverflow.com/a/6921760
 
 # Strip unneeded keys from apps
 appKeysToKeep = ["identifier", "displayName", "storeIdentifier", "scheme", "platform", "iconURL", "country"]
@@ -105,6 +106,16 @@ if 'browsers' in data:
                     # print 'Removing browser ' + browser['identifier']
 					data['browsers'].remove(browser)
 					browserIndex = browserIndex - 1
+
+ruleKeysToKeep = ["param", "format"]
+if 'redirectRules' in data:
+    for ruleIndex,ruleRegex in enumerate(data['redirectRules']):
+        rule = data['redirectRules'][ruleRegex]
+    	ruleKeys = rule.keys()
+    	for keyIndex,key in enumerate(ruleKeys):
+    		if not key in ruleKeysToKeep:
+    			# print "Removing " + key + " from " + ruleRegex
+    			rule.pop(key, None)
 
 				
 data = json.dumps(data, separators=(',',':'))
