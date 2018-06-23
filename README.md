@@ -191,6 +191,46 @@ For example, here's Google Chrome's dictionary:
 }
 ```
 
+## Redirect Rules
+
+There's a fourth top-level key in the manifest named `redirectRules` that's not directly tied to opening in particular apps. If Opener's unable to resolve a URL into a set of actions it performs a HTTP `HEAD` request to follow its input URL to its final destination, then retries resolving on that URL. For example, a bit.ly link to a Tweet wouldn't naturally resolve because Opener has no way of knowing the bit.ly link points to a Tweet, so we perform a `HEAD` request to get the final URL, which does resolve.
+
+Some popular services have URL redirection that doesn't work when followed through an HTTP `HEAD` request, but instead require loading HTML to get a redirect to occur. Links of this variety break Opener's system for resolving URLs, and loading up an invisible web page just to see if something redirects doesn't seem acceptable. Some of these services include
+
+- Google (and some Google AMP links)
+- Facebook (and Facebook Messenger)
+- Reddit
+- Tumblr
+- Pinterest
+
+`redirectRules` solves this by serving as a static set of rules for mapping input URLs to what they'd redirect to if they were loaded up as HTML from services like this. The format for these rules is pretty simple.
+
+<table>
+<tr><th>Key</th><th>Type</th><th>Description</th></tr>
+<tr><td>Dictionary key</td><td>string</td><td>The keys for the entries in <code>redirectRules</code> are regular expressions to match. If a match is found, the rule within it used.</td>
+<tr><td><code>param</code></td><td>string</td><td>A URL query parameter name. If the rule is matched, the value for <code>param</code> is used as the resulting URL to redirect to. Mutually exclusive with <code>format</code>.</td>
+<tr><td><code>format</code></td><td>string</td><td>A regex template to be used on the input if the rule is matched. Mutually exclusive with <code>param</code></td>
+</table>
+
+So, for example if links like `https://mycoolsite.com/redirect?redirecturl=foobar.com` redirect to `foobar.com`, you'd use a rule like this.
+
+```
+"https://mycoolsite\\.com/redirect.*$" {
+	"param": "redirecturl"
+}
+```
+
+`redirectRules` also supports lightweight tests in the form of a dictionary under the `tests` key. The keys of `tests` are sample inputs, and the values are the expected outputs.
+
+```
+"https://mycoolsite\\.com/redirect.*$" {
+	"param": "redirecturl",
+	"test": {
+		"https://mycoolsite.com/redirect?redirecturl=foobar.com": "foobar.com"
+	}
+}
+```
+
 ## Minify Script
 
 There's a python script included named [minify.py](./minify.py), this script takes a copy of the manifest as an input and outputs a file with suffix `-minified.json` as output. This script strips out all unnecessary keys for Opener's operation when running in the client (testing, documentation, etc.) and minifies the JSON to be compact.
