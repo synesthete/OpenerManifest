@@ -9200,13 +9200,6 @@
         }
     ],
     "redirectRules": {
-        "http(?:s)?://l\\.(messenger|facebook)\\.com/l\\.php.*$": {
-            "param": "u",
-            "tests": {
-                "https://l.facebook.com/l.php?u=https%3A%2F%2Ftwitter.com%2Fdominiquecrenn%2Fstatus%2F1009122219052716033&h=AT3NbNfy0YjZSm3aFoNrgsfB3tVS9wb2D-PEHADnPdbGVIlHTuScyJExmWa6q5hlL0s-Tg753uksiJG_dusXonuf-18Ghrh1KK_PhpKvz3Em1L8rc6Rt7zjEyISchPALg5kbJBtSChL2_MqbVEarRA": "https://twitter.com/dominiquecrenn/status/1009122219052716033",
-                "https://l.messenger.com/l.php?u=https%3A%2F%2Ftwitter.com%2FOpenerApp%2Fstatus%2F960747968574849025&h=ATMFKeV37EBYtyu3JB0NatoCI5yEGIwAq3UD_GL-hFDKo8y-67d9fqGlN0Fc62vEgQxte71CCmPIO5AIVmPD3EaP6ciUOaNcdLy29IifshQx9nd1OIF9lK6GXwoi1_HF7C_gZ82m9LW3MSh0askAZJxoTu9hAsbfp4o": "https://twitter.com/OpenerApp/status/960747968574849025"
-            }
-        },
         "http(?:s)?://(\\w+\\.)*google(\\.\\w+)/url.*$": {
             "param": "url",
             "tests": {
@@ -9220,10 +9213,11 @@
                 "https://thepostermovement-tumblr-com.cdn.ampproject.org/c/thepostermovement.tumblr.com/post/163639670215/blade-runner-2049-by-raborlatte-posters/amp": "http://thepostermovement.tumblr.com/post/163639670215/blade-runner-2049-by-raborlatte-posters/amp"
             }
         },
-        "http(?:s)?://ct\\.pinterest\\.com/_/_/redirect.*$": {
-            "param": "url",
+        "http(?:s)?://l\\.(messenger|facebook)\\.com/l\\.php.*$": {
+            "param": "u",
             "tests": {
-                "https://ct.pinterest.com/_/_/redirect/?src=open&user_id=128282426794312100&url=https://www.auteur-watches.com/product/classic-black/": "https://www.auteur-watches.com/product/classic-black/"
+                "https://l.facebook.com/l.php?u=https%3A%2F%2Ftwitter.com%2Fdominiquecrenn%2Fstatus%2F1009122219052716033&h=AT3NbNfy0YjZSm3aFoNrgsfB3tVS9wb2D-PEHADnPdbGVIlHTuScyJExmWa6q5hlL0s-Tg753uksiJG_dusXonuf-18Ghrh1KK_PhpKvz3Em1L8rc6Rt7zjEyISchPALg5kbJBtSChL2_MqbVEarRA": "https://twitter.com/dominiquecrenn/status/1009122219052716033",
+                "https://l.messenger.com/l.php?u=https%3A%2F%2Ftwitter.com%2FOpenerApp%2Fstatus%2F960747968574849025&h=ATMFKeV37EBYtyu3JB0NatoCI5yEGIwAq3UD_GL-hFDKo8y-67d9fqGlN0Fc62vEgQxte71CCmPIO5AIVmPD3EaP6ciUOaNcdLy29IifshQx9nd1OIF9lK6GXwoi1_HF7C_gZ82m9LW3MSh0askAZJxoTu9hAsbfp4o": "https://twitter.com/OpenerApp/status/960747968574849025"
             }
         },
         "http(?:s)?://out\\.reddit\\.com.*$": {
@@ -9236,6 +9230,12 @@
             "param": "z",
             "tests": {
                 "http://t.umblr.com/redirect?z=http%3A%2F%2Fwww.twitter.com%2Fcatana_comics&t=ZDE1MGVkMWU1MmQzZWY2MzBlMGZiMmZlYmYwYWExYTI5Zjc4Y2M1NyxUbU4zdWpESg%3D%3D&p=&m=0": "http://www.twitter.com/catana_comics"
+            }
+        },
+        "http(?:s)?://ct\\.pinterest\\.com/_/_/redirect.*$": {
+            "param": "url",
+            "tests": {
+                "https://ct.pinterest.com/_/_/redirect/?src=open&user_id=128282426794312100&url=https://www.auteur-watches.com/product/classic-black/": "https://www.auteur-watches.com/product/classic-black/"
             }
         }
     }
