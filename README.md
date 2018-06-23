@@ -231,6 +231,8 @@ So, for example if links like `https://mycoolsite.com/redirect?redirecturl=fooba
 }
 ```
 
+`redirectRules` are only supported by Opener version 1.5.8 and above.
+
 ## Minify Script
 
 There's a python script included named [minify.py](./minify.py), this script takes a copy of the manifest as an input and outputs a file with suffix `-minified.json` as output. This script strips out all unnecessary keys for Opener's operation when running in the client (testing, documentation, etc.) and minifies the JSON to be compact.
