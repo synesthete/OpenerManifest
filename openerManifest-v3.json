@@ -6999,7 +6999,7 @@
                     "testResults": [
                         "tripadvisor://www.tripadvisor.com/Hotel_Review-g499443-d10267413-Reviews-m33762-W_Punta_de_Mita-Punta_de_Mita_Pacific_Coast.html",
                         "tripadvisor://www.tripadvisor.com/Restaurant_Review-g60713-d349459-Reviews-m33762-4505_Burgers_BBQ-San_Francisco_California.html",
-                        "tripadvisor://www.tripadvisor.ca/Restaurant_Review-g60713-d349459-Reviews-m33762-4505_Burgers_BBQ-San_Francisco_California.html"
+                        "tripadvisor://www.tripadvisor.com/Restaurant_Review-g60713-d349459-Reviews-m33762-4505_Burgers_BBQ-San_Francisco_California.html"
                     ]
                 }
             ]
@@ -7035,7 +7035,7 @@
                     "appIdentifier": "sportsru",
                     "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('.*(sports://.*?)\\\\\".*'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler(match); }",
                     "testResults": [
-                        "sports://blog-post/1628831",
+                        "sports://blog_post/1628831",
                         "sports://player/136385111?category_id=208",
                         "sports://tournament/1364371?category_id=210"
                     ]
