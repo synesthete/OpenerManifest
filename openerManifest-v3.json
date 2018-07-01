@@ -592,16 +592,16 @@
             "formats": [
                 {
                     "appIdentifier": "facebook",
-                    "script2": "function process(url, completionHandler) { var urlResults = RegExp('http(?:s)?://(?:\\\\w+\\\\.)?facebook\\\\.com/(?:n/?\\\\?)?([^/|%2F]+)(?:/|%2F)(?:posts|videos)(?:/|%2F)(\\\\d+)').exec(url); var profileURL = 'https://m.facebook.com/' + urlResults[1]; var res = httpRequest(profileURL); var regex = RegExp('[^a-z_]id=(\\\\d+)'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = 'fb://story/?id=' + results[1] + '_' + urlResults[2]; }; completionHandler(match); }",
+                    "script2": "function process(url, completionHandler) { var urlResults = RegExp('http(?:s)?://(?:\\\\w+\\\\.)?facebook\\\\.com/(?:n/?\\\\?)?([^/|%2F]+)(?:/|%2F)(?:posts|videos)(?:/|%2F)(\\\\d+)').exec(url); var profileURL = 'https://www.facebook.com/' + urlResults[1]; var res = httpRequest(profileURL); var regex = RegExp('\"entity_id\\\":\"(\\\\d+)\"'); var results = regex.exec(res); var match = null; if (results != null && results.length > 1) { match = 'fb://story/?id=' + results[1] + '_' + urlResults[2]; }; completionHandler(match); }",
                     "testResults": [
                         "fb://story/?id=501898317_10154879225363318",
-                        null,
+                        "fb://story/?id=1201819_10107195283476043",
                         "fb://story/?id=501898317_10154879225363318",
-                        null,
+                        "fb://story/?id=1201819_10107195283476043",
                         "fb://story/?id=501898317_10154879225363318",
-                        null,
+                        "fb://story/?id=1201819_10107195283476043",
                         "fb://story/?id=501898317_10154879225363318",
-                        null,
+                        "fb://story/?id=1201819_10107195283476043",
                         "fb://story/?id=193742123995472_1558737434162594",
                         "fb://story/?id=8062627951_10156003235202952"
                     ]
