@@ -4651,15 +4651,6 @@
                     ]
                 },
                 {
-                    "appIdentifier": "appshopper",
-                    "format": "appshoppersocial://app/$1",
-                    "testResults": [
-                        "appshoppersocial://app/989565871",
-                        "appshoppersocial://app/989565871",
-                        "appshoppersocial://app/904280696"
-                    ]
-                },
-                {
                     "appIdentifier": "freshgrapefruit",
                     "format": "xmstatuscn://appinfo?id=$1",
                     "testResults": [
@@ -7878,12 +7869,6 @@
             "identifier": "appadvice",
             "storeIdentifier": "364906378",
             "scheme": "aaexternal://"
-        },
-        {
-            "displayName": "AppShopper",
-            "identifier": "appshopper",
-            "storeIdentifier": "602522782",
-            "scheme": "appshoppersocial://"
         },
         {
             "displayName": "Asana",
