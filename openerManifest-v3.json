@@ -2685,24 +2685,6 @@
             ]
         },
         {
-            "title": "Open Video",
-            "regex": "http(?:s)?://(?:www\\.)vevo\\.com/watch/(?:[a-zA-Z0-9()\\-_%]+/)*(\\w+).*$",
-            "testInputs": [
-                "http://www.vevo.com/watch/US3841500108?syndicationid=bb8a16ab-1279-4f17-969b-1dba5eb60eda&shortlink=HzreN8&country=US",
-                "http://www.vevo.com/watch/katy-perry/roar-(official)/USUV71301934"
-            ],
-            "formats": [
-                {
-                    "appIdentifier": "vevo",
-                    "format": "vevo://video/$1",
-                    "testResults": [
-                        "vevo://video/US3841500108",
-                        "vevo://video/USUV71301934"
-                    ]
-                }
-            ]
-        },
-        {
             "title": "Open Track",
             "regex": "http(?:s?)://(?:play\\.|open\\.|www\\.)?spotify\\.com/track/([:alnum:]+).*$",
             "testInputs": [
@@ -8446,12 +8428,6 @@
             "identifier": "vscocam",
             "storeIdentifier": "588013838",
             "scheme": "vsco://"
-        },
-        {
-            "displayName": "Vevo",
-            "identifier": "vevo",
-            "storeIdentifier": "385815082",
-            "scheme": "vevo://"
         },
         {
             "displayName": "WEAR",
