@@ -1,6 +1,6 @@
 # Opener Manifest
 
-[Opener](http://www.opener.link) is an app for iOS that allows people to open web links in native apps instead. It does so by transforming web links within an engine powered by a rule set. This repo is the public version of that rule set.
+[Opener](https://www.opener.link) is an app for iOS that allows people to open web links in native apps instead. It does so by transforming web links within an engine powered by a rule set. This repo is the public version of that rule set.
 
 ## Overview
 
