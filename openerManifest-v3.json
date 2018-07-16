@@ -9134,6 +9134,22 @@
                 "berrybrowser://?url=http%3A%2F%2Fwww.opener.link%2F",
                 "berrybrowser://?url=https%3A%2F%2Ftwitter.com%2Fopenerapp"
             ]
+        },
+        {
+            "displayName": "Srcfari",
+            "identifier": "srcfari",
+            "scheme": "srcfari://",
+            "storeIdentifier": "805903147",
+            "regex": "http(?:s)?(.*)",
+            "format": "srcfari$1",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "srcfari://www.opener.link/",
+                "srcfari://twitter.com/openerapp"
+            ]
         }
     ],
     "redirectRules": {
