@@ -2483,11 +2483,12 @@
         },
         {
             "title": "Open Link",
-            "regex": "(http(?:s?)://drive\\.google\\.com/(?:open|file|folder).*)$",
+            "regex": "(http(?:s?)://drive\\.google\\.com/(?:open|file|folder|drive/folders).*)$",
             "testInputs": [
                 "https://drive.google.com/open?id=1W64thRDqmKiDwsuK_j1IkxnCVeBfs7wwSXBbLxnsitL_D9-qAt4",
                 "https://drive.google.com/file/d/1W64thRDqmKiDwsuK_j1IkxnCVeBfs7wwSXBbLxnsitL_D9-qAt4/view",
-                "https://drive.google.com/folderview?id=0B6ru5l1lH3_7bVIwN1RBaVpETDg&usp=sharing"
+                "https://drive.google.com/folderview?id=0B6ru5l1lH3_7bVIwN1RBaVpETDg&usp=sharing",
+                "https://drive.google.com/drive/folders/0B-9Li62rpt59czJhdXRCeGlOdDA"
             ],
             "formats": [
                 {
@@ -2496,7 +2497,8 @@
                     "testResults": [
                         "googledrive://https://drive.google.com/open?id=1W64thRDqmKiDwsuK_j1IkxnCVeBfs7wwSXBbLxnsitL_D9-qAt4",
                         "googledrive://https://drive.google.com/file/d/1W64thRDqmKiDwsuK_j1IkxnCVeBfs7wwSXBbLxnsitL_D9-qAt4/view",
-                        "googledrive://https://drive.google.com/folderview?id=0B6ru5l1lH3_7bVIwN1RBaVpETDg&usp=sharing"
+                        "googledrive://https://drive.google.com/folderview?id=0B6ru5l1lH3_7bVIwN1RBaVpETDg&usp=sharing",
+                        "googledrive://https://drive.google.com/drive/folders/0B-9Li62rpt59czJhdXRCeGlOdDA"
                     ]
                 }
             ]
