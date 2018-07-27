@@ -9144,22 +9144,6 @@
             ]
         },
         {
-            "displayName": "DS Get",
-            "identifier": "dsget",
-            "scheme": "synodownloads://",
-            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/dsget-114.jpg",
-            "regex": "http((?:s)?.*)",
-            "format": "synodownload$1",
-            "testInputs": [
-                "http://www.opener.link/",
-                "https://twitter.com/openerapp"
-            ],
-            "testResults": [
-                "synodownload://www.opener.link/",
-                "synodownloads://twitter.com/openerapp"
-            ]
-        },
-        {
             "displayName": "Onion Browser",
             "identifier": "onionbrowser",
             "scheme": "onionbrowsers://",
