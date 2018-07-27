@@ -7268,8 +7268,8 @@
         {
             "displayName": "Price Tag",
             "identifier": "pricetag",
-            "storeIdentifier": "1166819590",
-            "scheme": "pricetag://"
+            "scheme": "pricetag://",
+            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/pricetag-114.jpg"
         },
         {
             "displayName": "Ivory",
