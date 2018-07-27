@@ -8720,7 +8720,7 @@
             "displayName": "Dolphin",
             "identifier": "dolphinphone",
             "scheme": "dolphin://",
-            "storeIdentifier": "634693702",
+            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/dolphin-100.jpg",
             "platform": "phone",
             "regex": "(http(?:s)?.*)",
             "format": "dolphin://$1",
