@@ -3295,26 +3295,6 @@
         },
         {
             "title": "Open Link",
-            "regex": "http(?:s)?://(?:www\\.)?stumbleupon\\.com/(?:su|to/s)/(\\w+).*$",
-            "testInputs": [
-                "http://www.stumbleupon.com/to/s/4F18Gf",
-                "http://www.stumbleupon.com/su/4F18Gf/thetrendstoday.com/operation-urgent-fury-the-invasion-of-granada-documentary/",
-                "http://www.stumbleupon.com/su/1Yhr8a/merabheja.com/tech-hacks/?ref_src=tw"
-            ],
-            "formats": [
-                {
-                    "appIdentifier": "stumbleupon",
-                    "format": "stumbleupon://urlid/$1",
-                    "testResults": [
-                        "stumbleupon://urlid/4F18Gf",
-                        "stumbleupon://urlid/4F18Gf",
-                        "stumbleupon://urlid/1Yhr8a"
-                    ]
-                }
-            ]
-        },
-        {
-            "title": "Open Link",
             "regex": "http(?:s)?://(?:www\\.)?medium\\.com(?:/)+([^&|\\?]*)(?:&|\\?)?(.*)$",
             "testInputs": [
                 "https://medium.com/@timonus",
@@ -8113,12 +8093,6 @@
             "identifier": "jianshu",
             "storeIdentifier": "888237539",
             "scheme": "jianshu://"
-        },
-        {
-            "displayName": "StumbleUpon",
-            "identifier": "stumbleupon",
-            "storeIdentifier": "386244833",
-            "scheme": "stumbleupon://"
         },
         {
             "displayName": "TripAdvisor",
