@@ -4646,26 +4646,6 @@
             ]
         },
         {
-            "title": "View App",
-            "regex": "http(?:s)?://(?:geo\\.)?itunes\\.apple\\.com/(?:.*/)*app/(?:.*/)?id(\\d+)(?!.*(?:&|\\?)mt=12.*).*$",
-            "testInputs": [
-                "https://itunes.apple.com/au/app/opener-open-links-in-apps/id989565871?mt=8",
-                "https://geo.itunes.apple.com/us/app/opener-open-links-in-apps/id989565871",
-                "https://itunes.apple.com/us/app/things-3/id904280696?mt=12"
-            ],
-            "formats": [
-                {
-                    "appIdentifier": "pricetag",
-                    "format": "pricetag://app?url=https://itunes.apple.com/app/id$1",
-                    "testResults": [
-                        "pricetag://app?url=https://itunes.apple.com/app/id989565871",
-                        "pricetag://app?url=https://itunes.apple.com/app/id989565871",
-                        null
-                    ]
-                }
-            ]
-        },
-        {
             "title": "Open Link",
             "regex": "http(?:s)?://(?:geo\\.)?itunes\\.apple\\.com/(?:.*/)*(artist|album|music-video)/(?:.*/)?(?:id)?(\\d+).*?(?:(?:\\?|&)(i=(?:\\d+)))?.*?$",
             "testInputs": [
@@ -4821,6 +4801,26 @@
                         "blink://x-callback-url/search?q=https://itunes.apple.com/us/artist/widowspeak/id420935735",
                         null,
                         "blink://x-callback-url/search?q=https://geo.itunes.apple.com/us/app/logmyrun/id513718134?mt=8&uo=4&at=11lbfL&ct=twitter",
+                        null
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "View App",
+            "regex": "http(?:s)?://(?:geo\\.)?itunes\\.apple\\.com/(?:.*/)*app/(?:.*/)?id(\\d+)(?!.*(?:&|\\?)mt=12.*).*$",
+            "testInputs": [
+                "https://itunes.apple.com/au/app/opener-open-links-in-apps/id989565871?mt=8",
+                "https://geo.itunes.apple.com/us/app/opener-open-links-in-apps/id989565871",
+                "https://itunes.apple.com/us/app/things-3/id904280696?mt=12"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "pricetag",
+                    "format": "pricetag://app?url=https://itunes.apple.com/app/id$1",
+                    "testResults": [
+                        "pricetag://app?url=https://itunes.apple.com/app/id989565871",
+                        "pricetag://app?url=https://itunes.apple.com/app/id989565871",
                         null
                     ]
                 }
