@@ -4816,6 +4816,15 @@
             ],
             "formats": [
                 {
+                    "appIdentifier": "wshlst",
+                    "format": "wshlst://$1",
+                    "testResults": [
+                        "wshlst://989565871",
+                        "wshlst://989565871",
+                        null
+                    ]
+                },
+                {
                     "appIdentifier": "pricetag",
                     "format": "pricetag://app?url=https://itunes.apple.com/app/id$1",
                     "testResults": [
@@ -8510,6 +8519,13 @@
             "identifier": "indiegogo",
             "storeIdentifier": "752234889",
             "scheme": "indiegogo://"
+        },
+        {
+            "displayName": "WSH LST",
+            "identifier": "wshlst",
+            "storeIdentifier": "1323785754",
+            "scheme": "wshlst://",
+            "docs": "https://db.tt/hc4v5XExOr"
         }
     ],
     "browsers": [
