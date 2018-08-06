@@ -9239,6 +9239,15 @@
             "tests": {
                 "https://ct.pinterest.com/_/_/redirect/?src=open&user_id=128282426794312100&url=https://www.auteur-watches.com/product/classic-black/": "https://www.auteur-watches.com/product/classic-black/"
             }
+        },
+        "http(s)?://(www\\.)?medium\\.com/r(/)?\\?url.*$": {
+            "param": "url",
+            "tests": {
+                "https://medium.com/r/?url=https%3A%2F%2Fgithub.com%2Ftimonus%2FTJActivityViewController": "https://github.com/timonus/TJActivityViewController",
+                "https://www.medium.com/r/?url=https%3A%2F%2Fgithub.com%2Ftimonus%2FTJActivityViewController": "https://github.com/timonus/TJActivityViewController",
+                "http://medium.com/r/?url=https%3A%2F%2Fgithub.com%2Ftimonus%2FTJActivityViewController": "https://github.com/timonus/TJActivityViewController",
+                "http://www.medium.com/r/?url=https%3A%2F%2Fgithub.com%2Ftimonus%2FTJActivityViewController": "https://github.com/timonus/TJActivityViewController"
+            }
         }
     }
 }
