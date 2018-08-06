@@ -3295,7 +3295,7 @@
         },
         {
             "title": "Open Link",
-            "regex": "http(?:s)?://(?:www\\.)?medium\\.com(?:/)+([^&|\\?]*)(?:&|\\?)?(.*)$",
+            "regex": "http(?:s)?://(?:www\\.)?medium\\.com(?!/r(?:/)?\\?url.*)(?:/)+([^&|\\?]*)(?:&|\\?)?(.*)$",
             "testInputs": [
                 "https://medium.com/@timonus",
                 "https://medium.com/@HelloAngels/hello-color-genomics-c679cddd7ed8",
@@ -3308,7 +3308,8 @@
                 "https://medium.com/@cba/highlights",
                 "https://medium.com//how-to-get-over-the-need-to-be-liked-by-everyone-you-meet-463d9ef529cc",
                 "https://medium.com//how-to-get-over-the-need-to-be-liked-by-everyone-you-meet-463d9ef529cc&formCheck=0980fc94e41dc364cc129fd0d7034d86",
-                "https://medium.com/the-mission/how-to-send-emails-to-very-busy-people-and-a-case-study-teardown-8dd7b3428f8e&formCheck=a917221c92021db2523cd48f1fcc4c0b&utm_content=buffer98d42&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer"
+                "https://medium.com/the-mission/how-to-send-emails-to-very-busy-people-and-a-case-study-teardown-8dd7b3428f8e&formCheck=a917221c92021db2523cd48f1fcc4c0b&utm_content=buffer98d42&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer",
+                "https://medium.com/r/?url=https%3A%2F%2Fgithub.com%2Ftimonus%2FTJActivityViewController"
             ],
             "formats": [
                 {
@@ -3326,7 +3327,8 @@
                         "medium://@cba/highlights?",
                         "medium://how-to-get-over-the-need-to-be-liked-by-everyone-you-meet-463d9ef529cc?",
                         "medium://how-to-get-over-the-need-to-be-liked-by-everyone-you-meet-463d9ef529cc?formCheck=0980fc94e41dc364cc129fd0d7034d86",
-                        "medium://the-mission/how-to-send-emails-to-very-busy-people-and-a-case-study-teardown-8dd7b3428f8e?formCheck=a917221c92021db2523cd48f1fcc4c0b&utm_content=buffer98d42&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer"
+                        "medium://the-mission/how-to-send-emails-to-very-busy-people-and-a-case-study-teardown-8dd7b3428f8e?formCheck=a917221c92021db2523cd48f1fcc4c0b&utm_content=buffer98d42&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer",
+                        null
                     ]
                 }
             ]
