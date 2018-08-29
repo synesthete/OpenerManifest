@@ -3165,16 +3165,6 @@
                     "notes": "Narwhal doesn't tolerate queries it seems https://twitter.com/jad_chaar/status/770055945707716608"
                 },
                 {
-                    "appIdentifier": "amrc",
-                    "format": "amrc://$2",
-                    "testResults": [
-                        "amrc://reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/",
-                        "amrc://reddit.com/r/gaming/",
-                        "amrc://reddit.com/r/spotify?utm_source=mweb_redirect&compact=true",
-                        null
-                    ]
-                },
-                {
                     "appIdentifier": "readder",
                     "format": "readder://open-url/https://$2",
                     "testResults": [
@@ -3185,22 +3175,32 @@
                     ]
                 },
                 {
-                    "appIdentifier": "beam",
-                    "format": "beamapp://$2",
-                    "testResults": [
-                        "beamapp://reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/",
-                        "beamapp://reddit.com/r/gaming/",
-                        "beamapp://reddit.com/r/spotify?utm_source=mweb_redirect&compact=true",
-                        null
-                    ]
-                },
-                {
                     "appIdentifier": "monochrome",
                     "format": "com.falconassets.monochrome://$2",
                     "testResults": [
                         "com.falconassets.monochrome://reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/",
                         "com.falconassets.monochrome://reddit.com/r/gaming/",
                         "com.falconassets.monochrome://reddit.com/r/spotify?utm_source=mweb_redirect&compact=true",
+                        null
+                    ]
+                }
+                {
+                    "appIdentifier": "amrc",
+                    "format": "amrc://$2",
+                    "testResults": [
+                        "amrc://reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/",
+                        "amrc://reddit.com/r/gaming/",
+                        "amrc://reddit.com/r/spotify?utm_source=mweb_redirect&compact=true",
+                        null
+                    ]
+                },
+                {
+                    "appIdentifier": "beam",
+                    "format": "beamapp://$2",
+                    "testResults": [
+                        "beamapp://reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/",
+                        "beamapp://reddit.com/r/gaming/",
+                        "beamapp://reddit.com/r/spotify?utm_source=mweb_redirect&compact=true",
                         null
                     ]
                 }
