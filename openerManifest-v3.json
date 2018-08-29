@@ -2190,6 +2190,21 @@
                     ]
                 },
                 {
+                    "appIdentifier": "musi",
+                    "format": "musi://track/$1",
+                    "testResults": [
+                        "musi://track/MTY1Kje0yLg",
+                        "musi://track/0uY7gLZDmn4",
+                        "musi://track/MFzDaBzBlL0",
+                        "musi://track/mzun7_Ynmks",
+                        "musi://track/JEiSTzK-A2A",
+                        "musi://track/yWDJoJm-Rk0",
+                        "musi://track/S4WNO4tchUk",
+                        "musi://track/ngElkyQ6Rhs",
+                        "musi://track/KVQxACAEpso"
+                    ]
+                },
+                {
                     "appIdentifier": "youplayer",
                     "format": "youplayer://youtube.com/watch?v=$1",
                     "testResults": [
@@ -8558,6 +8573,13 @@
             "storeIdentifier": "1323785754",
             "scheme": "wshlst://",
             "docs": "https://db.tt/hc4v5XExOr"
+        },
+        {
+            "displayName": "Musi",
+            "identifier": "musi",
+            "storeIdentifier": "591560124",
+            "scheme": "musi://",
+            "docs": "https://db.tt/u0SzsnCf7u"
         }
     ],
     "browsers": [
