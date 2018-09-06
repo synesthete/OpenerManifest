@@ -9229,7 +9229,23 @@
                 "redbrowser://www.opener.link/",
                 "redbrowsers://twitter.com/openerapp"
             ]
-        }
+        },
+		{
+			"displayName": "Cake",
+			"identifier": "cake",
+			"scheme": "cakebrowser://",
+			"storeIdentifier": "1163553130",
+            "regex": "(http(?:s)?.*)",
+            "format": "cakebrowser://open-url?url=$1",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "cakebrowser://open-url?url=http://www.opener.link/",
+                "cakebrowser://open-url?url=https://twitter.com/openerapp"
+            ]
+		}
     ],
     "redirectRules": {
         "http(?:s)?://(\\w+\\.)*google(\\.\\w+)/url.*$": {
