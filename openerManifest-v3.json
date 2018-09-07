@@ -7153,7 +7153,27 @@
                     ]
                 }
             ]
-        }
+        },
+		{
+			"title": "Open Link",
+			"regex": "http(?:s)?://derstandard\\.at/(.+)$",
+			"testInputs": [
+				"https://derstandard.at/2000086779585/Sobotka-Sollten-Gesetze-gegen-Wiederbetaetigung-noch-erweitern",
+				"https://derstandard.at/r5782/Bundeslaender?ref=nav_haupt",
+				"https://derstandard.at/Kultur?ref=nav_haupt"
+			],
+			"formats": [
+				{
+					"appIdentifier": "istandard",
+					"format": "iStandard://$1",
+					"testResults": [
+						"iStandard://2000086779585/Sobotka-Sollten-Gesetze-gegen-Wiederbetaetigung-noch-erweitern",
+						"iStandard://r5782/Bundeslaender?ref=nav_haupt",
+						"iStandard://Kultur?ref=nav_haupt"
+					]
+				}
+			]
+		}
     ],
     "apps": [
         {
@@ -8580,7 +8600,13 @@
             "identifier": "zomato",
             "storeIdentifier": "434613896",
             "scheme": "zomato://"
-        }
+        },
+		{
+			"displayName": "iStandard",
+			"identifier": "istandard",
+			"storeIdentifier": "376832518",
+			"scheme": "iStandard://"
+		}
     ],
     "browsers": [
         {
