@@ -5480,15 +5480,6 @@
                     ]
                 },
                 {
-                    "appIdentifier": "inico2",
-                    "format": "inico2http://www.nicovideo.jp/watch/$1",
-                    "testResults": [
-                        "inico2http://www.nicovideo.jp/watch/sm26814241",
-                        "inico2http://www.nicovideo.jp/watch/sm15757696",
-                        "inico2http://www.nicovideo.jp/watch/1449636328"
-                    ]
-                },
-                {
                     "appIdentifier": "smileplayer2",
                     "format": "smileplayer2://id/$1",
                     "testResults": [
@@ -5505,6 +5496,15 @@
                         "nicolihttp://www.nicovideo.jp/watch/sm15757696",
                         "nicolihttp://www.nicovideo.jp/watch/1449636328"
                     ]
+                },
+                {
+                    "appIdentifier": "inico2",
+                    "format": "inico2http://www.nicovideo.jp/watch/$1",
+                    "testResults": [
+                        "inico2http://www.nicovideo.jp/watch/sm26814241",
+                        "inico2http://www.nicovideo.jp/watch/sm15757696",
+                        "inico2http://www.nicovideo.jp/watch/1449636328"
+                    ]
                 }
             ]
         },
@@ -5516,14 +5516,6 @@
                 "http://www.nicovideo.jp/watch/sm26814241"
             ],
             "formats": [
-                {
-                    "appIdentifier": "inico2",
-                    "format": "inico2http://www.nicovideo.jp/watch/$1",
-                    "testResults": [
-                        "inico2http://www.nicovideo.jp/watch/so26990332",
-                        null
-                    ]
-                },
                 {
                     "appIdentifier": "smileplayer2",
                     "format": "smileplayer2://id/$1",
@@ -5537,6 +5529,14 @@
                     "format": "nicolihttp://www.nicovideo.jp/watch/$1",
                     "testResults": [
                         "nicolihttp://www.nicovideo.jp/watch/so26990332",
+                        null
+                    ]
+                },
+                {
+                    "appIdentifier": "inico2",
+                    "format": "inico2http://www.nicovideo.jp/watch/$1",
+                    "testResults": [
+                        "inico2http://www.nicovideo.jp/watch/so26990332",
                         null
                     ]
                 }
@@ -5555,19 +5555,19 @@
                     "testResults": [
                         "niconico://nm6195780"
                     ]
+				},
+                {
+                    "appIdentifier": "nicoli",
+                    "format": "nicolihttp://www.nicovideo.jp/watch/$1",
+                    "testResults": [
+                        "nicolihttp://www.nicovideo.jp/watch/nm6195780"
+                    ]
                 },
                 {
                     "appIdentifier": "inico2",
                     "format": "inico2http://www.nicovideo.jp/watch/$1",
                     "testResults": [
                         "inico2http://www.nicovideo.jp/watch/nm6195780"
-                    ]
-                },
-                {
-                    "appIdentifier": "nicoli",
-                    "format": "nicolihttp://www.nicovideo.jp/watch/$1",
-                    "testResults": [
-                        "nicolihttp://www.nicovideo.jp/watch/nm6195780"
                     ]
                 }
             ]
@@ -7757,8 +7757,8 @@
         {
             "displayName": "iNico 2",
             "identifier": "inico2",
-            "storeIdentifier": "953856490",
-            "scheme": "inico2http://"
+            "scheme": "inico2http://",
+			"iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/inico2-114.jpg"
         },
         {
             "displayName": "Stack Overflow",
