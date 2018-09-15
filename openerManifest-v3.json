@@ -9272,6 +9272,37 @@
             ]
 		}
     ],
+    "previews": [
+        {
+            "regex": "(http(?:s)?://(?:www\\.)?(?:instagram\\.com|instagr\\.am)/p/([a-zA-Z0-9_\\-\\.]+)).*$",
+            "format": "$1/media/?size=l",
+            "docs": "https://www.instagram.com/developer/embedding/"
+        },
+        {
+            "regex": "http(?:s)?://(?:www\\.|m\\.)?(?:youtu\\.be/|youtube\\.com/(?:embed/|.*(?:\\?|&)v=))([a-zA-Z0-9_\\-]+).*?((\\?|&)(start|t)=\\w+)?.*?$",
+            "format": "https://img.youtube.com/vi/$1/hqdefault.jpg",
+            "docs": "https://stackoverflow.com/questions/2068344/how-do-i-get-a-youtube-video-thumbnail-from-the-youtube-api"
+        },
+        {
+            "regex": "http(?:s)?://(?:\\w+\\.)*(?:amazon|amzn)((?:\\.\\w+)+)/(?:.*?/)?(?:(?:(?:dp|gp)(?:/aw/d)?)|product|.*/ASIN)/([a-zA-Z0-9]+).*$",
+            "format": "http://images.amazon.com/images/P/$2.01.LZZZZZZZZZ.jpg",
+            "docs": "https://www.safaribooksonline.com/library/view/amazon-hacks/0596005423/ch01s07.html (backup https://db.tt/VqIjZyXRgw) and http://aaugh.com/imageabuse.html"
+        },
+        {
+            "regex": "http(?:s)?://(?:www\\.|rover\\.|m\\.)?ebay(?:\\.\\w+)+/(?:itm|i)/(?:[0-9A-Za-z_-]+/)?(\\d+)(?:/|\\?)?(?:.*)$",
+            "format": "https://i.ebayimg.com/images/i/$1-0-1/s-l375/p.jpg",
+            "docs": "https://stackoverflow.com/a/39545334/3943258"
+        },
+        {
+            "regex": "http(?:s)?://(?:\\w+\\.)?imgur\\.com/(?:gallery/|a/|r/.*/)?(\\w+).*?$",
+            "format": "https://i.imgur.com/$1h.jpg",
+            "docs": "https://thomas.vanhoutte.be/miniblog/imgur-thumbnail-trick/"
+        },
+        {
+            "regex": "http(?:s)?://(?:\\w+\\.)?pixiv\\.net/member_illust\\.php?.*illust_id=(\\d+).*?$",
+            "format": "https://embed.pixiv.net/decorate.php?illust_id=$1"
+        }
+    ],
     "redirectRules": {
         "http(?:s)?://(\\w+\\.)*google(\\.\\w+)/url.*$": {
             "param": "url",

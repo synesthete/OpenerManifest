@@ -106,9 +106,19 @@ if 'browsers' in data:
                     # print 'Removing browser ' + browser['identifier']
 					data['browsers'].remove(browser)
 					browserIndex = browserIndex - 1
+                    
+# Strip unneeded keys from previews
+if 'previews' in data:
+    previewKeysToKeep = ["regex", "format", "script", "script2"]
+    for index,preview in enumerate(data['previews']):
+    	keys = preview.keys()
+    	for keyIndex,key in enumerate(keys):
+    		if not key in previewKeysToKeep:
+				# print 'Removing ' + key
+				preview.pop(key, None)
 
-ruleKeysToKeep = ["param", "format"]
 if 'redirectRules' in data:
+    ruleKeysToKeep = ["param", "format"]
     for ruleIndex,ruleRegex in enumerate(data['redirectRules']):
         rule = data['redirectRules'][ruleRegex]
     	ruleKeys = rule.keys()
