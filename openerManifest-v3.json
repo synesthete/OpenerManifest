@@ -6180,7 +6180,7 @@
             ],
             "formats": [
                 {
-                    "appIdentifier": "telegram",
+                    "appIdentifier": "telegramx",
                     "format": "tg://resolve?domain=$1",
                     "testResults": [
                         "tg://resolve?domain=MacStories",
@@ -6204,7 +6204,7 @@
             ],
             "formats": [
                 {
-                    "appIdentifier": "telegram",
+                    "appIdentifier": "telegramx",
                     "format": "tg://addstickers?set=$1",
                     "testResults": [
                         "tg://addstickers?set=NickSantini",
