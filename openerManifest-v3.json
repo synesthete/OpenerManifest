@@ -7471,9 +7471,9 @@
             "scheme": "googlesheets://"
         },
         {
-            "displayName": "Telegram",
-            "identifier": "telegram",
-            "storeIdentifier": "686449807",
+            "displayName": "Telegram X",
+            "identifier": "telegramx",
+            "storeIdentifier": "898228810",
             "scheme": "tg://"
         },
         {
