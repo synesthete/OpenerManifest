@@ -4472,20 +4472,21 @@
             ]
         },
         {
-            "title": "Add Workflow",
-            "regex": "http(?:s?)://(?:www\\.)?workflow.is/workflows/([:hex:]+).*$",
+            "title": "Add Shortcut",
+            "regex": "http(?:s?)://(?:www\\.)?(?:workflow\\.is/workflows|icloud\\.com/shortcuts)/([:hex:]+).*$",
             "testInputs": [
                 "https://workflow.is/workflows/304554907e6a473e9e810297509b00c5",
-                "https://workflow.is/workflows/e37a43302f63402a973af02e7fa8d97e"
+                "https://workflow.is/workflows/e37a43302f63402a973af02e7fa8d97e",
+                "https://www.icloud.com/shortcuts/af75ab777d634a0dbbf0ca67286bb47b"
             ],
             "formats": [
                 {
                     "appIdentifier": "workflow",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('(workflow://workflows/.*)\"'); var match = regex.exec(res)[1]; /* http://stackoverflow.com/a/7394787/3943258 */ var txt = document.createElement('textarea'); txt.innerHTML = match; match = txt.value; completionHandler(match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('(workflow://workflows/.*)\"'); var match = regex.exec(res)[1]; match = htmlDecode(match); completionHandler(match); }",
+                    "format": "workflow://shortcuts/$1",
                     "testResults": [
-                        "workflow://workflows/304554907e6a473e9e810297509b00c5",
-                        "workflow://workflows/e37a43302f63402a973af02e7fa8d97e"
+                        "workflow://shortcuts/304554907e6a473e9e810297509b00c5",
+                        "workflow://shortcuts/e37a43302f63402a973af02e7fa8d97e",
+                        "workflow://shortcuts/af75ab777d634a0dbbf0ca67286bb47b"
                     ]
                 }
             ]
