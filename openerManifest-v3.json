@@ -4634,11 +4634,11 @@
             "formats": [
                 {
                     "appIdentifier": "appstore",
-                    "script": "function process(url, completionHandler) { var regex = RegExp('http(?:s)?://(?:geo\\\\.)?itunes\\\\.apple\\\\.com/(?:.*/)*app/(?:.*/)?id(\\\\d+).*$'); var results = regex.exec(url); var match = null; if (results != null && results.length > 1) { if (url.indexOf('mt=12') == -1) { match = 'opener://x-callback-url/show-store-product-details?id=' + results[1]; } else { match = 'itms-apps://itunes.apple.com/app/id' + results[1] + '?at=1001l3kM'; } }; completionHandler(match); }",
-                    "script2": "function process(url, completionHandler) { var regex = RegExp('http(?:s)?://(?:geo\\\\.)?itunes\\\\.apple\\\\.com/(?:.*/)*app/(?:.*/)?id(\\\\d+).*$'); var results = regex.exec(url); var match = null; if (results != null && results.length > 1) { if (url.indexOf('mt=12') == -1) { match = 'opener://x-callback-url/show-store-product-details?id=' + results[1]; } else { match = 'itms-apps://itunes.apple.com/app/id' + results[1] + '?at=1001l3kM'; } }; completionHandler(match); }",
+                    "script": "function process(url, completionHandler) { var regex = RegExp('http(?:s)?://(?:geo\\\\.)?itunes\\\\.apple\\\\.com/(?:.*/)*app/(?:.*/)?id(\\\\d+).*$'); var results = regex.exec(url); var match = null; if (results != null && results.length > 1) { match = 'itms-apps://itunes.apple.com/app/id' + results[1] + '?at=1001l3kM'; }; completionHandler(match); }",
+                    "script2": "function process(url, completionHandler) { var regex = RegExp('http(?:s)?://(?:geo\\\\.)?itunes\\\\.apple\\\\.com/(?:.*/)*app/(?:.*/)?id(\\\\d+).*$'); var results = regex.exec(url); var match = null; if (results != null && results.length > 1) { match = 'itms-apps://itunes.apple.com/app/id' + results[1] + '?at=1001l3kM'; }; completionHandler(match); }",
                     "testResults": [
-                        "opener://x-callback-url/show-store-product-details?id=989565871",
-                        "opener://x-callback-url/show-store-product-details?id=989565871",
+                        "itms-apps://itunes.apple.com/app/id989565871?at=1001l3kM",
+                        "itms-apps://itunes.apple.com/app/id989565871?at=1001l3kM",
                         "itms-apps://itunes.apple.com/app/id904280696?at=1001l3kM"
                     ]
                 },
