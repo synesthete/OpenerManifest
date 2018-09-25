@@ -7173,6 +7173,32 @@
 					]
 				}
 			]
+		},
+		{
+			"title": "Open Link",
+			"regex": "http(?:s)?://(?:www\\.)(deezer\\.com/.*)$",
+			"testInputs": [
+				"https://www.deezer.com/us/track/124991588",
+				"http://www.deezer.com/track/8016045",
+				"https://www.deezer.com/us/artist/5531258",
+				"http://www.deezer.com/artist/5531258",
+				"https://www.deezer.com/us/playlist/4160013622",
+				"https://www.deezer.com/playlist/4160013622"
+			],
+			"formats": [
+				{
+					"appIdentifier": "deezer",
+					"format": "deezer://www.$1",
+					"testResults": [
+						"deezer://www.deezer.com/us/track/124991588",
+						"deezer://www.deezer.com/track/8016045",
+						"deezer://www.deezer.com/us/artist/5531258",
+						"deezer://www.deezer.com/artist/5531258",
+						"deezer://www.deezer.com/us/playlist/4160013622",
+						"deezer://www.deezer.com/playlist/4160013622"
+					]
+				}
+			]
 		}
     ],
     "apps": [
@@ -8606,6 +8632,12 @@
 			"identifier": "istandard",
 			"storeIdentifier": "376832518",
 			"scheme": "iStandard://"
+		},
+		{
+			"displayName": "Deezer",
+			"identifier": "deezer",
+			"storeIdentifier": "292738169",
+			"scheme": "deezer://"
 		}
     ],
     "browsers": [
