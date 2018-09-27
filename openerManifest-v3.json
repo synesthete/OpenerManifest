@@ -3218,6 +3218,16 @@
                         "beamapp://reddit.com/r/spotify?utm_source=mweb_redirect&compact=true",
                         null
                     ]
+                },
+                {
+                    "appIdentifier": "slide",
+                    "format": "slide://$1",
+                    "testResults": [
+                        "slide://reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/",
+                        "slide://reddit.com/r/gaming/",
+                        "slide://reddit.com/r/spotify?utm_source=mweb_redirect&compact=true",
+                        null
+                    ]
                 }
             ]
         },
@@ -8638,7 +8648,14 @@
 			"identifier": "deezer",
 			"storeIdentifier": "292738169",
 			"scheme": "deezer://"
-		}
+		},
+        {
+            "displayName": "Slide",
+            "identifier": "slide",
+            "storeIdentifier": "1260626828",
+            "scheme": "slide://",
+            "docs": "https://bit.ly/2IieyGV"
+        }
     ],
     "browsers": [
         {
