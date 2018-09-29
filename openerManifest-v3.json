@@ -9275,18 +9275,17 @@
         {
             "displayName": "Onion Browser",
             "identifier": "onionbrowser",
-            "scheme": "onionbrowsers://",
+            "scheme": "onionhttp://",
             "storeIdentifier": "519296448",
             "regex": "http((?:s)?.*)",
-            "format": "onionbrowser$1",
-            "docs": "https://github.com/mtigas/OnionBrowser/blob/1.X/OnionBrowser/OnionBrowser/AppDelegate.m#L355",
+            "format": "onionhttp$1",
             "testInputs": [
                 "http://www.opener.link/",
                 "https://twitter.com/openerapp"
             ],
             "testResults": [
-                "onionbrowser://www.opener.link/",
-                "onionbrowsers://twitter.com/openerapp"
+                "onionhttp://www.opener.link/",
+                "onionhttps://twitter.com/openerapp"
             ]
         },
         {
