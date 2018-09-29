@@ -538,10 +538,10 @@
                         null,
                         null,
                         null,
-                        null,
-                        null,
-                        null,
-                        null,
+                        "fb://group/?id=389914698012638",
+                        "fb://group/?id=389914698012638",
+                        "fb://group/?id=389914698012638",
+                        "fb://group/?id=389914698012638",
                         "fb://group/?id=10487409466",
                         "fb://group/?id=10487409466",
                         "fb://group/?id=10487409466",
@@ -3221,7 +3221,7 @@
                 },
                 {
                     "appIdentifier": "slide",
-                    "format": "slide://$1",
+                    "format": "slide://$2",
                     "testResults": [
                         "slide://reddit.com/r/sports/comments/38uhq3/american_pharoah_wins_belmont_stakes_and_triple/",
                         "slide://reddit.com/r/gaming/",
