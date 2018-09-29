@@ -127,6 +127,9 @@ if 'redirectRules' in data:
     			# print "Removing " + key + " from " + ruleRegex
     			rule.pop(key, None)
 
+import msgpack
+packed_dict = msgpack.packb(data)
+open(path.replace('.json', '.msgpack'), 'w').write(packed_dict)
 				
 data = json.dumps(data, separators=(',',':'))
 open(path.replace('.json', '-minified.json'), 'w').write(data)
