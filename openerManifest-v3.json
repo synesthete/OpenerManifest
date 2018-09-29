@@ -5566,7 +5566,7 @@
                     "testResults": [
                         "niconico://nm6195780"
                     ]
-				},
+                },
                 {
                     "appIdentifier": "nicoli",
                     "format": "nicolihttp://www.nicovideo.jp/watch/$1",
@@ -7164,52 +7164,52 @@
                 }
             ]
         },
-		{
-			"title": "Open Link",
-			"regex": "http(?:s)?://derstandard\\.at/(.+)$",
-			"testInputs": [
-				"https://derstandard.at/2000086779585/Sobotka-Sollten-Gesetze-gegen-Wiederbetaetigung-noch-erweitern",
-				"https://derstandard.at/r5782/Bundeslaender?ref=nav_haupt",
-				"https://derstandard.at/Kultur?ref=nav_haupt"
-			],
-			"formats": [
-				{
-					"appIdentifier": "istandard",
-					"format": "iStandard://$1",
-					"testResults": [
-						"iStandard://2000086779585/Sobotka-Sollten-Gesetze-gegen-Wiederbetaetigung-noch-erweitern",
-						"iStandard://r5782/Bundeslaender?ref=nav_haupt",
-						"iStandard://Kultur?ref=nav_haupt"
-					]
-				}
-			]
-		},
-		{
-			"title": "Open Link",
-			"regex": "http(?:s)?://(?:www\\.)(deezer\\.com/.*)$",
-			"testInputs": [
-				"https://www.deezer.com/us/track/124991588",
-				"http://www.deezer.com/track/8016045",
-				"https://www.deezer.com/us/artist/5531258",
-				"http://www.deezer.com/artist/5531258",
-				"https://www.deezer.com/us/playlist/4160013622",
-				"https://www.deezer.com/playlist/4160013622"
-			],
-			"formats": [
-				{
-					"appIdentifier": "deezer",
-					"format": "deezer://www.$1",
-					"testResults": [
-						"deezer://www.deezer.com/us/track/124991588",
-						"deezer://www.deezer.com/track/8016045",
-						"deezer://www.deezer.com/us/artist/5531258",
-						"deezer://www.deezer.com/artist/5531258",
-						"deezer://www.deezer.com/us/playlist/4160013622",
-						"deezer://www.deezer.com/playlist/4160013622"
-					]
-				}
-			]
-		}
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://derstandard\\.at/(.+)$",
+            "testInputs": [
+                "https://derstandard.at/2000086779585/Sobotka-Sollten-Gesetze-gegen-Wiederbetaetigung-noch-erweitern",
+                "https://derstandard.at/r5782/Bundeslaender?ref=nav_haupt",
+                "https://derstandard.at/Kultur?ref=nav_haupt"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "istandard",
+                    "format": "iStandard://$1",
+                    "testResults": [
+                        "iStandard://2000086779585/Sobotka-Sollten-Gesetze-gegen-Wiederbetaetigung-noch-erweitern",
+                        "iStandard://r5782/Bundeslaender?ref=nav_haupt",
+                        "iStandard://Kultur?ref=nav_haupt"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:www\\.)(deezer\\.com/.*)$",
+            "testInputs": [
+                "https://www.deezer.com/us/track/124991588",
+                "http://www.deezer.com/track/8016045",
+                "https://www.deezer.com/us/artist/5531258",
+                "http://www.deezer.com/artist/5531258",
+                "https://www.deezer.com/us/playlist/4160013622",
+                "https://www.deezer.com/playlist/4160013622"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "deezer",
+                    "format": "deezer://www.$1",
+                    "testResults": [
+                        "deezer://www.deezer.com/us/track/124991588",
+                        "deezer://www.deezer.com/track/8016045",
+                        "deezer://www.deezer.com/us/artist/5531258",
+                        "deezer://www.deezer.com/artist/5531258",
+                        "deezer://www.deezer.com/us/playlist/4160013622",
+                        "deezer://www.deezer.com/playlist/4160013622"
+                    ]
+                }
+            ]
+        }
     ],
     "apps": [
         {
@@ -7795,7 +7795,7 @@
             "displayName": "iNico 2",
             "identifier": "inico2",
             "scheme": "inico2http://",
-			"iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/inico2-114.jpg"
+            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/inico2-114.jpg"
         },
         {
             "displayName": "Stack Overflow",
@@ -8637,18 +8637,18 @@
             "storeIdentifier": "434613896",
             "scheme": "zomato://"
         },
-		{
-			"displayName": "iStandard",
-			"identifier": "istandard",
-			"storeIdentifier": "376832518",
-			"scheme": "iStandard://"
-		},
-		{
-			"displayName": "Deezer",
-			"identifier": "deezer",
-			"storeIdentifier": "292738169",
-			"scheme": "deezer://"
-		},
+        {
+            "displayName": "iStandard",
+            "identifier": "istandard",
+            "storeIdentifier": "376832518",
+            "scheme": "iStandard://"
+        },
+        {
+            "displayName": "Deezer",
+            "identifier": "deezer",
+            "storeIdentifier": "292738169",
+            "scheme": "deezer://"
+        },
         {
             "displayName": "Slide",
             "identifier": "slide",
@@ -9304,11 +9304,11 @@
                 "redbrowsers://twitter.com/openerapp"
             ]
         },
-		{
-			"displayName": "Cake",
-			"identifier": "cake",
-			"scheme": "cakebrowser://",
-			"storeIdentifier": "1163553130",
+        {
+            "displayName": "Cake",
+            "identifier": "cake",
+            "scheme": "cakebrowser://",
+            "storeIdentifier": "1163553130",
             "regex": "(http(?:s)?.*)",
             "format": "cakebrowser://open-url?url=$1",
             "testInputs": [
@@ -9319,7 +9319,7 @@
                 "cakebrowser://open-url?url=http://www.opener.link/",
                 "cakebrowser://open-url?url=https://twitter.com/openerapp"
             ]
-		}
+        }
     ],
     "previews": [
         {
