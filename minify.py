@@ -79,7 +79,7 @@ while actionIndex < len(data['actions']):
         actionIndex = actionIndex - 1
 
 # Strip unneeded keys from browsers
-browserKeysToKeep = ["identifier", "displayName", "storeIdentifier", "scheme", "platform", "iconURL", "regex", "format", "script", "script2"]
+browserKeysToKeep = ["identifier", "displayName", "storeIdentifier", "scheme", "platform", "iconURL", "country", "regex", "format", "script", "script2"]
 if not stripNewField:
     browserKeysToKeep.append("new");
 if 'browsers' in data:
