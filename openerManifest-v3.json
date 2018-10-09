@@ -9319,6 +9319,22 @@
                 "cakebrowser://open-url?url=http://www.opener.link/",
                 "cakebrowser://open-url?url=https://twitter.com/openerapp"
             ]
+        },
+        {
+            "displayName": "Opera Touch",
+            "identifier": "operatouch",
+            "scheme": "touch-url://",
+            "storeIdentifier": "1411869974",
+            "regex": "(http(?:s)?.*)",
+            "format": "touch-url://open-url?url=$1",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "touch-url://open-url?url=http://www.opener.link/",
+                "touch-url://open-url?url=https://twitter.com/openerapp"
+            ]
         }
     ],
     "previews": [
