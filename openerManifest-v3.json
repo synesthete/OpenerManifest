@@ -7136,6 +7136,26 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Add App",
+            "regex": "http(?:s)?://((?:testflight\\.apple\\.com/join|beta.itunes.apple.com/v1/(?:app|invite))/.*)$",
+            "testInputs": [
+                "https://testflight.apple.com/join/yP1ZHFr0",
+                "https://beta.itunes.apple.com/v1/invite/842f010727584f1da5e008c7234aad2b2fb03e35b07d426e99baf5beb58fb72734caab58?ct=BenjaminSandofsky93099055&advp=10000&platform=ios",
+                "https://beta.itunes.apple.com/v1/app/978489855"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "testflight",
+                    "format": "itms-beta://$1",
+                    "testResults": [
+                        "itms-beta://testflight.apple.com/join/yP1ZHFr0",
+                        "itms-beta://beta.itunes.apple.com/v1/invite/842f010727584f1da5e008c7234aad2b2fb03e35b07d426e99baf5beb58fb72734caab58?ct=BenjaminSandofsky93099055&advp=10000&platform=ios",
+                        "itms-beta://beta.itunes.apple.com/v1/app/978489855"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -8576,6 +8596,12 @@
             "storeIdentifier": "1260626828",
             "scheme": "slide://",
             "docs": "https://bit.ly/2IieyGV"
+        },
+        {
+            "displayName": "TestFlight",
+            "identifier": "testflight",
+            "storeIdentifier": "899247664",
+            "scheme": "tms-beta://"
         }
     ],
     "browsers": [
