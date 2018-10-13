@@ -4102,24 +4102,6 @@
                         null,
                         "working-copy://show?remote=https%3A%2F%2Fgitlab.com%2Ftimonus%2FOpenerManifest"
                     ]
-                },
-                {
-                    "appIdentifier": "git2go",
-                    "format": "gittogo://repositories/$1$2$3/$4/$5$6",
-                    "testResults": [
-                        null,
-                        null,
-                        null,
-                        "gittogo://repositories/github/timonus/OpenerManifest",
-                        "gittogo://repositories/github/timonus/OpenerManifest",
-                        null,
-                        null,
-                        "gittogo://repositories/bitbucket/timonus/configuration",
-                        "gittogo://repositories/bitbucket/timonus/configuration",
-                        null,
-                        null,
-                        "gittogo://repositories/gitlab/timonus/OpenerManifest"
-                    ]
                 }
             ]
         },
@@ -7990,13 +7972,6 @@
             "identifier": "foursquare",
             "storeIdentifier": "306934924",
             "scheme": "foursquare://"
-        },
-        {
-            "displayName": "Git2Go",
-            "identifier": "git2go",
-            "storeIdentifier": "963577401",
-            "scheme": "gittogo://",
-            "docs": "http://faq.git2go.com/2016/01/24/How-to-use-URL-schemes.html"
         },
         {
             "displayName": "Meetup",
