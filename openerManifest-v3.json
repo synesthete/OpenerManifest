@@ -8700,7 +8700,7 @@
             "displayName": "Opera Mini",
             "identifier": "operamini",
             "scheme": "opera-http://",
-            "storeIdentifier": "363729560",
+            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/operamini-114.jpg",
             "regex": "(http(?:s)?.*)",
             "format": "opera-$1",
             "docs": "http://handleopenurl.com/scheme/opera-mini",
