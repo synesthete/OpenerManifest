@@ -7156,6 +7156,22 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:www\\.)?(theathletic\\.com/.+)$",
+            "testInputs": [
+                "https://theathletic.com/584168/2018/10/13/sporer-diagnosing-the-islanders-defensive-improvements-since-their-season-opener/"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "theathletic",
+                    "format": "theathletic://$1",
+                    "testResults": [
+                        "theathletic://theathletic.com/584168/2018/10/13/sporer-diagnosing-the-islanders-defensive-improvements-since-their-season-opener/"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -8602,6 +8618,12 @@
             "identifier": "testflight",
             "storeIdentifier": "899247664",
             "scheme": "tms-beta://"
+        },
+        {
+            "displayName": "The Athletic",
+            "identifier": "theathletic",
+            "storeIdentifier": "1135216317",
+            "scheme": "theathletic://"
         }
     ],
     "browsers": [
