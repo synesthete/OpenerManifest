@@ -991,23 +991,6 @@
             ]
         },
         {
-            "title": "Open Moment",
-            "regex": "http(?:s?)://(?:www\\.)?path\\.com/(?:p|moment)/.*$",
-            "testInputs": [
-                "https://path.com/p/4BozlA"
-            ],
-            "formats": [
-                {
-                    "appIdentifier": "path",
-                    "script": "function process(url, completionHandler) { var xmlhttp = new XMLHttpRequest(); xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { var res = xmlhttp.responseText; var regex = RegExp('https://path.com/moment/([a-f0-9]+)'); var match = regex.exec(res)[1]; completionHandler('path://moments/' + match); } }; xmlhttp.open('GET', url, true); xmlhttp.send(); }",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var regex = RegExp('https://path.com/moment/([a-f0-9]+)'); var match = regex.exec(res)[1]; completionHandler('path://moments/' + match); }",
-                    "testResults": [
-                        "path://moments/580c055e7651c2a8c743cb44"
-                    ]
-                }
-            ]
-        },
-        {
             "title": "Open Profile",
             "regex": "http(?:s?)://(?!(?:help|blog|engineering)\\.)(?:\\w+\\.)?pinterest\\.com/(?!pin|search|explore|categories|join)([a-zA-Z0-9-_]+)(/pins)?(?:/|/?\\?.*)?$",
             "testInputs": [
@@ -8457,12 +8440,6 @@
             "identifier": "pandora",
             "storeIdentifier": "284035177",
             "scheme": "pandorav4://"
-        },
-        {
-            "displayName": "Path",
-            "identifier": "path",
-            "storeIdentifier": "403639508",
-            "scheme": "path://"
         },
         {
             "displayName": "Peach",
