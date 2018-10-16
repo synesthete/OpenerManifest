@@ -8547,7 +8547,7 @@
             "displayName": "TestFlight",
             "identifier": "testflight",
             "storeIdentifier": "899247664",
-            "scheme": "tms-beta://"
+            "scheme": "itms-beta://"
         },
         {
             "displayName": "TikTok",
