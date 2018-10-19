@@ -9251,8 +9251,8 @@
     ],
     "previews": [
         {
-            "regex": "(http(?:s)?://(?:www\\.)?(?:instagram\\.com|instagr\\.am)/p/([a-zA-Z0-9_\\-\\.]+)).*$",
-            "format": "$1/media/?size=l",
+            "regex": "http(?:s)?://(?:www\\.)?(?:instagram\\.com|instagr\\.am)/(?:[a-zA-Z0-9_\\.]{1,30}/)?(?:p|tv)/([a-zA-Z0-9_\\-\\.]+).*$",
+            "format": "https://www.instagram.com/p/$1/media/?size=l",
             "docs": "https://www.instagram.com/developer/embedding/"
         },
         {
