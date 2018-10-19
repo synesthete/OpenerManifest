@@ -7077,11 +7077,12 @@
         },
         {
             "title": "Add App",
-            "regex": "http(?:s)?://((?:testflight\\.apple\\.com/join|beta.itunes.apple.com/v1/(?:app|invite))/.*)$",
+            "regex": "http(?:s)?://((?:testflight|beta\\.itunes)\\.apple\\.com(?:/join|/v1/(?:app|invite))/.*)$",
             "testInputs": [
                 "https://testflight.apple.com/join/yP1ZHFr0",
                 "https://beta.itunes.apple.com/v1/invite/842f010727584f1da5e008c7234aad2b2fb03e35b07d426e99baf5beb58fb72734caab58?ct=BenjaminSandofsky93099055&advp=10000&platform=ios",
-                "https://beta.itunes.apple.com/v1/app/978489855"
+                "https://beta.itunes.apple.com/v1/app/978489855",
+                "https://testflight.apple.com/v1/invite/7accd6fcdc8d42d0be4995f67d6079ca5757b37964ba4809a815582e53a79adf368d98b6?ct=AppleComputer&advp=10000&platform=ios"
             ],
             "formats": [
                 {
@@ -7090,7 +7091,8 @@
                     "testResults": [
                         "itms-beta://testflight.apple.com/join/yP1ZHFr0",
                         "itms-beta://beta.itunes.apple.com/v1/invite/842f010727584f1da5e008c7234aad2b2fb03e35b07d426e99baf5beb58fb72734caab58?ct=BenjaminSandofsky93099055&advp=10000&platform=ios",
-                        "itms-beta://beta.itunes.apple.com/v1/app/978489855"
+                        "itms-beta://beta.itunes.apple.com/v1/app/978489855",
+                        "itms-beta://testflight.apple.com/v1/invite/7accd6fcdc8d42d0be4995f67d6079ca5757b37964ba4809a815582e53a79adf368d98b6?ct=AppleComputer&advp=10000&platform=ios"
                     ]
                 }
             ]
