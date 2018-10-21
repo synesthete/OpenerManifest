@@ -3309,7 +3309,7 @@
         },
         {
             "title": "Open Product",
-            "regex": "http(?:s)?://(?:\\w+\\.)*(?:amazon|amzn)((?:\\.\\w+)+)/(?:.*?/)?(?:(?:(?:dp|gp)(?:/aw/d)?)|product|.*/ASIN)/([a-zA-Z0-9]+).*$",
+            "regex": "http(?:s)?://((?:\\w+\\.)*(?:amazon|amzn)((?:\\.\\w+)+)/.*)$",
             "testInputs": [
                 "http://www.amazon.com/Mondaine-A990-CLOCK-11SBC-Clock-White-Frame/dp/B0016QNNP6/ref=sr_1_1?ie=UTF8&qid=1429471063&sr=8-1&keywords=mondaine+clock",
                 "http://www.amazon.com/dp/B0016QNNP6",
@@ -3326,19 +3326,19 @@
             "formats": [
                 {
                     "appIdentifier": "amazon",
-                    "format": "com.amazon.mobile.shopping://amazon$1/products/$2",
+                    "format": "com.amazon.mobile.shopping.web://$1",
                     "testResults": [
-                        "com.amazon.mobile.shopping://amazon.com/products/B0016QNNP6",
-                        "com.amazon.mobile.shopping://amazon.com/products/B0016QNNP6",
-                        "com.amazon.mobile.shopping://amazon.com/products/B0016QNNP6",
-                        "com.amazon.mobile.shopping://amazon.com/products/B0016QNNP6",
-                        "com.amazon.mobile.shopping://amazon.com/products/B0016QNNP6",
-                        "com.amazon.mobile.shopping://amazon.co.uk/products/1472230078",
-                        "com.amazon.mobile.shopping://amazon.de/products/B00N5BQ62",
-                        "com.amazon.mobile.shopping://amazon.com/products/0812522397",
-                        "com.amazon.mobile.shopping://amazon.com/products/B005FEGYCO",
-                        "com.amazon.mobile.shopping://amazon.com/products/B005FEGYCO",
-                        "com.amazon.mobile.shopping://amazon.com/products/0812972155"
+                        "com.amazon.mobile.shopping.web://www.amazon.com/Mondaine-A990-CLOCK-11SBC-Clock-White-Frame/dp/B0016QNNP6/ref=sr_1_1?ie=UTF8&qid=1429471063&sr=8-1&keywords=mondaine+clock",
+                        "com.amazon.mobile.shopping.web://www.amazon.com/dp/B0016QNNP6",
+                        "com.amazon.mobile.shopping.web://www.amazon.com/gp/product/B0016QNNP6",
+                        "com.amazon.mobile.shopping.web://www.amazon.com/dp/B0016QNNP6/ref=cm_sw_su_dp",
+                        "com.amazon.mobile.shopping.web://www.amazon.com/gp/product/B0016QNNP6",
+                        "com.amazon.mobile.shopping.web://www.amazon.co.uk/Untitled/dp/1472230078/ref=sr_1_1/277-2117425-9287062?ie=UTF8&qid=1428652808&sr=8-1&keywords=9781472230072",
+                        "com.amazon.mobile.shopping.web://www.amazon.de/dp/B00N5BQ62",
+                        "com.amazon.mobile.shopping.web://smile.amazon.com/dp/0812522397/ref=cm_sw_r_awd_m6xOvb9NW6G48",
+                        "com.amazon.mobile.shopping.web://www.amazon.com/Adjustable-Flashlight-Bright-Batteries-Included/dp/B005FEGYCO",
+                        "com.amazon.mobile.shopping.web://www.amazon.com/gp/aw/d/B005FEGYCO/ref=mp_s_a_1_1?qid=1444785369&sr=8-1&pi=SY200_QL40&keywords=flashlight&dpPl=1&dpID=41uqlYcT30L&ref=plSrch",
+                        "com.amazon.mobile.shopping.web://www.amazon.com/exec/obidos/ASIN/0812972155/codihorr-20"
                     ]
                 },
                 {
@@ -7182,7 +7182,8 @@
             "displayName": "Amazon",
             "identifier": "amazon",
             "storeIdentifier": "297606951",
-            "scheme": "com.amazon.mobile.shopping://"
+            "scheme": "com.amazon.mobile.shopping://",
+            "docs": "https://stackoverflow.com/a/35697717/3943258"
         },
         {
             "displayName": "Tumblr",
