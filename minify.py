@@ -4,6 +4,7 @@ import re
 import os
 import shutil
 import json
+from slimit import minify # https://github.com/rspivak/slimit (run `pip install slimit`)
 from collections import OrderedDict # http://stackoverflow.com/a/10982037
 
 if len(sys.argv) < 2:
@@ -58,6 +59,10 @@ while actionIndex < len(data['actions']):
             if not key in ["appIdentifier", "format", "script", "script2"]:
                 # print "Removing " + key + " from format"
                 format.pop(key, None)
+            elif key == "script2" or key == "script":
+                format[key] = minify(format[key], mangle=True)
+                # print format[key]
+                
 
         # Ensure only necessary script is included
         if not 'format' in formatKeys:
@@ -92,6 +97,9 @@ if 'browsers' in data:
 			if not key in browserKeysToKeep:
                 # print "Removing " + key + " from browser"
 				browser.pop(key, None)
+			elif key == "script2" or key == "script":
+				browser[key] = minify(browser[key], mangle=True)
+				# print browser[key]
     
         # Ensure only necessary script is included
 		if not 'format' in browserKeys:
@@ -116,6 +124,9 @@ if 'previews' in data:
     		if not key in previewKeysToKeep:
 				# print 'Removing ' + key
 				preview.pop(key, None)
+    		elif key == "script2" or key == "script":
+				preview[key] = minify(preview[key], mangle=True)
+				# print preview[key]
 
 if 'redirectRules' in data:
     ruleKeysToKeep = ["param", "format"]
