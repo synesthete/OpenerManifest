@@ -4,7 +4,7 @@ import re
 import os
 import shutil
 import json
-from slimit import minify # https://github.com/rspivak/slimit (run `pip install slimit`)
+from slimit import minify # https://github.com/rspivak/slimit (run `pip install slimit`, to fix lextab issue see https://bit.ly/2D30f9s)
 from collections import OrderedDict # http://stackoverflow.com/a/10982037
 
 if len(sys.argv) < 2:
