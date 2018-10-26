@@ -18,12 +18,17 @@ data = json.loads(open(path).read(), object_pairs_hook=OrderedDict) # http://sta
 # Use the --prefer-script-v1 flag when use need the v2 format (includes only 'script', not 'script2')
 preferredScriptName = 'script2'
 stripNewField = False
-if len(sys.argv) > 2:
-    if sys.argv[2] == '--prefer-script-v1':
+mangle = True
+# if len(sys.argv) > 2:
+for i in range(2,len(sys.argv)):
+    val = sys.argv[i]
+    if val == '--prefer-script-v1':
         preferredScriptName = 'script'
         data.pop('redirectRules', None) # Also strip the "redirectRules" entry, which isn't supported by older versions of the app.
-    elif sys.argv[2] == '--strip-new':
+    elif val == '--strip-new':
         stripNewField = True
+    elif val == '--no-mangle':
+        mangle = False
 
 # Strip unneeded keys from apps
 appKeysToKeep = ["identifier", "displayName", "storeIdentifier", "scheme", "platform", "iconURL", "country"]
@@ -59,7 +64,7 @@ while actionIndex < len(data['actions']):
             if not key in ["appIdentifier", "format", "script", "script2"]:
                 # print "Removing " + key + " from format"
                 format.pop(key, None)
-            elif key == "script2" or key == "script":
+            elif (key == "script2" or key == "script") and mangle:
                 format[key] = minify(format[key], mangle=True)
                 # print format[key]
                 
@@ -97,7 +102,7 @@ if 'browsers' in data:
 			if not key in browserKeysToKeep:
                 # print "Removing " + key + " from browser"
 				browser.pop(key, None)
-			elif key == "script2" or key == "script":
+			elif (key == "script2" or key == "script") and mangle:
 				browser[key] = minify(browser[key], mangle=True)
 				# print browser[key]
     
@@ -124,7 +129,7 @@ if 'previews' in data:
     		if not key in previewKeysToKeep:
 				# print 'Removing ' + key
 				preview.pop(key, None)
-    		elif key == "script2" or key == "script":
+    		elif (key == "script2" or key == "script") and mangle:
 				preview[key] = minify(preview[key], mangle=True)
 				# print preview[key]
 
