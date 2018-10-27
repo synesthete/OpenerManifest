@@ -7149,6 +7149,22 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "http(?:s)?://((www\\.)?tapatalk\\.com/.*)$",
+            "testInputs": [
+                "https://www.tapatalk.com/groups/evgeniamedvedeva/gp-skate-canada-international-2018-t10-s380.html"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "tapatalk",
+                    "format": "tapatalk://$1",
+                    "testResults": [
+                        "tapatalk://www.tapatalk.com/groups/evgeniamedvedeva/gp-skate-canada-international-2018-t10-s380.html"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -8589,6 +8605,12 @@
             "identifier": "nicoseiga",
             "storeIdentifier": "1045938821",
             "scheme": "nicoseiga://"
+        },
+        {
+            "displayName": "Tapatalk",
+            "identifier": "tapatalk",
+            "storeIdentifier": "307880732",
+            "scheme": "tapatalk://"
         }
     ],
     "browsers": [
