@@ -595,7 +595,8 @@
                 "https://www.facebook.com/n/?timonus%2Fposts%2F10154879225363318",
                 "https://www.facebook.com/n/?dbhuynh%2Fposts%2F10107195283476043",
                 "https://www.facebook.com/verge/videos/1558737434162594/",
-                "https://www.facebook.com/techcrunch/videos/10156003235202952/"
+                "https://www.facebook.com/techcrunch/videos/10156003235202952/",
+                "https://www.facebook.com/story.php?story_fbid=10104210605404813&id=206186"
             ],
             "formats": [
                 {
@@ -611,17 +612,19 @@
                         "fb://story/?id=501898317_10154879225363318",
                         "fb://story/?id=1201819_10107195283476043",
                         "fb://story/?id=193742123995472_1558737434162594",
-                        "fb://story/?id=8062627951_10156003235202952"
+                        "fb://story/?id=8062627951_10156003235202952",
+                        null
                     ]
                 }
             ]
         },
         {
             "title": "Open Post",
-            "regex": "http(?:s)?://m\\.facebook\\.com/story\\.php.*(?:story_fbid=(\\d+).*id=(\\d+)|id=(\\d+).*story_fbid=(\\d+)).*?$",
+            "regex": "http(?:s)?://(?:\\w+\\.)?facebook\\.com/story\\.php.*(?:story_fbid=(\\d+).*id=(\\d+)|id=(\\d+).*story_fbid=(\\d+)).*?$",
             "testInputs": [
                 "https://m.facebook.com/story.php?story_fbid=1558737434162594&id=193742123995472&_rdr",
-                "https://m.facebook.com/story.php?&id=193742123995472&story_fbid=1558737434162594"
+                "https://m.facebook.com/story.php?&id=193742123995472&story_fbid=1558737434162594",
+                "https://www.facebook.com/story.php?story_fbid=10104210605404813&id=206186"
             ],
             "formats": [
                 {
@@ -629,7 +632,8 @@
                     "format": "fb://story/?id=$2$3_$1$4",
                     "testResults": [
                         "fb://story/?id=193742123995472_1558737434162594",
-                        "fb://story/?id=193742123995472_1558737434162594"
+                        "fb://story/?id=193742123995472_1558737434162594",
+                        "fb://story/?id=206186_10104210605404813"
                     ]
                 }
             ]
