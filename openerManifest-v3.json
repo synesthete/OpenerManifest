@@ -7185,18 +7185,20 @@
         },
         {
             "title": "Open Video",
-            "regex": "http(?:s)?://(?:\\w+\\.)?tiktok\\.com/(?:.*/)?(?:video/|v/)(\\d+).*?$",
+            "regex": "http(?:s)?://(?:\\w+\\.)?tiktok\\.com/.+$",
             "testInputs": [
                 "https://m.tiktok.com/v/6611870748761918725.html?u_code=d2efh6j7chk78e&utm_source=twitter&utm_campaign=client_share&utm_medium=android&share_app_name=musically&iid=6611569857811203845&timestamp=1539446157&user_id=6610293843588448261",
-                "https://t.tiktok.com/i18n/share/video/6611871928930012418/?region=PH&mid=6360467876020751105&u_code=d2g7ai3j6cbjc4&&iid=6611859828577126145&utm_campaign=sever_share&utm_medium=android&app=tiktok&utm_source=twitter"
+                "https://t.tiktok.com/i18n/share/video/6611871928930012418/?region=PH&mid=6360467876020751105&u_code=d2g7ai3j6cbjc4&&iid=6611859828577126145&utm_campaign=sever_share&utm_medium=android&app=tiktok&utm_source=twitter",
+                "https://t.tiktok.com/i18n/share/challenge/1615191334550530?utm_campaign=client_share&app=tiktok&utm_medium=ios&tt_from=copy&utm_source=copy&iid=6618689673571174145"
             ],
             "formats": [
                 {
                     "appIdentifier": "tiktok",
-                    "format": "musically://musical?id=$1",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var results = RegExp('al:ios:url\".*?content=\"([^\"]+)\"').exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler(match); }",
                     "testResults": [
                         "musically://musical?id=6611870748761918725",
-                        "musically://musical?id=6611871928930012418"
+                        "snssdk1180://aweme/detail/6611871928930012418",
+                        "snssdk1180://challenge/detail/1615191334550530"
                     ]
                 }
             ]
@@ -8562,9 +8564,8 @@
         {
             "displayName": "TikTok",
             "identifier": "tiktok",
-            "storeIdentifier": "1235601864",
-            "country": "sg",
-            "scheme": "musically://"
+            "scheme": "noscheme://",
+            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/tiktok-120.jpg"
         },
         {
             "displayName": "Transit",
