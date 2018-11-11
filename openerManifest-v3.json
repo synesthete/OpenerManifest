@@ -4190,7 +4190,7 @@
         },
         {
             "title": "Show Repository",
-            "regex": "http(?:s)?://(?:(?:(?!gist)\\w+\\.)*(?:(github)\\.com)/([^/]+)/([^/]+?)(?:\\.git)?((/)?\\?.*$)?)$",
+            "regex": "http(?:s)?://(?:(?:(?!gist)\\w+\\.)*(?:(github)\\.com)/([^/]+)/([^/]+?)(?:\\.git)?(?:/tree/([^/]+))?((/)?\\?.*$)?)$",
             "testInputs": [
                 "https://github.com/timonus/OpenerManifest/blob/master/.gitignore",
                 "https://github.com/timonus",
@@ -4203,9 +4203,29 @@
                 "https://bitbucket.org/timonus/configuration.git",
                 "https://gitlab.com/timonus/",
                 "https://gitlab.com/timonus/OpenerManifest/commits/master",
-                "https://gitlab.com/timonus/OpenerManifest"
+                "https://gitlab.com/timonus/OpenerManifest",
+                "https://github.com/timonus/OpenerManifest/tree/ios11"
             ],
             "formats": [
+                {
+                    "appIdentifier": "githawk",
+                    "script2": "function process(url, completionHandler) { var results = RegExp('http(?:s)?://(?:(?:(?!gist)\\\\w+\\\\.)*(?:(?:github)\\\\.com)/([^/]+)/([^/]+?)(?:\\\\.git)?(?:/tree/([^/]+))?(?:(?:/)?\\\\?.*$)?)$').exec(url); var result = null; if (results != null && results.length > 2) { result = 'freetime://RepoRoute?owner=' + results[1] + '&repo=' + results[2] + '&branch='; if (results.length > 3 && results[3] != null) { result = result + results[3]; } else { result = result + 'master'; } } completionHandler(result); }",
+                    "testResults": [
+                        null,
+                        null,
+                        null,
+                        "freetime://RepoRoute?owner=timonus&repo=OpenerManifest&branch=master",
+                        "freetime://RepoRoute?owner=timonus&repo=OpenerManifest&branch=master",
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        "freetime://RepoRoute?owner=timonus&repo=OpenerManifest&branch=ios11"
+                    ]
+                },
                 {
                     "appIdentifier": "pphub",
                     "format": "pphub://repo?owner=$2&repo=$3$4",
@@ -4221,7 +4241,8 @@
                         null,
                         null,
                         null,
-                        null
+                        null,
+                        "pphub://repo?owner=timonus&repo=OpenerManifest"
                     ]
                 }
             ]
@@ -8670,6 +8691,12 @@
             "identifier": "tapatalk",
             "storeIdentifier": "307880732",
             "scheme": "tapatalk://"
+        },
+        {
+            "displayName": "GitHawk",
+            "identifier": "githawk",
+            "storeIdentifier": "1252320249",
+            "scheme": "freetime://"
         }
     ],
     "browsers": [
