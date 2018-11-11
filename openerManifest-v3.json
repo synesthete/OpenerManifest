@@ -4248,6 +4248,22 @@
             ]
         },
         {
+            "title": "Open Issue",
+            "regex": "http(?:s)?://(?:(?:(?!gist)\\w+\\.)*(?:(github)\\.com)/([^/]+)/([^/]+)/issues/(\\d+).*?$",
+            "testInputs": [
+                "https://github.com/GitHawkApp/GitHawk/issues/418"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "githawk",
+                    "format": "freetime://IssueRoute?owner=$1&repo=$2&number=$3",
+                    "testResults": [
+                        "freetime://IssueRoute?owner=GitHawkApp&repo=GitHawk&number=418"
+                    ]
+                }
+            ]
+        }
+        {
             "title": "Open Link",
             "regex": "http(?:s?)://((?:\\w+\\.)*stackoverflow\\.com/.*)",
             "testInputs": [
@@ -8696,7 +8712,8 @@
             "displayName": "GitHawk",
             "identifier": "githawk",
             "storeIdentifier": "1252320249",
-            "scheme": "freetime://"
+            "scheme": "freetime://",
+            "docs": "https://github.com/GitHawkApp/GitHawkRoutes"
         }
     ],
     "browsers": [
