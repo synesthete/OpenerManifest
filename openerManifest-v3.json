@@ -4262,7 +4262,7 @@
                     ]
                 }
             ]
-        }
+        },
         {
             "title": "Open Link",
             "regex": "http(?:s?)://((?:\\w+\\.)*stackoverflow\\.com/.*)",
