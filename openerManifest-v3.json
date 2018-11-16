@@ -4190,7 +4190,7 @@
         },
         {
             "title": "Show Repository",
-            "regex": "http(?:s)?://(?:(?:(?!gist)\\w+\\.)*(?:(github)\\.com)/([^/]+)/([^/]+?)(?:\\.git)?(?:/tree/([^/]+))?((/)?\\?.*$)?)$",
+            "regex": "http(?:s)?://(?:(?:(?!gist)\\w+\\.)*github\\.com/([^/]+)/([^/]+?)(?:\\.git)?(?:/tree/([^/]+))?((/)?\\?.*$)?)$",
             "testInputs": [
                 "https://github.com/timonus/OpenerManifest/blob/master/.gitignore",
                 "https://github.com/timonus",
@@ -4249,7 +4249,7 @@
         },
         {
             "title": "Open Issue",
-            "regex": "http(?:s)?://(?:(?:(?!gist)\\w+\\.)*(?:(github)\\.com)/([^/]+)/([^/]+)/issues/(\\d+).*?$",
+            "regex": "http(?:s)?://(?:(?!gist)\\w+\\.)*github\\.com/([^/]+)/([^/]+)/issues/(\\d+).*?$",
             "testInputs": [
                 "https://github.com/GitHawkApp/GitHawk/issues/418"
             ],
