@@ -9394,6 +9394,22 @@
                 "private://www.opener.link/",
                 "private://twitter.com/openerapp"
             ]
+        },
+        {
+            "displayName": "UC Browser",
+            "identifier": "ucbrowser",
+            "scheme": "ucbrowser://",
+            "storeIdentifier": "1048518592",
+            "regex": "http(?:s)?://(.*)$",
+            "format": "ucbrowser://$1",
+            "testInputs": [
+                "http://www.opener.link/",
+                "https://twitter.com/openerapp"
+            ],
+            "testResults": [
+                "ucbrowser://www.opener.link/",
+                "ucbrowser://twitter.com/openerapp"
+            ]
         }
     ],
     "previews": [
