@@ -7320,8 +7320,8 @@
         {
             "displayName": "Tumblr",
             "identifier": "tumblr",
-            "storeIdentifier": "305343404",
-            "scheme": "tumblr://"
+            "scheme": "tumblr://",
+            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/tumblr-114.jpg"
         },
         {
             "displayName": "pixiv",
