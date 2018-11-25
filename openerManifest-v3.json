@@ -7262,6 +7262,52 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Podcast",
+            "regex": "http(?:s)?://(?:\\w+\\.)*iheart(?:\\.\\w+)+/podcast/(?:[^-/]*-)*(\\d+).*?$",
+            "testInputs": [
+                "https://www.iheart.com/podcast/bleeding-green-nation-29778453/",
+                "https://www.iheart.com/podcast/29778453/",
+                "https://www.iheart.com/podcast/bleeding-green-nation-29778453/episode/bgn-radio-20-is-dallas-a-must-win-30126429/?autoplay=true&cmp=ios_share",
+                "https://www.iheart.com/podcast/358-bleeding-green-nation-29778453/episode/bgn-radio-20-is-dallas-a-30126429/?autoplay=true&cmp=ios_share"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "iheartradio",
+                    "format": "ihr://play/custom/talk/show/$1",
+                    "testResults": [
+                        "ihr://play/custom/talk/show/29778453",
+                        "ihr://play/custom/talk/show/29778453",
+                        "ihr://play/custom/talk/show/29778453",
+                        "ihr://play/custom/talk/show/29778453"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Station",
+            "regex": "http(?:s)?://(?:\\w+\\.)*iheart(?:\\.\\w+)+/live/(?:[^-/]+-)*(\\d+).*?$",
+            "testInputs": [
+                "https://www.iheart.com/live/1029-now-2237/?pname=fire&campid=local&callletters=kdmx-fm",
+                "https://www.iheart.com/live/1029-now-2237/",
+                "https://www.iheart.com/live/1029-now-2237",
+                "https://www.iheart.com/live/2237/",
+                "https://www.iheart.com/live/2237"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "iheartradio",
+                    "format": "ihr://play/live/$1",
+                    "testResults": [
+                        "ihr://play/live/2237",
+                        "ihr://play/live/2237",
+                        "ihr://play/live/2237",
+                        "ihr://play/live/2237",
+                        "ihr://play/live/2237"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -8714,6 +8760,12 @@
             "storeIdentifier": "1252320249",
             "scheme": "freetime://",
             "docs": "https://github.com/GitHawkApp/GitHawkRoutes"
+        },
+        {
+            "displayName": "iHeartRadio",
+            "identifier": "iheartradio",
+            "storeIdentifier": "290638154",
+            "scheme": "ihr://"
         }
     ],
     "browsers": [
