@@ -7264,47 +7264,39 @@
             ]
         },
         {
-            "title": "Open Podcast",
-            "regex": "http(?:s)?://(?:\\w+\\.)*iheart(?:\\.\\w+)+/podcast/(?:[^-/]*-)*(\\d+).*?$",
+            "title": "Open Link",
+            "regex": "http(?:s)?://(?:\\w+\\.)*iheart(?:\\.\\w+)+/(podcast|live|artist|playlist)/(?:[^-/]*-)*(\\d+).*?$",
             "testInputs": [
                 "https://www.iheart.com/podcast/bleeding-green-nation-29778453/",
                 "https://www.iheart.com/podcast/29778453/",
                 "https://www.iheart.com/podcast/bleeding-green-nation-29778453/episode/bgn-radio-20-is-dallas-a-must-win-30126429/?autoplay=true&cmp=ios_share",
-                "https://www.iheart.com/podcast/358-bleeding-green-nation-29778453/episode/bgn-radio-20-is-dallas-a-30126429/?autoplay=true&cmp=ios_share"
-            ],
-            "formats": [
-                {
-                    "appIdentifier": "iheartradio",
-                    "format": "ihr://play/custom/talk/show/$1",
-                    "testResults": [
-                        "ihr://play/custom/talk/show/29778453",
-                        "ihr://play/custom/talk/show/29778453",
-                        "ihr://play/custom/talk/show/29778453",
-                        "ihr://play/custom/talk/show/29778453"
-                    ]
-                }
-            ]
-        },
-        {
-            "title": "Open Station",
-            "regex": "http(?:s)?://(?:\\w+\\.)*iheart(?:\\.\\w+)+/live/(?:[^-/]+-)*(\\d+).*?$",
-            "testInputs": [
+                "https://www.iheart.com/podcast/358-bleeding-green-nation-29778453/episode/bgn-radio-20-is-dallas-a-30126429/?autoplay=true&cmp=ios_share",
                 "https://www.iheart.com/live/1029-now-2237/?pname=fire&campid=local&callletters=kdmx-fm",
                 "https://www.iheart.com/live/1029-now-2237/",
                 "https://www.iheart.com/live/1029-now-2237",
                 "https://www.iheart.com/live/2237/",
-                "https://www.iheart.com/live/2237"
+                "https://www.iheart.com/live/2237",
+                "https://www.iheart.com/artist/damfmastermind-32266030/albums/lovestruck-65100530/",
+                "https://www.iheart.com/artist/damfmastermind-32266030/",
+                "https://www.iheart.com/playlist/workout-hits-312064750-CfGQPw9nkkFE5QGCLiwSbQ/"
             ],
             "formats": [
                 {
                     "appIdentifier": "iheartradio",
-                    "format": "ihr://play/live/$1",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var results = RegExp('.*(ihr://[^\\\"]+).*').exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler(match); }",
                     "testResults": [
+                        "ihr://play/custom/talk/show/29778453",
+                        "ihr://play/custom/talk/show/29778453",
+                        "ihr://play/custom/talk/show/29778453",
+                        "ihr://play/custom/talk/show/29778453",
                         "ihr://play/live/2237",
                         "ihr://play/live/2237",
                         "ihr://play/live/2237",
                         "ihr://play/live/2237",
-                        "ihr://play/live/2237"
+                        "ihr://play/live/2237",
+                        "ihr://play/custom/album/65100530",
+                        "ihr://play/artist/32266030",
+                        "ihr://goto/playlist/312064750/CfGQPw9nkkFE5QGCLiwSbQ"
                     ]
                 }
             ]
