@@ -2927,22 +2927,26 @@
         },
         {
             "title": "Open Station",
-            "regex": "http(?:s)?://(?:www\\.)?tunein\\.com/(?:station(?:/)?\\?StationId=|radio/(?:\\S*-)*s)(\\d+).*$",
+            "regex": "http(?:s)?://(?:\\w+\\.)*tunein\\.com/(?:station(?:/)?\\?StationId=|radio/(?:\\S*-)*s|embed/player/s)(\\d+).*$",
             "testInputs": [
                 "http://tunein.com/radio/Sparkx-Radio-s213837/",
                 "http://tunein.com/radio/Go-Go-Radio-Gibraltar-s201872/",
                 "http://tunein.com/station/?StationId=241021",
-                "http://tunein.com/station/?StationId=198896"
+                "http://tunein.com/station/?StationId=198896",
+                "http://tunein.com/embed/player/s194224/",
+                "https://beta.tunein.com/radio/CrossRadio1-s180459/"
             ],
             "formats": [
                 {
                     "appIdentifier": "tunein",
-                    "format": "tunein://?profile/s$1",
+                    "format": "tunein://profile/s$1",
                     "testResults": [
-                        "tunein://?profile/s213837",
-                        "tunein://?profile/s201872",
-                        "tunein://?profile/s241021",
-                        "tunein://?profile/s198896"
+                        "tunein://profile/s213837",
+                        "tunein://profile/s201872",
+                        "tunein://profile/s241021",
+                        "tunein://profile/s198896",
+                        "tunein://profile/s194224",
+                        "tunein://profile/s180459"
                     ]
                 }
             ]
