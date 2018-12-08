@@ -3265,6 +3265,71 @@
             ]
         },
         {
+            "title": "Open Link",
+            "regex": "http(s)?://reddit\\.app\\.link/.+$",
+            "testInputs": [
+                "https://reddit.app.link/l67tKPXrtS"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "reddit",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var results = RegExp('.*window.top.location = validate.\"(.*?)(\\\\?|\").*').exec(res); var match = null; if (results != null && results.length > 1) { match = 'opener://x-callback-url/show-options?url=' + encodeURIComponent(results[1]) }; completionHandler(match); }",
+                    "testResults": [
+                        "opener://x-callback-url/show-options?url=https%3A%2F%2Fwww.reddit.com%2Fr%2FWatchPeopleDieInside%2Fcomments%2Fa44jvb%2Falex_jones_has_finally_lost_it%2F"
+                    ]
+                },
+                {
+                    "appIdentifier": "apollo",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var results = RegExp('.*window.top.location = validate.\"(.*?)(\\\\?|\").*').exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler('opener://x-callback-url/show-options?url=' + encodeURIComponent(match)); }",
+                    "testResults": [
+                        "opener://x-callback-url/show-options?url=https%3A%2F%2Fwww.reddit.com%2Fr%2FWatchPeopleDieInside%2Fcomments%2Fa44jvb%2Falex_jones_has_finally_lost_it%2F"
+                    ]
+                },
+                {
+                    "appIdentifier": "narwhal",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var results = RegExp('.*window.top.location = validate.\"(.*?)(\\\\?|\").*').exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler('opener://x-callback-url/show-options?url=' + encodeURIComponent(match)); }",
+                    "testResults": [
+                        "opener://x-callback-url/show-options?url=https%3A%2F%2Fwww.reddit.com%2Fr%2FWatchPeopleDieInside%2Fcomments%2Fa44jvb%2Falex_jones_has_finally_lost_it%2F"
+                    ]
+                },
+                {
+                    "appIdentifier": "readder",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var results = RegExp('.*window.top.location = validate.\"(.*?)(\\\\?|\").*').exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler('opener://x-callback-url/show-options?url=' + encodeURIComponent(match)); }",
+                    "testResults": [
+                        "opener://x-callback-url/show-options?url=https%3A%2F%2Fwww.reddit.com%2Fr%2FWatchPeopleDieInside%2Fcomments%2Fa44jvb%2Falex_jones_has_finally_lost_it%2F"
+                    ]
+                },
+                {
+                    "appIdentifier": "monochrome",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var results = RegExp('.*window.top.location = validate.\"(.*?)(\\\\?|\").*').exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler('opener://x-callback-url/show-options?url=' + encodeURIComponent(match)); }",
+                    "testResults": [
+                        "opener://x-callback-url/show-options?url=https%3A%2F%2Fwww.reddit.com%2Fr%2FWatchPeopleDieInside%2Fcomments%2Fa44jvb%2Falex_jones_has_finally_lost_it%2F"
+                    ]
+                },
+                {
+                    "appIdentifier": "amrc",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var results = RegExp('.*window.top.location = validate.\"(.*?)(\\\\?|\").*').exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler('opener://x-callback-url/show-options?url=' + encodeURIComponent(match)); }",
+                    "testResults": [
+                        "opener://x-callback-url/show-options?url=https%3A%2F%2Fwww.reddit.com%2Fr%2FWatchPeopleDieInside%2Fcomments%2Fa44jvb%2Falex_jones_has_finally_lost_it%2F"
+                    ]
+                },
+                {
+                    "appIdentifier": "beam",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var results = RegExp('.*window.top.location = validate.\"(.*?)(\\\\?|\").*').exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler('opener://x-callback-url/show-options?url=' + encodeURIComponent(match)); }",
+                    "testResults": [
+                        "opener://x-callback-url/show-options?url=https%3A%2F%2Fwww.reddit.com%2Fr%2FWatchPeopleDieInside%2Fcomments%2Fa44jvb%2Falex_jones_has_finally_lost_it%2F"
+                    ]
+                },
+                {
+                    "appIdentifier": "slide",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var results = RegExp('.*window.top.location = validate.\"(.*?)(\\\\?|\").*').exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler('opener://x-callback-url/show-options?url=' + encodeURIComponent(match)); }",
+                    "testResults": [
+                        "opener://x-callback-url/show-options?url=https%3A%2F%2Fwww.reddit.com%2Fr%2FWatchPeopleDieInside%2Fcomments%2Fa44jvb%2Falex_jones_has_finally_lost_it%2F"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Document",
             "regex": "http(?:s)?://(?:\\w+\\.)?scribd\\.com(?:/\\w+)*/(?:doc|embeds)/(\\d+).*$",
             "testInputs": [
