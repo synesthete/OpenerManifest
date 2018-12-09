@@ -3273,58 +3273,58 @@
             "formats": [
                 {
                     "appIdentifier": "reddit",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var results = RegExp('.*window.top.location = validate.\"(.*?)(\\\\?|\").*').exec(res); var match = null; if (results != null && results.length > 1) { match = 'opener://x-callback-url/show-options?url=' + encodeURIComponent(results[1]) }; completionHandler(match); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var results = RegExp('.*window.top.location = validate.\"http(?:s)?://(.*?reddit\\.com/.*?)(\\\\?|\").*').exec(res); var match = null; if (results != null && results.length > 1) { match = 'reddit://' + results[1]; }; completionHandler(match); }",
                     "testResults": [
-                        "opener://x-callback-url/show-options?url=https%3A%2F%2Fwww.reddit.com%2Fr%2FWatchPeopleDieInside%2Fcomments%2Fa44jvb%2Falex_jones_has_finally_lost_it%2F"
+                        "reddit://www.reddit.com/r/WatchPeopleDieInside/comments/a44jvb/alex_jones_has_finally_lost_it/"
                     ]
                 },
                 {
                     "appIdentifier": "apollo",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var results = RegExp('.*window.top.location = validate.\"(.*?)(\\\\?|\").*').exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler('opener://x-callback-url/show-options?url=' + encodeURIComponent(match)); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var results = RegExp('.*window.top.location = validate.\"http(?:s)?://.*?(reddit\\.com/.*?)(\\\\?|\").*').exec(res); var match = null; if (results != null && results.length > 1) { match = 'apollo://' + results[1]; }; completionHandler(match); }",
                     "testResults": [
-                        "opener://x-callback-url/show-options?url=https%3A%2F%2Fwww.reddit.com%2Fr%2FWatchPeopleDieInside%2Fcomments%2Fa44jvb%2Falex_jones_has_finally_lost_it%2F"
+                        "apollo://reddit.com/r/WatchPeopleDieInside/comments/a44jvb/alex_jones_has_finally_lost_it/"
                     ]
                 },
                 {
                     "appIdentifier": "narwhal",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var results = RegExp('.*window.top.location = validate.\"(.*?)(\\\\?|\").*').exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler('opener://x-callback-url/show-options?url=' + encodeURIComponent(match)); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var results = RegExp('.*window.top.location = validate.\"(.*?)(\\\\?|\").*').exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler('narwhal://open-url/' + encodeURIComponent(match)); }",
                     "testResults": [
-                        "opener://x-callback-url/show-options?url=https%3A%2F%2Fwww.reddit.com%2Fr%2FWatchPeopleDieInside%2Fcomments%2Fa44jvb%2Falex_jones_has_finally_lost_it%2F"
+                        "narwhal://open-url/https%3A%2F%2Fwww.reddit.com%2Fr%2FWatchPeopleDieInside%2Fcomments%2Fa44jvb%2Falex_jones_has_finally_lost_it%2F"
                     ]
                 },
                 {
                     "appIdentifier": "readder",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var results = RegExp('.*window.top.location = validate.\"(.*?)(\\\\?|\").*').exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler('opener://x-callback-url/show-options?url=' + encodeURIComponent(match)); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var results = RegExp('.*window.top.location = validate.\"http(?:s)?://.*?(reddit\\.com/.*?)(\\\\?|\").*').exec(res); var match = null; if (results != null && results.length > 1) { match = 'readder://open-url/https://' + results[1]; }; completionHandler(match); }",
                     "testResults": [
-                        "opener://x-callback-url/show-options?url=https%3A%2F%2Fwww.reddit.com%2Fr%2FWatchPeopleDieInside%2Fcomments%2Fa44jvb%2Falex_jones_has_finally_lost_it%2F"
+                        "readder://open-url/https://reddit.com/r/WatchPeopleDieInside/comments/a44jvb/alex_jones_has_finally_lost_it/"
                     ]
                 },
                 {
                     "appIdentifier": "monochrome",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var results = RegExp('.*window.top.location = validate.\"(.*?)(\\\\?|\").*').exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler('opener://x-callback-url/show-options?url=' + encodeURIComponent(match)); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var results = RegExp('.*window.top.location = validate.\"http(?:s)?://.*?(reddit\\.com/.*?)(\\\\?|\").*').exec(res); var match = null; if (results != null && results.length > 1) { match = 'com.falconassets.monochrome://' + results[1]; }; completionHandler(match); }",
                     "testResults": [
-                        "opener://x-callback-url/show-options?url=https%3A%2F%2Fwww.reddit.com%2Fr%2FWatchPeopleDieInside%2Fcomments%2Fa44jvb%2Falex_jones_has_finally_lost_it%2F"
+                        "com.falconassets.monochrome://reddit.com/r/WatchPeopleDieInside/comments/a44jvb/alex_jones_has_finally_lost_it/"
                     ]
                 },
                 {
                     "appIdentifier": "amrc",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var results = RegExp('.*window.top.location = validate.\"(.*?)(\\\\?|\").*').exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler('opener://x-callback-url/show-options?url=' + encodeURIComponent(match)); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var results = RegExp('.*window.top.location = validate.\"http(?:s)?://.*?(reddit\\.com/.*?)(\\\\?|\").*').exec(res); var match = null; if (results != null && results.length > 1) { match = 'amrc://' + results[1]; }; completionHandler(match); }",
                     "testResults": [
-                        "opener://x-callback-url/show-options?url=https%3A%2F%2Fwww.reddit.com%2Fr%2FWatchPeopleDieInside%2Fcomments%2Fa44jvb%2Falex_jones_has_finally_lost_it%2F"
+                        "amrc://reddit.com/r/WatchPeopleDieInside/comments/a44jvb/alex_jones_has_finally_lost_it/"
                     ]
                 },
                 {
                     "appIdentifier": "beam",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var results = RegExp('.*window.top.location = validate.\"(.*?)(\\\\?|\").*').exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler('opener://x-callback-url/show-options?url=' + encodeURIComponent(match)); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var results = RegExp('.*window.top.location = validate.\"http(?:s)?://.*?(reddit\\.com/.*?)(\\\\?|\").*').exec(res); var match = null; if (results != null && results.length > 1) { match = 'beamapp://' + results[1]; }; completionHandler(match); }",
                     "testResults": [
-                        "opener://x-callback-url/show-options?url=https%3A%2F%2Fwww.reddit.com%2Fr%2FWatchPeopleDieInside%2Fcomments%2Fa44jvb%2Falex_jones_has_finally_lost_it%2F"
+                        "beamapp://reddit.com/r/WatchPeopleDieInside/comments/a44jvb/alex_jones_has_finally_lost_it/"
                     ]
                 },
                 {
                     "appIdentifier": "slide",
-                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var results = RegExp('.*window.top.location = validate.\"(.*?)(\\\\?|\").*').exec(res); var match = null; if (results != null && results.length > 1) { match = results[1] }; completionHandler('opener://x-callback-url/show-options?url=' + encodeURIComponent(match)); }",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var results = RegExp('.*window.top.location = validate.\"http(?:s)?://.*?(reddit\\.com/.*?)(\\\\?|\").*').exec(res); var match = null; if (results != null && results.length > 1) { match = 'slide://' + results[1]; }; completionHandler(match); }",
                     "testResults": [
-                        "opener://x-callback-url/show-options?url=https%3A%2F%2Fwww.reddit.com%2Fr%2FWatchPeopleDieInside%2Fcomments%2Fa44jvb%2Falex_jones_has_finally_lost_it%2F"
+                        "slide://reddit.com/r/WatchPeopleDieInside/comments/a44jvb/alex_jones_has_finally_lost_it/"
                     ]
                 }
             ]
