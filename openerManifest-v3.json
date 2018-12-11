@@ -2249,6 +2249,21 @@
                     ]
                 },
                 {
+                    "appIdentifier": "waffle",
+                    "format": "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=$1",
+                    "testResults": [
+                        "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=MTY1Kje0yLg",
+                        "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=0uY7gLZDmn4",
+                        "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=MFzDaBzBlL0",
+                        "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=mzun7_Ynmks",
+                        "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=JEiSTzK-A2A",
+                        "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=yWDJoJm-Rk0",
+                        "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=S4WNO4tchUk",
+                        "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=ngElkyQ6Rhs",
+                        "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=KVQxACAEpso"
+                    ]
+                },
+                {
                     "appIdentifier": "protube",
                     "format": "protube://video/$1",
                     "testResults": [
@@ -8805,6 +8820,12 @@
             "identifier": "nicoseiga",
             "storeIdentifier": "1045938821",
             "scheme": "nicoseiga://"
+        },
+        {
+            "displayName": "Waffle",
+            "identifier": "waffle",
+            "storeIdentifier": "1193772661",
+            "scheme": "com.arturremizov.waffle://"
         }
     ],
     "browsers": [
