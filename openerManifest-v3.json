@@ -3408,6 +3408,22 @@
         },
         {
             "title": "Open Link",
+            "regex": "http(?:s)?://link\\.medium\\.com/.+",
+            "testInputs": [
+                "https://link.medium.com/IrW5wDIMzS"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "medium",
+                    "script2": "function process(url, completionHandler) { var res = httpRequest(url); var results = RegExp('.*window.top.location = validate.\"http(?:s)?://(?:\\w+\\.)*medium\\.com(/.*?)(?:&amp;|\").*').exec(res); var match = null; if (results != null && results.length > 1) { match = 'medium://' + results[1]; }; completionHandler(match); }",
+                    "testResults": [
+                        "medium:///@GabbiSolarPower/diary-of-a-solar-powered-person-page-5-491c58421916?source=linkShare-684149027d58-1544581697"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open Link",
             "regex": "http(?:s)?://(?!.*medium\\.com)[a-zA-Z0-9\\-.]+/(?!\\?.*)(.+)\\n.*\"(?:(?i)x-powered-by)\":\"(?:(?i)kale|medium)\".*$",
             "includeHeaders": true,
             "note": "URLs like https://500ish.com/?foo=bar should not be handled by this action.",
