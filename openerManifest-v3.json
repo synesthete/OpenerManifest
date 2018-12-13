@@ -7383,8 +7383,9 @@
         {
             "displayName": "Tumblr",
             "identifier": "tumblr",
-            "scheme": "tumblr://",
-            "iconURL": "https://s3.amazonaws.com/www.opener.link/app-icon/tumblr-114.jpg"
+            "storeIdentifier": "305343404",
+            "scheme": "tumblr://"
+
         },
         {
             "displayName": "Apple Maps",
