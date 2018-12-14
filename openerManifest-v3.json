@@ -7319,6 +7319,24 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Open Link",
+            "regex": "https(?:s)?://(?:\\w+\\.)*newspicks\\.com/(.+)$",
+            "testInputs": [
+                "https://newspicks.com/news/3530812?ref=user_904964&u=qpajax&from=twitter",
+                "https://newspicks.com/movie-series/6?movieId=238"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "newspicks",
+                    "format": "newspicks://$1",
+                    "testResults": [
+                        "newspicks://news/3530812?ref=user_904964&u=qpajax&from=twitter",
+                        "newspicks://movie-series/6?movieId=238"
+                    ]
+                }
+            ]
         }
     ],
     "apps": [
@@ -8778,6 +8796,12 @@
             "identifier": "waffle",
             "storeIdentifier": "1193772661",
             "scheme": "com.arturremizov.waffle://"
+        },
+        {
+            "displayName": "NewsPicks",
+            "identifier": "newspicks",
+            "storeIdentifier": "640956497",
+            "scheme": "newspicks://"
         }
     ],
     "browsers": [
