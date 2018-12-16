@@ -9578,8 +9578,8 @@
         },
         "http(?:s)?://out\\.reddit\\.com.*$": {
             "param": "url",
-            "test": {
-                "https://out.reddit.com/t3_7vjm8a?url=https%3A%2F%2Fstreamable.com%2Fkgw2g&token=AQAAKkp5Wh4r24n3FqO6zjWJvcnP2Rqg-ZnuqG43qls4CFLaS99n&app_name=reddit.com": "https://streamable.com/kgw2g&token=AQAAKkp5Wh4r24n3FqO6zjWJvcnP2Rqg-ZnuqG43qls4CFLaS99n"
+            "tests": {
+                "https://out.reddit.com/t3_7vjm8a?url=https%3A%2F%2Fstreamable.com%2Fkgw2g?token=AQAAKkp5Wh4r24n3FqO6zjWJvcnP2Rqg-ZnuqG43qls4CFLaS99n&app_name=reddit.com": "https://streamable.com/kgw2g?token=AQAAKkp5Wh4r24n3FqO6zjWJvcnP2Rqg-ZnuqG43qls4CFLaS99n"
             }
         },
         "http(?:s)?://t\\.umblr\\.com/redirect.*$": {
