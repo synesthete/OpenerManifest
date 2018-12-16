@@ -4277,6 +4277,29 @@
                     "testResults": [
                         "freetime://IssueRoute?owner=GitHawkApp&repo=GitHawk&number=418"
                     ]
+                },
+                {
+                    "appIdentifier": "pphub",
+                    "format": "pphub://issue?owner=$1&repo=$2&number=$3",
+                    "testResults": [
+                        "pphub://issue?owner=GitHawkApp&repo=GitHawk&number=418"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "View Pull Request",
+            "regex": "http(?:s)?://(?:(?!gist)\\w+\\.)*github\\.com/([^/]+)/([^/]+)/pull/(\\d+).*?$",
+            "testInputs": [
+                "https://github.com/GitHawkApp/GitHawk/pull/2547"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "pphub",
+                    "format": "pphub://pull?owner=$1&repo=$2&number=$3",
+                    "testResults": [
+                        "pphub://pull?owner=GitHawkApp&repo=GitHawk&number=2547"
+                    ]
                 }
             ]
         },
