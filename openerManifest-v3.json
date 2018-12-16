@@ -4245,7 +4245,7 @@
                 },
                 {
                     "appIdentifier": "pphub",
-                    "format": "pphub://repo?owner=$2&repo=$3$4",
+                    "format": "pphub://repo?owner=$1&repo=$2",
                     "testResults": [
                         null,
                         null,
