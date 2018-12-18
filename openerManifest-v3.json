@@ -3468,13 +3468,14 @@
         },
         {
             "title": "Open Product",
-            "regex": "http(?:s)?://(?:\\w+\\.)*aliexpress\\.com/(?:\\w+/)?item(?:/[^/]+)?/(\\d+)\\.html.*$",
+            "regex": "http(?:s)?://(?:\\w+\\.)*aliexpress\\.com/(?:\\w+/)*(?:item(?:/[^/]+)?/|affi-item\\.htm.*item_id=)(\\d+)(?:\\.htm(?:l)?)?.*$",
             "testInputs": [
                 "http://m.aliexpress.com/item/32409017535.html",
                 "http://www.aliexpress.com/item/Foliage-plant-seeds-wheat-grass-cat-grass-seeds-wheat-seeds-about-200-particles/32439617530.html?spm=5261.7749171.1998596321.8.wpCnkX&sdom=561.108229.97206.0_32439617530",
                 "https://de.aliexpress.com/item/Original-Xiaomi-Mi-Band-2-MiBand-2-Smart-Bracelet-Fitness-Wristband-OLED-Display-Heart-Rate-Monitor/32712227119.html?spm=2114.47010108.6.6.JdBz1z&&scm=1007.12785.38449.0",
                 "https://m.de.aliexpress.com/item/32712227119.html?trace=wwwdetail2mobilesitedetail&productId=32712227119&productSubject=Original-Xiaomi-Mi-Band-2-MiBand-2-Smart-Bracelet-Fitness-Wristband-OLED-Display-Heart-Rate-Monitor&spm=2114.47010108.6.6.JdBz1z&&scm=1007.12785.38449.0",
-                "https://m.de.aliexpress.com/s/item/1121184844.html"
+                "https://m.de.aliexpress.com/s/item/1121184844.html",
+                "https://sale.aliexpress.com/ru/__mobile/affi-item.htm?ae_affi_item_id=32821127175&transAbTest=ae803_2&cv=32524742&ws_ab_test=searchweb0_0%2525252Csearchweb201602_4_5460015_10152_10065_10151_5490020_10068_10209_5470015_10307_10301_10137_10060_10155_10154_10333_10334_10056_10335_10055_10336_10054_10059_10332_100031_10099_10103_10102_10169_10052_10053_10142_10107_10050_10051_5380020_10328_10326_10327_10084_10083_10080_10082_10081_10110_10111_10112_10113_10114_10312_10313_10314_10078_10079_10210_10073_10125-10333%2525252Csearchweb201603_21%2525252CppcSwitch_5&algo_pvid=7c2036ff-4b81-4bfb-b842-a56dc0d68a20&af=1532208&btsid=30fc097e-e45e-4017-8689-bc665c189e25&cn=41pjts45sv6yrvamdc02lfl912sn2994&dp=v5_41pjts45sv6yrvamdc02lfl912sn2994&algo_expid=7c2036ff-4b81-4bfb-b842-a56dc0d68a20-0&af=1532208&cv=32524742&cn=41pjts45sv6yrvamdc02lfl912sn2994&dp=v5_41pjts45sv6yrvamdc02lfl912sn2994&afref=&aff_platform=default&cpt=1544956569323&sk=ccfBY4yg&aff_trace_key=ba7cd8b1b5ee4c1b8b89c2828e2e3548-1544956569323-00495-ccfBY4yg&terminal_id=5f1e9cae96bf4a43b2744f2e8c02f47f"
             ],
             "formats": [
                 {
@@ -3485,7 +3486,8 @@
                         "aliexpress://product/detail?productId=32439617530",
                         "aliexpress://product/detail?productId=32712227119",
                         "aliexpress://product/detail?productId=32712227119",
-                        "aliexpress://product/detail?productId=1121184844"
+                        "aliexpress://product/detail?productId=1121184844",
+                        "aliexpress://product/detail?productId=32821127175"
                     ]
                 },
                 {
@@ -3496,7 +3498,8 @@
                         "aliexpresshd://product/detail?productId=32439617530",
                         "aliexpresshd://product/detail?productId=32712227119",
                         "aliexpresshd://product/detail?productId=32712227119",
-                        "aliexpresshd://product/detail?productId=1121184844"
+                        "aliexpresshd://product/detail?productId=1121184844",
+                        "aliexpresshd://product/detail?productId=32821127175"
                     ]
                 }
             ]
