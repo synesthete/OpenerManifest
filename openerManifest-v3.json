@@ -4298,6 +4298,13 @@
             ],
             "formats": [
                 {
+                    "appIdentifier": "githawk",
+                    "format": "freetime://IssueRoute?owner=$1&repo=$2&number=$3",
+                    "testResults": [
+                        "freetime://IssueRoute?owner=GitHawkApp&repo=GitHawk&number=2547"
+                    ]
+                },
+                {
                     "appIdentifier": "pphub",
                     "format": "pphub://pull?owner=$1&repo=$2&number=$3",
                     "testResults": [
