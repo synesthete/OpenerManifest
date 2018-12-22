@@ -2219,6 +2219,21 @@
                     ]
                 },
                 {
+                    "appIdentifier": "waffle",
+                    "format": "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=$1",
+                    "testResults": [
+                        "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=MTY1Kje0yLg",
+                        "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=0uY7gLZDmn4",
+                        "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=MFzDaBzBlL0",
+                        "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=mzun7_Ynmks",
+                        "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=JEiSTzK-A2A",
+                        "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=yWDJoJm-Rk0",
+                        "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=S4WNO4tchUk",
+                        "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=ngElkyQ6Rhs",
+                        "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=KVQxACAEpso"
+                    ]
+                },
+                {
                     "appIdentifier": "musi",
                     "format": "musi://track/$1",
                     "testResults": [
@@ -2246,21 +2261,6 @@
                         "youplayer://youtube.com/watch?v=S4WNO4tchUk",
                         "youplayer://youtube.com/watch?v=ngElkyQ6Rhs",
                         "youplayer://youtube.com/watch?v=KVQxACAEpso"
-                    ]
-                },
-                {
-                    "appIdentifier": "waffle",
-                    "format": "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=$1",
-                    "testResults": [
-                        "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=MTY1Kje0yLg",
-                        "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=0uY7gLZDmn4",
-                        "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=MFzDaBzBlL0",
-                        "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=mzun7_Ynmks",
-                        "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=JEiSTzK-A2A",
-                        "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=yWDJoJm-Rk0",
-                        "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=S4WNO4tchUk",
-                        "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=ngElkyQ6Rhs",
-                        "com.arturremizov.waffle://PopularTodayWidget?videoIdentifier=KVQxACAEpso"
                     ]
                 },
                 {
