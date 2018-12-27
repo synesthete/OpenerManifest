@@ -4264,6 +4264,25 @@
                         null,
                         "pphub://repo?owner=timonus&repo=OpenerManifest"
                     ]
+                },
+                {
+                    "appIdentifier": "grape",
+                    "format": "grape://repo?reponame=$1/$2",
+                    "testResults": [
+                        null,
+                        null,
+                        null,
+                        "grape://repo?reponame=timonus/OpenerManifest",
+                        "grape://repo?reponame=timonus/OpenerManifest",
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        "grape://repo?reponame=timonus/OpenerManifest"
+                    ]
                 }
             ]
         },
@@ -4287,6 +4306,13 @@
                     "testResults": [
                         "pphub://issue?owner=GitHawkApp&repo=GitHawk&number=418"
                     ]
+                },
+                {
+                    "appIdentifier": "grape",
+                    "format": "grape://issue?number=$3&reponame=$1/$2",
+                    "testResults": [
+                        "grape://issue?number=418&reponame=GitHawkApp/GitHawk"
+                    ]
                 }
             ]
         },
@@ -4309,6 +4335,13 @@
                     "format": "pphub://pull?owner=$1&repo=$2&number=$3",
                     "testResults": [
                         "pphub://pull?owner=GitHawkApp&repo=GitHawk&number=2547"
+                    ]
+                },
+                {
+                    "appIdentifier": "grape",
+                    "format": "grape://pr?number=$3&reponame=$1/$2",
+                    "testResults": [
+                        "grape://pr?number=2547&reponame=GitHawkApp/GitHawk"
                     ]
                 }
             ]
@@ -8841,6 +8874,13 @@
             "identifier": "nicoseiga",
             "storeIdentifier": "1045938821",
             "scheme": "nicoseiga://"
+        },
+        {
+            "displayName": "Grape",
+            "identifier": "grape",
+            "storeIdentifier": "1371929193",
+            "scheme": "grape://",
+            "docs": "https://db.tt/xAauKtgWxJ"
         }
     ],
     "browsers": [
