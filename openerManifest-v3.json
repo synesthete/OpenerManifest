@@ -9206,7 +9206,7 @@
             "displayName": "Perfect Browser",
             "identifier": "perfectbrowser",
             "scheme": "perfect://",
-            "storeIdentifier": "317836614",
+            "storeIdentifier": "1360915927",
             "regex": "http(?:s)?(.*)",
             "format": "perfect$1",
             "testInputs": [
