@@ -4347,6 +4347,22 @@
             ]
         },
         {
+            "title": "View Commit",
+            "regex": "http(?:s)?://(?:(?!gist)\\w+\\.)*github\\.com/([^/]+)/([^/]+)/commit/(\\w+).*?$",
+            "testInputs": [
+                "https://github.com/timonus/OpenerManifest/commit/857b2b12458c39983636c6ba7d5b1bf7e67b57ef"
+            ],
+            "formats": [
+                {
+                    "appIdentifier": "grape",
+                    "format": "grape://commit?id=$3&reponame=$1/$2",
+                    "testResults": [
+                        "grape://commit?id=857b2b12458c39983636c6ba7d5b1bf7e67b57ef&reponame=timonus/OpenerManifest"
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Open Link",
             "regex": "http(?:s?)://((?:\\w+\\.)*stackoverflow\\.com/.*)",
             "testInputs": [
